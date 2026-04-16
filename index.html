@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Quiz Test</title>
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --container-bg: white;
+      --text: #333;
+      --text-muted: #666;
+      --border: #ddd;
+      --border-hover: #4CAF50;
+      --question-bg: #fafafa;
+      --option-bg: white;
+    }
+    body.dark {
+      --bg: #121212;
+      --container-bg: #1e1e1e;
+      --text: #e0e0e0;
+      --text-muted: #aaa;
+      --border: #444;
+      --question-bg: #2d2d2d;
+      --option-bg: #2d2d2d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: var(--bg); color: var(--text); padding: 20px; transition: all 0.3s; }
+    .container { max-width: 800px; margin: 0 auto; background: var(--container-bg); padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: var(--text); margin-bottom: 30px; }
+    .hidden { display: none !important; }
+    .form-group { margin-bottom: 30px; }
+    label { display: block; margin-bottom: 12px; font-weight: bold; color: var(--text-muted); }
+    button { padding: 14px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; transition: all 0.3s; }
+    button:hover { background: #45a049; }
+    button.outlined { background: transparent; border: 2px solid #4CAF50; color: #4CAF50; }
+    button.outlined:hover { background: #4CAF50; color: white; }
+    button.outlined.selected { background: #4CAF50; color: white; }
+
+    .topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+    .topic-btn { padding: 12px; font-size: 14px; }
+
+    .slider-container { display: flex; align-items: center; gap: 15px; }
+    .slider-container input[type="range"] { flex: 1; height: 6px; -webkit-appearance: none; background: var(--border); border-radius: 3px; outline: none; }
+    .slider-container input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; background: #4CAF50; border-radius: 50%; cursor: pointer; }
+    .slider-value { min-width: 30px; text-align: center; font-weight: bold; color: #4CAF50; }
+
+    #questionTimer { position: fixed; top: 20px; right: 20px; background: #2196F3; color: white; padding: 15px 25px; border-radius: 4px; font-size: 24px; font-weight: bold; }
+    #questionTimer.warning { background: #ff9800; }
+    #questionTimer.danger { background: #f44336; animation: pulse 0.5s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+    #progress { margin-bottom: 20px; color: var(--text-muted); font-size: 18px; }
+    .question { margin-bottom: 30px; padding: 20px; background: var(--question-bg); border-radius: 4px; }
+    .question-text { font-size: 18px; margin-bottom: 15px; font-weight: 500; }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option { display: flex; align-items: center; gap: 10px; padding: 12px; background: var(--option-bg); border: 2px solid var(--border); border-radius: 4px; cursor: pointer; transition: all 0.2s; }
+    .option:hover { border-color: #4CAF50; }
+    body.dark .option:hover { background: #3d3d3d; }
+    .option input { width: auto; margin: 0; }
+    .option.selected { border-color: #4CAF50; background: #e8f5e9; }
+    body.dark .option.selected { background: #1b5e20; border-color: #4CAF50; }
+    body.dark .slider-container input[type="range"]::-webkit-slider-thumb { background: #4CAF50; }
+    .slider-container span { color: var(--text-muted); }
+    #result { text-align: center; padding: 40px; }
+    #result h2 { font-size: 32px; margin-bottom: 20px; color: var(--text); }
+    #result .score { font-size: 48px; color: #4CAF50; margin-bottom: 10px; }
+    #result .details { color: var(--text-muted); margin-bottom: 30px; }
+    .error { color: #f44336; margin-bottom: 15px; }
+
+    #startSection { margin-top: 20px; }
+
+    .darkmode-toggle.fixed { position: fixed; top: 20px; left: 20px; padding: 10px 15px; font-size: 20px; width: auto; }
+  </style>
+</head>
+<body>
+  <button id="darkModeBtn" class="darkmode-toggle outlined fixed" title="Toggle Dark Mode">🌙</button>
+  <div id="questionTimer" class="hidden"></div>
+  <div class="container">
+    <div id="setup">
+      <h1>Coding Quiz Test</h1>
+      
+      <div class="form-group">
+        <label>Select Topic</label>
+        <div class="topic-grid">
+          <button class="topic-btn outlined" data-topic="javascript">JavaScript</button>
+          <button class="topic-btn outlined" data-topic="typescript">TypeScript</button>
+          <button class="topic-btn outlined" data-topic="nodejs">Node.js</button>
+          <button class="topic-btn outlined" data-topic="react">React</button>
+          <button class="topic-btn outlined" data-topic="angular">Angular</button>
+          <button class="topic-btn outlined" data-topic="C#">C#</button>
+          <button class="topic-btn outlined" data-topic="ASP.net">ASP.NET</button>
+          <button class="topic-btn outlined" data-topic="PHP">PHP</button>
+          <button class="topic-btn outlined" data-topic="laravel">Laravel</button>
+          <button class="topic-btn outlined" data-topic="git">Git</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Difficulty Level: <span id="difficultyValue">1</span></label>
+        <div class="slider-container">
+          <span>1</span>
+          <input type="range" id="difficulty" min="1" max="7" value="1">
+          <span>7</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Number of Questions: <span id="countValue">10</span></label>
+        <div class="slider-container">
+          <span>5</span>
+          <input type="range" id="count" min="5" max="60" value="10" step="5">
+          <span>60</span>
+        </div>
+      </div>
+
+      <div id="startSection">
+        <button id="startBtn">Start Test</button>
+      </div>
+      <p id="error" class="error hidden"></p>
+    </div>
+
+    <div id="quiz" class="hidden">
+      <div id="progress"></div>
+      <div id="questions"></div>
+      <button id="submitBtn">Submit Answer</button>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2>Test Complete!</h2>
+      <div class="score"></div>
+      <div class="details"></div>
+      <button id="detailsBtn" style="margin-bottom: 10px;">Show Details</button>
+      <button id="restartBtn">Take Another Test</button>
+      <div id="detailsPanel" class="hidden" style="margin-top: 20px; text-align: left;"></div>
+    </div>
+  </div>
+
+  <script>
+    const darkModeBtn = document.getElementById('darkModeBtn');
+    let isDark = localStorage.getItem('darkMode') === 'true';
+    
+    if (isDark) {
+      document.body.classList.add('dark');
+      darkModeBtn.textContent = '☀️';
+    }
+    
+    darkModeBtn.addEventListener('click', () => {
+      isDark = !isDark;
+      document.body.classList.toggle('dark', isDark);
+      darkModeBtn.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('darkMode', isDark);
+    });
+
+    let selectedTopic = null;
+    let currentQuestions = [];
+    let userAnswers = [];
+    let currentIndex = 0;
+    let timerInterval = null;
+    let timeRemaining = 0;
+
+    document.querySelectorAll('.topic-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedTopic = btn.dataset.topic;
+      });
+    });
+
+    document.getElementById('difficulty').addEventListener('input', (e) => {
+      document.getElementById('difficultyValue').textContent = e.target.value;
+    });
+
+    document.getElementById('count').addEventListener('input', (e) => {
+      document.getElementById('countValue').textContent = e.target.value;
+    });
+
+    document.getElementById('startBtn').addEventListener('click', startTest);
+    document.getElementById('submitBtn').addEventListener('click', submitAnswer);
+    document.getElementById('restartBtn').addEventListener('click', () => location.reload());
+    document.getElementById('detailsBtn').addEventListener('click', showDetails);
+
+    async function startTest() {
+      const topic = selectedTopic;
+      const difficulty = document.getElementById('difficulty').value;
+      const count = parseInt(document.getElementById('count').value);
+      const errorEl = document.getElementById('error');
+
+      if (!topic) {
+        errorEl.textContent = 'Please select a topic';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      errorEl.classList.add('hidden');
+
+      try {
+        const response = await fetch(`questions/${topic}/${difficulty}.json`);
+        if (!response.ok) throw new Error('Questions file not found');
+        const allQuestions = await response.json();
+        
+        const shuffled = shuffleArray([...allQuestions]);
+        currentQuestions = shuffled.slice(0, count);
+      } catch (err) {
+        errorEl.textContent = `No questions available for ${topic} level ${difficulty}`;
+        errorEl.classList.remove('hidden');
+        return;
+      }
+
+      userAnswers = [];
+      currentIndex = 0;
+
+      document.getElementById('setup').classList.add('hidden');
+      document.getElementById('quiz').classList.remove('hidden');
+      document.getElementById('questionTimer').classList.remove('hidden');
+
+      renderQuestion();
+    }
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function renderQuestion() {
+      if (currentIndex >= currentQuestions.length) {
+        showResult();
+        return;
+      }
+
+      const q = currentQuestions[currentIndex];
+      const container = document.getElementById('questions');
+      container.innerHTML = '';
+
+      const qDiv = document.createElement('div');
+      qDiv.className = 'question';
+      
+      const isMultiple = q.correctOptions.length > 1;
+      
+      qDiv.innerHTML = `
+        <div class="question-text">${currentIndex + 1}. ${q.question}</div>
+        <div class="options">
+          ${q.options.map((opt, optIndex) => `
+            <label class="option">
+              ${isMultiple 
+                ? `<input type="checkbox" name="q${currentIndex}" value="${opt}">`
+                : `<input type="radio" name="q${currentIndex}" value="${opt}">`
+              }
+              <span>${opt}</span>
+            </label>
+          `).join('')}
+        </div>
+      `;
+      
+      container.appendChild(qDiv);
+
+      document.querySelectorAll('.option').forEach(opt => {
+        opt.addEventListener('click', (e) => {
+          if (e.target.tagName === 'INPUT') return;
+          const checkbox = opt.querySelector('input');
+          checkbox.checked = !checkbox.checked;
+          opt.classList.toggle('selected', checkbox.checked);
+        });
+      });
+
+      document.getElementById('progress').textContent = 
+        `Question ${currentIndex + 1} of ${currentQuestions.length}`;
+
+      startQuestionTimer(q.time || 30);
+    }
+
+    function startQuestionTimer(seconds) {
+      clearInterval(timerInterval);
+      timeRemaining = seconds;
+      updateTimerDisplay();
+
+      timerInterval = setInterval(() => {
+        timeRemaining--;
+        updateTimerDisplay();
+        
+        if (timeRemaining <= 0) {
+          clearInterval(timerInterval);
+          autoSubmit();
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const timerEl = document.getElementById('questionTimer');
+      const mins = Math.floor(timeRemaining / 60);
+      const secs = timeRemaining % 60;
+      timerEl.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+      
+      timerEl.classList.remove('warning', 'danger');
+      if (timeRemaining <= 5) {
+        timerEl.classList.add('danger');
+      } else if (timeRemaining <= 10) {
+        timerEl.classList.add('warning');
+      }
+    }
+
+    function submitAnswer() {
+      clearInterval(timerInterval);
+      
+      const q = currentQuestions[currentIndex];
+      const selectedEls = document.querySelectorAll(`input[name="q${currentIndex}"]:checked`);
+      const selected = Array.from(selectedEls).map(el => el.value);
+      
+      userAnswers.push({
+        question: q.question,
+        selected: selected,
+        correct: q.correctOptions
+      });
+
+      currentIndex++;
+      renderQuestion();
+    }
+
+    function autoSubmit() {
+      const q = currentQuestions[currentIndex];
+      const selectedEls = document.querySelectorAll(`input[name="q${currentIndex}"]:checked`);
+      const selected = Array.from(selectedEls).map(el => el.value);
+      
+      userAnswers.push({
+        question: q.question,
+        selected: selected,
+        correct: q.correctOptions,
+        timeout: true
+      });
+
+      currentIndex++;
+      renderQuestion();
+    }
+
+    function showResult() {
+      clearInterval(timerInterval);
+      
+      document.getElementById('quiz').classList.add('hidden');
+      document.getElementById('questionTimer').classList.add('hidden');
+      document.getElementById('result').classList.remove('hidden');
+      
+      let correct = 0;
+      userAnswers.forEach((ans, index) => {
+        const correctSorted = [...ans.correct].sort();
+        const selectedSorted = [...ans.selected].sort();
+        
+        if (JSON.stringify(correctSorted) === JSON.stringify(selectedSorted)) {
+          correct++;
+        }
+      });
+
+      const percentage = Math.round((correct / currentQuestions.length) * 100);
+      document.querySelector('#result .score').textContent = `${percentage}%`;
+      document.querySelector('#result .details').textContent = 
+        `You got ${correct} out of ${currentQuestions.length} questions correct`;
+    }
+
+    function showDetails() {
+      const detailsPanel = document.getElementById('detailsPanel');
+      detailsPanel.innerHTML = '<h3 style="margin-bottom: 15px; text-align: center;">Question Details</h3>';
+      
+      userAnswers.forEach((ans, index) => {
+        const q = currentQuestions[index];
+        const correctSorted = [...ans.correct].sort();
+        const selectedSorted = [...ans.selected].sort();
+        const isCorrect = JSON.stringify(correctSorted) === JSON.stringify(selectedSorted);
+        
+        detailsPanel.innerHTML += `
+          <div style="padding: 12px; margin-bottom: 10px; border-radius: 4px; background: var(--question-bg); border-left: 4px solid ${isCorrect ? '#4CAF50' : '#f44336'};">
+            <div style="font-weight: bold; margin-bottom: 8px;">${index + 1}. ${ans.question}</div>
+            <div style="font-size: 14px; color: var(--text-muted);">
+              <div>Your answer: ${ans.selected.length > 0 ? ans.selected.join(', ') : '<em>No answer (time out)</em>'}</div>
+              <div>Correct: ${ans.correct.join(', ')}</div>
+              <div style="font-weight: bold; color: ${isCorrect ? '#4CAF50' : '#f44336'}; margin-bottom: 8px;">${isCorrect ? '✓ Correct' : '✗ Incorrect'}</div>
+              ${q.details ? `<div style="background: var(--container-bg); padding: 8px; border-radius: 4px; font-style: italic;">${q.details}</div>` : ''}
+            </div>
+          </div>
+        `;
+      });
+      
+      detailsPanel.classList.toggle('hidden');
+      document.getElementById('detailsBtn').textContent = 
+        detailsPanel.classList.contains('hidden') ? 'Show Details' : 'Hide Details';
+    }
+  </script>
+</body>
+</html>

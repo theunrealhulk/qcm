@@ -1,0 +1,1402 @@
+[
+  {
+    "question": "What is git rebase?",
+    "options": [
+      "Reapply commits on new base",
+      "Delete commits",
+      "Merge branches",
+      "Create branches"
+    ],
+    "correctOptions": [
+      "Reapply commits on new base"
+    ],
+    "time": 30,
+    "details": "Rebase moves commits to a new base commit."
+  },
+  {
+    "question": "What is the main purpose of rebase?",
+    "options": [
+      "Create linear history",
+      "Delete commits",
+      "Merge branches",
+      "Push changes"
+    ],
+    "correctOptions": [
+      "Create linear history"
+    ],
+    "time": 35,
+    "details": "Rebase creates a cleaner, linear commit history."
+  },
+  {
+    "question": "What is the difference between merge and rebase?",
+    "options": [
+      "Merge preserves history, rebase rewrites",
+      "Both rewrite history",
+      "Both preserve history",
+      "Neither matters"
+    ],
+    "correctOptions": [
+      "Merge preserves history, rebase rewrites"
+    ],
+    "time": 40,
+    "details": "Merge keeps true history, rebase rewrites commits."
+  },
+  {
+    "question": "What happens during rebase?",
+    "options": [
+      "Commits are replayed",
+      "Commits are deleted",
+      "Branches are merged",
+      "Files are deleted"
+    ],
+    "correctOptions": [
+      "Commits are replayed"
+    ],
+    "time": 35,
+    "details": "Rebase replays commits on the new base."
+  },
+  {
+    "question": "How do you rebase onto another branch?",
+    "options": [
+      "git rebase branch-name",
+      "git merge branch-name",
+      "git checkout branch-name",
+      "git branch branch-name"
+    ],
+    "correctOptions": [
+      "git rebase branch-name"
+    ],
+    "time": 30,
+    "details": "git rebase applies your commits on another branch."
+  },
+  {
+    "question": "What is interactive rebase?",
+    "options": [
+      "Modify commits during rebase",
+      "Automatic rebase",
+      "Merge rebase",
+      "Remote rebase"
+    ],
+    "correctOptions": [
+      "Modify commits during rebase"
+    ],
+    "time": 40,
+    "details": "Interactive rebase allows editing, squashing, reordering."
+  },
+  {
+    "question": "How do you start interactive rebase?",
+    "options": [
+      "git rebase -i HEAD~n",
+      "git rebase interactive",
+      "git rebase --modify",
+      "git rebase --edit"
+    ],
+    "correctOptions": [
+      "git rebase -i HEAD~n"
+    ],
+    "time": 35,
+    "details": "-i opens interactive editor for rebase."
+  },
+  {
+    "question": "What does pick mean in interactive rebase?",
+    "options": [
+      "Keep commit as-is",
+      "Squash commit",
+      "Drop commit",
+      "Edit commit"
+    ],
+    "correctOptions": [
+      "Keep commit as-is"
+    ],
+    "time": 35,
+    "details": "pick keeps the commit unchanged."
+  },
+  {
+    "question": "What does squash mean in rebase?",
+    "options": [
+      "Combine with previous commit",
+      "Delete commit",
+      "Split commit",
+      "Edit commit"
+    ],
+    "correctOptions": [
+      "Combine with previous commit"
+    ],
+    "time": 35,
+    "details": "squash combines commits together."
+  },
+  {
+    "question": "What does fixup mean in rebase?",
+    "options": [
+      "Combine without message",
+      "Combine with message",
+      "Delete commit",
+      "Split commit"
+    ],
+    "correctOptions": [
+      "Combine without message"
+    ],
+    "time": 40,
+    "details": "fixup combines commits, discarding this commit's message."
+  },
+  {
+    "question": "What does drop mean in rebase?",
+    "options": [
+      "Remove commit",
+      "Keep commit",
+      "Edit commit",
+      "Split commit"
+    ],
+    "correctOptions": [
+      "Remove commit"
+    ],
+    "time": 35,
+    "details": "drop removes the commit entirely."
+  },
+  {
+    "question": "What does reword mean in rebase?",
+    "options": [
+      "Change commit message",
+      "Keep message",
+      "Delete message",
+      "Split message"
+    ],
+    "correctOptions": [
+      "Change commit message"
+    ],
+    "time": 35,
+    "details": "reword allows changing the commit message."
+  },
+  {
+    "question": "What does edit mean in rebase?",
+    "options": [
+      "Stop to amend commit",
+      "Continue rebase",
+      "Abort rebase",
+      "Skip commit"
+    ],
+    "correctOptions": [
+      "Stop to amend commit"
+    ],
+    "time": 40,
+    "details": "edit pauses rebase to modify the commit."
+  },
+  {
+    "question": "What does exec mean in rebase?",
+    "options": [
+      "Run shell command",
+      "Execute commit",
+      "Exit rebase",
+      "Skip step"
+    ],
+    "correctOptions": [
+      "Run shell command"
+    ],
+    "time": 40,
+    "details": "exec runs a shell command during rebase."
+  },
+  {
+    "question": "What is git rebase --continue?",
+    "options": [
+      "Resume after resolving",
+      "Continue without resolving",
+      "Start rebase",
+      "Abort rebase"
+    ],
+    "correctOptions": [
+      "Resume after resolving"
+    ],
+    "time": 35,
+    "details": "--continue resumes rebase after conflict resolution."
+  },
+  {
+    "question": "What is git rebase --abort?",
+    "options": [
+      "Cancel and return to before",
+      "Continue rebase",
+      "Complete rebase",
+      "Skip conflicts"
+    ],
+    "correctOptions": [
+      "Cancel and return to before"
+    ],
+    "time": 30,
+    "details": "--abort cancels rebase and returns to original state."
+  },
+  {
+    "question": "What is git rebase --skip?",
+    "options": [
+      "Skip current commit",
+      "Skip conflict",
+      "Skip all",
+      "Skip merge"
+    ],
+    "correctOptions": [
+      "Skip current commit"
+    ],
+    "time": 35,
+    "details": "--skip skips the problematic commit."
+  },
+  {
+    "question": "What is an upstream branch?",
+    "options": [
+      "Branch you track from remote",
+      "Your local branch",
+      "Main branch",
+      "Deleted branch"
+    ],
+    "correctOptions": [
+      "Branch you track from remote"
+    ],
+    "time": 35,
+    "details": "Upstream is the remote branch you're working with."
+  },
+  {
+    "question": "What is git rebase onto new-branch?",
+    "options": [
+      "Rebase commits to new branch",
+      "Delete commits",
+      "Merge branches",
+      "Create branch"
+    ],
+    "correctOptions": [
+      "Rebase commits to new branch"
+    ],
+    "time": 40,
+    "details": "rebase --onto moves commits to a different branch."
+  },
+  {
+    "question": "What is --onto flag?",
+    "options": [
+      "Specify new base branch",
+      "Specify old base",
+      "Specify branch",
+      "Specify commit"
+    ],
+    "correctOptions": [
+      "Specify new base branch"
+    ],
+    "time": 40,
+    "details": "--onto defines where to place rebased commits."
+  },
+  {
+    "question": "What is a divergent branch?",
+    "options": [
+      "Branches that have diverged",
+      "Same branches",
+      "Fast-forward branches",
+      "Clean branches"
+    ],
+    "correctOptions": [
+      "Branches that have diverged"
+    ],
+    "time": 40,
+    "details": "Divergent branches have different commit histories."
+  },
+  {
+    "question": "When should you rebase?",
+    "options": [
+      "Local cleanup before push",
+      "Shared commits",
+      "After push",
+      "Remote branches"
+    ],
+    "correctOptions": [
+      "Local cleanup before push"
+    ],
+    "time": 40,
+    "details": "Rebase is safe for local unpublished commits."
+  },
+  {
+    "question": "When should you NOT rebase?",
+    "options": [
+      "Public/shared commits",
+      "Local commits",
+      "Feature branches",
+      "Hotfix branches"
+    ],
+    "correctOptions": [
+      "Public/shared commits"
+    ],
+    "time": 40,
+    "details": "Never rebase commits that others may have based work on."
+  },
+  {
+    "question": "What is golden rule of rebase?",
+    "options": [
+      "Don't rebase public branches",
+      "Always rebase",
+      "Never merge",
+      "Always force push"
+    ],
+    "correctOptions": [
+      "Don't rebase public branches"
+    ],
+    "time": 40,
+    "details": "The golden rule: never rebase public/shared branches."
+  },
+  {
+    "question": "What is rebase vs cherry-pick?",
+    "options": [
+      "Rebase replays many, cherry-pick one",
+      "Both do same thing",
+      "Cherry-pick replays many",
+      "Neither replays"
+    ],
+    "correctOptions": [
+      "Rebase replays many, cherry-pick one"
+    ],
+    "time": 45,
+    "details": "Rebase applies multiple commits, cherry-pick applies one."
+  },
+  {
+    "question": "What happens to original commits after rebase?",
+    "options": [
+      "They still exist until garbage collected",
+      "They are deleted immediately",
+      "They are archived",
+      "They are backed up"
+    ],
+    "correctOptions": [
+      "They still exist until garbage collected"
+    ],
+    "time": 45,
+    "details": "Original commits exist until reflog expires and GC runs."
+  },
+  {
+    "question": "What is a dangling commit?",
+    "options": [
+      "Unreachable commit",
+      "Reachable commit",
+      "Merged commit",
+      "Tagged commit"
+    ],
+    "correctOptions": [
+      "Unreachable commit"
+    ],
+    "time": 45,
+    "details": "Dangling commits have no reference pointing to them."
+  },
+  {
+    "question": "Can you recover dangling commits?",
+    "options": [
+      "Yes via reflog",
+      "No, never",
+      "Only via backup",
+      "Only from remote"
+    ],
+    "correctOptions": [
+      "Yes via reflog"
+    ],
+    "time": 45,
+    "details": "Reflog can recover commits after rebase."
+  },
+  {
+    "question": "What is reflog?",
+    "options": [
+      "Reference log of HEAD",
+      "Remote log",
+      "Repository log",
+      "Commit log"
+    ],
+    "correctOptions": [
+      "Reference log of HEAD"
+    ],
+    "time": 35,
+    "details": "Reflog records all HEAD movements including rebases."
+  },
+  {
+    "question": "How long does reflog keep entries?",
+    "options": [
+      "90 days by default",
+      "30 days",
+      "Forever",
+      "Until you push"
+    ],
+    "correctOptions": [
+      "90 days by default"
+    ],
+    "time": 40,
+    "details": "Reflog entries expire after 90 days."
+  },
+  {
+    "question": "What is the workflow for cleaning up commits?",
+    "options": [
+      "Rebase -i and squash/fixup",
+      "Merge and delete",
+      "Cherry-pick",
+      "Branch and merge"
+    ],
+    "correctOptions": [
+      "Rebase -i and squash/fixup"
+    ],
+    "time": 45,
+    "details": "Interactive rebase lets you clean up commit history."
+  },
+  {
+    "question": "How do you squash last 3 commits?",
+    "options": [
+      "git rebase -i HEAD~3",
+      "git squash HEAD~3",
+      "git merge HEAD~3",
+      "git reset HEAD~3"
+    ],
+    "correctOptions": [
+      "git rebase -i HEAD~3"
+    ],
+    "time": 40,
+    "details": "Interactive rebase allows squashing commits."
+  },
+  {
+    "question": "What does reorder commits mean?",
+    "options": [
+      "Change commit order",
+      "Add commits",
+      "Delete commits",
+      "Merge commits"
+    ],
+    "correctOptions": [
+      "Change commit order"
+    ],
+    "time": 40,
+    "details": "Interactive rebase lets you reorder commits."
+  },
+  {
+    "question": "How do you split a commit in rebase?",
+    "options": [
+      "Use edit, reset, re-commit",
+      "Use squash",
+      "Use drop",
+      "Use pick"
+    ],
+    "correctOptions": [
+      "Use edit, reset, re-commit"
+    ],
+    "time": 50,
+    "details": "Edit, then reset and re-commit individual changes."
+  },
+  {
+    "question": "What is autosquash?",
+    "options": [
+      "Auto-squash fixup commits",
+      "Manual squashing",
+      "Skip squashing",
+      "Cancel squashing"
+    ],
+    "correctOptions": [
+      "Auto-squash fixup commits"
+    ],
+    "time": 45,
+    "details": "autosquash auto-arranges fixup commits for squashing."
+  },
+  {
+    "question": "What is fixup commit?",
+    "options": [
+      "Commit with !fixup syntax",
+      "Regular commit",
+      "Merge commit",
+      "Initial commit"
+    ],
+    "correctOptions": [
+      "Commit with !fixup syntax"
+    ],
+    "time": 45,
+    "details": "fixup commits are marked with !fixup in message."
+  },
+  {
+    "question": "How do you create a fixup commit?",
+    "options": [
+      "git commit --fixup=HEAD",
+      "git commit --fixup",
+      "git fixup",
+      "git squash --fixup"
+    ],
+    "correctOptions": [
+      "git commit --fixup=HEAD"
+    ],
+    "time": 45,
+    "details": "--fixup creates a commit for autosquash."
+  },
+  {
+    "question": "What is git commit --squash?",
+    "options": [
+      "Mark for future squashing",
+      "Squash immediately",
+      "Skip squashing",
+      "Cancel squashing"
+    ],
+    "correctOptions": [
+      "Mark for future squashing"
+    ],
+    "time": 45,
+    "details": "--squash marks commit to squash with another."
+  },
+  {
+    "question": "What does rebase autosquash do?",
+    "options": [
+      "Squash marked commits",
+      "Skip all",
+      "Keep separate",
+      "Cancel squash"
+    ],
+    "correctOptions": [
+      "Squash marked commits"
+    ],
+    "time": 45,
+    "details": "--autosquash automatically squashes fixup commits."
+  },
+  {
+    "question": "What is a stacked branch?",
+    "options": [
+      "Branches depending on each other",
+      "Parallel branches",
+      "Merged branches",
+      "Deleted branches"
+    ],
+    "correctOptions": [
+      "Branches depending on each other"
+    ],
+    "time": 45,
+    "details": "Stacked branches have dependent feature branches."
+  },
+  {
+    "question": "How do you rebase stacked branches?",
+    "options": [
+      "git rebase --update-refs",
+      "git rebase",
+      "git merge",
+      "git push"
+    ],
+    "correctOptions": [
+      "git rebase --update-refs"
+    ],
+    "time": 50,
+    "details": "--update-refs rebases all stacked branches together."
+  },
+  {
+    "question": "What is pull with rebase?",
+    "options": [
+      "Fetch and rebase local commits",
+      "Fetch and merge",
+      "Push and rebase",
+      "Pull without rebase"
+    ],
+    "correctOptions": [
+      "Fetch and rebase local commits"
+    ],
+    "time": 40,
+    "details": "git pull --rebase rebases instead of merging."
+  },
+  {
+    "question": "What is rebase preserve?",
+    "options": [
+      "Keep merge commits",
+      "Skip merge commits",
+      "Delete merge commits",
+      "Create merge commits"
+    ],
+    "correctOptions": [
+      "Keep merge commits"
+    ],
+    "time": 45,
+    "details": "-p preserves merge commits during rebase."
+  },
+  {
+    "question": "What does rebase --root do?",
+    "options": [
+      "Rebase all commits",
+      "Rebase current branch",
+      "Rebase merged",
+      "Rebase remote"
+    ],
+    "correctOptions": [
+      "Rebase all commits"
+    ],
+    "time": 45,
+    "details": "--root rebases all commits, including initial."
+  },
+  {
+    "question": "What is git pull --rebase=preserve?",
+    "options": [
+      "Rebase preserving merges",
+      "Rebase without merges",
+      "Merge preserving",
+      "No rebase"
+    ],
+    "correctOptions": [
+      "Rebase preserving merges"
+    ],
+    "time": 50,
+    "details": "Preserve keeps merge commits in rebased history."
+  },
+  {
+    "question": "What is the rebase/autosetuprebase option?",
+    "options": [
+      "Auto-rebase mode setting",
+      "Auto-merge",
+      "Disable rebase",
+      "Force merge"
+    ],
+    "correctOptions": [
+      "Auto-rebase mode setting"
+    ],
+    "time": 50,
+    "details": "Configures automatic rebase behavior on pull."
+  },
+  {
+    "question": "What is rebase vs reset?",
+    "options": [
+      "Rebase rewrites, reset moves",
+      "Both move pointers",
+      "Both rewrite",
+      "Neither affects history"
+    ],
+    "correctOptions": [
+      "Rebase rewrites, reset moves"
+    ],
+    "time": 45,
+    "details": "Reset moves HEAD, rebase rewrites commit history."
+  },
+  {
+    "question": "What is git rebase --exec?",
+    "options": [
+      "Run command for each commit",
+      "Execute rebase",
+      "Skip execute",
+      "Abort execute"
+    ],
+    "correctOptions": [
+      "Run command for each commit"
+    ],
+    "time": 50,
+    "details": "--exec runs a command after each commit replay."
+  },
+  {
+    "question": "What is --no-verify in rebase?",
+    "options": [
+      "Skip hooks",
+      "Run hooks",
+      "Fail hooks",
+      "Enable hooks"
+    ],
+    "correctOptions": [
+      "Skip hooks"
+    ],
+    "time": 45,
+    "details": "Bypasses pre-rebase and commit-msg hooks."
+  },
+  {
+    "question": "What are the rebase todo list actions?",
+    "options": [
+      "pick, reword, edit, squash, fixup, drop, exec",
+      "add, commit, push, pull",
+      "merge, branch, checkout, tag",
+      "create, delete, rename, move"
+    ],
+    "correctOptions": [
+      "pick, reword, edit, squash, fixup, drop, exec"
+    ],
+    "time": 50,
+    "details": "Interactive rebase supports multiple actions."
+  },
+  {
+    "question": "What does reorder commits achieve?",
+    "options": [
+      "Change commit sequence",
+      "Delete commits",
+      "Merge commits",
+      "Split commits"
+    ],
+    "correctOptions": [
+      "Change commit sequence"
+    ],
+    "time": 45,
+    "details": "Reordering changes which commits apply first."
+  },
+  {
+    "question": "How do you abort a rebase in progress?",
+    "options": [
+      "git rebase --abort",
+      "git rebase cancel",
+      "git abort",
+      "git rebase stop"
+    ],
+    "correctOptions": [
+      "git rebase --abort"
+    ],
+    "time": 35,
+    "details": "--abort returns to state before rebase started."
+  },
+  {
+    "question": "What causes rebase conflicts?",
+    "options": [
+      "Overlapping changes in same lines",
+      "No changes",
+      "Remote changes",
+      "New files"
+    ],
+    "correctOptions": [
+      "Overlapping changes in same lines"
+    ],
+    "time": 40,
+    "details": "Rebase conflicts occur when commits modify same area."
+  },
+  {
+    "question": "How do you continue after resolving rebase conflicts?",
+    "options": [
+      "git rebase --continue",
+      "git rebase --skip",
+      "git rebase --abort",
+      "git rebase --next"
+    ],
+    "correctOptions": [
+      "git rebase --continue"
+    ],
+    "time": 40,
+    "details": "--continue resumes after conflict resolution."
+  },
+  {
+    "question": "When might you skip a commit during rebase?",
+    "options": [
+      "When it's no longer needed",
+      "Always",
+      "Never",
+      "On conflict"
+    ],
+    "correctOptions": [
+      "When it's no longer needed"
+    ],
+    "time": 45,
+    "details": "--skip removes the problematic commit entirely."
+  },
+  {
+    "question": "What is the difference between squash and fixup?",
+    "options": [
+      "Squash keeps message, fixup discards",
+      "Both keep message",
+      "Both discard",
+      "Different commits"
+    ],
+    "correctOptions": [
+      "Squash keeps message, fixup discards"
+    ],
+    "time": 45,
+    "details": "Squash prompts for message; fixup uses previous."
+  },
+  {
+    "question": "What is an empty fixup commit?",
+    "options": [
+      "Commit with no net changes",
+      "Large commit",
+      "Important commit",
+      "Initial commit"
+    ],
+    "correctOptions": [
+      "Commit with no net changes"
+    ],
+    "time": 50,
+    "details": "Empty commits are automatically removed during rebase."
+  },
+  {
+    "question": "What is the rebase.instructionFormat setting?",
+    "options": [
+      "Format for rebase todo",
+      "Commit format",
+      "Message format",
+      "Branch format"
+    ],
+    "correctOptions": [
+      "Format for rebase todo"
+    ],
+    "time": 50,
+    "details": "Customizes the todo list display format."
+  },
+  {
+    "question": "What is git sequence editor?",
+    "options": [
+      "Program for rebase todo editing",
+      "Code editor",
+      "Text editor",
+      "Git editor"
+    ],
+    "correctOptions": [
+      "Program for rebase todo editing"
+    ],
+    "time": 50,
+    "details": "sequence.editor sets which editor to use."
+  },
+  {
+    "question": "What is rerere.enabled setting?",
+    "options": [
+      "Remember conflict resolutions",
+      "Enable rebase",
+      "Disable rebase",
+      "Remember commits"
+    ],
+    "correctOptions": [
+      "Remember conflict resolutions"
+    ],
+    "time": 50,
+    "details": "rerere remembers how you resolved conflicts."
+  },
+  {
+    "question": "What is the benefit of rerere?",
+    "options": [
+      "Faster conflict resolution",
+      "Prevents conflicts",
+      "Deletes conflicts",
+      "Creates conflicts"
+    ],
+    "correctOptions": [
+      "Faster conflict resolution"
+    ],
+    "time": 50,
+    "details": "Rerere auto-resolves previously seen conflicts."
+  },
+  {
+    "question": "What is rebase vs pull --rebase?",
+    "options": [
+      "Same thing essentially",
+      "Different operations",
+      "Rebase is safer",
+      "Pull is safer"
+    ],
+    "correctOptions": [
+      "Same thing essentially"
+    ],
+    "time": 45,
+    "details": "pull --rebase fetches then runs rebase."
+  },
+  {
+    "question": "What is git rebase?",
+    "options": [
+      "Reapply commits on new base",
+      "Delete commits",
+      "Merge branches",
+      "Create branches"
+    ],
+    "correctOptions": [
+      "Reapply commits on new base"
+    ],
+    "time": 30,
+    "details": "Rebase moves commits to a new base commit."
+  },
+  {
+    "question": "What is the main purpose of rebase?",
+    "options": [
+      "Create linear history",
+      "Delete commits",
+      "Merge branches",
+      "Push changes"
+    ],
+    "correctOptions": [
+      "Create linear history"
+    ],
+    "time": 35,
+    "details": "Rebase creates a cleaner, linear commit history."
+  },
+  {
+    "question": "What is the difference between merge and rebase?",
+    "options": [
+      "Merge preserves history, rebase rewrites",
+      "Both rewrite history",
+      "Both preserve history",
+      "Neither matters"
+    ],
+    "correctOptions": [
+      "Merge preserves history, rebase rewrites"
+    ],
+    "time": 40,
+    "details": "Merge keeps true history, rebase rewrites commits."
+  },
+  {
+    "question": "What happens during rebase?",
+    "options": [
+      "Commits are replayed",
+      "Commits are deleted",
+      "Branches are merged",
+      "Files are deleted"
+    ],
+    "correctOptions": [
+      "Commits are replayed"
+    ],
+    "time": 35,
+    "details": "Rebase replays commits on the new base."
+  },
+  {
+    "question": "How do you rebase onto another branch?",
+    "options": [
+      "git rebase branch-name",
+      "git merge branch-name",
+      "git checkout branch-name",
+      "git branch branch-name"
+    ],
+    "correctOptions": [
+      "git rebase branch-name"
+    ],
+    "time": 30,
+    "details": "git rebase applies your commits on another branch."
+  },
+  {
+    "question": "What is interactive rebase?",
+    "options": [
+      "Modify commits during rebase",
+      "Automatic rebase",
+      "Merge rebase",
+      "Remote rebase"
+    ],
+    "correctOptions": [
+      "Modify commits during rebase"
+    ],
+    "time": 40,
+    "details": "Interactive rebase allows editing, squashing, reordering."
+  },
+  {
+    "question": "How do you start interactive rebase?",
+    "options": [
+      "git rebase -i HEAD~n",
+      "git rebase interactive",
+      "git rebase --modify",
+      "git rebase --edit"
+    ],
+    "correctOptions": [
+      "git rebase -i HEAD~n"
+    ],
+    "time": 35,
+    "details": "-i opens interactive editor for rebase."
+  },
+  {
+    "question": "What does pick mean in interactive rebase?",
+    "options": [
+      "Keep commit as-is",
+      "Squash commit",
+      "Drop commit",
+      "Edit commit"
+    ],
+    "correctOptions": [
+      "Keep commit as-is"
+    ],
+    "time": 35,
+    "details": "pick keeps the commit unchanged."
+  },
+  {
+    "question": "What does squash mean in rebase?",
+    "options": [
+      "Combine with previous commit",
+      "Delete commit",
+      "Split commit",
+      "Edit commit"
+    ],
+    "correctOptions": [
+      "Combine with previous commit"
+    ],
+    "time": 35,
+    "details": "squash combines commits together."
+  },
+  {
+    "question": "What does fixup mean in rebase?",
+    "options": [
+      "Combine without message",
+      "Combine with message",
+      "Delete commit",
+      "Split commit"
+    ],
+    "correctOptions": [
+      "Combine without message"
+    ],
+    "time": 40,
+    "details": "fixup combines commits, discarding this commit's message."
+  },
+  {
+    "question": "What does drop mean in rebase?",
+    "options": [
+      "Remove commit",
+      "Keep commit",
+      "Edit commit",
+      "Split commit"
+    ],
+    "correctOptions": [
+      "Remove commit"
+    ],
+    "time": 35,
+    "details": "drop removes the commit entirely."
+  },
+  {
+    "question": "What does reword mean in rebase?",
+    "options": [
+      "Change commit message",
+      "Keep message",
+      "Delete message",
+      "Split message"
+    ],
+    "correctOptions": [
+      "Change commit message"
+    ],
+    "time": 35,
+    "details": "reword allows changing the commit message."
+  },
+  {
+    "question": "What does edit mean in rebase?",
+    "options": [
+      "Stop to amend commit",
+      "Continue rebase",
+      "Abort rebase",
+      "Skip commit"
+    ],
+    "correctOptions": [
+      "Stop to amend commit"
+    ],
+    "time": 40,
+    "details": "edit pauses rebase to modify the commit."
+  },
+  {
+    "question": "What does exec mean in rebase?",
+    "options": [
+      "Run shell command",
+      "Execute commit",
+      "Exit rebase",
+      "Skip step"
+    ],
+    "correctOptions": [
+      "Run shell command"
+    ],
+    "time": 40,
+    "details": "exec runs a shell command during rebase."
+  },
+  {
+    "question": "What is git rebase --continue?",
+    "options": [
+      "Resume after resolving",
+      "Continue without resolving",
+      "Start rebase",
+      "Abort rebase"
+    ],
+    "correctOptions": [
+      "Resume after resolving"
+    ],
+    "time": 35,
+    "details": "--continue resumes rebase after conflict resolution."
+  },
+  {
+    "question": "What is git rebase --abort?",
+    "options": [
+      "Cancel and return to before",
+      "Continue rebase",
+      "Complete rebase",
+      "Skip conflicts"
+    ],
+    "correctOptions": [
+      "Cancel and return to before"
+    ],
+    "time": 30,
+    "details": "--abort cancels rebase and returns to original state."
+  },
+  {
+    "question": "What is git rebase --skip?",
+    "options": [
+      "Skip current commit",
+      "Skip conflict",
+      "Skip all",
+      "Skip merge"
+    ],
+    "correctOptions": [
+      "Skip current commit"
+    ],
+    "time": 35,
+    "details": "--skip skips the problematic commit."
+  },
+  {
+    "question": "What is an upstream branch?",
+    "options": [
+      "Branch you track from remote",
+      "Your local branch",
+      "Main branch",
+      "Deleted branch"
+    ],
+    "correctOptions": [
+      "Branch you track from remote"
+    ],
+    "time": 35,
+    "details": "Upstream is the remote branch you're working with."
+  },
+  {
+    "question": "What is git rebase onto new-branch?",
+    "options": [
+      "Rebase commits to new branch",
+      "Delete commits",
+      "Merge branches",
+      "Create branch"
+    ],
+    "correctOptions": [
+      "Rebase commits to new branch"
+    ],
+    "time": 40,
+    "details": "rebase --onto moves commits to a different branch."
+  },
+  {
+    "question": "What is --onto flag?",
+    "options": [
+      "Specify new base branch",
+      "Specify old base",
+      "Specify branch",
+      "Specify commit"
+    ],
+    "correctOptions": [
+      "Specify new base branch"
+    ],
+    "time": 40,
+    "details": "--onto defines where to place rebased commits."
+  },
+  {
+    "question": "What is a divergent branch?",
+    "options": [
+      "Branches that have diverged",
+      "Same branches",
+      "Fast-forward branches",
+      "Clean branches"
+    ],
+    "correctOptions": [
+      "Branches that have diverged"
+    ],
+    "time": 40,
+    "details": "Divergent branches have different commit histories."
+  },
+  {
+    "question": "When should you rebase?",
+    "options": [
+      "Local cleanup before push",
+      "Shared commits",
+      "After push",
+      "Remote branches"
+    ],
+    "correctOptions": [
+      "Local cleanup before push"
+    ],
+    "time": 40,
+    "details": "Rebase is safe for local unpublished commits."
+  },
+  {
+    "question": "When should you NOT rebase?",
+    "options": [
+      "Public/shared commits",
+      "Local commits",
+      "Feature branches",
+      "Hotfix branches"
+    ],
+    "correctOptions": [
+      "Public/shared commits"
+    ],
+    "time": 40,
+    "details": "Never rebase commits that others may have based work on."
+  },
+  {
+    "question": "What is golden rule of rebase?",
+    "options": [
+      "Don't rebase public branches",
+      "Always rebase",
+      "Never merge",
+      "Always force push"
+    ],
+    "correctOptions": [
+      "Don't rebase public branches"
+    ],
+    "time": 40,
+    "details": "The golden rule: never rebase public/shared branches."
+  },
+  {
+    "question": "What is rebase vs cherry-pick?",
+    "options": [
+      "Rebase replays many, cherry-pick one",
+      "Both do same thing",
+      "Cherry-pick replays many",
+      "Neither replays"
+    ],
+    "correctOptions": [
+      "Rebase replays many, cherry-pick one"
+    ],
+    "time": 45,
+    "details": "Rebase applies multiple commits, cherry-pick applies one."
+  },
+  {
+    "question": "What happens to original commits after rebase?",
+    "options": [
+      "They still exist until garbage collected",
+      "They are deleted immediately",
+      "They are archived",
+      "They are backed up"
+    ],
+    "correctOptions": [
+      "They still exist until garbage collected"
+    ],
+    "time": 45,
+    "details": "Original commits exist until reflog expires and GC runs."
+  },
+  {
+    "question": "What is a dangling commit?",
+    "options": [
+      "Unreachable commit",
+      "Reachable commit",
+      "Merged commit",
+      "Tagged commit"
+    ],
+    "correctOptions": [
+      "Unreachable commit"
+    ],
+    "time": 45,
+    "details": "Dangling commits have no reference pointing to them."
+  },
+  {
+    "question": "Can you recover dangling commits?",
+    "options": [
+      "Yes via reflog",
+      "No, never",
+      "Only via backup",
+      "Only from remote"
+    ],
+    "correctOptions": [
+      "Yes via reflog"
+    ],
+    "time": 45,
+    "details": "Reflog can recover commits after rebase."
+  },
+  {
+    "question": "What is git stash?",
+    "options": [
+      "Temporarily save work",
+      "Delete work",
+      "Share work",
+      "Publish work"
+    ],
+    "correctOptions": [
+      "Temporarily save work"
+    ],
+    "time": 25,
+    "details": "Stash temporarily shelves changes for later use."
+  },
+  {
+    "question": "How do you stash changes?",
+    "options": [
+      "git stash",
+      "git save",
+      "git push",
+      "git store"
+    ],
+    "correctOptions": [
+      "git stash"
+    ],
+    "time": 20,
+    "details": "git stash saves uncommitted changes temporarily."
+  },
+  {
+    "question": "How do you apply stashed changes?",
+    "options": [
+      "git stash apply",
+      "git stash get",
+      "git stash pop",
+      "Both apply and pop work"
+    ],
+    "correctOptions": [
+      "Both apply and pop work"
+    ],
+    "time": 25,
+    "details": "apply keeps stash, pop applies and removes it."
+  },
+  {
+    "question": "What is the difference between stash pop and apply?",
+    "options": [
+      "pop removes stash, apply keeps it",
+      "apply removes stash, pop keeps it",
+      "Both remove",
+      "Neither removes"
+    ],
+    "correctOptions": [
+      "pop removes stash, apply keeps it"
+    ],
+    "time": 30,
+    "details": "pop removes the stash after applying; apply keeps it."
+  },
+  {
+    "question": "How do you list stashes?",
+    "options": [
+      "git stash list",
+      "git stash show",
+      "git stash display",
+      "git stash all"
+    ],
+    "correctOptions": [
+      "git stash list"
+    ],
+    "time": 20,
+    "details": "git stash list shows all stashed changes."
+  },
+  {
+    "question": "What does git stash show display?",
+    "options": [
+      "Changes in stash",
+      "Stash list",
+      "Stash count",
+      "Stash message"
+    ],
+    "correctOptions": [
+      "Changes in stash"
+    ],
+    "time": 25,
+    "details": "git stash show displays what was stashed."
+  },
+  {
+    "question": "How do you delete a stash?",
+    "options": [
+      "git stash drop stash@{n}",
+      "git stash remove stash@{n}",
+      "git stash delete stash@{n}",
+      "git stash clear stash@{n}"
+    ],
+    "correctOptions": [
+      "git stash drop stash@{n}"
+    ],
+    "time": 30,
+    "details": "git stash drop removes a specific stash."
+  },
+  {
+    "question": "How do you clear all stashes?",
+    "options": [
+      "git stash clear",
+      "git stash drop all",
+      "git stash remove all",
+      "git stash delete all"
+    ],
+    "correctOptions": [
+      "git stash clear"
+    ],
+    "time": 25,
+    "details": "git stash clear removes all stashed changes."
+  },
+  {
+    "question": "What is stash@{0}?",
+    "options": [
+      "Most recent stash",
+      "Oldest stash",
+      "First stash",
+      "Named stash"
+    ],
+    "correctOptions": [
+      "Most recent stash"
+    ],
+    "time": 25,
+    "details": "Stash@{0} is the most recent stash entry."
+  },
+  {
+    "question": "What is reflog?",
+    "options": [
+      "Reference log of operations",
+      "Remote log",
+      "Repository log",
+      "Commit log"
+    ],
+    "correctOptions": [
+      "Reference log of operations"
+    ],
+    "time": 30,
+    "details": "Reflog records all changes to HEAD and branches."
+  }
+]

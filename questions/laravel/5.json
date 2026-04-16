@@ -1,0 +1,1416 @@
+[
+  {
+    "question": "What is Laravel Mix?",
+    "options": [
+      "Build tool for assets",
+      "Database tool",
+      "Testing tool",
+      "Routing tool"
+    ],
+    "correctOptions": [
+      "Build tool for assets"
+    ],
+    "time": 25,
+    "details": "Laravel Mix compiles and bundles assets."
+  },
+  {
+    "question": "What is webpack?",
+    "options": [
+      "Module bundler",
+      "Database",
+      "Server",
+      "Framework"
+    ],
+    "correctOptions": [
+      "Module bundler"
+    ],
+    "time": 25,
+    "details": "Webpack bundles JavaScript modules."
+  },
+  {
+    "question": "What file configures Mix?",
+    "options": [
+      "webpack.mix.js",
+      "mix.config.js",
+      "webpack.config.js",
+      "laravel.mix.js"
+    ],
+    "correctOptions": [
+      "webpack.mix.js"
+    ],
+    "time": 25,
+    "details": "webpack.mix.js is the Mix configuration file."
+  },
+  {
+    "question": "How do you compile JS with Mix?",
+    "options": [
+      "mix.js()",
+      "mix.compile()",
+      "mix.javascript()",
+      "mix.bundle()"
+    ],
+    "correctOptions": [
+      "mix.js()"
+    ],
+    "time": 30,
+    "details": "mix.js() compiles JavaScript files."
+  },
+  {
+    "question": "How do you compile CSS with Mix?",
+    "options": [
+      "mix.css()",
+      "mix.style()",
+      "mix.sass()",
+      "mix.less()"
+    ],
+    "correctOptions": [
+      "mix.css()"
+    ],
+    "time": 30,
+    "details": "mix.css() processes CSS files."
+  },
+  {
+    "question": "What is the npm run dev command?",
+    "options": [
+      "Compile assets for development",
+      "Compile for production",
+      "Install dependencies",
+      "Watch files"
+    ],
+    "correctOptions": [
+      "Compile assets for development"
+    ],
+    "time": 30,
+    "details": "npm run dev compiles for development."
+  },
+  {
+    "question": "What is npm run prod command?",
+    "options": [
+      "Compile for production",
+      "Compile for dev",
+      "Watch files",
+      "Clean files"
+    ],
+    "correctOptions": [
+      "Compile for production"
+    ],
+    "time": 30,
+    "details": "npm run prod compiles optimized assets."
+  },
+  {
+    "question": "What is npm run watch?",
+    "options": [
+      "Auto-recompile on changes",
+      "Single compile",
+      "Production build",
+      "Clean build"
+    ],
+    "correctOptions": [
+      "Auto-recompile on changes"
+    ],
+    "time": 30,
+    "details": "watch auto-recompiles when files change."
+  },
+  {
+    "question": "How do you enable source maps?",
+    "options": [
+      "mix.sourceMaps()",
+      "mix.maps()",
+      "mix.debug()",
+      "mix.sourcemaps()"
+    ],
+    "correctOptions": [
+      "mix.sourceMaps()"
+    ],
+    "time": 35,
+    "details": "sourceMaps() enables debugging source maps."
+  },
+  {
+    "question": "What does mix.browserSync() do?",
+    "options": [
+      "Live reload in browser",
+      "Sync files",
+      "Watch files",
+      "Cache files"
+    ],
+    "correctOptions": [
+      "Live reload in browser"
+    ],
+    "time": 35,
+    "details": "browserSync enables live browser reloading."
+  },
+  {
+    "question": "What is versioning in Mix?",
+    "options": [
+      "Cache-bust file names",
+      "Version control",
+      "File versioning",
+      "Asset versioning"
+    ],
+    "correctOptions": [
+      "Cache-bust file names"
+    ],
+    "time": 35,
+    "details": "Versioning appends hashes for cache busting."
+  },
+  {
+    "question": "How do you enable versioning?",
+    "options": [
+      "mix.version()",
+      "mix.cache()",
+      "mix.hash()",
+      "mix.bust()"
+    ],
+    "correctOptions": [
+      "mix.version()"
+    ],
+    "time": 30,
+    "details": "version() adds content hashes to filenames."
+  },
+  {
+    "question": "What is Vue.js?",
+    "options": [
+      "JavaScript framework",
+      "CSS framework",
+      "Database",
+      "Server"
+    ],
+    "correctOptions": [
+      "JavaScript framework"
+    ],
+    "time": 25,
+    "details": "Vue.js is a progressive JavaScript framework."
+  },
+  {
+    "question": "How do you install Vue with Laravel?",
+    "options": [
+      "npm install vue",
+      "composer require vue",
+      "npm get vue",
+      "bower install vue"
+    ],
+    "correctOptions": [
+      "npm install vue"
+    ],
+    "time": 30,
+    "details": "Vue is installed via npm in Laravel."
+  },
+  {
+    "question": "What is React?",
+    "options": [
+      "JavaScript library",
+      "CSS library",
+      "Database",
+      "Server"
+    ],
+    "correctOptions": [
+      "JavaScript library"
+    ],
+    "time": 25,
+    "details": "React is a JavaScript library for UI."
+  },
+  {
+    "question": "How do you install React with Laravel?",
+    "options": [
+      "npm install react react-dom",
+      "composer require react",
+      "npm get react",
+      "bower install react"
+    ],
+    "correctOptions": [
+      "npm install react react-dom"
+    ],
+    "time": 30,
+    "details": "React is installed via npm in Laravel."
+  },
+  {
+    "question": "What is Inertia.js?",
+    "options": [
+      "SPA in Laravel",
+      "Database tool",
+      "Testing tool",
+      "API tool"
+    ],
+    "correctOptions": [
+      "SPA in Laravel"
+    ],
+    "time": 35,
+    "details": "Inertia enables SPA building in Laravel."
+  },
+  {
+    "question": "What is @vite directive?",
+    "options": [
+      "Vite integration tag",
+      "Asset tag",
+      "Style tag",
+      "Script tag"
+    ],
+    "correctOptions": [
+      "Vite integration tag"
+    ],
+    "time": 35,
+    "details": "@vite integrates Vite in Blade templates."
+  },
+  {
+    "question": "What is Vite?",
+    "options": [
+      "Build tool",
+      "Database",
+      "Testing tool",
+      "Server"
+    ],
+    "correctOptions": [
+      "Build tool"
+    ],
+    "time": 30,
+    "details": "Vite is Laravel's new asset bundler."
+  },
+  {
+    "question": "How do you compile with Vite?",
+    "options": [
+      "npm run dev",
+      "npm run build",
+      "php artisan vite",
+      "vite compile"
+    ],
+    "correctOptions": [
+      "npm run dev"
+    ],
+    "time": 30,
+    "details": "npm run dev compiles assets with Vite."
+  },
+  {
+    "question": "What is Tailwind CSS?",
+    "options": [
+      "Utility-first CSS",
+      "Component library",
+      "JavaScript",
+      "Server"
+    ],
+    "correctOptions": [
+      "Utility-first CSS"
+    ],
+    "time": 30,
+    "details": "Tailwind is a utility-first CSS framework."
+  },
+  {
+    "question": "What is Sass?",
+    "options": [
+      "CSS preprocessor",
+      "JavaScript",
+      "Database",
+      "HTML"
+    ],
+    "correctOptions": [
+      "CSS preprocessor"
+    ],
+    "time": 30,
+    "details": "Sass extends CSS with variables and nesting."
+  },
+  {
+    "question": "How do you use Sass in Mix?",
+    "options": [
+      "mix.sass()",
+      "mix.css()",
+      "mix.less()",
+      "mix.style()"
+    ],
+    "correctOptions": [
+      "mix.sass()"
+    ],
+    "time": 30,
+    "details": "mix.sass() compiles Sass/SCSS files."
+  },
+  {
+    "question": "What is Less?",
+    "options": [
+      "CSS preprocessor",
+      "JavaScript library",
+      "Database",
+      "HTML"
+    ],
+    "correctOptions": [
+      "CSS preprocessor"
+    ],
+    "time": 30,
+    "details": "Less is a CSS preprocessor like Sass."
+  },
+  {
+    "question": "How do you use Less in Mix?",
+    "options": [
+      "mix.less()",
+      "mix.css()",
+      "mix.sass()",
+      "mix.style()"
+    ],
+    "correctOptions": [
+      "mix.less()"
+    ],
+    "time": 30,
+    "details": "mix.less() compiles Less files."
+  },
+  {
+    "question": "What is PostCSS?",
+    "options": [
+      "CSS transformation tool",
+      "JavaScript tool",
+      "Database",
+      "Server"
+    ],
+    "correctOptions": [
+      "CSS transformation tool"
+    ],
+    "time": 35,
+    "details": "PostCSS transforms CSS with JavaScript plugins."
+  },
+  {
+    "question": "What is Autoprefixer?",
+    "options": [
+      "CSS vendor prefixer",
+      "JavaScript bundler",
+      "HTML minifier",
+      "Asset loader"
+    ],
+    "correctOptions": [
+      "CSS vendor prefixer"
+    ],
+    "time": 35,
+    "details": "Autoprefixer adds vendor prefixes automatically."
+  },
+  {
+    "question": "What is npm?",
+    "options": [
+      "Node package manager",
+      "PHP manager",
+      "Database manager",
+      "Package manager"
+    ],
+    "correctOptions": [
+      "Node package manager"
+    ],
+    "time": 25,
+    "details": "npm manages JavaScript packages."
+  },
+  {
+    "question": "What is package.json?",
+    "options": [
+      "Node dependencies config",
+      "PHP config",
+      "Database config",
+      "Route config"
+    ],
+    "correctOptions": [
+      "Node dependencies config"
+    ],
+    "time": 25,
+    "details": "package.json lists npm dependencies."
+  },
+  {
+    "question": "What is npm install?",
+    "options": [
+      "Install dependencies",
+      "Uninstall dependencies",
+      "Update dependencies",
+      "List dependencies"
+    ],
+    "correctOptions": [
+      "Install dependencies"
+    ],
+    "time": 25,
+    "details": "npm install installs all dependencies."
+  },
+  {
+    "question": "What is a Laravel package?",
+    "options": [
+      "Extend Laravel functionality",
+      "Core component",
+      "Database driver",
+      "Testing tool"
+    ],
+    "correctOptions": [
+      "Extend Laravel functionality"
+    ],
+    "time": 30,
+    "details": "Packages extend Laravel's core functionality."
+  },
+  {
+    "question": "How do you require a package?",
+    "options": [
+      "composer require vendor/package",
+      "npm require vendor/package",
+      "php require vendor/package",
+      "composer get vendor/package"
+    ],
+    "correctOptions": [
+      "composer require vendor/package"
+    ],
+    "time": 30,
+    "details": "composer require adds packages to your project."
+  },
+  {
+    "question": "What is a service provider in packages?",
+    "options": [
+      "Bootstrap package services",
+      "Route package",
+      "View package",
+      "Config package"
+    ],
+    "correctOptions": [
+      "Bootstrap package services"
+    ],
+    "time": 40,
+    "details": "Service providers bootstrap packages."
+  },
+  {
+    "question": "What is Laravel Debugbar?",
+    "options": [
+      "Debug toolbar",
+      "Testing tool",
+      "Deployment tool",
+      "API tool"
+    ],
+    "correctOptions": [
+      "Debug toolbar"
+    ],
+    "time": 35,
+    "details": "Debugbar adds debugging information."
+  },
+  {
+    "question": "What is Laravel Telescope?",
+    "options": [
+      "Debug assistant",
+      "Deployment tool",
+      "Testing tool",
+      "Cache tool"
+    ],
+    "correctOptions": [
+      "Debug assistant"
+    ],
+    "time": 35,
+    "details": "Telescope helps debug and monitor apps."
+  },
+  {
+    "question": "What is barryvdh/laravel-dompdf?",
+    "options": [
+      "PDF generation",
+      "HTML rendering",
+      "Image processing",
+      "File storage"
+    ],
+    "correctOptions": [
+      "PDF generation"
+    ],
+    "time": 35,
+    "details": "DOMPDF generates PDFs from HTML."
+  },
+  {
+    "question": "What is intervention/image?",
+    "options": [
+      "Image manipulation",
+      "File upload",
+      "Storage handling",
+      "Image display"
+    ],
+    "correctOptions": [
+      "Image manipulation"
+    ],
+    "time": 35,
+    "details": "Intervention handles image processing."
+  },
+  {
+    "question": "What is Spatie/laravel-permission?",
+    "options": [
+      "RBAC management",
+      "Authentication",
+      "Caching",
+      "API management"
+    ],
+    "correctOptions": [
+      "RBAC management"
+    ],
+    "time": 35,
+    "details": "laravel-permission manages roles and permissions."
+  },
+  {
+    "question": "What is predis/predis?",
+    "options": [
+      "Redis client",
+      "Database driver",
+      "Cache driver",
+      "Queue driver"
+    ],
+    "correctOptions": [
+      "Redis client"
+    ],
+    "time": 35,
+    "details": "Predis is a PHP Redis client."
+  },
+  {
+    "question": "What is maatwebsite/excel?",
+    "options": [
+      "Spreadsheet handling",
+      "PDF generation",
+      "Email sending",
+      "File storage"
+    ],
+    "correctOptions": [
+      "Spreadsheet handling"
+    ],
+    "time": 35,
+    "details": "Maatwebsite provides Excel/CSV import/export."
+  },
+  {
+    "question": "What is cache configuration?",
+    "options": [
+      "Cache driver setup",
+      "Session setup",
+      "Queue setup",
+      "Route setup"
+    ],
+    "correctOptions": [
+      "Cache driver setup"
+    ],
+    "time": 30,
+    "details": "Cache config sets up caching drivers."
+  },
+  {
+    "question": "What cache drivers are available?",
+    "options": [
+      "file, redis, memcached, array",
+      "mysql, postgres, sqlite",
+      "s3, rackspace, local",
+      "sync, database, queue"
+    ],
+    "correctOptions": [
+      "file, redis, memcached, array"
+    ],
+    "time": 35,
+    "details": "Laravel supports multiple cache drivers."
+  },
+  {
+    "question": "What is the cache() helper?",
+    "options": [
+      "Store/retrieve cache",
+      "Clear cache",
+      "Get cache",
+      "Set cache"
+    ],
+    "correctOptions": [
+      "Store/retrieve cache"
+    ],
+    "time": 30,
+    "details": "cache() is a helper for cache operations."
+  },
+  {
+    "question": "What is Cache::put()?",
+    "options": [
+      "Store item in cache",
+      "Get from cache",
+      "Remove from cache",
+      "Check cache"
+    ],
+    "correctOptions": [
+      "Store item in cache"
+    ],
+    "time": 30,
+    "details": "put() stores an item in the cache."
+  },
+  {
+    "question": "What is Cache::get()?",
+    "options": [
+      "Retrieve cached item",
+      "Store item",
+      "Forget item",
+      "Check item"
+    ],
+    "correctOptions": [
+      "Retrieve cached item"
+    ],
+    "time": 30,
+    "details": "get() retrieves items from cache."
+  },
+  {
+    "question": "What is Cache::remember()?",
+    "options": [
+      "Get or store value",
+      "Store value",
+      "Get value",
+      "Forget value"
+    ],
+    "correctOptions": [
+      "Get or store value"
+    ],
+    "time": 35,
+    "details": "remember() gets from cache or stores default."
+  },
+  {
+    "question": "What is Cache::forget()?",
+    "options": [
+      "Remove item from cache",
+      "Store item",
+      "Get item",
+      "Check item"
+    ],
+    "correctOptions": [
+      "Remove item from cache"
+    ],
+    "time": 30,
+    "details": "forget() removes an item from cache."
+  },
+  {
+    "question": "What is Cache::flush()?",
+    "options": [
+      "Clear entire cache",
+      "Clear one item",
+      "Store item",
+      "Check cache"
+    ],
+    "correctOptions": [
+      "Clear entire cache"
+    ],
+    "time": 30,
+    "details": "flush() clears the entire cache store."
+  },
+  {
+    "question": "What is cache tags?",
+    "options": [
+      "Group cache items",
+      "Name cache items",
+      "Clear cache",
+      "Store cache"
+    ],
+    "correctOptions": [
+      "Group cache items"
+    ],
+    "time": 40,
+    "details": "Tags allow grouping and clearing related cache."
+  },
+  {
+    "question": "How do you cache a response?",
+    "options": [
+      "Response::cache()",
+      "Cache::response()",
+      "cache()->response()",
+      "Route::cache()"
+    ],
+    "correctOptions": [
+      "Response::cache()"
+    ],
+    "time": 40,
+    "details": "Response::cache() caches HTTP responses."
+  },
+  {
+    "question": "What is route caching?",
+    "options": [
+      "Cache compiled routes",
+      "Clear routes",
+      "List routes",
+      "Show routes"
+    ],
+    "correctOptions": [
+      "Cache compiled routes"
+    ],
+    "time": 35,
+    "details": "Route caching speeds up route registration."
+  },
+  {
+    "question": "What is config caching?",
+    "options": [
+      "Cache configuration",
+      "Clear config",
+      "Load config",
+      "Show config"
+    ],
+    "correctOptions": [
+      "Cache configuration"
+    ],
+    "time": 35,
+    "details": "Config caching stores parsed config."
+  },
+  {
+    "question": "What is view caching?",
+    "options": [
+      "Compile Blade templates",
+      "Clear views",
+      "Load views",
+      "Create views"
+    ],
+    "correctOptions": [
+      "Compile Blade templates"
+    ],
+    "time": 35,
+    "details": "View caching compiles templates for performance."
+  },
+  {
+    "question": "What is artisan optimize?",
+    "options": [
+      "Cache bootstrap files",
+      "Clear cache",
+      "Show routes",
+      "List commands"
+    ],
+    "correctOptions": [
+      "Cache bootstrap files"
+    ],
+    "time": 35,
+    "details": "optimize caches for production performance."
+  },
+  {
+    "question": "What is queue configuration?",
+    "options": [
+      "Queue driver setup",
+      "Cache setup",
+      "Session setup",
+      "Route setup"
+    ],
+    "correctOptions": [
+      "Queue driver setup"
+    ],
+    "time": 30,
+    "details": "Queue config sets up job queues."
+  },
+  {
+    "question": "What queue drivers are available?",
+    "options": [
+      "sync, redis, database, beanstalkd",
+      "mysql, postgres, sqlite",
+      "s3, rackspace, local",
+      "file, cache, session"
+    ],
+    "correctOptions": [
+      "sync, redis, database, beanstalkd"
+    ],
+    "time": 35,
+    "details": "Laravel supports multiple queue drivers."
+  },
+  {
+    "question": "What is the sync queue driver?",
+    "options": [
+      "Execute jobs immediately",
+      "Store jobs in database",
+      "Send to Redis",
+      "Send to beanstalkd"
+    ],
+    "correctOptions": [
+      "Execute jobs immediately"
+    ],
+    "time": 35,
+    "details": "Sync executes jobs synchronously."
+  },
+  {
+    "question": "What is the database queue driver?",
+    "options": [
+      "Store jobs in database",
+      "Execute jobs immediately",
+      "Send to Redis",
+      "Send to beanstalkd"
+    ],
+    "correctOptions": [
+      "Store jobs in database"
+    ],
+    "time": 35,
+    "details": "Database driver uses DB tables for jobs."
+  },
+  {
+    "question": "What is the redis queue driver?",
+    "options": [
+      "Store jobs in Redis",
+      "Execute immediately",
+      "Store in database",
+      "Store in beanstalkd"
+    ],
+    "correctOptions": [
+      "Store jobs in Redis"
+    ],
+    "time": 35,
+    "details": "Redis driver uses Redis for queue storage."
+  },
+  {
+    "question": "What is php artisan queue:work?",
+    "options": [
+      "Process queue jobs",
+      "List queue",
+      "Clear queue",
+      "Retry failed"
+    ],
+    "correctOptions": [
+      "Process queue jobs"
+    ],
+    "time": 30,
+    "details": "queue:work processes queued jobs."
+  },
+  {
+    "question": "What is php artisan queue:listen?",
+    "options": [
+      "Continuous queue worker",
+      "Single job",
+      "Queue status",
+      "Queue list"
+    ],
+    "correctOptions": [
+      "Continuous queue worker"
+    ],
+    "time": 35,
+    "details": "queue:listen watches and processes jobs continuously."
+  },
+  {
+    "question": "What is queue:table migration?",
+    "options": [
+      "Create jobs table",
+      "Create users table",
+      "Create cache table",
+      "Create sessions table"
+    ],
+    "correctOptions": [
+      "Create jobs table"
+    ],
+    "time": 35,
+    "details": "queue:table creates the jobs database table."
+  },
+  {
+    "question": "What is failed_jobs table?",
+    "options": [
+      "Store failed jobs",
+      "Store all jobs",
+      "Store active jobs",
+      "Store pending jobs"
+    ],
+    "correctOptions": [
+      "Store failed jobs"
+    ],
+    "time": 35,
+    "details": "failed_jobs table records failed job attempts."
+  },
+  {
+    "question": "What is the failed_jobs migration?",
+    "options": [
+      "Create failed_jobs table",
+      "Create jobs table",
+      "Create cache table",
+      "Create users table"
+    ],
+    "correctOptions": [
+      "Create failed_jobs table"
+    ],
+    "time": 35,
+    "details": "failed_jobs table migration creates failure tracking."
+  },
+  {
+    "question": "What is job priority?",
+    "options": [
+      "Queue order",
+      "Job importance",
+      "Job timeout",
+      "Job attempts"
+    ],
+    "correctOptions": [
+      "Queue order"
+    ],
+    "time": 40,
+    "details": "Priority affects the order of job processing."
+  },
+  {
+    "question": "What is a queue connection?",
+    "options": [
+      "Queue backend driver",
+      "Job class",
+      "Worker process",
+      "Job retry"
+    ],
+    "correctOptions": [
+      "Queue backend driver"
+    ],
+    "time": 40,
+    "details": "Connections define queue backend configuration."
+  },
+  {
+    "question": "What is dispatch_now()?",
+    "options": [
+      "Execute synchronously",
+      "Queue for later",
+      "Retry job",
+      "Cancel job"
+    ],
+    "correctOptions": [
+      "Execute synchronously"
+    ],
+    "time": 40,
+    "details": "dispatch_now() runs job immediately."
+  },
+  {
+    "question": "What is job middleware?",
+    "options": [
+      "Filter/process jobs",
+      "Create jobs",
+      "Retry jobs",
+      "Delete jobs"
+    ],
+    "correctOptions": [
+      "Filter/process jobs"
+    ],
+    "time": 45,
+    "details": "Middleware can process/filter queued jobs."
+  },
+  {
+    "question": "What is rate limiting in queues?",
+    "options": [
+      "Limit job dispatch rate",
+      "Speed up jobs",
+      "Retry jobs",
+      "Cancel jobs"
+    ],
+    "correctOptions": [
+      "Limit job dispatch rate"
+    ],
+    "time": 45,
+    "details": "Rate limiting controls job dispatch frequency."
+  },
+  {
+    "question": "What is the retryUntil() method?",
+    "options": [
+      "Define retry timeout",
+      "Retry job",
+      "Cancel job",
+      "Queue job"
+    ],
+    "correctOptions": [
+      "Define retry timeout"
+    ],
+    "time": 45,
+    "details": "retryUntil() sets when job stops retrying."
+  },
+  {
+    "question": "What is job batching?",
+    "options": [
+      "Group jobs together",
+      "Split jobs",
+      "Delete jobs",
+      "Cancel jobs"
+    ],
+    "correctOptions": [
+      "Group jobs together"
+    ],
+    "time": 45,
+    "details": "Batching groups jobs and tracks completion."
+  },
+  {
+    "question": "What is Bus::batch()?",
+    "options": [
+      "Create job batch",
+      "Execute batch",
+      "Clear batch",
+      "Retry batch"
+    ],
+    "correctOptions": [
+      "Create job batch"
+    ],
+    "time": 45,
+    "details": "batch() creates a group of jobs."
+  },
+  {
+    "question": "What is then() in job batches?",
+    "options": [
+      "Callback when complete",
+      "Start batch",
+      "Fail batch",
+      "Cancel batch"
+    ],
+    "correctOptions": [
+      "Callback when complete"
+    ],
+    "time": 45,
+    "details": "then() runs after batch completes."
+  },
+  {
+    "question": "What is catch() in job batches?",
+    "options": [
+      "Callback on failure",
+      "Start batch",
+      "Complete batch",
+      "Process batch"
+    ],
+    "correctOptions": [
+      "Callback on failure"
+    ],
+    "time": 45,
+    "details": "catch() runs if batch fails."
+  },
+  {
+    "question": "What is Laravel Vapor?",
+    "options": [
+      "Serverless deployment",
+      "Shared hosting",
+      "VPS management",
+      "CI/CD tool"
+    ],
+    "correctOptions": [
+      "Serverless deployment"
+    ],
+    "time": 40,
+    "details": "Vapor deploys Laravel to serverless platforms."
+  },
+  {
+    "question": "What is the cache helper?",
+    "options": [
+      "Cache facade",
+      "Route helper",
+      "View helper",
+      "Config helper"
+    ],
+    "correctOptions": [
+      "Cache facade"
+    ],
+    "time": 30,
+    "details": "cache() is a global helper for caching."
+  },
+  {
+    "question": "What is the @cache directive?",
+    "options": [
+      "Cache view fragment",
+      "Clear cache",
+      "Store cache",
+      "Get cache"
+    ],
+    "correctOptions": [
+      "Cache view fragment"
+    ],
+    "time": 40,
+    "details": "@cache caches Blade template fragments."
+  },
+  {
+    "question": "What is Laravel Mix?",
+    "options": [
+      "Build tool for assets",
+      "Database tool",
+      "Testing tool",
+      "Routing tool"
+    ],
+    "correctOptions": [
+      "Build tool for assets"
+    ],
+    "time": 25,
+    "details": "Laravel Mix compiles and bundles assets."
+  },
+  {
+    "question": "What is webpack?",
+    "options": [
+      "Module bundler",
+      "Database",
+      "Server",
+      "Framework"
+    ],
+    "correctOptions": [
+      "Module bundler"
+    ],
+    "time": 25,
+    "details": "Webpack bundles JavaScript modules."
+  },
+  {
+    "question": "What file configures Mix?",
+    "options": [
+      "webpack.mix.js",
+      "mix.config.js",
+      "webpack.config.js",
+      "laravel.mix.js"
+    ],
+    "correctOptions": [
+      "webpack.mix.js"
+    ],
+    "time": 25,
+    "details": "webpack.mix.js is the Mix configuration file."
+  },
+  {
+    "question": "How do you compile JS with Mix?",
+    "options": [
+      "mix.js()",
+      "mix.compile()",
+      "mix.javascript()",
+      "mix.bundle()"
+    ],
+    "correctOptions": [
+      "mix.js()"
+    ],
+    "time": 30,
+    "details": "mix.js() compiles JavaScript files."
+  },
+  {
+    "question": "How do you compile CSS with Mix?",
+    "options": [
+      "mix.css()",
+      "mix.style()",
+      "mix.sass()",
+      "mix.less()"
+    ],
+    "correctOptions": [
+      "mix.css()"
+    ],
+    "time": 30,
+    "details": "mix.css() processes CSS files."
+  },
+  {
+    "question": "What is npm run dev command?",
+    "options": [
+      "Compile assets for development",
+      "Compile for production",
+      "Install dependencies",
+      "Watch files"
+    ],
+    "correctOptions": [
+      "Compile assets for development"
+    ],
+    "time": 30,
+    "details": "npm run dev compiles for development."
+  },
+  {
+    "question": "What is npm run prod command?",
+    "options": [
+      "Compile for production",
+      "Compile for dev",
+      "Watch files",
+      "Clean files"
+    ],
+    "correctOptions": [
+      "Compile for production"
+    ],
+    "time": 30,
+    "details": "npm run prod compiles optimized assets."
+  },
+  {
+    "question": "What is npm run watch?",
+    "options": [
+      "Auto-recompile on changes",
+      "Single compile",
+      "Production build",
+      "Clean build"
+    ],
+    "correctOptions": [
+      "Auto-recompile on changes"
+    ],
+    "time": 30,
+    "details": "watch auto-recompiles when files change."
+  },
+  {
+    "question": "How do you enable source maps?",
+    "options": [
+      "mix.sourceMaps()",
+      "mix.maps()",
+      "mix.debug()",
+      "mix.sourcemaps()"
+    ],
+    "correctOptions": [
+      "mix.sourceMaps()"
+    ],
+    "time": 35,
+    "details": "sourceMaps() enables debugging source maps."
+  },
+  {
+    "question": "What does mix.browserSync() do?",
+    "options": [
+      "Live reload in browser",
+      "Sync files",
+      "Watch files",
+      "Cache files"
+    ],
+    "correctOptions": [
+      "Live reload in browser"
+    ],
+    "time": 35,
+    "details": "browserSync enables live browser reloading."
+  },
+  {
+    "question": "What is versioning in Mix?",
+    "options": [
+      "Cache-bust file names",
+      "Version control",
+      "File versioning",
+      "Asset versioning"
+    ],
+    "correctOptions": [
+      "Cache-bust file names"
+    ],
+    "time": 35,
+    "details": "Versioning appends hashes for cache busting."
+  },
+  {
+    "question": "How do you enable versioning?",
+    "options": [
+      "mix.version()",
+      "mix.cache()",
+      "mix.hash()",
+      "mix.bust()"
+    ],
+    "correctOptions": [
+      "mix.version()"
+    ],
+    "time": 30,
+    "details": "version() adds content hashes to filenames."
+  },
+  {
+    "question": "What is Vue.js?",
+    "options": [
+      "JavaScript framework",
+      "CSS framework",
+      "Database",
+      "Server"
+    ],
+    "correctOptions": [
+      "JavaScript framework"
+    ],
+    "time": 25,
+    "details": "Vue.js is a progressive JavaScript framework."
+  },
+  {
+    "question": "What is React?",
+    "options": [
+      "JavaScript library",
+      "CSS library",
+      "Database",
+      "Server"
+    ],
+    "correctOptions": [
+      "JavaScript library"
+    ],
+    "time": 25,
+    "details": "React is a JavaScript library for UI."
+  },
+  {
+    "question": "What is Inertia.js?",
+    "options": [
+      "SPA in Laravel",
+      "Database tool",
+      "Testing tool",
+      "API tool"
+    ],
+    "correctOptions": [
+      "SPA in Laravel"
+    ],
+    "time": 35,
+    "details": "Inertia enables SPA building in Laravel."
+  },
+  {
+    "question": "What is @vite directive?",
+    "options": [
+      "Vite integration tag",
+      "Asset tag",
+      "Style tag",
+      "Script tag"
+    ],
+    "correctOptions": [
+      "Vite integration tag"
+    ],
+    "time": 35,
+    "details": "@vite integrates Vite in Blade templates."
+  },
+  {
+    "question": "What is Vite?",
+    "options": [
+      "Build tool",
+      "Database",
+      "Testing tool",
+      "Server"
+    ],
+    "correctOptions": [
+      "Build tool"
+    ],
+    "time": 30,
+    "details": "Vite is Laravel's new asset bundler."
+  },
+  {
+    "question": "What is Tailwind CSS?",
+    "options": [
+      "Utility-first CSS",
+      "Component library",
+      "JavaScript",
+      "Server"
+    ],
+    "correctOptions": [
+      "Utility-first CSS"
+    ],
+    "time": 30,
+    "details": "Tailwind is a utility-first CSS framework."
+  },
+  {
+    "question": "What is Sass?",
+    "options": [
+      "CSS preprocessor",
+      "JavaScript",
+      "Database",
+      "HTML"
+    ],
+    "correctOptions": [
+      "CSS preprocessor"
+    ],
+    "time": 30,
+    "details": "Sass extends CSS with variables and nesting."
+  },
+  {
+    "question": "What is PostCSS?",
+    "options": [
+      "CSS transformation tool",
+      "JavaScript tool",
+      "Database",
+      "Server"
+    ],
+    "correctOptions": [
+      "CSS transformation tool"
+    ],
+    "time": 35,
+    "details": "PostCSS transforms CSS with JavaScript plugins."
+  },
+  {
+    "question": "What is Autoprefixer?",
+    "options": [
+      "CSS vendor prefixer",
+      "JavaScript bundler",
+      "HTML minifier",
+      "Asset loader"
+    ],
+    "correctOptions": [
+      "CSS vendor prefixer"
+    ],
+    "time": 35,
+    "details": "Autoprefixer adds vendor prefixes automatically."
+  },
+  {
+    "question": "What is npm?",
+    "options": [
+      "Node package manager",
+      "PHP manager",
+      "Database manager",
+      "Package manager"
+    ],
+    "correctOptions": [
+      "Node package manager"
+    ],
+    "time": 25,
+    "details": "npm manages JavaScript packages."
+  },
+  {
+    "question": "What is package.json?",
+    "options": [
+      "Node dependencies config",
+      "PHP config",
+      "Database config",
+      "Route config"
+    ],
+    "correctOptions": [
+      "Node dependencies config"
+    ],
+    "time": 25,
+    "details": "package.json lists npm dependencies."
+  },
+  {
+    "question": "What is npm install?",
+    "options": [
+      "Install dependencies",
+      "Uninstall dependencies",
+      "Update dependencies",
+      "List dependencies"
+    ],
+    "correctOptions": [
+      "Install dependencies"
+    ],
+    "time": 25,
+    "details": "npm install installs all dependencies."
+  }
+]

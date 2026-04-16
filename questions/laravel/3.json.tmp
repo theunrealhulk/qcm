@@ -1,0 +1,2 @@
+  {"question": "What is Laravel Forge?", "options": ["Server management", "Code deployment", "Database hosting", "Domain management"], "correctOptions": ["Server management"], "time": 35, "details": "Forge is Laravel's server provisioning service."},
+  {"question": "What is Laravel Vapor?", "options": ["Serverless platform", "VPS hosting", "Shared hosting", "Dedicated server"], "correctOptions": ["Serverless platform"], "time": 35, "details": "Vapor provides serverless Laravel deployment."}

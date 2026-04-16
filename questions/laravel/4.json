@@ -1,0 +1,1416 @@
+[
+  {
+    "question": "What is Laravel Sanctum?",
+    "options": [
+      "API authentication",
+      "Frontend auth",
+      "Session auth",
+      "OAuth provider"
+    ],
+    "correctOptions": [
+      "API authentication"
+    ],
+    "time": 30,
+    "details": "Sanctum provides lightweight API authentication."
+  },
+  {
+    "question": "What is Laravel Passport?",
+    "options": [
+      "OAuth2 authentication",
+      "API tokens",
+      "Session auth",
+      "Basic auth"
+    ],
+    "correctOptions": [
+      "OAuth2 authentication"
+    ],
+    "time": 30,
+    "details": "Passport provides full OAuth2 server implementation."
+  },
+  {
+    "question": "What is API token authentication?",
+    "options": [
+      "Token-based auth",
+      "Session auth",
+      "OAuth auth",
+      "Basic auth"
+    ],
+    "correctOptions": [
+      "Token-based auth"
+    ],
+    "time": 30,
+    "details": "API tokens authenticate requests using tokens."
+  },
+  {
+    "question": "How do you hash passwords?",
+    "options": [
+      "Hash::make()",
+      "md5()",
+      "sha1()",
+      "crypt()"
+    ],
+    "correctOptions": [
+      "Hash::make()"
+    ],
+    "time": 25,
+    "details": "Hash::make() creates a hashed password."
+  },
+  {
+    "question": "How do you verify a password?",
+    "options": [
+      "Hash::check()",
+      "Hash::verify()",
+      "Hash::compare()",
+      "Hash::match()"
+    ],
+    "correctOptions": [
+      "Hash::check()"
+    ],
+    "time": 25,
+    "details": "Hash::check() verifies a password against hash."
+  },
+  {
+    "question": "What is bcrypt?",
+    "options": [
+      "Password hashing function",
+      "Encryption",
+      "Encoding",
+      "Signing"
+    ],
+    "correctOptions": [
+      "Password hashing function"
+    ],
+    "time": 30,
+    "details": "bcrypt is a secure password hashing algorithm."
+  },
+  {
+    "question": "What is the User model by default?",
+    "options": [
+      "App\\Models\\User",
+      "App\\User",
+      "Models\\User",
+      "Application\\User"
+    ],
+    "correctOptions": [
+      "App\\Models\\User"
+    ],
+    "time": 25,
+    "details": "Laravel 8+ uses App\\Models\\User namespace."
+  },
+  {
+    "question": "What trait provides password hashing?",
+    "options": [
+      "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
+      "Illuminate\\Foundation\\Auth\\User as Authenticatable",
+      "Illuminate\\Auth\\Traits\\ResetsPasswords",
+      "Illuminate\\Support\\Traits\\Hashable"
+    ],
+    "correctOptions": [
+      "Illuminate\\Foundation\\Auth\\User as Authenticatable"
+    ],
+    "time": 40,
+    "details": "The Authenticatable trait provides authentication methods."
+  },
+  {
+    "question": "What is the HasApiTokens trait?",
+    "options": [
+      "Provide API token functionality",
+      "Generate tokens",
+      "Validate tokens",
+      "Revoke tokens"
+    ],
+    "correctOptions": [
+      "Provide API token functionality"
+    ],
+    "time": 35,
+    "details": "HasApiTokens adds token management to models."
+  },
+  {
+    "question": "How do you create API token?",
+    "options": [
+      "$user->createToken()",
+      "$user->token()",
+      "$user->apiToken()",
+      "$user->generateToken()"
+    ],
+    "correctOptions": [
+      "$user->createToken()"
+    ],
+    "time": 30,
+    "details": "createToken() generates a new API token."
+  },
+  {
+    "question": "What is middleware 'auth:api'?",
+    "options": [
+      "Authenticate API requests",
+      "Cache API",
+      "Log API",
+      "Rate API"
+    ],
+    "correctOptions": [
+      "Authenticate API requests"
+    ],
+    "time": 30,
+    "details": "auth:api middleware protects API routes."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permission checking",
+      "User authentication",
+      "Session management",
+      "Token validation"
+    ],
+    "correctOptions": [
+      "Permission checking"
+    ],
+    "time": 30,
+    "details": "Authorization determines what users can do."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "User identity verification",
+      "Permission checking",
+      "Role assignment",
+      "Session management"
+    ],
+    "correctOptions": [
+      "User identity verification"
+    ],
+    "time": 30,
+    "details": "Authentication verifies who a user is."
+  },
+  {
+    "question": "What is Gates in Laravel?",
+    "options": [
+      "Simple authorization closures",
+      "Database permissions",
+      "Role management",
+      "Middleware"
+    ],
+    "correctOptions": [
+      "Simple authorization closures"
+    ],
+    "time": 35,
+    "details": "Gates provide simple authorization checks."
+  },
+  {
+    "question": "How do you define a Gate?",
+    "options": [
+      "Gate::define()",
+      "Gate::register()",
+      "Gate::create()",
+      "Gate::add()"
+    ],
+    "correctOptions": [
+      "Gate::define()"
+    ],
+    "time": 30,
+    "details": "Gate::define() registers authorization callbacks."
+  },
+  {
+    "question": "How do you check Gate authorization?",
+    "options": [
+      "Gate::allows()",
+      "Gate::check()",
+      "Gate::authorize()",
+      "Gate::can()"
+    ],
+    "correctOptions": [
+      "Gate::allows()"
+    ],
+    "time": 30,
+    "details": "allows() checks if user can perform action."
+  },
+  {
+    "question": "What is the authorize() method?",
+    "options": [
+      "Throw AuthorizationException",
+      "Return boolean",
+      "Return user",
+      "Return gate"
+    ],
+    "correctOptions": [
+      "Throw AuthorizationException"
+    ],
+    "time": 35,
+    "details": "authorize() throws exception if not authorized."
+  },
+  {
+    "question": "What are Policies?",
+    "options": [
+      "Organized authorization classes",
+      "Simple gates",
+      "Middleware",
+      "Routes"
+    ],
+    "correctOptions": [
+      "Organized authorization classes"
+    ],
+    "time": 35,
+    "details": "Policies organize authorization logic by model."
+  },
+  {
+    "question": "How do you create a Policy?",
+    "options": [
+      "php artisan make:policy PostPolicy",
+      "php artisan create:policy PostPolicy",
+      "php make policy PostPolicy",
+      "composer policy PostPolicy"
+    ],
+    "correctOptions": [
+      "php artisan make:policy PostPolicy"
+    ],
+    "time": 30,
+    "details": "make:policy creates a new Policy class."
+  },
+  {
+    "question": "How do you register a Policy?",
+    "options": [
+      "Gate::policy() or AuthServiceProvider",
+      "Policy::register()",
+      "Auth::policy()",
+      "Route::policy()"
+    ],
+    "correctOptions": [
+      "Gate::policy() or AuthServiceProvider"
+    ],
+    "time": 35,
+    "details": "Policies are registered in AuthServiceProvider."
+  },
+  {
+    "question": "What is a Policy method?",
+    "options": [
+      "Authorization action",
+      "Authentication action",
+      "Route action",
+      "Controller action"
+    ],
+    "correctOptions": [
+      "Authorization action"
+    ],
+    "time": 30,
+    "details": "Policy methods define authorization for actions."
+  },
+  {
+    "question": "What does @can directive do?",
+    "options": [
+      "Check user permission",
+      "Grant permission",
+      "Revoke permission",
+      "List permissions"
+    ],
+    "correctOptions": [
+      "Check user permission"
+    ],
+    "time": 30,
+    "details": "@can checks authorization in Blade templates."
+  },
+  {
+    "question": "What does @cannot directive do?",
+    "options": [
+      "Check lack of permission",
+      "Grant permission",
+      "Revoke permission",
+      "List permissions"
+    ],
+    "correctOptions": [
+      "Check lack of permission"
+    ],
+    "time": 30,
+    "details": "@cannot is inverse of @can."
+  },
+  {
+    "question": "What is the controller-authorize pattern?",
+    "options": [
+      "$this->authorize() in controller",
+      "Manual Gate calls",
+      "Middleware auth",
+      "Route auth"
+    ],
+    "correctOptions": [
+      "$this->authorize() in controller"
+    ],
+    "time": 35,
+    "details": "$this->authorize() uses Policies from controllers."
+  },
+  {
+    "question": "What is a role?",
+    "options": [
+      "User category for permissions",
+      "User ID",
+      "User name",
+      "User status"
+    ],
+    "correctOptions": [
+      "User category for permissions"
+    ],
+    "time": 30,
+    "details": "Roles group users by their function/level."
+  },
+  {
+    "question": "What is a permission?",
+    "options": [
+      "Specific action capability",
+      "User role",
+      "User group",
+      "Access level"
+    ],
+    "correctOptions": [
+      "Specific action capability"
+    ],
+    "time": 30,
+    "details": "Permissions define specific allowed actions."
+  },
+  {
+    "question": "What is Spatie Laravel Permission?",
+    "options": [
+      "Role/permission package",
+      "Auth package",
+      "API package",
+      "Cache package"
+    ],
+    "correctOptions": [
+      "Role/permission package"
+    ],
+    "time": 35,
+    "details": "Spatie's package manages roles and permissions."
+  },
+  {
+    "question": "What trait enables roles?",
+    "options": [
+      "HasRoles",
+      "HasPermission",
+      "HasRole",
+      "CanRole"
+    ],
+    "correctOptions": [
+      "HasRoles"
+    ],
+    "time": 35,
+    "details": "HasRoles trait adds role methods to models."
+  },
+  {
+    "question": "How do you assign a role?",
+    "options": [
+      "$user->assignRole('writer')",
+      "$user->addRole('writer')",
+      "$user->setRole('writer')",
+      "$user->role('writer')"
+    ],
+    "correctOptions": [
+      "$user->assignRole('writer')"
+    ],
+    "time": 35,
+    "details": "assignRole() assigns a role to a user."
+  },
+  {
+    "question": "How do you check a role?",
+    "options": [
+      "$user->hasRole('writer')",
+      "$user->isRole('writer')",
+      "$user->checkRole('writer')",
+      "$user->has('writer')"
+    ],
+    "correctOptions": [
+      "$user->hasRole('writer')"
+    ],
+    "time": 30,
+    "details": "hasRole() checks if user has a specific role."
+  },
+  {
+    "question": "How do you check multiple roles?",
+    "options": [
+      "$user->hasAnyRole(['writer', 'editor'])",
+      "$user->hasRole(['writer', 'editor'])",
+      "$user->anyRole(['writer', 'editor'])",
+      "$user->roles(['writer', 'editor'])"
+    ],
+    "correctOptions": [
+      "$user->hasAnyRole(['writer', 'editor'])"
+    ],
+    "time": 35,
+    "details": "hasAnyRole() checks if user has any listed role."
+  },
+  {
+    "question": "How do you give a permission?",
+    "options": [
+      "$user->givePermissionTo('edit articles')",
+      "$user->addPermission('edit articles')",
+      "$user->setPermission('edit articles')",
+      "$user->allow('edit articles')"
+    ],
+    "correctOptions": [
+      "$user->givePermissionTo('edit articles')"
+    ],
+    "time": 35,
+    "details": "givePermissionTo() grants permission to user."
+  },
+  {
+    "question": "How do you check permission?",
+    "options": [
+      "$user->can('edit articles')",
+      "$user->hasPermission('edit articles')",
+      "$user->canDo('edit articles')",
+      "$user->checkPermission('edit articles')"
+    ],
+    "correctOptions": [
+      "$user->can('edit articles')"
+    ],
+    "time": 30,
+    "details": "can() checks if user has permission."
+  },
+  {
+    "question": "What is role-based access control (RBAC)?",
+    "options": [
+      "Permission via roles",
+      "Direct permissions",
+      "User groups",
+      "Admin access"
+    ],
+    "correctOptions": [
+      "Permission via roles"
+    ],
+    "time": 40,
+    "details": "RBAC assigns permissions through roles."
+  },
+  {
+    "question": "What is the ability() method?",
+    "options": [
+      "Check multiple permissions",
+      "Single permission",
+      "Role check",
+      "Grant permission"
+    ],
+    "correctOptions": [
+      "Check multiple permissions"
+    ],
+    "time": 40,
+    "details": "ability() checks if user can perform action."
+  },
+  {
+    "question": "What is middleware 'can'?",
+    "options": [
+      "Authorization middleware",
+      "Authentication middleware",
+      "Throttle middleware",
+      "CORS middleware"
+    ],
+    "correctOptions": [
+      "Authorization middleware"
+    ],
+    "time": 35,
+    "details": "can middleware checks authorization."
+  },
+  {
+    "question": "What is Laravel Scout?",
+    "options": [
+      "Search driver package",
+      "Database package",
+      "Cache package",
+      "Queue package"
+    ],
+    "correctOptions": [
+      "Search driver package"
+    ],
+    "time": 35,
+    "details": "Scout provides searchable models with drivers."
+  },
+  {
+    "question": "How do you make a model searchable?",
+    "options": [
+      "Implement Searchable trait",
+      "Extend Searchable class",
+      "Add Searchable middleware",
+      "Use Searchable facade"
+    ],
+    "correctOptions": [
+      "Implement Searchable trait"
+    ],
+    "time": 35,
+    "details": "Searchable trait enables model search functionality."
+  },
+  {
+    "question": "What is Algolia in Laravel Scout?",
+    "options": [
+      "Search service",
+      "Database",
+      "Cache",
+      "Queue"
+    ],
+    "correctOptions": [
+      "Search service"
+    ],
+    "time": 30,
+    "details": "Algolia is a popular Scout search driver."
+  },
+  {
+    "question": "What is Meilisearch in Scout?",
+    "options": [
+      "Open source search",
+      "Database",
+      "Cache",
+      "Queue"
+    ],
+    "correctOptions": [
+      "Open source search"
+    ],
+    "time": 30,
+    "details": "Meilisearch is an open-source Scout driver."
+  },
+  {
+    "question": "What is queueable in Scout?",
+    "options": [
+      "Queue indexing",
+      "Immediate indexing",
+      "Sync indexing",
+      "No indexing"
+    ],
+    "correctOptions": [
+      "Queue indexing"
+    ],
+    "time": 35,
+    "details": "Queueable makes search indexing asynchronous."
+  },
+  {
+    "question": "What is Laravel Cashier?",
+    "options": [
+      "Subscription billing",
+      "Payment processing",
+      "Invoice generation",
+      "Refund handling"
+    ],
+    "correctOptions": [
+      "Subscription billing"
+    ],
+    "time": 35,
+    "details": "Cashier handles subscription billing with Stripe/Paddle."
+  },
+  {
+    "question": "What trait does Cashier require?",
+    "options": [
+      "Billable",
+      "Payable",
+      "Subscribable",
+      "Chargable"
+    ],
+    "correctOptions": [
+      "Billable"
+    ],
+    "time": 35,
+    "details": "Billable trait adds subscription methods."
+  },
+  {
+    "question": "What is a subscription in Cashier?",
+    "options": [
+      "Recurring payment plan",
+      "One-time payment",
+      "Invoice",
+      "Refund"
+    ],
+    "correctOptions": [
+      "Recurring payment plan"
+    ],
+    "time": 35,
+    "details": "Subscriptions represent recurring payment plans."
+  },
+  {
+    "question": "What is Laravel Envoy?",
+    "options": [
+      "Deployment tool",
+      "Testing tool",
+      "Database tool",
+      "Queue tool"
+    ],
+    "correctOptions": [
+      "Deployment tool"
+    ],
+    "time": 35,
+    "details": "Envoy runs deployment tasks on remote servers."
+  },
+  {
+    "question": "What is Laravel Forge?",
+    "options": [
+      "Server management",
+      "Code deployment",
+      "Database hosting",
+      "Domain management"
+    ],
+    "correctOptions": [
+      "Server management"
+    ],
+    "time": 35,
+    "details": "Forge is Laravel's server provisioning service."
+  },
+  {
+    "question": "What is Laravel Vapor?",
+    "options": [
+      "Serverless platform",
+      "VPS hosting",
+      "Shared hosting",
+      "Dedicated server"
+    ],
+    "correctOptions": [
+      "Serverless platform"
+    ],
+    "time": 35,
+    "details": "Vapor provides serverless Laravel deployment."
+  },
+  {
+    "question": "What is Laravel Horizon?",
+    "options": [
+      "Queue dashboard",
+      "Cache dashboard",
+      "Log dashboard",
+      "Route dashboard"
+    ],
+    "correctOptions": [
+      "Queue dashboard"
+    ],
+    "time": 35,
+    "details": "Horizon provides a queue management dashboard."
+  },
+  {
+    "question": "What is Telescope?",
+    "options": [
+      "Debug assistant",
+      "Deployment tool",
+      "Testing tool",
+      "Monitoring tool"
+    ],
+    "correctOptions": [
+      "Debug assistant"
+    ],
+    "time": 35,
+    "details": "Telescope debugs and monitors your application."
+  },
+  {
+    "question": "What is Dusk?",
+    "options": [
+      "Browser testing",
+      "Unit testing",
+      "API testing",
+      "Database testing"
+    ],
+    "correctOptions": [
+      "Browser testing"
+    ],
+    "time": 35,
+    "details": "Dusk provides browser automation testing."
+  },
+  {
+    "question": "What is Socialite?",
+    "options": [
+      "Social authentication",
+      "Social sharing",
+      "Social API",
+      "Social login UI"
+    ],
+    "correctOptions": [
+      "Social authentication"
+    ],
+    "time": 35,
+    "details": "Socialite handles OAuth social authentication."
+  },
+  {
+    "question": "What is Echo?",
+    "options": [
+      "WebSocket broadcasting",
+      "Event broadcasting",
+      "API broadcasting",
+      "Queue broadcasting"
+    ],
+    "correctOptions": [
+      "WebSocket broadcasting"
+    ],
+    "time": 40,
+    "details": "Laravel Echo handles WebSocket events."
+  },
+  {
+    "question": "What is broadcasting?",
+    "options": [
+      "Real-time events to clients",
+      "Email sending",
+      "Queue processing",
+      "API responses"
+    ],
+    "correctOptions": [
+      "Real-time events to clients"
+    ],
+    "time": 40,
+    "details": "Broadcasting pushes real-time events to clients."
+  },
+  {
+    "question": "What is a channel in broadcasting?",
+    "options": [
+      "Communication stream",
+      "Event type",
+      "Queue",
+      "Route"
+    ],
+    "correctOptions": [
+      "Communication stream"
+    ],
+    "time": 35,
+    "details": "Channels define how clients receive broadcasts."
+  },
+  {
+    "question": "What is a private channel?",
+    "options": [
+      "Authenticated-only channel",
+      "Public channel",
+      "Presence channel",
+      "Queue channel"
+    ],
+    "correctOptions": [
+      "Authenticated-only channel"
+    ],
+    "time": 40,
+    "details": "Private channels require authentication."
+  },
+  {
+    "question": "What is a presence channel?",
+    "options": [
+      "Track channel subscribers",
+      "Private channel",
+      "Public channel",
+      "Broadcast channel"
+    ],
+    "correctOptions": [
+      "Track channel subscribers"
+    ],
+    "time": 40,
+    "details": "Presence channels track who's subscribed."
+  },
+  {
+    "question": "What is Pusher?",
+    "options": [
+      "WebSocket service",
+      "Database",
+      "Cache",
+      "Queue"
+    ],
+    "correctOptions": [
+      "WebSocket service"
+    ],
+    "time": 30,
+    "details": "Pusher is a popular broadcasting driver."
+  },
+  {
+    "question": "What is an event class?",
+    "options": [
+      "Encapsulates event data",
+      "Controller",
+      "Model",
+      "Middleware"
+    ],
+    "correctOptions": [
+      "Encapsulates event data"
+    ],
+    "time": 35,
+    "details": "Events encapsulate things that happened in your app."
+  },
+  {
+    "question": "How do you create an event?",
+    "options": [
+      "php artisan make:event OrderShipped",
+      "php artisan create:event OrderShipped",
+      "php make event OrderShipped",
+      "composer event OrderShipped"
+    ],
+    "correctOptions": [
+      "php artisan make:event OrderShipped"
+    ],
+    "time": 30,
+    "details": "make:event creates a new event class."
+  },
+  {
+    "question": "What is an event listener?",
+    "options": [
+      "Responds to events",
+      "Creates events",
+      "Deletes events",
+      "Queues events"
+    ],
+    "correctOptions": [
+      "Responds to events"
+    ],
+    "time": 35,
+    "details": "Listeners respond to dispatched events."
+  },
+  {
+    "question": "How do you create a listener?",
+    "options": [
+      "php artisan make:listener SendShipmentNotification",
+      "php artisan create:listener SendShipmentNotification",
+      "php make listener SendShipmentNotification",
+      "composer listener SendShipmentNotification"
+    ],
+    "correctOptions": [
+      "php artisan make:listener SendShipmentNotification"
+    ],
+    "time": 30,
+    "details": "make:listener creates a new listener class."
+  },
+  {
+    "question": "What is event discovery?",
+    "options": [
+      "Auto-register listeners",
+      "Manual registration",
+      "Lazy loading",
+      "Event caching"
+    ],
+    "correctOptions": [
+      "Auto-register listeners"
+    ],
+    "time": 40,
+    "details": "Event discovery auto-registers listeners."
+  },
+  {
+    "question": "What is ShouldBroadcast interface?",
+    "options": [
+      "Mark event for broadcasting",
+      "Mark for queueing",
+      "Mark for caching",
+      "Mark for logging"
+    ],
+    "correctOptions": [
+      "Mark event for broadcasting"
+    ],
+    "time": 40,
+    "details": "ShouldBroadcast marks events for WebSocket broadcast."
+  },
+  {
+    "question": "What is Broadcast::channel()?",
+    "options": [
+      "Define authorization channel",
+      "Create channel",
+      "Join channel",
+      "Leave channel"
+    ],
+    "correctOptions": [
+      "Define authorization channel"
+    ],
+    "time": 40,
+    "details": "channel() defines channel authorization logic."
+  },
+  {
+    "question": "What is event queueing?",
+    "options": [
+      "Async event handling",
+      "Sync event handling",
+      "Event storage",
+      "Event logging"
+    ],
+    "correctOptions": [
+      "Async event handling"
+    ],
+    "time": 40,
+    "details": "Queueing events processes them asynchronously."
+  },
+  {
+    "question": "What is the ShouldQueue interface?",
+    "options": [
+      "Make event queueable",
+      "Make event sync",
+      "Make event broadcast",
+      "Make event store"
+    ],
+    "correctOptions": [
+      "Make event queueable"
+    ],
+    "time": 40,
+    "details": "ShouldQueue makes events process via queues."
+  },
+  {
+    "question": "What is a job?",
+    "options": [
+      "Queued task",
+      "Synchronous task",
+      "Event",
+      "Middleware"
+    ],
+    "correctOptions": [
+      "Queued task"
+    ],
+    "time": 30,
+    "details": "Jobs are tasks that can be queued for processing."
+  },
+  {
+    "question": "How do you create a job?",
+    "options": [
+      "php artisan make:job ProcessPodcast",
+      "php artisan create:job ProcessPodcast",
+      "php make job ProcessPodcast",
+      "composer job ProcessPodcast"
+    ],
+    "correctOptions": [
+      "php artisan make:job ProcessPodcast"
+    ],
+    "time": 30,
+    "details": "make:job creates a new queued job."
+  },
+  {
+    "question": "What is the handle() method in jobs?",
+    "options": [
+      "Execute the job",
+      "Queue the job",
+      "Release the job",
+      "Fail the job"
+    ],
+    "correctOptions": [
+      "Execute the job"
+    ],
+    "time": 35,
+    "details": "handle() contains the job's execution logic."
+  },
+  {
+    "question": "What is job dispatching?",
+    "options": [
+      "Queue a job for execution",
+      "Execute immediately",
+      "Cancel a job",
+      "Retry a job"
+    ],
+    "correctOptions": [
+      "Queue a job for execution"
+    ],
+    "time": 35,
+    "details": "dispatch() adds a job to the queue."
+  },
+  {
+    "question": "What is delayed dispatch?",
+    "options": [
+      "Execute job later",
+      "Execute now",
+      "Cancel job",
+      "Retry job"
+    ],
+    "correctOptions": [
+      "Execute job later"
+    ],
+    "time": 35,
+    "details": "delay() postpones job execution."
+  },
+  {
+    "question": "What is job retry?",
+    "options": [
+      "Re-execute failed job",
+      "Stop job",
+      "Pause job",
+      "Complete job"
+    ],
+    "correctOptions": [
+      "Re-execute failed job"
+    ],
+    "time": 35,
+    "details": "retry() requeues a failed job."
+  },
+  {
+    "question": "What is job timeout?",
+    "options": [
+      "Max execution time",
+      "Min execution time",
+      "Queue time",
+      "Wait time"
+    ],
+    "correctOptions": [
+      "Max execution time"
+    ],
+    "time": 35,
+    "details": "timeout defines max seconds for job execution."
+  },
+  {
+    "question": "What is job max attempts?",
+    "options": [
+      "Retry limit",
+      "Timeout",
+      "Queue name",
+      "Job priority"
+    ],
+    "correctOptions": [
+      "Retry limit"
+    ],
+    "time": 35,
+    "details": "maxAttempts defines how many times to retry."
+  },
+  {
+    "question": "What is job backoff?",
+    "options": [
+      "Retry delay",
+      "Immediate retry",
+      "Job timeout",
+      "Queue delay"
+    ],
+    "correctOptions": [
+      "Retry delay"
+    ],
+    "time": 40,
+    "details": "backoff() sets delay between retries."
+  },
+  {
+    "question": "What is the FailedJobs table?",
+    "options": [
+      "Store failed job records",
+      "Store all jobs",
+      "Store active jobs",
+      "Store queued jobs"
+    ],
+    "correctOptions": [
+      "Store failed job records"
+    ],
+    "time": 40,
+    "details": "FailedJobs table records unsuccessful jobs."
+  },
+  {
+    "question": "How do you list failed jobs?",
+    "options": [
+      "php artisan queue:failed",
+      "php artisan queue:list",
+      "php artisan queue:show",
+      "php artisan queue:failed-list"
+    ],
+    "correctOptions": [
+      "php artisan queue:failed"
+    ],
+    "time": 30,
+    "details": "queue:failed lists all failed jobs."
+  },
+  {
+    "question": "How do you flush failed jobs?",
+    "options": [
+      "php artisan queue:flush",
+      "php artisan queue:clear",
+      "php artisan queue:retry",
+      "php artisan queue:forget"
+    ],
+    "correctOptions": [
+      "php artisan queue:flush"
+    ],
+    "time": 30,
+    "details": "queue:flush deletes all failed job records."
+  },
+  {
+    "question": "What is job chaining?",
+    "options": [
+      "Run jobs sequentially",
+      "Run jobs parallel",
+      "Cancel jobs",
+      "Retry jobs"
+    ],
+    "correctOptions": [
+      "Run jobs sequentially"
+    ],
+    "time": 40,
+    "details": "Job chaining runs jobs in sequence."
+  },
+  {
+    "question": "What is the Bus facade?",
+    "options": [
+      "Dispatch jobs",
+      "Create jobs",
+      "Queue jobs",
+      "Retry jobs"
+    ],
+    "correctOptions": [
+      "Dispatch jobs"
+    ],
+    "time": 35,
+    "details": "Bus facade dispatches jobs and commands."
+  },
+  {
+    "question": "What is Laravel Vapor?",
+    "options": [
+      "Serverless platform",
+      "IDE plugin",
+      "Testing tool",
+      "CI/CD tool"
+    ],
+    "correctOptions": [
+      "Serverless platform"
+    ],
+    "time": 35,
+    "details": "Vapor deploys Laravel to AWS Lambda."
+  },
+  {
+    "question": "What is a scheduled task?",
+    "options": [
+      "Automated recurring command",
+      "Manual command",
+      "Onetime command",
+      "Background command"
+    ],
+    "correctOptions": [
+      "Automated recurring command"
+    ],
+    "time": 35,
+    "details": "Scheduler runs tasks automatically on schedule."
+  },
+  {
+    "question": "How do you define scheduled tasks?",
+    "options": [
+      "Kernel.php schedule() method",
+      "Route file",
+      "Controller",
+      "Middleware"
+    ],
+    "correctOptions": [
+      "Kernel.php schedule() method"
+    ],
+    "time": 40,
+    "details": "Schedule is defined in app/Console/Kernel.php."
+  },
+  {
+    "question": "What is the schedule:run command?",
+    "options": [
+      "Execute scheduled tasks",
+      "List schedules",
+      "Clear schedules",
+      "Create schedules"
+    ],
+    "correctOptions": [
+      "Execute scheduled tasks"
+    ],
+    "time": 35,
+    "details": "schedule:run executes due scheduled tasks."
+  },
+  {
+    "question": "What cron expression for daily at midnight?",
+    "options": [
+      "->dailyAt('midnight')",
+      "->daily()",
+      "->hourly()",
+      "->weekly()"
+    ],
+    "correctOptions": [
+      "->dailyAt('midnight')"
+    ],
+    "time": 40,
+    "details": "dailyAt('midnight') runs at 00:00 daily."
+  },
+  {
+    "question": "What is command scheduling?",
+    "options": [
+      "Define when commands run",
+      "Execute commands",
+      "Queue commands",
+      "Log commands"
+    ],
+    "correctOptions": [
+      "Define when commands run"
+    ],
+    "time": 35,
+    "details": "Scheduling defines when artisan commands run."
+  },
+  {
+    "question": "What is withoutOverlapping()?",
+    "options": [
+      "Prevent concurrent execution",
+      "Allow concurrent",
+      "Queue overlap",
+      "Force overlap"
+    ],
+    "correctOptions": [
+      "Prevent concurrent execution"
+    ],
+    "time": 45,
+    "details": "withoutOverlapping prevents job overlap."
+  },
+  {
+    "question": "What is runInBackground()?",
+    "options": [
+      "Run task in background",
+      "Run task foreground",
+      "Sync task",
+      "Queue task"
+    ],
+    "correctOptions": [
+      "Run task in background"
+    ],
+    "time": 45,
+    "details": "runInBackground() runs the task asynchronously."
+  },
+  {
+    "question": "What is Laravel Passport?",
+    "options": [
+      "OAuth2 authentication",
+      "API tokens",
+      "Session auth",
+      "Basic auth"
+    ],
+    "correctOptions": [
+      "OAuth2 authentication"
+    ],
+    "time": 35,
+    "details": "Passport provides full OAuth2 server implementation."
+  },
+  {
+    "question": "What is Laravel Sanctum?",
+    "options": [
+      "API authentication",
+      "Frontend auth",
+      "Session auth",
+      "OAuth provider"
+    ],
+    "correctOptions": [
+      "API authentication"
+    ],
+    "time": 30,
+    "details": "Sanctum provides lightweight API authentication."
+  },
+  {
+    "question": "What is API token authentication?",
+    "options": [
+      "Token-based auth",
+      "Session auth",
+      "OAuth auth",
+      "Basic auth"
+    ],
+    "correctOptions": [
+      "Token-based auth"
+    ],
+    "time": 30,
+    "details": "API tokens authenticate requests using tokens."
+  },
+  {
+    "question": "How do you hash passwords?",
+    "options": [
+      "Hash::make()",
+      "md5()",
+      "sha1()",
+      "crypt()"
+    ],
+    "correctOptions": [
+      "Hash::make()"
+    ],
+    "time": 25,
+    "details": "Hash::make() creates a hashed password."
+  },
+  {
+    "question": "How do you verify a password?",
+    "options": [
+      "Hash::check()",
+      "Hash::verify()",
+      "Hash::compare()",
+      "Hash::match()"
+    ],
+    "correctOptions": [
+      "Hash::check()"
+    ],
+    "time": 25,
+    "details": "Hash::check() verifies a password against hash."
+  },
+  {
+    "question": "What is bcrypt?",
+    "options": [
+      "Password hashing function",
+      "Encryption",
+      "Encoding",
+      "Signing"
+    ],
+    "correctOptions": [
+      "Password hashing function"
+    ],
+    "time": 30,
+    "details": "bcrypt is a secure password hashing algorithm."
+  },
+  {
+    "question": "What is the HasApiTokens trait?",
+    "options": [
+      "Provide API token functionality",
+      "Generate tokens",
+      "Validate tokens",
+      "Revoke tokens"
+    ],
+    "correctOptions": [
+      "Provide API token functionality"
+    ],
+    "time": 35,
+    "details": "HasApiTokens adds token management to models."
+  },
+  {
+    "question": "How do you create API token?",
+    "options": [
+      "$user->createToken()",
+      "$user->token()",
+      "$user->apiToken()",
+      "$user->generateToken()"
+    ],
+    "correctOptions": [
+      "$user->createToken()"
+    ],
+    "time": 30,
+    "details": "createToken() generates a new API token."
+  },
+  {
+    "question": "What is middleware 'auth:api'?",
+    "options": [
+      "Authenticate API requests",
+      "Cache API",
+      "Log API",
+      "Rate API"
+    ],
+    "correctOptions": [
+      "Authenticate API requests"
+    ],
+    "time": 30,
+    "details": "auth:api middleware protects API routes."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permission checking",
+      "User authentication",
+      "Session management",
+      "Token validation"
+    ],
+    "correctOptions": [
+      "Permission checking"
+    ],
+    "time": 30,
+    "details": "Authorization determines what users can do."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "User identity verification",
+      "Permission checking",
+      "Role assignment",
+      "Session management"
+    ],
+    "correctOptions": [
+      "User identity verification"
+    ],
+    "time": 30,
+    "details": "Authentication verifies who a user is."
+  },
+  {
+    "question": "What is Laravel Dusk?",
+    "options": [
+      "Browser testing",
+      "Unit testing",
+      "API testing",
+      "Database testing"
+    ],
+    "correctOptions": [
+      "Browser testing"
+    ],
+    "time": 35,
+    "details": "Dusk provides browser automation testing."
+  },
+  {
+    "question": "What is Laravel Socialite?",
+    "options": [
+      "Social authentication",
+      "Social sharing",
+      "Social API",
+      "Social login UI"
+    ],
+    "correctOptions": [
+      "Social authentication"
+    ],
+    "time": 35,
+    "details": "Socialite handles OAuth social authentication."
+  }
+]

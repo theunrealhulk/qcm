@@ -1,0 +1,1416 @@
+[
+  {
+    "question": "What is @Pipe decorator on a pipe class?",
+    "options": [
+      "Define pipe",
+      "Mark class as pipe",
+      "Pipe metadata",
+      "Pipe definition"
+    ],
+    "correctOptions": [
+      "Decorator that marks class as pipe and provides metadata: name (required), pure (optional: true)"
+    ],
+    "time": 40,
+    "details": "Declares pipe class."
+  },
+  {
+    "question": "What is Pipe transform method?",
+    "options": [
+      "Transformation function",
+      "Transform execution",
+      "Pipe logic",
+      "Value transform"
+    ],
+    "correctOptions": [
+      "Defines transformation in pipe class: transform(value: InputType, ...args: any[]): ReturnType"
+    ],
+    "time": 45,
+    "details": "Implements pipe transform."
+  },
+  {
+    "question": "What is pure pipe flag?",
+    "options": [
+      "Pure toggle",
+      "Impure vs pure",
+      "Flag",
+      "Optimization"
+    ],
+    "correctOptions": [
+      "Metadata option (default: true) - pure: false makes pipe re-evaluate on any change (for impure sources like Date.now())"
+    ],
+    "time": 55,
+    "details": "pure switches on re-evaluation."
+  },
+  {
+    "question": "What is provideIn for DI in pipe?",
+    "options": [
+      "Where available",
+      "Application scope",
+      "Root",
+      "Scope"
+    ],
+    "correctOptions": [
+      "Determines pipe scope: provideIn: 'root' = app-wide singleton, provideIn: any = lazy (provided by lazy module)"
+    ],
+    "time": 60,
+    "details": "provideIn sets availability."
+  },
+  {
+    "question": "What is @Directive decorator on directive class?",
+    "options": [
+      "Define directive",
+      "Mark class as directive",
+      "Directive metadata",
+      "Selector"
+    ],
+    "correctOptions": [
+      "Decorator to mark class as directive with selector defining how to match in template: selector: '[myAttr]' or 'my-element'"
+    ],
+    "time": 45,
+    "details": "Defines directive."
+  },
+  {
+    "question": "What is Directive constructor injection?",
+    "options": [
+      "Inject dependencies",
+      "Constructor DI",
+      "Inject in constructor",
+      "Parameter injection"
+    ],
+    "correctOptions": [
+      "Inject dependencies via constructor parameters: constructor(private el: ElementRef, private renderer: Renderer2) { }"
+    ],
+    "time": 50,
+    "details": "Inject in constructor."
+  },
+  {
+    "question": "What is @Input in Directive?",
+    "options": [
+      "Input property",
+      "Property binding",
+      "Receive data",
+      "Directive Input"
+    ],
+    "correctOptions": [
+      "Property binding that receives value from template: @Input() propertyName: type"
+    ],
+    "time": 45,
+    "details": "Directive receives data."
+  },
+  {
+    "question": "What is @Output in Directive?",
+    "options": [
+      "Output event",
+      "Event emit",
+      "Event binding",
+      "Emit events"
+    ],
+    "correctOptions": [
+      "Event emitter that emits events to parent: @Output() eventName = new EventEmitter()"
+    ],
+    "time": 45,
+    "details": "Directive emits events."
+  },
+  {
+    "question": "What is host property in Directive?",
+    "options": [
+      "Host element binding",
+      "Element properties",
+      "Directives host",
+      "Metadata"
+    ],
+    "correctOptions": [
+      "Metadata to bind component/host element attributes/properties/events/styles: host: {'[class.required]': 'hasRequired', '(click)': 'onClick()'}"
+    ],
+    "time": 60,
+    "details": "Binds host element."
+  },
+  {
+    "question": "What is @HostBinding in Directive?",
+    "options": [
+      "Host property binding",
+      "Host attribute binding",
+      "Element property binding",
+      "Binding in directive"
+    ],
+    "correctOptions": [
+      "Bind to host element property: @HostBinding('class.is-focused') isFocused = false"
+    ],
+    "time": 55,
+    "details": "Binds to host property."
+  },
+  {
+    "question": "What is @HostListener in Directive?",
+    "options": [
+      "Listen to host events",
+      "Host event",
+      "Native event listener",
+      "Listen on host"
+    ],
+    "correctOptions": [
+      "Listen/respond to host element events: @HostListener('click', ['$event']) onClick(event: Event) { }"
+    ],
+    "time": 55,
+    "details": "Listens to host elements."
+  },
+  {
+    "question": "What does Angular create for @HostListener param?",
+    "options": [
+      "Native event object",
+      "Native Event object",
+      "HTML element event",
+      "Passed to handler"
+    ],
+    "correctOptions": [
+      "Passed native event as argument $event (e.g., @HostListener('click', ['$event'])), can also use $event.target.value in template interpolation"
+    ],
+    "time": 70,
+    "details": "$event is available in listener."
+  },
+  {
+    "question": "What is @ContentChild in Directive?",
+    "options": [
+      "Query content children",
+      "Query from projected content",
+      "Child query",
+      "Find in ng-content"
+    ],
+    "correctOptions": [
+      "Queries first matching projected content (from ng-content) - e.g., @ContentChild('projectedName') projected: ElementRef"
+    ],
+    "time": 60,
+    "details": "Query projected content."
+  },
+  {
+    "question": "What is @ContentChildren in Directive?",
+    "options": [
+      "Query multiple projected",
+      "Query all projected",
+      "List from ng-content",
+      "Multiple query"
+    ],
+    "correctOptions": [
+      "Queries all matching projected content children: @ContentChildren(MyDirectiveChild) children: QueryList<MyDirectiveChild>"
+    ],
+    "time": 65,
+    "details": "@ContentChildren gets multiples."
+  },
+  {
+    "question": "What is @ViewChild in Directive?",
+    "options": [
+      "Query child element",
+      "Query from template",
+      "Child element query",
+      "Direct child query"
+    ],
+    "correctOptions": [
+      "Queries child element (from local template: @ViewChild('elem') elem: ElementRef"
+    ],
+    "time": 55,
+    "details": "@ViewChild queries elements."
+  },
+  {
+    "question": "What is @ViewChildren in Directive?",
+    "options": [
+      "Query multiple child elements",
+      "Query view children",
+      "Multiple child elements",
+      "Child elements"
+    ],
+    "correctOptions": [
+      "Queries all matching child elements in view: @ViewChildren('elem') elems: QueryList<ElementRef>"
+    ],
+    "time": 60,
+    "details": "@ViewChildren gets multiple."
+  },
+  {
+    "question": "What is QueryList in Angular?",
+    "options": [
+      "Query results list",
+      "List of results",
+      "Dynamic list",
+      "Observable list"
+    ],
+    "correctOptions": [
+      "Dynamic query list (updated if DOM changes) returned by @ViewChildren/@ContentChildren - is iterable and has changes$ Observable"
+    ],
+    "time": 65,
+    "details": "QueryList holds results."
+  },
+  {
+    "question": "What is ContentChildren with read option?",
+    "options": [
+      "Different type results",
+      "Read from query",
+      "Alternative return type",
+      "Multiple types"
+    ],
+    "correctOptions": [
+      "Returns different type than selector: @ContentChildren(MyDirective, {read: ElementRef}) - returns ElementRefs instead of directive instances"
+    ],
+    "time": 70,
+    "details": "read can return different type."
+  },
+  {
+    "question": "What is ViewChild static option?",
+    "options": [
+      "Pre-change detection query",
+      "Static query resolution",
+      "When to run",
+      "Before changes"
+    ],
+    "correctOptions": [
+      "true = query resolved in view init (before ngOnChanges), false (default) = after view init (allows dynamic views)"
+    ],
+    "time": 70,
+    "details": "static: true runs in view init."
+  },
+  {
+    "question": "What is dynamic component loading?",
+    "options": [
+      "Runtime component creation",
+      "Dynamic load",
+      "Lazy component",
+      "Load at runtime"
+    ],
+    "correctOptions": [
+      "Load component at runtime via ViewContainerRef.createComponent (not pre-declared in template)"
+    ],
+    "time": 60,
+    "details": "At runtime create component."
+  },
+  {
+    "question": "What is ViewContainerRef?",
+    "options": [
+      "Component anchor",
+      "Container for dynamic components",
+      "Dynamic location",
+      "Container"
+    ],
+    "correctOptions": [
+      "Represents container for rendering components via insert(), clear(), get() - obtained via @ViewChild(ViewContainerRef, {read: ViewContainerRef})"
+    ],
+    "time": 65,
+    "details": "ViewContainerRef anchors components."
+  },
+  {
+    "question": "What is ViewRef in Angular?",
+    "options": [
+      "Rendered view",
+      "Container",
+      "Rendered component",
+      "View representation"
+    ],
+    "correctOptions": [
+      "Represents rendered view component via viewRef.detectChanges() to manually run change detection on view (if OnPush with async)"
+    ],
+    "time": 75,
+    "details": "Represents rendered component."
+  },
+  {
+    "question": "What is EmbeddedViewRef?",
+    "options": [
+      "Embedded view",
+      "Template view",
+      "Template result",
+      "ng-template view"
+    ],
+    "correctOptions": [
+      "Specific type of ViewRef for rendered <ng-template>: embeddedViewRef.context provides template context"
+    ],
+    "time": 70,
+    "details": "Embedded view from ng-template."
+  },
+  {
+    "question": "What is ComponentRef for dynamic?",
+    "options": [
+      "Dynamic component reference",
+      "Instance",
+      "Instance wrapper",
+      "Created component"
+    ],
+    "correctOptions": [
+      "Reference to created dynamic component: instance property accesses component (set inputs), location property view location, destroy() cleans up"
+    ],
+    "time": 70,
+    "details": "ComponentRef gives control."
+  },
+  {
+    "question": "What is Dynamic component lifecycle?",
+    "options": [
+      "Runtime lifecycle",
+      "ngOnInit etc. also apply on dynamic",
+      "Lifecycle events",
+      "Standard lifecycle"
+    ],
+    "correctOptions": [
+      "Dynamic components also go through lifecycle: ngOnInit, ngAfterViewInit etc. when created at runtime (with createComponent)"
+    ],
+    "time": 80,
+    "details": "Lifecycle fires on dynamic."
+  },
+  {
+    "question": "What is destroy on componentRef?",
+    "options": [
+      "Destroy dynamic component",
+      "Clean up",
+      "Tear down",
+      "Unmount"
+    ],
+    "correctOptions": [
+      "Clean up dynamic component: componentRef.destroy() runs ngOnDestroy, removes from DOM, detaches CD - must call to prevent memory leaks"
+    ],
+    "time": 70,
+    "details": "destroy cleans up."
+  },
+  {
+    "question": "What is change detection via viewRef?",
+    "options": [
+      "Manually run CD",
+      "Run change detection",
+      "Detect changes manually",
+      "check it, mark for check"
+    ],
+    "correctOptions": [
+      "viewRef.detectChanges() manually runs CD for view (for OnPush component) vs viewRef.checked(true/false) to enable/disable automatic CD for view"
+    ],
+    "time": 80,
+    "details": "Manually trigger CD."
+  },
+  {
+    "question": "What is destroy viewRef?",
+    "options": [
+      "Destroy embedded view",
+      "Remove template",
+      "Tear down",
+      "Destroy template"
+    ],
+    "correctOptions": [
+      "Destroy embedded view created via templateRef.createEmbeddedView: embeddedView.destroy() to clean up"
+    ],
+    "time": 75,
+    "details": "remove embedded view."
+  },
+  {
+    "question": "What is ComponentFactoryResolver?",
+    "options": [
+      "Get component factory",
+      "Component factory loader",
+      "Factory",
+      "Resolve components"
+    ],
+    "correctOptions": [
+      "Service to get ComponentFactory from component type: componentFactory = factoryResolver.resolveComponentFactory(ComponentType)"
+    ],
+    "time": 70,
+    "details": "Get factory from component type."
+  },
+  {
+    "question": "What is createComponent with factory?",
+    "options": [
+      "Create component via factory",
+      "Instantiate from factory",
+      "Dynamic create from factory",
+      "Use factory"
+    ],
+    "correctOptions": [
+      "Create dynamic component via factory: viewContainer.createComponent(factory) vs createComponent(ComponentType) which obtains factory internally"
+    ],
+    "time": 75,
+    "details": "Creates via factory."
+  },
+  {
+    "question": "What is TemplateRef in Angular?",
+    "options": [
+      "ng-template reference",
+      "Template reference",
+      "Template wrapper",
+      "Internal template"
+    ],
+    "correctOptions": [
+      "Reference to <ng-template> element: obtained via @ViewChild('tmpl') tmpl: TemplateRef"
+    ],
+    "time": 60,
+    "details": "TemplateRef references ng-template."
+  },
+  {
+    "question": "What is createEmbeddedView?",
+    "options": [
+      "Create view from template",
+      "Instantiate template",
+      "Render template",
+      "ng-template to view"
+    ],
+    "correctOptions": [
+      "Creates view from TemplateRef: templateRef.createEmbeddedView(context) returns EmbeddedViewRef"
+    ],
+    "time": 60,
+    "details": "Creates embedded view."
+  },
+  {
+    "question": "What is ng-template context?",
+    "options": [
+      "Template variables",
+      "Context object",
+      "Template data",
+      "Variable binding"
+    ],
+    "correctOptions": [
+      "Object providing variables to template: { $implicit: value, index: i, even: bool } - accessed as let-x in template"
+    ],
+    "time": 65,
+    "details": "Context provides template variables."
+  },
+  {
+    "question": "What is ViewChild with static false?",
+    "options": [
+      "Query after view init",
+      "Dynamic query",
+      "Late resolution",
+      "After change detection"
+    ],
+    "correctOptions": [
+      "Query resolved after view init (default): needed for dynamic content via ngIf or ngFor"
+    ],
+    "time": 65,
+    "details": "Default runs after view init."
+  },
+  {
+    "question": "What is ElementRef in Angular?",
+    "options": [
+      "DOM element reference",
+      "Element wrapper",
+      "Native element",
+      "Element access"
+    ],
+    "correctOptions": [
+      "Reference to host element: .nativeElement accesses actual DOM element (avoid when possible)"
+    ],
+    "time": 55,
+    "details": "ElementRef wraps DOM element."
+  },
+  {
+    "question": "What is Renderer2?",
+    "options": [
+      "DOM manipulation",
+      "Render abstraction",
+      "Cross-browser API",
+      "Style renderer"
+    ],
+    "correctOptions": [
+      "Cross-browser abstraction for DOM manipulation: setElementStyle, setElementClass, invokeElementMethod"
+    ],
+    "time": 60,
+    "details": "Renderer2 abstracts DOM."
+  },
+  {
+    "question": "What is Renderer2 vs native element?",
+    "options": [
+      "Abstraction vs direct",
+      "Safer alternative",
+      "Browser compatibility",
+      "Two approaches"
+    ],
+    "correctOptions": [
+      "Renderer2 works in Web Workers and SSR, nativeElement doesn't - prefer Renderer2 for server-side rendering support"
+    ],
+    "time": 70,
+    "details": "Renderer2 is safer."
+  },
+  {
+    "question": "What is ngAfterViewInit lifecycle?",
+    "options": [
+      "After view children init",
+      "View initialized",
+      "Post-view hook",
+      "View ready"
+    ],
+    "correctOptions": [
+      "Called after view and child views initialized - use for accessing @ViewChild items"
+    ],
+    "time": 55,
+    "details": "After view initializes."
+  },
+  {
+    "question": "What is ngAfterContentInit lifecycle?",
+    "options": [
+      "After content projected",
+      "Content initialized",
+      "Post-content hook",
+      "Content ready"
+    ],
+    "correctOptions": [
+      "Called after content children are projected - use for accessing @ContentChild items"
+    ],
+    "time": 55,
+    "details": "After content initializes."
+  },
+  {
+    "question": "What is ngAfterViewChecked lifecycle?",
+    "options": [
+      "After view checked",
+      "View checked",
+      "Post-check hook",
+      "View verified"
+    ],
+    "correctOptions": [
+      "Called after every view check (after each change detection)"
+    ],
+    "time": 55,
+    "details": "After each view check."
+  },
+  {
+    "question": "What is ngAfterContentChecked lifecycle?",
+    "options": [
+      "After content checked",
+      "Content checked",
+      "Post-content check",
+      "Content verified"
+    ],
+    "correctOptions": [
+      "Called after every content check (after each change detection)"
+    ],
+    "time": 55,
+    "details": "After each content check."
+  },
+  {
+    "question": "What is OnPush change detection?",
+    "options": [
+      "Manual change detection",
+      "Optimized strategy",
+      "Performance",
+      "Manual check"
+    ],
+    "correctOptions": [
+      "ChangeDetectionStrategy.OnPush requires manual trigger or Input changes to run CD: use markForCheck() or detectChanges()"
+    ],
+    "time": 60,
+    "details": "OnPush optimizes change detection."
+  },
+  {
+    "question": "What is markForCheck in OnPush?",
+    "options": [
+      "Mark for check",
+      "Schedule check",
+      "Mark dirty",
+      "Trigger CD"
+    ],
+    "correctOptions": [
+      "Marks component for check: runs CD even in OnPush when parent runs CD"
+    ],
+    "time": 60,
+    "details": "Mark for check schedules CD."
+  },
+  {
+    "question": "What is detach and reattach?",
+    "options": [
+      "Pause/resume CD",
+      "Stop CD",
+      "CD control",
+      "Manual control"
+    ],
+    "correctOptions": [
+      "detach() pauses CD for view, reattach() resumes - with OnPush must reattach to check"
+    ],
+    "time": 70,
+    "details": "Control change detection."
+  },
+  {
+    "question": "What is checkNoChanges in dev mode?",
+    "options": [
+      "Verify no changes",
+      "Dev check",
+      "Detect unwanted changes",
+      "CD verification"
+    ],
+    "correctOptions": [
+      "Runs change detection then throws error if changes detected (dev mode only) - helps find side effects during CD"
+    ],
+    "time": 75,
+    "details": "checkNoChanges detects unwanted changes."
+  },
+  {
+    "question": "What is @SkipSelf in DI?",
+    "options": [
+      "Skip inject at level",
+      "Don't use local",
+      "Use parent",
+      "Ignore self"
+    ],
+    "correctOptions": [
+      "Skip injection at current level: @SkipSelf() searches parent injector"
+    ],
+    "time": 55,
+    "details": "SkipSelf ignores current injector."
+  },
+  {
+    "question": "What is @Self in DI?",
+    "options": [
+      "Use only local",
+      "No parent search",
+      "Self only",
+      "Local only"
+    ],
+    "correctOptions": [
+      "Only use injection at current level: @Self() errors if not found locally (won't search parent)"
+    ],
+    "time": 60,
+    "details": "Self only uses local injector."
+  },
+  {
+    "question": "What is @Optional in DI?",
+    "options": [
+      "Nullable",
+      "Allow null",
+      "Optional dependency",
+      "Null if missing"
+    ],
+    "correctOptions": [
+      "Makes dependency optional: injects null if not found (otherwise errors)"
+    ],
+    "time": 55,
+    "details": "Optional allows null."
+  },
+  {
+    "question": "What is @Inject decorator?",
+    "options": [
+      "Specify token",
+      "Injection token",
+      "Token injection",
+      "Custom inject"
+    ],
+    "correctOptions": [
+      "Specifies injection token to inject: @Inject(MY_TOKEN) value"
+    ],
+    "time": 55,
+    "details": "Inject specifies token."
+  },
+  {
+    "question": "What is InjectionToken?",
+    "options": [
+      "Custom token",
+      "String token",
+      "DI token",
+      "Opaque token"
+    ],
+    "correctOptions": [
+      "Creates DI token: new InjectionToken('desc') for non-class dependencies"
+    ],
+    "time": 55,
+    "details": "InjectionToken for non-classes."
+  },
+  {
+    "question": "What is useClass in provider?",
+    "options": [
+      "Different implementation",
+      "Class replacement",
+      "Alternate class",
+      "Override"
+    ],
+    "correctOptions": [
+      "Use different class than token: { provide: Service, useClass: MockService }"
+    ],
+    "time": 55,
+    "details": "useClass replaces implementation."
+  },
+  {
+    "question": "What is useValue in provider?",
+    "options": [
+      "Use value",
+      "Value provider",
+      "Plain value",
+      "Static value"
+    ],
+    "correctOptions": [
+      "Use existing value instead of class: { provide: CONFIG, useValue: { ... } }"
+    ],
+    "time": 50,
+    "details": "useValue provides value."
+  },
+  {
+    "question": "What is useFactory in provider?",
+    "options": [
+      "Factory function",
+      "Factory provider",
+      "Dynamic creation",
+      "Function"
+    ],
+    "correctOptions": [
+      "Use factory function: { provide: X, useFactory: () => new X() } - can inject deps via deps array"
+    ],
+    "time": 55,
+    "details": "useFactory creates with function."
+  },
+  {
+    "question": "What is multi provider?",
+    "options": [
+      "Multiple providers",
+      "Multi token",
+      "Multiple values",
+      "Array of values"
+    ],
+    "correctOptions": [
+      "Allows multiple values for same token: { provide: X, useValue: A, multi: true } - need multi: true on each"
+    ],
+    "time": 60,
+    "details": "multi allows multiple."
+  },
+  {
+    "question": "What is APP_INITIALIZER?",
+    "options": [
+      "App startup",
+      "Init hook",
+      "Startup hook",
+      "Early initialization"
+    ],
+    "correctOptions": [
+      "Run function before app initializes: { provide: APP_INITIALIZER, useFactory: () => () => init(), multi: true }"
+    ],
+    "time": 65,
+    "details": "APP_INITIALIZER runs at startup."
+  },
+  {
+    "question": "What is APP_BOOTSTRAP_LISTENER?",
+    "options": [
+      "Bootstrap callback",
+      "Init callback",
+      "Boot event",
+      "Startup listener"
+    ],
+    "correctOptions": [
+      "Called for eachbootstrap: APP_BOOTSTRAP_LISTENER runs after each component bootstrapped"
+    ],
+    "time": 70,
+    "details": "Runs on bootstrap."
+  },
+  {
+    "question": "What is PLATFORM_INITIALIZER?",
+    "options": [
+      "Platform init",
+      "Platform ready",
+      "Before platform",
+      "Platform hook"
+    ],
+    "correctOptions": [
+      "Runs once platform is ready (before any module): useFactory in root app's providers"
+    ],
+    "time": 70,
+    "details": "Runs when platform ready."
+  },
+  {
+    "question": "What is HttpInterceptor?",
+    "options": [
+      "HTTP middleware",
+      "Request modifier",
+      "HTTP hook",
+      "Request/response"
+    ],
+    "correctOptions": [
+      "Middleware to modify requests/responses: implements HttpInterceptor { intercept(req, next) }"
+    ],
+    "time": 55,
+    "details": "Interceptor modifies HTTP."
+  },
+  {
+    "question": "What is HTTP_INTERCEPTORS?",
+    "options": [
+      "Interceptor token",
+      "Multi token",
+      "Interceptor array",
+      "Multiple interceptors"
+    ],
+    "correctOptions": [
+      "Multi-provider token for HttpInterceptors: { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true }"
+    ],
+    "time": 60,
+    "details": "HTTP_INTERCEPTORS is multi token."
+  },
+  {
+    "question": "What is custom form control?",
+    "options": [
+      "Custom input",
+      "Custom value",
+      "ControlValueAccessor",
+      "ngModel"
+    ],
+    "correctOptions": [
+      "Implement ControlValueAccessor: writeValue, registerOnChange, registerOnTouched, setDisabledState"
+    ],
+    "time": 60,
+    "details": "ControlValueAccessor for forms."
+  },
+  {
+    "question": "What is NG_VALUE_ACCESSOR?",
+    "options": [
+      "Control token",
+      "Value accessor token",
+      "Form token",
+      "Input token"
+    ],
+    "correctOptions": [
+      "Provider token for form controls: { provide: NG_VALUE_ACCESSOR, useClass: MyControl, multi: true }"
+    ],
+    "time": 65,
+    "details": "NG_VALUE_ACCESSOR for form controls."
+  },
+  {
+    "question": "What is NG_VALIDATORS?",
+    "options": [
+      "Validator token",
+      "Validation token",
+      "Validator array",
+      "Multi token"
+    ],
+    "correctOptions": [
+      "Multi-provider for validators: { provide: NG_VALIDATORS, useClass: MyValidator, multi: true }"
+    ],
+    "time": 60,
+    "details": "NG_VALIDATORS for validation."
+  },
+  {
+    "question": "What is AsyncValidator?",
+    "options": [
+      "Async validation",
+      "Promise validator",
+      "Observable validator",
+      "Async check"
+    ],
+    "correctOptions": [
+      "Validator returning Promise or Observable: { provide: NG_ASYNC_VALIDATORS, useClass: MyValidator }"
+    ],
+    "time": 60,
+    "details": "AsyncValidator for async validation."
+  },
+  {
+    "question": "What is setDisabledState?",
+    "options": [
+      "Disable control",
+      "Disabled state",
+      "Control state",
+      "Enable/disable"
+    ],
+    "correctOptions": [
+      "ControlValueAccessor method called when disabled state changes - implement to update UI"
+    ],
+    "time": 60,
+    "details": "setDisabledState handles disabled."
+  },
+  {
+    "question": "What is AbstractControl?",
+    "options": [
+      "Base control",
+      "Form base",
+      "Control ancestor",
+      "FormControl/FormGroup base"
+    ],
+    "correctOptions": [
+      "Base class for FormControl, FormGroup, FormArray with valueChanges, statusChanges, setValue, patchValue"
+    ],
+    "time": 60,
+    "details": "AbstractControl is base."
+  },
+  {
+    "question": "What is FormGroup?",
+    "options": [
+      "Form container",
+      "Group controls",
+      "Nested form",
+      "Control group"
+    ],
+    "correctOptions": [
+      "Container for controls: new FormGroup({ name: new FormControl(), address: new FormGroup({...}) })"
+    ],
+    "time": 55,
+    "details": "FormGroup groups controls."
+  },
+  {
+    "question": "What is FormArray?",
+    "options": [
+      "Dynamic controls",
+      "Array of controls",
+      "Control array",
+      "Repeated controls"
+    ],
+    "correctOptions": [
+      "Array of controls: new FormArray([new FormControl(), new FormControl()) - supports push, insert, removeAt"
+    ],
+    "time": 55,
+    "details": "FormArray is dynamic array."
+  },
+  {
+    "question": "What is FormControl?",
+    "options": [
+      "Single input",
+      "Single control",
+      "Input control",
+      "Form field"
+    ],
+    "correctOptions": [
+      "Single form control: new FormControl('default', [validators], [asyncValidators])"
+    ],
+    "time": 50,
+    "details": "FormControl single input."
+  },
+  {
+    "question": "What is valueChanges?",
+    "options": [
+      "Value Observable",
+      "Change stream",
+      "Value stream",
+      "Input changes"
+    ],
+    "correctOptions": [
+      "Observable emitting value on every change: control.valueChanges.subscribe(v => ...)"
+    ],
+    "time": 50,
+    "details": "valueChanges emits on changes."
+  },
+  {
+    "question": "What is statusChanges?",
+    "options": [
+      "Status Observable",
+      "Validation status",
+      "Status stream",
+      "Valid/invalid"
+    ],
+    "correctOptions": [
+      "Observable emitting status: VALID, INVALID, PENDING, DISABLED"
+    ],
+    "time": 50,
+    "details": "statusChanges emits validation."
+  },
+  {
+    "question": "What is setValue vs patchValue?",
+    "options": [
+      "Full vs partial update",
+      "Complete vs partial",
+      "Update methods",
+      "Two ways"
+    ],
+    "correctOptions": [
+      "setValue requires all fields, patchValue updates only provided (partial)"
+    ],
+    "time": 55,
+    "details": "setValue full, patchValue partial."
+  },
+  {
+    "question": "What is markAsDirty?",
+    "options": [
+      "Mark dirty",
+      "Dirty state",
+      "Touched + modified",
+      "Form dirty"
+    ],
+    "correctOptions": [
+      "Marks control as dirty (touched + value changed from initial): markAsDirty() vs markAsPristine()"
+    ],
+    "time": 55,
+    "details": "markAsDirty tracks changes."
+  },
+  {
+    "question": "What is markAsTouched?",
+    "options": [
+      "Mark touched",
+      "Touched state",
+      "Blurred",
+      "Field touched"
+    ],
+    "correctOptions": [
+      "Marks control as touched (blurred): used in validation, touched state tracks blur"
+    ],
+    "time": 55,
+    "details": "markAsTouched marks field."
+  },
+  {
+    "question": "What is reset in form?",
+    "options": [
+      "Clear form",
+      "Reset value",
+      "Clear state",
+      "Initial value"
+    ],
+    "correctOptions": [
+      "Resets to default or provided value and clears status: control.reset() or control.reset('default')"
+    ],
+    "time": 50,
+    "details": "reset clears form."
+  },
+  {
+    "question": "What is get in FormGroup?",
+    "options": [
+      "Get control",
+      "Find control",
+      "Nested control",
+      "Control access"
+    ],
+    "correctOptions": [
+      "Gets nested control: form.get('address.city') returns FormControl for nested path"
+    ],
+    "time": 50,
+    "details": "get accesses nested controls."
+  },
+  {
+    "question": "What is updateOn in FormControl?",
+    "options": [
+      "When to update",
+      "Update strategy",
+      "Change trigger",
+      "Value strategy"
+    ],
+    "correctOptions": [
+      "Controls when update triggers: 'change' (default), 'blur', 'submit'"
+    ],
+    "time": 55,
+    "details": "updateOn controls update timing."
+  },
+  {
+    "question": "What is emitEvent in setValue?",
+    "options": [
+      "Skip events",
+      "Event option",
+      "No emit",
+      "Silent update"
+    ],
+    "correctOptions": [
+      "Option to skip emitting valueChanges/statusChanges: setValue(val, { emitEvent: false })"
+    ],
+    "time": 60,
+    "details": "emitEvent controls changes."
+  },
+  {
+    "question": "What is emitModelToViewChange?",
+    "options": [
+      "Model to view",
+      "View update",
+      "Sync option",
+      "One-way"
+    ],
+    "correctOptions": [
+      "Option to emit to view (defaults true): only affects legacy notify option"
+    ],
+    "time": 60,
+    "details": "Legacy option."
+  },
+  {
+    "question": "What is onlySelf in markAsTouched?",
+    "options": [
+      "Touch self only",
+      "Recursive option",
+      "Local only",
+      "Self only"
+    ],
+    "correctOptions": [
+      "Option to only mark this control (not parent): markAsTouched({ onlySelf: true })"
+    ],
+    "time": 60,
+    "details": "onlySelf touches self only."
+  },
+  {
+    "question": "What is FormBuilder?",
+    "options": [
+      "Form factory",
+      "Form builder",
+      "Create forms",
+      "Builder service"
+    ],
+    "correctOptions": [
+      "Service to create forms: constructor(private fb: FormBuilder) - fb.group(), fb.control(), fb.array()"
+    ],
+    "time": 50,
+    "details": "FormBuilder creates forms."
+  },
+  {
+    "question": "What is group in FormBuilder?",
+    "options": [
+      "Create FormGroup",
+      "Group method",
+      "Factory method",
+      "Build group"
+    ],
+    "correctOptions": [
+      "Creates FormGroup: fb.group({ name: [default], email: [default, validators] })"
+    ],
+    "time": 50,
+    "details": "group creates FormGroup."
+  },
+  {
+    "question": "What is control in FormBuilder?",
+    "options": [
+      "Create FormControl",
+      "Single control",
+      "Builder method",
+      "Create control"
+    ],
+    "correctOptions": [
+      "Creates FormControl: fb.control(default, validators)"
+    ],
+    "time": 50,
+    "details": "control creates FormControl."
+  },
+  {
+    "question": "What is array in FormBuilder?",
+    "options": [
+      "Create FormArray",
+      "Array method",
+      "Builder method",
+      "Create array"
+    ],
+    "correctOptions": [
+      "Creates FormArray: fb.array([controls], validator)"
+    ],
+    "time": 50,
+    "details": "array creates FormArray."
+  },
+  {
+    "question": "What is clearAsyncValidators?",
+    "options": [
+      "Clear async",
+      "Remove validators",
+      "No async",
+      "Async removal"
+    ],
+    "correctOptions": [
+      "Removes all async validators: control.clearAsyncValidators()"
+    ],
+    "time": 55,
+    "details": "clearAsyncValidators clears async."
+  },
+  {
+    "question": "What is pending in form status?",
+    "options": [
+      "Async validating",
+      "Validation status",
+      "In progress",
+      "Async check"
+    ],
+    "correctOptions": [
+      "Status when async validator running: PENDING means validation in progress"
+    ],
+    "time": 55,
+    "details": "PENDING means validating."
+  },
+  {
+    "question": "What is ngModel in Angular?",
+    "options": [
+      "Two-way binding",
+      "Form binding",
+      "Model binding",
+      "Input output"
+    ],
+    "correctOptions": [
+      "Two-way binding: binds property and input synchronously"
+    ],
+    "time": 55,
+    "details": "ngModel two-way binds."
+  },
+  {
+    "question": "What is ngModelChange event?",
+    "options": [
+      "Change event",
+      "Value change",
+      "Event",
+      "Output event"
+    ],
+    "correctOptions": [
+      "Event emitted when value changes"
+    ],
+    "time": 55,
+    "details": "ngModelChange emits."
+  },
+  {
+    "question": "What is FormsModule?",
+    "options": [
+      "Module for forms",
+      "Import",
+      "Forms module",
+      "Template forms"
+    ],
+    "correctOptions": [
+      "Required for ngModel: import FormsModule in app"
+    ],
+    "time": 50,
+    "details": "FormsModule enables ngModel."
+  },
+  {
+    "question": "What is ReactiveFormsModule?",
+    "options": [
+      "Reactive forms",
+      "Import",
+      "Form module",
+      "Reactive module"
+    ],
+    "correctOptions": [
+      "Required for reactive forms: import ReactiveFormsModule"
+    ],
+    "time": 50,
+    "details": "ReactiveFormsModule required."
+  },
+  {
+    "question": "What is form group value?",
+    "options": [
+      "Get values",
+      "Form values",
+      "Object",
+      "All values"
+    ],
+    "correctOptions": [
+      "form.value returns object with all form control values"
+    ],
+    "time": 50,
+    "details": "form.value gets values."
+  },
+  {
+    "question": "What is form patchValue?",
+    "options": [
+      "Partial update",
+      "Update some",
+      "Patch",
+      "Set"
+    ],
+    "correctOptions": [
+      "patchValue updates fields provided; setValue requires all fields"
+    ],
+    "time": 55,
+    "details": "patch updates partial."
+  },
+  {
+    "question": "What is form dirty check?",
+    "options": [
+      "Check dirty",
+      "Modified",
+      "Pristine",
+      "Changed"
+    ],
+    "correctOptions": [
+      "form.dirty is true if user changed value"
+    ],
+    "time": 55,
+    "details": "dirty tracks changes."
+  },
+  {
+    "question": "What is form touched check?",
+    "options": [
+      "Touched flag",
+      "Blurred",
+      "Untouched",
+      "Tapped"
+    ],
+    "correctOptions": [
+      "form.touched true if user blurred any control"
+    ],
+    "time": 55,
+    "details": "touched after blur."
+  },
+  {
+    "question": "What is form pending status?",
+    "options": [
+      "Validating",
+      "Status",
+      "Pending",
+      "Async status"
+    ],
+    "correctOptions": [
+      "PENDING status when async validators running"
+    ],
+    "time": 55,
+    "details": "Pending while validating."
+  },
+  {
+    "question": "What is control get parent?",
+    "options": [
+      "Parent group",
+      "Parent form",
+      "Container",
+      "Form group"
+    ],
+    "correctOptions": [
+      "control.parent returns containing FormGroup or FormArray"
+    ],
+    "time": 55,
+    "details": "parent is container."
+  },
+  {
+    "question": "What is array length property?",
+    "options": [
+      "Controls count",
+      "Count",
+      "Size",
+      "Number"
+    ],
+    "correctOptions": [
+      "FormArray.length returns number of controls"
+    ],
+    "time": 50,
+    "details": "length is control count."
+  },
+  {
+    "question": "What is FormArray at method?",
+    "options": [
+      "Get at index",
+      "Get by index",
+      "Index access",
+      "Get"
+    ],
+    "correctOptions": [
+      "Returns control at index: array.at(index)"
+    ],
+    "time": 50,
+    "details": "at gets control."
+  },
+  {
+    "question": "What is FormArray push?",
+    "options": [
+      "Add control",
+      "Add to end",
+      "Append",
+      "Insert"
+    ],
+    "correctOptions": [
+      "Adds control to end of FormArray: array.push(control)"
+    ],
+    "time": 50,
+    "details": "push adds control."
+  },
+  {
+    "question": "What is FormArray removeAt?",
+    "options": [
+      "Remove control",
+      "Delete at index",
+      "Remove",
+      "Delete"
+    ],
+    "correctOptions": [
+      "Removes control at index: array.removeAt(index)"
+    ],
+    "time": 50,
+    "details": "removeAt deletes control."
+  },
+  {
+    "question": "What is form get rawValue?",
+    "options": [
+      "Raw values including disabled",
+      "All values",
+      "Disabled values",
+      "Raw form"
+    ],
+    "correctOptions": [
+      "form.getRawValue() includes disabled controls (value excludes them)"
+    ],
+    "time": 55,
+    "details": "getRawValue includes disabled."
+  },
+  {
+    "question": "What is formdirty vs pristine?",
+    "options": [
+      "Dirty vs pristine",
+      "Modified",
+      "Clean vs dirty",
+      "States"
+    ],
+    "correctOptions": [
+      "dirty means changed from initial; pristine means unchanged"
+    ],
+    "time": 55,
+    "details": " opposites."
+  }
+]

@@ -1,0 +1,1402 @@
+[
+  {
+    "question": "What is RxJS?",
+    "options": [
+      "Reactive library",
+      "Async library",
+      "Library",
+      "Observables"
+    ],
+    "correctOptions": [
+      "Reactive Extensions for JavaScript - library for composing asynchronous/event-based programs using observable sequences"
+    ],
+    "time": 40,
+    "details": "RxJS is reactive programming library."
+  },
+  {
+    "question": "What is Observable in RxJS?",
+    "options": [
+      "Async sequence",
+      "Stream",
+      "Push-based",
+      "Observable sequence"
+    ],
+    "correctOptions": [
+      "The core primitive in RxJS: a push-based collection that emits items over time and can be subscribed to via observer"
+    ],
+    "time": 45,
+    "details": "Observable is the core primitive."
+  },
+  {
+    "question": "What is Observer in RxJS?",
+    "options": [
+      "Consumer",
+      "Listener",
+      "Collection",
+      "Receiver"
+    ],
+    "correctOptions": [
+      "Object with next, error, and complete methods (next is required, error/complete optional) that consumes Observable emissions"
+    ],
+    "time": 45,
+    "details": "Observer consumes Observable."
+  },
+  {
+    "question": "What is subscribe in RxJS?",
+    "options": [
+      "Listen",
+      "Listen to stream",
+      "Connect",
+      "Subscribe"
+    ],
+    "correctOptions": [
+      "Method to connect observer to observable (begins execution) - returns Subscription to enable unsubscribing"
+    ],
+    "time": 40,
+    "details": "subscribe listens to stream."
+  },
+  {
+    "question": "What is map operator in RxJS?",
+    "options": [
+      "Transform items",
+      "Transform",
+      "Map each",
+      "Project"
+    ],
+    "correctOptions": [
+      "Operator that transforms each emission using project function: map(x => x * 2)"
+    ],
+    "time": 40,
+    "details": "map transforms emissions."
+  },
+  {
+    "question": "What is filter operator in RxJS?",
+    "options": [
+      "Filter items",
+      "Condition",
+      "Emit selected",
+      "Filter"
+    ],
+    "correctOptions": [
+      "Operator that only emits items that satisfy predicate: filter(x => x > 5)"
+    ],
+    "time": 40,
+    "details": "filter selects emissions."
+  },
+  {
+    "question": "What is pipe in RxJS?",
+    "options": [
+      "Compose operators",
+      "Chain",
+      "Combine",
+      "Operators chain"
+    ],
+    "correctOptions": [
+      "Method to chain operators together on Observable: source.pipe(operator1(), operator2()) returns new observable"
+    ],
+    "time": 45,
+    "details": "pipe composes operators."
+  },
+  {
+    "question": "What is of in RxJS?",
+    "options": [
+      "Emits items",
+      "Convert arg",
+      "From values",
+      "Create"
+    ],
+    "correctOptions": [
+      "Creation operator that emits each argument as separate emission then completes: of(1, 2, 3) emits 1, then 2, then 3, then completes"
+    ],
+    "time": 50,
+    "details": "of emits each value."
+  },
+  {
+    "question": "What is from in RxJS?",
+    "options": [
+      "Convert iterable",
+      "Array to observable",
+      "From array",
+      "Convert"
+    ],
+    "correctOptions": [
+      "Creation operator that converts arrays/promises/iterables into Observable: from([1,2,3]) emits each item"
+    ],
+    "time": 50,
+    "details": "from converts to observable."
+  },
+  {
+    "question": "What is fromEvent in RxJS?",
+    "options": [
+      "Event to observable",
+      "Event stream",
+      "DOM events",
+      "Event observable"
+    ],
+    "correctOptions": [
+      "Creation operator to convert DOM events to Observable: fromEvent(element, 'click')"
+    ],
+    "time": 50,
+    "details": "fromEvent creates event observable."
+  },
+  {
+    "question": "What is BehaviorSubject?",
+    "options": [
+      "Subject with value",
+      "State",
+      "Current value",
+      "Replay one"
+    ],
+    "correctOptions": [
+      "Subject variant that stores current value and emits it to new subscribers immediately upon subscription (like state)"
+    ],
+    "time": 50,
+    "details": "Stores current value."
+  },
+  {
+    "question": "What is ReplaySubject?",
+    "options": [
+      "Replay items",
+      "Replay stream",
+      "Replay previous",
+      "Buffer"
+    ],
+    "correctOptions": [
+      "Subject variant that replays specified number of previous emissions to new subscribers"
+    ],
+    "time": 50,
+    "details": "Replays past emissions."
+  },
+  {
+    "question": "What is AsyncSubject?",
+    "options": [
+      "Emits last",
+      "Only last value",
+      "Completes after complete",
+      "Future"
+    ],
+    "correctOptions": [
+      "Subject variant that only emits last value when complete() is called (useful for HTTP)"
+    ],
+    "time": 55,
+    "details": "Emits value on complete."
+  },
+  {
+    "question": "What is Subject in RxJS?",
+    "options": [
+      "Observable and Observer",
+      "Both",
+      "Multicast",
+      "Both sides"
+    ],
+    "correctOptions": [
+      "Special type that can act as both Observable (subscribe to) and Observer (call next on), enabling multicasting to multiple subscribers"
+    ],
+    "time": 50,
+    "details": "Subject is dual: Observable/Observer."
+  },
+  {
+    "question": "What is switchMap in RxJS?",
+    "options": [
+      "Cancel previous",
+      "Switch inner",
+      "Inner observable",
+      "Flatten"
+    ],
+    "correctOptions": [
+      "Operator that switches to a new inner observable when outer emits (cancels previous inner), flattening nestings"
+    ],
+    "time": 50,
+    "details": "switchMap cancels previous."
+  },
+  {
+    "question": "What is mergeMap (flatMap) in RxJS?",
+    "options": [
+      "Run inner in parallel",
+      "Merge inner",
+      "Inner concurrent",
+      "Flatten"
+    ],
+    "correctOptions": [
+      "Operator that runs inner Observable for each outer emission concurrently (not sequentially like concatMap)"
+    ],
+    "time": 50,
+    "details": "mergeMap runs concurrently."
+  },
+  {
+    "question": "What is concatMap in RxJS?",
+    "options": [
+      "Queue inner",
+      "Sequence",
+      "Wait",
+      "Sequential"
+    ],
+    "correctOptions": [
+      "Operator that runs inner Observable sequentially (waits for each to complete before next)"
+    ],
+    "time": 50,
+    "details": "concatMap runs sequentially."
+  },
+  {
+    "question": "What is exhaustMap in RxJS?",
+    "options": [
+      "Ignore emissions while busy",
+      "Ignore new",
+      "Drop",
+      "Drop incoming"
+    ],
+    "correctOptions": [
+      "Operator that ignores new outer emissions while inner Observable is still running (useful for submit buttons)"
+    ],
+    "time": 55,
+    "details": "exhaustMap ignores if busy."
+  },
+  {
+    "question": "What is take in RxJS?",
+    "options": [
+      "Take N items",
+      "Limit count",
+      "First N",
+      "Take"
+    ],
+    "correctOptions": [
+      "Operator that takes only first N emissions then completes: take(5)"
+    ],
+    "time": 40,
+    "details": "take limits emissions."
+  },
+  {
+    "question": "What is takeUntil in RxJS?",
+    "options": [
+      "Complete when notifier emits",
+      "Complete notifier",
+      "Complete condition",
+      "Stop"
+    ],
+    "correctOptions": [
+      "Operator that completes when notifier Observable emits (e.g., destroy$), useful for auto-unsubscribe: source.pipe(takeUntil(destroy$))"
+    ],
+    "time": 50,
+    "details": "takeUntil completes on notifier."
+  },
+  {
+    "question": "What is takeWhile in RxJS?",
+    "options": [
+      "Complete on false",
+      "Predicate test",
+      "Stop condition",
+      "Conditional take"
+    ],
+    "correctOptions": [
+      "Operator that continues emitting until predicate returns false (inclusive) - when false appears, observable completes"
+    ],
+    "time": 50,
+    "details": "takeWhile stops on false."
+  },
+  {
+    "question": "What is first in RxJS?",
+    "options": [
+      "First or default",
+      "First item",
+      "Default",
+      "One item"
+    ],
+    "correctOptions": [
+      "Operator that emits first item (or first matching predicate) then completes; will error if empty unless default provided"
+    ],
+    "time": 50,
+    "details": "Returns first emission."
+  },
+  {
+    "question": "What is last in RxJS?",
+    "options": [
+      "Last or default",
+      "Final item",
+      "Last",
+      "Final"
+    ],
+    "correctOptions": [
+      "Operator that emits last item (or last matching predicate) then completes; will error if empty unless default provided"
+    ],
+    "time": 50,
+    "details": "Returns last emission."
+  },
+  {
+    "question": "What is single in RxJS?",
+    "options": [
+      "Emit if only one",
+      "One item",
+      "Single",
+      "One result"
+    ],
+    "correctOptions": [
+      "Operator that emits only if Observable completes with exactly one matching emission, else error"
+    ],
+    "time": 55,
+    "details": "single ensures exactly one."
+  },
+  {
+    "question": "What is debounceTime in RxJS?",
+    "options": [
+      "Wait after last",
+      "Wait",
+      "Dely",
+      "Time"
+    ],
+    "correctOptions": [
+      "Operator that only emits after duration passes without another emission; good for search inputs"
+    ],
+    "time": 50,
+    "details": "debounceTime delays emissions."
+  },
+  {
+    "question": "What is distinctUntilChanged in RxJS?",
+    "options": [
+      "Don't repeat consecutive",
+      "Skip duplicates",
+      "Unique",
+      "Same"
+    ],
+    "correctOptions": [
+      "Operator that suppresses only consecutive duplicate emissions (not all duplicates), keeps last duplicate in sequence"
+    ],
+    "time": 55,
+    "details": "distinctUntilChanged skips repeats."
+  },
+  {
+    "question": "What is skip in RxJS?",
+    "options": [
+      "Skip N initial",
+      "Skip items",
+      "Ignore first",
+      "Drop start"
+    ],
+    "correctOptions": [
+      "Operator that skips first N emissions then emits rest: skip(3) skips first 3"
+    ],
+    "time": 45,
+    "details": "skip skips initial emissions."
+  },
+  {
+    "question": "What is skipWhile in RxJS?",
+    "options": [
+      "Skip while true",
+      "Skip conditional",
+      "Skip until",
+      "Skip"
+    ],
+    "correctOptions": [
+      "Operator that skips while predicate returns true, then emits rest (including when become false)"
+    ],
+    "time": 50,
+    "details": "skipWhile skips during condition."
+  },
+  {
+    "question": "What is scan in RxJS?",
+    "options": [
+      "Accumulate",
+      "Reduce",
+      "Running total",
+      "Accumulator"
+    ],
+    "correctOptions": [
+      "Operator that runs accumulator on each emission with seed returning new accumulated result (like reduce but emits each intermediate)"
+    ],
+    "time": 50,
+    "details": "scan accumulates values."
+  },
+  {
+    "question": "What is reduce in RxJS?",
+    "options": [
+      "Accumulate all",
+      "Reduce to one",
+      "Sum",
+      "Combine"
+    ],
+    "correctOptions": [
+      "Operator that accumulates using seed over all emissions then emits only final result (unlike scan which emits intermediates)"
+    ],
+    "time": 50,
+    "details": "reduce emits final result."
+  },
+  {
+    "question": "What is tap in RxJS?",
+    "options": [
+      "Side effect",
+      "Do",
+      "Log",
+      "Inspect"
+    ],
+    "correctOptions": [
+      "Operator for performing side effects (e.g., logging) without altering emissions: tap(val => console.log(val))"
+    ],
+    "time": 45,
+    "details": "tap performs side effects."
+  },
+  {
+    "question": "What is finalize in RxJS?",
+    "options": [
+      "Cleanup on complete/error",
+      "Finally",
+      "Cleanup",
+      "Teardown"
+    ],
+    "correctOptions": [
+      "Operator that runs callback when Observable completes or errors (regardless of completion cause), usually for cleanup"
+    ],
+    "time": 50,
+    "details": "finalize runs on termination."
+  },
+  {
+    "question": "What is catchError in RxJS?",
+    "options": [
+      "Handle error",
+      "Catch error",
+      "Error handler",
+      "Error operation"
+    ],
+    "correctOptions": [
+      "Operator that catches errors and returns error Observable: catchError(err => of('fallback'))"
+    ],
+    "time": 50,
+    "details": "catchError handles errors."
+  },
+  {
+    "question": "What is retry in RxJS?",
+    "options": [
+      "Retry on error",
+      "Retry",
+      "Resubscribe",
+      "Repeats"
+    ],
+    "correctOptions": [
+      "Operator that re-subscribes to source upon error (default attempts infinite, use retry({count: 3}) for limited attempts)"
+    ],
+    "time": 55,
+    "details": "retry resubscribes."
+  },
+  {
+    "question": "What is retryWhen in RxJS?",
+    "options": [
+      "Retry conditionally",
+      "Conditional retry",
+      "Retry with condition",
+      "Controlled"
+    ],
+    "correctOptions": [
+      "Operator that accepts notifier Observable to control retrying, can use to add delays or max attempts: retryWhen(errors => errors.pipe(delay(1000)))"
+    ],
+    "time": 60,
+    "details": "retryWhen controls retries."
+  },
+  {
+    "question": "What is delay in RxJS?",
+    "options": [
+      "Delay emissions",
+      "Postpone",
+      "Wait",
+      "Time shift"
+    ],
+    "correctOptions": [
+      "Operator that delays emissions by due time (in ms or Date) - good for retry delays"
+    ],
+    "time": 45,
+    "details": "delay postpones emissions."
+  },
+  {
+    "question": "What is interval in RxJS?",
+    "options": [
+      "Timer",
+      "Periodic",
+      "Timer in ms",
+      "Time emission"
+    ],
+    "correctOptions": [
+      "Creation function that emits sequential numbers each due time from 0 onward: interval(1000)"
+    ],
+    "time": 45,
+    "details": "interval emits periodically."
+  },
+  {
+    "question": "What is timer in RxJS?",
+    "options": [
+      "After delay then optionally period",
+      "Timeout",
+      "One time then continue",
+      "SetTimeout-like"
+    ],
+    "correctOptions": [
+      "Creation function that after initial delay can optionally emit repeatedly each period: timer(1000, 2000)"
+    ],
+    "time": 50,
+    "details": "timer is like setInterval."
+  },
+  {
+    "question": "What is combineLatest in RxJS?",
+    "options": [
+      "Latest from all",
+      "Combine",
+      "Mix",
+      "All values"
+    ],
+    "correctOptions": [
+      "Combination operator that emits arrays of latest values from each source when any source emits (requires each to emit at least one)"
+    ],
+    "time": 55,
+    "details": "combineLatest combines latest."
+  },
+  {
+    "question": "What is forkJoin in RxJS?",
+    "options": [
+      "Wait all then emit last",
+      "Parallel to sequential",
+      "When complete",
+      "Last from each"
+    ],
+    "correctOptions": [
+      "Combination function that waits for all to complete then emits array of last value from each (used for HTTP.parallel)"
+    ],
+    "time": 55,
+    "details": "forkJoin waits for all complete."
+  },
+  {
+    "question": "What is zip in RxJS?",
+    "options": [
+      "Pair by index",
+      "By index",
+      "Combine index-wise",
+      "Parallel"
+    ],
+    "correctOptions": [
+      "Combination operator that pairs emissions by index: source A zip B emits [A0,B0] then [A1,B1], etc."
+    ],
+    "time": 55,
+    "details": "zip pairs by index."
+  },
+  {
+    "question": "What is race in RxJS?",
+    "options": [
+      "First wins",
+      "Winner",
+      "First to emit",
+      "Winner"
+    ],
+    "correctOptions": [
+      "Combination function that emits from first source to emit, then ignores others (like Promise.race)"
+    ],
+    "time": 55,
+    "details": "race uses first winner."
+  },
+  {
+    "question": "What is merge in RxJS?",
+    "options": [
+      "All concurrent",
+      "Concurrently",
+      "Combine",
+      "All"
+    ],
+    "correctOptions": [
+      "Combination operator that emits items from all inner sources concurrently (not in sequential order like concat)"
+    ],
+    "time": 50,
+    "details": "merge flattens concurrently."
+  },
+  {
+    "question": "What is concat in RxJS?",
+    "options": [
+      "Sequential",
+      "Queue sources",
+      "In order",
+      "Sequential"
+    ],
+    "correctOptions": [
+      "Combination operator that runs inner sources in sequence: subscribes to first, emits all, then subscribes to next"
+    ],
+    "time": 50,
+    "details": "concat runs sequentially."
+  },
+  {
+    "question": "What is startWith in RxJS?",
+    "options": [
+      "Prepend initial",
+      "Initial value",
+      "First",
+      "Before"
+    ],
+    "correctOptions": [
+      "Transformation operator that prepends initial value(s): source.pipe(startWith(initialValue))"
+    ],
+    "time": 45,
+    "details": "startWith preprends values."
+  },
+  {
+    "question": "What is endWith in RxJS?",
+    "options": [
+      "Append final",
+      "Complete with",
+      "Last",
+      "After"
+    ],
+    "correctOptions": [
+      "Transformation operator that appends final value(s) before complete: source.pipe(endWith(finalValue))"
+    ],
+    "time": 50,
+    "details": "endWith appends values."
+  },
+  {
+    "question": "What is shareReplay in RxJS?",
+    "options": [
+      "Share subscription",
+      "Replay",
+      "Multi-subscriber",
+      "Replay in share"
+    ],
+    "correctOptions": [
+      "Operator that shares subscriptions AND replays specified number of emissions to new subscribers (keep subscription live)"
+    ],
+    "time": 60,
+    "details": "shareReplay shares and replays."
+  },
+  {
+    "question": "What is share in RxJS?",
+    "options": [
+      "Share subscription",
+      "Multi-subscriber",
+      "Single subscription",
+      "Share"
+    ],
+    "correctOptions": [
+      "Operator that shares Observable source with multiple subscribers, creating single underlying subscription (multicast)"
+    ],
+    "time": 50,
+    "details": "share shares subscription."
+  },
+  {
+    "question": "What is refCount in RxJS?",
+    "options": [
+      "Auto-unsubscribe when zero",
+      "Reference count",
+      "Auto",
+      "Cleanup when zero subscribers"
+    ],
+    "correctOptions": [
+      "Operator that automatically unsubscribes when subscriber count drops to zero (used with share or publish to auto-cleanup)"
+    ],
+    "time": 65,
+    "details": "refCount auto-unsubscribes."
+  },
+  {
+    "question": "What is publish in RxJS?",
+    "options": [
+      "Convert to Connectable",
+      "Connect",
+      "Multicast",
+      "Publish"
+    ],
+    "correctOptions": [
+      "Operator that converts source into Connectable (have to call connect to start), enabling multicast to many with single source subscription"
+    ],
+    "time": 60,
+    "details": "publish creates Connectable."
+  },
+  {
+    "question": "What is multicast in RxJS?",
+    "options": [
+      "Subject factory",
+      "Multicast via",
+      "Control",
+      "Subject factory"
+    ],
+    "correctOptions": [
+      "Operator that uses provided subjectFactory to multicast to subscribers: source.pipe(multicast(() => new Subject()))"
+    ],
+    "time": 65,
+    "details": "multicast uses subject factory."
+  },
+  {
+    "question": "What is toArray in RxJS?",
+    "options": [
+      "Collect to array",
+      "Buffer all",
+      "Array",
+      "All"
+    ],
+    "correctOptions": [
+      "Operator that collects all emissions into array and emits that array when source completes"
+    ],
+    "time": 50,
+    "details": "toArray collects all."
+  },
+  {
+    "question": "What is every in RxJS?",
+    "options": [
+      "All match test",
+      "Check all",
+      "Test all",
+      "True/False"
+    ],
+    "correctOptions": [
+      "Operator that returns Observable<boolean> indicating whether every emission passes predicate: every(x => x > 0) returns true if all positive"
+    ],
+    "time": 55,
+    "details": "every checks conditions."
+  },
+  {
+    "question": "What is find in RxJS?",
+    "options": [
+      "First match",
+      "Find",
+      "Find predicate",
+      "First matching"
+    ],
+    "correctOptions": [
+      "Operator that emits first emission matching predicate then completes; if not found emits undefined then completes (unlike first with error)"
+    ],
+    "time": 55,
+    "details": "find finds first match."
+  },
+  {
+    "question": "What is findIndex in RxJS?",
+    "options": [
+      "Index of first match",
+      "Find index",
+      "Position of match",
+      "Index"
+    ],
+    "correctOptions": [
+      "Operator that emits index of first element matching predicate (or -1 if not found) then completes"
+    ],
+    "time": 55,
+    "details": "findIndex finds position."
+  },
+  {
+    "question": "What is isEmpty in RxJS?",
+    "options": [
+      "Check if empty",
+      "Empty observable",
+      "No emissions",
+      "Boolean"
+    ],
+    "correctOptions": [
+      "Operator that returns true if source completes without emissions (like empty) else false"
+    ],
+    "time": 55,
+    "details": "isEmpty checks for emissions."
+  },
+  {
+    "question": "What is defaultIfEmpty in RxJS?",
+    "options": [
+      "Emit default if none",
+      "Default value",
+      "Emit default",
+      "Fallback"
+    ],
+    "correctOptions": [
+      "Operator that emits default value if no emissions before complete: source.pipe(defaultIfEmpty('fallback'))"
+    ],
+    "time": 55,
+    "details": "defaultIfEmpty provides fallback."
+  },
+  {
+    "question": "What is elementAt in RxJS?",
+    "options": [
+      "Emit only single at index",
+      "At index",
+      "Nth item",
+      "From position"
+    ],
+    "correctOptions": [
+      "Operator that emits only item at given index (throws error if not found unless default provided as second arg)"
+    ],
+    "time": 55,
+    "details": "elementAt gets single item."
+  },
+  {
+    "question": "What is sample in RxJS?",
+    "options": [
+      "Emit last with notifier",
+      "Sample when notifier emits",
+      "At period",
+      "Sample with"
+    ],
+    "correctOptions": [
+      "Operator that emits latest from source when notifier emits (like sampleTime but triggered). Use: source.pipe(sample(notifier$))"
+    ],
+    "time": 60,
+    "details": "sample emits latest on notifier."
+  },
+  {
+    "question": "What is sampleTime in RxJS?",
+    "options": [
+      "Emit periodically",
+      "At interval",
+      "Regular intervals",
+      "Timer"
+    ],
+    "correctOptions": [
+      "Operator that emits latest from source every specified period regardless of source emissions"
+    ],
+    "time": 55,
+    "details": "sampleTime emits regularly."
+  },
+  {
+    "question": "What is timeInterval in RxJS?",
+    "options": [
+      "Time between items",
+      "Timestamp per item",
+      "Interval",
+      "With time"
+    ],
+    "correctOptions": [
+      "Operator that returns object {value, interval} with ms since previous emission (needs TimeInterval config)"
+    ],
+    "time": 60,
+    "details": "TimeInterval provides timing."
+  },
+  {
+    "question": "What is timestamp in RxJS?",
+    "options": [
+      "Add timestamp",
+      "With time",
+      "Timestamp",
+      "Date"
+    ],
+    "correctOptions": [
+      "Operator that returns {value, timestamp} with Date timestamp for each emission"
+    ],
+    "time": 55,
+    "details": "timestamp provides date."
+  },
+  {
+    "question": "What is timeout in RxJS?",
+    "options": [
+      "Error if no emission",
+      "Time exceed",
+      "Timeout exceeded",
+      "Error"
+    ],
+    "correctOptions": [
+      "Operator that errors if no emission within specified due time (or Date) before source completes"
+    ],
+    "time": 55,
+    "details": "timeout triggers error."
+  },
+  {
+    "question": "What is timeoutWith in RxJS?",
+    "options": [
+      "Switch on timeout",
+      "Timeout fallback",
+      "Fallback to another",
+      "Switch"
+    ],
+    "correctOptions": [
+      "Operator that switch to provided Observable when source times out before emitting (timeoutWith(1000, fallback$))"
+    ],
+    "time": 60,
+    "details": "timeoutWith uses alternate."
+  },
+  {
+    "question": "What is using in RxJS?",
+    "options": [
+      "Create with resources",
+      "Resource management",
+      "With resource",
+      "Disposables"
+    ],
+    "correctOptions": [
+      "Creation function that creates Observable using factory that also returns disposable to dispose on unsubscribe"
+    ],
+    "time": 60,
+    "details": "using creates with resources."
+  },
+  {
+    "question": "What is using with takeUntil destroy?",
+    "options": [
+      "Auto-cleanup",
+      "Cleanup on destroy",
+      "Auto-unsubscribe",
+      "Unsubscribe"
+    ],
+    "correctOptions": [
+      "Pattern using using() that auto-disposes stream when component destroys via takeUntilDestroy (or similar pattern using takeUntil(destroy$))"
+    ],
+    "time": 70,
+    "details": "Auto-unsubscribe pattern."
+  },
+  {
+    "question": "What is iif in RxJS?",
+    "options": [
+      "True/false switch",
+      "Conditional switch",
+      "Switch",
+      "If"
+    ],
+    "correctOptions": [
+      "Creation function that returns Observable based on condition: iif(condition, trueBranch$, falseBranch$)"
+    ],
+    "time": 55,
+    "details": "iif conditionally switches."
+  },
+  {
+    "question": "What is defer in RxJS?",
+    "options": [
+      "Create lazy observable",
+      "Lazy factory",
+      "Deferred creation",
+      "Lazy create"
+    ],
+    "correctOptions": [
+      "Creation function that creates Observable each time subscription occurs (good for lazy initialization) by defer(() => createObs$)"
+    ],
+    "time": 65,
+    "details": "defer creates lazily."
+  },
+  {
+    "question": "What is throwError in RxJS?",
+    "options": [
+      "Error immediately",
+      "Throw error observable",
+      "Error on subscribe",
+      "Error source"
+    ],
+    "correctOptions": [
+      "Creation function that creates Observable that errors immediately on subscription: throwError(() => new Error('msg'))"
+    ],
+    "time": 55,
+    "details": "throwError creates error source."
+  },
+  {
+    "question": "What is EMPTY in RxJS?",
+    "options": [
+      "Complete immediately",
+      "Empty observable",
+      "No values",
+      "Immediate complete"
+    ],
+    "correctOptions": [
+      "Constants representing Observable that completes immediately without emissions (useful as fallback or default value); used with EMPTY if need Observable type"
+    ],
+    "time": 55,
+    "details": "EMPTY completes immediately."
+  },
+  {
+    "question": "What is NEVER in RxJS?",
+    "options": [
+      "Never emits or complete",
+      "Infinite non-emitting",
+      "Never complete",
+      "No emissions and never"
+    ],
+    "correctOptions": [
+      "Constant representing Observable that never emits and never completes (used for testing or complex timer patterns) - dangerous because will never auto-unsubscribe"
+    ],
+    "time": 55,
+    "details": "NEVER never completes."
+  },
+  {
+    "question": "What is Subject vs BehaviorSubject?",
+    "options": [
+      "Subject has no initial/Behavior has last current",
+      "Subject: no value, Behavior: has last value",
+      "One vs two",
+      "Two types"
+    ],
+    "correctOptions": [
+      "Subject: push-based without store. BehaviorSubject: push-based with latest current value (requires initial value), can getValue() and value (synchronous)"
+    ],
+    "time": 70,
+    "details": "Behavior adds current value."
+  },
+  {
+    "question": "What is pairwise in RxJS?",
+    "options": [
+      "Previous and current",
+      "Last two",
+      "Pairs",
+      "Adjacent"
+    ],
+    "correctOptions": [
+      "Operator that emits consecutive pairs: [prev, current] on each emission"
+    ],
+    "time": 55,
+    "details": "pairwise emits pairs."
+  },
+  {
+    "question": "What is buffer in RxJS?",
+    "options": [
+      "Collect emissions",
+      "Buffer",
+      "Accumulate",
+      "Group"
+    ],
+    "correctOptions": [
+      "Operator that collects emissions into arrays, emitting when closingNotifier emits or completes"
+    ],
+    "time": 55,
+    "details": "buffer collects into arrays."
+  },
+  {
+    "question": "What is bufferTime in RxJS?",
+    "options": [
+      "Time-based buffer",
+      "Collect by time",
+      "Time window",
+      "Buffer with timer"
+    ],
+    "correctOptions": [
+      "Operator that collects emissions into arrays on time interval: bufferTime(1000)"
+    ],
+    "time": 55,
+    "details": "bufferTime collects by time."
+  },
+  {
+    "question": "What is bufferCount in RxJS?",
+    "options": [
+      "Count-based buffer",
+      "Collect by count",
+      "Batch",
+      "Count buffer"
+    ],
+    "correctOptions": [
+      "Operator that collects N emissions into arrays: bufferCount(5) emits when 5 items collected"
+    ],
+    "time": 55,
+    "details": "bufferCount collects by count."
+  },
+  {
+    "question": "What is window in RxJS?",
+    "options": [
+      "Window observable",
+      "Windowed emissions",
+      "Time window",
+      "Create window"
+    ],
+    "correctOptions": [
+      "Operator that windows emissions into separate Observables when closingNotifier emits"
+    ],
+    "time": 60,
+    "details": "window creates observable windows."
+  },
+  {
+    "question": "What is windowTime in RxJS?",
+    "options": [
+      "Time-based window",
+      "Time window",
+      "Window by time",
+      "Observable window"
+    ],
+    "correctOptions": [
+      "Operator that creates new Observable each time interval: windowTime(1000)"
+    ],
+    "time": 60,
+    "details": "windowTime time-windows."
+  },
+  {
+    "question": "What is windowCount in RxJS?",
+    "options": [
+      "Count-based window",
+      "Window by count",
+      "Count window",
+      "Observable window"
+    ],
+    "correctOptions": [
+      "Operator that creates new Observable every N emissions: windowCount(5)"
+    ],
+    "time": 60,
+    "details": "windowCount count-windows."
+  },
+  {
+    "question": "What is groupBy in RxJS?",
+    "options": [
+      "Group by key",
+      "Group emissions",
+      "Partition",
+      "Key group"
+    ],
+    "correctOptions": [
+      "Operator that groups emissions by key function returning Observable for each group"
+    ],
+    "time": 60,
+    "details": "groupBy creates grouped observables."
+  },
+  {
+    "question": "What is materialize in RxJS?",
+    "options": [
+      "Wrap in notification",
+      "Materialize emissions",
+      "Wraps values",
+      "Notification wrapper"
+    ],
+    "correctOptions": [
+      "Operator that wraps emissions as Next notifications and errors as Error notifications, complete as Complete notification"
+    ],
+    "time": 70,
+    "details": "materialize wraps in notifications."
+  },
+  {
+    "question": "What is dematerialize in RxJS?",
+    "options": [
+      "Unwrap notifications",
+      "Restore from materialize",
+      "Extract values",
+      "Notification unwrapper"
+    ],
+    "correctOptions": [
+      "Operator that unwraps materialize notifications back to source emissions"
+    ],
+    "time": 65,
+    "details": "dematerialize unwraps notifications."
+  },
+  {
+    "question": "What is observeOn in RxJS?",
+    "options": [
+      "Schedule on scheduler",
+      "Observe on scheduler",
+      "Scheduler control",
+      "Async delivery"
+    ],
+    "correctOptions": [
+      "Operator that changes where emissions are delivered to observers: observeOn(asyncScheduler)"
+    ],
+    "time": 60,
+    "details": "observeOn controls scheduler."
+  },
+  {
+    "question": "What is subscribeOn in RxJS?",
+    "options": [
+      "Subscribe on scheduler",
+      "Subscribe timing",
+      "Schedule subscribe",
+      "Start on scheduler"
+    ],
+    "correctOptions": [
+      "Operator that changes when subscription starts: subscribeOn(asyncScheduler)"
+    ],
+    "time": 60,
+    "details": "subscribeOn controls when subscribed."
+  },
+  {
+    "question": "What is timestamp in RxJS vs timeInterval?",
+    "options": [
+      "Date vs time difference",
+      "Absolute vs relative",
+      "Two types",
+      "Different timing"
+    ],
+    "correctOptions": [
+      "timestamp gives absolute Date; timeInterval gives ms since previous emission"
+    ],
+    "time": 65,
+    "details": "timestamp is absolute, timeInterval relative."
+  },
+  {
+    "question": "What is audit in RxJS?",
+    "options": [
+      "Ignore during emit",
+      "Ignore while emitting",
+      "Drop during emit",
+      "Silence"
+    ],
+    "correctOptions": [
+      "Operator that ignores emissions while inner Observable is emitting, then emits latest after inner completes"
+    ],
+    "time": 60,
+    "details": "audit ignores during activity."
+  },
+  {
+    "question": "What is auditTime in RxJS?",
+    "options": [
+      "Time-based audit",
+      "Ignores for duration",
+      "Drop for time",
+      "Timer-based ignore"
+    ],
+    "correctOptions": [
+      "Operator that emits latest after duration passes without another source emission: auditTime(1000)"
+    ],
+    "time": 60,
+    "details": "auditTime ignores for duration."
+  },
+  {
+    "question": "What is throttle in RxJS?",
+    "options": [
+      "Throttle emissions",
+      "Rate limit",
+      "Limit rate",
+      "Throttle"
+    ],
+    "correctOptions": [
+      "Operator that emits first, ignores until duration passes then repeats: throttleTime(1000)"
+    ],
+    "time": 60,
+    "details": "throttle rate-limits."
+  },
+  {
+    "question": "What is throttleTime in RxJS?",
+    "options": [
+      "Time-based throttle",
+      "Rate limit time",
+      "Throttle by time",
+      "Limit over time"
+    ],
+    "correctOptions": [
+      "Operator that emits leading, then ignores until duration passes: throttleTime(1000)"
+    ],
+    "time": 60,
+    "details": "throttleTime rate-limits with time."
+  },
+  {
+    "question": "What is defaultIfEmpty vs empty?",
+    "options": [
+      "Emit default vs complete immediately",
+      "Two operators",
+      "Difference",
+      "Empty vs default"
+    ],
+    "correctOptions": [
+      "empty() completes immediately, defaultIfEmpty emits default if no emissions then completes"
+    ],
+    "time": 60,
+    "details": "empty completes, defaultIfEmpty emits default."
+  },
+  {
+    "question": "What is ignoreElements in RxJS?",
+    "options": [
+      "Suppress all emissions",
+      "Ignore all",
+      "No emissions",
+      "Drop emissions"
+    ],
+    "correctOptions": [
+      "Operator that suppresses all emissions (ignores next), only passes error and complete"
+    ],
+    "time": 55,
+    "details": "ignoreElements suppresses emissions."
+  },
+  {
+    "question": "What is single in RxJS vs first?",
+    "options": [
+      "Error on multiple vs return first",
+      "Two operators",
+      "Different behavior",
+      "Single vs first"
+    ],
+    "correctOptions": [
+      "first() returns first emission, single() errors if not exactly one emission (or matching)"
+    ],
+    "time": 65,
+    "details": "single requires exactly one."
+  },
+  {
+    "question": "What is count in RxJS?",
+    "options": [
+      "Count total emissions",
+      "Total count",
+      "Count",
+      "Number emit"
+    ],
+    "correctOptions": [
+      "Operator that returns Observable<number> with total count of emissions when source completes"
+    ],
+    "time": 55,
+    "details": "count returns total count."
+  },
+  {
+    "question": "What is isEmpty in RxJS vs empty?",
+    "options": [
+      "Check vs create",
+      "Two different uses",
+      "Comparison",
+      "Different purposes"
+    ],
+    "correctOptions": [
+      "empty() creates Observable that completes, isEmpty() returns Observable<boolean> checking if source emits"
+    ],
+    "time": 65,
+    "details": "empty creates, isEmpty checks."
+  },
+  {
+    "question": "What is sequenceEqual in RxJS?",
+    "options": [
+      "Compare emissions",
+      "Equality check",
+      "Sequences match",
+      "Same sequence"
+    ],
+    "correctOptions": [
+      "Operator that compares two Observables, returns Observable<boolean> if same sequence"
+    ],
+    "time": 60,
+    "details": "sequenceEqual compares sequences."
+  },
+  {
+    "question": "What is min/max in RxJS?",
+    "options": [
+      "Min/max value",
+      "Extremes",
+      "Minimum or maximum",
+      "Compare values"
+    ],
+    "correctOptions": [
+      "Operator that returns minimum or maximum emission using comparator (works with numbers by default)"
+    ],
+    "time": 55,
+    "details": "min and max find extremes."
+  },
+  {
+    "question": "What is sum in RxJS?",
+    "options": [
+      "Sum of values",
+      "Total",
+      "Add",
+      "Accumulator"
+    ],
+    "correctOptions": [
+      "Operator that returns sum of all numeric emissions when source completes"
+    ],
+    "time": 55,
+    "details": "sum calculates total."
+  },
+  {
+    "question": "What is every in RxJS vs filter?",
+    "options": [
+      "Check all vs select matching",
+      "Two operations",
+      "Comparison",
+      "Different purpose"
+    ],
+    "correctOptions": [
+      "filter() returns emissions matching predicate, every() returns Observable<boolean> if all match"
+    ],
+    "time": 60,
+    "details": "filter selects, every checks."
+  },
+  {
+    "question": "What is every in RxJS vs filter?",
+    "options": [
+      "Check all vs select matching",
+      "Two operations",
+      "Comparison",
+      "Different purpose"
+    ],
+    "correctOptions": [
+      "filter returns emissions matching predicate, every returns Observable boolean if all match"
+    ],
+    "time": 60,
+    "details": "filter selects, every checks."
+  },
+  {
+    "question": "What is empty vs EMPTY in RxJS?",
+    "options": [
+      "Create vs create",
+      "Different syntax",
+      "Two names",
+      "Difference"
+    ],
+    "correctOptions": [
+      "empty() creates Observable that completes; EMPTY is constant - same behavior"
+    ],
+    "time": 55,
+    "details": "empty and EMPTY are same."
+  }
+]

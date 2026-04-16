@@ -1,0 +1,1402 @@
+[
+  {
+    "question": "What is a remote in Git?",
+    "options": [
+      "Online repository copy",
+      "Local folder",
+      "Backup system",
+      "Code editor"
+    ],
+    "correctOptions": [
+      "Online repository copy"
+    ],
+    "time": 20,
+    "details": "Remotes are URLs pointing to other repositories."
+  },
+  {
+    "question": "What is origin?",
+    "options": [
+      "Default remote name",
+      "Original branch",
+      "First commit",
+      "Main branch"
+    ],
+    "correctOptions": [
+      "Default remote name"
+    ],
+    "time": 20,
+    "details": "origin is the conventional name for the cloned-from remote."
+  },
+  {
+    "question": "How do you add a remote?",
+    "options": [
+      "git remote add name url",
+      "git remote create name url",
+      "git add remote name url",
+      "git remote new name url"
+    ],
+    "correctOptions": [
+      "git remote add name url"
+    ],
+    "time": 25,
+    "details": "git remote add connects your repo to another remote."
+  },
+  {
+    "question": "How do you list remotes?",
+    "options": [
+      "git remote -v",
+      "git remote list",
+      "git remotes",
+      "git remote show"
+    ],
+    "correctOptions": [
+      "git remote -v"
+    ],
+    "time": 20,
+    "details": "-v shows URLs and names of all remotes."
+  },
+  {
+    "question": "How do you rename a remote?",
+    "options": [
+      "git remote rename old new",
+      "git remote change old new",
+      "git remote name old new",
+      "git remote update old new"
+    ],
+    "correctOptions": [
+      "git remote rename old new"
+    ],
+    "time": 25,
+    "details": "git remote rename changes a remote's name."
+  },
+  {
+    "question": "How do you remove a remote?",
+    "options": [
+      "git remote remove name",
+      "git remote delete name",
+      "Both remove and delete work",
+      "git remote rm name"
+    ],
+    "correctOptions": [
+      "Both remove and delete work"
+    ],
+    "time": 25,
+    "details": "Both remove and rm delete a remote."
+  },
+  {
+    "question": "What does git remote show display?",
+    "options": [
+      "Remote details",
+      "Only names",
+      "Only URLs",
+      "Branches"
+    ],
+    "correctOptions": [
+      "Remote details"
+    ],
+    "time": 25,
+    "details": "git remote show provides detailed remote info."
+  },
+  {
+    "question": "How do you change remote URL?",
+    "options": [
+      "git remote set-url name new-url",
+      "git remote url name new-url",
+      "git remote update-url name new-url",
+      "git remote change-url name new-url"
+    ],
+    "correctOptions": [
+      "git remote set-url name new-url"
+    ],
+    "time": 30,
+    "details": "set-url changes the remote's URL."
+  },
+  {
+    "question": "What is git push?",
+    "options": [
+      "Upload commits to remote",
+      "Download commits",
+      "Delete remote",
+      "Create remote"
+    ],
+    "correctOptions": [
+      "Upload commits to remote"
+    ],
+    "time": 20,
+    "details": "git push sends local commits to remote."
+  },
+  {
+    "question": "How do you push to specific remote?",
+    "options": [
+      "git push remote-name branch",
+      "git push --remote remote-name branch",
+      "git upload remote-name branch",
+      "git send remote-name branch"
+    ],
+    "correctOptions": [
+      "git push remote-name branch"
+    ],
+    "time": 25,
+    "details": "git push origin master pushes to origin."
+  },
+  {
+    "question": "What is git pull?",
+    "options": [
+      "Fetch and merge remote",
+      "Only fetch",
+      "Only merge",
+      "Push changes"
+    ],
+    "correctOptions": [
+      "Fetch and merge remote"
+    ],
+    "time": 20,
+    "details": "git pull fetches and automatically merges changes."
+  },
+  {
+    "question": "What does git fetch do?",
+    "options": [
+      "Download without merging",
+      "Download and merge",
+      "Upload commits",
+      "Delete remote"
+    ],
+    "correctOptions": [
+      "Download without merging"
+    ],
+    "time": 25,
+    "details": "git fetch downloads commits without merging."
+  },
+  {
+    "question": "What is the difference between pull and fetch?",
+    "options": [
+      "Pull fetches and merges, fetch only downloads",
+      "Both fetch only",
+      "Both merge",
+      "Fetch is faster"
+    ],
+    "correctOptions": [
+      "Pull fetches and merges, fetch only downloads"
+    ],
+    "time": 35,
+    "details": "Fetch updates remote-tracking branches; pull does more."
+  },
+  {
+    "question": "How do you clone a repository?",
+    "options": [
+      "git clone url",
+      "git copy url",
+      "git download url",
+      "git get url"
+    ],
+    "correctOptions": [
+      "git clone url"
+    ],
+    "time": 20,
+    "details": "git clone creates a local copy of a repository."
+  },
+  {
+    "question": "What does --depth flag do in clone?",
+    "options": [
+      "Shallow clone with n commits",
+      "Deep clone",
+      "Full clone",
+      "No clone"
+    ],
+    "correctOptions": [
+      "Shallow clone with n commits"
+    ],
+    "time": 30,
+    "details": "--depth creates a shallow clone with limited history."
+  },
+  {
+    "question": "What is a shallow clone?",
+    "options": [
+      "Clone with partial history",
+      "Full clone",
+      "Empty clone",
+      "Broken clone"
+    ],
+    "correctOptions": [
+      "Clone with partial history"
+    ],
+    "time": 30,
+    "details": "Shallow clones have limited commit history."
+  },
+  {
+    "question": "How do you deepen a shallow clone?",
+    "options": [
+      "git fetch --unshallow",
+      "git pull --deep",
+      "git clone --deep",
+      "git deepen"
+    ],
+    "correctOptions": [
+      "git fetch --unshallow"
+    ],
+    "time": 35,
+    "details": "--unshallow converts shallow to full clone."
+  },
+  {
+    "question": "What is git push -u?",
+    "options": [
+      "Set upstream tracking",
+      "Force push",
+      "Update push",
+      "Undo push"
+    ],
+    "correctOptions": [
+      "Set upstream tracking"
+    ],
+    "time": 30,
+    "details": "-u (--set-upstream) sets default upstream."
+  },
+  {
+    "question": "What is upstream tracking?",
+    "options": [
+      "Link local to remote branch",
+      "Unlink branches",
+      "Delete link",
+      "Push link"
+    ],
+    "correctOptions": [
+      "Link local to remote branch"
+    ],
+    "time": 35,
+    "details": "Upstream tracking connects local and remote branches."
+  },
+  {
+    "question": "What does --force push do?",
+    "options": [
+      "Overwrite remote commits",
+      "Safe push",
+      "New push",
+      "Cancel push"
+    ],
+    "correctOptions": [
+      "Overwrite remote commits"
+    ],
+    "time": 30,
+    "details": "--force overwrites remote with local commits."
+  },
+  {
+    "question": "When should you force push?",
+    "options": [
+      "Never on shared branches",
+      "Always",
+      "On main branch",
+      "When asked"
+    ],
+    "correctOptions": [
+      "Never on shared branches"
+    ],
+    "time": 35,
+    "details": "Never force push to shared/public branches!"
+  },
+  {
+    "question": "What is git push --force-with-lease?",
+    "options": [
+      "Safer force push",
+      "Cancel push",
+      "No push",
+      "New push"
+    ],
+    "correctOptions": [
+      "Safer force push"
+    ],
+    "time": 40,
+    "details": "--force-with-lease checks before overwriting."
+  },
+  {
+    "question": "What is git push --force-if-includes?",
+    "options": [
+      "Require local commits first",
+      "Force anyway",
+      "Skip check",
+      "Cancel push"
+    ],
+    "correctOptions": [
+      "Require local commits first"
+    ],
+    "time": 45,
+    "details": "Only force push if remote is rebased on local."
+  },
+  {
+    "question": "What is git pull --rebase?",
+    "options": [
+      "Fetch and rebase instead of merge",
+      "Fetch and merge",
+      "Push and rebase",
+      "Rebase remote"
+    ],
+    "correctOptions": [
+      "Fetch and rebase instead of merge"
+    ],
+    "time": 35,
+    "details": "--rebase rebases local commits instead of merging."
+  },
+  {
+    "question": "What is pull.rebase setting?",
+    "options": [
+      "Auto-rebase on pull",
+      "Auto-merge on pull",
+      "Disable pull",
+      "Force pull"
+    ],
+    "correctOptions": [
+      "Auto-rebase on pull"
+    ],
+    "time": 40,
+    "details": "pull.rebase makes rebase the default for pull."
+  },
+  {
+    "question": "What is a remote-tracking branch?",
+    "options": [
+      "Local copy of remote branch",
+      "Remote branch",
+      "Local branch",
+      "New branch"
+    ],
+    "correctOptions": [
+      "Local copy of remote branch"
+    ],
+    "time": 35,
+    "details": "Remote-tracking branches are local copies of remote."
+  },
+  {
+    "question": "What is origin/master?",
+    "options": [
+      "Remote-tracking branch",
+      "Remote branch",
+      "Local branch",
+      "Deleted branch"
+    ],
+    "correctOptions": [
+      "Remote-tracking branch"
+    ],
+    "time": 30,
+    "details": "origin/master is your local copy of remote master."
+  },
+  {
+    "question": "How do you update remote-tracking branches?",
+    "options": [
+      "git fetch origin",
+      "git pull origin",
+      "git fetch",
+      "Both fetch and pull work"
+    ],
+    "correctOptions": [
+      "Both fetch and pull work"
+    ],
+    "time": 35,
+    "details": "Both fetch and pull update tracking branches."
+  },
+  {
+    "question": "What is git prune?",
+    "options": [
+      "Remove deleted remote branches",
+      "Create branches",
+      "Delete local branches",
+      "Push branches"
+    ],
+    "correctOptions": [
+      "Remove deleted remote branches"
+    ],
+    "time": 35,
+    "details": "git remote prune removes stale remote-tracking."
+  },
+  {
+    "question": "What is git fetch --prune?",
+    "options": [
+      "Auto-prune stale branches",
+      "Fetch and prune",
+      "Prune and fetch",
+      "No prune"
+    ],
+    "correctOptions": [
+      "Auto-prune stale branches"
+    ],
+    "time": 35,
+    "details": "--prune removes stale remote-tracking branches."
+  },
+  {
+    "question": "What are stale branches?",
+    "options": [
+      "Deleted remote branches",
+      "Old commits",
+      "New branches",
+      "Local branches"
+    ],
+    "correctOptions": [
+      "Deleted remote branches"
+    ],
+    "time": 35,
+    "details": "Stale branches are remote-tracking of deleted remotes."
+  },
+  {
+    "question": "What does fetch.prune do?",
+    "options": [
+      "Auto-prune on fetch",
+      "Prune on pull",
+      "Manual prune",
+      "Disable prune"
+    ],
+    "correctOptions": [
+      "Auto-prune on fetch"
+    ],
+    "time": 40,
+    "details": "fetch.prune enables auto-pruning for all fetches."
+  },
+  {
+    "question": "What is git push --all?",
+    "options": [
+      "Push all branches",
+      "Push current",
+      "Push main",
+      "Push new"
+    ],
+    "correctOptions": [
+      "Push all branches"
+    ],
+    "time": 30,
+    "details": "--all pushes all local branches to remote."
+  },
+  {
+    "question": "What is git push --tags?",
+    "options": [
+      "Push all tags",
+      "Push current tag",
+      "Delete tags",
+      "No tags"
+    ],
+    "correctOptions": [
+      "Push all tags"
+    ],
+    "time": 30,
+    "details": "--tags pushes all local tags to remote."
+  },
+  {
+    "question": "What is git push --mirror?",
+    "options": [
+      "Push all refs to remote",
+      "Push only commits",
+      "Push only branches",
+      "Push only tags"
+    ],
+    "correctOptions": [
+      "Push all refs to remote"
+    ],
+    "time": 40,
+    "details": "--mirror pushes all refs including deleted ones."
+  },
+  {
+    "question": "What is git ls-remote?",
+    "options": [
+      "List remote branches",
+      "List local branches",
+      "List commits",
+      "List tags"
+    ],
+    "correctOptions": [
+      "List remote branches"
+    ],
+    "time": 35,
+    "details": "ls-remote shows remote branches without cloning."
+  },
+  {
+    "question": "What is git remote prune origin?",
+    "options": [
+      "Remove stale branches",
+      "Add branches",
+      "Update branches",
+      "Create branches"
+    ],
+    "correctOptions": [
+      "Remove stale branches"
+    ],
+    "time": 35,
+    "details": "Prune removes remote-tracking branches for deleted remote branches."
+  },
+  {
+    "question": "What happens when push is rejected?",
+    "options": [
+      "Remote has newer commits",
+      "Branch doesn't exist",
+      "Permission denied",
+      "Network error"
+    ],
+    "correctOptions": [
+      "Remote has newer commits"
+    ],
+    "time": 35,
+    "details": "Rejection means remote has commits you don't have."
+  },
+  {
+    "question": "How do you handle rejected push?",
+    "options": [
+      "Pull, merge/rebase, then push",
+      "Force push",
+      "Delete remote",
+      "Cancel push"
+    ],
+    "correctOptions": [
+      "Pull, merge/rebase, then push"
+    ],
+    "time": 40,
+    "details": "Fetch, integrate remote changes, then push again."
+  },
+  {
+    "question": "What is git pull --no-edit?",
+    "options": [
+      "Auto-merge without editor",
+      "No pull",
+      "No merge",
+      "Force pull"
+    ],
+    "correctOptions": [
+      "Auto-merge without editor"
+    ],
+    "time": 40,
+    "details": "--no-edit auto-commits without opening editor."
+  },
+  {
+    "question": "What does --no-commit do in pull?",
+    "options": [
+      "Don't auto-commit",
+      "Commit anyway",
+      "No merge",
+      "Abort"
+    ],
+    "correctOptions": [
+      "Don't auto-commit"
+    ],
+    "time": 40,
+    "details": "--no-commit fetches and merges without committing."
+  },
+  {
+    "question": "What is git pull --no-ff?",
+    "options": [
+      "Create merge commit even if fast-forward",
+      "Prevent fast-forward",
+      "No pull",
+      "Force pull"
+    ],
+    "correctOptions": [
+      "Create merge commit even if fast-forward"
+    ],
+    "time": 45,
+    "details": "--no-ff always creates a merge commit."
+  },
+  {
+    "question": "What is a detached HEAD state?",
+    "options": [
+      "HEAD pointing to commit, not branch",
+      "Normal state",
+      "Error state",
+      "Branch state"
+    ],
+    "correctOptions": [
+      "HEAD pointing to commit, not branch"
+    ],
+    "time": 40,
+    "details": "Detached HEAD happens when checking out commits."
+  },
+  {
+    "question": "What is git checkout origin/master?",
+    "options": [
+      "Detached HEAD at remote",
+      "Switch to master",
+      "Create branch",
+      "Nothing"
+    ],
+    "correctOptions": [
+      "Detached HEAD at remote"
+    ],
+    "time": 40,
+    "details": "Checking out remote branch puts HEAD in detached state."
+  },
+  {
+    "question": "How do you work with remote branch locally?",
+    "options": [
+      "git checkout -b local origin/remote",
+      "git checkout origin/remote",
+      "git switch origin/remote",
+      "git pull origin/remote"
+    ],
+    "correctOptions": [
+      "git checkout -b local origin/remote"
+    ],
+    "time": 45,
+    "details": "Create local branch from remote-tracking branch."
+  },
+  {
+    "question": "What is git push --delete?",
+    "options": [
+      "Delete remote branch",
+      "Create remote branch",
+      "Update remote branch",
+      "Push to delete"
+    ],
+    "correctOptions": [
+      "Delete remote branch"
+    ],
+    "time": 35,
+    "details": "--delete removes a branch from remote."
+  },
+  {
+    "question": "What is a bare repository?",
+    "options": [
+      "No working directory",
+      "Has working directory",
+      "Remote only",
+      "Local only"
+    ],
+    "correctOptions": [
+      "No working directory"
+    ],
+    "time": 35,
+    "details": "Bare repos have no checked-out working files."
+  },
+  {
+    "question": "What is the difference between .git and bare?",
+    "options": [
+      "Bare has no working dir",
+      "Same thing",
+      ".git has no working dir",
+      "Bare is newer"
+    ],
+    "correctOptions": [
+      "Bare has no working dir"
+    ],
+    "time": 40,
+    "details": "Bare repos are for sharing, no working tree."
+  },
+  {
+    "question": "What does clone --bare do?",
+    "options": [
+      "Create bare repository",
+      "Create normal repo",
+      "Create shallow",
+      "Create full"
+    ],
+    "correctOptions": [
+      "Create bare repository"
+    ],
+    "time": 40,
+    "details": "--bare creates a repository without working dir."
+  },
+  {
+    "question": "What does clone --mirror do?",
+    "options": [
+      "Mirror all refs",
+      "Normal clone",
+      "Shallow clone",
+      "Full clone"
+    ],
+    "correctOptions": [
+      "Mirror all refs"
+    ],
+    "time": 40,
+    "details": "--mirror mirrors all refs and config."
+  },
+  {
+    "question": "What is git push with credentials?",
+    "options": [
+      "Uses stored credentials",
+      "Manual entry",
+      "SSH only",
+      "No auth"
+    ],
+    "correctOptions": [
+      "Uses stored credentials"
+    ],
+    "time": 40,
+    "details": "Git uses credential helpers for authentication."
+  },
+  {
+    "question": "What is credential.helper?",
+    "options": [
+      "Store credentials securely",
+      "Delete credentials",
+      "Show credentials",
+      "Clear credentials"
+    ],
+    "correctOptions": [
+      "Store credentials securely"
+    ],
+    "time": 40,
+    "details": "credential.helper stores passwords securely."
+  },
+  {
+    "question": "What credential helpers are available?",
+    "options": [
+      "cache, store, osxkeychain, manager",
+      "only cache",
+      "only store",
+      "only osx"
+    ],
+    "correctOptions": [
+      "cache, store, osxkeychain, manager"
+    ],
+    "time": 45,
+    "details": "Multiple helpers exist for different platforms."
+  },
+  {
+    "question": "What is git config --global credential.helper cache?",
+    "options": [
+      "Cache credentials temporarily",
+      "Store permanently",
+      "No caching",
+      "Disable caching"
+    ],
+    "correctOptions": [
+      "Cache credentials temporarily"
+    ],
+    "time": 45,
+    "details": "Cache stores credentials in memory temporarily."
+  },
+  {
+    "question": "How do you revoke credentials?",
+    "options": [
+      "git credential-cache exit",
+      "git credential revoke",
+      "No way",
+      "Delete git config"
+    ],
+    "correctOptions": [
+      "git credential-cache exit"
+    ],
+    "time": 50,
+    "details": "cache exit clears cached credentials."
+  },
+  {
+    "question": "What is SSH vs HTTPS for remotes?",
+    "options": [
+      "SSH uses keys, HTTPS uses passwords",
+      "Same authentication",
+      "SSH only",
+      "HTTPS only"
+    ],
+    "correctOptions": [
+      "SSH uses keys, HTTPS uses passwords"
+    ],
+    "time": 45,
+    "details": "SSH and HTTPS use different authentication methods."
+  },
+  {
+    "question": "How do you set push default?",
+    "options": [
+      "git config push.default current",
+      "git push --default",
+      "git remote push.default",
+      "No setting"
+    ],
+    "correctOptions": [
+      "git config push.default current"
+    ],
+    "time": 45,
+    "details": "push.default controls which branch to push."
+  },
+  {
+    "question": "What are push.default values?",
+    "options": [
+      "nothing, current, upstream, simple, matching",
+      "only push",
+      "never push",
+      "always push"
+    ],
+    "correctOptions": [
+      "nothing, current, upstream, simple, matching"
+    ],
+    "time": 50,
+    "details": "Multiple push strategies exist for different workflows."
+  },
+  {
+    "question": "What does simple push.default do?",
+    "options": [
+      "Push to matching upstream",
+      "Push current only",
+      "Push all",
+      "Push nothing"
+    ],
+    "correctOptions": [
+      "Push to matching upstream"
+    ],
+    "time": 50,
+    "details": "Simple only pushes current branch with upstream."
+  },
+  {
+    "question": "What is git push --dry-run?",
+    "options": [
+      "Show what would be pushed",
+      "Actually push",
+      "Cancel push",
+      "List pushes"
+    ],
+    "correctOptions": [
+      "Show what would be pushed"
+    ],
+    "time": 40,
+    "details": "--dry-run shows output without pushing."
+  },
+  {
+    "question": "What is git push --follow-tags?",
+    "options": [
+      "Push relevant tags",
+      "Push all tags",
+      "Push no tags",
+      "Create tags"
+    ],
+    "correctOptions": [
+      "Push relevant tags"
+    ],
+    "time": 45,
+    "details": "--follow-tags only pushes annotated tags that are reachable."
+  },
+  {
+    "question": "What is a refspec?",
+    "options": [
+      "Mapping between local and remote refs",
+      "Reference specification",
+      "Remote reference",
+      "Local reference"
+    ],
+    "correctOptions": [
+      "Mapping between local and remote refs"
+    ],
+    "time": 50,
+    "details": "Refspecs define how refs are transferred between repos."
+  },
+  {
+    "question": "What is a remote in Git?",
+    "options": [
+      "Online repository copy",
+      "Local folder",
+      "Backup system",
+      "Code editor"
+    ],
+    "correctOptions": [
+      "Online repository copy"
+    ],
+    "time": 20,
+    "details": "Remotes are URLs pointing to other repositories."
+  },
+  {
+    "question": "What is origin?",
+    "options": [
+      "Default remote name",
+      "Original branch",
+      "First commit",
+      "Main branch"
+    ],
+    "correctOptions": [
+      "Default remote name"
+    ],
+    "time": 20,
+    "details": "origin is the conventional name for the cloned-from remote."
+  },
+  {
+    "question": "How do you add a remote?",
+    "options": [
+      "git remote add name url",
+      "git remote create name url",
+      "git add remote name url",
+      "git remote new name url"
+    ],
+    "correctOptions": [
+      "git remote add name url"
+    ],
+    "time": 25,
+    "details": "git remote add connects your repo to another remote."
+  },
+  {
+    "question": "How do you list remotes?",
+    "options": [
+      "git remote -v",
+      "git remote list",
+      "git remotes",
+      "git remote show"
+    ],
+    "correctOptions": [
+      "git remote -v"
+    ],
+    "time": 20,
+    "details": "-v shows URLs and names of all remotes."
+  },
+  {
+    "question": "How do you rename a remote?",
+    "options": [
+      "git remote rename old new",
+      "git remote change old new",
+      "git remote name old new",
+      "git remote update old new"
+    ],
+    "correctOptions": [
+      "git remote rename old new"
+    ],
+    "time": 25,
+    "details": "git remote rename changes a remote's name."
+  },
+  {
+    "question": "How do you remove a remote?",
+    "options": [
+      "git remote remove name",
+      "git remote delete name",
+      "Both remove and delete work",
+      "git remote rm name"
+    ],
+    "correctOptions": [
+      "Both remove and delete work"
+    ],
+    "time": 25,
+    "details": "Both remove and rm delete a remote."
+  },
+  {
+    "question": "What does git remote show display?",
+    "options": [
+      "Remote details",
+      "Only names",
+      "Only URLs",
+      "Branches"
+    ],
+    "correctOptions": [
+      "Remote details"
+    ],
+    "time": 25,
+    "details": "git remote show provides detailed remote info."
+  },
+  {
+    "question": "How do you change remote URL?",
+    "options": [
+      "git remote set-url name new-url",
+      "git remote url name new-url",
+      "git remote update-url name new-url",
+      "git remote change-url name new-url"
+    ],
+    "correctOptions": [
+      "git remote set-url name new-url"
+    ],
+    "time": 30,
+    "details": "set-url changes the remote's URL."
+  },
+  {
+    "question": "What is git push?",
+    "options": [
+      "Upload commits to remote",
+      "Download commits",
+      "Delete remote",
+      "Create remote"
+    ],
+    "correctOptions": [
+      "Upload commits to remote"
+    ],
+    "time": 20,
+    "details": "git push sends local commits to remote."
+  },
+  {
+    "question": "How do you push to specific remote?",
+    "options": [
+      "git push remote-name branch",
+      "git push --remote remote-name branch",
+      "git upload remote-name branch",
+      "git send remote-name branch"
+    ],
+    "correctOptions": [
+      "git push remote-name branch"
+    ],
+    "time": 25,
+    "details": "git push origin master pushes to origin."
+  },
+  {
+    "question": "What is git pull?",
+    "options": [
+      "Fetch and merge remote",
+      "Only fetch",
+      "Only merge",
+      "Push changes"
+    ],
+    "correctOptions": [
+      "Fetch and merge remote"
+    ],
+    "time": 20,
+    "details": "git pull fetches and automatically merges changes."
+  },
+  {
+    "question": "What does git fetch do?",
+    "options": [
+      "Download without merging",
+      "Download and merge",
+      "Upload commits",
+      "Delete remote"
+    ],
+    "correctOptions": [
+      "Download without merging"
+    ],
+    "time": 25,
+    "details": "git fetch downloads commits without merging."
+  },
+  {
+    "question": "What is the difference between pull and fetch?",
+    "options": [
+      "Pull fetches and merges, fetch only downloads",
+      "Both fetch only",
+      "Both merge",
+      "Fetch is faster"
+    ],
+    "correctOptions": [
+      "Pull fetches and merges, fetch only downloads"
+    ],
+    "time": 35,
+    "details": "Fetch updates remote-tracking branches; pull does more."
+  },
+  {
+    "question": "How do you clone a repository?",
+    "options": [
+      "git clone url",
+      "git copy url",
+      "git download url",
+      "git get url"
+    ],
+    "correctOptions": [
+      "git clone url"
+    ],
+    "time": 20,
+    "details": "git clone creates a local copy of a repository."
+  },
+  {
+    "question": "What does --depth flag do in clone?",
+    "options": [
+      "Shallow clone with n commits",
+      "Deep clone",
+      "Full clone",
+      "No clone"
+    ],
+    "correctOptions": [
+      "Shallow clone with n commits"
+    ],
+    "time": 30,
+    "details": "--depth creates a shallow clone with limited history."
+  },
+  {
+    "question": "What is a shallow clone?",
+    "options": [
+      "Clone with partial history",
+      "Full clone",
+      "Empty clone",
+      "Broken clone"
+    ],
+    "correctOptions": [
+      "Clone with partial history"
+    ],
+    "time": 30,
+    "details": "Shallow clones have limited commit history."
+  },
+  {
+    "question": "How do you deepen a shallow clone?",
+    "options": [
+      "git fetch --unshallow",
+      "git pull --deep",
+      "git clone --deep",
+      "git deepen"
+    ],
+    "correctOptions": [
+      "git fetch --unshallow"
+    ],
+    "time": 35,
+    "details": "--unshallow converts shallow to full clone."
+  },
+  {
+    "question": "What is git push -u?",
+    "options": [
+      "Set upstream tracking",
+      "Force push",
+      "Update push",
+      "Undo push"
+    ],
+    "correctOptions": [
+      "Set upstream tracking"
+    ],
+    "time": 30,
+    "details": "-u (--set-upstream) sets default upstream."
+  },
+  {
+    "question": "What is upstream tracking?",
+    "options": [
+      "Link local to remote branch",
+      "Unlink branches",
+      "Delete link",
+      "Push link"
+    ],
+    "correctOptions": [
+      "Link local to remote branch"
+    ],
+    "time": 35,
+    "details": "Upstream tracking connects local and remote branches."
+  },
+  {
+    "question": "What does --force push do?",
+    "options": [
+      "Overwrite remote commits",
+      "Safe push",
+      "New push",
+      "Cancel push"
+    ],
+    "correctOptions": [
+      "Overwrite remote commits"
+    ],
+    "time": 30,
+    "details": "--force overwrites remote with local commits."
+  },
+  {
+    "question": "When should you force push?",
+    "options": [
+      "Never on shared branches",
+      "Always",
+      "On main branch",
+      "When asked"
+    ],
+    "correctOptions": [
+      "Never on shared branches"
+    ],
+    "time": 35,
+    "details": "Never force push to shared/public branches!"
+  },
+  {
+    "question": "What is git push --force-with-lease?",
+    "options": [
+      "Safer force push",
+      "Cancel push",
+      "No push",
+      "New push"
+    ],
+    "correctOptions": [
+      "Safer force push"
+    ],
+    "time": 40,
+    "details": "--force-with-lease checks before overwriting."
+  },
+  {
+    "question": "What is git push --force-if-includes?",
+    "options": [
+      "Require local commits first",
+      "Force anyway",
+      "Skip check",
+      "Cancel push"
+    ],
+    "correctOptions": [
+      "Require local commits first"
+    ],
+    "time": 45,
+    "details": "Only force push if remote is rebased on local."
+  },
+  {
+    "question": "What is git pull --rebase?",
+    "options": [
+      "Fetch and rebase instead of merge",
+      "Fetch and merge",
+      "Push and rebase",
+      "Rebase remote"
+    ],
+    "correctOptions": [
+      "Fetch and rebase instead of merge"
+    ],
+    "time": 35,
+    "details": "--rebase rebases local commits instead of merging."
+  },
+  {
+    "question": "What is pull.rebase setting?",
+    "options": [
+      "Auto-rebase on pull",
+      "Auto-merge on pull",
+      "Disable pull",
+      "Force pull"
+    ],
+    "correctOptions": [
+      "Auto-rebase on pull"
+    ],
+    "time": 40,
+    "details": "pull.rebase makes rebase the default for pull."
+  },
+  {
+    "question": "What is a remote-tracking branch?",
+    "options": [
+      "Local copy of remote branch",
+      "Remote branch",
+      "Local branch",
+      "New branch"
+    ],
+    "correctOptions": [
+      "Local copy of remote branch"
+    ],
+    "time": 35,
+    "details": "Remote-tracking branches are local copies of remote."
+  },
+  {
+    "question": "What is origin/master?",
+    "options": [
+      "Remote-tracking branch",
+      "Remote branch",
+      "Local branch",
+      "Deleted branch"
+    ],
+    "correctOptions": [
+      "Remote-tracking branch"
+    ],
+    "time": 30,
+    "details": "origin/master is your local copy of remote master."
+  },
+  {
+    "question": "How do you update remote-tracking branches?",
+    "options": [
+      "git fetch origin",
+      "git pull origin",
+      "git fetch",
+      "Both fetch and pull work"
+    ],
+    "correctOptions": [
+      "Both fetch and pull work"
+    ],
+    "time": 35,
+    "details": "Both fetch and pull update tracking branches."
+  },
+  {
+    "question": "What is git prune?",
+    "options": [
+      "Remove deleted remote branches",
+      "Create branches",
+      "Delete local branches",
+      "Push branches"
+    ],
+    "correctOptions": [
+      "Remove deleted remote branches"
+    ],
+    "time": 35,
+    "details": "git remote prune removes stale remote-tracking."
+  },
+  {
+    "question": "What is git fetch --prune?",
+    "options": [
+      "Auto-prune stale branches",
+      "Fetch and prune",
+      "Prune and fetch",
+      "No prune"
+    ],
+    "correctOptions": [
+      "Auto-prune stale branches"
+    ],
+    "time": 35,
+    "details": "--prune removes stale remote-tracking branches."
+  },
+  {
+    "question": "What are stale branches?",
+    "options": [
+      "Deleted remote branches",
+      "Old commits",
+      "New branches",
+      "Local branches"
+    ],
+    "correctOptions": [
+      "Deleted remote branches"
+    ],
+    "time": 35,
+    "details": "Stale branches are remote-tracking of deleted remotes."
+  },
+  {
+    "question": "What does fetch.prune do?",
+    "options": [
+      "Auto-prune on fetch",
+      "Prune on pull",
+      "Manual prune",
+      "Disable prune"
+    ],
+    "correctOptions": [
+      "Auto-prune on fetch"
+    ],
+    "time": 40,
+    "details": "fetch.prune enables auto-pruning for all fetches."
+  },
+  {
+    "question": "What is git push --all?",
+    "options": [
+      "Push all branches",
+      "Push current",
+      "Push main",
+      "Push new"
+    ],
+    "correctOptions": [
+      "Push all branches"
+    ],
+    "time": 30,
+    "details": "--all pushes all local branches to remote."
+  },
+  {
+    "question": "What is git push --tags?",
+    "options": [
+      "Push all tags",
+      "Push current tag",
+      "Delete tags",
+      "No tags"
+    ],
+    "correctOptions": [
+      "Push all tags"
+    ],
+    "time": 30,
+    "details": "--tags pushes all local tags to remote."
+  },
+  {
+    "question": "What is git push --mirror?",
+    "options": [
+      "Push all refs to remote",
+      "Push only commits",
+      "Push only branches",
+      "Push only tags"
+    ],
+    "correctOptions": [
+      "Push all refs to remote"
+    ],
+    "time": 40,
+    "details": "--mirror pushes all refs including deleted ones."
+  },
+  {
+    "question": "What is git ls-remote?",
+    "options": [
+      "List remote branches",
+      "List local branches",
+      "List commits",
+      "List tags"
+    ],
+    "correctOptions": [
+      "List remote branches"
+    ],
+    "time": 35,
+    "details": "ls-remote shows remote branches without cloning."
+  },
+  {
+    "question": "What is git remote prune origin?",
+    "options": [
+      "Remove stale branches",
+      "Add branches",
+      "Update branches",
+      "Create branches"
+    ],
+    "correctOptions": [
+      "Remove stale branches"
+    ],
+    "time": 35,
+    "details": "Prune removes remote-tracking branches for deleted remote branches."
+  },
+  {
+    "question": "What happens when push is rejected?",
+    "options": [
+      "Remote has newer commits",
+      "Branch doesn't exist",
+      "Permission denied",
+      "Network error"
+    ],
+    "correctOptions": [
+      "Remote has newer commits"
+    ],
+    "time": 35,
+    "details": "Rejection means remote has commits you don't have."
+  }
+]

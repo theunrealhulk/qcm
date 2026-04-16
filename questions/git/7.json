@@ -1,0 +1,1402 @@
+[
+  {
+    "question": "What is git reset?",
+    "options": [
+      "Undo commits and changes",
+      "Create commits",
+      "Delete commits",
+      "Merge commits"
+    ],
+    "correctOptions": [
+      "Undo commits and changes"
+    ],
+    "time": 25,
+    "details": "git reset moves HEAD and optionally modifies files."
+  },
+  {
+    "question": "What are the three reset modes?",
+    "options": [
+      "--soft, --mixed, --hard",
+      "--soft, --hard, --merge",
+      "--keep, --hard, --soft",
+      "--mixed, --hard, --merge"
+    ],
+    "correctOptions": [
+      "--soft, --mixed, --hard"
+    ],
+    "time": 35,
+    "details": "Git has three main reset modes."
+  },
+  {
+    "question": "What does --soft reset do?",
+    "options": [
+      "Moves HEAD, keeps staged",
+      "Moves HEAD, unstages",
+      "Deletes changes",
+      "Moves everything"
+    ],
+    "correctOptions": [
+      "Moves HEAD, keeps staged"
+    ],
+    "time": 35,
+    "details": "--soft keeps changes in staging area."
+  },
+  {
+    "question": "What does --mixed reset do?",
+    "options": [
+      "Moves HEAD, unstages",
+      "Moves HEAD, keeps staged",
+      "Deletes changes",
+      "Moves everything"
+    ],
+    "correctOptions": [
+      "Moves HEAD, unstages"
+    ],
+    "time": 35,
+    "details": "--mixed (default) unstages changes."
+  },
+  {
+    "question": "What does --hard reset do?",
+    "options": [
+      "Moves HEAD, deletes changes",
+      "Moves HEAD, keeps staged",
+      "Moves HEAD, unstages",
+      "No changes"
+    ],
+    "correctOptions": [
+      "Moves HEAD, deletes changes"
+    ],
+    "time": 35,
+    "details": "--hard is dangerous - it removes all changes!"
+  },
+  {
+    "question": "What is the difference between reset and revert?",
+    "options": [
+      "Reset removes history, revert keeps",
+      "Both remove history",
+      "Both keep history",
+      "No difference"
+    ],
+    "correctOptions": [
+      "Reset removes history, revert keeps"
+    ],
+    "time": 40,
+    "details": "Reset rewrites history; revert creates new commit."
+  },
+  {
+    "question": "When should you NOT use reset?",
+    "options": [
+      "On shared commits",
+      "On local commits",
+      "On your own commits",
+      "Before push"
+    ],
+    "correctOptions": [
+      "On shared commits"
+    ],
+    "time": 40,
+    "details": "Never reset commits that have been pushed/shared."
+  },
+  {
+    "question": "How do you undo the last commit?",
+    "options": [
+      "git reset --soft HEAD~1",
+      "git undo",
+      "git revert HEAD",
+      "git reset HEAD~1"
+    ],
+    "correctOptions": [
+      "git reset --soft HEAD~1"
+    ],
+    "time": 30,
+    "details": "--soft keeps changes staged for recommit."
+  },
+  {
+    "question": "How do you completely undo last commit?",
+    "options": [
+      "git reset --hard HEAD~1",
+      "git reset HEAD~1",
+      "git revert HEAD",
+      "git undo HEAD"
+    ],
+    "correctOptions": [
+      "git reset --hard HEAD~1"
+    ],
+    "time": 30,
+    "details": "--hard completely removes the commit and changes."
+  },
+  {
+    "question": "What is HEAD~1?",
+    "options": [
+      "Parent of current commit",
+      "Current commit",
+      "Grandparent",
+      "Child"
+    ],
+    "correctOptions": [
+      "Parent of current commit"
+    ],
+    "time": 25,
+    "details": "HEAD~1 refers to the commit before HEAD."
+  },
+  {
+    "question": "What is HEAD^?",
+    "options": [
+      "First parent of merge",
+      "Second parent",
+      "Current commit",
+      "Child commit"
+    ],
+    "correctOptions": [
+      "First parent of merge"
+    ],
+    "time": 30,
+    "details": "HEAD^ is the first parent (main branch) of merge."
+  },
+  {
+    "question": "What is HEAD~2?",
+    "options": [
+      "Two commits back",
+      "Two commits forward",
+      "Second parent",
+      "Current"
+    ],
+    "correctOptions": [
+      "Two commits back"
+    ],
+    "time": 25,
+    "details": "HEAD~2 is the grandparent of current commit."
+  },
+  {
+    "question": "What does HEAD^2 mean?",
+    "options": [
+      "Second parent of merge",
+      "Two commits back",
+      "Current commit",
+      "Child"
+    ],
+    "correctOptions": [
+      "Second parent of merge"
+    ],
+    "time": 35,
+    "details": "HEAD^2 is the second parent of a merge commit."
+  },
+  {
+    "question": "How do you reset a specific file?",
+    "options": [
+      "git checkout -- file",
+      "git reset -- file",
+      "git restore file",
+      "Both checkout and restore work"
+    ],
+    "correctOptions": [
+      "Both checkout and restore work"
+    ],
+    "time": 35,
+    "details": "Both commands restore file to HEAD state."
+  },
+  {
+    "question": "What is git restore?",
+    "options": [
+      "Restore working tree",
+      "Restore staged",
+      "Restore commits",
+      "Restore remote"
+    ],
+    "correctOptions": [
+      "Restore working tree"
+    ],
+    "time": 30,
+    "details": "git restore is modern way to undo changes."
+  },
+  {
+    "question": "How do you unstage a file?",
+    "options": [
+      "git restore --staged file",
+      "git reset HEAD file",
+      "Both work",
+      "Neither works"
+    ],
+    "correctOptions": [
+      "Both work"
+    ],
+    "time": 30,
+    "details": "Both reset and restore can unstage files."
+  },
+  {
+    "question": "What does git restore -S do?",
+    "options": [
+      "Unstage file",
+      "Stage file",
+      "Restore staged",
+      "Restore all"
+    ],
+    "correctOptions": [
+      "Unstage file"
+    ],
+    "time": 35,
+    "details": "-S (--staged) unstages the file."
+  },
+  {
+    "question": "What does git restore -W do?",
+    "options": [
+      "Restore working directory",
+      "Restore staged",
+      "Restore from staging",
+      "Restore commit"
+    ],
+    "correctOptions": [
+      "Restore working directory"
+    ],
+    "time": 35,
+    "details": "-W (--worktree) is default for restoring files."
+  },
+  {
+    "question": "What is git revert?",
+    "options": [
+      "Create new commit undoing changes",
+      "Remove commit",
+      "Reset commit",
+      "Merge commit"
+    ],
+    "correctOptions": [
+      "Create new commit undoing changes"
+    ],
+    "time": 30,
+    "details": "Revert creates a commit that undoes previous changes."
+  },
+  {
+    "question": "What is the advantage of revert?",
+    "options": [
+      "Safe for shared branches",
+      "Faster",
+      "Cleaner history",
+      "No backup"
+    ],
+    "correctOptions": [
+      "Safe for shared branches"
+    ],
+    "time": 35,
+    "details": "Revert is safe because it doesn't rewrite history."
+  },
+  {
+    "question": "How do you revert a commit?",
+    "options": [
+      "git revert commit-hash",
+      "git undo commit",
+      "git reset commit",
+      "git back commit"
+    ],
+    "correctOptions": [
+      "git revert commit-hash"
+    ],
+    "time": 30,
+    "details": "git revert undo a specific commit safely."
+  },
+  {
+    "question": "Can you revert a merge commit?",
+    "options": [
+      "Yes with -m flag",
+      "No",
+      "Only first parent",
+      "Only second parent"
+    ],
+    "correctOptions": [
+      "Yes with -m flag"
+    ],
+    "time": 40,
+    "details": "Merge commits need -m to specify which parent."
+  },
+  {
+    "question": "What does -m 1 mean in revert?",
+    "options": [
+      "Revert first parent's changes",
+      "Revert second parent",
+      "Revert both",
+      "Revert neither"
+    ],
+    "correctOptions": [
+      "Revert first parent's changes"
+    ],
+    "time": 40,
+    "details": "-m 1 reverts changes from the first parent."
+  },
+  {
+    "question": "What does git revert -n do?",
+    "options": [
+      "Don't auto-commit",
+      "Commit anyway",
+      "No revert",
+      "Abort"
+    ],
+    "correctOptions": [
+      "Don't auto-commit"
+    ],
+    "time": 40,
+    "details": "-n (--no-commit) applies changes without committing."
+  },
+  {
+    "question": "What is the difference between undo and revert?",
+    "options": [
+      "Undo is reset, revert is new commit",
+      "Same thing",
+      "Undo is new commit",
+      "No difference"
+    ],
+    "correctOptions": [
+      "Undo is reset, revert is new commit"
+    ],
+    "time": 45,
+    "details": "git undo doesn't exist; you reset or revert."
+  },
+  {
+    "question": "How do you recover after reset --hard?",
+    "options": [
+      "git reflog and checkout",
+      "Can't recover",
+      "From remote",
+      "From backup"
+    ],
+    "correctOptions": [
+      "git reflog and checkout"
+    ],
+    "time": 40,
+    "details": "Reflog can recover commits even after hard reset."
+  },
+  {
+    "question": "What is reflog?",
+    "options": [
+      "Reference log of operations",
+      "Remote log",
+      "Repository log",
+      "Commit log"
+    ],
+    "correctOptions": [
+      "Reference log of operations"
+    ],
+    "time": 30,
+    "details": "Reflog records all HEAD movements."
+  },
+  {
+    "question": "How do you view reflog?",
+    "options": [
+      "git reflog",
+      "git log",
+      "git show",
+      "git status"
+    ],
+    "correctOptions": [
+      "git reflog"
+    ],
+    "time": 25,
+    "details": "git reflog shows history of changes to HEAD."
+  },
+  {
+    "question": "What format is reflog?",
+    "options": [
+      "hash HEAD@{n} action",
+      "Commit only",
+      "Branch only",
+      "Action only"
+    ],
+    "correctOptions": [
+      "hash HEAD@{n} action"
+    ],
+    "time": 35,
+    "details": "Each entry shows hash, position, and action."
+  },
+  {
+    "question": "What does HEAD@{n} mean?",
+    "options": [
+      "nth previous HEAD state",
+      "nth commit",
+      "nth branch",
+      "nth stash"
+    ],
+    "correctOptions": [
+      "nth previous HEAD state"
+    ],
+    "time": 35,
+    "details": "Reflog references are relative to current."
+  },
+  {
+    "question": "How long does reflog keep history?",
+    "options": [
+      "90 days by default",
+      "30 days",
+      "Forever",
+      "Until push"
+    ],
+    "correctOptions": [
+      "90 days by default"
+    ],
+    "time": 35,
+    "details": "Reflog entries expire after 90 days."
+  },
+  {
+    "question": "Can you recover from git reset --hard?",
+    "options": [
+      "Yes via reflog",
+      "No",
+      "Only from backup",
+      "Only from remote"
+    ],
+    "correctOptions": [
+      "Yes via reflog"
+    ],
+    "time": 35,
+    "details": "Reflog can recover even after hard reset."
+  },
+  {
+    "question": "What is dangling commit?",
+    "options": [
+      "Unreachable commit",
+      "Reachable commit",
+      "Merged commit",
+      "Tagged commit"
+    ],
+    "correctOptions": [
+      "Unreachable commit"
+    ],
+    "time": 40,
+    "details": "Dangling commits have no branch/tag pointing to them."
+  },
+  {
+    "question": "What is orphaned commit?",
+    "options": [
+      "No parent commit",
+      "Has parent",
+      "Is initial",
+      "Is merge"
+    ],
+    "correctOptions": [
+      "No parent commit"
+    ],
+    "time": 40,
+    "details": "Orphan commits have no parent (like initial commit)."
+  },
+  {
+    "question": "What is git checkout?",
+    "options": [
+      "Switch branches or restore files",
+      "Delete files",
+      "Create branches",
+      "Merge branches"
+    ],
+    "correctOptions": [
+      "Switch branches or restore files"
+    ],
+    "time": 30,
+    "details": "git checkout switches branches or restores files."
+  },
+  {
+    "question": "What does git checkout commit-hash do?",
+    "options": [
+      "Detached HEAD at commit",
+      "Switch to branch",
+      "Delete commit",
+      "Nothing"
+    ],
+    "correctOptions": [
+      "Detached HEAD at commit"
+    ],
+    "time": 35,
+    "details": "Checking out a commit puts HEAD in detached state."
+  },
+  {
+    "question": "What is detached HEAD?",
+    "options": [
+      "HEAD not on branch",
+      "HEAD on branch",
+      "No HEAD",
+      "Broken HEAD"
+    ],
+    "correctOptions": [
+      "HEAD not on branch"
+    ],
+    "time": 35,
+    "details": "Detached HEAD occurs when checking out commits."
+  },
+  {
+    "question": "What happens to commits in detached HEAD?",
+    "options": [
+      "No branch reference",
+      "On branch",
+      "Lost forever",
+      "Automatic save"
+    ],
+    "correctOptions": [
+      "No branch reference"
+    ],
+    "time": 40,
+    "details": "Commits in detached HEAD need branch creation to save."
+  },
+  {
+    "question": "How do you save work in detached HEAD?",
+    "options": [
+      "git checkout -b new-branch",
+      "git branch new-branch",
+      "Both work",
+      "Can't save"
+    ],
+    "correctOptions": [
+      "Both work"
+    ],
+    "time": 40,
+    "details": "Create branch from current position to save commits."
+  },
+  {
+    "question": "What is git switch -c?",
+    "options": [
+      "Create and switch branch",
+      "Switch only",
+      "Force switch",
+      "New switch"
+    ],
+    "correctOptions": [
+      "Create and switch branch"
+    ],
+    "time": 35,
+    "details": "git switch -c creates and switches to new branch."
+  },
+  {
+    "question": "What is the --force flag in checkout?",
+    "options": [
+      "Overwrite local changes",
+      "Safe checkout",
+      "No overwrite",
+      "New checkout"
+    ],
+    "correctOptions": [
+      "Overwrite local changes"
+    ],
+    "time": 35,
+    "details": "--force discards local changes during checkout."
+  },
+  {
+    "question": "What is git clean -f?",
+    "options": [
+      "Force remove untracked files",
+      "Preview only",
+      "Remove directories",
+      "Remove tracked"
+    ],
+    "correctOptions": [
+      "Force remove untracked files"
+    ],
+    "time": 35,
+    "details": "-f (--force) actually removes files."
+  },
+  {
+    "question": "What is git clean -n?",
+    "options": [
+      "Dry run/preview",
+      "No action",
+      "Force action",
+      "Named action"
+    ],
+    "correctOptions": [
+      "Dry run/preview"
+    ],
+    "time": 30,
+    "details": "-n (--dry-run) shows what would be deleted."
+  },
+  {
+    "question": "What is git clean -d?",
+    "options": [
+      "Remove directories",
+      "Remove files",
+      "No remove",
+      "Both remove"
+    ],
+    "correctOptions": [
+      "Remove directories"
+    ],
+    "time": 35,
+    "details": "-d also removes untracked directories."
+  },
+  {
+    "question": "What is git clean -x?",
+    "options": [
+      "Include ignored files",
+      "Exclude ignored",
+      "Only ignored",
+      "Some ignored"
+    ],
+    "correctOptions": [
+      "Include ignored files"
+    ],
+    "time": 35,
+    "details": "-x removes .gitignore'd files too."
+  },
+  {
+    "question": "What is git clean -X?",
+    "options": [
+      "Only ignored files",
+      "All files",
+      "No ignored",
+      "Some ignored"
+    ],
+    "correctOptions": [
+      "Only ignored files"
+    ],
+    "time": 35,
+    "details": "-X removes only .gitignore'd files."
+  },
+  {
+    "question": "What is --no-verify?",
+    "options": [
+      "Skip Git hooks",
+      "Run hooks",
+      "Fail hooks",
+      "Enable hooks"
+    ],
+    "correctOptions": [
+      "Skip Git hooks"
+    ],
+    "time": 35,
+    "details": "--no-verify bypasses pre-commit/commit-msg hooks."
+  },
+  {
+    "question": "What commits can you safely reset?",
+    "options": [
+      "Local, unpushed commits",
+      "Shared commits",
+      "Pushed commits",
+      "Remote commits"
+    ],
+    "correctOptions": [
+      "Local, unpushed commits"
+    ],
+    "time": 40,
+    "details": "Only reset commits that haven't been shared."
+  },
+  {
+    "question": "What is git reset HEAD?",
+    "options": [
+      "Unstage everything",
+      "Reset to HEAD",
+      "Hard reset",
+      "Nothing"
+    ],
+    "correctOptions": [
+      "Unstage everything"
+    ],
+    "time": 30,
+    "details": "git reset (no args) unstages all files."
+  },
+  {
+    "question": "What is git reset --soft HEAD^?",
+    "options": [
+      "Undo last commit, keep changes staged",
+      "Undo commit, unstage",
+      "Undo commit, delete",
+      "Nothing"
+    ],
+    "correctOptions": [
+      "Undo last commit, keep changes staged"
+    ],
+    "time": 40,
+    "details": "--soft undoes commit but keeps changes staged."
+  },
+  {
+    "question": "What is git reset --mixed HEAD^?",
+    "options": [
+      "Undo commit, keep changes unstaged",
+      "Keep staged",
+      "Delete changes",
+      "Nothing"
+    ],
+    "correctOptions": [
+      "Undo commit, keep changes unstaged"
+    ],
+    "time": 40,
+    "details": "--mixed (default) unstages the changes."
+  },
+  {
+    "question": "What is git reset --hard HEAD^?",
+    "options": [
+      "Undo commit, delete changes",
+      "Keep staged",
+      "Keep unstaged",
+      "Nothing"
+    ],
+    "correctOptions": [
+      "Undo commit, delete changes"
+    ],
+    "time": 40,
+    "details": "--hard completely removes the commit and changes."
+  },
+  {
+    "question": "What is git reset origin/branch?",
+    "options": [
+      "Reset to remote state",
+      "Nothing",
+      "Error",
+      "Merge"
+    ],
+    "correctOptions": [
+      "Reset to remote state"
+    ],
+    "time": 40,
+    "details": "Can reset to match remote branch exactly."
+  },
+  {
+    "question": "What is the safest undo strategy?",
+    "options": [
+      "git revert",
+      "git reset --hard",
+      "git clean",
+      "git checkout -f"
+    ],
+    "correctOptions": [
+      "git revert"
+    ],
+    "time": 35,
+    "details": "Revert is safest for shared branches."
+  },
+  {
+    "question": "When is reset preferred over revert?",
+    "options": [
+      "Local cleanup before push",
+      "Shared commits",
+      "After push",
+      "Remote branches"
+    ],
+    "correctOptions": [
+      "Local cleanup before push"
+    ],
+    "time": 45,
+    "details": "Reset is fine for local unpushed commits."
+  },
+  {
+    "question": "What is reflog expire?",
+    "options": [
+      "Remove old reflog entries",
+      "Keep reflog",
+      "Show reflog",
+      "Create reflog"
+    ],
+    "correctOptions": [
+      "Remove old reflog entries"
+    ],
+    "time": 45,
+    "details": "git reflog expire removes old entries."
+  },
+  {
+    "question": "What is gc.pruneexpire?",
+    "options": [
+      "When to prune dangling commits",
+      "Expire reflog",
+      "Prune branches",
+      "Prune remotes"
+    ],
+    "correctOptions": [
+      "When to prune dangling commits"
+    ],
+    "time": 50,
+    "details": "gc.pruneexpire controls when commits are garbage collected."
+  },
+  {
+    "question": "What is fsck?",
+    "options": [
+      "Check repository integrity",
+      "File system check",
+      "Fast sync",
+      "Full sync"
+    ],
+    "correctOptions": [
+      "Check repository integrity"
+    ],
+    "time": 45,
+    "details": "git fsck verifies repository objects."
+  },
+  {
+    "question": "What is unreachable object?",
+    "options": [
+      "No reference points to it",
+      "Has reference",
+      "On branch",
+      "On tag"
+    ],
+    "correctOptions": [
+      "No reference points to it"
+    ],
+    "time": 45,
+    "details": "Unreachable objects are orphaned after reset."
+  },
+  {
+    "question": "What is git fsck --unreachable?",
+    "options": [
+      "Show unreachable commits",
+      "Show reachable",
+      "Fix unreachable",
+      "Delete unreachable"
+    ],
+    "correctOptions": [
+      "Show unreachable commits"
+    ],
+    "time": 50,
+    "details": "--unreachable lists all unreachable objects."
+  },
+  {
+    "question": "What is git gc?",
+    "options": [
+      "Garbage collection",
+      "Git copy",
+      "Git clean",
+      "Git check"
+    ],
+    "correctOptions": [
+      "Garbage collection"
+    ],
+    "time": 40,
+    "details": "git gc cleans up and optimizes repository."
+  },
+  {
+    "question": "What does git prune do?",
+    "options": [
+      "Remove unreachable objects",
+      "Prune branches",
+      "Prune remotes",
+      "Prune tags"
+    ],
+    "correctOptions": [
+      "Remove unreachable objects"
+    ],
+    "time": 45,
+    "details": "git prune removes unreachable objects."
+  },
+  {
+    "question": "What is the safety in git operations?",
+    "options": [
+      "Reflog preserves history",
+      "No safety",
+      "Remote backup",
+      "Only on push"
+    ],
+    "correctOptions": [
+      "Reflog preserves history"
+    ],
+    "time": 45,
+    "details": "Reflog allows recovery from most operations."
+  },
+  {
+    "question": "What is the correct order for undo?",
+    "options": [
+      "Understand, choose method, execute",
+      "Force push",
+      "Delete repo",
+      "Start over"
+    ],
+    "correctOptions": [
+      "Understand, choose method, execute"
+    ],
+    "time": 45,
+    "details": "Understand what you want before choosing undo method."
+  },
+  {
+    "question": "What is amend vs reset?",
+    "options": [
+      "Amend modifies, reset removes",
+      "Same thing",
+      "Reset modifies",
+      "Amend removes"
+    ],
+    "correctOptions": [
+      "Amend modifies, reset removes"
+    ],
+    "time": 45,
+    "details": "Amend changes last commit; reset removes commits."
+  },
+  {
+    "question": "What is git reset?",
+    "options": [
+      "Undo commits and changes",
+      "Create commits",
+      "Delete commits",
+      "Merge commits"
+    ],
+    "correctOptions": [
+      "Undo commits and changes"
+    ],
+    "time": 25,
+    "details": "git reset moves HEAD and optionally modifies files."
+  },
+  {
+    "question": "What are the three reset modes?",
+    "options": [
+      "--soft, --mixed, --hard",
+      "--soft, --hard, --merge",
+      "--keep, --hard, --soft",
+      "--mixed, --hard, --merge"
+    ],
+    "correctOptions": [
+      "--soft, --mixed, --hard"
+    ],
+    "time": 35,
+    "details": "Git has three main reset modes."
+  },
+  {
+    "question": "What does --soft reset do?",
+    "options": [
+      "Moves HEAD, keeps staged",
+      "Moves HEAD, unstages",
+      "Deletes changes",
+      "Moves everything"
+    ],
+    "correctOptions": [
+      "Moves HEAD, keeps staged"
+    ],
+    "time": 35,
+    "details": "--soft keeps changes in staging area."
+  },
+  {
+    "question": "What does --mixed reset do?",
+    "options": [
+      "Moves HEAD, unstages",
+      "Moves HEAD, keeps staged",
+      "Deletes changes",
+      "Moves everything"
+    ],
+    "correctOptions": [
+      "Moves HEAD, unstages"
+    ],
+    "time": 35,
+    "details": "--mixed (default) unstages changes."
+  },
+  {
+    "question": "What does --hard reset do?",
+    "options": [
+      "Moves HEAD, deletes changes",
+      "Moves HEAD, keeps staged",
+      "Moves HEAD, unstages",
+      "No changes"
+    ],
+    "correctOptions": [
+      "Moves HEAD, deletes changes"
+    ],
+    "time": 35,
+    "details": "--hard is dangerous - it removes all changes!"
+  },
+  {
+    "question": "What is the difference between reset and revert?",
+    "options": [
+      "Reset removes history, revert keeps",
+      "Both remove history",
+      "Both keep history",
+      "No difference"
+    ],
+    "correctOptions": [
+      "Reset removes history, revert keeps"
+    ],
+    "time": 40,
+    "details": "Reset rewrites history; revert creates new commit."
+  },
+  {
+    "question": "When should you NOT use reset?",
+    "options": [
+      "On shared commits",
+      "On local commits",
+      "On your own commits",
+      "Before push"
+    ],
+    "correctOptions": [
+      "On shared commits"
+    ],
+    "time": 40,
+    "details": "Never reset commits that have been pushed/shared."
+  },
+  {
+    "question": "How do you undo the last commit?",
+    "options": [
+      "git reset --soft HEAD~1",
+      "git undo",
+      "git revert HEAD",
+      "git reset HEAD~1"
+    ],
+    "correctOptions": [
+      "git reset --soft HEAD~1"
+    ],
+    "time": 30,
+    "details": "--soft keeps changes staged for recommit."
+  },
+  {
+    "question": "How do you completely undo last commit?",
+    "options": [
+      "git reset --hard HEAD~1",
+      "git reset HEAD~1",
+      "git revert HEAD",
+      "git undo HEAD"
+    ],
+    "correctOptions": [
+      "git reset --hard HEAD~1"
+    ],
+    "time": 30,
+    "details": "--hard completely removes the commit and changes."
+  },
+  {
+    "question": "What is HEAD~1?",
+    "options": [
+      "Parent of current commit",
+      "Current commit",
+      "Grandparent",
+      "Child"
+    ],
+    "correctOptions": [
+      "Parent of current commit"
+    ],
+    "time": 25,
+    "details": "HEAD~1 refers to the commit before HEAD."
+  },
+  {
+    "question": "What is HEAD^?",
+    "options": [
+      "First parent of merge",
+      "Second parent",
+      "Current commit",
+      "Child commit"
+    ],
+    "correctOptions": [
+      "First parent of merge"
+    ],
+    "time": 30,
+    "details": "HEAD^ is the first parent (main branch) of merge."
+  },
+  {
+    "question": "What is HEAD~2?",
+    "options": [
+      "Two commits back",
+      "Two commits forward",
+      "Second parent",
+      "Current"
+    ],
+    "correctOptions": [
+      "Two commits back"
+    ],
+    "time": 25,
+    "details": "HEAD~2 is the grandparent of current commit."
+  },
+  {
+    "question": "What does HEAD^2 mean?",
+    "options": [
+      "Second parent of merge",
+      "Two commits back",
+      "Current commit",
+      "Child"
+    ],
+    "correctOptions": [
+      "Second parent of merge"
+    ],
+    "time": 35,
+    "details": "HEAD^2 is the second parent of a merge commit."
+  },
+  {
+    "question": "How do you reset a specific file?",
+    "options": [
+      "git checkout -- file",
+      "git reset -- file",
+      "git restore file",
+      "Both checkout and restore work"
+    ],
+    "correctOptions": [
+      "Both checkout and restore work"
+    ],
+    "time": 35,
+    "details": "Both commands restore file to HEAD state."
+  },
+  {
+    "question": "What is git restore?",
+    "options": [
+      "Restore working tree",
+      "Restore staged",
+      "Restore commits",
+      "Restore remote"
+    ],
+    "correctOptions": [
+      "Restore working tree"
+    ],
+    "time": 30,
+    "details": "git restore is modern way to undo changes."
+  },
+  {
+    "question": "How do you unstage a file?",
+    "options": [
+      "git restore --staged file",
+      "git reset HEAD file",
+      "Both work",
+      "Neither works"
+    ],
+    "correctOptions": [
+      "Both work"
+    ],
+    "time": 30,
+    "details": "Both reset and restore can unstage files."
+  },
+  {
+    "question": "What does git restore -S do?",
+    "options": [
+      "Unstage file",
+      "Stage file",
+      "Restore staged",
+      "Restore all"
+    ],
+    "correctOptions": [
+      "Unstage file"
+    ],
+    "time": 35,
+    "details": "-S (--staged) unstages the file."
+  },
+  {
+    "question": "What does git restore -W do?",
+    "options": [
+      "Restore working directory",
+      "Restore staged",
+      "Restore from staging",
+      "Restore commit"
+    ],
+    "correctOptions": [
+      "Restore working directory"
+    ],
+    "time": 35,
+    "details": "-W (--worktree) is default for restoring files."
+  },
+  {
+    "question": "What is git revert?",
+    "options": [
+      "Create new commit undoing changes",
+      "Remove commit",
+      "Reset commit",
+      "Merge commit"
+    ],
+    "correctOptions": [
+      "Create new commit undoing changes"
+    ],
+    "time": 30,
+    "details": "Revert creates a commit that undoes previous changes."
+  },
+  {
+    "question": "What is the advantage of revert?",
+    "options": [
+      "Safe for shared branches",
+      "Faster",
+      "Cleaner history",
+      "No backup"
+    ],
+    "correctOptions": [
+      "Safe for shared branches"
+    ],
+    "time": 35,
+    "details": "Revert is safe because it doesn't rewrite history."
+  },
+  {
+    "question": "How do you revert a commit?",
+    "options": [
+      "git revert commit-hash",
+      "git undo commit",
+      "git reset commit",
+      "git back commit"
+    ],
+    "correctOptions": [
+      "git revert commit-hash"
+    ],
+    "time": 30,
+    "details": "git revert undo a specific commit safely."
+  },
+  {
+    "question": "Can you revert a merge commit?",
+    "options": [
+      "Yes with -m flag",
+      "No",
+      "Only first parent",
+      "Only second parent"
+    ],
+    "correctOptions": [
+      "Yes with -m flag"
+    ],
+    "time": 40,
+    "details": "Merge commits need -m to specify which parent."
+  },
+  {
+    "question": "What does -m 1 mean in revert?",
+    "options": [
+      "Revert first parent's changes",
+      "Revert second parent",
+      "Revert both",
+      "Revert neither"
+    ],
+    "correctOptions": [
+      "Revert first parent's changes"
+    ],
+    "time": 40,
+    "details": "-m 1 reverts changes from the first parent."
+  },
+  {
+    "question": "What does git revert -n do?",
+    "options": [
+      "Don't auto-commit",
+      "Commit anyway",
+      "No revert",
+      "Abort"
+    ],
+    "correctOptions": [
+      "Don't auto-commit"
+    ],
+    "time": 40,
+    "details": "-n (--no-commit) applies changes without committing."
+  },
+  {
+    "question": "What is the difference between undo and revert?",
+    "options": [
+      "Undo is reset, revert is new commit",
+      "Same thing",
+      "Undo is new commit",
+      "No difference"
+    ],
+    "correctOptions": [
+      "Undo is reset, revert is new commit"
+    ],
+    "time": 45,
+    "details": "git undo doesn't exist; you reset or revert."
+  },
+  {
+    "question": "How do you recover after reset --hard?",
+    "options": [
+      "git reflog and checkout",
+      "Can't recover",
+      "From remote",
+      "From backup"
+    ],
+    "correctOptions": [
+      "git reflog and checkout"
+    ],
+    "time": 40,
+    "details": "Reflog can recover commits even after hard reset."
+  },
+  {
+    "question": "What is reflog?",
+    "options": [
+      "Reference log of operations",
+      "Remote log",
+      "Repository log",
+      "Commit log"
+    ],
+    "correctOptions": [
+      "Reference log of operations"
+    ],
+    "time": 30,
+    "details": "Reflog records all HEAD movements."
+  },
+  {
+    "question": "How do you view reflog?",
+    "options": [
+      "git reflog",
+      "git log",
+      "git show",
+      "git status"
+    ],
+    "correctOptions": [
+      "git reflog"
+    ],
+    "time": 25,
+    "details": "git reflog shows history of changes to HEAD."
+  },
+  {
+    "question": "What format is reflog?",
+    "options": [
+      "hash HEAD@{n} action",
+      "Commit only",
+      "Branch only",
+      "Action only"
+    ],
+    "correctOptions": [
+      "hash HEAD@{n} action"
+    ],
+    "time": 35,
+    "details": "Each entry shows hash, position, and action."
+  },
+  {
+    "question": "What does HEAD@{n} mean?",
+    "options": [
+      "nth previous HEAD state",
+      "nth commit",
+      "nth branch",
+      "nth stash"
+    ],
+    "correctOptions": [
+      "nth previous HEAD state"
+    ],
+    "time": 35,
+    "details": "Reflog references are relative to current."
+  },
+  {
+    "question": "How long does reflog keep history?",
+    "options": [
+      "90 days by default",
+      "30 days",
+      "Forever",
+      "Until push"
+    ],
+    "correctOptions": [
+      "90 days by default"
+    ],
+    "time": 35,
+    "details": "Reflog entries expire after 90 days."
+  },
+  {
+    "question": "Can you recover from git reset --hard?",
+    "options": [
+      "Yes via reflog",
+      "No",
+      "Only from backup",
+      "Only from remote"
+    ],
+    "correctOptions": [
+      "Yes via reflog"
+    ],
+    "time": 35,
+    "details": "Reflog can recover even after hard reset."
+  },
+  {
+    "question": "What is dangling commit?",
+    "options": [
+      "Unreachable commit",
+      "Reachable commit",
+      "Merged commit",
+      "Tagged commit"
+    ],
+    "correctOptions": [
+      "Unreachable commit"
+    ],
+    "time": 40,
+    "details": "Dangling commits have no branch/tag pointing to them."
+  },
+  {
+    "question": "What is orphaned commit?",
+    "options": [
+      "No parent commit",
+      "Has parent",
+      "Is initial",
+      "Is merge"
+    ],
+    "correctOptions": [
+      "No parent commit"
+    ],
+    "time": 40,
+    "details": "Orphan commits have no parent (like initial commit)."
+  },
+  {
+    "question": "What is git checkout?",
+    "options": [
+      "Switch branches or restore files",
+      "Delete files",
+      "Create branches",
+      "Merge branches"
+    ],
+    "correctOptions": [
+      "Switch branches or restore files"
+    ],
+    "time": 30,
+    "details": "git checkout switches branches or restores files."
+  }
+]

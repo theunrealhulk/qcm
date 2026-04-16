@@ -1,0 +1,1402 @@
+[
+  {
+    "question": "What is a git alias?",
+    "options": [
+      "Shortcut for commands",
+      "Branch name",
+      "Remote name",
+      "Commit reference"
+    ],
+    "correctOptions": [
+      "Shortcut for commands"
+    ],
+    "time": 25,
+    "details": "Aliases create shortcuts for longer commands."
+  },
+  {
+    "question": "How do you create an alias?",
+    "options": [
+      "git config --global alias.co checkout",
+      "git alias co checkout",
+      "alias git.co checkout",
+      "git set alias co checkout"
+    ],
+    "correctOptions": [
+      "git config --global alias.co checkout"
+    ],
+    "time": 30,
+    "details": "git config alias creates command aliases."
+  },
+  {
+    "question": "What is git stash?",
+    "options": [
+      "Temporarily save work",
+      "Delete work",
+      "Share work",
+      "Publish work"
+    ],
+    "correctOptions": [
+      "Temporarily save work"
+    ],
+    "time": 25,
+    "details": "Stash temporarily shelves changes for later use."
+  },
+  {
+    "question": "How do you stash changes?",
+    "options": [
+      "git stash",
+      "git save",
+      "git push",
+      "git store"
+    ],
+    "correctOptions": [
+      "git stash"
+    ],
+    "time": 20,
+    "details": "git stash saves uncommitted changes temporarily."
+  },
+  {
+    "question": "How do you apply stashed changes?",
+    "options": [
+      "git stash apply",
+      "git stash get",
+      "git stash pop",
+      "Both apply and pop work"
+    ],
+    "correctOptions": [
+      "Both apply and pop work"
+    ],
+    "time": 25,
+    "details": "apply keeps stash, pop applies and removes it."
+  },
+  {
+    "question": "What is the difference between stash pop and apply?",
+    "options": [
+      "pop removes stash, apply keeps it",
+      "apply removes stash, pop keeps it",
+      "Both remove",
+      "Neither removes"
+    ],
+    "correctOptions": [
+      "pop removes stash, apply keeps it"
+    ],
+    "time": 30,
+    "details": "pop removes the stash after applying; apply keeps it."
+  },
+  {
+    "question": "How do you stash with a message?",
+    "options": [
+      "git stash push -m 'message'",
+      "git stash -m 'message'",
+      "git stash save 'message'",
+      "Both push and save work"
+    ],
+    "correctOptions": [
+      "Both push and save work"
+    ],
+    "time": 30,
+    "details": "Both -m and save create a stashed change with message."
+  },
+  {
+    "question": "How do you list stashes?",
+    "options": [
+      "git stash list",
+      "git stash show",
+      "git stash display",
+      "git stash all"
+    ],
+    "correctOptions": [
+      "git stash list"
+    ],
+    "time": 20,
+    "details": "git stash list shows all stashed changes."
+  },
+  {
+    "question": "What does git stash show display?",
+    "options": [
+      "Changes in stash",
+      "Stash list",
+      "Stash count",
+      "Stash message"
+    ],
+    "correctOptions": [
+      "Changes in stash"
+    ],
+    "time": 25,
+    "details": "git stash show displays what was stashed."
+  },
+  {
+    "question": "How do you delete a stash?",
+    "options": [
+      "git stash drop stash@{n}",
+      "git stash remove stash@{n}",
+      "git stash delete stash@{n}",
+      "git stash clear stash@{n}"
+    ],
+    "correctOptions": [
+      "git stash drop stash@{n}"
+    ],
+    "time": 30,
+    "details": "git stash drop removes a specific stash."
+  },
+  {
+    "question": "How do you clear all stashes?",
+    "options": [
+      "git stash clear",
+      "git stash drop all",
+      "git stash remove all",
+      "git stash delete all"
+    ],
+    "correctOptions": [
+      "git stash clear"
+    ],
+    "time": 25,
+    "details": "git stash clear removes all stashed changes."
+  },
+  {
+    "question": "What is stash@{0}?",
+    "options": [
+      "Most recent stash",
+      "Oldest stash",
+      "First stash",
+      "Named stash"
+    ],
+    "correctOptions": [
+      "Most recent stash"
+    ],
+    "time": 25,
+    "details": "Stash@{0} is the most recent stash entry."
+  },
+  {
+    "question": "How do you stash specific files?",
+    "options": [
+      "git stash push -m 'msg' file1 file2",
+      "git stash file1 file2",
+      "git stash only file1 file2",
+      "git stash add file1 file2"
+    ],
+    "correctOptions": [
+      "git stash push -m 'msg' file1 file2"
+    ],
+    "time": 35,
+    "details": "Specify files after -- for selective stashing."
+  },
+  {
+    "question": "What does -u flag do with stash?",
+    "options": [
+      "Include untracked files",
+      "Update stash",
+      "Use message",
+      "Unstage stash"
+    ],
+    "correctOptions": [
+      "Include untracked files"
+    ],
+    "time": 35,
+    "details": "-u (--include-untracked) adds new files to stash."
+  },
+  {
+    "question": "What does -a flag do with stash?",
+    "options": [
+      "Include ignored files",
+      "All branches",
+      "All stashes",
+      "All commits"
+    ],
+    "correctOptions": [
+      "Include ignored files"
+    ],
+    "time": 35,
+    "details": "-a (--all) includes .gitignore'd files in stash."
+  },
+  {
+    "question": "What is git stash branch?",
+    "options": [
+      "Create branch from stash",
+      "Stash current branch",
+      "Switch branch",
+      "Delete branch"
+    ],
+    "correctOptions": [
+      "Create branch from stash"
+    ],
+    "time": 35,
+    "details": "stash branch creates a new branch and applies stash."
+  },
+  {
+    "question": "What does git stash branch name stash@{n} do?",
+    "options": [
+      "New branch with stashed changes",
+      "Stash to branch",
+      "Branch to stash",
+      "Delete branch to stash"
+    ],
+    "correctOptions": [
+      "New branch with stashed changes"
+    ],
+    "time": 40,
+    "details": "Creates branch and applies selected stash to it."
+  },
+  {
+    "question": "Can you apply stash to different branch?",
+    "options": [
+      "Yes",
+      "No",
+      "Only same branch",
+      "Only main branch"
+    ],
+    "correctOptions": [
+      "Yes"
+    ],
+    "time": 25,
+    "details": "Stashes can be applied to any branch."
+  },
+  {
+    "question": "What happens to staged changes when you stash?",
+    "options": [
+      "Gets stashed with changes",
+      "Gets unstaged",
+      "Gets committed",
+      "Gets lost"
+    ],
+    "correctOptions": [
+      "Gets stashed with changes"
+    ],
+    "time": 35,
+    "details": "Stashing includes both staged and unstaged changes."
+  },
+  {
+    "question": "How do you stash untracked files only?",
+    "options": [
+      "git stash -u",
+      "git stash --tracked",
+      "git stash only-untracked",
+      "git stash -only"
+    ],
+    "correctOptions": [
+      "git stash -u"
+    ],
+    "time": 35,
+    "details": "-u stashes untracked files along with changes."
+  },
+  {
+    "question": "What is the stash reference format?",
+    "options": [
+      "stash@{n}",
+      "stash^n",
+      "stash~n",
+      "stash:n"
+    ],
+    "correctOptions": [
+      "stash@{n}"
+    ],
+    "time": 25,
+    "details": "Stash references use the stash@{n} format."
+  },
+  {
+    "question": "How many stashes can you have?",
+    "options": [
+      "Unlimited",
+      "10",
+      "50",
+      "100"
+    ],
+    "correctOptions": [
+      "Unlimited"
+    ],
+    "time": 20,
+    "details": "You can have unlimited stashes."
+  },
+  {
+    "question": "What is git clean?",
+    "options": [
+      "Remove untracked files",
+      "Remove tracked files",
+      "Remove commits",
+      "Remove branches"
+    ],
+    "correctOptions": [
+      "Remove untracked files"
+    ],
+    "time": 25,
+    "details": "git clean removes untracked files from working directory."
+  },
+  {
+    "question": "What does git clean -n do?",
+    "options": [
+      "Preview what would be deleted",
+      "Delete nothing",
+      "Force delete",
+      "Delete all"
+    ],
+    "correctOptions": [
+      "Preview what would be deleted"
+    ],
+    "time": 30,
+    "details": "-n (--dry-run) shows what would be deleted."
+  },
+  {
+    "question": "What does git clean -f do?",
+    "options": [
+      "Force delete untracked",
+      "No delete",
+      "Preview delete",
+      "Directory delete"
+    ],
+    "correctOptions": [
+      "Force delete untracked"
+    ],
+    "time": 30,
+    "details": "-f (--force) is required to actually delete."
+  },
+  {
+    "question": "What does git clean -d do?",
+    "options": [
+      "Remove directories too",
+      "Files only",
+      "Recursive only",
+      "No effect"
+    ],
+    "correctOptions": [
+      "Remove directories too"
+    ],
+    "time": 30,
+    "details": "-d also removes untracked directories."
+  },
+  {
+    "question": "What is git clean -x?",
+    "options": [
+      "Include ignored files",
+      "Exclude ignored files",
+      "Only ignored",
+      "Skip ignored"
+    ],
+    "correctOptions": [
+      "Include ignored files"
+    ],
+    "time": 35,
+    "details": "-x removes files ignored by .gitignore too."
+  },
+  {
+    "question": "What is git clean -X?",
+    "options": [
+      "Only ignored files",
+      "All files",
+      "No ignored",
+      "Some ignored"
+    ],
+    "correctOptions": [
+      "Only ignored files"
+    ],
+    "time": 35,
+    "details": "-X removes only .gitignore'd files."
+  },
+  {
+    "question": "What is the -i flag for git clean?",
+    "options": [
+      "Interactive mode",
+      "Include all",
+      "Ignore errors",
+      "Immediate"
+    ],
+    "correctOptions": [
+      "Interactive mode"
+    ],
+    "time": 35,
+    "details": "-i opens interactive clean mode."
+  },
+  {
+    "question": "What does git clean require?",
+    "options": [
+      "-f flag",
+      "-n flag",
+      "-d flag",
+      "-i flag"
+    ],
+    "correctOptions": [
+      "-f flag"
+    ],
+    "time": 30,
+    "details": "clean refuses to run without -f unless config requires."
+  },
+  {
+    "question": "What is git reflog?",
+    "options": [
+      "Reference log of operations",
+      "Remote log",
+      "Repository log",
+      "Commit log"
+    ],
+    "correctOptions": [
+      "Reference log of operations"
+    ],
+    "time": 30,
+    "details": "Reflog records all changes to HEAD and branches."
+  },
+  {
+    "question": "How do you view reflog?",
+    "options": [
+      "git reflog",
+      "git log",
+      "git show",
+      "git status"
+    ],
+    "correctOptions": [
+      "git reflog"
+    ],
+    "time": 25,
+    "details": "git reflog shows history of HEAD movements."
+  },
+  {
+    "question": "What does reflog show?",
+    "options": [
+      "All HEAD movements with hash",
+      "Only commits",
+      "Only branches",
+      "Only merges"
+    ],
+    "correctOptions": [
+      "All HEAD movements with hash"
+    ],
+    "time": 35,
+    "details": "Reflog shows all operations with commit hashes."
+  },
+  {
+    "question": "What is reflog used for?",
+    "options": [
+      "Recover lost commits",
+      "Delete commits",
+      "Push commits",
+      "Merge commits"
+    ],
+    "correctOptions": [
+      "Recover lost commits"
+    ],
+    "time": 30,
+    "details": "Reflog can recover commits after reset/rebase."
+  },
+  {
+    "question": "How long do reflog entries last?",
+    "options": [
+      "90 days default",
+      "30 days",
+      "Forever",
+      "Until push"
+    ],
+    "correctOptions": [
+      "90 days default"
+    ],
+    "time": 30,
+    "details": "Reflog entries expire after 90 days."
+  },
+  {
+    "question": "Can you recover from git reset --hard?",
+    "options": [
+      "Yes via reflog",
+      "No",
+      "Only from backup",
+      "Only from remote"
+    ],
+    "correctOptions": [
+      "Yes via reflog"
+    ],
+    "time": 35,
+    "details": "Reflog allows recovery even after hard reset."
+  },
+  {
+    "question": "What is the reflog format?",
+    "options": [
+      "hash HEAD@{n} action",
+      "commit action",
+      "action hash",
+      "HEAD action"
+    ],
+    "correctOptions": [
+      "hash HEAD@{n} action"
+    ],
+    "time": 40,
+    "details": "Entries show hash, position, and action performed."
+  },
+  {
+    "question": "What does HEAD@{n} mean?",
+    "options": [
+      "nth previous HEAD position",
+      "nth commit",
+      "nth branch",
+      "nth stash"
+    ],
+    "correctOptions": [
+      "nth previous HEAD position"
+    ],
+    "time": 35,
+    "details": "Reflog references use the HEAD@{n} format."
+  },
+  {
+    "question": "How do you checkout from reflog?",
+    "options": [
+      "git checkout HEAD@{n}",
+      "git reflog checkout",
+      "git go HEAD@{n}",
+      "git reset HEAD@{n}"
+    ],
+    "correctOptions": [
+      "git checkout HEAD@{n}"
+    ],
+    "time": 35,
+    "details": "git checkout HEAD@{n} restores that reflog state."
+  },
+  {
+    "question": "How do you reset to reflog entry?",
+    "options": [
+      "git reset --hard HEAD@{n}",
+      "git reflog reset",
+      "git reset HEAD@{n}",
+      "git checkout --hard HEAD@{n}"
+    ],
+    "correctOptions": [
+      "git reset --hard HEAD@{n}"
+    ],
+    "time": 40,
+    "details": "git reset --hard HEAD@{n} restores that state."
+  },
+  {
+    "question": "Is reflog shared with remote?",
+    "options": [
+      "No",
+      "Yes",
+      "Only with --shared",
+      "Depends on config"
+    ],
+    "correctOptions": [
+      "No"
+    ],
+    "time": 35,
+    "details": "Reflog is local only, not pushed to remote."
+  },
+  {
+    "question": "What is git bisect?",
+    "options": [
+      "Binary search for bugs",
+      "Compare branches",
+      "List commits",
+      "Clean history"
+    ],
+    "correctOptions": [
+      "Binary search for bugs"
+    ],
+    "time": 40,
+    "details": "git bisect finds which commit introduced a bug."
+  },
+  {
+    "question": "How do you start git bisect?",
+    "options": [
+      "git bisect start",
+      "git bisect begin",
+      "git bisect new",
+      "git bisect go"
+    ],
+    "correctOptions": [
+      "git bisect start"
+    ],
+    "time": 35,
+    "details": "git bisect start begins binary search."
+  },
+  {
+    "question": "What does git bisect good do?",
+    "options": [
+      "Mark commit as working",
+      "Mark as broken",
+      "Skip commit",
+      "End bisect"
+    ],
+    "correctOptions": [
+      "Mark commit as working"
+    ],
+    "time": 35,
+    "details": "git bisect good marks current commit as working."
+  },
+  {
+    "question": "What does git bisect bad do?",
+    "options": [
+      "Mark commit as broken",
+      "Mark as working",
+      "Skip commit",
+      "End bisect"
+    ],
+    "correctOptions": [
+      "Mark commit as broken"
+    ],
+    "time": 35,
+    "details": "git bisect bad marks current commit as broken."
+  },
+  {
+    "question": "How do you end git bisect?",
+    "options": [
+      "git bisect reset",
+      "git bisect end",
+      "git bisect stop",
+      "git bisect quit"
+    ],
+    "correctOptions": [
+      "git bisect reset"
+    ],
+    "time": 35,
+    "details": "git bisect reset returns to original HEAD."
+  },
+  {
+    "question": "What is git cherry-pick?",
+    "options": [
+      "Apply specific commit",
+      "Delete commit",
+      "Merge branch",
+      "Rebase branch"
+    ],
+    "correctOptions": [
+      "Apply specific commit"
+    ],
+    "time": 30,
+    "details": "cherry-pick applies changes from a specific commit."
+  },
+  {
+    "question": "How do you cherry-pick a commit?",
+    "options": [
+      "git cherry-pick commit-hash",
+      "git pick commit-hash",
+      "git cherry commit-hash",
+      "git apply commit-hash"
+    ],
+    "correctOptions": [
+      "git cherry-pick commit-hash"
+    ],
+    "time": 30,
+    "details": "git cherry-pick applies that commit's changes."
+  },
+  {
+    "question": "What does cherry-pick create?",
+    "options": [
+      "New commit with same changes",
+      "Same commit",
+      "Branch",
+      "Tag"
+    ],
+    "correctOptions": [
+      "New commit with same changes"
+    ],
+    "time": 35,
+    "details": "Cherry-pick creates a new commit with changes."
+  },
+  {
+    "question": "How do you cherry-pick multiple commits?",
+    "options": [
+      "git cherry-pick commit1 commit2",
+      "git cherry-pick range commit1..commit2",
+      "Both methods work",
+      "git multi-pick"
+    ],
+    "correctOptions": [
+      "Both methods work"
+    ],
+    "time": 40,
+    "details": "List commits or use range for multiple."
+  },
+  {
+    "question": "What does -n flag do in cherry-pick?",
+    "options": [
+      "Don't commit after pick",
+      "New commit",
+      "No message",
+      "No changes"
+    ],
+    "correctOptions": [
+      "Don't commit after pick"
+    ],
+    "time": 40,
+    "details": "-n (--no-commit) applies changes without committing."
+  },
+  {
+    "question": "What does -x flag do in cherry-pick?",
+    "options": [
+      "Add reference to original",
+      "Exit cherry-pick",
+      "Execute command",
+      "Skip commit"
+    ],
+    "correctOptions": [
+      "Add reference to original"
+    ],
+    "time": 40,
+    "details": "-x adds a note about original commit."
+  },
+  {
+    "question": "What is git revert?",
+    "options": [
+      "Undo commit by creating new",
+      "Delete commit",
+      "Reset to commit",
+      "Reapply commit"
+    ],
+    "correctOptions": [
+      "Undo commit by creating new"
+    ],
+    "time": 30,
+    "details": "Revert creates a new commit that undoes changes."
+  },
+  {
+    "question": "What is difference between revert and reset?",
+    "options": [
+      "Revert creates new, reset removes",
+      "Both create new",
+      "Both remove",
+      "No difference"
+    ],
+    "correctOptions": [
+      "Revert creates new, reset removes"
+    ],
+    "time": 40,
+    "details": "Revert is safe for shared branches; reset is not."
+  },
+  {
+    "question": "How do you revert a commit?",
+    "options": [
+      "git revert commit-hash",
+      "git undo commit-hash",
+      "git back commit-hash",
+      "git cancel commit-hash"
+    ],
+    "correctOptions": [
+      "git revert commit-hash"
+    ],
+    "time": 30,
+    "details": "git revert undoes the specified commit."
+  },
+  {
+    "question": "What does --no-commit do in revert?",
+    "options": [
+      "Don't auto-commit",
+      "Commit anyway",
+      "Skip commit",
+      "Abort"
+    ],
+    "correctOptions": [
+      "Don't auto-commit"
+    ],
+    "time": 40,
+    "details": "--no-commit lets you review before committing."
+  },
+  {
+    "question": "Can you revert a merge commit?",
+    "options": [
+      "Yes with -m flag",
+      "No never",
+      "Only revert parent",
+      "Only revert child"
+    ],
+    "correctOptions": [
+      "Yes with -m flag"
+    ],
+    "time": 45,
+    "details": "Merge commits need -m to specify which parent."
+  },
+  {
+    "question": "What does -m 1 mean in revert?",
+    "options": [
+      "Keep first parent's changes",
+      "Keep second",
+      "Skip first",
+      "Skip second"
+    ],
+    "correctOptions": [
+      "Keep first parent's changes"
+    ],
+    "time": 45,
+    "details": "-m 1 specifies the mainline (usually master)."
+  },
+  {
+    "question": "What is git describe?",
+    "options": [
+      "Describe relative position",
+      "Show commit",
+      "Show branch",
+      "Show remote"
+    ],
+    "correctOptions": [
+      "Describe relative position"
+    ],
+    "time": 40,
+    "details": "git describe shows nearest tag and commits."
+  },
+  {
+    "question": "What is git shortlog?",
+    "options": [
+      "Commits grouped by author",
+      "Short commits",
+      "Short branches",
+      "Short status"
+    ],
+    "correctOptions": [
+      "Commits grouped by author"
+    ],
+    "time": 35,
+    "details": "shortlog summarizes commits by author."
+  },
+  {
+    "question": "What does -s flag do in shortlog?",
+    "options": [
+      "Suppress descriptions",
+      "Show all",
+      "Sort by name",
+      "Group by branch"
+    ],
+    "correctOptions": [
+      "Suppress descriptions"
+    ],
+    "time": 40,
+    "details": "-s shows only commit count per author."
+  },
+  {
+    "question": "What does -n flag do in shortlog?",
+    "options": [
+      "Sort by number",
+      "No sort",
+      "Newest first",
+      "Oldest first"
+    ],
+    "correctOptions": [
+      "Sort by number"
+    ],
+    "time": 40,
+    "details": "-n sorts by number of commits."
+  },
+  {
+    "question": "What is git blame?",
+    "options": [
+      "Show who changed each line",
+      "Blame others",
+      "Show conflicts",
+      "Delete file"
+    ],
+    "correctOptions": [
+      "Show who changed each line"
+    ],
+    "time": 30,
+    "details": "git blame shows who last modified each line."
+  },
+  {
+    "question": "What does -L flag do in blame?",
+    "options": [
+      "Limit to line range",
+      "List all",
+      "Show log",
+      "Show diff"
+    ],
+    "correctOptions": [
+      "Limit to line range"
+    ],
+    "time": 40,
+    "details": "-L lets you specify line numbers to examine."
+  },
+  {
+    "question": "What does -e flag do in blame?",
+    "options": [
+      "Show author email",
+      "Show only",
+      "Edit blame",
+      "End blame"
+    ],
+    "correctOptions": [
+      "Show author email"
+    ],
+    "time": 40,
+    "details": "-e shows author email in output."
+  },
+  {
+    "question": "What is git stash pop vs apply?",
+    "options": [
+      "Pop removes stash, apply keeps",
+      "Apply removes, pop keeps",
+      "Both remove",
+      "Both keep"
+    ],
+    "correctOptions": [
+      "Pop removes stash, apply keeps"
+    ],
+    "time": 35,
+    "details": "Choose pop when done with stash; apply to keep."
+  },
+  {
+    "question": "What is a git alias?",
+    "options": [
+      "Shortcut for commands",
+      "Branch name",
+      "Remote name",
+      "Commit reference"
+    ],
+    "correctOptions": [
+      "Shortcut for commands"
+    ],
+    "time": 25,
+    "details": "Aliases create shortcuts for longer commands."
+  },
+  {
+    "question": "How do you create an alias?",
+    "options": [
+      "git config --global alias.co checkout",
+      "git alias co checkout",
+      "alias git.co checkout",
+      "git set alias co checkout"
+    ],
+    "correctOptions": [
+      "git config --global alias.co checkout"
+    ],
+    "time": 30,
+    "details": "git config alias creates command aliases."
+  },
+  {
+    "question": "What is git stash?",
+    "options": [
+      "Temporarily save work",
+      "Delete work",
+      "Share work",
+      "Publish work"
+    ],
+    "correctOptions": [
+      "Temporarily save work"
+    ],
+    "time": 25,
+    "details": "Stash temporarily shelves changes for later use."
+  },
+  {
+    "question": "How do you stash changes?",
+    "options": [
+      "git stash",
+      "git save",
+      "git push",
+      "git store"
+    ],
+    "correctOptions": [
+      "git stash"
+    ],
+    "time": 20,
+    "details": "git stash saves uncommitted changes temporarily."
+  },
+  {
+    "question": "How do you apply stashed changes?",
+    "options": [
+      "git stash apply",
+      "git stash get",
+      "git stash pop",
+      "Both apply and pop work"
+    ],
+    "correctOptions": [
+      "Both apply and pop work"
+    ],
+    "time": 25,
+    "details": "apply keeps stash, pop applies and removes it."
+  },
+  {
+    "question": "What is the difference between stash pop and apply?",
+    "options": [
+      "pop removes stash, apply keeps it",
+      "apply removes stash, pop keeps it",
+      "Both remove",
+      "Neither removes"
+    ],
+    "correctOptions": [
+      "pop removes stash, apply keeps it"
+    ],
+    "time": 30,
+    "details": "pop removes the stash after applying; apply keeps it."
+  },
+  {
+    "question": "How do you stash with a message?",
+    "options": [
+      "git stash push -m 'message'",
+      "git stash -m 'message'",
+      "git stash save 'message'",
+      "Both push and save work"
+    ],
+    "correctOptions": [
+      "Both push and save work"
+    ],
+    "time": 30,
+    "details": "Both -m and save create a stashed change with message."
+  },
+  {
+    "question": "How do you list stashes?",
+    "options": [
+      "git stash list",
+      "git stash show",
+      "git stash display",
+      "git stash all"
+    ],
+    "correctOptions": [
+      "git stash list"
+    ],
+    "time": 20,
+    "details": "git stash list shows all stashed changes."
+  },
+  {
+    "question": "What does git stash show display?",
+    "options": [
+      "Changes in stash",
+      "Stash list",
+      "Stash count",
+      "Stash message"
+    ],
+    "correctOptions": [
+      "Changes in stash"
+    ],
+    "time": 25,
+    "details": "git stash show displays what was stashed."
+  },
+  {
+    "question": "How do you delete a stash?",
+    "options": [
+      "git stash drop stash@{n}",
+      "git stash remove stash@{n}",
+      "git stash delete stash@{n}",
+      "git stash clear stash@{n}"
+    ],
+    "correctOptions": [
+      "git stash drop stash@{n}"
+    ],
+    "time": 30,
+    "details": "git stash drop removes a specific stash."
+  },
+  {
+    "question": "How do you clear all stashes?",
+    "options": [
+      "git stash clear",
+      "git stash drop all",
+      "git stash remove all",
+      "git stash delete all"
+    ],
+    "correctOptions": [
+      "git stash clear"
+    ],
+    "time": 25,
+    "details": "git stash clear removes all stashed changes."
+  },
+  {
+    "question": "What is stash@{0}?",
+    "options": [
+      "Most recent stash",
+      "Oldest stash",
+      "First stash",
+      "Named stash"
+    ],
+    "correctOptions": [
+      "Most recent stash"
+    ],
+    "time": 25,
+    "details": "Stash@{0} is the most recent stash entry."
+  },
+  {
+    "question": "How do you stash specific files?",
+    "options": [
+      "git stash push -m 'msg' file1 file2",
+      "git stash file1 file2",
+      "git stash only file1 file2",
+      "git stash add file1 file2"
+    ],
+    "correctOptions": [
+      "git stash push -m 'msg' file1 file2"
+    ],
+    "time": 35,
+    "details": "Specify files after -- for selective stashing."
+  },
+  {
+    "question": "What does -u flag do with stash?",
+    "options": [
+      "Include untracked files",
+      "Update stash",
+      "Use message",
+      "Unstage stash"
+    ],
+    "correctOptions": [
+      "Include untracked files"
+    ],
+    "time": 35,
+    "details": "-u (--include-untracked) adds new files to stash."
+  },
+  {
+    "question": "What does -a flag do with stash?",
+    "options": [
+      "Include ignored files",
+      "All branches",
+      "All stashes",
+      "All commits"
+    ],
+    "correctOptions": [
+      "Include ignored files"
+    ],
+    "time": 35,
+    "details": "-a (--all) includes .gitignore'd files in stash."
+  },
+  {
+    "question": "What is git stash branch?",
+    "options": [
+      "Create branch from stash",
+      "Stash current branch",
+      "Switch branch",
+      "Delete branch"
+    ],
+    "correctOptions": [
+      "Create branch from stash"
+    ],
+    "time": 35,
+    "details": "stash branch creates a new branch and applies stash."
+  },
+  {
+    "question": "What does git stash branch name stash@{n} do?",
+    "options": [
+      "New branch with stashed changes",
+      "Stash to branch",
+      "Branch to stash",
+      "Delete branch to stash"
+    ],
+    "correctOptions": [
+      "New branch with stashed changes"
+    ],
+    "time": 40,
+    "details": "Creates branch and applies selected stash to it."
+  },
+  {
+    "question": "Can you apply stash to different branch?",
+    "options": [
+      "Yes",
+      "No",
+      "Only same branch",
+      "Only main branch"
+    ],
+    "correctOptions": [
+      "Yes"
+    ],
+    "time": 25,
+    "details": "Stashes can be applied to any branch."
+  },
+  {
+    "question": "What happens to staged changes when you stash?",
+    "options": [
+      "Gets stashed with changes",
+      "Gets unstaged",
+      "Gets committed",
+      "Gets lost"
+    ],
+    "correctOptions": [
+      "Gets stashed with changes"
+    ],
+    "time": 35,
+    "details": "Stashing includes both staged and unstaged changes."
+  },
+  {
+    "question": "How do you stash untracked files only?",
+    "options": [
+      "git stash -u",
+      "git stash --tracked",
+      "git stash only-untracked",
+      "git stash -only"
+    ],
+    "correctOptions": [
+      "git stash -u"
+    ],
+    "time": 35,
+    "details": "-u stashes untracked files along with changes."
+  },
+  {
+    "question": "What is the stash reference format?",
+    "options": [
+      "stash@{n}",
+      "stash^n",
+      "stash~n",
+      "stash:n"
+    ],
+    "correctOptions": [
+      "stash@{n}"
+    ],
+    "time": 25,
+    "details": "Stash references use the stash@{n} format."
+  },
+  {
+    "question": "How many stashes can you have?",
+    "options": [
+      "Unlimited",
+      "10",
+      "50",
+      "100"
+    ],
+    "correctOptions": [
+      "Unlimited"
+    ],
+    "time": 20,
+    "details": "You can have unlimited stashes."
+  },
+  {
+    "question": "What is git clean?",
+    "options": [
+      "Remove untracked files",
+      "Remove tracked files",
+      "Remove commits",
+      "Remove branches"
+    ],
+    "correctOptions": [
+      "Remove untracked files"
+    ],
+    "time": 25,
+    "details": "git clean removes untracked files from working directory."
+  },
+  {
+    "question": "What does git clean -n do?",
+    "options": [
+      "Preview what would be deleted",
+      "Delete nothing",
+      "Force delete",
+      "Delete all"
+    ],
+    "correctOptions": [
+      "Preview what would be deleted"
+    ],
+    "time": 30,
+    "details": "-n (--dry-run) shows what would be deleted."
+  },
+  {
+    "question": "What does git clean -f do?",
+    "options": [
+      "Force delete untracked",
+      "No delete",
+      "Preview delete",
+      "Directory delete"
+    ],
+    "correctOptions": [
+      "Force delete untracked"
+    ],
+    "time": 30,
+    "details": "-f (--force) is required to actually delete."
+  },
+  {
+    "question": "What does git clean -d do?",
+    "options": [
+      "Remove directories too",
+      "Files only",
+      "Recursive only",
+      "No effect"
+    ],
+    "correctOptions": [
+      "Remove directories too"
+    ],
+    "time": 30,
+    "details": "-d also removes untracked directories."
+  },
+  {
+    "question": "What is git clean -x?",
+    "options": [
+      "Include ignored files",
+      "Exclude ignored files",
+      "Only ignored",
+      "Skip ignored"
+    ],
+    "correctOptions": [
+      "Include ignored files"
+    ],
+    "time": 35,
+    "details": "-x removes files ignored by .gitignore too."
+  },
+  {
+    "question": "What is git clean -X?",
+    "options": [
+      "Only ignored files",
+      "All files",
+      "No ignored",
+      "Some ignored"
+    ],
+    "correctOptions": [
+      "Only ignored files"
+    ],
+    "time": 35,
+    "details": "-X removes only .gitignore'd files."
+  },
+  {
+    "question": "What is git stash?",
+    "options": [
+      "Temporarily save work",
+      "Delete work",
+      "Share work",
+      "Publish work"
+    ],
+    "correctOptions": [
+      "Temporarily save work"
+    ],
+    "time": 25,
+    "details": "Stash temporarily shelves changes for later use."
+  },
+  {
+    "question": "How do you stash changes?",
+    "options": [
+      "git stash",
+      "git save",
+      "git push",
+      "git store"
+    ],
+    "correctOptions": [
+      "git stash"
+    ],
+    "time": 20,
+    "details": "git stash saves uncommitted changes temporarily."
+  },
+  {
+    "question": "How do you apply stashed changes?",
+    "options": [
+      "git stash apply",
+      "git stash get",
+      "git stash pop",
+      "Both apply and pop work"
+    ],
+    "correctOptions": [
+      "Both apply and pop work"
+    ],
+    "time": 25,
+    "details": "apply keeps stash, pop applies and removes it."
+  },
+  {
+    "question": "How do you list stashes?",
+    "options": [
+      "git stash list",
+      "git stash show",
+      "git stash display",
+      "git stash all"
+    ],
+    "correctOptions": [
+      "git stash list"
+    ],
+    "time": 20,
+    "details": "git stash list shows all stashed changes."
+  },
+  {
+    "question": "How do you delete a stash?",
+    "options": [
+      "git stash drop stash@{n}",
+      "git stash remove stash@{n}",
+      "git stash delete stash@{n}",
+      "git stash clear stash@{n}"
+    ],
+    "correctOptions": [
+      "git stash drop stash@{n}"
+    ],
+    "time": 30,
+    "details": "git stash drop removes a specific stash."
+  },
+  {
+    "question": "What is stash@{0}?",
+    "options": [
+      "Most recent stash",
+      "Oldest stash",
+      "First stash",
+      "Named stash"
+    ],
+    "correctOptions": [
+      "Most recent stash"
+    ],
+    "time": 25,
+    "details": "Stash@{0} is the most recent stash entry."
+  }
+]

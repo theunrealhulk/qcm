@@ -1,0 +1,1542 @@
+[
+  {
+    "question": "What is a database query builder?",
+    "options": [
+      "Fluent interface for SQL",
+      "Database driver",
+      "ORM",
+      "Migration tool"
+    ],
+    "correctOptions": [
+      "Fluent interface for SQL"
+    ],
+    "time": 30,
+    "details": "Query builder provides a fluent interface for building SQL queries."
+  },
+  {
+    "question": "How do you access the query builder?",
+    "options": [
+      "DB::table()",
+      "DB::query()",
+      "DB::select()",
+      "DB::find()"
+    ],
+    "correctOptions": [
+      "DB::table()"
+    ],
+    "time": 25,
+    "details": "DB::table() provides access to the query builder."
+  },
+  {
+    "question": "How do you select specific columns?",
+    "options": [
+      "->select('name', 'email')",
+      "->get('name', 'email')",
+      "->find('name', 'email')",
+      "->columns('name', 'email')"
+    ],
+    "correctOptions": [
+      "->select('name', 'email')"
+    ],
+    "time": 30,
+    "details": "select() specifies which columns to retrieve."
+  },
+  {
+    "question": "How do you add WHERE clause?",
+    "options": [
+      "->where('status', 'active')",
+      "->find('status', 'active')",
+      "->get('status', 'active')",
+      "->search('status', 'active')"
+    ],
+    "correctOptions": [
+      "->where('status', 'active')"
+    ],
+    "time": 25,
+    "details": "where() adds a WHERE clause to the query."
+  },
+  {
+    "question": "How do you get all results?",
+    "options": [
+      "->get()",
+      "->all()",
+      "->fetch()",
+      "->findAll()"
+    ],
+    "correctOptions": [
+      "->get()"
+    ],
+    "time": 25,
+    "details": "get() retrieves all matching records."
+  },
+  {
+    "question": "How do you get first result?",
+    "options": [
+      "->first()",
+      "->one()",
+      "->single()",
+      "->findFirst()"
+    ],
+    "correctOptions": [
+      "->first()"
+    ],
+    "time": 25,
+    "details": "first() retrieves the first matching record."
+  },
+  {
+    "question": "What does ->count() return?",
+    "options": [
+      "Number of records",
+      "All records",
+      "First record",
+      "Last record"
+    ],
+    "correctOptions": [
+      "Number of records"
+    ],
+    "time": 25,
+    "details": "count() returns the number of matching records."
+  },
+  {
+    "question": "What does ->exists() check?",
+    "options": [
+      "Records exist",
+      "Record is unique",
+      "Record is valid",
+      "Record is new"
+    ],
+    "correctOptions": [
+      "Records exist"
+    ],
+    "time": 30,
+    "details": "exists() returns true if records match the query."
+  },
+  {
+    "question": "How do you use OR in WHERE?",
+    "options": [
+      "->where('status', 'active')->orWhere('status', 'pending')",
+      "->where('status', 'active')->or('status', 'pending')",
+      "->where('status', 'active')->also('status', 'pending')",
+      "->where('status', 'active')->plus('status', 'pending')"
+    ],
+    "correctOptions": [
+      "->where('status', 'active')->orWhere('status', 'pending')"
+    ],
+    "time": 35,
+    "details": "orWhere() adds an OR condition to the query."
+  },
+  {
+    "question": "How do you use WHERE IN?",
+    "options": [
+      "->whereIn('id', [1, 2, 3])",
+      "->where('id', [1, 2, 3])",
+      "->whereIn('id', '1,2,3')",
+      "->inWhere('id', [1, 2, 3])"
+    ],
+    "correctOptions": [
+      "->whereIn('id', [1, 2, 3])"
+    ],
+    "time": 30,
+    "details": "whereIn() checks if value is in an array."
+  },
+  {
+    "question": "How do you use WHERE BETWEEN?",
+    "options": [
+      "->whereBetween('age', [18, 30])",
+      "->where('age', [18, 30])",
+      "->between('age', 18, 30)",
+      "->whereAge([18, 30])"
+    ],
+    "correctOptions": [
+      "->whereBetween('age', [18, 30])"
+    ],
+    "time": 30,
+    "details": "whereBetween() checks if value is within a range."
+  },
+  {
+    "question": "What is a JOIN in query builder?",
+    "options": [
+      "Combine tables",
+      "Split tables",
+      "Delete records",
+      "Update records"
+    ],
+    "correctOptions": [
+      "Combine tables"
+    ],
+    "time": 30,
+    "details": "JOIN combines related tables in a query."
+  },
+  {
+    "question": "How do you do an INNER JOIN?",
+    "options": [
+      "->join('orders', 'users.id', '=', 'orders.user_id')",
+      "->inner('orders', 'users.id', '=', 'orders.user_id')",
+      "->combine('orders', 'users.id', '=', 'orders.user_id')",
+      "->link('orders', 'users.id', '=', 'orders.user_id')"
+    ],
+    "correctOptions": [
+      "->join('orders', 'users.id', '=', 'orders.user_id')"
+    ],
+    "time": 35,
+    "details": "join() performs an INNER JOIN by default."
+  },
+  {
+    "question": "How do you do a LEFT JOIN?",
+    "options": [
+      "->leftJoin('orders', 'users.id', '=', 'orders.user_id')",
+      "->joinLeft('orders', 'users.id', '=', 'orders.user_id')",
+      "->left('orders', 'users.id', '=', 'orders.user_id')",
+      "->join('orders', 'users.id', '=', 'orders.user_id', 'LEFT')"
+    ],
+    "correctOptions": [
+      "->leftJoin('orders', 'users.id', '=', 'orders.user_id')"
+    ],
+    "time": 35,
+    "details": "leftJoin() performs a LEFT OUTER JOIN."
+  },
+  {
+    "question": "What is orderBy()?",
+    "options": [
+      "Sort results",
+      "Filter results",
+      "Group results",
+      "Limit results"
+    ],
+    "correctOptions": [
+      "Sort results"
+    ],
+    "time": 25,
+    "details": "orderBy() sorts the query results."
+  },
+  {
+    "question": "What is groupBy()?",
+    "options": [
+      "Group results by column",
+      "Sort results",
+      "Filter results",
+      "Join tables"
+    ],
+    "correctOptions": [
+      "Group results by column"
+    ],
+    "time": 30,
+    "details": "groupBy() groups results by specified column."
+  },
+  {
+    "question": "What is having()?",
+    "options": [
+      "Filter grouped results",
+      "Sort results",
+      "Join tables",
+      "Limit results"
+    ],
+    "correctOptions": [
+      "Filter grouped results"
+    ],
+    "time": 35,
+    "details": "having() filters results after grouping."
+  },
+  {
+    "question": "What is limit()?",
+    "options": [
+      "Restrict number of results",
+      "Offset results",
+      "Sort results",
+      "Group results"
+    ],
+    "correctOptions": [
+      "Restrict number of results"
+    ],
+    "time": 25,
+    "details": "limit() restricts the number of results returned."
+  },
+  {
+    "question": "What is offset()?",
+    "options": [
+      "Skip records",
+      "Take records",
+      "Limit records",
+      "Order records"
+    ],
+    "correctOptions": [
+      "Skip records"
+    ],
+    "time": 25,
+    "details": "offset() skips a number of records."
+  },
+  {
+    "question": "What is chunking?",
+    "options": [
+      "Process records in batches",
+      "Group records",
+      "Sort records",
+      "Join records"
+    ],
+    "correctOptions": [
+      "Process records in batches"
+    ],
+    "time": 35,
+    "details": "chunk() processes large result sets in smaller batches."
+  },
+  {
+    "question": "What is cursor()?",
+    "options": [
+      "Iterate with single query",
+      "Multiple queries",
+      "Full collection",
+      "Array access"
+    ],
+    "correctOptions": [
+      "Iterate with single query"
+    ],
+    "time": 35,
+    "details": "cursor() iterates using lazy loading with one query."
+  },
+  {
+    "question": "What does ->insert() do?",
+    "options": [
+      "Insert record(s)",
+      "Update record",
+      "Delete record",
+      "Select record"
+    ],
+    "correctOptions": [
+      "Insert record(s)"
+    ],
+    "time": 25,
+    "details": "insert() adds new records to the table."
+  },
+  {
+    "question": "What does ->update() do?",
+    "options": [
+      "Modify existing record",
+      "Insert new record",
+      "Delete record",
+      "Select record"
+    ],
+    "correctOptions": [
+      "Modify existing record"
+    ],
+    "time": 25,
+    "details": "update() modifies existing records."
+  },
+  {
+    "question": "What does ->delete() do?",
+    "options": [
+      "Remove record",
+      "Update record",
+      "Insert record",
+      "Select record"
+    ],
+    "correctOptions": [
+      "Remove record"
+    ],
+    "time": 25,
+    "details": "delete() removes records from the table."
+  },
+  {
+    "question": "What does ->truncate() do?",
+    "options": [
+      "Delete all records",
+      "Delete one record",
+      "Update all",
+      "Select all"
+    ],
+    "correctOptions": [
+      "Delete all records"
+    ],
+    "time": 30,
+    "details": "truncate() removes all records from the table."
+  },
+  {
+    "question": "What is Eloquent chunking?",
+    "options": [
+      "Process in batches",
+      "Join tables",
+      "Group records",
+      "Sort records"
+    ],
+    "correctOptions": [
+      "Process in batches"
+    ],
+    "time": 35,
+    "details": "chunk() processes Eloquent results in batches."
+  },
+  {
+    "question": "What is lazy collection?",
+    "options": [
+      "Lazy-loaded iteration",
+      "Eager loading",
+      "Full collection",
+      "Cached results"
+    ],
+    "correctOptions": [
+      "Lazy-loaded iteration"
+    ],
+    "time": 40,
+    "details": "Lazy collections defer loading until iteration."
+  },
+  {
+    "question": "What is eager loading?",
+    "options": [
+      "Load relationships upfront",
+      "Load on demand",
+      "Lazy loading",
+      "Manual loading"
+    ],
+    "correctOptions": [
+      "Load relationships upfront"
+    ],
+    "time": 35,
+    "details": "Eager loading prevents N+1 query problems."
+  },
+  {
+    "question": "How do you eager load relationships?",
+    "options": [
+      "->with('posts')",
+      "->load('posts')",
+      "->eager('posts')",
+      "->preload('posts')"
+    ],
+    "correctOptions": [
+      "->with('posts')"
+    ],
+    "time": 30,
+    "details": "with() eager loads specified relationships."
+  },
+  {
+    "question": "What is the N+1 problem?",
+    "options": [
+      "Multiple queries for related data",
+      "Single query",
+      "No queries",
+      "Update problem"
+    ],
+    "correctOptions": [
+      "Multiple queries for related data"
+    ],
+    "time": 40,
+    "details": "N+1 occurs when accessing related data causes many queries."
+  },
+  {
+    "question": "What is lazy eager loading?",
+    "options": [
+      "Load relationships on demand",
+      "Load upfront",
+      "Preload all",
+      "Always eager"
+    ],
+    "correctOptions": [
+      "Load relationships on demand"
+    ],
+    "time": 40,
+    "details": "load() lazy eager loads relationships after collection."
+  },
+  {
+    "question": "What is morphTo()?",
+    "options": [
+      "Polymorphic base relation",
+      "Many to many",
+      "One to one",
+      "Has many"
+    ],
+    "correctOptions": [
+      "Polymorphic base relation"
+    ],
+    "time": 40,
+    "details": "morphTo() defines a polymorphic relationship."
+  },
+  {
+    "question": "What is polymorphic relationship?",
+    "options": [
+      "Model belongs to multiple types",
+      "Single type",
+      "Many to many",
+      "One to one"
+    ],
+    "correctOptions": [
+      "Model belongs to multiple types"
+    ],
+    "time": 40,
+    "details": "Polymorphic allows a model to belong to multiple models."
+  },
+  {
+    "question": "What is morphOne()?",
+    "options": [
+      "Single polymorphic relation",
+      "Many polymorphic",
+      "Inverse morph",
+      "Parent morph"
+    ],
+    "correctOptions": [
+      "Single polymorphic relation"
+    ],
+    "time": 40,
+    "details": "morphOne() defines a single polymorphic relation."
+  },
+  {
+    "question": "What is morphMany()?",
+    "options": [
+      "Multiple polymorphic relations",
+      "Single polymorphic",
+      "Inverse morph",
+      "Parent morph"
+    ],
+    "correctOptions": [
+      "Multiple polymorphic relations"
+    ],
+    "time": 40,
+    "details": "morphMany() defines multiple polymorphic relations."
+  },
+  {
+    "question": "What is morphToMany()?",
+    "options": [
+      "Many-to-many polymorphic",
+      "One-to-one polymorphic",
+      "Many-to-one",
+      "One-to-many polymorphic"
+    ],
+    "correctOptions": [
+      "Many-to-many polymorphic"
+    ],
+    "time": 40,
+    "details": "morphToMany() defines many-to-many polymorphic."
+  },
+  {
+    "question": "What is belongsToMany with pivot?",
+    "options": [
+      "Many-to-many with extra data",
+      "Simple many-to-many",
+      "One-to-many",
+      "Polymorphic"
+    ],
+    "correctOptions": [
+      "Many-to-many with extra data"
+    ],
+    "time": 40,
+    "details": "Pivot tables can have additional columns."
+  },
+  {
+    "question": "How do you access pivot table data?",
+    "options": [
+      "$user->roles->first()->pivot->created_at",
+      "$user->roles->pivot->created_at",
+      "$user->pivot->roles->created_at",
+      "$user->roles()->pivot->created_at"
+    ],
+    "correctOptions": [
+      "$user->roles->first()->pivot->created_at"
+    ],
+    "time": 45,
+    "details": "Access pivot data through the pivot attribute."
+  },
+  {
+    "question": "What is pivot table aliasing?",
+    "options": [
+      "Custom pivot table name",
+      "Alias columns",
+      "Alias model",
+      "Join alias"
+    ],
+    "correctOptions": [
+      "Custom pivot table name"
+    ],
+    "time": 40,
+    "details": "withPivot() specifies custom pivot table columns."
+  },
+  {
+    "question": "What is eager loading constraints?",
+    "options": [
+      "Filter eager loaded data",
+      "Limit eager load",
+      "Order eager load",
+      "Group eager load"
+    ],
+    "correctOptions": [
+      "Filter eager loaded data"
+    ],
+    "time": 45,
+    "details": "Use closure to constrain eager loaded queries."
+  },
+  {
+    "question": "What is nested eager loading?",
+    "options": [
+      "Load nested relationships",
+      "Load single level",
+      "Load all",
+      "Load parent only"
+    ],
+    "correctOptions": [
+      "Load nested relationships"
+    ],
+    "time": 40,
+    "details": "Use dot notation: with('posts.comments')"
+  },
+  {
+    "question": "What is lazy eager loading?",
+    "options": [
+      "Load later on demand",
+      "Load upfront",
+      "Always eager",
+      "No loading"
+    ],
+    "correctOptions": [
+      "Load later on demand"
+    ],
+    "time": 40,
+    "details": "load() loads relationships after collection creation."
+  },
+  {
+    "question": "What is relationship count?",
+    "options": [
+      "Count related records",
+      "Sum values",
+      "Average values",
+      "Max values"
+    ],
+    "correctOptions": [
+      "Count related records"
+    ],
+    "time": 35,
+    "details": "withCount() adds relationship counts."
+  },
+  {
+    "question": "What does 'posts_count' represent?",
+    "options": [
+      "Related posts count",
+      "Post ID",
+      "Post index",
+      "Post order"
+    ],
+    "correctOptions": [
+      "Related posts count"
+    ],
+    "time": 35,
+    "details": "withCount creates posts_count attribute."
+  },
+  {
+    "question": "What is cursor pagination?",
+    "options": [
+      "Keyset pagination",
+      "Offset pagination",
+      "Number pagination",
+      "Cursor only"
+    ],
+    "correctOptions": [
+      "Keyset pagination"
+    ],
+    "time": 45,
+    "details": "Cursor pagination uses keys instead of offsets."
+  },
+  {
+    "question": "What is chunkById()?",
+    "options": [
+      "Chunk with cursor",
+      "Chunk by offset",
+      "Group by ID",
+      "Order by ID"
+    ],
+    "correctOptions": [
+      "Chunk with cursor"
+    ],
+    "time": 40,
+    "details": "chunkById() uses cursors for consistent pagination."
+  },
+  {
+    "question": "What is Database Transactions?",
+    "options": [
+      "Execute multiple queries atomically",
+      "Single query execution",
+      "Async queries",
+      "Parallel queries"
+    ],
+    "correctOptions": [
+      "Execute multiple queries atomically"
+    ],
+    "time": 40,
+    "details": "Transactions ensure atomic query execution."
+  },
+  {
+    "question": "How do you start a transaction?",
+    "options": [
+      "DB::beginTransaction()",
+      "DB::start()",
+      "DB::transaction()",
+      "DB::begin()"
+    ],
+    "correctOptions": [
+      "DB::beginTransaction()"
+    ],
+    "time": 30,
+    "details": "beginTransaction() starts a new database transaction."
+  },
+  {
+    "question": "How do you commit a transaction?",
+    "options": [
+      "DB::commit()",
+      "DB::save()",
+      "DB::end()",
+      "DB::close()"
+    ],
+    "correctOptions": [
+      "DB::commit()"
+    ],
+    "time": 25,
+    "details": "commit() finalizes the transaction."
+  },
+  {
+    "question": "How do you rollback a transaction?",
+    "options": [
+      "DB::rollBack()",
+      "DB::revert()",
+      "DB::undo()",
+      "DB::cancel()"
+    ],
+    "correctOptions": [
+      "DB::rollBack()"
+    ],
+    "time": 25,
+    "details": "rollBack() reverts all changes in the transaction."
+  },
+  {
+    "question": "What is the transaction closure?",
+    "options": [
+      "Automatic transaction handling",
+      "Manual handling",
+      "No handling",
+      "Query only"
+    ],
+    "correctOptions": [
+      "Automatic transaction handling"
+    ],
+    "time": 40,
+    "details": "DB::transaction() handles commit/rollback automatically."
+  },
+  {
+    "question": "What is database seeder?",
+    "options": [
+      "Populate database with data",
+      "Create database",
+      "Delete database",
+      "Backup database"
+    ],
+    "correctOptions": [
+      "Populate database with data"
+    ],
+    "time": 25,
+    "details": "Seeders populate the database with test data."
+  },
+  {
+    "question": "How do you run specific seeder?",
+    "options": [
+      "php artisan db:seed --class=UserSeeder",
+      "php artisan seed --class=UserSeeder",
+      "php db:seed UserSeeder",
+      "composer db:seed UserSeeder"
+    ],
+    "correctOptions": [
+      "php artisan db:seed --class=UserSeeder"
+    ],
+    "time": 30,
+    "details": "--class flag specifies which seeder to run."
+  },
+  {
+    "question": "What is model factory?",
+    "options": [
+      "Generate fake model instances",
+      "Create real models",
+      "Delete models",
+      "Update models"
+    ],
+    "correctOptions": [
+      "Generate fake model instances"
+    ],
+    "time": 30,
+    "details": "Factories create fake model instances for testing."
+  },
+  {
+    "question": "How do you create a factory?",
+    "options": [
+      "php artisan make:factory PostFactory",
+      "php artisan create:factory PostFactory",
+      "php make factory PostFactory",
+      "composer factory PostFactory"
+    ],
+    "correctOptions": [
+      "php artisan make:factory PostFactory"
+    ],
+    "time": 30,
+    "details": "make:factory creates a new model factory."
+  },
+  {
+    "question": "What is the factory() helper?",
+    "options": [
+      "Create factory instances",
+      "Register factories",
+      "Load factories",
+      "Clear factories"
+    ],
+    "correctOptions": [
+      "Create factory instances"
+    ],
+    "time": 30,
+    "details": "factory() creates model instances from factories."
+  },
+  {
+    "question": "How do you create multiple factory instances?",
+    "options": [
+      "factory(User::class, 10)->make()",
+      "factory(User::class, 10)->create()",
+      "make()->factory(User::class, 10)",
+      "create()->factory(User::class, 10)"
+    ],
+    "correctOptions": [
+      "factory(User::class, 10)->make()"
+    ],
+    "time": 35,
+    "details": "Pass count as second argument to factory()."
+  },
+  {
+    "question": "What is make() in factories?",
+    "options": [
+      "Create without saving",
+      "Create and save",
+      "Update existing",
+      "Delete existing"
+    ],
+    "correctOptions": [
+      "Create without saving"
+    ],
+    "time": 30,
+    "details": "make() creates instance without persisting to DB."
+  },
+  {
+    "question": "What is create() in factories?",
+    "options": [
+      "Create and save to database",
+      "Create without saving",
+      "Update existing",
+      "Delete existing"
+    ],
+    "correctOptions": [
+      "Create and save to database"
+    ],
+    "time": 30,
+    "details": "create() persists the instance to the database."
+  },
+  {
+    "question": "What is state() in factories?",
+    "options": [
+      "Modify factory attributes",
+      "Reset factory",
+      "Clone factory",
+      "Delete factory"
+    ],
+    "correctOptions": [
+      "Modify factory attributes"
+    ],
+    "time": 35,
+    "details": "state() modifies factory attributes conditionally."
+  },
+  {
+    "question": "What is sequence() in factories?",
+    "options": [
+      "Cycle through values",
+      "Random value",
+      "Fixed value",
+      "Null value"
+    ],
+    "correctOptions": [
+      "Cycle through values"
+    ],
+    "time": 40,
+    "details": "sequence() cycles through values for each instance."
+  },
+  {
+    "question": "What is faker in factories?",
+    "options": [
+      "Generate fake data",
+      "Validate data",
+      "Encrypt data",
+      "Compress data"
+    ],
+    "correctOptions": [
+      "Generate fake data"
+    ],
+    "time": 30,
+    "details": "Faker generates realistic fake data."
+  },
+  {
+    "question": "What is php artisan test?",
+    "options": [
+      "Run tests",
+      "Create test",
+      "List tests",
+      "Clear tests"
+    ],
+    "correctOptions": [
+      "Run tests"
+    ],
+    "time": 25,
+    "details": "test runs the PHPUnit test suite."
+  },
+  {
+    "question": "How do you create a test?",
+    "options": [
+      "php artisan make:test UserTest",
+      "php artisan create:test UserTest",
+      "php make test UserTest",
+      "composer test UserTest"
+    ],
+    "correctOptions": [
+      "php artisan make:test UserTest"
+    ],
+    "time": 30,
+    "details": "make:test creates a new test class."
+  },
+  {
+    "question": "What is Feature test?",
+    "options": [
+      "Test HTTP endpoints",
+      "Test single unit",
+      "Test database",
+      "Test views"
+    ],
+    "correctOptions": [
+      "Test HTTP endpoints"
+    ],
+    "time": 35,
+    "details": "Feature tests test full HTTP request/response cycles."
+  },
+  {
+    "question": "What is Unit test?",
+    "options": [
+      "Test isolated component",
+      "Test full app",
+      "Test integration",
+      "Test browser"
+    ],
+    "correctOptions": [
+      "Test isolated component"
+    ],
+    "time": 35,
+    "details": "Unit tests test single, isolated components."
+  },
+  {
+    "question": "What is the actingAs() method?",
+    "options": [
+      "Simulate authenticated user",
+      "Login user",
+      "Logout user",
+      "Create user"
+    ],
+    "correctOptions": [
+      "Simulate authenticated user"
+    ],
+    "time": 35,
+    "details": "actingAs() simulates an authenticated user."
+  },
+  {
+    "question": "What is get() in testing?",
+    "options": [
+      "Make GET request",
+      "Get response",
+      "Get data",
+      "Get status"
+    ],
+    "correctOptions": [
+      "Make GET request"
+    ],
+    "time": 30,
+    "details": "get() makes a GET HTTP request in tests."
+  },
+  {
+    "question": "What is post() in testing?",
+    "options": [
+      "Make POST request",
+      "Post data",
+      "Post response",
+      "Post status"
+    ],
+    "correctOptions": [
+      "Make POST request"
+    ],
+    "time": 30,
+    "details": "post() makes a POST HTTP request in tests."
+  },
+  {
+    "question": "What is assertStatus()?",
+    "options": [
+      "Assert HTTP status code",
+      "Get status",
+      "Set status",
+      "Check status"
+    ],
+    "correctOptions": [
+      "Assert HTTP status code"
+    ],
+    "time": 30,
+    "details": "assertStatus() asserts the response status code."
+  },
+  {
+    "question": "What is assertSee()?",
+    "options": [
+      "Assert text in response",
+      "See route",
+      "See view",
+      "See data"
+    ],
+    "correctOptions": [
+      "Assert text in response"
+    ],
+    "time": 30,
+    "details": "assertSee() checks if text is in response body."
+  },
+  {
+    "question": "What is assertViewHas()?",
+    "options": [
+      "Assert view has data",
+      "Create view",
+      "Render view",
+      "Clear view"
+    ],
+    "correctOptions": [
+      "Assert view has data"
+    ],
+    "time": 35,
+    "details": "assertViewHas() checks view data is present."
+  },
+  {
+    "question": "What is assertRedirect()?",
+    "options": [
+      "Assert redirect response",
+      "Redirect user",
+      "Make redirect",
+      "Clear redirect"
+    ],
+    "correctOptions": [
+      "Assert redirect response"
+    ],
+    "time": 35,
+    "details": "assertRedirect() asserts a redirect response."
+  },
+  {
+    "question": "What is assertJson()?",
+    "options": [
+      "Assert JSON response",
+      "Create JSON",
+      "Parse JSON",
+      "Return JSON"
+    ],
+    "correctOptions": [
+      "Assert JSON response"
+    ],
+    "time": 35,
+    "details": "assertJson() asserts the response is JSON."
+  },
+  {
+    "question": "What is refreshDatabase trait?",
+    "options": [
+      "Reset database per test",
+      "Keep database",
+      "Create database",
+      "Delete database"
+    ],
+    "correctOptions": [
+      "Reset database per test"
+    ],
+    "time": 40,
+    "details": "RefreshDatabase migrates the database for each test."
+  },
+  {
+    "question": "What is DatabaseMigrations trait?",
+    "options": [
+      "Run migrations per test",
+      "Skip migrations",
+      "Partial migrations",
+      "Manual migrations"
+    ],
+    "correctOptions": [
+      "Run migrations per test"
+    ],
+    "time": 40,
+    "details": "DatabaseMigrations runs full migrations for tests."
+  },
+  {
+    "question": "What is withoutMiddleware()?",
+    "options": [
+      "Disable middleware for test",
+      "Enable middleware",
+      "Test middleware",
+      "Create middleware"
+    ],
+    "correctOptions": [
+      "Disable middleware for test"
+    ],
+    "time": 40,
+    "details": "withoutMiddleware() disables middleware during tests."
+  },
+  {
+    "question": "What is fake() in notifications?",
+    "options": [
+      "Prevent actual sending",
+      "Send immediately",
+      "Queue notifications",
+      "Store notifications"
+    ],
+    "correctOptions": [
+      "Prevent actual sending"
+    ],
+    "time": 40,
+    "details": "Notification::fake() prevents actual notification delivery."
+  },
+  {
+    "question": "What is assertNotified()?",
+    "options": [
+      "Assert notification sent",
+      "Assert not sent",
+      "Count notifications",
+      "Clear notifications"
+    ],
+    "correctOptions": [
+      "Assert notification sent"
+    ],
+    "time": 40,
+    "details": "assertNotified() checks if notification was sent."
+  },
+  {
+    "question": "What is Mail::fake()?",
+    "options": [
+      "Prevent actual email sending",
+      "Send emails",
+      "Queue emails",
+      "Delete emails"
+    ],
+    "correctOptions": [
+      "Prevent actual email sending"
+    ],
+    "time": 40,
+    "details": "Mail::fake() prevents actual mail delivery."
+  },
+  {
+    "question": "What is Bus::fake()?",
+    "options": [
+      "Prevent job dispatching",
+      "Dispatch jobs",
+      "Queue jobs",
+      "Delete jobs"
+    ],
+    "correctOptions": [
+      "Prevent job dispatching"
+    ],
+    "time": 40,
+    "details": "Bus::fake() prevents actual job dispatching."
+  },
+  {
+    "question": "What is Queue::fake()?",
+    "options": [
+      "Prevent queue processing",
+      "Process queue",
+      "Clear queue",
+      "Add to queue"
+    ],
+    "correctOptions": [
+      "Prevent queue processing"
+    ],
+    "time": 40,
+    "details": "Queue::fake() prevents actual queue processing."
+  },
+  {
+    "question": "What is Event::fake()?",
+    "options": [
+      "Prevent event dispatching",
+      "Dispatch events",
+      "Listen events",
+      "Store events"
+    ],
+    "correctOptions": [
+      "Prevent event dispatching"
+    ],
+    "time": 40,
+    "details": "Event::fake() prevents actual event dispatching."
+  },
+  {
+    "question": "What is assertDispatched()?",
+    "options": [
+      "Assert job/event was dispatched",
+      "Dispatch job",
+      "Clear dispatch",
+      "Count dispatch"
+    ],
+    "correctOptions": [
+      "Assert job/event was dispatched"
+    ],
+    "time": 40,
+    "details": "assertDispatched() checks if job was dispatched."
+  },
+  {
+    "question": "What is mock()?",
+    "options": [
+      "Create test double",
+      "Real object",
+      "Partial object",
+      "Stub object"
+    ],
+    "correctOptions": [
+      "Create test double"
+    ],
+    "time": 40,
+    "details": "mock() creates a mock object for testing."
+  },
+  {
+    "question": "What is spy()?",
+    "options": [
+      "Track method calls",
+      "Create mock",
+      "Real object",
+      "Stub object"
+    ],
+    "correctOptions": [
+      "Track method calls"
+    ],
+    "time": 40,
+    "details": "spy() creates a spy to track interactions."
+  },
+  {
+    "question": "What is Livewire component?",
+    "options": [
+      "Laravel frontend framework",
+      "Database tool",
+      "Testing tool",
+      "API tool"
+    ],
+    "correctOptions": [
+      "Laravel frontend framework"
+    ],
+    "time": 40,
+    "details": "Livewire enables dynamic frontends in Laravel."
+  },
+  {
+    "question": "What is a Blade component alias?",
+    "options": [
+      "Custom component name",
+      "Class alias",
+      "View alias",
+      "Route alias"
+    ],
+    "correctOptions": [
+      "Custom component name"
+    ],
+    "time": 45,
+    "details": "Component aliases rename components in views."
+  },
+  {
+    "question": "What is Database Transactions?",
+    "options": [
+      "Execute multiple queries atomically",
+      "Single query execution",
+      "Async queries",
+      "Parallel queries"
+    ],
+    "correctOptions": [
+      "Execute multiple queries atomically"
+    ],
+    "time": 40,
+    "details": "Transactions ensure atomic query execution."
+  },
+  {
+    "question": "How do you start a transaction?",
+    "options": [
+      "DB::beginTransaction()",
+      "DB::start()",
+      "DB::transaction()",
+      "DB::begin()"
+    ],
+    "correctOptions": [
+      "DB::beginTransaction()"
+    ],
+    "time": 30,
+    "details": "beginTransaction() starts a new database transaction."
+  },
+  {
+    "question": "How do you commit a transaction?",
+    "options": [
+      "DB::commit()",
+      "DB::save()",
+      "DB::end()",
+      "DB::close()"
+    ],
+    "correctOptions": [
+      "DB::commit()"
+    ],
+    "time": 25,
+    "details": "commit() finalizes the transaction."
+  },
+  {
+    "question": "How do you rollback a transaction?",
+    "options": [
+      "DB::rollBack()",
+      "DB::revert()",
+      "DB::undo()",
+      "DB::cancel()"
+    ],
+    "correctOptions": [
+      "DB::rollBack()"
+    ],
+    "time": 25,
+    "details": "rollBack() reverts all changes in the transaction."
+  },
+  {
+    "question": "What is the transaction closure?",
+    "options": [
+      "Automatic transaction handling",
+      "Manual handling",
+      "No handling",
+      "Query only"
+    ],
+    "correctOptions": [
+      "Automatic transaction handling"
+    ],
+    "time": 40,
+    "details": "DB::transaction() handles commit/rollback automatically."
+  },
+  {
+    "question": "What is Laravel Scout?",
+    "options": [
+      "Search driver package",
+      "Database package",
+      "Cache package",
+      "Queue package"
+    ],
+    "correctOptions": [
+      "Search driver package"
+    ],
+    "time": 35,
+    "details": "Scout provides searchable models with drivers."
+  },
+  {
+    "question": "How do you make a model searchable?",
+    "options": [
+      "Implement Searchable trait",
+      "Extend Searchable class",
+      "Add Searchable middleware",
+      "Use Searchable facade"
+    ],
+    "correctOptions": [
+      "Implement Searchable trait"
+    ],
+    "time": 35,
+    "details": "Searchable trait enables model search functionality."
+  },
+  {
+    "question": "What is Algolia in Laravel Scout?",
+    "options": [
+      "Search service",
+      "Database",
+      "Cache",
+      "Queue"
+    ],
+    "correctOptions": [
+      "Search service"
+    ],
+    "time": 30,
+    "details": "Algolia is a popular Scout search driver."
+  },
+  {
+    "question": "What is Meilisearch in Scout?",
+    "options": [
+      "Open source search",
+      "Database",
+      "Cache",
+      "Queue"
+    ],
+    "correctOptions": [
+      "Open source search"
+    ],
+    "time": 30,
+    "details": "Meilisearch is an open-source Scout driver."
+  },
+  {
+    "question": "What is queueable in Scout?",
+    "options": [
+      "Queue indexing",
+      "Immediate indexing",
+      "Sync indexing",
+      "No indexing"
+    ],
+    "correctOptions": [
+      "Queue indexing"
+    ],
+    "time": 35,
+    "details": "Queueable makes search indexing asynchronous."
+  },
+  {
+    "question": "What is Laravel Cashier?",
+    "options": [
+      "Subscription billing",
+      "Payment processing",
+      "Invoice generation",
+      "Refund handling"
+    ],
+    "correctOptions": [
+      "Subscription billing"
+    ],
+    "time": 35,
+    "details": "Cashier handles subscription billing with Stripe/Paddle."
+  },
+  {
+    "question": "How do you use whereNull() in query builder?",
+    "options": [
+      "->whereNull('deleted_at')",
+      "->where('deleted_at', null)",
+      "->null('deleted_at')",
+      "->isNull('deleted_at')"
+    ],
+    "correctOptions": [
+      "->whereNull('deleted_at')"
+    ],
+    "time": 30,
+    "details": "whereNull() checks for NULL values in a column."
+  },
+  {
+    "question": "How do you use whereNotNull() in query builder?",
+    "options": [
+      "->whereNotNull('email_verified_at')",
+      "->where('email_verified_at', 'not null')",
+      "->notNull('email_verified_at')",
+      "->isNotNull('email_verified_at')"
+    ],
+    "correctOptions": [
+      "->whereNotNull('email_verified_at')"
+    ],
+    "time": 30,
+    "details": "whereNotNull() checks for non-NULL values."
+  },
+  {
+    "question": "What does ->pluck() return in query builder?",
+    "options": [
+      "Collection of single column values",
+      "All columns",
+      "First value only",
+      "Count of records"
+    ],
+    "correctOptions": [
+      "Collection of single column values"
+    ],
+    "time": 35,
+    "details": "pluck() returns a Collection of values from a single column."
+  },
+  {
+    "question": "How do you create a migration in Laravel?",
+    "options": [
+      "php artisan make:migration create_users_table",
+      "php artisan migration:create users",
+      "php make migration users",
+      "composer make:migration users"
+    ],
+    "correctOptions": [
+      "php artisan make:migration create_users_table"
+    ],
+    "time": 30,
+    "details": "make:migration creates a new migration file."
+  },
+  {
+    "question": "How do you run all pending migrations?",
+    "options": [
+      "php artisan migrate",
+      "php artisan run:migrations",
+      "php migrate:run",
+      "composer migrate"
+    ],
+    "correctOptions": [
+      "php artisan migrate"
+    ],
+    "time": 25,
+    "details": "migrate runs all pending database migrations."
+  },
+  {
+    "question": "How do you rollback the last migration batch?",
+    "options": [
+      "php artisan migrate:rollback",
+      "php artisan migrate:undo",
+      "php migrate:rollback",
+      "php rollback:migrate"
+    ],
+    "correctOptions": [
+      "php artisan migrate:rollback"
+    ],
+    "time": 30,
+    "details": "migrate:rollback rolls back the last batch of migrations."
+  },
+  {
+    "question": "What is Eloquent ORM?",
+    "options": [
+      "Object-relational mapper",
+      "Query builder",
+      "Database driver",
+      "Migration tool"
+    ],
+    "correctOptions": [
+      "Object-relational mapper"
+    ],
+    "time": 30,
+    "details": "Eloquent provides an ORM for database operations."
+  },
+  {
+    "question": "How do you define a hasMany relationship in Eloquent?",
+    "options": [
+      "return $this->hasMany(Post::class)",
+      "return $this->hasOne(Post::class)",
+      "return $this->belongsTo(Post::class)",
+      "return $this->many(Post::class)"
+    ],
+    "correctOptions": [
+      "return $this->hasMany(Post::class)"
+    ],
+    "time": 35,
+    "details": "hasMany() defines a one-to-many relationship."
+  },
+  {
+    "question": "How do you define a belongsTo relationship in Eloquent?",
+    "options": [
+      "return $this->belongsTo(User::class)",
+      "return $this->hasMany(User::class)",
+      "return $this->hasOne(User::class)",
+      "return $this->belongsToMany(User::class)"
+    ],
+    "correctOptions": [
+      "return $this->belongsTo(User::class)"
+    ],
+    "time": 35,
+    "details": "belongsTo() defines an inverse many-to-one relationship."
+  },
+  {
+    "question": "What is the purpose of the $fillable property in Eloquent?",
+    "options": [
+      "Specify mass-assignable fields",
+      "Hide fields from output",
+      "Validate input",
+      "Encrypt fields"
+    ],
+    "correctOptions": [
+      "Specify mass-assignable fields"
+    ],
+    "time": 35,
+    "details": "$fillable defines which attributes can be mass-assigned."
+  },
+  {
+    "question": "What is the purpose of the $hidden property in Eloquent?",
+    "options": [
+      "Hide fields from array/JSON",
+      "Block field updates",
+      "Require field input",
+      "Validate field values"
+    ],
+    "correctOptions": [
+      "Hide fields from array/JSON"
+    ],
+    "time": 35,
+    "details": "$hidden specifies attributes hidden from array/JSON conversion."
+  }
+]

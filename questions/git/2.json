@@ -1,0 +1,1402 @@
+[
+  {
+    "question": "What is branching in Git?",
+    "options": [
+      "Creating separate lines of development",
+      "Deleting files",
+      "Merging code",
+      "Committing changes"
+    ],
+    "correctOptions": [
+      "Creating separate lines of development"
+    ],
+    "time": 25,
+    "details": "Branching creates independent development lines."
+  },
+  {
+    "question": "What is the main branch?",
+    "options": [
+      "Primary development line",
+      "Feature branch",
+      "Bug fix branch",
+      "Release branch"
+    ],
+    "correctOptions": [
+      "Primary development line"
+    ],
+    "time": 20,
+    "details": "main/master is the primary branch."
+  },
+  {
+    "question": "What is a feature branch?",
+    "options": [
+      "Branch for new features",
+      "Main branch",
+      "Release branch",
+      "Hotfix branch"
+    ],
+    "correctOptions": [
+      "Branch for new features"
+    ],
+    "time": 25,
+    "details": "Feature branches develop new functionality."
+  },
+  {
+    "question": "What is a hotfix branch?",
+    "options": [
+      "Branch for urgent fixes",
+      "Feature branch",
+      "Release branch",
+      "Develop branch"
+    ],
+    "correctOptions": [
+      "Branch for urgent fixes"
+    ],
+    "time": 25,
+    "details": "Hotfix branches address critical production issues."
+  },
+  {
+    "question": "What is a release branch?",
+    "options": [
+      "Branch for version preparation",
+      "Feature branch",
+      "Hotfix branch",
+      "Develop branch"
+    ],
+    "correctOptions": [
+      "Branch for version preparation"
+    ],
+    "time": 25,
+    "details": "Release branches prepare for production deployment."
+  },
+  {
+    "question": "How do you switch to an existing branch?",
+    "options": [
+      "git checkout branch-name",
+      "git switch branch-name",
+      "git checkout/switch",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "git checkout, switch, or checkout -b switch branches."
+  },
+  {
+    "question": "What is git switch?",
+    "options": [
+      "Switch branches command",
+      "Toggle setting",
+      "Remote command",
+      "Stash command"
+    ],
+    "correctOptions": [
+      "Switch branches command"
+    ],
+    "time": 25,
+    "details": "git switch is the modern way to switch branches."
+  },
+  {
+    "question": "What does git checkout -b do?",
+    "options": [
+      "Create and switch to new branch",
+      "Only create branch",
+      "Only switch",
+      "Delete branch"
+    ],
+    "correctOptions": [
+      "Create and switch to new branch"
+    ],
+    "time": 30,
+    "details": "-b creates a new branch and switches to it."
+  },
+  {
+    "question": "How do you rename a branch?",
+    "options": [
+      "git branch -m new-name",
+      "git rename new-name",
+      "git branch rename new-name",
+      "git move new-name"
+    ],
+    "correctOptions": [
+      "git branch -m new-name"
+    ],
+    "time": 30,
+    "details": "git branch -m renames the current branch."
+  },
+  {
+    "question": "How do you rename a remote branch?",
+    "options": [
+      "Delete old and push new",
+      "git branch -m remote",
+      "git rename remote",
+      "Can't rename remotely"
+    ],
+    "correctOptions": [
+      "Delete old and push new"
+    ],
+    "time": 35,
+    "details": "You must delete the old and push the renamed branch."
+  },
+  {
+    "question": "What is branch tracking?",
+    "options": [
+      "Local branch linked to remote",
+      "Remote tracking",
+      "Branch comparison",
+      "Branch history"
+    ],
+    "correctOptions": [
+      "Local branch linked to remote"
+    ],
+    "time": 35,
+    "details": "Tracking connects local branches to remote branches."
+  },
+  {
+    "question": "How do you set upstream branch?",
+    "options": [
+      "git branch -u origin/branch",
+      "git branch --set-upstream",
+      "Both options work",
+      "git track origin/branch"
+    ],
+    "correctOptions": [
+      "Both options work"
+    ],
+    "time": 35,
+    "details": "-u or --set-upstream-to sets tracking."
+  },
+  {
+    "question": "What does git branch -vv show?",
+    "options": [
+      "Branch tracking info",
+      "Branch contents",
+      "Branch commits",
+      "Remote branches"
+    ],
+    "correctOptions": [
+      "Branch tracking info"
+    ],
+    "time": 35,
+    "details": "-vv shows detailed branch tracking information."
+  },
+  {
+    "question": "What is a tracking branch?",
+    "options": [
+      "Branch that tracks remote",
+      "New branch",
+      "Deleted branch",
+      "Merged branch"
+    ],
+    "correctOptions": [
+      "Branch that tracks remote"
+    ],
+    "time": 35,
+    "details": "Tracking branches have a relationship with remote branches."
+  },
+  {
+    "question": "How do you list remote branches?",
+    "options": [
+      "git branch -r",
+      "git branch --remote",
+      "git remote branches",
+      "git list remote"
+    ],
+    "correctOptions": [
+      "git branch -r"
+    ],
+    "time": 25,
+    "details": "git branch -r lists remote-tracking branches."
+  },
+  {
+    "question": "How do you list all branches?",
+    "options": [
+      "git branch -a",
+      "git branch --all",
+      "git branch all",
+      "Both -a and --all"
+    ],
+    "correctOptions": [
+      "Both -a and --all"
+    ],
+    "time": 25,
+    "details": "-a shows both local and remote branches."
+  },
+  {
+    "question": "What is a detached HEAD?",
+    "options": [
+      "HEAD pointing directly to commit",
+      "HEAD is attached",
+      "No HEAD",
+      "Invalid state"
+    ],
+    "correctOptions": [
+      "HEAD pointing directly to commit"
+    ],
+    "time": 40,
+    "details": "Detached HEAD occurs when checking commits directly."
+  },
+  {
+    "question": "What happens in detached HEAD state?",
+    "options": [
+      "Commits have no branch",
+      "Normal branch state",
+      "Error occurs",
+      "Nothing different"
+    ],
+    "correctOptions": [
+      "Commits have no branch"
+    ],
+    "time": 40,
+    "details": "Commits made in detached HEAD aren't on any branch."
+  },
+  {
+    "question": "How do you recover from detached HEAD?",
+    "options": [
+      "git checkout -b new-branch",
+      "git checkout branch-name",
+      "git detach",
+      "git recover"
+    ],
+    "correctOptions": [
+      "git checkout -b new-branch"
+    ],
+    "time": 40,
+    "details": "Create a branch from the commit to keep work."
+  },
+  {
+    "question": "What is git checkout without arguments?",
+    "options": [
+      "Return to last commit",
+      "Create new branch",
+      "Delete files",
+      "Show status"
+    ],
+    "correctOptions": [
+      "Return to last commit"
+    ],
+    "time": 35,
+    "details": "git checkout without branch name returns to last commit."
+  },
+  {
+    "question": "What is merging?",
+    "options": [
+      "Combining branch changes",
+      "Splitting branches",
+      "Deleting branches",
+      "Creating branches"
+    ],
+    "correctOptions": [
+      "Combining branch changes"
+    ],
+    "time": 25,
+    "details": "Merging integrates changes from one branch into another."
+  },
+  {
+    "question": "How do you merge branches?",
+    "options": [
+      "git merge branch-name",
+      "git checkout && git add",
+      "git branch merge",
+      "git combine branch-name"
+    ],
+    "correctOptions": [
+      "git merge branch-name"
+    ],
+    "time": 25,
+    "details": "git merge combines branch history."
+  },
+  {
+    "question": "What is a merge commit?",
+    "options": [
+      "Commit that combines two branches",
+      "Regular commit",
+      "Deleted commit",
+      "Initial commit"
+    ],
+    "correctOptions": [
+      "Commit that combines two branches"
+    ],
+    "time": 30,
+    "details": "Merge commits combine changes from multiple branches."
+  },
+  {
+    "question": "What is fast-forward merge?",
+    "options": [
+      "Moving pointer to new commit",
+      "Creating merge commit",
+      "Resolving conflicts",
+      "Deleting branch"
+    ],
+    "correctOptions": [
+      "Moving pointer to new commit"
+    ],
+    "time": 35,
+    "details": "Fast-forward occurs when no divergence exists."
+  },
+  {
+    "question": "When does fast-forward not occur?",
+    "options": [
+      "When branches have diverged",
+      "When branches are same",
+      "When no commits",
+      "When no branch"
+    ],
+    "correctOptions": [
+      "When branches have diverged"
+    ],
+    "time": 35,
+    "details": "Fast-forward requires linear history on target branch."
+  },
+  {
+    "question": "What is --no-ff flag?",
+    "options": [
+      "Force merge commit",
+      "Fast-forward only",
+      "No merge",
+      "No fetch"
+    ],
+    "correctOptions": [
+      "Force merge commit"
+    ],
+    "time": 40,
+    "details": "--no-ff always creates a merge commit."
+  },
+  {
+    "question": "What is a three-way merge?",
+    "options": [
+      "Uses base, ours, theirs",
+      "Only two branches",
+      "Only one branch",
+      "No branches"
+    ],
+    "correctOptions": [
+      "Uses base, ours, theirs"
+    ],
+    "time": 40,
+    "details": "Three-way merge considers the common ancestor."
+  },
+  {
+    "question": "What is our branch in merge?",
+    "options": [
+      "Destination branch",
+      "Source branch",
+      "Base branch",
+      "Remote branch"
+    ],
+    "correctOptions": [
+      "Destination branch"
+    ],
+    "time": 35,
+    "details": "OURS is the branch you're merging into."
+  },
+  {
+    "question": "What is their branch in merge?",
+    "options": [
+      "Branch being merged in",
+      "Current branch",
+      "Base branch",
+      "Main branch"
+    ],
+    "correctOptions": [
+      "Branch being merged in"
+    ],
+    "time": 35,
+    "details": "THEIRS is the branch you're merging from."
+  },
+  {
+    "question": "What is the base in merge?",
+    "options": [
+      "Common ancestor commit",
+      "Current commit",
+      "Target commit",
+      "Remote commit"
+    ],
+    "correctOptions": [
+      "Common ancestor commit"
+    ],
+    "time": 35,
+    "details": "Base is where both branches split from."
+  },
+  {
+    "question": "What is merge conflict?",
+    "options": [
+      "Overlapping changes cannot merge",
+      "Successful merge",
+      "Fast-forward",
+      "Clean merge"
+    ],
+    "correctOptions": [
+      "Overlapping changes cannot merge"
+    ],
+    "time": 35,
+    "details": "Conflicts happen when changes overlap in same file area."
+  },
+  {
+    "question": "How do you identify conflicts?",
+    "options": [
+      "<<<<<<, =======, >>>>>>",
+      "*****",
+      "====",
+      "CONFLICT"
+    ],
+    "correctOptions": [
+      "<<<<<<, =======, >>>>>>"
+    ],
+    "time": 30,
+    "details": "Conflict markers show conflicting regions."
+  },
+  {
+    "question": "What do conflict markers look like?",
+    "options": [
+      "<<<<<<< HEAD, =======, >>>>>>> branch",
+      "<<<<< HEAD === >>>>",
+      "<<<< HEAD >>>",
+      "*** HEAD ***"
+    ],
+    "correctOptions": [
+      "<<<<<<< HEAD, =======, >>>>>>> branch"
+    ],
+    "time": 35,
+    "details": "Git uses standard conflict markers to show changes."
+  },
+  {
+    "question": "How do you resolve a conflict?",
+    "options": [
+      "Edit file, remove markers, stage, commit",
+      "Delete file",
+      "Ignore file",
+      "Force merge"
+    ],
+    "correctOptions": [
+      "Edit file, remove markers, stage, commit"
+    ],
+    "time": 40,
+    "details": "Resolve by keeping/changing desired code, then commit."
+  },
+  {
+    "question": "What is abort merge?",
+    "options": [
+      "Cancel merge and revert",
+      "Complete merge",
+      "Save merge",
+      "Force merge"
+    ],
+    "correctOptions": [
+      "Cancel merge and revert"
+    ],
+    "time": 30,
+    "details": "Abort returns to pre-merge state."
+  },
+  {
+    "question": "What is git merge --abort?",
+    "options": [
+      "Cancel the merge",
+      "Complete merge",
+      "Force merge",
+      "Skip merge"
+    ],
+    "correctOptions": [
+      "Cancel the merge"
+    ],
+    "time": 30,
+    "details": "--abort cancels the merge and reverts files."
+  },
+  {
+    "question": "How do you use mergetool?",
+    "options": [
+      "git mergetool",
+      "git merge tool",
+      "git conflict tool",
+      "git difftool"
+    ],
+    "correctOptions": [
+      "git mergetool"
+    ],
+    "time": 35,
+    "details": "mergetool launches a GUI tool for conflict resolution."
+  },
+  {
+    "question": "What does --no-commit flag do?",
+    "options": [
+      "Merge without auto-commit",
+      "Force commit",
+      "Skip commit",
+      "Cancel commit"
+    ],
+    "correctOptions": [
+      "Merge without auto-commit"
+    ],
+    "time": 35,
+    "details": "--no-commit lets you review before committing."
+  },
+  {
+    "question": "What does --squash do?",
+    "options": [
+      "Combine commits into one",
+      "Split commits",
+      "Delete commits",
+      "Reorder commits"
+    ],
+    "correctOptions": [
+      "Combine commits into one"
+    ],
+    "time": 40,
+    "details": "--squash combines all commits into one."
+  },
+  {
+    "question": "What is squash merge?",
+    "options": [
+      "Single commit from branch",
+      "Multiple commits",
+      "No commits",
+      "Tagged merge"
+    ],
+    "correctOptions": [
+      "Single commit from branch"
+    ],
+    "time": 40,
+    "details": "Squash merges collapse branch into one commit."
+  },
+  {
+    "question": "What is merge strategy?",
+    "options": [
+      "Algorithm for combining",
+      "Branch naming",
+      "Commit order",
+      "Remote setup"
+    ],
+    "correctOptions": [
+      "Algorithm for combining"
+    ],
+    "time": 40,
+    "details": "Merge strategy determines how Git combines changes."
+  },
+  {
+    "question": "What is recursive strategy?",
+    "options": [
+      "Default for branches",
+      "Only for fast-forward",
+      "Remote merges",
+      "No strategy"
+    ],
+    "correctOptions": [
+      "Default for branches"
+    ],
+    "time": 40,
+    "details": "Recursive is the default strategy for most merges."
+  },
+  {
+    "question": "What is octopus strategy?",
+    "options": [
+      "Merge multiple branches",
+      "Single branch",
+      "Fast-forward only",
+      "Two branches only"
+    ],
+    "correctOptions": [
+      "Merge multiple branches"
+    ],
+    "time": 40,
+    "details": "Octopus merges more than two branches at once."
+  },
+  {
+    "question": "What is ours strategy?",
+    "options": [
+      "Prefer our changes",
+      "Prefer their changes",
+      "Equal preference",
+      "No preference"
+    ],
+    "correctOptions": [
+      "Prefer our changes"
+    ],
+    "time": 40,
+    "details": "Ours strategy prefers the destination branch."
+  },
+  {
+    "question": "What is theirs strategy?",
+    "options": [
+      "Prefer their changes",
+      "Prefer our changes",
+      "Equal preference",
+      "No preference"
+    ],
+    "correctOptions": [
+      "Prefer their changes"
+    ],
+    "time": 40,
+    "details": "Theirs strategy prefers the source branch."
+  },
+  {
+    "question": "What is subtree merge?",
+    "options": [
+      "Merge subdirectory projects",
+      "Merge whole project",
+      "Delete subtrees",
+      "Create subtrees"
+    ],
+    "correctOptions": [
+      "Merge subdirectory projects"
+    ],
+    "time": 45,
+    "details": "Subtree merges handle nested repositories."
+  },
+  {
+    "question": "What does ours merge strategy prefer?",
+    "options": [
+      "Changes on destination branch",
+      "Changes on source branch",
+      "No changes",
+      "All changes"
+    ],
+    "correctOptions": [
+      "Changes on destination branch"
+    ],
+    "time": 40,
+    "details": "The ours strategy keeps destination branch changes."
+  },
+  {
+    "question": "What does theirs merge strategy prefer?",
+    "options": [
+      "Changes on source branch",
+      "Changes on destination branch",
+      "No changes",
+      "All changes"
+    ],
+    "correctOptions": [
+      "Changes on source branch"
+    ],
+    "time": 40,
+    "details": "Theirs strategy keeps source branch changes."
+  },
+  {
+    "question": "What is a merge message?",
+    "options": [
+      "Commit message for merge",
+      "Branch name",
+      "Remote name",
+      "Conflict marker"
+    ],
+    "correctOptions": [
+      "Commit message for merge"
+    ],
+    "time": 30,
+    "details": "Merge commits have standard commit messages."
+  },
+  {
+    "question": "How do you edit merge message?",
+    "options": [
+      "git merge -m 'message'",
+      "git merge message",
+      "git commit -m 'message'",
+      "git message 'message'"
+    ],
+    "correctOptions": [
+      "git merge -m 'message'"
+    ],
+    "time": 35,
+    "details": "-m allows custom merge commit message."
+  },
+  {
+    "question": "What is merge vs rebase?",
+    "options": [
+      "Merge preserves history, rebase rewrites",
+      "Both rewrite history",
+      "Both preserve history",
+      "Neither affects history"
+    ],
+    "correctOptions": [
+      "Merge preserves history, rebase rewrites"
+    ],
+    "time": 45,
+    "details": "Merge keeps history, rebase creates linear history."
+  },
+  {
+    "question": "When should you not rebase?",
+    "options": [
+      "Pushed shared commits",
+      "Local commits only",
+      "New commits",
+      "No commits"
+    ],
+    "correctOptions": [
+      "Pushed shared commits"
+    ],
+    "time": 45,
+    "details": "Never rebase commits that have been pushed and shared."
+  },
+  {
+    "question": "What is git pull --rebase?",
+    "options": [
+      "Fetch and rebase instead of merge",
+      "Fetch and merge",
+      "Push and rebase",
+      "Rebase remote"
+    ],
+    "correctOptions": [
+      "Fetch and rebase instead of merge"
+    ],
+    "time": 40,
+    "details": "--rebase rebases local commits on remote changes."
+  },
+  {
+    "question": "What is pull.rebase setting?",
+    "options": [
+      "Default rebase on pull",
+      "Default merge on pull",
+      "Disable pull",
+      "Force push"
+    ],
+    "correctOptions": [
+      "Default rebase on pull"
+    ],
+    "time": 40,
+    "details": "pull.rebase makes rebase the default for git pull."
+  },
+  {
+    "question": "What is a merge conflict review?",
+    "options": [
+      "Check what conflicts exist",
+      "Complete merge",
+      "Abort merge",
+      "Stage changes"
+    ],
+    "correctOptions": [
+      "Check what conflicts exist"
+    ],
+    "time": 35,
+    "details": "Review conflicts before resolving them."
+  },
+  {
+    "question": "How do you show conflicted files?",
+    "options": [
+      "git diff --name-only --diff-filter=U",
+      "git status",
+      "git merge --stat",
+      "git conflicts"
+    ],
+    "correctOptions": [
+      "git diff --name-only --diff-filter=U"
+    ],
+    "time": 45,
+    "details": "diff-filter=U shows only unmerged (conflicted) files."
+  },
+  {
+    "question": "What is accept yours/accept theirs?",
+    "options": [
+      "Take one side completely",
+      "Manual resolution",
+      "Abort merge",
+      "Complete merge"
+    ],
+    "correctOptions": [
+      "Take one side completely"
+    ],
+    "time": 40,
+    "details": "These options take all changes from one side."
+  },
+  {
+    "question": "What is git checkout --ours/--theirs?",
+    "options": [
+      "Take one version of file",
+      "Create new file",
+      "Delete file",
+      "Merge files"
+    ],
+    "correctOptions": [
+      "Take one version of file"
+    ],
+    "time": 40,
+    "details": "--ours/--theirs takes one version during merge conflicts."
+  },
+  {
+    "question": "What is post-merge hook?",
+    "options": [
+      "Script after merge",
+      "Script before merge",
+      "Script during merge",
+      "Script for merge conflict"
+    ],
+    "correctOptions": [
+      "Script after merge"
+    ],
+    "time": 45,
+    "details": "post-merge hook runs after merge completes."
+  },
+  {
+    "question": "What is pre-merge hook?",
+    "options": [
+      "Script before merge",
+      "Script after merge",
+      "Script during merge",
+      "Script for conflicts"
+    ],
+    "correctOptions": [
+      "Script before merge"
+    ],
+    "time": 45,
+    "details": "pre-merge hook runs before merge begins."
+  },
+  {
+    "question": "How do you verify merge has no conflicts?",
+    "options": [
+      "git merge --no-commit --no-ff",
+      "git merge",
+      "git merge test",
+      "git merge --check"
+    ],
+    "correctOptions": [
+      "git merge --no-commit --no-ff"
+    ],
+    "time": 45,
+    "details": "Test merge without committing to check for conflicts."
+  },
+  {
+    "question": "What is merge signing?",
+    "options": [
+      "Sign merge commit with GPG",
+      "Sign files",
+      "Sign branches",
+      "Sign tags"
+    ],
+    "correctOptions": [
+      "Sign merge commit with GPG"
+    ],
+    "time": 45,
+    "details": "Merge signing GPG signs the merge commit."
+  },
+  {
+    "question": "What is git merge --verify?",
+    "options": [
+      "Verify commits before merge",
+      "Verify after merge",
+      "Verify branches",
+      "Verify remotes"
+    ],
+    "correctOptions": [
+      "Verify commits before merge"
+    ],
+    "time": 45,
+    "details": "verify runs pre-merge hooks before proceeding."
+  },
+  {
+    "question": "What is rerere in Git?",
+    "options": [
+      "Remember conflict resolution",
+      "Revert merge",
+      "Reset commits",
+      "Remove branches"
+    ],
+    "correctOptions": [
+      "Remember conflict resolution"
+    ],
+    "time": 50,
+    "details": "rerere remembers how you resolved conflicts."
+  },
+  {
+    "question": "What is branch.autosetuprebase?",
+    "options": [
+      "Auto-rebase on pull",
+      "Auto-merge on pull",
+      "Disable rebase",
+      "Force merge"
+    ],
+    "correctOptions": [
+      "Auto-rebase on pull"
+    ],
+    "time": 45,
+    "details": "This config auto-enables rebase for new branches."
+  },
+  {
+    "question": "What is merge tool configuration?",
+    "options": [
+      "Set preferred merge tool",
+      "Create merge",
+      "Abort merge",
+      "Complete merge"
+    ],
+    "correctOptions": [
+      "Set preferred merge tool"
+    ],
+    "time": 45,
+    "details": "merge.tool configures your preferred merge tool."
+  },
+  {
+    "question": "What is git config merge.tool?",
+    "options": [
+      "Set merge tool",
+      "Get merge",
+      "List merge",
+      "Check merge"
+    ],
+    "correctOptions": [
+      "Set merge tool"
+    ],
+    "time": 40,
+    "details": "merge.tool sets which merge tool to use."
+  },
+  {
+    "question": "What is branching in Git?",
+    "options": [
+      "Creating separate lines of development",
+      "Deleting files",
+      "Merging code",
+      "Committing changes"
+    ],
+    "correctOptions": [
+      "Creating separate lines of development"
+    ],
+    "time": 25,
+    "details": "Branching creates independent development lines."
+  },
+  {
+    "question": "What is the main branch?",
+    "options": [
+      "Primary development line",
+      "Feature branch",
+      "Bug fix branch",
+      "Release branch"
+    ],
+    "correctOptions": [
+      "Primary development line"
+    ],
+    "time": 20,
+    "details": "main/master is the primary branch."
+  },
+  {
+    "question": "What is a feature branch?",
+    "options": [
+      "Branch for new features",
+      "Main branch",
+      "Release branch",
+      "Hotfix branch"
+    ],
+    "correctOptions": [
+      "Branch for new features"
+    ],
+    "time": 25,
+    "details": "Feature branches develop new functionality."
+  },
+  {
+    "question": "What is a hotfix branch?",
+    "options": [
+      "Branch for urgent fixes",
+      "Feature branch",
+      "Release branch",
+      "Develop branch"
+    ],
+    "correctOptions": [
+      "Branch for urgent fixes"
+    ],
+    "time": 25,
+    "details": "Hotfix branches address critical production issues."
+  },
+  {
+    "question": "What is a release branch?",
+    "options": [
+      "Branch for version preparation",
+      "Feature branch",
+      "Hotfix branch",
+      "Develop branch"
+    ],
+    "correctOptions": [
+      "Branch for version preparation"
+    ],
+    "time": 25,
+    "details": "Release branches prepare for production deployment."
+  },
+  {
+    "question": "How do you switch to an existing branch?",
+    "options": [
+      "git checkout branch-name",
+      "git switch branch-name",
+      "git checkout/switch",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "git checkout, switch, or checkout -b switch branches."
+  },
+  {
+    "question": "What is git switch?",
+    "options": [
+      "Switch branches command",
+      "Toggle setting",
+      "Remote command",
+      "Stash command"
+    ],
+    "correctOptions": [
+      "Switch branches command"
+    ],
+    "time": 25,
+    "details": "git switch is the modern way to switch branches."
+  },
+  {
+    "question": "What does git checkout -b do?",
+    "options": [
+      "Create and switch to new branch",
+      "Only create branch",
+      "Only switch",
+      "Delete branch"
+    ],
+    "correctOptions": [
+      "Create and switch to new branch"
+    ],
+    "time": 30,
+    "details": "-b creates a new branch and switches to it."
+  },
+  {
+    "question": "How do you rename a branch?",
+    "options": [
+      "git branch -m new-name",
+      "git rename new-name",
+      "git branch rename new-name",
+      "git move new-name"
+    ],
+    "correctOptions": [
+      "git branch -m new-name"
+    ],
+    "time": 30,
+    "details": "git branch -m renames the current branch."
+  },
+  {
+    "question": "How do you rename a remote branch?",
+    "options": [
+      "Delete old and push new",
+      "git branch -m remote",
+      "git rename remote",
+      "Can't rename remotely"
+    ],
+    "correctOptions": [
+      "Delete old and push new"
+    ],
+    "time": 35,
+    "details": "You must delete the old and push the renamed branch."
+  },
+  {
+    "question": "What is branch tracking?",
+    "options": [
+      "Local branch linked to remote",
+      "Remote tracking",
+      "Branch comparison",
+      "Branch history"
+    ],
+    "correctOptions": [
+      "Local branch linked to remote"
+    ],
+    "time": 35,
+    "details": "Tracking connects local branches to remote branches."
+  },
+  {
+    "question": "How do you set upstream branch?",
+    "options": [
+      "git branch -u origin/branch",
+      "git branch --set-upstream",
+      "Both options work",
+      "git track origin/branch"
+    ],
+    "correctOptions": [
+      "Both options work"
+    ],
+    "time": 35,
+    "details": "-u or --set-upstream-to sets tracking."
+  },
+  {
+    "question": "What does git branch -vv show?",
+    "options": [
+      "Branch tracking info",
+      "Branch contents",
+      "Branch commits",
+      "Remote branches"
+    ],
+    "correctOptions": [
+      "Branch tracking info"
+    ],
+    "time": 35,
+    "details": "-vv shows detailed branch tracking information."
+  },
+  {
+    "question": "What is a tracking branch?",
+    "options": [
+      "Branch that tracks remote",
+      "New branch",
+      "Deleted branch",
+      "Merged branch"
+    ],
+    "correctOptions": [
+      "Branch that tracks remote"
+    ],
+    "time": 35,
+    "details": "Tracking branches have a relationship with remote branches."
+  },
+  {
+    "question": "How do you list remote branches?",
+    "options": [
+      "git branch -r",
+      "git branch --remote",
+      "git remote branches",
+      "git list remote"
+    ],
+    "correctOptions": [
+      "git branch -r"
+    ],
+    "time": 25,
+    "details": "git branch -r lists remote-tracking branches."
+  },
+  {
+    "question": "How do you list all branches?",
+    "options": [
+      "git branch -a",
+      "git branch --all",
+      "git branch all",
+      "Both -a and --all"
+    ],
+    "correctOptions": [
+      "Both -a and --all"
+    ],
+    "time": 25,
+    "details": "-a shows both local and remote branches."
+  },
+  {
+    "question": "What is a detached HEAD?",
+    "options": [
+      "HEAD pointing directly to commit",
+      "HEAD is attached",
+      "No HEAD",
+      "Invalid state"
+    ],
+    "correctOptions": [
+      "HEAD pointing directly to commit"
+    ],
+    "time": 40,
+    "details": "Detached HEAD occurs when checking commits directly."
+  },
+  {
+    "question": "What happens in detached HEAD state?",
+    "options": [
+      "Commits have no branch",
+      "Normal branch state",
+      "Error occurs",
+      "Nothing different"
+    ],
+    "correctOptions": [
+      "Commits have no branch"
+    ],
+    "time": 40,
+    "details": "Commits made in detached HEAD aren't on any branch."
+  },
+  {
+    "question": "How do you recover from detached HEAD?",
+    "options": [
+      "git checkout -b new-branch",
+      "git checkout branch-name",
+      "git detach",
+      "git recover"
+    ],
+    "correctOptions": [
+      "git checkout -b new-branch"
+    ],
+    "time": 40,
+    "details": "Create a branch from the commit to keep work."
+  },
+  {
+    "question": "What is git checkout without arguments?",
+    "options": [
+      "Return to last commit",
+      "Create new branch",
+      "Delete files",
+      "Show status"
+    ],
+    "correctOptions": [
+      "Return to last commit"
+    ],
+    "time": 35,
+    "details": "git checkout without branch name returns to last commit."
+  },
+  {
+    "question": "What is merging?",
+    "options": [
+      "Combining branch changes",
+      "Splitting branches",
+      "Deleting branches",
+      "Creating branches"
+    ],
+    "correctOptions": [
+      "Combining branch changes"
+    ],
+    "time": 25,
+    "details": "Merging integrates changes from one branch into another."
+  },
+  {
+    "question": "How do you merge branches?",
+    "options": [
+      "git merge branch-name",
+      "git checkout && git add",
+      "git branch merge",
+      "git combine branch-name"
+    ],
+    "correctOptions": [
+      "git merge branch-name"
+    ],
+    "time": 25,
+    "details": "git merge combines branch history."
+  },
+  {
+    "question": "What is a merge commit?",
+    "options": [
+      "Commit that combines two branches",
+      "Regular commit",
+      "Deleted commit",
+      "Initial commit"
+    ],
+    "correctOptions": [
+      "Commit that combines two branches"
+    ],
+    "time": 30,
+    "details": "Merge commits combine changes from multiple branches."
+  },
+  {
+    "question": "What is fast-forward merge?",
+    "options": [
+      "Moving pointer to new commit",
+      "Creating merge commit",
+      "Resolving conflicts",
+      "Deleting branch"
+    ],
+    "correctOptions": [
+      "Moving pointer to new commit"
+    ],
+    "time": 35,
+    "details": "Fast-forward occurs when no divergence exists."
+  },
+  {
+    "question": "When does fast-forward not occur?",
+    "options": [
+      "When branches have diverged",
+      "When branches are same",
+      "When no commits",
+      "When no branch"
+    ],
+    "correctOptions": [
+      "When branches have diverged"
+    ],
+    "time": 35,
+    "details": "Fast-forward requires linear history on target branch."
+  },
+  {
+    "question": "What is --no-ff flag?",
+    "options": [
+      "Force merge commit",
+      "Fast-forward only",
+      "No merge",
+      "No fetch"
+    ],
+    "correctOptions": [
+      "Force merge commit"
+    ],
+    "time": 40,
+    "details": "--no-ff always creates a merge commit."
+  },
+  {
+    "question": "What is a three-way merge?",
+    "options": [
+      "Uses base, ours, theirs",
+      "Only two branches",
+      "Only one branch",
+      "No branches"
+    ],
+    "correctOptions": [
+      "Uses base, ours, theirs"
+    ],
+    "time": 40,
+    "details": "Three-way merge considers the common ancestor."
+  },
+  {
+    "question": "What is our branch in merge?",
+    "options": [
+      "Destination branch",
+      "Source branch",
+      "Base branch",
+      "Remote branch"
+    ],
+    "correctOptions": [
+      "Destination branch"
+    ],
+    "time": 35,
+    "details": "OURS is the branch you're merging into."
+  },
+  {
+    "question": "What is their branch in merge?",
+    "options": [
+      "Branch being merged in",
+      "Current branch",
+      "Base branch",
+      "Main branch"
+    ],
+    "correctOptions": [
+      "Branch being merged in"
+    ],
+    "time": 35,
+    "details": "THEIRS is the branch you're merging from."
+  },
+  {
+    "question": "What is the base in merge?",
+    "options": [
+      "Common ancestor commit",
+      "Current commit",
+      "Target commit",
+      "Remote commit"
+    ],
+    "correctOptions": [
+      "Common ancestor commit"
+    ],
+    "time": 35,
+    "details": "Base is where both branches split from."
+  },
+  {
+    "question": "What is a merge conflict?",
+    "options": [
+      "Changes that conflict between branches",
+      "File deletion",
+      "Branch creation",
+      "Remote connection"
+    ],
+    "correctOptions": [
+      "Changes that conflict between branches"
+    ],
+    "time": 35,
+    "details": "Merge conflicts occur when changes overlap."
+  },
+  {
+    "question": "What are the conflict markers?",
+    "options": [
+      "<<<<<<, =======, >>>>>>",
+      "<<<<<, =====, >>>>>, ",
+      "***, ===, ***",
+      "<<<<, ====, >>>>"
+    ],
+    "correctOptions": [
+      "<<<<<<, =======, >>>>>>"
+    ],
+    "time": 35,
+    "details": "Conflict markers show conflicting changes."
+  },
+  {
+    "question": "How do you abort a merge?",
+    "options": [
+      "git merge --abort",
+      "git abort merge",
+      "git revert merge",
+      "git reset merge"
+    ],
+    "correctOptions": [
+      "git merge --abort"
+    ],
+    "time": 30,
+    "details": "--abort cancels the merge and returns to previous state."
+  }
+]

@@ -1,0 +1,1402 @@
+[
+  {
+    "question": "What is Git?",
+    "options": [
+      "Distributed version control system",
+      "Programming language",
+      "Database system",
+      "Web server"
+    ],
+    "correctOptions": [
+      "Distributed version control system"
+    ],
+    "time": 20,
+    "details": "Git is a distributed version control system for tracking changes."
+  },
+  {
+    "question": "Who created Git?",
+    "options": [
+      "Linus Torvalds",
+      "Bill Gates",
+      "Steve Jobs",
+      "Mark Zuckerberg"
+    ],
+    "correctOptions": [
+      "Linus Torvalds"
+    ],
+    "time": 25,
+    "details": "Linus Torvalds created Git in 2005."
+  },
+  {
+    "question": "What is a repository?",
+    "options": [
+      "Project folder with version control",
+      "Code editor",
+      "Web browser",
+      "Database"
+    ],
+    "correctOptions": [
+      "Project folder with version control"
+    ],
+    "time": 20,
+    "details": "A repository is a project directory that Git tracks."
+  },
+  {
+    "question": "How do you initialize a Git repository?",
+    "options": [
+      "git init",
+      "git start",
+      "git create",
+      "git new"
+    ],
+    "correctOptions": [
+      "git init"
+    ],
+    "time": 20,
+    "details": "git init creates a new Git repository."
+  },
+  {
+    "question": "What is the staging area?",
+    "options": [
+      "Area to prepare commits",
+      "Backup location",
+      "Remote server",
+      "Working directory"
+    ],
+    "correctOptions": [
+      "Area to prepare commits"
+    ],
+    "time": 25,
+    "details": "The staging area holds changes ready to commit."
+  },
+  {
+    "question": "What command stages all changes?",
+    "options": [
+      "git add .",
+      "git stage .",
+      "git commit -a",
+      "git add -A"
+    ],
+    "correctOptions": [
+      "git add ."
+    ],
+    "time": 20,
+    "details": "git add . stages all changes in current directory."
+  },
+  {
+    "question": "What command commits changes?",
+    "options": [
+      "git commit",
+      "git save",
+      "git push",
+      "git store"
+    ],
+    "correctOptions": [
+      "git commit"
+    ],
+    "time": 20,
+    "details": "git commit records staged changes in history."
+  },
+  {
+    "question": "What does git status show?",
+    "options": [
+      "Current state of repository",
+      "Commit history",
+      "Remote branches",
+      "File differences"
+    ],
+    "correctOptions": [
+      "Current state of repository"
+    ],
+    "time": 20,
+    "details": "git status shows the current state of the working directory."
+  },
+  {
+    "question": "What is the working directory?",
+    "options": [
+      "Project files on disk",
+      "Git history",
+      "Remote server",
+      "Staging area"
+    ],
+    "correctOptions": [
+      "Project files on disk"
+    ],
+    "time": 20,
+    "details": "The working directory contains your actual project files."
+  },
+  {
+    "question": "What is a commit?",
+    "options": [
+      "Saved snapshot of changes",
+      "File deletion",
+      "Remote operation",
+      "Branch creation"
+    ],
+    "correctOptions": [
+      "Saved snapshot of changes"
+    ],
+    "time": 20,
+    "details": "A commit is a saved snapshot of your staged changes."
+  },
+  {
+    "question": "What is a branch?",
+    "options": [
+      "Independent line of development",
+      "Remote copy",
+      "File folder",
+      "Commit history"
+    ],
+    "correctOptions": [
+      "Independent line of development"
+    ],
+    "time": 25,
+    "details": "A branch is an independent line of development."
+  },
+  {
+    "question": "What is the default branch called?",
+    "options": [
+      "master (or main)",
+      "develop",
+      "master",
+      "trunk"
+    ],
+    "correctOptions": [
+      "master (or main)"
+    ],
+    "time": 20,
+    "details": "The default branch is typically master or main."
+  },
+  {
+    "question": "How do you create a branch?",
+    "options": [
+      "git branch branch-name",
+      "git create branch-name",
+      "git new branch-name",
+      "git add branch-name"
+    ],
+    "correctOptions": [
+      "git branch branch-name"
+    ],
+    "time": 25,
+    "details": "git branch creates a new branch."
+  },
+  {
+    "question": "How do you switch branches?",
+    "options": [
+      "git checkout branch-name",
+      "git switch branch-name",
+      "git checkout/switch",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "git checkout and git switch both switch branches."
+  },
+  {
+    "question": "How do you create and switch in one command?",
+    "options": [
+      "git checkout -b branch-name",
+      "git branch -b branch-name",
+      "git switch -b branch-name",
+      "git new -b branch-name"
+    ],
+    "correctOptions": [
+      "git checkout -b branch-name"
+    ],
+    "time": 30,
+    "details": "git checkout -b creates and switches to new branch."
+  },
+  {
+    "question": "What is HEAD?",
+    "options": [
+      "Pointer to current commit",
+      "First commit",
+      "Last commit",
+      "Remote pointer"
+    ],
+    "correctOptions": [
+      "Pointer to current commit"
+    ],
+    "time": 30,
+    "details": "HEAD points to your current location in the repository."
+  },
+  {
+    "question": "How do you list branches?",
+    "options": [
+      "git branch",
+      "git branch list",
+      "git list branches",
+      "git show branches"
+    ],
+    "correctOptions": [
+      "git branch"
+    ],
+    "time": 20,
+    "details": "git branch lists all local branches."
+  },
+  {
+    "question": "How do you delete a branch?",
+    "options": [
+      "git branch -d branch-name",
+      "git branch -delete branch-name",
+      "git branch remove branch-name",
+      "git rm branch branch-name"
+    ],
+    "correctOptions": [
+      "git branch -d branch-name"
+    ],
+    "time": 25,
+    "details": "git branch -d deletes a merged branch."
+  },
+  {
+    "question": "What does -D flag do?",
+    "options": [
+      "Force delete branch",
+      "Delete merged branch",
+      "List deleted branches",
+      "Show deleted branches"
+    ],
+    "correctOptions": [
+      "Force delete branch"
+    ],
+    "time": 25,
+    "details": "-D force deletes a branch even if not merged."
+  },
+  {
+    "question": "What is a remote?",
+    "options": [
+      "Online repository copy",
+      "Local folder",
+      "Backup system",
+      "Code editor"
+    ],
+    "correctOptions": [
+      "Online repository copy"
+    ],
+    "time": 25,
+    "details": "Remotes are online copies of your repository."
+  },
+  {
+    "question": "How do you add a remote?",
+    "options": [
+      "git remote add name url",
+      "git remote create name url",
+      "git add remote name url",
+      "git remote new name url"
+    ],
+    "correctOptions": [
+      "git remote add name url"
+    ],
+    "time": 30,
+    "details": "git remote add connects to a remote repository."
+  },
+  {
+    "question": "How do you list remotes?",
+    "options": [
+      "git remote -v",
+      "git remote list",
+      "git remotes",
+      "git remote show"
+    ],
+    "correctOptions": [
+      "git remote -v"
+    ],
+    "time": 20,
+    "details": "git remote -v shows all remotes with URLs."
+  },
+  {
+    "question": "What is origin?",
+    "options": [
+      "Default remote name",
+      "Original branch",
+      "First commit",
+      "Main branch"
+    ],
+    "correctOptions": [
+      "Default remote name"
+    ],
+    "time": 25,
+    "details": "origin is the conventional name for the main remote."
+  },
+  {
+    "question": "How do you push to remote?",
+    "options": [
+      "git push origin branch-name",
+      "git upload origin branch-name",
+      "git send origin branch-name",
+      "git commit origin branch-name"
+    ],
+    "correctOptions": [
+      "git push origin branch-name"
+    ],
+    "time": 25,
+    "details": "git push sends commits to a remote repository."
+  },
+  {
+    "question": "How do you pull from remote?",
+    "options": [
+      "git pull origin branch-name",
+      "git fetch origin && git merge",
+      "git download origin branch-name",
+      "git get origin branch-name"
+    ],
+    "correctOptions": [
+      "git pull origin branch-name"
+    ],
+    "time": 25,
+    "details": "git pull fetches and merges remote changes."
+  },
+  {
+    "question": "What is the difference between fetch and pull?",
+    "options": [
+      "Fetch downloads without merging",
+      "Fetch uploads changes",
+      "Pull is faster",
+      "Fetch is safer"
+    ],
+    "correctOptions": [
+      "Fetch downloads without merging"
+    ],
+    "time": 30,
+    "details": "fetch downloads changes but doesn't merge them."
+  },
+  {
+    "question": "How do you clone a repository?",
+    "options": [
+      "git clone url",
+      "git copy url",
+      "git download url",
+      "git get url"
+    ],
+    "correctOptions": [
+      "git clone url"
+    ],
+    "time": 25,
+    "details": "git clone creates a local copy of a repository."
+  },
+  {
+    "question": "What is git diff?",
+    "options": [
+      "Show file differences",
+      "Delete files",
+      "Add files",
+      "Commit files"
+    ],
+    "correctOptions": [
+      "Show file differences"
+    ],
+    "time": 25,
+    "details": "git diff shows changes between commits or files."
+  },
+  {
+    "question": "What does git diff --staged show?",
+    "options": [
+      "Staged changes",
+      "Unstaged changes",
+      "All changes",
+      "No changes"
+    ],
+    "correctOptions": [
+      "Staged changes"
+    ],
+    "time": 25,
+    "details": "--staged shows what will be committed."
+  },
+  {
+    "question": "How do you unstage a file?",
+    "options": [
+      "git reset HEAD file",
+      "git unstage file",
+      "git remove --staged file",
+      "git reset file"
+    ],
+    "correctOptions": [
+      "git reset HEAD file"
+    ],
+    "time": 30,
+    "details": "git reset HEAD unstages a file."
+  },
+  {
+    "question": "How do you discard local changes?",
+    "options": [
+      "git checkout -- file",
+      "git revert file",
+      "git reset file",
+      "git restore file"
+    ],
+    "correctOptions": [
+      "git restore file"
+    ],
+    "time": 30,
+    "details": "git restore discards working directory changes."
+  },
+  {
+    "question": "What is git log?",
+    "options": [
+      "Show commit history",
+      "Show current files",
+      "Show remote branches",
+      "Show staged files"
+    ],
+    "correctOptions": [
+      "Show commit history"
+    ],
+    "time": 20,
+    "details": "git log displays the commit history."
+  },
+  {
+    "question": "What is git log --oneline?",
+    "options": [
+      "Compact commit view",
+      "Detailed view",
+      "Graph view",
+      "File view"
+    ],
+    "correctOptions": [
+      "Compact commit view"
+    ],
+    "time": 25,
+    "details": "--oneline shows each commit on one line."
+  },
+  {
+    "question": "What is git log --graph?",
+    "options": [
+      "Visual branch history",
+      "Simple history",
+      "File history",
+      "Remote history"
+    ],
+    "correctOptions": [
+      "Visual branch history"
+    ],
+    "time": 30,
+    "details": "--graph shows a visual branch structure."
+  },
+  {
+    "question": "What does git show display?",
+    "options": [
+      "Commit details",
+      "File list",
+      "Branch list",
+      "Remote list"
+    ],
+    "correctOptions": [
+      "Commit details"
+    ],
+    "time": 25,
+    "details": "git show displays a commit's details."
+  },
+  {
+    "question": "What is .gitignore?",
+    "options": [
+      "File listing untracked files to ignore",
+      "Tracked files",
+      "Remote files",
+      "Deleted files"
+    ],
+    "correctOptions": [
+      "File listing untracked files to ignore"
+    ],
+    "time": 30,
+    "details": ".gitignore tells Git which files to ignore."
+  },
+  {
+    "question": "How do you remove a file from Git?",
+    "options": [
+      "git rm file",
+      "git delete file",
+      "git remove file",
+      "git untrack file"
+    ],
+    "correctOptions": [
+      "git rm file"
+    ],
+    "time": 25,
+    "details": "git rm removes a file from Git and disk."
+  },
+  {
+    "question": "How do you untrack a file?",
+    "options": [
+      "git rm --cached file",
+      "git untrack file",
+      "git remove cached file",
+      "git ignore file"
+    ],
+    "correctOptions": [
+      "git rm --cached file"
+    ],
+    "time": 30,
+    "details": "--cached removes file from Git but keeps it locally."
+  },
+  {
+    "question": "How do you rename a file in Git?",
+    "options": [
+      "git mv old new",
+      "git rename old new",
+      "mv old new",
+      "git rename old new"
+    ],
+    "correctOptions": [
+      "git mv old new"
+    ],
+    "time": 25,
+    "details": "git mv renames a file and stages the change."
+  },
+  {
+    "question": "What is a commit message?",
+    "options": [
+      "Description of changes",
+      "File name",
+      "Branch name",
+      "Remote URL"
+    ],
+    "correctOptions": [
+      "Description of changes"
+    ],
+    "time": 20,
+    "details": "A commit message describes what changed."
+  },
+  {
+    "question": "How do you amend a commit?",
+    "options": [
+      "git commit --amend",
+      "git commit --fix",
+      "git edit commit",
+      "git modify commit"
+    ],
+    "correctOptions": [
+      "git commit --amend"
+    ],
+    "time": 30,
+    "details": "--amend modifies the last commit."
+  },
+  {
+    "question": "What does --amend do?",
+    "options": [
+      "Changes the last commit",
+      "Creates new commit",
+      "Deletes commit",
+      "Reverts commit"
+    ],
+    "correctOptions": [
+      "Changes the last commit"
+    ],
+    "time": 30,
+    "details": "--amend replaces the last commit with a new one."
+  },
+  {
+    "question": "How do you undo the last commit?",
+    "options": [
+      "git revert HEAD",
+      "git undo HEAD",
+      "git reset HEAD~1",
+      "Both revert and reset work"
+    ],
+    "correctOptions": [
+      "Both revert and reset work"
+    ],
+    "time": 35,
+    "details": "Both revert and reset can undo commits."
+  },
+  {
+    "question": "What is git reset?",
+    "options": [
+      "Undo commits",
+      "View commits",
+      "Create commits",
+      "List commits"
+    ],
+    "correctOptions": [
+      "Undo commits"
+    ],
+    "time": 25,
+    "details": "git reset moves the branch pointer."
+  },
+  {
+    "question": "What is the difference between reset, soft, and mixed?",
+    "options": [
+      "Where changes go after reset",
+      "Types of commits",
+      "Types of branches",
+      "Types of remotes"
+    ],
+    "correctOptions": [
+      "Where changes go after reset"
+    ],
+    "time": 40,
+    "details": "Soft keeps in staging, mixed in working, hard loses changes."
+  },
+  {
+    "question": "What does git reset --soft do?",
+    "options": [
+      "Keeps changes staged",
+      "Keeps changes unstaged",
+      "Deletes changes",
+      "Keeps in commit"
+    ],
+    "correctOptions": [
+      "Keeps changes staged"
+    ],
+    "time": 35,
+    "details": "--soft keeps changes in the staging area."
+  },
+  {
+    "question": "What does git reset --mixed do?",
+    "options": [
+      "Keeps changes unstaged",
+      "Keeps changes staged",
+      "Deletes changes",
+      "Keeps in commit"
+    ],
+    "correctOptions": [
+      "Keeps changes unstaged"
+    ],
+    "time": 35,
+    "details": "--mixed (default) keeps changes in working directory."
+  },
+  {
+    "question": "What does git reset --hard do?",
+    "options": [
+      "Deletes all changes",
+      "Keeps changes staged",
+      "Keeps changes unstaged",
+      "Keeps in commit"
+    ],
+    "correctOptions": [
+      "Deletes all changes"
+    ],
+    "time": 35,
+    "details": "--hard removes all changes - be careful!"
+  },
+  {
+    "question": "What is git revert?",
+    "options": [
+      "Creates new commit undoing changes",
+      "Removes commit",
+      "Modifies commit",
+      "Merges commits"
+    ],
+    "correctOptions": [
+      "Creates new commit undoing changes"
+    ],
+    "time": 35,
+    "details": "Revert creates a new commit that undoes previous changes."
+  },
+  {
+    "question": "What is a merge conflict?",
+    "options": [
+      "Changes that conflict between branches",
+      "File deletion",
+      "Branch creation",
+      "Remote connection"
+    ],
+    "correctOptions": [
+      "Changes that conflict between branches"
+    ],
+    "time": 35,
+    "details": "Merge conflicts occur when changes overlap."
+  },
+  {
+    "question": "What are the conflict markers?",
+    "options": [
+      "<<<<<<, =======, >>>>>>",
+      "<<<<<, =====, >>>>>, ",
+      "***, ===, ***",
+      "<<<<, ====, >>>>"
+    ],
+    "correctOptions": [
+      "<<<<<<, =======, >>>>>>"
+    ],
+    "time": 35,
+    "details": "Conflict markers show conflicting changes."
+  },
+  {
+    "question": "How do you abort a merge?",
+    "options": [
+      "git merge --abort",
+      "git abort merge",
+      "git revert merge",
+      "git reset merge"
+    ],
+    "correctOptions": [
+      "git merge --abort"
+    ],
+    "time": 30,
+    "details": "--abort cancels the merge and returns to previous state."
+  },
+  {
+    "question": "What is a fast-forward merge?",
+    "options": [
+      "Moving pointer without new commit",
+      "New commit created",
+      "Conflict resolution",
+      "Branch deletion"
+    ],
+    "correctOptions": [
+      "Moving pointer without new commit"
+    ],
+    "time": 35,
+    "details": "Fast-forward moves pointer when no divergence."
+  },
+  {
+    "question": "What is a three-way merge?",
+    "options": [
+      "Uses two branch tips and common ancestor",
+      "Three branches merged",
+      "Three commits",
+      "Three files"
+    ],
+    "correctOptions": [
+      "Uses two branch tips and common ancestor"
+    ],
+    "time": 40,
+    "details": "Three-way merge uses the common ancestor to merge."
+  },
+  {
+    "question": "What is git stash?",
+    "options": [
+      "Temporarily save changes",
+      "Permanently save",
+      "Delete changes",
+      "Share changes"
+    ],
+    "correctOptions": [
+      "Temporarily save changes"
+    ],
+    "time": 25,
+    "details": "git stash temporarily shelves changes."
+  },
+  {
+    "question": "How do you apply stash?",
+    "options": [
+      "git stash apply",
+      "git stash pop",
+      "git stash get",
+      "Both apply and pop work"
+    ],
+    "correctOptions": [
+      "Both apply and pop work"
+    ],
+    "time": 30,
+    "details": "apply keeps stash, pop applies and removes stash."
+  },
+  {
+    "question": "What is git stash pop?",
+    "options": [
+      "Apply and remove stash",
+      "Apply and keep stash",
+      "Create stash",
+      "List stash"
+    ],
+    "correctOptions": [
+      "Apply and remove stash"
+    ],
+    "time": 30,
+    "details": "pop applies changes and removes the stash."
+  },
+  {
+    "question": "What is git stash list?",
+    "options": [
+      "Show all stashes",
+      "Create stash",
+      "Clear stash",
+      "Apply stash"
+    ],
+    "correctOptions": [
+      "Show all stashes"
+    ],
+    "time": 25,
+    "details": "stash list shows all saved stashes."
+  },
+  {
+    "question": "What is git stash drop?",
+    "options": [
+      "Delete a stash",
+      "Apply stash",
+      "Create stash",
+      "List stash"
+    ],
+    "correctOptions": [
+      "Delete a stash"
+    ],
+    "time": 30,
+    "details": "stash drop removes a stash entry."
+  },
+  {
+    "question": "How do you create a stash with message?",
+    "options": [
+      "git stash push -m 'message'",
+      "git stash -m 'message'",
+      "git stash create 'message'",
+      "git stash save 'message'"
+    ],
+    "correctOptions": [
+      "git stash push -m 'message'"
+    ],
+    "time": 30,
+    "details": "stash push -m adds a description to the stash."
+  },
+  {
+    "question": "What is git clean?",
+    "options": [
+      "Remove untracked files",
+      "Remove tracked files",
+      "Remove commits",
+      "Remove branches"
+    ],
+    "correctOptions": [
+      "Remove untracked files"
+    ],
+    "time": 30,
+    "details": "git clean removes untracked files from directory."
+  },
+  {
+    "question": "What does -n flag do with git clean?",
+    "options": [
+      "Preview what would be deleted",
+      "Delete nothing",
+      "Force delete",
+      "Delete all"
+    ],
+    "correctOptions": [
+      "Preview what would be deleted"
+    ],
+    "time": 35,
+    "details": "-n shows what would happen without doing it."
+  },
+  {
+    "question": "What does -f flag do with git clean?",
+    "options": [
+      "Force delete",
+      "Preview delete",
+      "Dry run",
+      "File only"
+    ],
+    "correctOptions": [
+      "Force delete"
+    ],
+    "time": 30,
+    "details": "-f (force) is required to actually delete files."
+  },
+  {
+    "question": "What is git blame?",
+    "options": [
+      "Show who changed each line",
+      "Delete files",
+      "Create branches",
+      "Merge branches"
+    ],
+    "correctOptions": [
+      "Show who changed each line"
+    ],
+    "time": 30,
+    "details": "git blame shows who last modified each line."
+  },
+  {
+    "question": "What is git bisect?",
+    "options": [
+      "Binary search for bad commit",
+      "Compare branches",
+      "List commits",
+      "Clean repository"
+    ],
+    "correctOptions": [
+      "Binary search for bad commit"
+    ],
+    "time": 40,
+    "details": "git bisect finds the commit that introduced a bug."
+  },
+  {
+    "question": "What is git cherry-pick?",
+    "options": [
+      "Apply specific commit",
+      "Delete commit",
+      "Merge branches",
+      "Rebase branches"
+    ],
+    "correctOptions": [
+      "Apply specific commit"
+    ],
+    "time": 35,
+    "details": "cherry-pick applies the changes from a specific commit."
+  },
+  {
+    "question": "What is a tag?",
+    "options": [
+      "Named reference to a commit",
+      "Branch name",
+      "Remote name",
+      "Commit message"
+    ],
+    "correctOptions": [
+      "Named reference to a commit"
+    ],
+    "time": 25,
+    "details": "Tags mark specific commits as important."
+  },
+  {
+    "question": "How do you create an annotated tag?",
+    "options": [
+      "git tag -a name -m 'message'",
+      "git tag name -m 'message'",
+      "git create tag name",
+      "git add tag name"
+    ],
+    "correctOptions": [
+      "git tag -a name -m 'message'"
+    ],
+    "time": 30,
+    "details": "-a creates annotated tag with message."
+  },
+  {
+    "question": "How do you create a lightweight tag?",
+    "options": [
+      "git tag name",
+      "git tag -a name",
+      "git tag --light name",
+      "git create tag name"
+    ],
+    "correctOptions": [
+      "git tag name"
+    ],
+    "time": 25,
+    "details": "Without -a, you create a lightweight tag."
+  },
+  {
+    "question": "How do you list tags?",
+    "options": [
+      "git tag",
+      "git tags list",
+      "git list tags",
+      "git show tags"
+    ],
+    "correctOptions": [
+      "git tag"
+    ],
+    "time": 20,
+    "details": "git tag lists all tags."
+  },
+  {
+    "question": "How do you push a tag?",
+    "options": [
+      "git push origin tagname",
+      "git push tagname",
+      "git commit tagname",
+      "git upload tagname"
+    ],
+    "correctOptions": [
+      "git push origin tagname"
+    ],
+    "time": 25,
+    "details": "git push doesn't push tags by default."
+  },
+  {
+    "question": "How do you push all tags?",
+    "options": [
+      "git push origin --tags",
+      "git push --tags",
+      "git push tags",
+      "git push all"
+    ],
+    "correctOptions": [
+      "git push origin --tags"
+    ],
+    "time": 25,
+    "details": "--tags pushes all local tags."
+  },
+  {
+    "question": "How do you delete a local tag?",
+    "options": [
+      "git tag -d tagname",
+      "git delete tag tagname",
+      "git remove tag tagname",
+      "git tag delete tagname"
+    ],
+    "correctOptions": [
+      "git tag -d tagname"
+    ],
+    "time": 25,
+    "details": "git tag -d removes a local tag."
+  },
+  {
+    "question": "How do you delete a remote tag?",
+    "options": [
+      "git push origin --delete tagname",
+      "git push origin :tagname",
+      "Both methods work",
+      "git remote delete tagname"
+    ],
+    "correctOptions": [
+      "Both methods work"
+    ],
+    "time": 30,
+    "details": "Both origin --delete and :refs work to remove remote tags."
+  },
+  {
+    "question": "What is git reflog?",
+    "options": [
+      "Reference log of all changes",
+      "File reference",
+      "Remote log",
+      "Commit log"
+    ],
+    "correctOptions": [
+      "Reference log of all changes"
+    ],
+    "time": 35,
+    "details": "Reflog records all HEAD movements."
+  },
+  {
+    "question": "What is the purpose of reflog?",
+    "options": [
+      "Recover lost commits",
+      "Create branches",
+      "Merge branches",
+      "Delete branches"
+    ],
+    "correctOptions": [
+      "Recover lost commits"
+    ],
+    "time": 35,
+    "details": "Reflog helps recover commits that seem lost."
+  },
+  {
+    "question": "How long does reflog keep history?",
+    "options": [
+      "90 days by default",
+      "30 days",
+      "1 year",
+      "Forever"
+    ],
+    "correctOptions": [
+      "90 days by default"
+    ],
+    "time": 40,
+    "details": "Reflog entries expire after 90 days."
+  },
+  {
+    "question": "What is git describe?",
+    "options": [
+      "Show nearby tag info",
+      "Describe repository",
+      "Show file contents",
+      "List commits"
+    ],
+    "correctOptions": [
+      "Show nearby tag info"
+    ],
+    "time": 40,
+    "details": "describe shows the most recent tag reachable from commit."
+  },
+  {
+    "question": "What is git shortlog?",
+    "options": [
+      "Summary of commits by author",
+      "Short commit messages",
+      "Short branches",
+      "Short remotes"
+    ],
+    "correctOptions": [
+      "Summary of commits by author"
+    ],
+    "time": 35,
+    "details": "shortlog groups commits by author."
+  },
+  {
+    "question": "What is git archive?",
+    "options": [
+      "Create archive of files",
+      "Unzip files",
+      "List files",
+      "Compare files"
+    ],
+    "correctOptions": [
+      "Create archive of files"
+    ],
+    "time": 35,
+    "details": "git archive creates a zip/tar of files."
+  },
+  {
+    "question": "What is Git?",
+    "options": [
+      "Distributed version control system",
+      "Programming language",
+      "Database system",
+      "Web server"
+    ],
+    "correctOptions": [
+      "Distributed version control system"
+    ],
+    "time": 20,
+    "details": "Git is a distributed version control system for tracking changes."
+  },
+  {
+    "question": "Who created Git?",
+    "options": [
+      "Linus Torvalds",
+      "Bill Gates",
+      "Steve Jobs",
+      "Mark Zuckerberg"
+    ],
+    "correctOptions": [
+      "Linus Torvalds"
+    ],
+    "time": 25,
+    "details": "Linus Torvalds created Git in 2005."
+  },
+  {
+    "question": "What is a repository?",
+    "options": [
+      "Project folder with version control",
+      "Code editor",
+      "Web browser",
+      "Database"
+    ],
+    "correctOptions": [
+      "Project folder with version control"
+    ],
+    "time": 20,
+    "details": "A repository is a project directory that Git tracks."
+  },
+  {
+    "question": "How do you initialize a Git repository?",
+    "options": [
+      "git init",
+      "git start",
+      "git create",
+      "git new"
+    ],
+    "correctOptions": [
+      "git init"
+    ],
+    "time": 20,
+    "details": "git init creates a new Git repository."
+  },
+  {
+    "question": "What is the staging area?",
+    "options": [
+      "Area to prepare commits",
+      "Backup location",
+      "Remote server",
+      "Working directory"
+    ],
+    "correctOptions": [
+      "Area to prepare commits"
+    ],
+    "time": 25,
+    "details": "The staging area holds changes ready to commit."
+  },
+  {
+    "question": "What command stages all changes?",
+    "options": [
+      "git add .",
+      "git stage .",
+      "git commit -a",
+      "git add -A"
+    ],
+    "correctOptions": [
+      "git add ."
+    ],
+    "time": 20,
+    "details": "git add . stages all changes in current directory."
+  },
+  {
+    "question": "What command commits changes?",
+    "options": [
+      "git commit",
+      "git save",
+      "git push",
+      "git store"
+    ],
+    "correctOptions": [
+      "git commit"
+    ],
+    "time": 20,
+    "details": "git commit records staged changes in history."
+  },
+  {
+    "question": "What does git status show?",
+    "options": [
+      "Current state of repository",
+      "Commit history",
+      "Remote branches",
+      "File differences"
+    ],
+    "correctOptions": [
+      "Current state of repository"
+    ],
+    "time": 20,
+    "details": "git status shows the current state of the working directory."
+  },
+  {
+    "question": "What is the working directory?",
+    "options": [
+      "Project files on disk",
+      "Git history",
+      "Remote server",
+      "Staging area"
+    ],
+    "correctOptions": [
+      "Project files on disk"
+    ],
+    "time": 20,
+    "details": "The working directory contains your actual project files."
+  },
+  {
+    "question": "What is a commit?",
+    "options": [
+      "Saved snapshot of changes",
+      "File deletion",
+      "Remote operation",
+      "Branch creation"
+    ],
+    "correctOptions": [
+      "Saved snapshot of changes"
+    ],
+    "time": 20,
+    "details": "A commit is a saved snapshot of your staged changes."
+  },
+  {
+    "question": "What is a branch?",
+    "options": [
+      "Independent line of development",
+      "Remote copy",
+      "File folder",
+      "Commit history"
+    ],
+    "correctOptions": [
+      "Independent line of development"
+    ],
+    "time": 25,
+    "details": "A branch is an independent line of development."
+  },
+  {
+    "question": "What is the default branch called?",
+    "options": [
+      "master (or main)",
+      "develop",
+      "master",
+      "trunk"
+    ],
+    "correctOptions": [
+      "master (or main)"
+    ],
+    "time": 20,
+    "details": "The default branch is typically master or main."
+  },
+  {
+    "question": "How do you create a branch?",
+    "options": [
+      "git branch branch-name",
+      "git create branch-name",
+      "git new branch-name",
+      "git add branch-name"
+    ],
+    "correctOptions": [
+      "git branch branch-name"
+    ],
+    "time": 25,
+    "details": "git branch creates a new branch."
+  },
+  {
+    "question": "How do you switch branches?",
+    "options": [
+      "git checkout branch-name",
+      "git switch branch-name",
+      "git checkout/switch",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "git checkout and git switch both switch branches."
+  },
+  {
+    "question": "How do you create and switch in one command?",
+    "options": [
+      "git checkout -b branch-name",
+      "git branch -b branch-name",
+      "git switch -b branch-name",
+      "git new -b branch-name"
+    ],
+    "correctOptions": [
+      "git checkout -b branch-name"
+    ],
+    "time": 30,
+    "details": "git checkout -b creates and switches to new branch."
+  },
+  {
+    "question": "What is HEAD?",
+    "options": [
+      "Pointer to current commit",
+      "First commit",
+      "Last commit",
+      "Remote pointer"
+    ],
+    "correctOptions": [
+      "Pointer to current commit"
+    ],
+    "time": 30,
+    "details": "HEAD points to your current location in the repository."
+  },
+  {
+    "question": "How do you list branches?",
+    "options": [
+      "git branch",
+      "git branch list",
+      "git list branches",
+      "git show branches"
+    ],
+    "correctOptions": [
+      "git branch"
+    ],
+    "time": 20,
+    "details": "git branch lists all local branches."
+  },
+  {
+    "question": "What does git clean require?",
+    "options": [
+      "-f flag",
+      "-n flag",
+      "-d flag",
+      "-i flag"
+    ],
+    "correctOptions": [
+      "-f flag"
+    ],
+    "time": 30,
+    "details": "clean refuses to run without -f unless config requires."
+  },
+  {
+    "question": "What is git reflog?",
+    "options": [
+      "Reference log of operations",
+      "Remote log",
+      "Repository log",
+      "Commit log"
+    ],
+    "correctOptions": [
+      "Reference log of operations"
+    ],
+    "time": 30,
+    "details": "Reflog records all changes to HEAD and branches."
+  },
+  {
+    "question": "How do you view reflog?",
+    "options": [
+      "git reflog",
+      "git log",
+      "git show",
+      "git status"
+    ],
+    "correctOptions": [
+      "git reflog"
+    ],
+    "time": 25,
+    "details": "git reflog shows history of HEAD movements."
+  }
+]
