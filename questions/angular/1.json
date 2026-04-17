@@ -1,121 +1,2178 @@
 [
-  {"question": "What is Angular developed by?", "options": ["Facebook", "Google", "Microsoft", "Amazon"], "correctOptions": ["Google"], "time": 25, "details": "Angular is developed and maintained by Google as a platform for building web applications."},
-  {"question": "What is Angular component?", "options": ["UI element", "Building block", "View", "Element"], "correctOptions": ["Building block"], "time": 25, "details": "Components are the fundamental building blocks of Angular applications."},
-  {"question": "What is @Component?", "options": ["Decorator", "Component decorator", "Metadata", "Annotation"], "correctOptions": ["Component decorator"], "time": 25, "details": "@Component decorates a class as an Angular component with metadata."},
-  {"question": "What is template?", "options": ["HTML view", "UI", "Component view", "Layout"], "correctOptions": ["HTML view"], "time": 25, "details": "Template defines the component's view using HTML."},
-  {"question": "What is selector?", "options": ["Component name", "Custom tag", "Tag name", "Reference"], "correctOptions": ["Custom tag"], "time": 25, "details": "selector defines the custom HTML tag to use the component."},
-  {"question": "What is module?", "options": ["Feature bundle", "Code container", "Package", "Group"], "correctOptions": ["Code container"], "time": 25, "details": "Modules organize an Angular application into cohesive blocks."},
-  {"question": "What is @NgModule?", "options": ["Module decorator", "Module annotation", "Module config", "Feature marker"], "correctOptions": ["Module decorator"], "time": 25, "details": "@NgModule decorates a class as an Angular module."},
-  {"question": "What is declarations?", "options": ["Components", "Module components", "Own components", "Views"], "correctOptions": ["Own components"], "time": 30, "details": "declarations lists components owned by the module."},
-  {"question": "What is imports?", "options": ["External modules", "Dependencies", "Imported modules", "Libraries"], "correctOptions": ["External modules"], "time": 30, "details": "imports lists modules this module depends on."},
-  {"question": "What is providers?", "options": ["Services", "Injectables", "Service container", "DI services"], "correctOptions": ["Services"], "time": 30, "details": "providers lists services available for injection."},
-  {"question": "What is bootstrap?", "options": ["Start component", "Entry point", "Main component", "Root"], "correctOptions": ["Entry point"], "time": 30, "details": "bootstrap defines the root component to start the app."},
-  {"question": "What is service?", "options": ["Logic", "Shared code", "Data service", "Reusable"], "correctOptions": ["Shared code"], "time": 25, "details": "Services hold reusable business logic and data."},
-  {"question": "What is @Injectable()?", "options": ["Service annotation", "Service decorator", "Injectable metadata", "Service config"], "correctOptions": ["Service decorator"], "time": 30, "details": "@Injectable marks a class as available for DI."},
-  {"question": "What is dependency injection?", "options": ["Pattern", "Service injection", "DI pattern", "Constructor DI"], "correctOptions": ["Pattern"], "time": 35, "details": "DI is a pattern where services are provided to components."},
-  {"question": "What is constructor injection?", "options": ["Via constructor", "Inject in constructor", "Parameter injection", "Class injection"], "correctOptions": ["Via constructor"], "time": 35, "details": "Services are injected through the constructor."},
-  {"question": "What is DI token?", "options": ["Service identifier", "Token", "Injection key", "Provider key"], "correctOptions": ["Service identifier"], "time": 35, "details": "DI tokens identify services for injection."},
-  {"question": "What is HttpClient?", "options": ["HTTP service", "API client", "HTTP wrapper", "Request client"], "correctOptions": ["HTTP service"], "time": 30, "details": "HttpClient makes HTTP requests to backends."},
-  {"question": "What is HttpInterceptor?", "options": ["Request modifier", "Request/response", "HTTP hook", "Pipeline"], "correctOptions": ["Request/response"], "time": 35, "details": "Interceptors modify HTTP requests and responses."},
-  {"question": "What is routing?", "options": ["Navigation", "URL mapping", "Route config", "Path"], "correctOptions": ["URL mapping"], "time": 30, "details": "Routing maps URLs to components."},
-  {"question": "What is RouterModule?", "options": ["Routing module", "Router config", "Router package", "Nav module"], "correctOptions": ["Routing module"], "time": 30, "details": "RouterModule provides routing functionality."},
-  {"question": "What is routes?", "options": ["Route array", "Config array", "Path array", "Mapping"], "correctOptions": ["Route array"], "time": 30, "details": "routes defines the route configuration array."},
-  {"question": "What is path?", "options": ["URL segment", "Route URL", "Location", "Segment"], "correctOptions": ["Route URL"], "time": 25, "details": "path defines the URL segment for a route."},
-  {"question": "What is component in route?", "options": ["Target component", "Route target", "View component", "Page"], "correctOptions": ["Route target"], "time": 30, "details": "component specifies what renders for the route."},
-  {"question": "What is redirectTo?", "options": ["Target path", "Route redirect", "Forward path", "Redirection"], "correctOptions": ["Route redirect"], "time": 35, "details": "redirectTo redirects to another path."},
-  {"question": "What is wildcard route?", "options": ["** path", "Catch all", "Default route", "404"], "correctOptions": ["Catch all"], "time": 30, "details": "Wildcard route matches any unmatched path."},
-  {"question": "What is RouterLink?", "options": ["Link directive", "Navigation attr", "Router attr", "Navigate"], "correctOptions": ["Link directive"], "time": 30, "details": "RouterLink directive links to routes."},
-  {"question": "What is routerLinkActive?", "options": ["Active class", "Active state", "Active flag", "Selected"], "correctOptions": ["Active class"], "time": 35, "details": "routerLinkActive adds classes when active."},
-  {"question": "What is ActivatedRoute?", "options": ["Current route", "Active route", "Route info", "Route data"], "correctOptions": ["Current route"], "time": 30, "details": "ActivatedRoute provides route information."},
-  {"question": "What is param?", "options": ["Route param", "Variable", "Placeholder", "Segment"], "correctOptions": ["Route param"], "time": 30, "details": "param holds route parameter values."},
-  {"question": "What is queryParam?", "options": ["Query string", "URL param", "Optional param", "Extra param"], "correctOptions": ["URL param"], "time": 30, "details": "queryParam holds query string parameters."},
-  {"question": "What is router.navigate?", "options": ["Navigate", "Program navigation", "Go to", "Change route"], "correctOptions": ["Program navigation"], "time": 30, "details": "router.navigate navigates programmatically."},
-  {"question": "What is navigateByUrl?", "options": ["URL navigate", "Navigate to URL", "Direct route", "Absolute"], "correctOptions": ["Navigate to URL"], "time": 35, "details": "navigateByUrl navigates using a URL string."},
-  {"question": "What is routerLink?", "options": ["Directive", "Navigate", "Link to", "Click navigate"], "correctOptions": ["Navigate"], "time": 30, "details": "routerLink navigates on click."},
-  {"question": "What is data in route?", "options": ["Static data", "Route data", "Custom data", "Meta"], "correctOptions": ["Route data"], "time": 35, "details": "data holds static route data."},
-  {"question": "What is resolve?", "options": ["Preload data", "Resolver", "Data resolver", "Pre-fetch"], "correctOptions": ["Preload data"], "time": 40, "details": "resolve preloads data before navigation."},
-  {"question": "What is canActivate?", "options": ["Guard", "Route guard", "Permission", "Check"], "correctOptions": ["Route guard"], "time": 35, "details": "canActivate guards route access."},
-  {"question": "What is canActivateChild?", "options": ["Child guard", "Child route guard", "Nested guard", "Sub-guard"], "correctOptions": ["Child route guard"], "time": 40, "details": "canActivateChild guards child routes."},
-  {"question": "What is canDeactivate?", "options": ["Exit guard", "Leave guard", "Unsaved guard", "Close guard"], "correctOptions": ["Exit guard"], "time": 40, "details": "canDeactivate guards route exit."},
-  {"question": "What is canLoad?", "options": ["Lazy guard", "Lazy load guard", "Module guard", "Lazy"], "correctOptions": ["Lazy load guard"], "time": 45, "details": "canLoad guards lazy loading."},
-  {"question": "What is pipe?", "options": ["Transform", "Data pipe", "Value transform", "Format"], "correctOptions": ["Transform"], "time": 25, "details": "Pipes transform values in templates."},
-  {"question": "What is async pipe?", "options": ["Observable pipe", "Auto subscribe", "Async transform", "Observable"], "correctOptions": ["Auto subscribe"], "time": 30, "details": "async pipe auto-subscribes to observables."},
-  {"question": "What is date pipe?", "options": ["Date format", "Date transform", "Date display", "Time"], "correctOptions": ["Date format"], "time": 25, "details": "date pipe formats dates."},
-  {"question": "What is currency pipe?", "options": ["Money format", "Currency format", "Price", "Money"], "correctOptions": ["Currency format"], "time": 25, "details": "currency pipe formats currency."},
-  {"question": "What is decimal pipe?", "options": ["Number format", "Decimal format", "Numeric", "Float"], "correctOptions": ["Number format"], "time": 25, "details": "decimal pipe formats numbers."},
-  {"question": "What is percent pipe?", "options": ["Percent format", "Percent transform", "Percentage", "Rate"], "correctOptions": ["Percent format"], "time": 25, "details": "percent pipe formats percentages."},
-  {"question": "What is uppercase pipe?", "options": ["Uppercase", "Text transform", "Capitalize", "Upper"], "correctOptions": ["Uppercase"], "time": 25, "details": "uppercase pipe converts to uppercase."},
-  {"question": "What is lowercase pipe?", "options": ["Lowercase", "Text transform", "Minify", "Lower"], "correctOptions": ["Lowercase"], "time": 25, "details": "lowercase pipe converts to lowercase."},
-  {"question": "What is slice pipe?", "options": ["Subarray", "Array slice", "Substring", "Segment"], "correctOptions": ["Substring"], "time": 30, "details": "slice pipe extracts substrings."},
-  {"question": "What is json pipe?", "options": ["Object to JSON", "JSON transform", "Debug", "Object"], "correctOptions": ["Object to JSON"], "time": 30, "details": "json pipe converts to JSON string."},
-  {"question": "What is i18n?", "options": ["Translation", "Localization", "Multi-language", "Language"], "correctOptions": ["Localization"], "time": 30, "details": "i18n handles translations."},
-  {"question": "What is ICU expression?", "options": ["Plural/select", "Conditional", "i18n branch", "Select"], "correctOptions": ["Plural/select"], "time": 40, "details": "ICU expressions handle plurals and selection."},
-  {"question": "What is ngStyle?", "options": ["Style binding", "Dynamic style", "Style attr", "Inline style"], "correctOptions": ["Dynamic style"], "time": 30, "details": "ngStyle sets dynamic styles."},
-  {"question": "What is ngClass?", "options": ["Class binding", "Dynamic class", "Class attr", "Toggle"], "correctOptions": ["Dynamic class"], "time": 30, "details": "ngClass sets dynamic classes."},
-  {"question": "What is ngFor?", "options": ["Loop", "For loop", "Iterate", "Repeat"], "correctOptions": ["For loop"], "time": 25, "details": "ngFor iterates over collections."},
-  {"question": "What is ngIf?", "options": ["Condition", "If block", "Conditional", "Show/hide"], "correctOptions": ["Conditional"], "time": 25, "details": "ngIf conditionally shows elements."},
-  {"question": "What is ngSwitch?", "options": ["Switch", "Switch case", "Switch block", "Conditional"], "correctOptions": ["Switch case"], "time": 30, "details": "ngSwitch provides switch-case logic."},
-  {"question": "What is ng-container?", "options": ["Wrapper", "No render", "Container", "Anchor"], "correctOptions": ["No render"], "time": 30, "details": "ng-container doesn't render to DOM."},
-  {"question": "What is ng-content?", "options": ["Projection", "Content projection", "Slot", "Transclusion"], "correctOptions": ["Content projection"], "time": 35, "details": "ng-content projects content."},
-  {"question": "What is content projection?", "options": ["Project children", "Insert content", "Outer HTML", "Transclusion"], "correctOptions": ["Project children"], "time": 40, "details": "Content projection inserts external content."},
-  {"question": "What is contentChild?", "options": ["Reference child", "Projected content", "View child", "Element ref"], "correctOptions": ["Projected content"], "time": 40, "details": "contentChild queries projected content."},
-  {"question": "What is viewChild?", "options": ["Reference child", "View element", "Template ref", "Element ref"], "correctOptions": ["Template ref"], "time": 35, "details": "viewChild queries template refs."},
-  {"question": "What is ElementRef?", "options": ["DOM element", "Element ref", "Wrapper", "Access"], "correctOptions": ["DOM element"], "time": 30, "details": "ElementRef wraps DOM elements."},
-  {"question": "What is Renderer2?", "options": ["DOM helper", "Render API", "Styles", "Manipulate DOM"], "correctOptions": ["DOM helper"], "time": 35, "details": "Renderer2 manipulates DOM safely."},
-  {"question": "What is DOM manipulation?", "options": ["Direct access", "Change DOM", "Direct DOM", "Unsafe"], "correctOptions": ["Direct access"], "time": 35, "details": "Direct DOM manipulation is discouraged."},
-  {"question": "What is ViewEncapsulation?", "options": ["Style scope", "Style isolation", "Shadow DOM", "Scope"], "correctOptions": ["Style isolation"], "time": 40, "details": "ViewEncapsulation scopes styles."},
-  {"question": "What is ChangeDetection?", "options": ["Update UI", "Check changes", "DOM update", "Render"], "correctOptions": ["Check changes"], "time": 40, "details": "Change detection checks for changes."},
-  {"question": "What is OnPush?", "options": ["Strategy", "Change strategy", "Performance", "Strategy"], "correctOptions": ["Change strategy"], "time": 40, "details": "OnPush optimizes change detection."},
-  {"question": "What is Default strategy?", "options": ["Always check", "Check always", "Full check", "Complete"], "correctOptions": ["Always check"], "time": 40, "details": "Default checks every component."},
-  {"question": "What is Zone.js?", "options": ["Async context", "Change detection", "Async lib", "Patch"], "correctOptions": ["Async context"], "time": 45, "details": "Zone.js manages async context."},
-  {"question": "What is NgZone?", "options": ["Zone wrapper", "Angular zone", "Run outside", "Optimize"], "correctOptions": ["Zone wrapper"], "time": 45, "details": "NgZone wraps Zone.js for Angular."},
-  {"question": "What is runOutsideAngular?", "options": ["Run outside zone", "Outside zone", "Skip change", "Outside"], "correctOptions": ["Run outside zone"], "time": 50, "details": "runOutsideAngular runs code outside Angular."},
-  {"question": "What is observable?", "options": ["Stream", "Async source", "Data stream", "Event"], "correctOptions": ["Async source"], "time": 35, "details": "Observables emit async data."},
-  {"question": "What is Subject?", "options": ["Observable type", "Multicast", "Event emitter", "Source"], "correctOptions": ["Multicast"], "time": 40, "details": "Subject is a multicast observable."},
-  {"question": "What is BehaviorSubject?", "options": ["Current value", "Latest value", "State", "Value"], "correctOptions": ["Latest value"], "time": 40, "details": "BehaviorSubject stores current value."},
-  {"question": "What is ReplaySubject?", "options": ["Buffer", "Replay buffer", "History", "Past values"], "correctOptions": ["Replay buffer"], "time": 45, "details": "ReplaySubject replays past values."},
-  {"question": "What is AsyncSubject?", "options": ["Last value", "Complete subject", "Final value", "Completion"], "correctOptions": ["Last value"], "time": 45, "details": "AsyncSubject emits on completion."},
-  {"question": "What is pipe in RxJS?", "options": ["Chain operators", "Transform", "Operator chain", "Compose"], "correctOptions": ["Chain operators"], "time": 40, "details": "pipe chains operators."},
-  {"question": "What is pipeable operator?", "options": ["Function", "Pipe operator", "Operator", "Transform"], "correctOptions": ["Pipe operator"], "time": 40, "details": "Pipeable operators use pipe()."},
-  {"question": "What is map operator?", "options": ["Transform", "Value map", "Transform values", "Change"], "correctOptions": ["Transform values"], "time": 30, "details": "map transforms emitted values."},
-  {"question": "What is filter operator?", "options": ["Filter values", "Condition", "Select", "Boolean"], "correctOptions": ["Filter values"], "time": 30, "details": "filter filters emitted values."},
-  {"question": "What is tap operator?", "options": ["Side effect", "Log values", "Debug", "Check"], "correctOptions": ["Side effect"], "time": 35, "details": "tap performs side effects."},
-  {"question": "What is switchMap?", "options": ["Cancel previous", "Switch", "Inner observable", "Flatten"], "correctOptions": ["Cancel previous"], "time": 40, "details": "switchMap cancels previous inner observables."},
-  {"question": "What is mergeMap?", "options": ["Flatten", "Inner observable", "Parallel", "Concat"], "correctOptions": ["Inner observable"], "time": 40, "details": "mergeMap merges inner observables."},
-  {"question": "What is concatMap?", "options": ["Sequential", "Order", "Queue", "Series"], "correctOptions": ["Sequential"], "time": 40, "details": "concatMap runs inner observables sequentially."},
-  {"question": "What is exhaustMap?", "options": ["Discard until complete", "Ignore new", "Complete first", "Block"], "correctOptions": ["Discard until complete"], "time": 45, "details": "exhaustMap ignores new while running."},
-  {"question": "What is take operator?", "options": ["Limit emissions", "Take N", "Count", "First N"], "correctOptions": ["Limit emissions"], "time": 35, "details": "take limits emitted values."},
-  {"question": "What is takeUntil?", "options": ["Complete on emit", "Take until", "Until notifier", "Complete"], "correctOptions": ["Until notifier"], "time": 40, "details": "takeUntil completes on emission."},
-  {"question": "What is first operator?", "options": ["First value", "Get first", "Initial", "Start"], "correctOptions": ["First value"], "time": 30, "details": "first gets the first value."},
-  {"question": "What is last operator?", "options": ["Last value", "Get last", "Final", "End"], "correctOptions": ["Last value"], "time": 30, "details": "last gets the last value."},
-  {"question": "What is debounceTime?", "options": ["Delay", "Wait time", "Delay after", "Wait"], "correctOptions": ["Wait time"], "time": 35, "details": "debounceTime delays emissions."},
-  {"question": "What is distinctUntilChanged?", "options": ["Skip same", "Unique", "Dedupe", "Filter repeat"], "correctOptions": ["Skip same"], "time": 40, "details": "distinctUntilChanged skips repeated values."},
-  {"question": "What is combineLatest?", "options": ["Latest from all", "Combine", "Latest values", "All latest"], "correctOptions": ["Latest from all"], "time": 40, "details": "combineLatest combines latest values."},
-  {"question": "What is forkJoin?", "options": ["Parallel", "All complete", "Wait all", "Parallel all"], "correctOptions": ["All complete"], "time": 40, "details": "forkJoin waits for all to complete."},
-  {"question": "What is FormControl?", "options": ["Input control", "Form field", "Value control", "Form element"], "correctOptions": ["Form field"], "time": 30, "details": "FormControl manages form input."},
-  {"question": "What is FormGroup?", "options": ["Form container", "Form collection", "Form object", "Form set"], "correctOptions": ["Form container"], "time": 30, "details": "FormGroup groups form controls."},
-  {"question": "What is FormArray?", "options": ["Array of controls", "Dynamic form", "Repeating form", "List"], "correctOptions": ["Array of controls"], "time": 35, "details": "FormArray manages array of controls."},
-  {"question": "What is Validators?", "options": ["Validation rules", "Validator functions", "Rules", "Check"], "correctOptions": ["Validation rules"], "time": 35, "details": "Validators provide validation rules."},
-  {"question": "What is required?", "options": ["Required field", "Mandatory", "Not empty", "Must fill"], "correctOptions": ["Required field"], "time": 25, "details": "required validates non-empty."},
-  {"question": "What is min/max length?", "options": ["Length validation", "Min/max", "Size", "Range"], "correctOptions": ["Length validation"], "time": 30, "details": "minLength/maxLength validate length."},
-  {"question": "What is pattern?", "options": ["Regex validation", "Regex", "Format", "Match"], "correctOptions": ["Regex validation"], "time": 30, "details": "pattern validates with regex."},
-  {"question": "What is email validator?", "options": ["Email format", "Email check", "Mail", "Address"], "correctOptions": ["Email format"], "time": 30, "details": "email validates email format."},
-  {"question": "What is ReactiveForms?", "options": ["Form model", "Reactive forms", "Code forms", "Dynamic forms"], "correctOptions": ["Form model"], "time": 35, "details": "ReactiveForms are code-based forms."},
-  {"question": "What is TemplateForms?", "options": ["Template forms", "Directive forms", "HTML forms", "Simple forms"], "correctOptions": ["Directive forms"], "time": 35, "details": "TemplateForms use directive-based validation."},
-  {"question": "What is FormBuilder?", "options": ["Create forms", "Builder", "Factory", "Make"], "correctOptions": ["Create forms"], "time": 30, "details": "FormBuilder creates form objects."},
-  {"question": "What is valueChanges?", "options": ["Value observable", "Value changes", "Stream", "Event"], "correctOptions": ["Value observable"], "time": 35, "details": "valueChanges emits on value change."},
-  {"question": "What is statusChanges?", "options": ["Status observable", "Form status", "Valid state", "Error state"], "correctOptions": ["Status observable"], "time": 40, "details": "statusChanges emits on status change."},
-  {"question": "What is patchValue?", "options": ["Update form", "Set value", "Partial update", "Change"], "correctOptions": ["Partial update"], "time": 30, "details": "patchValue updates partially."},
-  {"question": "What is setValue?", "options": ["Set all", "Full update", "Update all", "Reset"], "correctOptions": ["Full update"], "time": 30, "details": "setValue updates all values."},
-  {"question": "What is reset()?", "options": ["Clear form", "Reset form", "Clear", "Initial"], "correctOptions": ["Clear form"], "time": 30, "details": "reset() clears the form."},
-  {"question": "What is getRawValue()?", "options": ["Get all values", "Full values", "Complete", "All"], "correctOptions": ["Get all values"], "time": 40, "details": "getRawValue returns all values."},
-  {"question": "What is HttpClientModule?", "options": ["HTTP module", "API module", "Client module", "Request module"], "correctOptions": ["HTTP module"], "time": 30, "details": "HttpClientModule provides HTTP client."},
-  {"question": "What is HttpHeaders?", "options": ["Headers class", "Request headers", "Header object", "Config"], "correctOptions": ["Request headers"], "time": 35, "details": "HttpHeaders manages request headers."},
-  {"question": "What is HttpParams?", "options": ["Query params", "URL params", "Parameters", "Params"], "correctOptions": ["Query params"], "time": 35, "details": "HttpParams manages query parameters."},
-  {"question": "What is HttpRequest?", "options": ["Request object", "HTTP request", "API request", "Client request"], "correctOptions": ["Request object"], "time": 35, "details": "HttpRequest represents HTTP requests."},
-  {"question": "What is HttpResponse?", "options": ["Response object", "HTTP response", "API response", "Server response"], "correctOptions": ["Response object"], "time": 35, "details": "HttpResponse represents HTTP responses."},
-  {"question": "What is HttpErrorResponse?", "options": ["Error object", "Error response", "Fail response", "Error"], "correctOptions": ["Error response"], "time": 40, "details": "HttpErrorResponse represents HTTP errors."},
-  {"question": "What is intercept?", "options": ["Handle request", "Modify", "Process", "Catch"], "correctOptions": ["Handle request"], "time": 35, "details": "intercept handles HTTP requests."},
-  {"question": "What is clone()?", "options": ["Clone request", "Copy", "Duplicate", "New"], "correctOptions": ["Clone request"], "time": 30, "details": "clone() creates request copies."},
-  {"question": "What is detectCycle()?", "options": ["No cycle", "Check", "Verify", "Validate"], "correctOptions": ["Check"], "time": 40, "details": "detectCycle() checks for cycles."}
+  {
+    "question": "What is Angular developed by?",
+    "options": [
+      "Facebook",
+      "Google",
+      "Microsoft",
+      "Amazon"
+    ],
+    "correctOptions": [
+      "Google"
+    ],
+    "time": 25,
+    "details": "Angular is developed and maintained by Google as a platform for building web applications."
+  },
+  {
+    "question": "What is Angular component?",
+    "options": [
+      "UI element",
+      "Building block",
+      "View",
+      "Element"
+    ],
+    "correctOptions": [
+      "Building block"
+    ],
+    "time": 25,
+    "details": "Components are the fundamental building blocks of Angular applications."
+  },
+  {
+    "question": "What is @Component?",
+    "options": [
+      "Decorator",
+      "Component decorator",
+      "Metadata",
+      "Annotation"
+    ],
+    "correctOptions": [
+      "Component decorator"
+    ],
+    "time": 25,
+    "details": "@Component decorates a class as an Angular component with metadata."
+  },
+  {
+    "question": "What is template?",
+    "options": [
+      "HTML view",
+      "UI",
+      "Component view",
+      "Layout"
+    ],
+    "correctOptions": [
+      "HTML view"
+    ],
+    "time": 25,
+    "details": "Template defines the component's view using HTML."
+  },
+  {
+    "question": "What is selector?",
+    "options": [
+      "Component name",
+      "Custom tag",
+      "Tag name",
+      "Reference"
+    ],
+    "correctOptions": [
+      "Custom tag"
+    ],
+    "time": 25,
+    "details": "selector defines the custom HTML tag to use the component."
+  },
+  {
+    "question": "What is module?",
+    "options": [
+      "Feature bundle",
+      "Code container",
+      "Package",
+      "Group"
+    ],
+    "correctOptions": [
+      "Code container"
+    ],
+    "time": 25,
+    "details": "Modules organize an Angular application into cohesive blocks."
+  },
+  {
+    "question": "What is @NgModule?",
+    "options": [
+      "Module decorator",
+      "Module annotation",
+      "Module config",
+      "Feature marker"
+    ],
+    "correctOptions": [
+      "Module decorator"
+    ],
+    "time": 25,
+    "details": "@NgModule decorates a class as an Angular module."
+  },
+  {
+    "question": "What is declarations?",
+    "options": [
+      "Components",
+      "Module components",
+      "Own components",
+      "Views"
+    ],
+    "correctOptions": [
+      "Own components"
+    ],
+    "time": 30,
+    "details": "declarations lists components owned by the module."
+  },
+  {
+    "question": "What is imports?",
+    "options": [
+      "External modules",
+      "Dependencies",
+      "Imported modules",
+      "Libraries"
+    ],
+    "correctOptions": [
+      "External modules"
+    ],
+    "time": 30,
+    "details": "imports lists modules this module depends on."
+  },
+  {
+    "question": "What is providers?",
+    "options": [
+      "Services",
+      "Injectables",
+      "Service container",
+      "DI services"
+    ],
+    "correctOptions": [
+      "Services"
+    ],
+    "time": 30,
+    "details": "providers lists services available for injection."
+  },
+  {
+    "question": "What is bootstrap?",
+    "options": [
+      "Start component",
+      "Entry point",
+      "Main component",
+      "Root"
+    ],
+    "correctOptions": [
+      "Entry point"
+    ],
+    "time": 30,
+    "details": "bootstrap defines the root component to start the app."
+  },
+  {
+    "question": "What is service?",
+    "options": [
+      "Logic",
+      "Shared code",
+      "Data service",
+      "Reusable"
+    ],
+    "correctOptions": [
+      "Shared code"
+    ],
+    "time": 25,
+    "details": "Services hold reusable business logic and data."
+  },
+  {
+    "question": "What is @Injectable()?",
+    "options": [
+      "Service annotation",
+      "Service decorator",
+      "Injectable metadata",
+      "Service config"
+    ],
+    "correctOptions": [
+      "Service decorator"
+    ],
+    "time": 30,
+    "details": "@Injectable marks a class as available for DI."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pattern",
+      "Service injection",
+      "DI pattern",
+      "Constructor DI"
+    ],
+    "correctOptions": [
+      "Pattern"
+    ],
+    "time": 35,
+    "details": "DI is a pattern where services are provided to components."
+  },
+  {
+    "question": "What is constructor injection?",
+    "options": [
+      "Via constructor",
+      "Inject in constructor",
+      "Parameter injection",
+      "Class injection"
+    ],
+    "correctOptions": [
+      "Via constructor"
+    ],
+    "time": 35,
+    "details": "Services are injected through the constructor."
+  },
+  {
+    "question": "What is DI token?",
+    "options": [
+      "Service identifier",
+      "Token",
+      "Injection key",
+      "Provider key"
+    ],
+    "correctOptions": [
+      "Service identifier"
+    ],
+    "time": 35,
+    "details": "DI tokens identify services for injection."
+  },
+  {
+    "question": "What is HttpClient?",
+    "options": [
+      "HTTP service",
+      "API client",
+      "HTTP wrapper",
+      "Request client"
+    ],
+    "correctOptions": [
+      "HTTP service"
+    ],
+    "time": 30,
+    "details": "HttpClient makes HTTP requests to backends."
+  },
+  {
+    "question": "What is HttpInterceptor?",
+    "options": [
+      "Request modifier",
+      "Request/response",
+      "HTTP hook",
+      "Pipeline"
+    ],
+    "correctOptions": [
+      "Request/response"
+    ],
+    "time": 35,
+    "details": "Interceptors modify HTTP requests and responses."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "Navigation",
+      "URL mapping",
+      "Route config",
+      "Path"
+    ],
+    "correctOptions": [
+      "URL mapping"
+    ],
+    "time": 30,
+    "details": "Routing maps URLs to components."
+  },
+  {
+    "question": "What is RouterModule?",
+    "options": [
+      "Routing module",
+      "Router config",
+      "Router package",
+      "Nav module"
+    ],
+    "correctOptions": [
+      "Routing module"
+    ],
+    "time": 30,
+    "details": "RouterModule provides routing functionality."
+  },
+  {
+    "question": "What is routes?",
+    "options": [
+      "Route array",
+      "Config array",
+      "Path array",
+      "Mapping"
+    ],
+    "correctOptions": [
+      "Route array"
+    ],
+    "time": 30,
+    "details": "routes defines the route configuration array."
+  },
+  {
+    "question": "What is path?",
+    "options": [
+      "URL segment",
+      "Route URL",
+      "Location",
+      "Segment"
+    ],
+    "correctOptions": [
+      "Route URL"
+    ],
+    "time": 25,
+    "details": "path defines the URL segment for a route."
+  },
+  {
+    "question": "What is component in route?",
+    "options": [
+      "Target component",
+      "Route target",
+      "View component",
+      "Page"
+    ],
+    "correctOptions": [
+      "Route target"
+    ],
+    "time": 30,
+    "details": "component specifies what renders for the route."
+  },
+  {
+    "question": "What is redirectTo?",
+    "options": [
+      "Target path",
+      "Route redirect",
+      "Forward path",
+      "Redirection"
+    ],
+    "correctOptions": [
+      "Route redirect"
+    ],
+    "time": 35,
+    "details": "redirectTo redirects to another path."
+  },
+  {
+    "question": "What is wildcard route?",
+    "options": [
+      "** path",
+      "Catch all",
+      "Default route",
+      "404"
+    ],
+    "correctOptions": [
+      "Catch all"
+    ],
+    "time": 30,
+    "details": "Wildcard route matches any unmatched path."
+  },
+  {
+    "question": "What is RouterLink?",
+    "options": [
+      "Link directive",
+      "Navigation attr",
+      "Router attr",
+      "Navigate"
+    ],
+    "correctOptions": [
+      "Link directive"
+    ],
+    "time": 30,
+    "details": "RouterLink directive links to routes."
+  },
+  {
+    "question": "What is routerLinkActive?",
+    "options": [
+      "Active class",
+      "Active state",
+      "Active flag",
+      "Selected"
+    ],
+    "correctOptions": [
+      "Active class"
+    ],
+    "time": 35,
+    "details": "routerLinkActive adds classes when active."
+  },
+  {
+    "question": "What is ActivatedRoute?",
+    "options": [
+      "Current route",
+      "Active route",
+      "Route info",
+      "Route data"
+    ],
+    "correctOptions": [
+      "Current route"
+    ],
+    "time": 30,
+    "details": "ActivatedRoute provides route information."
+  },
+  {
+    "question": "What is param?",
+    "options": [
+      "Route param",
+      "Variable",
+      "Placeholder",
+      "Segment"
+    ],
+    "correctOptions": [
+      "Route param"
+    ],
+    "time": 30,
+    "details": "param holds route parameter values."
+  },
+  {
+    "question": "What is queryParam?",
+    "options": [
+      "Query string",
+      "URL param",
+      "Optional param",
+      "Extra param"
+    ],
+    "correctOptions": [
+      "URL param"
+    ],
+    "time": 30,
+    "details": "queryParam holds query string parameters."
+  },
+  {
+    "question": "What is router.navigate?",
+    "options": [
+      "Navigate",
+      "Program navigation",
+      "Go to",
+      "Change route"
+    ],
+    "correctOptions": [
+      "Program navigation"
+    ],
+    "time": 30,
+    "details": "router.navigate navigates programmatically."
+  },
+  {
+    "question": "What is navigateByUrl?",
+    "options": [
+      "URL navigate",
+      "Navigate to URL",
+      "Direct route",
+      "Absolute"
+    ],
+    "correctOptions": [
+      "Navigate to URL"
+    ],
+    "time": 35,
+    "details": "navigateByUrl navigates using a URL string."
+  },
+  {
+    "question": "What is routerLink?",
+    "options": [
+      "Directive",
+      "Navigate",
+      "Link to",
+      "Click navigate"
+    ],
+    "correctOptions": [
+      "Navigate"
+    ],
+    "time": 30,
+    "details": "routerLink navigates on click."
+  },
+  {
+    "question": "What is data in route?",
+    "options": [
+      "Static data",
+      "Route data",
+      "Custom data",
+      "Meta"
+    ],
+    "correctOptions": [
+      "Route data"
+    ],
+    "time": 35,
+    "details": "data holds static route data."
+  },
+  {
+    "question": "What is resolve?",
+    "options": [
+      "Preload data",
+      "Resolver",
+      "Data resolver",
+      "Pre-fetch"
+    ],
+    "correctOptions": [
+      "Preload data"
+    ],
+    "time": 40,
+    "details": "resolve preloads data before navigation."
+  },
+  {
+    "question": "What is canActivate?",
+    "options": [
+      "Guard",
+      "Route guard",
+      "Permission",
+      "Check"
+    ],
+    "correctOptions": [
+      "Route guard"
+    ],
+    "time": 35,
+    "details": "canActivate guards route access."
+  },
+  {
+    "question": "What is canActivateChild?",
+    "options": [
+      "Child guard",
+      "Child route guard",
+      "Nested guard",
+      "Sub-guard"
+    ],
+    "correctOptions": [
+      "Child route guard"
+    ],
+    "time": 40,
+    "details": "canActivateChild guards child routes."
+  },
+  {
+    "question": "What is canDeactivate?",
+    "options": [
+      "Exit guard",
+      "Leave guard",
+      "Unsaved guard",
+      "Close guard"
+    ],
+    "correctOptions": [
+      "Exit guard"
+    ],
+    "time": 40,
+    "details": "canDeactivate guards route exit."
+  },
+  {
+    "question": "What is canLoad?",
+    "options": [
+      "Lazy guard",
+      "Lazy load guard",
+      "Module guard",
+      "Lazy"
+    ],
+    "correctOptions": [
+      "Lazy load guard"
+    ],
+    "time": 45,
+    "details": "canLoad guards lazy loading."
+  },
+  {
+    "question": "What is pipe?",
+    "options": [
+      "Transform",
+      "Data pipe",
+      "Value transform",
+      "Format"
+    ],
+    "correctOptions": [
+      "Transform"
+    ],
+    "time": 25,
+    "details": "Pipes transform values in templates."
+  },
+  {
+    "question": "What is async pipe?",
+    "options": [
+      "Observable pipe",
+      "Auto subscribe",
+      "Async transform",
+      "Observable"
+    ],
+    "correctOptions": [
+      "Auto subscribe"
+    ],
+    "time": 30,
+    "details": "async pipe auto-subscribes to observables."
+  },
+  {
+    "question": "What is date pipe?",
+    "options": [
+      "Date format",
+      "Date transform",
+      "Date display",
+      "Time"
+    ],
+    "correctOptions": [
+      "Date format"
+    ],
+    "time": 25,
+    "details": "date pipe formats dates."
+  },
+  {
+    "question": "What is currency pipe?",
+    "options": [
+      "Money format",
+      "Currency format",
+      "Price",
+      "Money"
+    ],
+    "correctOptions": [
+      "Currency format"
+    ],
+    "time": 25,
+    "details": "currency pipe formats currency."
+  },
+  {
+    "question": "What is decimal pipe?",
+    "options": [
+      "Number format",
+      "Decimal format",
+      "Numeric",
+      "Float"
+    ],
+    "correctOptions": [
+      "Number format"
+    ],
+    "time": 25,
+    "details": "decimal pipe formats numbers."
+  },
+  {
+    "question": "What is percent pipe?",
+    "options": [
+      "Percent format",
+      "Percent transform",
+      "Percentage",
+      "Rate"
+    ],
+    "correctOptions": [
+      "Percent format"
+    ],
+    "time": 25,
+    "details": "percent pipe formats percentages."
+  },
+  {
+    "question": "What is uppercase pipe?",
+    "options": [
+      "Uppercase",
+      "Text transform",
+      "Capitalize",
+      "Upper"
+    ],
+    "correctOptions": [
+      "Uppercase"
+    ],
+    "time": 25,
+    "details": "uppercase pipe converts to uppercase."
+  },
+  {
+    "question": "What is lowercase pipe?",
+    "options": [
+      "Lowercase",
+      "Text transform",
+      "Minify",
+      "Lower"
+    ],
+    "correctOptions": [
+      "Lowercase"
+    ],
+    "time": 25,
+    "details": "lowercase pipe converts to lowercase."
+  },
+  {
+    "question": "What is slice pipe?",
+    "options": [
+      "Subarray",
+      "Array slice",
+      "Substring",
+      "Segment"
+    ],
+    "correctOptions": [
+      "Substring"
+    ],
+    "time": 30,
+    "details": "slice pipe extracts substrings."
+  },
+  {
+    "question": "What is json pipe?",
+    "options": [
+      "Object to JSON",
+      "JSON transform",
+      "Debug",
+      "Object"
+    ],
+    "correctOptions": [
+      "Object to JSON"
+    ],
+    "time": 30,
+    "details": "json pipe converts to JSON string."
+  },
+  {
+    "question": "What is i18n?",
+    "options": [
+      "Translation",
+      "Localization",
+      "Multi-language",
+      "Language"
+    ],
+    "correctOptions": [
+      "Localization"
+    ],
+    "time": 30,
+    "details": "i18n handles translations."
+  },
+  {
+    "question": "What is ICU expression?",
+    "options": [
+      "Plural/select",
+      "Conditional",
+      "i18n branch",
+      "Select"
+    ],
+    "correctOptions": [
+      "Plural/select"
+    ],
+    "time": 40,
+    "details": "ICU expressions handle plurals and selection."
+  },
+  {
+    "question": "What is ngStyle?",
+    "options": [
+      "Style binding",
+      "Dynamic style",
+      "Style attr",
+      "Inline style"
+    ],
+    "correctOptions": [
+      "Dynamic style"
+    ],
+    "time": 30,
+    "details": "ngStyle sets dynamic styles."
+  },
+  {
+    "question": "What is ngClass?",
+    "options": [
+      "Class binding",
+      "Dynamic class",
+      "Class attr",
+      "Toggle"
+    ],
+    "correctOptions": [
+      "Dynamic class"
+    ],
+    "time": 30,
+    "details": "ngClass sets dynamic classes."
+  },
+  {
+    "question": "What is ngFor?",
+    "options": [
+      "Loop",
+      "For loop",
+      "Iterate",
+      "Repeat"
+    ],
+    "correctOptions": [
+      "For loop"
+    ],
+    "time": 25,
+    "details": "ngFor iterates over collections."
+  },
+  {
+    "question": "What is ngIf?",
+    "options": [
+      "Condition",
+      "If block",
+      "Conditional",
+      "Show/hide"
+    ],
+    "correctOptions": [
+      "Condition"
+    ],
+    "time": 25,
+    "details": "ngIf conditionally shows elements."
+  },
+  {
+    "question": "What is ngSwitch?",
+    "options": [
+      "Switch",
+      "Switch case",
+      "Switch block",
+      "Conditional"
+    ],
+    "correctOptions": [
+      "Switch"
+    ],
+    "time": 30,
+    "details": "ngSwitch provides switch-case logic."
+  },
+  {
+    "question": "What is ng-container?",
+    "options": [
+      "Wrapper",
+      "No render",
+      "Container",
+      "Anchor"
+    ],
+    "correctOptions": [
+      "No render"
+    ],
+    "time": 30,
+    "details": "ng-container doesn't render to DOM."
+  },
+  {
+    "question": "What is ng-content?",
+    "options": [
+      "Projection",
+      "Content projection",
+      "Slot",
+      "Transclusion"
+    ],
+    "correctOptions": [
+      "Content projection"
+    ],
+    "time": 35,
+    "details": "ng-content projects content."
+  },
+  {
+    "question": "What is content projection?",
+    "options": [
+      "Project children",
+      "Insert content",
+      "Outer HTML",
+      "Transclusion"
+    ],
+    "correctOptions": [
+      "Project children"
+    ],
+    "time": 40,
+    "details": "Content projection inserts external content."
+  },
+  {
+    "question": "What is contentChild?",
+    "options": [
+      "Reference child",
+      "Projected content",
+      "View child",
+      "Element ref"
+    ],
+    "correctOptions": [
+      "Projected content"
+    ],
+    "time": 40,
+    "details": "contentChild queries projected content."
+  },
+  {
+    "question": "What is viewChild?",
+    "options": [
+      "Reference child",
+      "View element",
+      "Template ref",
+      "Element ref"
+    ],
+    "correctOptions": [
+      "Template ref"
+    ],
+    "time": 35,
+    "details": "viewChild queries template refs."
+  },
+  {
+    "question": "What is ElementRef?",
+    "options": [
+      "DOM element",
+      "Element ref",
+      "Wrapper",
+      "Access"
+    ],
+    "correctOptions": [
+      "DOM element"
+    ],
+    "time": 30,
+    "details": "ElementRef wraps DOM elements."
+  },
+  {
+    "question": "What is Renderer2?",
+    "options": [
+      "DOM helper",
+      "Render API",
+      "Styles",
+      "Manipulate DOM"
+    ],
+    "correctOptions": [
+      "DOM helper"
+    ],
+    "time": 35,
+    "details": "Renderer2 manipulates DOM safely."
+  },
+  {
+    "question": "What is DOM manipulation?",
+    "options": [
+      "Direct access",
+      "Change DOM",
+      "Direct DOM",
+      "Unsafe"
+    ],
+    "correctOptions": [
+      "Direct access"
+    ],
+    "time": 35,
+    "details": "Direct DOM manipulation is discouraged."
+  },
+  {
+    "question": "What is ViewEncapsulation?",
+    "options": [
+      "Style scope",
+      "Style isolation",
+      "Shadow DOM",
+      "Scope"
+    ],
+    "correctOptions": [
+      "Style isolation"
+    ],
+    "time": 40,
+    "details": "ViewEncapsulation scopes styles."
+  },
+  {
+    "question": "What is ChangeDetection?",
+    "options": [
+      "Update UI",
+      "Check changes",
+      "DOM update",
+      "Render"
+    ],
+    "correctOptions": [
+      "Check changes"
+    ],
+    "time": 40,
+    "details": "Change detection checks for changes."
+  },
+  {
+    "question": "What is OnPush?",
+    "options": [
+      "Strategy",
+      "Change strategy",
+      "Performance",
+      "Strategy"
+    ],
+    "correctOptions": [
+      "Change strategy"
+    ],
+    "time": 40,
+    "details": "OnPush optimizes change detection."
+  },
+  {
+    "question": "What is Default strategy?",
+    "options": [
+      "Always check",
+      "Check always",
+      "Full check",
+      "Complete"
+    ],
+    "correctOptions": [
+      "Always check"
+    ],
+    "time": 40,
+    "details": "Default checks every component."
+  },
+  {
+    "question": "What is Zone.js?",
+    "options": [
+      "Async context",
+      "Change detection",
+      "Async lib",
+      "Patch"
+    ],
+    "correctOptions": [
+      "Async context"
+    ],
+    "time": 45,
+    "details": "Zone.js manages async context."
+  },
+  {
+    "question": "What is NgZone?",
+    "options": [
+      "Zone wrapper",
+      "Angular zone",
+      "Run outside",
+      "Optimize"
+    ],
+    "correctOptions": [
+      "Zone wrapper"
+    ],
+    "time": 45,
+    "details": "NgZone wraps Zone.js for Angular."
+  },
+  {
+    "question": "What is runOutsideAngular?",
+    "options": [
+      "Run outside zone",
+      "Outside zone",
+      "Skip change",
+      "Outside"
+    ],
+    "correctOptions": [
+      "Run outside zone"
+    ],
+    "time": 50,
+    "details": "runOutsideAngular runs code outside Angular."
+  },
+  {
+    "question": "What is observable?",
+    "options": [
+      "Stream",
+      "Async source",
+      "Data stream",
+      "Event"
+    ],
+    "correctOptions": [
+      "Async source"
+    ],
+    "time": 35,
+    "details": "Observables emit async data."
+  },
+  {
+    "question": "What is Subject?",
+    "options": [
+      "Observable type",
+      "Multicast",
+      "Event emitter",
+      "Source"
+    ],
+    "correctOptions": [
+      "Multicast"
+    ],
+    "time": 40,
+    "details": "Subject is a multicast observable."
+  },
+  {
+    "question": "What is BehaviorSubject?",
+    "options": [
+      "Current value",
+      "Latest value",
+      "State",
+      "Value"
+    ],
+    "correctOptions": [
+      "Latest value"
+    ],
+    "time": 40,
+    "details": "BehaviorSubject stores current value."
+  },
+  {
+    "question": "What is ReplaySubject?",
+    "options": [
+      "Buffer",
+      "Replay buffer",
+      "History",
+      "Past values"
+    ],
+    "correctOptions": [
+      "Replay buffer"
+    ],
+    "time": 45,
+    "details": "ReplaySubject replays past values."
+  },
+  {
+    "question": "What is AsyncSubject?",
+    "options": [
+      "Last value",
+      "Complete subject",
+      "Final value",
+      "Completion"
+    ],
+    "correctOptions": [
+      "Last value"
+    ],
+    "time": 45,
+    "details": "AsyncSubject emits on completion."
+  },
+  {
+    "question": "What is pipe in RxJS?",
+    "options": [
+      "Chain operators",
+      "Transform",
+      "Operator chain",
+      "Compose"
+    ],
+    "correctOptions": [
+      "Chain operators"
+    ],
+    "time": 40,
+    "details": "pipe chains operators."
+  },
+  {
+    "question": "What is pipeable operator?",
+    "options": [
+      "Function",
+      "Pipe operator",
+      "Operator",
+      "Transform"
+    ],
+    "correctOptions": [
+      "Pipe operator"
+    ],
+    "time": 40,
+    "details": "Pipeable operators use pipe()."
+  },
+  {
+    "question": "What is map operator?",
+    "options": [
+      "Transform",
+      "Value map",
+      "Transform values",
+      "Change"
+    ],
+    "correctOptions": [
+      "Transform"
+    ],
+    "time": 30,
+    "details": "map transforms emitted values."
+  },
+  {
+    "question": "What is filter operator?",
+    "options": [
+      "Filter values",
+      "Condition",
+      "Select",
+      "Boolean"
+    ],
+    "correctOptions": [
+      "Filter values"
+    ],
+    "time": 30,
+    "details": "filter filters emitted values."
+  },
+  {
+    "question": "What is tap operator?",
+    "options": [
+      "Side effect",
+      "Log values",
+      "Debug",
+      "Check"
+    ],
+    "correctOptions": [
+      "Side effect"
+    ],
+    "time": 35,
+    "details": "tap performs side effects."
+  },
+  {
+    "question": "What is switchMap?",
+    "options": [
+      "Cancel previous",
+      "Switch",
+      "Inner observable",
+      "Flatten"
+    ],
+    "correctOptions": [
+      "Cancel previous"
+    ],
+    "time": 40,
+    "details": "switchMap cancels previous inner observables."
+  },
+  {
+    "question": "What is mergeMap?",
+    "options": [
+      "Flatten",
+      "Inner observable",
+      "Parallel",
+      "Concat"
+    ],
+    "correctOptions": [
+      "Inner observable"
+    ],
+    "time": 40,
+    "details": "mergeMap merges inner observables."
+  },
+  {
+    "question": "What is concatMap?",
+    "options": [
+      "Sequential",
+      "Order",
+      "Queue",
+      "Series"
+    ],
+    "correctOptions": [
+      "Sequential"
+    ],
+    "time": 40,
+    "details": "concatMap runs inner observables sequentially."
+  },
+  {
+    "question": "What is exhaustMap?",
+    "options": [
+      "Discard until complete",
+      "Ignore new",
+      "Complete first",
+      "Block"
+    ],
+    "correctOptions": [
+      "Discard until complete"
+    ],
+    "time": 45,
+    "details": "exhaustMap ignores new while running."
+  },
+  {
+    "question": "What is take operator?",
+    "options": [
+      "Limit emissions",
+      "Take N",
+      "Count",
+      "First N"
+    ],
+    "correctOptions": [
+      "Limit emissions"
+    ],
+    "time": 35,
+    "details": "take limits emitted values."
+  },
+  {
+    "question": "What is takeUntil?",
+    "options": [
+      "Complete on emit",
+      "Take until",
+      "Until notifier",
+      "Complete"
+    ],
+    "correctOptions": [
+      "Until notifier"
+    ],
+    "time": 40,
+    "details": "takeUntil completes on emission."
+  },
+  {
+    "question": "What is first operator?",
+    "options": [
+      "First value",
+      "Get first",
+      "Initial",
+      "Start"
+    ],
+    "correctOptions": [
+      "First value"
+    ],
+    "time": 30,
+    "details": "first gets the first value."
+  },
+  {
+    "question": "What is last operator?",
+    "options": [
+      "Last value",
+      "Get last",
+      "Final",
+      "End"
+    ],
+    "correctOptions": [
+      "Last value"
+    ],
+    "time": 30,
+    "details": "last gets the last value."
+  },
+  {
+    "question": "What is debounceTime?",
+    "options": [
+      "Delay",
+      "Wait time",
+      "Delay after",
+      "Wait"
+    ],
+    "correctOptions": [
+      "Wait time"
+    ],
+    "time": 35,
+    "details": "debounceTime delays emissions."
+  },
+  {
+    "question": "What is distinctUntilChanged?",
+    "options": [
+      "Skip same",
+      "Unique",
+      "Dedupe",
+      "Filter repeat"
+    ],
+    "correctOptions": [
+      "Skip same"
+    ],
+    "time": 40,
+    "details": "distinctUntilChanged skips repeated values."
+  },
+  {
+    "question": "What is combineLatest?",
+    "options": [
+      "Latest from all",
+      "Combine",
+      "Latest values",
+      "All latest"
+    ],
+    "correctOptions": [
+      "Latest from all"
+    ],
+    "time": 40,
+    "details": "combineLatest combines latest values."
+  },
+  {
+    "question": "What is forkJoin?",
+    "options": [
+      "Parallel",
+      "All complete",
+      "Wait all",
+      "Parallel all"
+    ],
+    "correctOptions": [
+      "All complete"
+    ],
+    "time": 40,
+    "details": "forkJoin waits for all to complete."
+  },
+  {
+    "question": "What is FormControl?",
+    "options": [
+      "Input control",
+      "Form field",
+      "Value control",
+      "Form element"
+    ],
+    "correctOptions": [
+      "Form field"
+    ],
+    "time": 30,
+    "details": "FormControl manages form input."
+  },
+  {
+    "question": "What is FormGroup?",
+    "options": [
+      "Form container",
+      "Form collection",
+      "Form object",
+      "Form set"
+    ],
+    "correctOptions": [
+      "Form container"
+    ],
+    "time": 30,
+    "details": "FormGroup groups form controls."
+  },
+  {
+    "question": "What is FormArray?",
+    "options": [
+      "Array of controls",
+      "Dynamic form",
+      "Repeating form",
+      "List"
+    ],
+    "correctOptions": [
+      "Array of controls"
+    ],
+    "time": 35,
+    "details": "FormArray manages array of controls."
+  },
+  {
+    "question": "What is Validators?",
+    "options": [
+      "Validation rules",
+      "Validator functions",
+      "Rules",
+      "Check"
+    ],
+    "correctOptions": [
+      "Validation rules"
+    ],
+    "time": 35,
+    "details": "Validators provide validation rules."
+  },
+  {
+    "question": "What is required?",
+    "options": [
+      "Required field",
+      "Mandatory",
+      "Not empty",
+      "Must fill"
+    ],
+    "correctOptions": [
+      "Required field"
+    ],
+    "time": 25,
+    "details": "required validates non-empty."
+  },
+  {
+    "question": "What is min/max length?",
+    "options": [
+      "Length validation",
+      "Min/max",
+      "Size",
+      "Range"
+    ],
+    "correctOptions": [
+      "Length validation"
+    ],
+    "time": 30,
+    "details": "minLength/maxLength validate length."
+  },
+  {
+    "question": "What is pattern?",
+    "options": [
+      "Regex validation",
+      "Regex",
+      "Format",
+      "Match"
+    ],
+    "correctOptions": [
+      "Regex validation"
+    ],
+    "time": 30,
+    "details": "pattern validates with regex."
+  },
+  {
+    "question": "What is email validator?",
+    "options": [
+      "Email format",
+      "Email check",
+      "Mail",
+      "Address"
+    ],
+    "correctOptions": [
+      "Email format"
+    ],
+    "time": 30,
+    "details": "email validates email format."
+  },
+  {
+    "question": "What is ReactiveForms?",
+    "options": [
+      "Form model",
+      "Reactive forms",
+      "Code forms",
+      "Dynamic forms"
+    ],
+    "correctOptions": [
+      "Form model"
+    ],
+    "time": 35,
+    "details": "ReactiveForms are code-based forms."
+  },
+  {
+    "question": "What is TemplateForms?",
+    "options": [
+      "Template forms",
+      "Directive forms",
+      "HTML forms",
+      "Simple forms"
+    ],
+    "correctOptions": [
+      "Directive forms"
+    ],
+    "time": 35,
+    "details": "TemplateForms use directive-based validation."
+  },
+  {
+    "question": "What is FormBuilder?",
+    "options": [
+      "Create forms",
+      "Builder",
+      "Factory",
+      "Make"
+    ],
+    "correctOptions": [
+      "Create forms"
+    ],
+    "time": 30,
+    "details": "FormBuilder creates form objects."
+  },
+  {
+    "question": "What is valueChanges?",
+    "options": [
+      "Value observable",
+      "Value changes",
+      "Stream",
+      "Event"
+    ],
+    "correctOptions": [
+      "Value observable"
+    ],
+    "time": 35,
+    "details": "valueChanges emits on value change."
+  },
+  {
+    "question": "What is statusChanges?",
+    "options": [
+      "Status observable",
+      "Form status",
+      "Valid state",
+      "Error state"
+    ],
+    "correctOptions": [
+      "Status observable"
+    ],
+    "time": 40,
+    "details": "statusChanges emits on status change."
+  },
+  {
+    "question": "What is patchValue?",
+    "options": [
+      "Update form",
+      "Set value",
+      "Partial update",
+      "Change"
+    ],
+    "correctOptions": [
+      "Partial update"
+    ],
+    "time": 30,
+    "details": "patchValue updates partially."
+  },
+  {
+    "question": "What is setValue?",
+    "options": [
+      "Set all",
+      "Full update",
+      "Update all",
+      "Reset"
+    ],
+    "correctOptions": [
+      "Full update"
+    ],
+    "time": 30,
+    "details": "setValue updates all values."
+  },
+  {
+    "question": "What is reset()?",
+    "options": [
+      "Clear form",
+      "Reset form",
+      "Clear",
+      "Initial"
+    ],
+    "correctOptions": [
+      "Clear form"
+    ],
+    "time": 30,
+    "details": "reset() clears the form."
+  },
+  {
+    "question": "What is getRawValue()?",
+    "options": [
+      "Get all values",
+      "Full values",
+      "Complete",
+      "All"
+    ],
+    "correctOptions": [
+      "Get all values"
+    ],
+    "time": 40,
+    "details": "getRawValue returns all values."
+  },
+  {
+    "question": "What is HttpClientModule?",
+    "options": [
+      "HTTP module",
+      "API module",
+      "Client module",
+      "Request module"
+    ],
+    "correctOptions": [
+      "HTTP module"
+    ],
+    "time": 30,
+    "details": "HttpClientModule provides HTTP client."
+  },
+  {
+    "question": "What is HttpHeaders?",
+    "options": [
+      "Headers class",
+      "Request headers",
+      "Header object",
+      "Config"
+    ],
+    "correctOptions": [
+      "Request headers"
+    ],
+    "time": 35,
+    "details": "HttpHeaders manages request headers."
+  },
+  {
+    "question": "What is HttpParams?",
+    "options": [
+      "Query params",
+      "URL params",
+      "Parameters",
+      "Params"
+    ],
+    "correctOptions": [
+      "Query params"
+    ],
+    "time": 35,
+    "details": "HttpParams manages query parameters."
+  },
+  {
+    "question": "What is HttpRequest?",
+    "options": [
+      "Request object",
+      "HTTP request",
+      "API request",
+      "Client request"
+    ],
+    "correctOptions": [
+      "Request object"
+    ],
+    "time": 35,
+    "details": "HttpRequest represents HTTP requests."
+  },
+  {
+    "question": "What is HttpResponse?",
+    "options": [
+      "Response object",
+      "HTTP response",
+      "API response",
+      "Server response"
+    ],
+    "correctOptions": [
+      "Response object"
+    ],
+    "time": 35,
+    "details": "HttpResponse represents HTTP responses."
+  },
+  {
+    "question": "What is HttpErrorResponse?",
+    "options": [
+      "Error object",
+      "Error response",
+      "Fail response",
+      "Error"
+    ],
+    "correctOptions": [
+      "Error response"
+    ],
+    "time": 40,
+    "details": "HttpErrorResponse represents HTTP errors."
+  },
+  {
+    "question": "What is intercept?",
+    "options": [
+      "Handle request",
+      "Modify",
+      "Process",
+      "Catch"
+    ],
+    "correctOptions": [
+      "Handle request"
+    ],
+    "time": 35,
+    "details": "intercept handles HTTP requests."
+  },
+  {
+    "question": "What is clone()?",
+    "options": [
+      "Clone request",
+      "Copy",
+      "Duplicate",
+      "New"
+    ],
+    "correctOptions": [
+      "Clone request"
+    ],
+    "time": 30,
+    "details": "clone() creates request copies."
+  },
+  {
+    "question": "What is detectCycle()?",
+    "options": [
+      "No cycle",
+      "Check",
+      "Verify",
+      "Validate"
+    ],
+    "correctOptions": [
+      "Check"
+    ],
+    "time": 40,
+    "details": "detectCycle() checks for cycles."
+  },
+  {
+    "question": "What is directive? (Level 1 #122)",
+    "options": [
+      "DOM manipulation",
+      "Structural",
+      "Attribute",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "DOM manipulation",
+      "Structural",
+      "Attribute",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is directive? explanation."
+  },
+  {
+    "question": "What is component? (Level 1 #126)",
+    "options": [
+      "Template",
+      "Class",
+      "Metadata",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Template",
+      "Class",
+      "Metadata",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is component? explanation."
+  },
+  {
+    "question": "What is lazy loading? (Level 1 #128)",
+    "options": [
+      "Performance",
+      "On-demand",
+      "Module",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Performance",
+      "On-demand",
+      "Module",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is lazy loading? explanation."
+  },
+  {
+    "question": "What is AOT? (Level 1 #129)",
+    "options": [
+      "Compilation",
+      "Performance",
+      "Production",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Compilation",
+      "Performance",
+      "Production",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is AOT? explanation."
+  },
+  {
+    "question": "What is change detection? (Level 1 #130)",
+    "options": [
+      "OnPush",
+      "Default",
+      "Manual",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "OnPush",
+      "Default",
+      "Manual",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is change detection? explanation."
+  },
+  {
+    "question": "What is Reactive Forms?",
+    "options": [
+      "Form model",
+      "FormGroup",
+      "FormControl",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Form model",
+      "FormGroup",
+      "FormControl",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Reactive Forms? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  }
 ]

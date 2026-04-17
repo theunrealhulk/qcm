@@ -1,177 +1,2980 @@
 [
-  {"question": "What is clustering in Node.js?", "options": ["Multiple processes", "CPU forks", "Multi-process", "Scaling"], "correctOptions": ["Multiple processes"], "time": 45, "details": "Cluster module spawns multiple processes."},
-  {"question": "What is worker threads?", "options": ["CPU-intensive", "True threading", "Multi-thread", "Parallel"], "correctOptions": ["True threading"], "time": 45, "details": "worker_threads enables true threading."},
-  {"question": "What is Worker class?", "options": ["Thread wrapper", "Worker", "Process", "Thread"], "correctOptions": ["Thread wrapper"], "time": 45, "details": "Worker wraps OS thread."},
-  {"question": "What is parentPort?", "options": ["Message channel", "IPC", "Port", "Parent"], "correctOptions": ["Message channel"], "time": 50, "details": "parentPort communicates with parent."},
-  {"question": "What is workerData?", "options": ["Process data", "Passed data", "Data", "Input"], "correctOptions": ["Passed data"], "time": 45, "details": "workerData passes data to worker."},
-  {"question": "What is MessageChannel?", "options": ["IPC channel", "Communication", "Channel", "Link"], "correctOptions": ["IPC channel"], "time": 50, "details": "MessageChannel enables IPC between workers."},
-  {"question": "What is MessagePort?", "options": ["Endpoint", "Communication", "Port", "Channel"], "correctOptions": ["Communication endpoint"], "time": 50, "details": "MessagePort is communication endpoint."},
-  {"question": "What is postMessage?", "options": ["Send message", "IPC", "Message", "Port"], "correctOptions": ["Send message"], "time": 45, "details": "postMessage sends messages."},
-  {"question": "What is on(message)?", "options": ["Receive message", "Handler", "Callback", "Event"], "correctOptions": ["Receive message"], "time": 45, "details": "on(message) handles messages."},
-  {"question": "What is uncaught exception handling?", "options": ["Handle errors", "Process error", "Global handler", "Handler"], "correctOptions": ["Handle errors"], "time": 50, "details": "unhandledRejection catches promise errors."},
-  {"question": "What is promise rejection handling?", "options": ["Promise errors", "Handler", "Catch", "Error"], "correctOptions": ["Promise errors"], "time": 55, "details": "unhandledRejection: Promise rejection handler."},
-  {"question": "What is error encapsulation?", "options": ["Hide internals", "Clean errors", "Error handling", "Wrapper"], "correctOptions": ["Hide internals"], "time": 55, "details": "Encapsulation hides error details."},
-  {"question": "What is exit codes?", "options": ["Process codes", "Exit statuses", "Codes", "Status"], "correctOptions": ["Exit statuses"], "time": 50, "details": "Exit codes indicate exit status."},
-  {"question": "What is graceful shutdown?", "options": ["Clean exit", "Cleanup", "Process end", "Shutdown"], "correctOptions": ["Clean exit"], "time": 50, "details": "Graceful shutdown cleans up."},
-  {"question": "What is signal handling?", "options": ["System signals", "Signal", "SIGTERM/SIGINT", "Handlers"], "correctOptions": ["System signals"], "time": 50, "details": "Signal handling responds to signals."},
-  {"question": "What is SIGTERM?", "options": ["Termination", "Graceful exit", "Signal", "Kill"], "correctOptions": ["Termination signal"], "time": 50, "details": "SIGTERM requests graceful exit."},
-  {"question": "What is SIGINT?", "options": ["Interrupt", "Ctrl+C", "Signal", "Cancel"], "correctOptions": ["Ctrl+C signal"], "time": 50, "details": "SIGINT is Ctrl+C interrupt."},
-  {"question": "What is SIGKILL?", "options": ["Immediate kill", "Force exit", "Signal", "Terminate"], "correctOptions": ["Immediate kill"], "time": 50, "details": "SIGKILL force kills immediately."},
-  {"question": "What is process.title?", "options": ["Process name", "Title", "Set title", "Name"], "correctOptions": ["Process name"], "time": 50, "details": "process.title is process name."},
-  {"question": "What is setproctitle?", "options": ["Set title", "Update name", "Module", "NPM"], "correctOptions": ["Set title"], "time": 55, "details": "setproctitle sets process title."},
-  {"question": "What is process resource usage?", "options": ["Resource info", "getrusage()", "Info", "Metrics"], "correctOptions": ["Resource info"], "time": 55, "details": "getrusage() returns resource usage."},
-  {"question": "What is getrusage()?", "options": ["Resource usage", "Metrics", "System", "Info"], "correctOptions": ["Resource usage"], "time": 55, "details": "Returns CPU and memory usage."},
-  {"question": "What is uv_resident_set_memory()?", "options": ["Memory info", "RSS", "Memory", "Stats"], "correctOptions": ["Memory info"], "time": 60, "details": "Resident set memory."},
-  {"question": "What is heap used/total?", "options": ["Memory stats", "Heap usage", "Metrics", "V8"], "correctOptions": ["Memory stats"], "time": 55, "details": "Heap memory usage."},
-  {"question": "What is external memory?", "options": ["Addons", "Native", "External", "V8"], "correctOptions": ["Addons memory"], "time": 55, "details": "External is native addons memory."},
-  {"question": "What is array buffers memory?", "options": ["ArrayBuffer", "Buffer", "Typed", "Memory"], "correctOptions": ["ArrayBuffer memory"], "time": 60, "details": "ArrayBuffer memory."},
-  {"question": "What is garbage collection?", "options": ["Memory cleanup", "GC", "Free memory", "Collection"], "correctOptions": ["Memory cleanup"], "time": 50, "details": "GC reclaims memory."},
-  {"question": "What is global GC?", "options": ["Force GC", "global.gc()", "Force", "Run"], "correctOptions": ["Force GC"], "time": 55, "details": "global.gc() runs GC manually."},
-  {"question": "What is V8 heap flags?", "options": ["GC tuning", "Heap settings", "Tweak", "Options"], "correctOptions": ["GC tuning"], "time": 60, "details": "Heap flags tune GC."},
-  {"question": "What is performance hooks?", "options": ["Metrics", "Async hooks", "Performance", "Monitoring"], "correctOptions": ["Metrics"], "time": 55, "details": "perf_hooks monitors performance."},
-  {"question": "What is perf_hooks_async_hooks?", "options": ["Async metrics", "Async monitoring", "Metrics", "Tracing"], "correctOptions": ["Async metrics"], "time": 60, "details": "async_hooks traces async operations."},
-  {"question": "What is AsyncResource?", "options": ["Wrap async", "Context", "Tracing", "Wrapper"], "correctOptions": ["Wrap async context"], "time": 60, "details": "AsyncResource wraps async operations."},
-  {"question": "What is trace events?", "options": ["Trace async", "Tracing", "Events", "Enable"], "correctOptions": ["Trace async operations"], "time": 65, "details": "trace events trace execution."},
-  {"question": "What is trace categories?", "options": ["Event categories", "Groups", "Tracing", "Enable"], "correctOptions": ["Event categories"], "time": 65, "details": "trace category groups."},
-  {"question": "What is trace enabled?", "options": ["Enable tracing", "Flag", "Switch", "Check"], "correctOptions": ["Enable tracing"], "time": 60, "details": "Enable/disable trace events."},
-  {"question": "What is CPU profiling?", "options": ["Profile CPU", "CPU usage", "Profiling", "Metrics"], "correctOptions": ["CPU usage profiling"], "time": 60, "details": "CPU profiling analyzes CPU usage."},
-  {"question": "What is v8 profiler?", "options": ["CPU analysis", "V8 profiling", "Heap", "Analysis"], "correctOptions": ["CPU analysis"], "time": 60, "details": "V8 profiler analyzes profiles."},
-  {"question": "What is heap snapshots?", "options": ["Memory dump", "Heap analysis", "Snapshot", "Capture"], "correctOptions": ["Memory dump"], "time": 60, "details": "Heap snapshots capture memory."},
-  {"question": "What is heapdump?", "options": ["Capture heap", "Module", "Snapshot", "Write"], "correctOptions": ["Capture heap"], "time": 55, "details": "Heapdump writes snapshots."},
-  {"question": "What is heap snapshot JSON?", "options": ["Export format", "Format", "JSON output", "Structure"], "correctOptions": ["Export format"], "time": 60, "details": "Heap snapshots use JSON."},
-  {"question": "What is Chrome DevTools profiling?", "options": ["Browser profiling", "DevTools", "Profile", "UI"], "correctOptions": ["Browser profiling via DevTools"], "time": 60, "details": "DevTools profiles heap."},
-  {"question": "What is --inspect flag?", "options": ["Debugging", "Enable inspector", "Debug mode", "Port"], "correctOptions": ["Enable inspector"], "time": 50, "details": "--inspect enables debugging."},
-  {"question": "What is --inspect-brk?", "options": ["Break on start", "Pause first", "Pause", "Break"], "correctOptions": ["Break on start"], "time": 55, "details": "Breaks on first line."},
-  {"question": "What is debugger statement?", "options": ["Breakpoint", "Debugger", "Pause", "Keyword"], "correctOptions": ["Breakpoint in code"], "time": 50, "details": "debugger creates break."},
-  {"question": "What is watch expressions?", "options": ["Live evaluation", "Variables", "Expression", "Evaluate"], "correctOptions": ["Live evaluation in devtools"], "time": 65, "details": "Watch expressions evaluate live."},
-  {"question": "What is console.time/timeEnd?", "options": ["Timing", "Timer", "Measure", "Benchmark"], "correctOptions": ["Timing code execution"], "time": 50, "details": "Timer for profiling."},
-  {"question": "What is console.profile()?", "options": ["CPU profile", "Profile", "Start", "Recording"], "correctOptions": ["CPU profile recording"], "time": 60, "details": "console.profile records CPU."},
-  {"question": "What is console.profileEnd()?", "options": ["Profile end", "Stop", "Output", "End"], "correctOptions": ["Stop recording"], "time": 60, "details": "profileEnd stops and shows."},
-  {"question": "What is table format output?", "options": ["Table console", "console.table", "Format", "Data"], "correctOptions": ["Table console output format"], "time": 55, "details": "console.table formats arrays/objects."},
-  {"question": "What is AssertionError?", "options": ["Test assertion failure", "Error", "Assertion", "Test"], "correctOptions": ["Test assertion failure"], "time": 50, "details": "AssertionError for assertions."},
-  {"question": "What is node --test?", "options": ["Test runner", "Native test", "Runner", "Test"], "correctOptions": ["Native test runner"], "time": 60, "details": "Node has built-in test runner."},
-  {"question": "What is test() function?", "options": ["Test case", "Define test", "Callback", "Test"], "correctOptions": ["Test case callback"], "time": 55, "details": "test() defines tests."},
-  {"question": "What is describe()?", "options": ["Test suite", "Group", "Suite", "Describe"], "correctOptions": ["Test suite group"], "time": 55, "details": "describe() groups tests."},
-  {"question": "What is it() as alias?", "options": ["Test alias", "test alias", "Name", "Test"], "correctOptions": ["test() alias for describe"], "time": 60, "details": "it() is often alias for test."},
-  {"question": "What is beforeEach/afterEach?", "options": ["Setup/teardown", "Lifecycle", "Hooks", "Run"], "correctOptions": ["Setup and teardown per test"], "time": 60, "details": "beforeEach/afterEach run per test."},
-  {"question": "What is suite() function?", "options": ["Group suite", "Test suite", "Alias", "Describe"], "correctOptions": ["describe alias for grouping"], "time": 60, "details": "suite() may alias describe."},
-  {"question": "What is skip() test?", "options": ["Skip test", "Skip", "Mark", "test skip"], "correctOptions": ["Skip test execution"], "time": 55, "details": "skip() marks as pending."},
-  {"question": "What is only() test?", "options": ["Run only", "Focus", "Run", "Focused"], "correctOptions": ["Run only this test"], "time": 55, "details": "only() runs this test alone."},
-  {"question": "What is todo() test?", "options": ["Planned test", "Pending", "Mark", "Todo"], "correctOptions": ["Planned test placeholder"], "time": 60, "details": "todo() marks planned test."},
-  {"question": "What is mock?", "options": ["Fake function", "Replace", "Stub", "Mock"], "correctOptions": ["Fake function mimicking real"], "time": 50, "details": "Mock replaces real functionality."},
-  {"question": "What is spy?", "options": ["Track calls", "Observation", "Wraps", "Stub"], "correctOptions": ["Tracks function calls"], "time": 50, "details": "Spy wraps and tracks calls."},
-  {"question": "What is stub?", "options": ["Replace with preset", "Fake", "Behavior", "Stub"], "correctOptions": ["Replaces with preset behavior"], "time": 55, "details": "Stub replaces with defined responses."},
-  {"question": "What is fake timer?", "options": ["Time manipulation", "Fake time", "Control time", "Timer"], "correctOptions": ["Control time in tests"], "time": 55, "details": "FakeTimers control time."},
-  {"question": "What is fake date?", "options": ["Fake current time", "Date mock", "Time control", "Date"], "correctOptions": ["Date manipulation"], "time": 60, "details": "Fake timers can control Date."},
-  {"question": "What is fake server?", "options": ["Network fake", "HTTP mock", "Request mock", "Server"], "correctOptions": ["Mock HTTP server behavior"], "time": 60, "details": "Fake server mocks HTTP."},
-  {"question": "What is Snapshot testing?", "options": ["Save output", "Compare", "Snapshot", "Test"], "correctOptions": ["Compare to saved output"], "time": 55, "details": "Snapshots compare saved results."},
-  {"question": "What is toMatchSnapshot()?", "options": ["Match saved", "Comparison", "Match", "Snap"], "correctOptions": ["Compare to saved"], "time": 55, "details": "toMatchSnapshot matches saved."},
-  {"question": "What is toHaveBeenCalled()?", "options": ["Called", "Mock", "Spy", "Verify"], "correctOptions": ["Verify function called"], "time": 50, "details": "Verifies mock was called."},
-  {"question": "What is toHaveBeenCalledWith()?", "options": ["Called with args", "Mock", "Arguments", "Verify"], "correctOptions": ["Verify was called with args"], "time": 55, "details": "Verifies mock called with args."},
-  {"question": "What is toHaveReturned()?", "options": ["Returned", "Return", "Mock", "Verify"], "correctOptions": ["Verify mock returned"], "time": 55, "details": "Verifies mock returned value."},
-  {"question": "What is toThrowError()?", "options": ["Throw error", "Exception", "Error", "Verify"], "correctOptions": ["Verify mock threw error"], "time": 55, "details": "Verifies error thrown."},
-  {"question": "What is assertion library?", "options": ["Assertions", "Test library", "Expect", "Verify"], "correctOptions": ["Test assertion library"], "time": 50, "details": "Assertion libraries: chai, expect."},
-  {"question": "What is expect()?", "options": ["Expect assertion", "Assertion", "Expect", "Result"], "correctOptions": ["Expect (BDD style)"], "time": 50, "details": "expect() provides BDD assertions."},
-  {"question": "What is should.js style?", "options": ["Should assertions", "BDD style", "Chain", "Style"], "correctOptions": ["Should chain-style BDD"], "time": 55, "details": "Should-style assertions."},
-  {"question": "What is assert style?", "options": ["TDD/assert style", "Classic", "Assert", "Style"], "correctOptions": ["Classic assert (should)"], "time": 55, "details": "assert module classic assertions."},
-  {"question": "What is Chai behavior styles?", "options": ["expect/should/assert", "Three styles", "BDD/TDD", "Assertion APIs"], "correctOptions": ["expect/should/assert three APIs"], "time": 60, "details": "Chai supports three assertion styles."},
-  {"question": "What is cluster.isMaster?", "options": ["Master process", "Primary", "Main", "Primary process"], "correctOptions": ["Primary/masterness as primary process"], "time": 50, "details": "isMaster is the primary process."},
-  {"question": "What is cluster.isWorker?", "options": ["Worker process", "Child", "Forked", "Worker"], "correctOptions": ["If running as worker (not master)"], "time": 50, "details": "isWorker true for worker."},
-  {"question": "What is cluster.fork()?", "options": ["Create worker", "Spawn", "Fork", "Start worker"], "correctOptions": ["Creates new worker process"], "time": 50, "details": "fork() spawns worker."},
-  {"question": "What is cluster.disconnect()?", "options": ["Disconnects all", "Close", "Stop cluster", "Exit"], "correctOptions": ["Disconnects all workers from master"], "time": 55, "details": "disconnect stops cluster."},
-  {"question": "What is cluster.scheduling policy?", "options": ["Worker selection", "Round-robin", "Selection policy", "Policy"], "correctOptions": ["none (OS), round-robin, or 4294901759 for fairness between processes"], "time": 65, "details": "Scheduling policy."},
-  {"question": "What is cluster.setupMaster()?", "options": ["Setup master", "Init", "Configure", "Setup"], "correctOptions": ["Configures script (or args) for cluster (deprecated in favor of setupPrimary)"], "time": 60, "details": "setupMaster configures."},
-  {"question": "What is cluster.setupPrimary()?", "options": ["Setup primary", "Initialize", "Configure master", "Setup"], "correctOptions": ["Configures script and fork options for primary"], "time": 60, "details": "setupPrimary configures."},
-  {"question": "What is cluster.workers?", "options": ["Worker list", "All workers", "Collection", "Object"], "correctOptions": ["Object of all workers (by id)"], "time": 50, "details": "workers is collection."},
-  {"question": "What is cluster.worker?", "options": ["Current worker", "My worker", "Worker reference", "This worker"], "correctOptions": ["Reference to current worker (undefined in master)"], "time": 55, "details": "worker is this worker."},
-  {"question": "What is worker.id?", "options": ["Worker identifier", "ID", "Unique ID", "Number"], "correctOptions": ["Unique worker ID (in cluster.workers)"], "time": 50, "details": "worker.id is identifier."},
-  {"question": "What is worker.exitedAfterDisconnect?", "options": ["Exit status", "Graceful exit", "Disconnect status", "Clean"], "correctOptions": ["True if worker exited due to disconnect (vs crash)"], "time": 60, "details": "Tracks graceful exit."},
-  {"question": "What is child_process?", "options": ["Spawn processes", "System exec", "External", "Child processes"], "correctOptions": ["Spawn and manage child processes"], "time": 40, "details": "child_process spawns."},
-  {"question": "What is child_process.spawn()?", "options": ["Execute command", "Run", "Spawn external", "Start"], "correctOptions": ["Spawns shell command with streams"], "time": 45, "details": "spawn() runs command."},
-  {"question": "What is child_process.exec()?", "options": ["Shell command", "Execute", "Run callback", "Shell"], "correctOptions": ["Executes command with callback (buffered output)"], "time": 45, "details": "exec() runs with callback."},
-  {"question": "What is child_process.execFile()?", "options": ["Direct execute", "Execute file", "Direct run", "No shell"], "correctOptions": ["Execute file directly (no shell) with callback"], "time": 50, "details": "execFile runs directly."},
-  {"question": "What is child_process.spawnSync()?", "options": ["Sync spawn", "Synchronous", "Block", "Wait"], "correctOptions": ["Synchronous spawn with output returned"], "time": 50, "details": "spawnSync runs synchronously."},
-  {"question": "What is child_process.execSync()?", "options": ["Sync exec", "Synchronous", "Block", "Wait"], "correctOptions": ["Synchronous exec (buffers output)"], "time": 50, "details": "execSync blocks."},
-  {"question": "What is fork() in child_process?", "options": ["Node fork", "New process", "Spawn Node", "Module"], "correctOptions": ["Special spawn for Node modules with IPC"], "time": 50, "details": "fork() spawns Node."},
-  {"question": "What is spawn options.detached?", "options": ["Detach process", "Background", "Orphan", "Launch"], "correctOptions": ["Detaches child to run independently (survives parent)"], "time": 55, "details": "detached runs in background."},
-  {"question": "What is spawn options.stdio?", "options": ["Stream options", "I/O config", "Pipes", "Standard IO"], "correctOptions": ["Config for stdin/stdout/stderr: pipe (default), ignore, inherit, or array of specific"], "time": 60, "details": "stdio configures I/O."},
-  {"question": "What is send in child_process?", "options": ["IPC message", "Send message", "Data", "Object"], "correctOptions": ["Send message to child via IPC (or to parent via send)"], "time": 55, "details": "send() does IPC."},
-  {"question": "What is .send(message, sendHandle)?", "options": ["IPC send with handle", "Pass handle", "Send socket", "Send handle"], "correctOptions": ["Sends message and optionally handle (like socket) to fork"], "time": 60, "details": "Send can pass handles."},
-  {"question": "What is process.send in worker?", "options": ["Message to parent", "Main process", "IPC up", "Upward"], "correctOptions": ["Sends message to parent (master) as IPC"], "time": 55, "details": "process.send sends up."},
-  {"question": "What is connected in fork?", "options": ["IPC status", "Connection", "Link", "Alive"], "correctOptions": ["True while IPC connected (set false to disconnect gracefully)"], "time": 60, "details": "connected tracks IPC."},
-  {"question": "What is disconnects in fork?", "options": ["Disconnect IPC", "Message", "Event", "Disconnect"], "correctOptions": ["Event when IPC channel disconnects"], "time": 60, "details": "disconnect fires."},
-  {"question": "What is exit event in worker?", "options": ["Worker exits", "Exit event", "Process exit", "Terminates"], "correctOptions": ["Event when worker process exits (after disconnect)"], "time": 60, "details": "exit event fires."},
-  {"question": "What is worker kill?", "options": ["Kill worker", "Signal", "Terminate process", "Exit"], "correctOptions": ["Sends signal to worker (default: SIGTERM)"], "time": 55, "details": "worker.kill() signals."},
-  {"question": "What is async_hooks?", "options": ["Track async", "Async tracking", "Async ids", "Context"], "correctOptions": ["Track async operations by ID (including async resources as hooks)"], "time": 60, "details": "async_hooks tracks operations."},
-  {"question": "What is createAsyncId()?", "options": ["Next id", "ID", "Get id", "Next async"], "correctOptions": ["Returns next unique async ID for custom resources"], "time": 55, "details": "createAsyncId gets ID."},
-  {"question": "What is executionAsyncId()?","options": ["Current id", "Active id", "This async", "ID"], "correctOptions": ["Returns ID of currently executing async resource"], "time": 55, "details": "executionAsyncId is current."},
-  {"question": "What is triggerAsyncId()?", "options": ["Trigger id", "Parent id", "Origin id", "Async id"], "correctOptions": ["Returns ID of async that triggered current execution"], "time": 60, "details": "triggerAsyncId is origin."},
-  {"question": "What is async_hook init?", "options": ["Init callback", "Init hook", "Create", "Callback"], "correctOptions": ["Called when async resource created: init(asyncId, type, triggerAsyncId, resource)"], "time": 65, "details": "init callback."},
-  {"question": "What is async_hook before?", "options": ["Before callback", "Before hook", "Pre-exec", "Callback"], "correctOptions": ["Called just before async operation starts: before(asyncId)"], "time": 60, "details": "before callback."},
-  {"question": "What is async_hook after()?", "options": ["After callback", "Post hook", "Complete", "Callback"], "correctOptions": ["Called after async operation finishes: after(asyncId)"], "time": 60, "details": "after callback."},
-  {"question": "What is async_hook destroy()?", "options": ["Destroy callback", "Cleanup", "Dispose", "Callback"], "correctOptions": ["Called when resource is destroyed: destroy(asyncId)"], "time": 65, "details": "destroy callback."},
-  {"question": "What is asyncId in hooks?", "options": ["Unique id", "Async ID", "ID number", "Resource id"], "correctOptions": ["Unique ID for each async operation instance"], "time": 55, "details": "asyncId is unique."},
-  {"question": "What is type in async hooks?", "options": ["Type label", "Type name", "Resource type", "String"], "correctOptions": ["Resource type as string: TCPWRAP, FSEVENTWRAP, etc"], "time": 55, "details": "type names source."},
-  {"question": "What is triggerAsyncId?", "options": ["Parent id", "Origin", "Source async", "ID"], "correctOptions": ["asyncId of resource that triggered this"], "time": 60, "details": "triggerAsyncId is parent."},
-  {"question": "What is emitDestroy?", "options": ["Destroy emit", "Emit destroy", "Trigger", "Call"], "correctOptions": ["Emits destroy event for any resource"], "time": 55, "details": "emitDestroy emits."},
-  {"question": "What is async_resource?", "options": ["Async wrapper", "Context wrapper", "Class", "Wrap"], "correctOptions": ["Class for wrapping async operations for tracking"], "time": 60, "details": "AsyncResource wraps ops."},
-  {"question": "What is new AsyncResource(type)?", "options": ["Create wrapper", "Init", "Constructor", "New"], "correctOptions": ["Creates resource for tracking: new AsyncResource(name)"], "time": 60, "details": "AsyncResource constructors."},
-  {"question": "What is asyncResource.runInAsyncScope()?", "options": ["Run in context", "Execute", "Run callback", "Context"], "correctOptions": ["Runs function in async execution context (triggerAsyncId set to this)"], "time": 65, "details": "runInAsyncScope runs."},
-  {"question": "What is asyncResource.emitDestroy()?", "options": ["Emit destroy", "Destroy", "Cleanup", "Trigger"], "correctOptions": ["Emits destroy for this resource"], "time": 60, "details": "emitDestroy emits."},
-  {"question": "What is AsyncLocalStorage?", "options": ["Context storage", "Async context storage", "Store", "TLS"], "correctOptions": ["Store values on async execution context"], "time": 60, "details": "AsyncLocalStorage stores."},
-  {"question": "What is asyncLocalStorage.run(store, callback)?", "options": ["Store run", "Execute callback", "Run with context", "Context"], "correctOptions": ["Runs callback with context stored: run(store, () => ...) "], "time": 65, "details": "run() stores context."},
-  {"question": "What is asyncLocalStorage.getData()?", "options": ["Get store", "Context", "Get value", "Data"], "correctOptions": ["Gets data stored by getStore() or run() in current async context"], "time": 60, "details": "getStore() gets data."},
-  {"question": "What is zlib in Node?", "options": ["Compression", "ZIP", "Deflate", "Gzip"], "correctOptions": ["Compression (gzip, deflate, brotli) via zlib module"], "time": 45, "details": "zlib handles compression."},
-  {"question": "What is zlib.createGzip()?", "options": ["Create gzip", "Gzip stream", "Compression", "Stream"], "correctOptions": ["Returns Gzip compression stream"], "time": 50, "details": "createGzip for gzip."},
-  {"question": "What is zlib.createGunzip()?", "options": ["Create gunzip", "Decompress", "Unzip stream", "Stream"], "correctOptions": ["Returns Gunzip decompression stream"], "time": 50, "details": "createGunzip for ungzip."},
-  {"question": "What is zlib.createDeflate()?", "options": ["Create deflate", "Zip", "Compression", "Stream"], "correctOptions": ["Returns Deflate compression stream"], "time": 50, "details": "createDeflate compresses."},
-  {"question": "What is zlib.createInflate()?", "options": ["Create inflate", "Unzip", "Decompress", "Stream"], "correctOptions": ["Returns Inflate decompression stream"], "time": 50, "details": "createInflate decompresses."},
-  {"question": "What is zlib.gzip()?", "options": ["Sync gzip", "Callback gzip", "Compress", "Function"], "correctOptions": ["Convenience: gzip(buffer, callback) or .gzipSync(buffer)"], "time": 50, "details": "gzip() convenience."},
-  {"question": "What is zlib.gunzip()?", "options": ["Sync gunzip", "Callback gunzip", "Decompress", "Function"], "correctOptions": ["Convenience: gunzip(buffer, callback) returns decompressed"], "time": 55, "details": "gunzip() convenience."},
-  {"question": "What is zlib.deflateRaw()?", "options": ["Raw deflate", "No header", "Compression", "Stream"], "correctOptions": ["Deflate without header (raw)"], "time": 55, "details": "deflateRaw no header."},
-  {"question": "What is zlib.createBrotliCompress()?", "options": ["Brotli compress", "New compression", "Modern", "Stream"], "correctOptions": ["Brotli compression stream (newer, better compression)"], "time": 55, "details": "Brotli compression."},
-  {"question": "What is zlib.createBrotliDecompress()?", "options": ["Brotli decompress", "Decompress", "Stream", "New"], "correctOptions": ["Brotli decompression stream"], "time": 55, "details": "Brotli decompress."},
-  {"question": "What is zlib options level?", "options": ["Compression level", "0-9", "Level", "Trade-off"], "correctOptions": ["0-9: 0=none, 1=fastest, 9=best (default 6)"], "time": 55, "details": "Level controls size/speed."},
-  {"question": "What is zlib options windowBits?", "options": ["Window size", "Lempel-Ziv", "Memory", "Window size"], "correctOptions": ["Window size: 8-15 for gzip (default 15), 8-24 raw deflate"], "time": 60, "details": "Window size."},
-  {"question": "What is zlib options memLevel?", "options": ["Memory level", "Memory use", "Compression memory", "Level"], "correctOptions": ["Memory for compression: 1-9 (default 8) - higher uses more memory but faster"], "time": 60, "details": "Memory level."},
-  {"question": "What is zlib options strategy?", "options": ["Algorithm tuning", "Strategy", "Compression approach", "Filter"], "correctOptions": ["Compression: DEFAULT, FILTERED, HUFFMAN_ONLY, RLE, FIXED"], "time": 65, "details": "Strategy tuning."},
-  {"question": "What is crypto in Node?", "options": ["Encryption", "Security", "Hash", "Cipher"], "correctOptions": ["Crypto module: hashes, ciphers, HMAC, signing, random"], "time": 45, "details": "crypto for encryption."},
-  {"question": "What is crypto.createHash()?", "options": ["Create hash", "Hash object", "Algorithm", "Digest"], "correctOptions": ["Creates hash for algorithm: md5, sha1, sha256, sha512"], "time": 50, "details": "createHash makes hash."},
-  {"question": "What is hash.update() and digest()?", "options": ["Data and output", "Write and result", "Options", "Finalize"], "counterOptions": ["hash.update(data); hash.digest([encoding]) - data, then output, nothing else can be added"], "time": 55, "details": "update adds data, digest outputs."},
-  {"question": "What is crypto.createHmac()?", "options": ["Create HMAC", "Auth hash", "Sign", "Keyed hash"], "correctOptions": ["Creates HMAC: createHmac(algorithm, key) - same as hash but keyed"], "time": 55, "details": "createHmac for keyed."},
-  {"question": "What is crypto.randomBytes()?", "options": ["Random data", "Bytes", "Random", "Secure"], "correctOptions": ["Generate secure random bytes: randomBytes(size, callback) or .randomBytesSync(size)"], "time": 50, "details": "randomBytes generates randoms."},
-  {"question": "What is crypto.pbkdf2()?", "options": ["Key derive", "Derive key", "Password", "KDF"], "correctOptions": ["Password-based key derivation: pbkdf2(password, salt, iterations, keylen, digest, callback)"], "time": 60, "details": "pbkdf2 derives keys."},
-  {"question": "What is crypto.scrypt()?", "options": ["Modern KDF", "SCrypt", "KDF", "Slow"], "correctOptions": ["Modern slow KDF: scrypt(password, salt, keylen, options, callback) - slower than pbkdf2 (more secure)"], "time": 60, "details": "scrypt is modern KDF."},
-  {"question": "What is crypto.createCipheriv()?", "options": ["Create cipher", "Encrypt", "IV cipher", "Cipher"], "correctOptions": ["Creates cipher given algorithm, key, iv, and optionally auth tag (for GCM): createCipheriv(alg, key, iv)"], "time": 65, "details": "Cipheriv with fixed IV."},
-  {"question": "What is cipher.update()?", "options": ["Encrypt partial", "Data", "Add blocks", "Update"], "correctOptions": ["Encrypt data: cipher.update(data, inputEncoding, outputEncoding) returns encrypted chunks until final"], "time": 65, "details": "update adds data."},
-  {"question": "What is cipher.final()?","options": ["Final block", "Encrypt last", "Complete", "Output"], "correctOptions": ["Finalize encryption: cipher.final(outputEncoding) returns final chunk"], "time": 60, "details": "final outputs."},
-  {"question": "What is crypto.createDecipheriv()?", "options": ["Create decrypt", "Decrypt cipher", "IV decipher", "Decipher"], "correctOptions": ["Creates decipher (same as cipher but for decryption)"], "time": 60, "details": "Decipheriv for decryption."},
-  {"question": "What is crypto.createSign()?", "options": ["Create signature", "Sign", "Sign message", "Signer"], "correctOptions": ["Create signing: createSign(algorithm) with .update(data).sign(privateKey, encoding)"], "time": 60, "details": "createSign for signing."},
-  {"question": "What is crypto.createVerify()?", "options": ["Verify signature", "Verify", "Verify sign", "Checker"], "correctOptions": ["Create verification: createVerify(alg).update(data).verify(publicKey, signature, encoding)"], "time": 65, "details": "createVerify checks."},
-  {"question": "What is crypto.generateKeyPair()?", "options": ["Generate keys", "Key gen", "Create pair", "Keys"], "correctOptions": ["Asymmetric key generation: generateKeyPair(type, options, callback)"], "time": 60, "details": "generateKeyPair makes pairs."},
-  {"question": "What is crypto.generateKeyPairSync()?", "options": ["Sync key gen", "Key gen", "Synchronous", "Keys"], "correctOptions": ["Synchronous version: generateKeyPairSync(type, options)"], "time": 60, "details": "Sync version available."},
-  {"question": "What is sign.sign(privateKey)?", "options": ["Sign data", "Create signature", "Output", "Returns signature"], "correctOptions": ["Sign data with private key: returns signature from all .update() calls"], "time": 60, "details": "sign.sign outputs."},
-  {"question": "What is verify.verify(publicKey, signature)?", "options": ["Verify signature", "Check", "Match", "Return bool"], "correctOptions": ["Verify with public key: returns boolean from all .update() calls"], "time": 60, "details": "verify.verify checks."},
-  {"question": "What is crypto.publicEncrypt()?", "options": ["Encrypt with public", "Public encrypt", "Hybrid encrypt", "Public"], "correctOptions": ["Encrypt with RSA public key (for transport) - padded, use only for small data"], "time": 65, "details": "publicEncrypt for transport."},
-  {"question": "What is crypto.privateDecrypt()?", "options": ["Decrypt private", "Decrypt private key", "Private decrypt", "Private"], "correctOptions": ["Decrypt with RSA private key: reverses publicEncrypt"], "time": 65, "details": "privateDecrypt reverses."},
-  {"question": "What is crypto.privateEncrypt()?", "options": ["Sign with private", "Sign private", "Private sign", "Hybrid"], "correctOptions": ["Sign/encrypt with private key (rare) - can be verified with public key"], "time": 65, "details": "privateEncrypt rare."},
-  {"question": "What is crypto.publicDecrypt()?", "options": ["Verify with public", "Verify public", "Public verify", "Hybrid"], "correctOptions": ["Verify/decrypt with public key: reverses privateEncrypt"], "time": 65, "details": "publicDecrypt rare."},
-  {"question": "What is tls in Node?", "options": ["TLS or SSL", "Secure transport", "HTTPS", "Encryption"], "correctOptions": ["TLS and SSL are protocols for encrypted communication"], "time": 45, "details": "TLS provides secure communication."},
-  {"question": "What is tls.connect()?", "options": ["Connect TLS", "Secure connect", "TLS client", "Create connection"], "correctOptions": ["Create TLS client: connect(options, callback) - returns TLSSocket"], "time": 55, "details": "connect opens TLS."},
-  {"question": "What is tls.createServer()?", "options": ["Create server", "TLS server", "Secure server", "Listen"], "correctOptions": ["Creates TLS server: createserver(options, secureConnectionListener)"], "time": 55, "details": "createServer makes TLS."},
-  {"question": "What is server.listen() TLS?", "options": ["Listen", "Start TLS", "Bind port", "Listen TLS"], "correctOptions": ["Start TLS server on port"], "time": 55, "details": "listen for TLS."},
-  {"question": "What is tls.getPeerCertificate()?", "options": ["Get cert", "Certificate", "Client cert", "Peer"], "correctOptions": ["Gets peer certificate (or null)"], "time": 55, "details": "getPeerCertificate returns cert."},
-  {"question": "What is socket.authorized?", "options": ["Check authorized", "Trusted", "Valid", "Socket property"], "correctOptions": ["True if peer cert verified (or self-signed if requested)"], "time": 60, "details": "authorized if verified."},
-  {"question": "What is socket.getCipher()?", "options": ["Get cipher", "Current", "Cipher", "Info"], "currentOptions": ["Returns {name, version} of current cipher"], "time": 55, "details": "getCipher gives cipher."},
-  {"question": "What is socket.getProtocol()?", "options": ["Get TLS version", "Protocol", "Version", "TLS version"], "correctOptions": ["Returns TLS version: TLSv1, TLSv1.1, TLSv1.2, TLSv1.3"], "time": 55, "details": "getProtocol TLS version."},
-  {"question": "What is socket.encrypted?", "options": ["Encrypted flag", "Is TLS", "Secure", "Property"], "correctOptions": ["True if TLS socket (encrypted)"], "time": 50, "details": "encrypted is flag."},
-  {"question": "What is tls options.key?", "options": ["Private key", "Key file", "Load key", "Certificate"], "correctOptions": ["Private key (or array of keys): string, Buffer, or list of both"], "time": 50, "details": "key is private key."},
-  {"question": "What is tls options.cert?", "options": ["Certificate", "Cert file", "Public cert", "Certificate"], "correctOptions": ["Public certificate (or array for multiple): string, Buffer, or array"], "time": 50, "details": "cert is public cert."},
-  {"question": "What is tls options.ca?", "options": ["CA certs", "Root CAs", "Trust chain", "Certificates"], "correctOptions": ["CA certificates for verification: if not given, uses Mozillas list"], "time": 55, "details": "ca is root CAs."},
-  {"question": "What is tls options.rejectUnauthorized?", "options": ["Verify client", "Trust check", "Require verify", "Option"], "correctOptions": ["True (default): reject if not verified; false: allow unverified"], "time": 55, "details": "rejectUnauthorized controls."},
-  {"question": "What is tls options.requestCert?", "options": ["Request client", "Ask for cert", "Option", "Auth"], "correctOptions": ["True: request client cert (but not require, use rejectUnauthorized to require)"], "time": 60, "details": "requestCert option."},
-  {"question": "What is tls options.NPNProtocols?", "options": ["NPN protocols", "Next protocol", "Negotiation", "Protocols"], "correctOptions": ["List of protocols for Next Protocol Negotiation (array or Buffer of names)"], "time": 60, "details": "NPN protocols."},
-  {"question": "What is tls options.ALPNProtocols?", "options": ["ALPN protocols", "Protocols", "Negotiation", "Protocols"], "correctOptions": ["List of protocols for Application-Layer Protocol Negotiation (array or Buffer): negotiated via NPN/ALPN event"], "time": 65, "details": "ALPN protocols."},
-  {"question": "What is tls check for peer cert?", "options": ["Check cert", "Verify", "Secure", "Get cert"], "correctOptions": ["socket.authorized || (socket.requested && socket.getPeerCertificate())"], "time": 70, "details": "Check if valid."},
-  {"question": "What is tls client cert auth?", "options": ["Mutual TLS", "mTLS", "Two-way auth", "Client auth"], "correctOptions": ["requestCert + rejectUnauthorized: both client and server send certificates"], "time": 70, "details": "Two-way TLS."}
+  {
+    "question": "What is clustering in Node.js?",
+    "options": [
+      "Multiple processes",
+      "CPU forks",
+      "Multi-process",
+      "Scaling"
+    ],
+    "correctOptions": [
+      "Multiple processes"
+    ],
+    "time": 45,
+    "details": "Cluster module spawns multiple processes."
+  },
+  {
+    "question": "What is WeakMap?",
+    "options": [
+      "Object keys only",
+      "Garbage collection",
+      "Memory efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object keys only",
+      "Garbage collection",
+      "Memory efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is WeakMap? explanation."
+  },
+  {
+    "question": "What is Worker class?",
+    "options": [
+      "Thread wrapper",
+      "Worker",
+      "Process",
+      "Thread"
+    ],
+    "correctOptions": [
+      "Thread wrapper"
+    ],
+    "time": 45,
+    "details": "Worker wraps OS thread."
+  },
+  {
+    "question": "What is parentPort?",
+    "options": [
+      "Message channel",
+      "IPC",
+      "Port",
+      "Parent"
+    ],
+    "correctOptions": [
+      "Message channel"
+    ],
+    "time": 50,
+    "details": "parentPort communicates with parent."
+  },
+  {
+    "question": "What is workerData?",
+    "options": [
+      "Process data",
+      "Passed data",
+      "Data",
+      "Input"
+    ],
+    "correctOptions": [
+      "Passed data"
+    ],
+    "time": 45,
+    "details": "workerData passes data to worker."
+  },
+  {
+    "question": "What is MessageChannel?",
+    "options": [
+      "IPC channel",
+      "Communication",
+      "Channel",
+      "Link"
+    ],
+    "correctOptions": [
+      "IPC channel"
+    ],
+    "time": 50,
+    "details": "MessageChannel enables IPC between workers."
+  },
+  {
+    "question": "What is MessagePort?",
+    "options": [
+      "Endpoint",
+      "Communication",
+      "Port",
+      "Channel"
+    ],
+    "correctOptions": [
+      "Communication"
+    ],
+    "time": 50,
+    "details": "MessagePort is communication endpoint."
+  },
+  {
+    "question": "What is postMessage?",
+    "options": [
+      "Send message",
+      "IPC",
+      "Message",
+      "Port"
+    ],
+    "correctOptions": [
+      "Send message"
+    ],
+    "time": 45,
+    "details": "postMessage sends messages."
+  },
+  {
+    "question": "What is on(message)?",
+    "options": [
+      "Receive message",
+      "Handler",
+      "Callback",
+      "Event"
+    ],
+    "correctOptions": [
+      "Receive message"
+    ],
+    "time": 45,
+    "details": "on(message) handles messages."
+  },
+  {
+    "question": "What is uncaught exception handling?",
+    "options": [
+      "Handle errors",
+      "Process error",
+      "Global handler",
+      "Handler"
+    ],
+    "correctOptions": [
+      "Handle errors"
+    ],
+    "time": 50,
+    "details": "unhandledRejection catches promise errors."
+  },
+  {
+    "question": "What is promise rejection handling?",
+    "options": [
+      "Promise errors",
+      "Handler",
+      "Catch",
+      "Error"
+    ],
+    "correctOptions": [
+      "Promise errors"
+    ],
+    "time": 55,
+    "details": "unhandledRejection: Promise rejection handler."
+  },
+  {
+    "question": "What is error encapsulation?",
+    "options": [
+      "Hide internals",
+      "Clean errors",
+      "Error handling",
+      "Wrapper"
+    ],
+    "correctOptions": [
+      "Hide internals"
+    ],
+    "time": 55,
+    "details": "Encapsulation hides error details."
+  },
+  {
+    "question": "What is exit codes?",
+    "options": [
+      "Process codes",
+      "Exit statuses",
+      "Codes",
+      "Status"
+    ],
+    "correctOptions": [
+      "Exit statuses"
+    ],
+    "time": 50,
+    "details": "Exit codes indicate exit status."
+  },
+  {
+    "question": "What is graceful shutdown?",
+    "options": [
+      "Clean exit",
+      "Cleanup",
+      "Process end",
+      "Shutdown"
+    ],
+    "correctOptions": [
+      "Clean exit"
+    ],
+    "time": 50,
+    "details": "Graceful shutdown cleans up."
+  },
+  {
+    "question": "What is signal handling?",
+    "options": [
+      "System signals",
+      "Signal",
+      "SIGTERM/SIGINT",
+      "Handlers"
+    ],
+    "correctOptions": [
+      "System signals"
+    ],
+    "time": 50,
+    "details": "Signal handling responds to signals."
+  },
+  {
+    "question": "What is SIGTERM?",
+    "options": [
+      "Termination",
+      "Graceful exit",
+      "Signal",
+      "Kill"
+    ],
+    "correctOptions": [
+      "Termination"
+    ],
+    "time": 50,
+    "details": "SIGTERM requests graceful exit."
+  },
+  {
+    "question": "What is SIGINT?",
+    "options": [
+      "Interrupt",
+      "Ctrl+C",
+      "Signal",
+      "Cancel"
+    ],
+    "correctOptions": [
+      "Ctrl+C"
+    ],
+    "time": 50,
+    "details": "SIGINT is Ctrl+C interrupt."
+  },
+  {
+    "question": "What is SIGKILL?",
+    "options": [
+      "Immediate kill",
+      "Force exit",
+      "Signal",
+      "Terminate"
+    ],
+    "correctOptions": [
+      "Immediate kill"
+    ],
+    "time": 50,
+    "details": "SIGKILL force kills immediately."
+  },
+  {
+    "question": "What is process.title?",
+    "options": [
+      "Process name",
+      "Title",
+      "Set title",
+      "Name"
+    ],
+    "correctOptions": [
+      "Process name"
+    ],
+    "time": 50,
+    "details": "process.title is process name."
+  },
+  {
+    "question": "What is setproctitle?",
+    "options": [
+      "Set title",
+      "Update name",
+      "Module",
+      "NPM"
+    ],
+    "correctOptions": [
+      "Set title"
+    ],
+    "time": 55,
+    "details": "setproctitle sets process title."
+  },
+  {
+    "question": "What is process resource usage?",
+    "options": [
+      "Resource info",
+      "getrusage()",
+      "Info",
+      "Metrics"
+    ],
+    "correctOptions": [
+      "Resource info"
+    ],
+    "time": 55,
+    "details": "getrusage() returns resource usage."
+  },
+  {
+    "question": "What is getrusage()?",
+    "options": [
+      "Resource usage",
+      "Metrics",
+      "System",
+      "Info"
+    ],
+    "correctOptions": [
+      "Resource usage"
+    ],
+    "time": 55,
+    "details": "Returns CPU and memory usage."
+  },
+  {
+    "question": "What is uv_resident_set_memory()?",
+    "options": [
+      "Memory info",
+      "RSS",
+      "Memory",
+      "Stats"
+    ],
+    "correctOptions": [
+      "Memory info"
+    ],
+    "time": 60,
+    "details": "Resident set memory."
+  },
+  {
+    "question": "What is heap used/total?",
+    "options": [
+      "Memory stats",
+      "Heap usage",
+      "Metrics",
+      "V8"
+    ],
+    "correctOptions": [
+      "Memory stats"
+    ],
+    "time": 55,
+    "details": "Heap memory usage."
+  },
+  {
+    "question": "What is external memory?",
+    "options": [
+      "Addons",
+      "Native",
+      "External",
+      "V8"
+    ],
+    "correctOptions": [
+      "Addons"
+    ],
+    "time": 55,
+    "details": "External is native addons memory."
+  },
+  {
+    "question": "What is array buffers memory?",
+    "options": [
+      "ArrayBuffer",
+      "Buffer",
+      "Typed",
+      "Memory"
+    ],
+    "correctOptions": [
+      "ArrayBuffer"
+    ],
+    "time": 60,
+    "details": "ArrayBuffer memory."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "GC",
+      "Free memory",
+      "Collection"
+    ],
+    "correctOptions": [
+      "Memory cleanup"
+    ],
+    "time": 50,
+    "details": "GC reclaims memory."
+  },
+  {
+    "question": "What is global GC?",
+    "options": [
+      "Force GC",
+      "global.gc()",
+      "Force",
+      "Run"
+    ],
+    "correctOptions": [
+      "Force GC"
+    ],
+    "time": 55,
+    "details": "global.gc() runs GC manually."
+  },
+  {
+    "question": "What is V8 heap flags?",
+    "options": [
+      "GC tuning",
+      "Heap settings",
+      "Tweak",
+      "Options"
+    ],
+    "correctOptions": [
+      "GC tuning"
+    ],
+    "time": 60,
+    "details": "Heap flags tune GC."
+  },
+  {
+    "question": "What is performance hooks?",
+    "options": [
+      "Metrics",
+      "Async hooks",
+      "Performance",
+      "Monitoring"
+    ],
+    "correctOptions": [
+      "Metrics"
+    ],
+    "time": 55,
+    "details": "perf_hooks monitors performance."
+  },
+  {
+    "question": "What is perf_hooks_async_hooks?",
+    "options": [
+      "Async metrics",
+      "Async monitoring",
+      "Metrics",
+      "Tracing"
+    ],
+    "correctOptions": [
+      "Async metrics"
+    ],
+    "time": 60,
+    "details": "async_hooks traces async operations."
+  },
+  {
+    "question": "What is AsyncResource?",
+    "options": [
+      "Wrap async",
+      "Context",
+      "Tracing",
+      "Wrapper"
+    ],
+    "correctOptions": [
+      "Wrap async"
+    ],
+    "time": 60,
+    "details": "AsyncResource wraps async operations."
+  },
+  {
+    "question": "What is trace events?",
+    "options": [
+      "Trace async",
+      "Tracing",
+      "Events",
+      "Enable"
+    ],
+    "correctOptions": [
+      "Trace async"
+    ],
+    "time": 65,
+    "details": "trace events trace execution."
+  },
+  {
+    "question": "What is trace categories?",
+    "options": [
+      "Event categories",
+      "Groups",
+      "Tracing",
+      "Enable"
+    ],
+    "correctOptions": [
+      "Event categories"
+    ],
+    "time": 65,
+    "details": "trace category groups."
+  },
+  {
+    "question": "What is trace enabled?",
+    "options": [
+      "Enable tracing",
+      "Flag",
+      "Switch",
+      "Check"
+    ],
+    "correctOptions": [
+      "Enable tracing"
+    ],
+    "time": 60,
+    "details": "Enable/disable trace events."
+  },
+  {
+    "question": "What is CPU profiling?",
+    "options": [
+      "Profile CPU",
+      "CPU usage",
+      "Profiling",
+      "Metrics"
+    ],
+    "correctOptions": [
+      "CPU usage"
+    ],
+    "time": 60,
+    "details": "CPU profiling analyzes CPU usage."
+  },
+  {
+    "question": "What is v8 profiler?",
+    "options": [
+      "CPU analysis",
+      "V8 profiling",
+      "Heap",
+      "Analysis"
+    ],
+    "correctOptions": [
+      "CPU analysis"
+    ],
+    "time": 60,
+    "details": "V8 profiler analyzes profiles."
+  },
+  {
+    "question": "What is heap snapshots?",
+    "options": [
+      "Memory dump",
+      "Heap analysis",
+      "Snapshot",
+      "Capture"
+    ],
+    "correctOptions": [
+      "Memory dump"
+    ],
+    "time": 60,
+    "details": "Heap snapshots capture memory."
+  },
+  {
+    "question": "What is heapdump?",
+    "options": [
+      "Capture heap",
+      "Module",
+      "Snapshot",
+      "Write"
+    ],
+    "correctOptions": [
+      "Capture heap"
+    ],
+    "time": 55,
+    "details": "Heapdump writes snapshots."
+  },
+  {
+    "question": "What is heap snapshot JSON?",
+    "options": [
+      "Export format",
+      "Format",
+      "JSON output",
+      "Structure"
+    ],
+    "correctOptions": [
+      "Export format"
+    ],
+    "time": 60,
+    "details": "Heap snapshots use JSON."
+  },
+  {
+    "question": "What is Chrome DevTools profiling?",
+    "options": [
+      "Browser profiling",
+      "DevTools",
+      "Profile",
+      "UI"
+    ],
+    "correctOptions": [
+      "Browser profiling"
+    ],
+    "time": 60,
+    "details": "DevTools profiles heap."
+  },
+  {
+    "question": "What is --inspect flag?",
+    "options": [
+      "Debugging",
+      "Enable inspector",
+      "Debug mode",
+      "Port"
+    ],
+    "correctOptions": [
+      "Enable inspector"
+    ],
+    "time": 50,
+    "details": "--inspect enables debugging."
+  },
+  {
+    "question": "What is --inspect-brk?",
+    "options": [
+      "Break on start",
+      "Pause first",
+      "Pause",
+      "Break"
+    ],
+    "correctOptions": [
+      "Break on start"
+    ],
+    "time": 55,
+    "details": "Breaks on first line."
+  },
+  {
+    "question": "What is debugger statement?",
+    "options": [
+      "Breakpoint",
+      "Debugger",
+      "Pause",
+      "Keyword"
+    ],
+    "correctOptions": [
+      "Breakpoint"
+    ],
+    "time": 50,
+    "details": "debugger creates break."
+  },
+  {
+    "question": "What is watch expressions?",
+    "options": [
+      "Live evaluation",
+      "Variables",
+      "Expression",
+      "Evaluate"
+    ],
+    "correctOptions": [
+      "Live evaluation"
+    ],
+    "time": 65,
+    "details": "Watch expressions evaluate live."
+  },
+  {
+    "question": "What is console.time/timeEnd?",
+    "options": [
+      "Timing",
+      "Timer",
+      "Measure",
+      "Benchmark"
+    ],
+    "correctOptions": [
+      "Timing"
+    ],
+    "time": 50,
+    "details": "Timer for profiling."
+  },
+  {
+    "question": "What is console.profile()?",
+    "options": [
+      "CPU profile",
+      "Profile",
+      "Start",
+      "Recording"
+    ],
+    "correctOptions": [
+      "CPU profile"
+    ],
+    "time": 60,
+    "details": "console.profile records CPU."
+  },
+  {
+    "question": "What is console.profileEnd()?",
+    "options": [
+      "Profile end",
+      "Stop",
+      "Output",
+      "End"
+    ],
+    "correctOptions": [
+      "Stop"
+    ],
+    "time": 60,
+    "details": "profileEnd stops and shows."
+  },
+  {
+    "question": "What is table format output?",
+    "options": [
+      "Table console",
+      "console.table",
+      "Format",
+      "Data"
+    ],
+    "correctOptions": [
+      "Table console"
+    ],
+    "time": 55,
+    "details": "console.table formats arrays/objects."
+  },
+  {
+    "question": "What is AssertionError?",
+    "options": [
+      "Test assertion failure",
+      "Error",
+      "Assertion",
+      "Test"
+    ],
+    "correctOptions": [
+      "Test assertion failure"
+    ],
+    "time": 50,
+    "details": "AssertionError for assertions."
+  },
+  {
+    "question": "What is node --test?",
+    "options": [
+      "Test runner",
+      "Native test",
+      "Runner",
+      "Test"
+    ],
+    "correctOptions": [
+      "Native test"
+    ],
+    "time": 60,
+    "details": "Node has built-in test runner."
+  },
+  {
+    "question": "What is test() function?",
+    "options": [
+      "Test case",
+      "Define test",
+      "Callback",
+      "Test"
+    ],
+    "correctOptions": [
+      "Test case"
+    ],
+    "time": 55,
+    "details": "test() defines tests."
+  },
+  {
+    "question": "What is describe()?",
+    "options": [
+      "Test suite",
+      "Group",
+      "Suite",
+      "Describe"
+    ],
+    "correctOptions": [
+      "Test suite"
+    ],
+    "time": 55,
+    "details": "describe() groups tests."
+  },
+  {
+    "question": "What is it() as alias?",
+    "options": [
+      "Test alias",
+      "test alias",
+      "Name",
+      "Test"
+    ],
+    "correctOptions": [
+      "Test alias"
+    ],
+    "time": 60,
+    "details": "it() is often alias for test."
+  },
+  {
+    "question": "What is beforeEach/afterEach?",
+    "options": [
+      "Setup/teardown",
+      "Lifecycle",
+      "Hooks",
+      "Run"
+    ],
+    "correctOptions": [
+      "Setup/teardown"
+    ],
+    "time": 60,
+    "details": "beforeEach/afterEach run per test."
+  },
+  {
+    "question": "What is suite() function?",
+    "options": [
+      "Group suite",
+      "Test suite",
+      "Alias",
+      "Describe"
+    ],
+    "correctOptions": [
+      "Group suite"
+    ],
+    "time": 60,
+    "details": "suite() may alias describe."
+  },
+  {
+    "question": "What is skip() test?",
+    "options": [
+      "Skip test",
+      "Skip",
+      "Mark",
+      "test skip"
+    ],
+    "correctOptions": [
+      "Skip test"
+    ],
+    "time": 55,
+    "details": "skip() marks as pending."
+  },
+  {
+    "question": "What is only() test?",
+    "options": [
+      "Run only",
+      "Focus",
+      "Run",
+      "Focused"
+    ],
+    "correctOptions": [
+      "Run only"
+    ],
+    "time": 55,
+    "details": "only() runs this test alone."
+  },
+  {
+    "question": "What is todo() test?",
+    "options": [
+      "Planned test",
+      "Pending",
+      "Mark",
+      "Todo"
+    ],
+    "correctOptions": [
+      "Planned test"
+    ],
+    "time": 60,
+    "details": "todo() marks planned test."
+  },
+  {
+    "question": "What is mock?",
+    "options": [
+      "Fake function",
+      "Replace",
+      "Stub",
+      "Mock"
+    ],
+    "correctOptions": [
+      "Fake function"
+    ],
+    "time": 50,
+    "details": "Mock replaces real functionality."
+  },
+  {
+    "question": "What is spy?",
+    "options": [
+      "Track calls",
+      "Observation",
+      "Wraps",
+      "Stub"
+    ],
+    "correctOptions": [
+      "Track calls"
+    ],
+    "time": 50,
+    "details": "Spy wraps and tracks calls."
+  },
+  {
+    "question": "What is stub?",
+    "options": [
+      "Replace with preset",
+      "Fake",
+      "Behavior",
+      "Stub"
+    ],
+    "correctOptions": [
+      "Replace with preset"
+    ],
+    "time": 55,
+    "details": "Stub replaces with defined responses."
+  },
+  {
+    "question": "What is fake timer?",
+    "options": [
+      "Time manipulation",
+      "Fake time",
+      "Control time",
+      "Timer"
+    ],
+    "correctOptions": [
+      "Control time"
+    ],
+    "time": 55,
+    "details": "FakeTimers control time."
+  },
+  {
+    "question": "What is fake date?",
+    "options": [
+      "Fake current time",
+      "Date mock",
+      "Time control",
+      "Date"
+    ],
+    "correctOptions": [
+      "Date"
+    ],
+    "time": 60,
+    "details": "Fake timers can control Date."
+  },
+  {
+    "question": "What is fake server?",
+    "options": [
+      "Network fake",
+      "HTTP mock",
+      "Request mock",
+      "Server"
+    ],
+    "correctOptions": [
+      "Network fake"
+    ],
+    "time": 60,
+    "details": "Fake server mocks HTTP."
+  },
+  {
+    "question": "What is Snapshot testing?",
+    "options": [
+      "Save output",
+      "Compare",
+      "Snapshot",
+      "Test"
+    ],
+    "correctOptions": [
+      "Compare"
+    ],
+    "time": 55,
+    "details": "Snapshots compare saved results."
+  },
+  {
+    "question": "What is toMatchSnapshot()?",
+    "options": [
+      "Match saved",
+      "Comparison",
+      "Match",
+      "Snap"
+    ],
+    "correctOptions": [
+      "Match saved"
+    ],
+    "time": 55,
+    "details": "toMatchSnapshot matches saved."
+  },
+  {
+    "question": "What is toHaveBeenCalled()?",
+    "options": [
+      "Called",
+      "Mock",
+      "Spy",
+      "Verify"
+    ],
+    "correctOptions": [
+      "Verify"
+    ],
+    "time": 50,
+    "details": "Verifies mock was called."
+  },
+  {
+    "question": "What is toHaveBeenCalledWith()?",
+    "options": [
+      "Called with args",
+      "Mock",
+      "Arguments",
+      "Verify"
+    ],
+    "correctOptions": [
+      "Verify"
+    ],
+    "time": 55,
+    "details": "Verifies mock called with args."
+  },
+  {
+    "question": "What is toHaveReturned()?",
+    "options": [
+      "Returned",
+      "Return",
+      "Mock",
+      "Verify"
+    ],
+    "correctOptions": [
+      "Verify"
+    ],
+    "time": 55,
+    "details": "Verifies mock returned value."
+  },
+  {
+    "question": "What is toThrowError()?",
+    "options": [
+      "Throw error",
+      "Exception",
+      "Error",
+      "Verify"
+    ],
+    "correctOptions": [
+      "Verify"
+    ],
+    "time": 55,
+    "details": "Verifies error thrown."
+  },
+  {
+    "question": "What is assertion library?",
+    "options": [
+      "Assertions",
+      "Test library",
+      "Expect",
+      "Verify"
+    ],
+    "correctOptions": [
+      "Assertions"
+    ],
+    "time": 50,
+    "details": "Assertion libraries: chai, expect."
+  },
+  {
+    "question": "What is expect()?",
+    "options": [
+      "Expect assertion",
+      "Assertion",
+      "Expect",
+      "Result"
+    ],
+    "correctOptions": [
+      "Expect"
+    ],
+    "time": 50,
+    "details": "expect() provides BDD assertions."
+  },
+  {
+    "question": "What is should.js style?",
+    "options": [
+      "Should assertions",
+      "BDD style",
+      "Chain",
+      "Style"
+    ],
+    "correctOptions": [
+      "Should assertions"
+    ],
+    "time": 55,
+    "details": "Should-style assertions."
+  },
+  {
+    "question": "What is assert style?",
+    "options": [
+      "TDD/assert style",
+      "Classic",
+      "Assert",
+      "Style"
+    ],
+    "correctOptions": [
+      "Classic"
+    ],
+    "time": 55,
+    "details": "assert module classic assertions."
+  },
+  {
+    "question": "What is Chai behavior styles?",
+    "options": [
+      "expect/should/assert",
+      "Three styles",
+      "BDD/TDD",
+      "Assertion APIs"
+    ],
+    "correctOptions": [
+      "expect/should/assert"
+    ],
+    "time": 60,
+    "details": "Chai supports three assertion styles."
+  },
+  {
+    "question": "What is cluster.isMaster?",
+    "options": [
+      "Master process",
+      "Primary",
+      "Main",
+      "Primary process"
+    ],
+    "correctOptions": [
+      "Primary"
+    ],
+    "time": 50,
+    "details": "isMaster is the primary process."
+  },
+  {
+    "question": "What is cluster.isWorker?",
+    "options": [
+      "Worker process",
+      "Child",
+      "Forked",
+      "Worker"
+    ],
+    "correctOptions": [
+      "Worker process"
+    ],
+    "time": 50,
+    "details": "isWorker true for worker."
+  },
+  {
+    "question": "What is cluster.fork()?",
+    "options": [
+      "Create worker",
+      "Spawn",
+      "Fork",
+      "Start worker"
+    ],
+    "correctOptions": [
+      "Create worker"
+    ],
+    "time": 50,
+    "details": "fork() spawns worker."
+  },
+  {
+    "question": "What is cluster.disconnect()?",
+    "options": [
+      "Disconnects all",
+      "Close",
+      "Stop cluster",
+      "Exit"
+    ],
+    "correctOptions": [
+      "Disconnects all"
+    ],
+    "time": 55,
+    "details": "disconnect stops cluster."
+  },
+  {
+    "question": "What is cluster.scheduling policy?",
+    "options": [
+      "Worker selection",
+      "Round-robin",
+      "Selection policy",
+      "Policy"
+    ],
+    "correctOptions": [
+      "Worker selection"
+    ],
+    "time": 65,
+    "details": "Scheduling policy."
+  },
+  {
+    "question": "What is cluster.setupMaster()?",
+    "options": [
+      "Setup master",
+      "Init",
+      "Configure",
+      "Setup"
+    ],
+    "correctOptions": [
+      "Configure"
+    ],
+    "time": 60,
+    "details": "setupMaster configures."
+  },
+  {
+    "question": "What is cluster.setupPrimary()?",
+    "options": [
+      "Setup primary",
+      "Initialize",
+      "Configure master",
+      "Setup"
+    ],
+    "correctOptions": [
+      "Setup primary"
+    ],
+    "time": 60,
+    "details": "setupPrimary configures."
+  },
+  {
+    "question": "What is cluster.workers?",
+    "options": [
+      "Worker list",
+      "All workers",
+      "Collection",
+      "Object"
+    ],
+    "correctOptions": [
+      "Object"
+    ],
+    "time": 50,
+    "details": "workers is collection."
+  },
+  {
+    "question": "What is cluster.worker?",
+    "options": [
+      "Current worker",
+      "My worker",
+      "Worker reference",
+      "This worker"
+    ],
+    "correctOptions": [
+      "Current worker"
+    ],
+    "time": 55,
+    "details": "worker is this worker."
+  },
+  {
+    "question": "What is worker.id?",
+    "options": [
+      "Worker identifier",
+      "ID",
+      "Unique ID",
+      "Number"
+    ],
+    "correctOptions": [
+      "ID"
+    ],
+    "time": 50,
+    "details": "worker.id is identifier."
+  },
+  {
+    "question": "What is worker.exitedAfterDisconnect?",
+    "options": [
+      "Exit status",
+      "Graceful exit",
+      "Disconnect status",
+      "Clean"
+    ],
+    "correctOptions": [
+      "Exit status"
+    ],
+    "time": 60,
+    "details": "Tracks graceful exit."
+  },
+  {
+    "question": "What is child_process?",
+    "options": [
+      "Spawn processes",
+      "System exec",
+      "External",
+      "Child processes"
+    ],
+    "correctOptions": [
+      "Spawn processes"
+    ],
+    "time": 40,
+    "details": "child_process spawns."
+  },
+  {
+    "question": "What is child_process.spawn()?",
+    "options": [
+      "Execute command",
+      "Run",
+      "Spawn external",
+      "Start"
+    ],
+    "correctOptions": [
+      "Execute command"
+    ],
+    "time": 45,
+    "details": "spawn() runs command."
+  },
+  {
+    "question": "What is child_process.exec()?",
+    "options": [
+      "Shell command",
+      "Execute",
+      "Run callback",
+      "Shell"
+    ],
+    "correctOptions": [
+      "Execute"
+    ],
+    "time": 45,
+    "details": "exec() runs with callback."
+  },
+  {
+    "question": "What is child_process.execFile()?",
+    "options": [
+      "Direct execute",
+      "Execute file",
+      "Direct run",
+      "No shell"
+    ],
+    "correctOptions": [
+      "Execute file"
+    ],
+    "time": 50,
+    "details": "execFile runs directly."
+  },
+  {
+    "question": "What is child_process.spawnSync()?",
+    "options": [
+      "Sync spawn",
+      "Synchronous",
+      "Block",
+      "Wait"
+    ],
+    "correctOptions": [
+      "Synchronous"
+    ],
+    "time": 50,
+    "details": "spawnSync runs synchronously."
+  },
+  {
+    "question": "What is child_process.execSync()?",
+    "options": [
+      "Sync exec",
+      "Synchronous",
+      "Block",
+      "Wait"
+    ],
+    "correctOptions": [
+      "Synchronous"
+    ],
+    "time": 50,
+    "details": "execSync blocks."
+  },
+  {
+    "question": "What is fork() in child_process?",
+    "options": [
+      "Node fork",
+      "New process",
+      "Spawn Node",
+      "Module"
+    ],
+    "correctOptions": [
+      "Node fork"
+    ],
+    "time": 50,
+    "details": "fork() spawns Node."
+  },
+  {
+    "question": "What is spawn options.detached?",
+    "options": [
+      "Detach process",
+      "Background",
+      "Orphan",
+      "Launch"
+    ],
+    "correctOptions": [
+      "Detach process"
+    ],
+    "time": 55,
+    "details": "detached runs in background."
+  },
+  {
+    "question": "What is spawn options.stdio?",
+    "options": [
+      "Stream options",
+      "I/O config",
+      "Pipes",
+      "Standard IO"
+    ],
+    "correctOptions": [
+      "Stream options"
+    ],
+    "time": 60,
+    "details": "stdio configures I/O."
+  },
+  {
+    "question": "What is send in child_process?",
+    "options": [
+      "IPC message",
+      "Send message",
+      "Data",
+      "Object"
+    ],
+    "correctOptions": [
+      "Send message"
+    ],
+    "time": 55,
+    "details": "send() does IPC."
+  },
+  {
+    "question": "What is .send(message, sendHandle)?",
+    "options": [
+      "IPC send with handle",
+      "Pass handle",
+      "Send socket",
+      "Send handle"
+    ],
+    "correctOptions": [
+      "IPC send with handle"
+    ],
+    "time": 60,
+    "details": "Send can pass handles."
+  },
+  {
+    "question": "What is process.send in worker?",
+    "options": [
+      "Message to parent",
+      "Main process",
+      "IPC up",
+      "Upward"
+    ],
+    "correctOptions": [
+      "Message to parent"
+    ],
+    "time": 55,
+    "details": "process.send sends up."
+  },
+  {
+    "question": "What is connected in fork?",
+    "options": [
+      "IPC status",
+      "Connection",
+      "Link",
+      "Alive"
+    ],
+    "correctOptions": [
+      "IPC status"
+    ],
+    "time": 60,
+    "details": "connected tracks IPC."
+  },
+  {
+    "question": "What is disconnects in fork?",
+    "options": [
+      "Disconnect IPC",
+      "Message",
+      "Event",
+      "Disconnect"
+    ],
+    "correctOptions": [
+      "Event"
+    ],
+    "time": 60,
+    "details": "disconnect fires."
+  },
+  {
+    "question": "What is exit event in worker?",
+    "options": [
+      "Worker exits",
+      "Exit event",
+      "Process exit",
+      "Terminates"
+    ],
+    "correctOptions": [
+      "Worker exits"
+    ],
+    "time": 60,
+    "details": "exit event fires."
+  },
+  {
+    "question": "What is worker kill?",
+    "options": [
+      "Kill worker",
+      "Signal",
+      "Terminate process",
+      "Exit"
+    ],
+    "correctOptions": [
+      "Kill worker"
+    ],
+    "time": 55,
+    "details": "worker.kill() signals."
+  },
+  {
+    "question": "What is async_hooks?",
+    "options": [
+      "Track async",
+      "Async tracking",
+      "Async ids",
+      "Context"
+    ],
+    "correctOptions": [
+      "Track async"
+    ],
+    "time": 60,
+    "details": "async_hooks tracks operations."
+  },
+  {
+    "question": "What is createAsyncId()?",
+    "options": [
+      "Next id",
+      "ID",
+      "Get id",
+      "Next async"
+    ],
+    "correctOptions": [
+      "ID"
+    ],
+    "time": 55,
+    "details": "createAsyncId gets ID."
+  },
+  {
+    "question": "What is executionAsyncId()?",
+    "options": [
+      "Current id",
+      "Active id",
+      "This async",
+      "ID"
+    ],
+    "correctOptions": [
+      "ID"
+    ],
+    "time": 55,
+    "details": "executionAsyncId is current."
+  },
+  {
+    "question": "What is triggerAsyncId()?",
+    "options": [
+      "Trigger id",
+      "Parent id",
+      "Origin id",
+      "Async id"
+    ],
+    "correctOptions": [
+      "Trigger id"
+    ],
+    "time": 60,
+    "details": "triggerAsyncId is origin."
+  },
+  {
+    "question": "What is async_hook init?",
+    "options": [
+      "Init callback",
+      "Init hook",
+      "Create",
+      "Callback"
+    ],
+    "correctOptions": [
+      "Init callback"
+    ],
+    "time": 65,
+    "details": "init callback."
+  },
+  {
+    "question": "What is async_hook before?",
+    "options": [
+      "Before callback",
+      "Before hook",
+      "Pre-exec",
+      "Callback"
+    ],
+    "correctOptions": [
+      "Before callback"
+    ],
+    "time": 60,
+    "details": "before callback."
+  },
+  {
+    "question": "What is async_hook after()?",
+    "options": [
+      "After callback",
+      "Post hook",
+      "Complete",
+      "Callback"
+    ],
+    "correctOptions": [
+      "After callback"
+    ],
+    "time": 60,
+    "details": "after callback."
+  },
+  {
+    "question": "What is async_hook destroy()?",
+    "options": [
+      "Destroy callback",
+      "Cleanup",
+      "Dispose",
+      "Callback"
+    ],
+    "correctOptions": [
+      "Destroy callback"
+    ],
+    "time": 65,
+    "details": "destroy callback."
+  },
+  {
+    "question": "What is asyncId in hooks?",
+    "options": [
+      "Unique id",
+      "Async ID",
+      "ID number",
+      "Resource id"
+    ],
+    "correctOptions": [
+      "Unique id"
+    ],
+    "time": 55,
+    "details": "asyncId is unique."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is triggerAsyncId?",
+    "options": [
+      "Parent id",
+      "Origin",
+      "Source async",
+      "ID"
+    ],
+    "correctOptions": [
+      "Parent id"
+    ],
+    "time": 60,
+    "details": "triggerAsyncId is parent."
+  },
+  {
+    "question": "What is emitDestroy?",
+    "options": [
+      "Destroy emit",
+      "Emit destroy",
+      "Trigger",
+      "Call"
+    ],
+    "correctOptions": [
+      "Destroy emit"
+    ],
+    "time": 55,
+    "details": "emitDestroy emits."
+  },
+  {
+    "question": "What is async_resource?",
+    "options": [
+      "Async wrapper",
+      "Context wrapper",
+      "Class",
+      "Wrap"
+    ],
+    "correctOptions": [
+      "Class"
+    ],
+    "time": 60,
+    "details": "AsyncResource wraps ops."
+  },
+  {
+    "question": "What is new AsyncResource(type)?",
+    "options": [
+      "Create wrapper",
+      "Init",
+      "Constructor",
+      "New"
+    ],
+    "correctOptions": [
+      "Create wrapper"
+    ],
+    "time": 60,
+    "details": "AsyncResource constructors."
+  },
+  {
+    "question": "What is asyncResource.runInAsyncScope()?",
+    "options": [
+      "Run in context",
+      "Execute",
+      "Run callback",
+      "Context"
+    ],
+    "correctOptions": [
+      "Run in context"
+    ],
+    "time": 65,
+    "details": "runInAsyncScope runs."
+  },
+  {
+    "question": "What is asyncResource.emitDestroy()?",
+    "options": [
+      "Emit destroy",
+      "Destroy",
+      "Cleanup",
+      "Trigger"
+    ],
+    "correctOptions": [
+      "Emit destroy"
+    ],
+    "time": 60,
+    "details": "emitDestroy emits."
+  },
+  {
+    "question": "What is AsyncLocalStorage?",
+    "options": [
+      "Context storage",
+      "Async context storage",
+      "Store",
+      "TLS"
+    ],
+    "correctOptions": [
+      "Store"
+    ],
+    "time": 60,
+    "details": "AsyncLocalStorage stores."
+  },
+  {
+    "question": "What is asyncLocalStorage.run(store, callback)?",
+    "options": [
+      "Store run",
+      "Execute callback",
+      "Run with context",
+      "Context"
+    ],
+    "correctOptions": [
+      "Store run"
+    ],
+    "time": 65,
+    "details": "run() stores context."
+  },
+  {
+    "question": "What is asyncLocalStorage.getData()?",
+    "options": [
+      "Get store",
+      "Context",
+      "Get value",
+      "Data"
+    ],
+    "correctOptions": [
+      "Get store"
+    ],
+    "time": 60,
+    "details": "getStore() gets data."
+  },
+  {
+    "question": "What is zlib in Node?",
+    "options": [
+      "Compression",
+      "ZIP",
+      "Deflate",
+      "Gzip"
+    ],
+    "correctOptions": [
+      "Compression"
+    ],
+    "time": 45,
+    "details": "zlib handles compression."
+  },
+  {
+    "question": "What is zlib.createGzip()?",
+    "options": [
+      "Create gzip",
+      "Gzip stream",
+      "Compression",
+      "Stream"
+    ],
+    "correctOptions": [
+      "Create gzip"
+    ],
+    "time": 50,
+    "details": "createGzip for gzip."
+  },
+  {
+    "question": "What is zlib.createGunzip()?",
+    "options": [
+      "Create gunzip",
+      "Decompress",
+      "Unzip stream",
+      "Stream"
+    ],
+    "correctOptions": [
+      "Create gunzip"
+    ],
+    "time": 50,
+    "details": "createGunzip for ungzip."
+  },
+  {
+    "question": "What is zlib.createDeflate()?",
+    "options": [
+      "Create deflate",
+      "Zip",
+      "Compression",
+      "Stream"
+    ],
+    "correctOptions": [
+      "Create deflate"
+    ],
+    "time": 50,
+    "details": "createDeflate compresses."
+  },
+  {
+    "question": "What is zlib.createInflate()?",
+    "options": [
+      "Create inflate",
+      "Unzip",
+      "Decompress",
+      "Stream"
+    ],
+    "correctOptions": [
+      "Create inflate"
+    ],
+    "time": 50,
+    "details": "createInflate decompresses."
+  },
+  {
+    "question": "What is zlib.gzip()?",
+    "options": [
+      "Sync gzip",
+      "Callback gzip",
+      "Compress",
+      "Function"
+    ],
+    "correctOptions": [
+      "Sync gzip"
+    ],
+    "time": 50,
+    "details": "gzip() convenience."
+  },
+  {
+    "question": "What is zlib.gunzip()?",
+    "options": [
+      "Sync gunzip",
+      "Callback gunzip",
+      "Decompress",
+      "Function"
+    ],
+    "correctOptions": [
+      "Sync gunzip"
+    ],
+    "time": 55,
+    "details": "gunzip() convenience."
+  },
+  {
+    "question": "What is zlib.deflateRaw()?",
+    "options": [
+      "Raw deflate",
+      "No header",
+      "Compression",
+      "Stream"
+    ],
+    "correctOptions": [
+      "Raw deflate"
+    ],
+    "time": 55,
+    "details": "deflateRaw no header."
+  },
+  {
+    "question": "What is zlib.createBrotliCompress()?",
+    "options": [
+      "Brotli compress",
+      "New compression",
+      "Modern",
+      "Stream"
+    ],
+    "correctOptions": [
+      "Brotli compress"
+    ],
+    "time": 55,
+    "details": "Brotli compression."
+  },
+  {
+    "question": "What is zlib.createBrotliDecompress()?",
+    "options": [
+      "Brotli decompress",
+      "Decompress",
+      "Stream",
+      "New"
+    ],
+    "correctOptions": [
+      "Brotli decompress"
+    ],
+    "time": 55,
+    "details": "Brotli decompress."
+  },
+  {
+    "question": "What is zlib options level?",
+    "options": [
+      "Compression level",
+      "0-9",
+      "Level",
+      "Trade-off"
+    ],
+    "correctOptions": [
+      "0-9"
+    ],
+    "time": 55,
+    "details": "Level controls size/speed."
+  },
+  {
+    "question": "What is zlib options windowBits?",
+    "options": [
+      "Window size",
+      "Lempel-Ziv",
+      "Memory",
+      "Window size"
+    ],
+    "correctOptions": [
+      "Window size"
+    ],
+    "time": 60,
+    "details": "Window size."
+  },
+  {
+    "question": "What is zlib options memLevel?",
+    "options": [
+      "Memory level",
+      "Memory use",
+      "Compression memory",
+      "Level"
+    ],
+    "correctOptions": [
+      "Memory level"
+    ],
+    "time": 60,
+    "details": "Memory level."
+  },
+  {
+    "question": "What is zlib options strategy?",
+    "options": [
+      "Algorithm tuning",
+      "Strategy",
+      "Compression approach",
+      "Filter"
+    ],
+    "correctOptions": [
+      "Algorithm tuning"
+    ],
+    "time": 65,
+    "details": "Strategy tuning."
+  },
+  {
+    "question": "What is crypto in Node?",
+    "options": [
+      "Encryption",
+      "Security",
+      "Hash",
+      "Cipher"
+    ],
+    "correctOptions": [
+      "Encryption"
+    ],
+    "time": 45,
+    "details": "crypto for encryption."
+  },
+  {
+    "question": "What is crypto.createHash()?",
+    "options": [
+      "Create hash",
+      "Hash object",
+      "Algorithm",
+      "Digest"
+    ],
+    "correctOptions": [
+      "Create hash"
+    ],
+    "time": 50,
+    "details": "createHash makes hash."
+  },
+  {
+    "question": "What is hash.update() and digest()?",
+    "options": [
+      "Data and output",
+      "Write and result",
+      "Options",
+      "Finalize"
+    ],
+    "correctOptions": [
+      "Data and output"
+    ],
+    "time": 55,
+    "details": "update adds data, digest outputs."
+  },
+  {
+    "question": "What is crypto.createHmac()?",
+    "options": [
+      "Create HMAC",
+      "Auth hash",
+      "Sign",
+      "Keyed hash"
+    ],
+    "correctOptions": [
+      "Create HMAC"
+    ],
+    "time": 55,
+    "details": "createHmac for keyed."
+  },
+  {
+    "question": "What is crypto.randomBytes()?",
+    "options": [
+      "Random data",
+      "Bytes",
+      "Random",
+      "Secure"
+    ],
+    "correctOptions": [
+      "Bytes"
+    ],
+    "time": 50,
+    "details": "randomBytes generates randoms."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is crypto.scrypt()?",
+    "options": [
+      "Modern KDF",
+      "SCrypt",
+      "KDF",
+      "Slow"
+    ],
+    "correctOptions": [
+      "KDF"
+    ],
+    "time": 60,
+    "details": "scrypt is modern KDF."
+  },
+  {
+    "question": "What is crypto.createCipheriv()?",
+    "options": [
+      "Create cipher",
+      "Encrypt",
+      "IV cipher",
+      "Cipher"
+    ],
+    "correctOptions": [
+      "Cipher"
+    ],
+    "time": 65,
+    "details": "Cipheriv with fixed IV."
+  },
+  {
+    "question": "What is cipher.update()?",
+    "options": [
+      "Encrypt partial",
+      "Data",
+      "Add blocks",
+      "Update"
+    ],
+    "correctOptions": [
+      "Encrypt partial"
+    ],
+    "time": 65,
+    "details": "update adds data."
+  },
+  {
+    "question": "What is cipher.final()?",
+    "options": [
+      "Final block",
+      "Encrypt last",
+      "Complete",
+      "Output"
+    ],
+    "correctOptions": [
+      "Final block"
+    ],
+    "time": 60,
+    "details": "final outputs."
+  },
+  {
+    "question": "What is crypto.createDecipheriv()?",
+    "options": [
+      "Create decrypt",
+      "Decrypt cipher",
+      "IV decipher",
+      "Decipher"
+    ],
+    "correctOptions": [
+      "Create decrypt"
+    ],
+    "time": 60,
+    "details": "Decipheriv for decryption."
+  },
+  {
+    "question": "What is crypto.createSign()?",
+    "options": [
+      "Create signature",
+      "Sign",
+      "Sign message",
+      "Signer"
+    ],
+    "correctOptions": [
+      "Sign"
+    ],
+    "time": 60,
+    "details": "createSign for signing."
+  },
+  {
+    "question": "What is crypto.createVerify()?",
+    "options": [
+      "Verify signature",
+      "Verify",
+      "Verify sign",
+      "Checker"
+    ],
+    "correctOptions": [
+      "Verify"
+    ],
+    "time": 65,
+    "details": "createVerify checks."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is sign.sign(privateKey)?",
+    "options": [
+      "Sign data",
+      "Create signature",
+      "Output",
+      "Returns signature"
+    ],
+    "correctOptions": [
+      "Sign data"
+    ],
+    "time": 60,
+    "details": "sign.sign outputs."
+  },
+  {
+    "question": "What is verify.verify(publicKey, signature)?",
+    "options": [
+      "Verify signature",
+      "Check",
+      "Match",
+      "Return bool"
+    ],
+    "correctOptions": [
+      "Verify signature"
+    ],
+    "time": 60,
+    "details": "verify.verify checks."
+  },
+  {
+    "question": "What is crypto.publicEncrypt()?",
+    "options": [
+      "Encrypt with public",
+      "Public encrypt",
+      "Hybrid encrypt",
+      "Public"
+    ],
+    "correctOptions": [
+      "Encrypt with public"
+    ],
+    "time": 65,
+    "details": "publicEncrypt for transport."
+  },
+  {
+    "question": "What is crypto.privateDecrypt()?",
+    "options": [
+      "Decrypt private",
+      "Decrypt private key",
+      "Private decrypt",
+      "Private"
+    ],
+    "correctOptions": [
+      "Decrypt private"
+    ],
+    "time": 65,
+    "details": "privateDecrypt reverses."
+  },
+  {
+    "question": "What is crypto.privateEncrypt()?",
+    "options": [
+      "Sign with private",
+      "Sign private",
+      "Private sign",
+      "Hybrid"
+    ],
+    "correctOptions": [
+      "Sign with private"
+    ],
+    "time": 65,
+    "details": "privateEncrypt rare."
+  },
+  {
+    "question": "What is crypto.publicDecrypt()?",
+    "options": [
+      "Verify with public",
+      "Verify public",
+      "Public verify",
+      "Hybrid"
+    ],
+    "correctOptions": [
+      "Verify with public"
+    ],
+    "time": 65,
+    "details": "publicDecrypt rare."
+  },
+  {
+    "question": "What is tls in Node?",
+    "options": [
+      "TLS or SSL",
+      "Secure transport",
+      "HTTPS",
+      "Encryption"
+    ],
+    "correctOptions": [
+      "TLS or SSL"
+    ],
+    "time": 45,
+    "details": "TLS provides secure communication."
+  },
+  {
+    "question": "What is tls.connect()?",
+    "options": [
+      "Connect TLS",
+      "Secure connect",
+      "TLS client",
+      "Create connection"
+    ],
+    "correctOptions": [
+      "TLS client"
+    ],
+    "time": 55,
+    "details": "connect opens TLS."
+  },
+  {
+    "question": "What is tls.createServer()?",
+    "options": [
+      "Create server",
+      "TLS server",
+      "Secure server",
+      "Listen"
+    ],
+    "correctOptions": [
+      "TLS server"
+    ],
+    "time": 55,
+    "details": "createServer makes TLS."
+  },
+  {
+    "question": "What is server.listen() TLS?",
+    "options": [
+      "Listen",
+      "Start TLS",
+      "Bind port",
+      "Listen TLS"
+    ],
+    "correctOptions": [
+      "Start TLS"
+    ],
+    "time": 55,
+    "details": "listen for TLS."
+  },
+  {
+    "question": "What is tls.getPeerCertificate()?",
+    "options": [
+      "Get cert",
+      "Certificate",
+      "Client cert",
+      "Peer"
+    ],
+    "correctOptions": [
+      "Get cert"
+    ],
+    "time": 55,
+    "details": "getPeerCertificate returns cert."
+  },
+  {
+    "question": "What is socket.authorized?",
+    "options": [
+      "Check authorized",
+      "Trusted",
+      "Valid",
+      "Socket property"
+    ],
+    "correctOptions": [
+      "Check authorized"
+    ],
+    "time": 60,
+    "details": "authorized if verified."
+  },
+  {
+    "question": "What is socket.getCipher()?",
+    "options": [
+      "Get cipher",
+      "Current",
+      "Cipher",
+      "Info"
+    ],
+    "correctOptions": [
+      "Get cipher"
+    ],
+    "time": 55,
+    "details": "getCipher gives cipher."
+  },
+  {
+    "question": "What is socket.getProtocol()?",
+    "options": [
+      "Get TLS version",
+      "Protocol",
+      "Version",
+      "TLS version"
+    ],
+    "correctOptions": [
+      "TLS version"
+    ],
+    "time": 55,
+    "details": "getProtocol TLS version."
+  },
+  {
+    "question": "What is socket.encrypted?",
+    "options": [
+      "Encrypted flag",
+      "Is TLS",
+      "Secure",
+      "Property"
+    ],
+    "correctOptions": [
+      "Encrypted flag"
+    ],
+    "time": 50,
+    "details": "encrypted is flag."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is tls options.cert?",
+    "options": [
+      "Certificate",
+      "Cert file",
+      "Public cert",
+      "Certificate"
+    ],
+    "correctOptions": [
+      "Public cert"
+    ],
+    "time": 50,
+    "details": "cert is public cert."
+  },
+  {
+    "question": "What is tls options.ca?",
+    "options": [
+      "CA certs",
+      "Root CAs",
+      "Trust chain",
+      "Certificates"
+    ],
+    "correctOptions": [
+      "CA certs"
+    ],
+    "time": 55,
+    "details": "ca is root CAs."
+  },
+  {
+    "question": "What is tls options.rejectUnauthorized?",
+    "options": [
+      "Verify client",
+      "Trust check",
+      "Require verify",
+      "Option"
+    ],
+    "correctOptions": [
+      "Verify client"
+    ],
+    "time": 55,
+    "details": "rejectUnauthorized controls."
+  },
+  {
+    "question": "What is tls options.requestCert?",
+    "options": [
+      "Request client",
+      "Ask for cert",
+      "Option",
+      "Auth"
+    ],
+    "correctOptions": [
+      "Request client"
+    ],
+    "time": 60,
+    "details": "requestCert option."
+  },
+  {
+    "question": "What is tls options.NPNProtocols?",
+    "options": [
+      "NPN protocols",
+      "Next protocol",
+      "Negotiation",
+      "Protocols"
+    ],
+    "correctOptions": [
+      "Negotiation"
+    ],
+    "time": 60,
+    "details": "NPN protocols."
+  },
+  {
+    "question": "What is tls options.ALPNProtocols?",
+    "options": [
+      "ALPN protocols",
+      "Protocols",
+      "Negotiation",
+      "Protocols"
+    ],
+    "correctOptions": [
+      "Negotiation"
+    ],
+    "time": 65,
+    "details": "ALPN protocols."
+  },
+  {
+    "question": "What is tls check for peer cert?",
+    "options": [
+      "Check cert",
+      "Verify",
+      "Secure",
+      "Get cert"
+    ],
+    "correctOptions": [
+      "Check cert"
+    ],
+    "time": 70,
+    "details": "Check if valid."
+  },
+  {
+    "question": "What is tls client cert auth?",
+    "options": [
+      "Mutual TLS",
+      "mTLS",
+      "Two-way auth",
+      "Client auth"
+    ],
+    "correctOptions": [
+      "Mutual TLS"
+    ],
+    "time": 70,
+    "details": "Two-way TLS."
+  },
+  {
+    "question": "What is Express? (Level 5 #176)",
+    "options": [
+      "Framework",
+      "Middleware",
+      "Routing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Framework",
+      "Middleware",
+      "Routing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Express? explanation."
+  },
+  {
+    "question": "What is npm? (Level 5 #177)",
+    "options": [
+      "Package manager",
+      "Registry",
+      "Scripts",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Package manager",
+      "Registry",
+      "Scripts",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is npm? explanation."
+  },
+  {
+    "question": "What is middleware? (Level 5 #178)",
+    "options": [
+      "Request",
+      "Response",
+      "Next",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request",
+      "Response",
+      "Next",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is callback? (Level 5 #179)",
+    "options": [
+      "Asynchronous",
+      "Error-first",
+      "Node.js pattern",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Asynchronous",
+      "Error-first",
+      "Node.js pattern",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is callback? explanation."
+  },
+  {
+    "question": "What is streams? (Level 5 #180)",
+    "options": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is streams? explanation."
+  },
+  {
+    "question": "What is Buffer? (Level 5 #181)",
+    "options": [
+      "Binary data",
+      "Encoding",
+      "Memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Binary data",
+      "Encoding",
+      "Memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Buffer? explanation."
+  },
+  {
+    "question": "What is EventEmitter? (Level 5 #182)",
+    "options": [
+      "Events",
+      "Listeners",
+      "Emitters",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Events",
+      "Listeners",
+      "Emitters",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is EventEmitter? explanation."
+  },
+  {
+    "question": "What is require? (Level 5 #183)",
+    "options": [
+      "Modules",
+      "Caching",
+      "Resolution",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Modules",
+      "Caching",
+      "Resolution",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is require? explanation."
+  },
+  {
+    "question": "What is process? (Level 5 #184)",
+    "options": [
+      "Env",
+      "Argv",
+      "Exit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Env",
+      "Argv",
+      "Exit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is process? explanation."
+  },
+  {
+    "question": "What is module? (Level 5 #185)",
+    "options": [
+      "Export",
+      "Import",
+      "Scope",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Export",
+      "Import",
+      "Scope",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is module? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  }
 ]

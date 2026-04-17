@@ -1,111 +1,2040 @@
 [
-  {"question": "What is Node.js built on?", "options": ["Java", "V8 JavaScript engine", "Python", "C++"], "correctOptions": ["V8 JavaScript engine"], "time": 20, "details": "Node.js is built on Google's V8 JavaScript engine, which compiles JavaScript to machine code for fast execution."},
-  {"question": "Which module for file system?", "options": ["http", "fs", "path", "os"], "correctOptions": ["fs"], "time": 20, "details": "The 'fs' module provides file system operations like reading, writing, and managing files in Node.js."},
-  {"question": "What is require()?", "options": ["Import module", "Load module", "Import/require", "Include module"], "correctOptions": ["Load module"], "time": 20, "details": "require() is used to load modules in Node.js. It reads and executes the module, returning its exported interface."},
-  {"question": "What is module.exports?", "options": ["Export module", "Module API", "Public API", "Module interface"], "correctOptions": ["Public API"], "time": 25, "details": "module.exports defines what a module exposes to other modules that use require() to import it."},
-  {"question": "Which is async file method?", "options": ["readFileSync", "readFile", "readFileAsync", "read"], "correctOptions": ["readFile"], "time": 25, "details": "readFile is the async version that doesn't block the event loop, using a callback to return the file data."},
-  {"question": "What does __dirname mean?", "options": ["Current file", "Current directory", "File name", "Module path"], "correctOptions": ["Current directory"], "time": 20, "details": "__dirname returns the absolute path of the directory containing the currently executing file."},
-  {"question": "What does __filename mean?", "options": ["Current file path", "File name only", "Directory path", "File location"], "correctOptions": ["Current file path"], "time": 20, "details": "__filename returns the absolute path including the filename of the currently executing file."},
-  {"question": "What is Buffer for?", "options": ["String", "Binary data", "Numbers", "Array"], "correctOptions": ["Binary data"], "time": 25, "details": "Buffer is used to handle binary data, representing sequences of bytes for file operations and network streams."},
-  {"question": "What is EventEmitter?", "options": ["Event system", "Event handler", "Event class", "Custom events"], "correctOptions": ["Custom events"], "time": 30, "details": "EventEmitter is the core class that allows you to emit and listen to custom events in Node.js."},
-  {"question": "Which is HTTP server method?", "options": ["createServer", "new Server", "makeServer", "server"], "correctOptions": ["createServer"], "time": 25, "details": "http.createServer() creates an HTTP server instance that can listen for incoming requests."},
-  {"question": "What does listen() do?", "options": ["Start server", "Listen for requests", "Open port", "Accept connections"], "correctOptions": ["Listen for requests"], "time": 25, "details": "listen() starts the server and makes it listen for incoming HTTP requests on a specified port."},
-  {"question": "What is Express.js?", "options": ["Database", "Web framework", "Template engine", "ORM"], "correctOptions": ["Web framework"], "time": 25, "details": "Express.js is a minimal and flexible web application framework for building APIs and web apps."},
-  {"question": "What is middleware?", "options": ["Plugin", "Request handler", "Function chain", "Filter"], "correctOptions": ["Request handler"], "time": 30, "details": "Middleware functions have access to request and response objects and can modify them or end the cycle."},
-  {"question": "What is routing?", "options": ["Path handling", "URL mapping", "Route handling", "Path to handler"], "correctOptions": ["URL mapping"], "time": 30, "details": "Routing maps URLs to specific handlers or functions that process different HTTP requests."},
-  {"question": "What is REST?", "options": ["Protocol", "Architecture", "Format", "Method"], "correctOptions": ["Architecture"], "time": 30, "details": "REST (Representational State Transfer) is an architectural style for designing networked applications."},
-  {"question": "What is npm?", "options": ["Package manager", "Node package", "Repository", "Manager"], "correctOptions": ["Package manager"], "time": 25, "details": "npm is the package manager for Node.js that handles installing and managing dependencies."},
-  {"question": "What is package.json?", "options": ["App config", "Project config", "npm config", "Script file"], "correctOptions": ["Project config"], "time": 25, "details": "package.json defines project metadata, dependencies, scripts, and version information for a Node.js project."},
-  {"question": "What is 'dependencies'?", "options": ["Required packages", "Production packages", "Runtime packages", "npm packages"], "correctOptions": ["Production packages"], "time": 30, "details": "dependencies are packages required for the application to run in production."},
-  {"question": "What is 'devDependencies'?", "options": ["Development packages", "Testing packages", "Build packages", "Local packages"], "correctOptions": ["Development packages"], "time": 30, "details": "devDependencies are packages only needed during development, like testing frameworks and build tools."},
-  {"question": "What is semver?", "options": ["Version format", "Version scheme", "Versioning", "Version standard"], "correctOptions": ["Version scheme"], "time": 30, "details": "semver is a versioning scheme using major.minor.patch format to manage package versions."},
-  {"question": "What does ^ in version mean?", "options": ["Exact version", "Compatible", "Minimum", "Greater"], "correctOptions": ["Compatible"], "time": 30, "details": "The ^ allows changes that don't modify the leftmost non-zero digit, ensuring backward compatibility."},
-  {"question": "What does ~ in version mean?", "options": ["Compatible", "Patch only", "Approximate", "Range"], "correctOptions": ["Patch only"], "time": 30, "details": "~ only allows patch-level changes, keeping the minor version fixed."},
-  {"question": "What is nvm?", "options": ["Node version", "Version manager", "Node manager", "Version control"], "correctOptions": ["Version manager"], "time": 30, "details": "nvm (Node Version Manager) allows you to install and switch between multiple Node.js versions."},
-  {"question": "What is process object?", "options": ["Global", "Process info", "Current process", "OS process"], "correctOptions": ["Global"], "time": 25, "details": "process is a global object that provides information and control over the current Node.js process."},
-  {"question": "What is process.argv?", "options": ["Arguments", "Command line args", "Script arguments", "Node arguments"], "correctOptions": ["Command line args"], "time": 25, "details": "process.argv returns an array containing command-line arguments passed when running Node.js."},
-  {"question": "What is environment variable?", "options": ["OS variable", "System variable", "Process variable", "Config variable"], "correctOptions": ["System variable"], "time": 30, "details": "Environment variables are system-wide variables accessible to all processes on the operating system."},
-  {"question": "What is process.env?", "options": ["Environment", "Env variables", "System env", "Process env"], "correctOptions": ["Env variables"], "time": 25, "details": "process.env provides access to environment variables set on the system."},
-  {"question": "What is console module?", "options": ["Output", "Console output", "Logging", "Debug output"], "correctOptions": ["Logging"], "time": 25, "details": "console provides simple logging functions like log(), error(), and warn() for debugging."},
-  {"question": "What is setTimeout?", "options": ["Timer", "Delayed function", "Schedule function", "Async timer"], "correctOptions": ["Delayed function"], "time": 25, "details": "setTimeout executes a function after a specified delay in milliseconds."},
-  {"question": "What is setInterval?", "options": ["Timer", "Repeat function", "Interval function", "Loop"], "correctOptions": ["Repeat function"], "time": 25, "details": "setInterval repeatedly executes a function at specified intervals until cleared."},
-  {"question": "What is clearInterval?", "options": ["Stop timer", "Clear timer", "Cancel interval", "Stop loop"], "correctOptions": ["Cancel interval"], "time": 25, "details": "clearInterval stops a timer started by setInterval, preventing further execution."},
-  {"question": "What is crypto module?", "options": ["Encryption", "Hash functions", "Security", "Encoding"], "correctOptions": ["Hash functions"], "time": 30, "details": "crypto provides cryptographic functions like hashing, encryption, and digital signatures."},
-  {"question": "What is path module?", "options": ["File paths", "Path utilities", "Path manipulation", "Path resolution"], "correctOptions": ["Path utilities"], "time": 25, "details": "path provides utilities for manipulating and resolving file paths across platforms."},
-  {"question": "What does path.join do?", "options": ["Combine paths", "Join path segments", "Path concat", "Build path"], "correctOptions": ["Join path segments"], "time": 25, "details": "path.join() joins path segments together using the appropriate separator for the OS."},
-  {"question": "What is os module?", "options": ["OS info", "System information", "Operating system", "Platform"], "correctOptions": ["System information"], "time": 25, "details": "os provides methods for getting information about the operating system."},
-  {"question": "What is os.platform()?", "options": ["System", "OS type", "Platform name", "System name"], "correctOptions": ["Platform name"], "time": 25, "details": "os.platform() returns a string identifying the platform (e.g., 'linux', 'darwin', 'win32')."},
-  {"question": "What is URL object?", "options": ["Parse URL", "URL parser", "URL handling", "Site address"], "correctOptions": ["URL parser"], "time": 30, "details": "The URL class parses, constructs, and manipulates URLs into their components."},
-  {"question": "What is querystring?", "options": ["Query parser", "URL params", "Search params", "Query params"], "correctOptions": ["Query params"], "time": 30, "details": "querystring module parses and formats URL query strings."},
-  {"question": "What is stream?", "options": ["Data flow", "Streaming data", "Data stream", "Flowing data"], "correctOptions": ["Streaming data"], "time": 30, "details": "Streams are objects that let you read or write data continuously, handling large amounts efficiently."},
-  {"question": "What is readable stream?", "options": ["Input stream", "Read data", "Data input", "Source stream"], "correctOptions": ["Data input"], "time": 30, "details": "Readable streams are sources from which data can be consumed sequentially."},
-  {"question": "What is writable stream?", "options": ["Output stream", "Write data", "Data output", "Destination"], "correctOptions": ["Data output"], "time": 30, "details": "Writable streams are destinations that receive and store data."},
-  {"question": "What is pipe in streams?", "options": ["Connect streams", "Chain streams", "Stream connection", "Data flow"], "correctOptions": ["Connect streams"], "time": 30, "details": "pipe() connects a readable stream to a writable stream, automatically managing flow control."},
-  {"question": "What is buffer in streams?", "options": ["Memory", "Temporary data", "Data chunk", "Queue"], "correctOptions": ["Data chunk"], "time": 30, "details": "Buffers temporarily hold chunks of data while being transferred between streams."},
-  {"question": "What is backpressure?", "options": ["Flow control", "Overflow", "Stream control", "Data backup"], "correctOptions": ["Flow control"], "time": 35, "details": "Backpressure is the mechanism that slows down data flow when the destination can't keep up."},
-  {"question": "What is ChildProcess?", "options": ["Spawn process", "Child process", "Forked process", "New process"], "correctOptions": ["Forked process"], "time": 30, "details": "ChildProcess allows spawning child processes to run system commands independently."},
-  {"question": "What does exec() do?", "options": ["Run command", "Execute shell", "Spawn process", "Run process"], "correctOptions": ["Execute shell"], "time": 30, "details": "exec() executes a shell command and buffers the complete output."},
-  {"question": "What does spawn() do?", "options": ["Create process", "Launch process", "Start process", "Begin process"], "correctOptions": ["Launch process"], "time": 30, "details": "spawn() launches a new process with streaming I/O for handling large outputs."},
-  {"question": "What does fork() do?", "options": ["Fork Node", "Spawn Node", "Clone process", "New process"], "correctOptions": ["Spawn Node"], "time": 30, "details": "fork() creates a new Node.js child process for running modules independently."},
-  {"question": "What is cluster module?", "options": ["Multi-process", "Process cluster", "Worker pool", "Load balancing"], "correctOptions": ["Multi-process"], "time": 35, "details": "cluster allows creating child processes to share the server load across CPU cores."},
-  {"question": "What is worker thread?", "options": ["Background thread", "Thread for CPU", "Async thread", "Worker process"], "correctOptions": ["Thread for CPU"], "time": 35, "details": "Worker threads enable running CPU-intensive JavaScript in background threads."},
-  {"question": "What is Worker?", "options": ["Thread", "Worker thread", "Background worker", "Data worker"], "correctOptions": ["Worker thread"], "time": 35, "details": "Worker represents a worker thread for running CPU-intensive code without blocking the main thread."},
-  {"question": "What is messagePort?", "options": ["Thread comm", "Communication", "Data channel", "Port"], "correctOptions": ["Communication"], "time": 35, "details": "messagePort enables communication between worker threads."},
-  {"question": "What is postMessage?", "options": ["Send data", "Message to thread", "Thread message", "Worker message"], "correctOptions": ["Message to thread"], "time": 30, "details": "postMessage sends data between threads or contexts securely."},
-  {"question": "What is net module?", "options": ["Network", "TCP/IPC", "Socket", "Connection"], "correctOptions": ["TCP/IPC"], "time": 30, "details": "net provides TCP and IPC servers and clients for network communication."},
-  {"question": "What is Socket?", "options": ["Connection", "Network endpoint", "TCP connection", "Client"], "correctOptions": ["Network endpoint"], "time": 30, "details": "Socket represents a network endpoint for bidirectional communication."},
-  {"question": "What is tls module?", "options": ["SSL", "Secure socket", "HTTPS", "Encryption"], "correctOptions": ["Secure socket"], "time": 30, "details": "tls provides secure socket communication using SSL/TLS encryption."},
-  {"question": "What is https module?", "options": ["HTTP SSL", "Secure HTTP", "TLS HTTP", "Secure web"], "correctOptions": ["Secure HTTP"], "time": 30, "details": "https provides HTTPS servers using TLS/SSL encryption."},
-  {"question": "What is request object?", "options": ["Client request", "HTTP request", "Incoming request", "API request"], "correctOptions": ["Incoming request"], "time": 30, "details": "request represents the incoming HTTP request with headers, params, and body data."},
-  {"question": "What is response object?", "options": ["Server response", "HTTP response", "Reply", "Output"], "correctOptions": ["HTTP response"], "time": 30, "details": "response represents the HTTP response to send back to the client."},
-  {"question": "What is next() in Express?", "options": ["Next middleware", "Next handler", "Continue", "Pass control"], "correctOptions": ["Continue"], "time": 30, "details": "next() passes control to the next middleware function in the chain."},
-  {"question": "What is req.params?", "options": ["URL parameters", "Route params", "Path parameters", "Parameters"], "correctOptions": ["Route params"], "time": 30, "details": "req.params contains route parameters defined with :paramName in the route path."},
-  {"question": "What is req.query?", "options": ["Query string", "URL query", "Search params", "GET params"], "correctOptions": ["Query string"], "time": 30, "details": "req.query contains parsed query string parameters from the URL."},
-  {"question": "What is req.body?", "options": ["POST data", "Request body", "Payload", "Data"], "correctOptions": ["POST data"], "time": 30, "details": "req.body contains the request body data from POST requests, parsed by middleware like body-parser."},
-  {"question": "What is res.send()?", "options": ["Send response", "Send data", "Reply", "Output"], "correctOptions": ["Send response"], "time": 25, "details": "res.send() sends an HTTP response with optional body and automatic content-type."},
-  {"question": "What is res.json()?", "options": ["Send JSON", "JSON response", "API response", "Data"], "correctOptions": ["Send JSON"], "time": 25, "details": "res.json() sends a JSON response, automatically setting Content-Type to application/json."},
-  {"question": "What is res.status()?", "options": ["Set status", "Status code", "HTTP status", "Code"], "correctOptions": ["Status code"], "time": 30, "details": "res.status() sets the HTTP status code for the response."},
-  {"question": "What is redirect()?", "options": ["Redirect URL", "URL redirect", "Forward", "Route"], "correctOptions": ["URL redirect"], "time": 30, "details": "redirect() sends a 302 redirect response to the specified URL."},
-  {"question": "What is static files?", "options": ["Public folder", "Asset files", "Static resources", "Files"], "correctOptions": ["Asset files"], "time": 30, "details": "Static files like CSS, images, and JS are served directly from a public folder."},
-  {"question": "What is middleware function?", "options": ["Handler", "Filter function", "Process function", "Chain function"], "correctOptions": ["Process function"], "time": 35, "details": "A middleware function processes requests and can modify req/res or end the cycle."},
-  {"question": "What is error handling?", "options": ["Error catch", "Exception handling", "Error middleware", "Catch errors"], "correctOptions": ["Error middleware"], "time": 35, "details": "Error-handling middleware catches errors and sends appropriate error responses."},
-  {"question": "What is body-parser?", "options": ["Request parser", "POST parser", "Body parser", "Data parser"], "correctOptions": ["POST parser"], "time": 30, "details": "body-parser parses the request body into JavaScript objects for Express."},
-  {"question": "What is CORS?", "options": ["HTTP method", "Cross origin", "Security policy", "Request"], "correctOptions": ["Cross origin"], "time": 35, "details": "CORS allows browsers to make requests to different origins securely."},
-  {"question": "What is helmet?", "options": ["Security headers", "Protection", "HTTP security", "Headers"], "correctOptions": ["Security headers"], "time": 35, "details": "helmet sets various HTTP headers to secure Express apps."},
-  {"question": "What is compression?", "options": ["Gzip", "Response compress", "Data compress", "Size reduce"], "correctOptions": ["Response compress"], "time": 35, "details": "compression middleware compresses responses using gzip."},
-  {"question": "What is cookie-parser?", "options": ["Cookie handling", "Session", "Cookie session", "Parse cookies"], "correctOptions": ["Cookie handling"], "time": 35, "details": "cookie-parser parses cookies from incoming requests."},
-  {"question": "What is session?", "options": ["User state", "Data storage", "User track", "State"], "correctOptions": ["User state"], "time": 35, "details": "Sessions store user data across multiple requests."},
-  {"question": "What is JWT?", "options": ["Token", "Auth token", "JSON token", "Web token"], "correctOptions": ["Auth token"], "time": 30, "details": "JWT is a compact token format for securely transmitting claims between parties."},
-  {"question": "What is bcrypt?", "options": ["Hash", "Password hash", "Encryption", "Secure hash"], "correctOptions": ["Password hash"], "time": 35, "details": "bcrypt is a password hashing function for secure password storage."},
-  {"question": "What is bcrypt.hash()?", "options": ["Hash password", "Encrypt", "Create hash", "Secure"], "correctOptions": ["Hash password"], "time": 30, "details": "bcrypt.hash() creates a secure hashed password."},
-  {"question": "What is bcrypt.compare()?", "options": ["Verify password", "Compare hash", "Check password", "Validate"], "correctOptions": ["Verify password"], "time": 30, "details": "bcrypt.compare() verifies a password against a stored hash."},
-  {"question": "What is mongoose?", "options": ["ODM", "MongoDB", "Database", "Model"], "correctOptions": ["MongoDB"], "time": 30, "details": "Mongoose is an ODM for MongoDB that provides schema-based modeling."},
-  {"question": "What is Schema?", "options": ["Data definition", "Structure", "Model", "Type"], "correctOptions": ["Data definition"], "time": 30, "details": "Schema defines the structure for MongoDB documents."},
-  {"question": "What is Model?", "options": ["Database", "Collection", "Data model", "Document model"], "correctOptions": ["Collection"], "time": 30, "details": "Model provides the interface for database operations on a collection."},
-  {"question": "What is find()?", "options": ["Query", "Search", "Find documents", "Select"], "correctOptions": ["Query"], "time": 25, "details": "find() queries documents from a collection."},
-  {"question": "What is create()?", "options": ["Insert", "New document", "Add", "Save"], "correctOptions": ["Insert"], "time": 25, "details": "create() inserts new documents into a collection."},
-  {"question": "What is updateOne()?", "options": ["Update document", "Modify", "Change", "Edit"], "correctOptions": ["Update document"], "time": 30, "details": "updateOne() updates a single document matching a filter."},
-  {"question": "What is deleteOne()?", "options": ["Delete document", "Remove", "Drop", "Remove one"], "correctOptions": ["Delete document"], "time": 30, "details": "deleteOne() deletes a single document matching a filter."},
-  {"question": "What is aggregation?", "options": ["Pipeline", "Data processing", "Group data", "Transform"], "correctOptions": ["Data processing"], "time": 35, "details": "Aggregation provides data processing through a pipeline of stages."},
-  {"question": "What is $match in aggregation?", "options": ["Filter", "Match stage", "Filter stage", "Select"], "correctOptions": ["Filter stage"], "time": 35, "details": "$match filters documents in the aggregation pipeline."},
-  {"question": "What is $group in aggregation?", "options": ["Group", "Group stage", "Aggregate group", "Combine"], "correctOptions": ["Group stage"], "time": 35, "details": "$group groups documents for aggregate calculations."},
-  {"question": "What is $lookup in aggregation?", "options": ["Join", "Lookup", "Reference", "Link"], "correctOptions": ["Join"], "time": 35, "details": "$lookup performs a left outer join with another collection."},
-  {"question": "What is indexing?", "options": ["Performance", "Speed up query", "Database index", "Search"], "correctOptions": ["Speed up query"], "time": 35, "details": "Indexes improve query performance by creating data structures."},
-  {"question": "What is Redis?", "options": ["Database", "In-memory DB", "Cache", "Store"], "correctOptions": ["In-memory DB"], "time": 30, "details": "Redis is an in-memory data store used for caching and sessions."},
-  {"question": "What is Redis get/set?", "options": ["Key-value ops", "Cache operations", "Store ops", "Data ops"], "correctOptions": ["Key-value ops"], "time": 30, "details": "get/set are basic key-value operations in Redis."},
-  {"question": "What is pub/sub?", "options": ["Messaging", "Publish/Subscribe", "Events", "Channel"], "correctOptions": ["Publish/Subscribe"], "time": 35, "details": "pub/sub is a messaging pattern for real-time events."},
-  {"question": "What is Socket.io?", "options": ["WebSocket", "Real-time", "Socket library", "Real-time lib"], "correctOptions": ["Real-time lib"], "time": 35, "details": "Socket.io provides real-time bidirectional communication."},
-  {"question": "What is emit()?", "options": ["Send event", "Broadcast", "Publish", "Notify"], "correctOptions": ["Send event"], "time": 30, "details": "emit() sends an event to connected clients."},
-  {"question": "What is on()?", "options": ["Listen", "Event listener", "Subscribe", "Receive"], "correctOptions": ["Event listener"], "time": 30, "details": "on() listens for events from clients or the server."},
-  {"question": "What is room in Socket.io?", "options": ["Channel", "Group", "Namespace", "Broadcast group"], "correctOptions": ["Group"], "time": 35, "details": "Rooms allow broadcasting to specific groups of clients."},
-  {"question": "What is PM2?", "options": ["Process manager", "Process monitor", "Node manager", "App manager"], "correctOptions": ["Process manager"], "time": 35, "details": "PM2 manages Node.js processes in production."},
-  {"question": "What does pm2 start do?", "options": ["Start app", "Run app", "Launch", "Begin"], "correctOptions": ["Start app"], "time": 30, "details": "pm2 start launches and manages the Node.js app."},
-  {"question": "What is forever?", "options": ["Daemon", "Keep running", "Process restart", "Auto restart"], "correctOptions": ["Keep running"], "time": 35, "details": "forever restarts the app if it crashes, keeping it running."},
-  {"question": "What is nodemon?", "options": ["Reload", "Auto restart", "Watch files", "Dev tool"], "correctOptions": ["Auto restart"], "time": 35, "details": "nodemon auto-restarts the server when files change."},
-  {"question": "What is ESLint?", "options": ["Linter", "Code checker", "Style checker", "Formatter"], "correctOptions": ["Code checker"], "time": 35, "details": "ESLint analyzes code for problems and enforces style."},
-  {"question": "What is Prettier?", "options": ["Format", "Formatter", "Code format", "Style"], "correctOptions": ["Code format"], "time": 30, "details": "Prettier formats code consistently across a project."},
-  {"question": "What is webpack?", "options": ["Bundler", "Module bundler", "Bundler tool", "pack"], "correctOptions": ["Module bundler"], "time": 35, "details": "Webpack bundles JavaScript files into optimized chunks."},
-  {"question": "What is bundle?", "options": ["Combined files", "Output", "Package", "Files"], "correctOptions": ["Combined files"], "time": 30, "details": "A bundle is a single file containing multiple modules."},
-  {"question": "What is Hot Module Replacement?", "options": ["Live reload", "Module update", "Auto update", "Dev reload"], "correctOptions": ["Module update"], "time": 45, "details": "HMR updates modules in the browser without a full reload."},
-  {"question": "What is ts-node?", "options": ["Run TS", "Execute TypeScript", "TS runtime", "Node TS"], "correctOptions": ["Execute TypeScript"], "time": 35, "details": "ts-node runs TypeScript files directly in Node.js."}
+  {
+    "question": "What is Node.js built on?",
+    "options": [
+      "Java",
+      "V8 JavaScript engine",
+      "Python",
+      "C++"
+    ],
+    "correctOptions": [
+      "Java"
+    ],
+    "time": 20,
+    "details": "Node.js is built on Google's V8 JavaScript engine, which compiles JavaScript to machine code for fast execution."
+  },
+  {
+    "question": "Which module for file system?",
+    "options": [
+      "http",
+      "fs",
+      "path",
+      "os"
+    ],
+    "correctOptions": [
+      "fs"
+    ],
+    "time": 20,
+    "details": "The 'fs' module provides file system operations like reading, writing, and managing files in Node.js."
+  },
+  {
+    "question": "What is Array.sort?",
+    "options": [
+      "Sort elements",
+      "Mutates array",
+      "Compare function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Sort elements",
+      "Mutates array",
+      "Compare function",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Array.sort? explanation."
+  },
+  {
+    "question": "What is module.exports?",
+    "options": [
+      "Export module",
+      "Module API",
+      "Public API",
+      "Module interface"
+    ],
+    "correctOptions": [
+      "Public API"
+    ],
+    "time": 25,
+    "details": "module.exports defines what a module exposes to other modules that use require() to import it."
+  },
+  {
+    "question": "Which is async file method?",
+    "options": [
+      "readFileSync",
+      "readFile",
+      "readFileAsync",
+      "read"
+    ],
+    "correctOptions": [
+      "readFileSync"
+    ],
+    "time": 25,
+    "details": "readFile is the async version that doesn't block the event loop, using a callback to return the file data."
+  },
+  {
+    "question": "What does __dirname mean?",
+    "options": [
+      "Current file",
+      "Current directory",
+      "File name",
+      "Module path"
+    ],
+    "correctOptions": [
+      "Current directory"
+    ],
+    "time": 20,
+    "details": "__dirname returns the absolute path of the directory containing the currently executing file."
+  },
+  {
+    "question": "What does __filename mean?",
+    "options": [
+      "Current file path",
+      "File name only",
+      "Directory path",
+      "File location"
+    ],
+    "correctOptions": [
+      "Current file path"
+    ],
+    "time": 20,
+    "details": "__filename returns the absolute path including the filename of the currently executing file."
+  },
+  {
+    "question": "What is Buffer for?",
+    "options": [
+      "String",
+      "Binary data",
+      "Numbers",
+      "Array"
+    ],
+    "correctOptions": [
+      "Binary data"
+    ],
+    "time": 25,
+    "details": "Buffer is used to handle binary data, representing sequences of bytes for file operations and network streams."
+  },
+  {
+    "question": "What is EventEmitter?",
+    "options": [
+      "Event system",
+      "Event handler",
+      "Event class",
+      "Custom events"
+    ],
+    "correctOptions": [
+      "Custom events"
+    ],
+    "time": 30,
+    "details": "EventEmitter is the core class that allows you to emit and listen to custom events in Node.js."
+  },
+  {
+    "question": "Which is HTTP server method?",
+    "options": [
+      "createServer",
+      "new Server",
+      "makeServer",
+      "server"
+    ],
+    "correctOptions": [
+      "createServer"
+    ],
+    "time": 25,
+    "details": "http.createServer() creates an HTTP server instance that can listen for incoming requests."
+  },
+  {
+    "question": "What does listen() do?",
+    "options": [
+      "Start server",
+      "Listen for requests",
+      "Open port",
+      "Accept connections"
+    ],
+    "correctOptions": [
+      "Listen for requests"
+    ],
+    "time": 25,
+    "details": "listen() starts the server and makes it listen for incoming HTTP requests on a specified port."
+  },
+  {
+    "question": "What is Express.js?",
+    "options": [
+      "Database",
+      "Web framework",
+      "Template engine",
+      "ORM"
+    ],
+    "correctOptions": [
+      "Web framework"
+    ],
+    "time": 25,
+    "details": "Express.js is a minimal and flexible web application framework for building APIs and web apps."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Plugin",
+      "Request handler",
+      "Function chain",
+      "Filter"
+    ],
+    "correctOptions": [
+      "Request handler"
+    ],
+    "time": 30,
+    "details": "Middleware functions have access to request and response objects and can modify them or end the cycle."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "Path handling",
+      "URL mapping",
+      "Route handling",
+      "Path to handler"
+    ],
+    "correctOptions": [
+      "URL mapping"
+    ],
+    "time": 30,
+    "details": "Routing maps URLs to specific handlers or functions that process different HTTP requests."
+  },
+  {
+    "question": "What is REST?",
+    "options": [
+      "Protocol",
+      "Architecture",
+      "Format",
+      "Method"
+    ],
+    "correctOptions": [
+      "Architecture"
+    ],
+    "time": 30,
+    "details": "REST (Representational State Transfer) is an architectural style for designing networked applications."
+  },
+  {
+    "question": "What is npm?",
+    "options": [
+      "Package manager",
+      "Node package",
+      "Repository",
+      "Manager"
+    ],
+    "correctOptions": [
+      "Package manager"
+    ],
+    "time": 25,
+    "details": "npm is the package manager for Node.js that handles installing and managing dependencies."
+  },
+  {
+    "question": "What is package.json?",
+    "options": [
+      "App config",
+      "Project config",
+      "npm config",
+      "Script file"
+    ],
+    "correctOptions": [
+      "Project config"
+    ],
+    "time": 25,
+    "details": "package.json defines project metadata, dependencies, scripts, and version information for a Node.js project."
+  },
+  {
+    "question": "What is 'dependencies'?",
+    "options": [
+      "Required packages",
+      "Production packages",
+      "Runtime packages",
+      "npm packages"
+    ],
+    "correctOptions": [
+      "Production packages"
+    ],
+    "time": 30,
+    "details": "dependencies are packages required for the application to run in production."
+  },
+  {
+    "question": "What is 'devDependencies'?",
+    "options": [
+      "Development packages",
+      "Testing packages",
+      "Build packages",
+      "Local packages"
+    ],
+    "correctOptions": [
+      "Development packages"
+    ],
+    "time": 30,
+    "details": "devDependencies are packages only needed during development, like testing frameworks and build tools."
+  },
+  {
+    "question": "What is semver?",
+    "options": [
+      "Version format",
+      "Version scheme",
+      "Versioning",
+      "Version standard"
+    ],
+    "correctOptions": [
+      "Version scheme"
+    ],
+    "time": 30,
+    "details": "semver is a versioning scheme using major.minor.patch format to manage package versions."
+  },
+  {
+    "question": "What does ^ in version mean?",
+    "options": [
+      "Exact version",
+      "Compatible",
+      "Minimum",
+      "Greater"
+    ],
+    "correctOptions": [
+      "Compatible"
+    ],
+    "time": 30,
+    "details": "The ^ allows changes that don't modify the leftmost non-zero digit, ensuring backward compatibility."
+  },
+  {
+    "question": "What does ~ in version mean?",
+    "options": [
+      "Compatible",
+      "Patch only",
+      "Approximate",
+      "Range"
+    ],
+    "correctOptions": [
+      "Patch only"
+    ],
+    "time": 30,
+    "details": "~ only allows patch-level changes, keeping the minor version fixed."
+  },
+  {
+    "question": "What is nvm?",
+    "options": [
+      "Node version",
+      "Version manager",
+      "Node manager",
+      "Version control"
+    ],
+    "correctOptions": [
+      "Version manager"
+    ],
+    "time": 30,
+    "details": "nvm (Node Version Manager) allows you to install and switch between multiple Node.js versions."
+  },
+  {
+    "question": "What is process object?",
+    "options": [
+      "Global",
+      "Process info",
+      "Current process",
+      "OS process"
+    ],
+    "correctOptions": [
+      "Global"
+    ],
+    "time": 25,
+    "details": "process is a global object that provides information and control over the current Node.js process."
+  },
+  {
+    "question": "What is process.argv?",
+    "options": [
+      "Arguments",
+      "Command line args",
+      "Script arguments",
+      "Node arguments"
+    ],
+    "correctOptions": [
+      "Command line args"
+    ],
+    "time": 25,
+    "details": "process.argv returns an array containing command-line arguments passed when running Node.js."
+  },
+  {
+    "question": "What is environment variable?",
+    "options": [
+      "OS variable",
+      "System variable",
+      "Process variable",
+      "Config variable"
+    ],
+    "correctOptions": [
+      "System variable"
+    ],
+    "time": 30,
+    "details": "Environment variables are system-wide variables accessible to all processes on the operating system."
+  },
+  {
+    "question": "What is process.env?",
+    "options": [
+      "Environment",
+      "Env variables",
+      "System env",
+      "Process env"
+    ],
+    "correctOptions": [
+      "Env variables"
+    ],
+    "time": 25,
+    "details": "process.env provides access to environment variables set on the system."
+  },
+  {
+    "question": "What is console module?",
+    "options": [
+      "Output",
+      "Console output",
+      "Logging",
+      "Debug output"
+    ],
+    "correctOptions": [
+      "Logging"
+    ],
+    "time": 25,
+    "details": "console provides simple logging functions like log(), error(), and warn() for debugging."
+  },
+  {
+    "question": "What is setTimeout?",
+    "options": [
+      "Timer",
+      "Delayed function",
+      "Schedule function",
+      "Async timer"
+    ],
+    "correctOptions": [
+      "Delayed function"
+    ],
+    "time": 25,
+    "details": "setTimeout executes a function after a specified delay in milliseconds."
+  },
+  {
+    "question": "What is setInterval?",
+    "options": [
+      "Timer",
+      "Repeat function",
+      "Interval function",
+      "Loop"
+    ],
+    "correctOptions": [
+      "Repeat function"
+    ],
+    "time": 25,
+    "details": "setInterval repeatedly executes a function at specified intervals until cleared."
+  },
+  {
+    "question": "What is clearInterval?",
+    "options": [
+      "Stop timer",
+      "Clear timer",
+      "Cancel interval",
+      "Stop loop"
+    ],
+    "correctOptions": [
+      "Cancel interval"
+    ],
+    "time": 25,
+    "details": "clearInterval stops a timer started by setInterval, preventing further execution."
+  },
+  {
+    "question": "What is crypto module?",
+    "options": [
+      "Encryption",
+      "Hash functions",
+      "Security",
+      "Encoding"
+    ],
+    "correctOptions": [
+      "Hash functions"
+    ],
+    "time": 30,
+    "details": "crypto provides cryptographic functions like hashing, encryption, and digital signatures."
+  },
+  {
+    "question": "What is path module?",
+    "options": [
+      "File paths",
+      "Path utilities",
+      "Path manipulation",
+      "Path resolution"
+    ],
+    "correctOptions": [
+      "Path utilities"
+    ],
+    "time": 25,
+    "details": "path provides utilities for manipulating and resolving file paths across platforms."
+  },
+  {
+    "question": "What does path.join do?",
+    "options": [
+      "Combine paths",
+      "Join path segments",
+      "Path concat",
+      "Build path"
+    ],
+    "correctOptions": [
+      "Join path segments"
+    ],
+    "time": 25,
+    "details": "path.join() joins path segments together using the appropriate separator for the OS."
+  },
+  {
+    "question": "What is os module?",
+    "options": [
+      "OS info",
+      "System information",
+      "Operating system",
+      "Platform"
+    ],
+    "correctOptions": [
+      "System information"
+    ],
+    "time": 25,
+    "details": "os provides methods for getting information about the operating system."
+  },
+  {
+    "question": "What is os.platform()?",
+    "options": [
+      "System",
+      "OS type",
+      "Platform name",
+      "System name"
+    ],
+    "correctOptions": [
+      "Platform name"
+    ],
+    "time": 25,
+    "details": "os.platform() returns a string identifying the platform (e.g., 'linux', 'darwin', 'win32')."
+  },
+  {
+    "question": "What is URL object?",
+    "options": [
+      "Parse URL",
+      "URL parser",
+      "URL handling",
+      "Site address"
+    ],
+    "correctOptions": [
+      "URL parser"
+    ],
+    "time": 30,
+    "details": "The URL class parses, constructs, and manipulates URLs into their components."
+  },
+  {
+    "question": "What is querystring?",
+    "options": [
+      "Query parser",
+      "URL params",
+      "Search params",
+      "Query params"
+    ],
+    "correctOptions": [
+      "Query params"
+    ],
+    "time": 30,
+    "details": "querystring module parses and formats URL query strings."
+  },
+  {
+    "question": "What is stream?",
+    "options": [
+      "Data flow",
+      "Streaming data",
+      "Data stream",
+      "Flowing data"
+    ],
+    "correctOptions": [
+      "Streaming data"
+    ],
+    "time": 30,
+    "details": "Streams are objects that let you read or write data continuously, handling large amounts efficiently."
+  },
+  {
+    "question": "What is readable stream?",
+    "options": [
+      "Input stream",
+      "Read data",
+      "Data input",
+      "Source stream"
+    ],
+    "correctOptions": [
+      "Data input"
+    ],
+    "time": 30,
+    "details": "Readable streams are sources from which data can be consumed sequentially."
+  },
+  {
+    "question": "What is writable stream?",
+    "options": [
+      "Output stream",
+      "Write data",
+      "Data output",
+      "Destination"
+    ],
+    "correctOptions": [
+      "Data output"
+    ],
+    "time": 30,
+    "details": "Writable streams are destinations that receive and store data."
+  },
+  {
+    "question": "What is pipe in streams?",
+    "options": [
+      "Connect streams",
+      "Chain streams",
+      "Stream connection",
+      "Data flow"
+    ],
+    "correctOptions": [
+      "Connect streams"
+    ],
+    "time": 30,
+    "details": "pipe() connects a readable stream to a writable stream, automatically managing flow control."
+  },
+  {
+    "question": "What is buffer in streams?",
+    "options": [
+      "Memory",
+      "Temporary data",
+      "Data chunk",
+      "Queue"
+    ],
+    "correctOptions": [
+      "Data chunk"
+    ],
+    "time": 30,
+    "details": "Buffers temporarily hold chunks of data while being transferred between streams."
+  },
+  {
+    "question": "What is backpressure?",
+    "options": [
+      "Flow control",
+      "Overflow",
+      "Stream control",
+      "Data backup"
+    ],
+    "correctOptions": [
+      "Flow control"
+    ],
+    "time": 35,
+    "details": "Backpressure is the mechanism that slows down data flow when the destination can't keep up."
+  },
+  {
+    "question": "What is ChildProcess?",
+    "options": [
+      "Spawn process",
+      "Child process",
+      "Forked process",
+      "New process"
+    ],
+    "correctOptions": [
+      "Forked process"
+    ],
+    "time": 30,
+    "details": "ChildProcess allows spawning child processes to run system commands independently."
+  },
+  {
+    "question": "What does exec() do?",
+    "options": [
+      "Run command",
+      "Execute shell",
+      "Spawn process",
+      "Run process"
+    ],
+    "correctOptions": [
+      "Execute shell"
+    ],
+    "time": 30,
+    "details": "exec() executes a shell command and buffers the complete output."
+  },
+  {
+    "question": "What does spawn() do?",
+    "options": [
+      "Create process",
+      "Launch process",
+      "Start process",
+      "Begin process"
+    ],
+    "correctOptions": [
+      "Launch process"
+    ],
+    "time": 30,
+    "details": "spawn() launches a new process with streaming I/O for handling large outputs."
+  },
+  {
+    "question": "What does fork() do?",
+    "options": [
+      "Fork Node",
+      "Spawn Node",
+      "Clone process",
+      "New process"
+    ],
+    "correctOptions": [
+      "Spawn Node"
+    ],
+    "time": 30,
+    "details": "fork() creates a new Node.js child process for running modules independently."
+  },
+  {
+    "question": "What is cluster module?",
+    "options": [
+      "Multi-process",
+      "Process cluster",
+      "Worker pool",
+      "Load balancing"
+    ],
+    "correctOptions": [
+      "Multi-process"
+    ],
+    "time": 35,
+    "details": "cluster allows creating child processes to share the server load across CPU cores."
+  },
+  {
+    "question": "What is worker thread?",
+    "options": [
+      "Background thread",
+      "Thread for CPU",
+      "Async thread",
+      "Worker process"
+    ],
+    "correctOptions": [
+      "Thread for CPU"
+    ],
+    "time": 35,
+    "details": "Worker threads enable running CPU-intensive JavaScript in background threads."
+  },
+  {
+    "question": "What is Worker?",
+    "options": [
+      "Thread",
+      "Worker thread",
+      "Background worker",
+      "Data worker"
+    ],
+    "correctOptions": [
+      "Worker thread"
+    ],
+    "time": 35,
+    "details": "Worker represents a worker thread for running CPU-intensive code without blocking the main thread."
+  },
+  {
+    "question": "What is messagePort?",
+    "options": [
+      "Thread comm",
+      "Communication",
+      "Data channel",
+      "Port"
+    ],
+    "correctOptions": [
+      "Communication"
+    ],
+    "time": 35,
+    "details": "messagePort enables communication between worker threads."
+  },
+  {
+    "question": "What is postMessage?",
+    "options": [
+      "Send data",
+      "Message to thread",
+      "Thread message",
+      "Worker message"
+    ],
+    "correctOptions": [
+      "Message to thread"
+    ],
+    "time": 30,
+    "details": "postMessage sends data between threads or contexts securely."
+  },
+  {
+    "question": "What is net module?",
+    "options": [
+      "Network",
+      "TCP/IPC",
+      "Socket",
+      "Connection"
+    ],
+    "correctOptions": [
+      "TCP/IPC"
+    ],
+    "time": 30,
+    "details": "net provides TCP and IPC servers and clients for network communication."
+  },
+  {
+    "question": "What is Socket?",
+    "options": [
+      "Connection",
+      "Network endpoint",
+      "TCP connection",
+      "Client"
+    ],
+    "correctOptions": [
+      "Network endpoint"
+    ],
+    "time": 30,
+    "details": "Socket represents a network endpoint for bidirectional communication."
+  },
+  {
+    "question": "What is tls module?",
+    "options": [
+      "SSL",
+      "Secure socket",
+      "HTTPS",
+      "Encryption"
+    ],
+    "correctOptions": [
+      "Secure socket"
+    ],
+    "time": 30,
+    "details": "tls provides secure socket communication using SSL/TLS encryption."
+  },
+  {
+    "question": "What is https module?",
+    "options": [
+      "HTTP SSL",
+      "Secure HTTP",
+      "TLS HTTP",
+      "Secure web"
+    ],
+    "correctOptions": [
+      "Secure HTTP"
+    ],
+    "time": 30,
+    "details": "https provides HTTPS servers using TLS/SSL encryption."
+  },
+  {
+    "question": "What is request object?",
+    "options": [
+      "Client request",
+      "HTTP request",
+      "Incoming request",
+      "API request"
+    ],
+    "correctOptions": [
+      "Incoming request"
+    ],
+    "time": 30,
+    "details": "request represents the incoming HTTP request with headers, params, and body data."
+  },
+  {
+    "question": "What is response object?",
+    "options": [
+      "Server response",
+      "HTTP response",
+      "Reply",
+      "Output"
+    ],
+    "correctOptions": [
+      "HTTP response"
+    ],
+    "time": 30,
+    "details": "response represents the HTTP response to send back to the client."
+  },
+  {
+    "question": "What is next() in Express?",
+    "options": [
+      "Next middleware",
+      "Next handler",
+      "Continue",
+      "Pass control"
+    ],
+    "correctOptions": [
+      "Continue"
+    ],
+    "time": 30,
+    "details": "next() passes control to the next middleware function in the chain."
+  },
+  {
+    "question": "What is req.params?",
+    "options": [
+      "URL parameters",
+      "Route params",
+      "Path parameters",
+      "Parameters"
+    ],
+    "correctOptions": [
+      "Route params"
+    ],
+    "time": 30,
+    "details": "req.params contains route parameters defined with :paramName in the route path."
+  },
+  {
+    "question": "What is req.query?",
+    "options": [
+      "Query string",
+      "URL query",
+      "Search params",
+      "GET params"
+    ],
+    "correctOptions": [
+      "Query string"
+    ],
+    "time": 30,
+    "details": "req.query contains parsed query string parameters from the URL."
+  },
+  {
+    "question": "What is req.body?",
+    "options": [
+      "POST data",
+      "Request body",
+      "Payload",
+      "Data"
+    ],
+    "correctOptions": [
+      "POST data"
+    ],
+    "time": 30,
+    "details": "req.body contains the request body data from POST requests, parsed by middleware like body-parser."
+  },
+  {
+    "question": "What is res.send()?",
+    "options": [
+      "Send response",
+      "Send data",
+      "Reply",
+      "Output"
+    ],
+    "correctOptions": [
+      "Send response"
+    ],
+    "time": 25,
+    "details": "res.send() sends an HTTP response with optional body and automatic content-type."
+  },
+  {
+    "question": "What is res.json()?",
+    "options": [
+      "Send JSON",
+      "JSON response",
+      "API response",
+      "Data"
+    ],
+    "correctOptions": [
+      "Send JSON"
+    ],
+    "time": 25,
+    "details": "res.json() sends a JSON response, automatically setting Content-Type to application/json."
+  },
+  {
+    "question": "What is res.status()?",
+    "options": [
+      "Set status",
+      "Status code",
+      "HTTP status",
+      "Code"
+    ],
+    "correctOptions": [
+      "Status code"
+    ],
+    "time": 30,
+    "details": "res.status() sets the HTTP status code for the response."
+  },
+  {
+    "question": "What is redirect()?",
+    "options": [
+      "Redirect URL",
+      "URL redirect",
+      "Forward",
+      "Route"
+    ],
+    "correctOptions": [
+      "URL redirect"
+    ],
+    "time": 30,
+    "details": "redirect() sends a 302 redirect response to the specified URL."
+  },
+  {
+    "question": "What is static files?",
+    "options": [
+      "Public folder",
+      "Asset files",
+      "Static resources",
+      "Files"
+    ],
+    "correctOptions": [
+      "Asset files"
+    ],
+    "time": 30,
+    "details": "Static files like CSS, images, and JS are served directly from a public folder."
+  },
+  {
+    "question": "What is middleware function?",
+    "options": [
+      "Handler",
+      "Filter function",
+      "Process function",
+      "Chain function"
+    ],
+    "correctOptions": [
+      "Process function"
+    ],
+    "time": 35,
+    "details": "A middleware function processes requests and can modify req/res or end the cycle."
+  },
+  {
+    "question": "What is error handling?",
+    "options": [
+      "Error catch",
+      "Exception handling",
+      "Error middleware",
+      "Catch errors"
+    ],
+    "correctOptions": [
+      "Error middleware"
+    ],
+    "time": 35,
+    "details": "Error-handling middleware catches errors and sends appropriate error responses."
+  },
+  {
+    "question": "What is body-parser?",
+    "options": [
+      "Request parser",
+      "POST parser",
+      "Body parser",
+      "Data parser"
+    ],
+    "correctOptions": [
+      "POST parser"
+    ],
+    "time": 30,
+    "details": "body-parser parses the request body into JavaScript objects for Express."
+  },
+  {
+    "question": "What is CORS?",
+    "options": [
+      "HTTP method",
+      "Cross origin",
+      "Security policy",
+      "Request"
+    ],
+    "correctOptions": [
+      "Cross origin"
+    ],
+    "time": 35,
+    "details": "CORS allows browsers to make requests to different origins securely."
+  },
+  {
+    "question": "What is helmet?",
+    "options": [
+      "Security headers",
+      "Protection",
+      "HTTP security",
+      "Headers"
+    ],
+    "correctOptions": [
+      "Security headers"
+    ],
+    "time": 35,
+    "details": "helmet sets various HTTP headers to secure Express apps."
+  },
+  {
+    "question": "What is compression?",
+    "options": [
+      "Gzip",
+      "Response compress",
+      "Data compress",
+      "Size reduce"
+    ],
+    "correctOptions": [
+      "Response compress"
+    ],
+    "time": 35,
+    "details": "compression middleware compresses responses using gzip."
+  },
+  {
+    "question": "What is cookie-parser?",
+    "options": [
+      "Cookie handling",
+      "Session",
+      "Cookie session",
+      "Parse cookies"
+    ],
+    "correctOptions": [
+      "Cookie handling"
+    ],
+    "time": 35,
+    "details": "cookie-parser parses cookies from incoming requests."
+  },
+  {
+    "question": "What is session?",
+    "options": [
+      "User state",
+      "Data storage",
+      "User track",
+      "State"
+    ],
+    "correctOptions": [
+      "User state"
+    ],
+    "time": 35,
+    "details": "Sessions store user data across multiple requests."
+  },
+  {
+    "question": "What is JWT?",
+    "options": [
+      "Token",
+      "Auth token",
+      "JSON token",
+      "Web token"
+    ],
+    "correctOptions": [
+      "Auth token"
+    ],
+    "time": 30,
+    "details": "JWT is a compact token format for securely transmitting claims between parties."
+  },
+  {
+    "question": "What is bcrypt?",
+    "options": [
+      "Hash",
+      "Password hash",
+      "Encryption",
+      "Secure hash"
+    ],
+    "correctOptions": [
+      "Password hash"
+    ],
+    "time": 35,
+    "details": "bcrypt is a password hashing function for secure password storage."
+  },
+  {
+    "question": "What is bcrypt.hash()?",
+    "options": [
+      "Hash password",
+      "Encrypt",
+      "Create hash",
+      "Secure"
+    ],
+    "correctOptions": [
+      "Hash password"
+    ],
+    "time": 30,
+    "details": "bcrypt.hash() creates a secure hashed password."
+  },
+  {
+    "question": "What is bcrypt.compare()?",
+    "options": [
+      "Verify password",
+      "Compare hash",
+      "Check password",
+      "Validate"
+    ],
+    "correctOptions": [
+      "Verify password"
+    ],
+    "time": 30,
+    "details": "bcrypt.compare() verifies a password against a stored hash."
+  },
+  {
+    "question": "What is mongoose?",
+    "options": [
+      "ODM",
+      "MongoDB",
+      "Database",
+      "Model"
+    ],
+    "correctOptions": [
+      "MongoDB"
+    ],
+    "time": 30,
+    "details": "Mongoose is an ODM for MongoDB that provides schema-based modeling."
+  },
+  {
+    "question": "What is Schema?",
+    "options": [
+      "Data definition",
+      "Structure",
+      "Model",
+      "Type"
+    ],
+    "correctOptions": [
+      "Data definition"
+    ],
+    "time": 30,
+    "details": "Schema defines the structure for MongoDB documents."
+  },
+  {
+    "question": "What is Model?",
+    "options": [
+      "Database",
+      "Collection",
+      "Data model",
+      "Document model"
+    ],
+    "correctOptions": [
+      "Collection"
+    ],
+    "time": 30,
+    "details": "Model provides the interface for database operations on a collection."
+  },
+  {
+    "question": "What is find()?",
+    "options": [
+      "Query",
+      "Search",
+      "Find documents",
+      "Select"
+    ],
+    "correctOptions": [
+      "Query"
+    ],
+    "time": 25,
+    "details": "find() queries documents from a collection."
+  },
+  {
+    "question": "What is create()?",
+    "options": [
+      "Insert",
+      "New document",
+      "Add",
+      "Save"
+    ],
+    "correctOptions": [
+      "Insert"
+    ],
+    "time": 25,
+    "details": "create() inserts new documents into a collection."
+  },
+  {
+    "question": "What is updateOne()?",
+    "options": [
+      "Update document",
+      "Modify",
+      "Change",
+      "Edit"
+    ],
+    "correctOptions": [
+      "Update document"
+    ],
+    "time": 30,
+    "details": "updateOne() updates a single document matching a filter."
+  },
+  {
+    "question": "What is deleteOne()?",
+    "options": [
+      "Delete document",
+      "Remove",
+      "Drop",
+      "Remove one"
+    ],
+    "correctOptions": [
+      "Delete document"
+    ],
+    "time": 30,
+    "details": "deleteOne() deletes a single document matching a filter."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Pipeline",
+      "Data processing",
+      "Group data",
+      "Transform"
+    ],
+    "correctOptions": [
+      "Data processing"
+    ],
+    "time": 35,
+    "details": "Aggregation provides data processing through a pipeline of stages."
+  },
+  {
+    "question": "What is $match in aggregation?",
+    "options": [
+      "Filter",
+      "Match stage",
+      "Filter stage",
+      "Select"
+    ],
+    "correctOptions": [
+      "Filter"
+    ],
+    "time": 35,
+    "details": "$match filters documents in the aggregation pipeline."
+  },
+  {
+    "question": "What is $group in aggregation?",
+    "options": [
+      "Group",
+      "Group stage",
+      "Aggregate group",
+      "Combine"
+    ],
+    "correctOptions": [
+      "Group"
+    ],
+    "time": 35,
+    "details": "$group groups documents for aggregate calculations."
+  },
+  {
+    "question": "What is $lookup in aggregation?",
+    "options": [
+      "Join",
+      "Lookup",
+      "Reference",
+      "Link"
+    ],
+    "correctOptions": [
+      "Join"
+    ],
+    "time": 35,
+    "details": "$lookup performs a left outer join with another collection."
+  },
+  {
+    "question": "What is indexing?",
+    "options": [
+      "Performance",
+      "Speed up query",
+      "Database index",
+      "Search"
+    ],
+    "correctOptions": [
+      "Speed up query"
+    ],
+    "time": 35,
+    "details": "Indexes improve query performance by creating data structures."
+  },
+  {
+    "question": "What is Redis?",
+    "options": [
+      "Database",
+      "In-memory DB",
+      "Cache",
+      "Store"
+    ],
+    "correctOptions": [
+      "In-memory DB"
+    ],
+    "time": 30,
+    "details": "Redis is an in-memory data store used for caching and sessions."
+  },
+  {
+    "question": "What is Redis get/set?",
+    "options": [
+      "Key-value ops",
+      "Cache operations",
+      "Store ops",
+      "Data ops"
+    ],
+    "correctOptions": [
+      "Key-value ops"
+    ],
+    "time": 30,
+    "details": "get/set are basic key-value operations in Redis."
+  },
+  {
+    "question": "What is pub/sub?",
+    "options": [
+      "Messaging",
+      "Publish/Subscribe",
+      "Events",
+      "Channel"
+    ],
+    "correctOptions": [
+      "Publish/Subscribe"
+    ],
+    "time": 35,
+    "details": "pub/sub is a messaging pattern for real-time events."
+  },
+  {
+    "question": "What is Socket.io?",
+    "options": [
+      "WebSocket",
+      "Real-time",
+      "Socket library",
+      "Real-time lib"
+    ],
+    "correctOptions": [
+      "Real-time"
+    ],
+    "time": 35,
+    "details": "Socket.io provides real-time bidirectional communication."
+  },
+  {
+    "question": "What is emit()?",
+    "options": [
+      "Send event",
+      "Broadcast",
+      "Publish",
+      "Notify"
+    ],
+    "correctOptions": [
+      "Send event"
+    ],
+    "time": 30,
+    "details": "emit() sends an event to connected clients."
+  },
+  {
+    "question": "What is on()?",
+    "options": [
+      "Listen",
+      "Event listener",
+      "Subscribe",
+      "Receive"
+    ],
+    "correctOptions": [
+      "Event listener"
+    ],
+    "time": 30,
+    "details": "on() listens for events from clients or the server."
+  },
+  {
+    "question": "What is room in Socket.io?",
+    "options": [
+      "Channel",
+      "Group",
+      "Namespace",
+      "Broadcast group"
+    ],
+    "correctOptions": [
+      "Group"
+    ],
+    "time": 35,
+    "details": "Rooms allow broadcasting to specific groups of clients."
+  },
+  {
+    "question": "What is PM2?",
+    "options": [
+      "Process manager",
+      "Process monitor",
+      "Node manager",
+      "App manager"
+    ],
+    "correctOptions": [
+      "Process manager"
+    ],
+    "time": 35,
+    "details": "PM2 manages Node.js processes in production."
+  },
+  {
+    "question": "What does pm2 start do?",
+    "options": [
+      "Start app",
+      "Run app",
+      "Launch",
+      "Begin"
+    ],
+    "correctOptions": [
+      "Start app"
+    ],
+    "time": 30,
+    "details": "pm2 start launches and manages the Node.js app."
+  },
+  {
+    "question": "What is forever?",
+    "options": [
+      "Daemon",
+      "Keep running",
+      "Process restart",
+      "Auto restart"
+    ],
+    "correctOptions": [
+      "Keep running"
+    ],
+    "time": 35,
+    "details": "forever restarts the app if it crashes, keeping it running."
+  },
+  {
+    "question": "What is nodemon?",
+    "options": [
+      "Reload",
+      "Auto restart",
+      "Watch files",
+      "Dev tool"
+    ],
+    "correctOptions": [
+      "Auto restart"
+    ],
+    "time": 35,
+    "details": "nodemon auto-restarts the server when files change."
+  },
+  {
+    "question": "What is ESLint?",
+    "options": [
+      "Linter",
+      "Code checker",
+      "Style checker",
+      "Formatter"
+    ],
+    "correctOptions": [
+      "Code checker"
+    ],
+    "time": 35,
+    "details": "ESLint analyzes code for problems and enforces style."
+  },
+  {
+    "question": "What is Prettier?",
+    "options": [
+      "Format",
+      "Formatter",
+      "Code format",
+      "Style"
+    ],
+    "correctOptions": [
+      "Code format"
+    ],
+    "time": 30,
+    "details": "Prettier formats code consistently across a project."
+  },
+  {
+    "question": "What is webpack?",
+    "options": [
+      "Bundler",
+      "Module bundler",
+      "Bundler tool",
+      "pack"
+    ],
+    "correctOptions": [
+      "Module bundler"
+    ],
+    "time": 35,
+    "details": "Webpack bundles JavaScript files into optimized chunks."
+  },
+  {
+    "question": "What is bundle?",
+    "options": [
+      "Combined files",
+      "Output",
+      "Package",
+      "Files"
+    ],
+    "correctOptions": [
+      "Combined files"
+    ],
+    "time": 30,
+    "details": "A bundle is a single file containing multiple modules."
+  },
+  {
+    "question": "What is Hot Module Replacement?",
+    "options": [
+      "Live reload",
+      "Module update",
+      "Auto update",
+      "Dev reload"
+    ],
+    "correctOptions": [
+      "Module update"
+    ],
+    "time": 45,
+    "details": "HMR updates modules in the browser without a full reload."
+  },
+  {
+    "question": "What is ts-node?",
+    "options": [
+      "Run TS",
+      "Execute TypeScript",
+      "TS runtime",
+      "Node TS"
+    ],
+    "correctOptions": [
+      "Execute TypeScript"
+    ],
+    "time": 35,
+    "details": "ts-node runs TypeScript files directly in Node.js."
+  },
+  {
+    "question": "What is Express?",
+    "options": [
+      "Web framework",
+      "Routing",
+      "Middleware",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Web framework",
+      "Routing",
+      "Middleware"
+    ],
+    "time": 35,
+    "details": "What is Express? explanation."
+  },
+  {
+    "question": "What is callback? (Level 1 #115)",
+    "options": [
+      "Asynchronous",
+      "Error-first",
+      "Node.js pattern",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Asynchronous",
+      "Error-first",
+      "Node.js pattern",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is callback? explanation."
+  },
+  {
+    "question": "What is streams? (Level 1 #116)",
+    "options": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is streams? explanation."
+  },
+  {
+    "question": "What is Buffer? (Level 1 #117)",
+    "options": [
+      "Binary data",
+      "Encoding",
+      "Memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Binary data",
+      "Encoding",
+      "Memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Buffer? explanation."
+  },
+  {
+    "question": "What is require? (Level 1 #119)",
+    "options": [
+      "Modules",
+      "Caching",
+      "Resolution",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Modules",
+      "Caching",
+      "Resolution",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is require? explanation."
+  },
+  {
+    "question": "What is process? (Level 1 #120)",
+    "options": [
+      "Env",
+      "Argv",
+      "Exit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Env",
+      "Argv",
+      "Exit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is process? explanation."
+  },
+  {
+    "question": "What is module? (Level 1 #121)",
+    "options": [
+      "Export",
+      "Import",
+      "Scope",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Export",
+      "Import",
+      "Scope",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is module? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  }
 ]

@@ -8,7 +8,7 @@
       "Pipe definition"
     ],
     "correctOptions": [
-      "Decorator that marks class as pipe and provides metadata: name (required), pure (optional: true)"
+      "Define pipe"
     ],
     "time": 40,
     "details": "Declares pipe class."
@@ -22,7 +22,7 @@
       "Value transform"
     ],
     "correctOptions": [
-      "Defines transformation in pipe class: transform(value: InputType, ...args: any[]): ReturnType"
+      "Transformation function"
     ],
     "time": 45,
     "details": "Implements pipe transform."
@@ -36,7 +36,7 @@
       "Optimization"
     ],
     "correctOptions": [
-      "Metadata option (default: true) - pure: false makes pipe re-evaluate on any change (for impure sources like Date.now())"
+      "Pure toggle"
     ],
     "time": 55,
     "details": "pure switches on re-evaluation."
@@ -50,7 +50,7 @@
       "Scope"
     ],
     "correctOptions": [
-      "Determines pipe scope: provideIn: 'root' = app-wide singleton, provideIn: any = lazy (provided by lazy module)"
+      "Where available"
     ],
     "time": 60,
     "details": "provideIn sets availability."
@@ -64,7 +64,7 @@
       "Selector"
     ],
     "correctOptions": [
-      "Decorator to mark class as directive with selector defining how to match in template: selector: '[myAttr]' or 'my-element'"
+      "Define directive"
     ],
     "time": 45,
     "details": "Defines directive."
@@ -78,7 +78,7 @@
       "Parameter injection"
     ],
     "correctOptions": [
-      "Inject dependencies via constructor parameters: constructor(private el: ElementRef, private renderer: Renderer2) { }"
+      "Inject dependencies"
     ],
     "time": 50,
     "details": "Inject in constructor."
@@ -92,7 +92,7 @@
       "Directive Input"
     ],
     "correctOptions": [
-      "Property binding that receives value from template: @Input() propertyName: type"
+      "Property binding"
     ],
     "time": 45,
     "details": "Directive receives data."
@@ -106,7 +106,7 @@
       "Emit events"
     ],
     "correctOptions": [
-      "Event emitter that emits events to parent: @Output() eventName = new EventEmitter()"
+      "Event emit"
     ],
     "time": 45,
     "details": "Directive emits events."
@@ -120,7 +120,7 @@
       "Metadata"
     ],
     "correctOptions": [
-      "Metadata to bind component/host element attributes/properties/events/styles: host: {'[class.required]': 'hasRequired', '(click)': 'onClick()'}"
+      "Metadata"
     ],
     "time": 60,
     "details": "Binds host element."
@@ -134,7 +134,7 @@
       "Binding in directive"
     ],
     "correctOptions": [
-      "Bind to host element property: @HostBinding('class.is-focused') isFocused = false"
+      "Host property binding"
     ],
     "time": 55,
     "details": "Binds to host property."
@@ -148,7 +148,7 @@
       "Listen on host"
     ],
     "correctOptions": [
-      "Listen/respond to host element events: @HostListener('click', ['$event']) onClick(event: Event) { }"
+      "Listen to host events"
     ],
     "time": 55,
     "details": "Listens to host elements."
@@ -162,7 +162,7 @@
       "Passed to handler"
     ],
     "correctOptions": [
-      "Passed native event as argument $event (e.g., @HostListener('click', ['$event'])), can also use $event.target.value in template interpolation"
+      "Native event object"
     ],
     "time": 70,
     "details": "$event is available in listener."
@@ -176,7 +176,7 @@
       "Find in ng-content"
     ],
     "correctOptions": [
-      "Queries first matching projected content (from ng-content) - e.g., @ContentChild('projectedName') projected: ElementRef"
+      "Query content children"
     ],
     "time": 60,
     "details": "Query projected content."
@@ -190,7 +190,7 @@
       "Multiple query"
     ],
     "correctOptions": [
-      "Queries all matching projected content children: @ContentChildren(MyDirectiveChild) children: QueryList<MyDirectiveChild>"
+      "Query multiple projected"
     ],
     "time": 65,
     "details": "@ContentChildren gets multiples."
@@ -204,7 +204,7 @@
       "Direct child query"
     ],
     "correctOptions": [
-      "Queries child element (from local template: @ViewChild('elem') elem: ElementRef"
+      "Query child element"
     ],
     "time": 55,
     "details": "@ViewChild queries elements."
@@ -218,7 +218,7 @@
       "Child elements"
     ],
     "correctOptions": [
-      "Queries all matching child elements in view: @ViewChildren('elem') elems: QueryList<ElementRef>"
+      "Query multiple child elements"
     ],
     "time": 60,
     "details": "@ViewChildren gets multiple."
@@ -232,7 +232,7 @@
       "Observable list"
     ],
     "correctOptions": [
-      "Dynamic query list (updated if DOM changes) returned by @ViewChildren/@ContentChildren - is iterable and has changes$ Observable"
+      "Query results list"
     ],
     "time": 65,
     "details": "QueryList holds results."
@@ -246,7 +246,7 @@
       "Multiple types"
     ],
     "correctOptions": [
-      "Returns different type than selector: @ContentChildren(MyDirective, {read: ElementRef}) - returns ElementRefs instead of directive instances"
+      "Different type results"
     ],
     "time": 70,
     "details": "read can return different type."
@@ -260,7 +260,7 @@
       "Before changes"
     ],
     "correctOptions": [
-      "true = query resolved in view init (before ngOnChanges), false (default) = after view init (allows dynamic views)"
+      "Pre-change detection query"
     ],
     "time": 70,
     "details": "static: true runs in view init."
@@ -274,7 +274,7 @@
       "Load at runtime"
     ],
     "correctOptions": [
-      "Load component at runtime via ViewContainerRef.createComponent (not pre-declared in template)"
+      "Runtime component creation"
     ],
     "time": 60,
     "details": "At runtime create component."
@@ -288,7 +288,7 @@
       "Container"
     ],
     "correctOptions": [
-      "Represents container for rendering components via insert(), clear(), get() - obtained via @ViewChild(ViewContainerRef, {read: ViewContainerRef})"
+      "Container"
     ],
     "time": 65,
     "details": "ViewContainerRef anchors components."
@@ -302,7 +302,7 @@
       "View representation"
     ],
     "correctOptions": [
-      "Represents rendered view component via viewRef.detectChanges() to manually run change detection on view (if OnPush with async)"
+      "Rendered view"
     ],
     "time": 75,
     "details": "Represents rendered component."
@@ -316,7 +316,7 @@
       "ng-template view"
     ],
     "correctOptions": [
-      "Specific type of ViewRef for rendered <ng-template>: embeddedViewRef.context provides template context"
+      "Embedded view"
     ],
     "time": 70,
     "details": "Embedded view from ng-template."
@@ -330,7 +330,7 @@
       "Created component"
     ],
     "correctOptions": [
-      "Reference to created dynamic component: instance property accesses component (set inputs), location property view location, destroy() cleans up"
+      "Dynamic component reference"
     ],
     "time": 70,
     "details": "ComponentRef gives control."
@@ -344,7 +344,7 @@
       "Standard lifecycle"
     ],
     "correctOptions": [
-      "Dynamic components also go through lifecycle: ngOnInit, ngAfterViewInit etc. when created at runtime (with createComponent)"
+      "Runtime lifecycle"
     ],
     "time": 80,
     "details": "Lifecycle fires on dynamic."
@@ -358,7 +358,7 @@
       "Unmount"
     ],
     "correctOptions": [
-      "Clean up dynamic component: componentRef.destroy() runs ngOnDestroy, removes from DOM, detaches CD - must call to prevent memory leaks"
+      "Clean up"
     ],
     "time": 70,
     "details": "destroy cleans up."
@@ -372,7 +372,7 @@
       "check it, mark for check"
     ],
     "correctOptions": [
-      "viewRef.detectChanges() manually runs CD for view (for OnPush component) vs viewRef.checked(true/false) to enable/disable automatic CD for view"
+      "Manually run CD"
     ],
     "time": 80,
     "details": "Manually trigger CD."
@@ -386,7 +386,7 @@
       "Destroy template"
     ],
     "correctOptions": [
-      "Destroy embedded view created via templateRef.createEmbeddedView: embeddedView.destroy() to clean up"
+      "Destroy embedded view"
     ],
     "time": 75,
     "details": "remove embedded view."
@@ -400,24 +400,27 @@
       "Resolve components"
     ],
     "correctOptions": [
-      "Service to get ComponentFactory from component type: componentFactory = factoryResolver.resolveComponentFactory(ComponentType)"
+      "Factory"
     ],
     "time": 70,
     "details": "Get factory from component type."
   },
   {
-    "question": "What is createComponent with factory?",
+    "question": "What is OnPush?",
     "options": [
-      "Create component via factory",
-      "Instantiate from factory",
-      "Dynamic create from factory",
-      "Use factory"
+      "Change detection",
+      "Performance",
+      "Strategy",
+      "All of the above"
     ],
     "correctOptions": [
-      "Create dynamic component via factory: viewContainer.createComponent(factory) vs createComponent(ComponentType) which obtains factory internally"
+      "Change detection",
+      "Performance",
+      "Strategy",
+      "All of the above"
     ],
-    "time": 75,
-    "details": "Creates via factory."
+    "time": 35,
+    "details": "What is OnPush? explanation."
   },
   {
     "question": "What is TemplateRef in Angular?",
@@ -428,7 +431,7 @@
       "Internal template"
     ],
     "correctOptions": [
-      "Reference to <ng-template> element: obtained via @ViewChild('tmpl') tmpl: TemplateRef"
+      "ng-template reference"
     ],
     "time": 60,
     "details": "TemplateRef references ng-template."
@@ -442,7 +445,7 @@
       "ng-template to view"
     ],
     "correctOptions": [
-      "Creates view from TemplateRef: templateRef.createEmbeddedView(context) returns EmbeddedViewRef"
+      "Create view from template"
     ],
     "time": 60,
     "details": "Creates embedded view."
@@ -456,7 +459,7 @@
       "Variable binding"
     ],
     "correctOptions": [
-      "Object providing variables to template: { $implicit: value, index: i, even: bool } - accessed as let-x in template"
+      "Template variables"
     ],
     "time": 65,
     "details": "Context provides template variables."
@@ -470,7 +473,7 @@
       "After change detection"
     ],
     "correctOptions": [
-      "Query resolved after view init (default): needed for dynamic content via ngIf or ngFor"
+      "Query after view init"
     ],
     "time": 65,
     "details": "Default runs after view init."
@@ -484,7 +487,7 @@
       "Element access"
     ],
     "correctOptions": [
-      "Reference to host element: .nativeElement accesses actual DOM element (avoid when possible)"
+      "Element access"
     ],
     "time": 55,
     "details": "ElementRef wraps DOM element."
@@ -498,7 +501,7 @@
       "Style renderer"
     ],
     "correctOptions": [
-      "Cross-browser abstraction for DOM manipulation: setElementStyle, setElementClass, invokeElementMethod"
+      "DOM manipulation"
     ],
     "time": 60,
     "details": "Renderer2 abstracts DOM."
@@ -512,7 +515,7 @@
       "Two approaches"
     ],
     "correctOptions": [
-      "Renderer2 works in Web Workers and SSR, nativeElement doesn't - prefer Renderer2 for server-side rendering support"
+      "Abstraction vs direct"
     ],
     "time": 70,
     "details": "Renderer2 is safer."
@@ -526,7 +529,7 @@
       "View ready"
     ],
     "correctOptions": [
-      "Called after view and child views initialized - use for accessing @ViewChild items"
+      "After view children init"
     ],
     "time": 55,
     "details": "After view initializes."
@@ -540,7 +543,7 @@
       "Content ready"
     ],
     "correctOptions": [
-      "Called after content children are projected - use for accessing @ContentChild items"
+      "After content projected"
     ],
     "time": 55,
     "details": "After content initializes."
@@ -554,7 +557,7 @@
       "View verified"
     ],
     "correctOptions": [
-      "Called after every view check (after each change detection)"
+      "After view checked"
     ],
     "time": 55,
     "details": "After each view check."
@@ -568,7 +571,7 @@
       "Content verified"
     ],
     "correctOptions": [
-      "Called after every content check (after each change detection)"
+      "After content checked"
     ],
     "time": 55,
     "details": "After each content check."
@@ -582,7 +585,7 @@
       "Manual check"
     ],
     "correctOptions": [
-      "ChangeDetectionStrategy.OnPush requires manual trigger or Input changes to run CD: use markForCheck() or detectChanges()"
+      "Manual change detection"
     ],
     "time": 60,
     "details": "OnPush optimizes change detection."
@@ -596,7 +599,7 @@
       "Trigger CD"
     ],
     "correctOptions": [
-      "Marks component for check: runs CD even in OnPush when parent runs CD"
+      "Mark for check"
     ],
     "time": 60,
     "details": "Mark for check schedules CD."
@@ -610,7 +613,7 @@
       "Manual control"
     ],
     "correctOptions": [
-      "detach() pauses CD for view, reattach() resumes - with OnPush must reattach to check"
+      "Pause/resume CD"
     ],
     "time": 70,
     "details": "Control change detection."
@@ -624,24 +627,27 @@
       "CD verification"
     ],
     "correctOptions": [
-      "Runs change detection then throws error if changes detected (dev mode only) - helps find side effects during CD"
+      "Verify no changes"
     ],
     "time": 75,
     "details": "checkNoChanges detects unwanted changes."
   },
   {
-    "question": "What is @SkipSelf in DI?",
+    "question": "What is functional programming?",
     "options": [
-      "Skip inject at level",
-      "Don't use local",
-      "Use parent",
-      "Ignore self"
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
     ],
     "correctOptions": [
-      "Skip injection at current level: @SkipSelf() searches parent injector"
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
     ],
-    "time": 55,
-    "details": "SkipSelf ignores current injector."
+    "time": 35,
+    "details": "What is functional programming? explanation."
   },
   {
     "question": "What is @Self in DI?",
@@ -652,7 +658,7 @@
       "Local only"
     ],
     "correctOptions": [
-      "Only use injection at current level: @Self() errors if not found locally (won't search parent)"
+      "Use only local"
     ],
     "time": 60,
     "details": "Self only uses local injector."
@@ -666,7 +672,7 @@
       "Null if missing"
     ],
     "correctOptions": [
-      "Makes dependency optional: injects null if not found (otherwise errors)"
+      "Nullable"
     ],
     "time": 55,
     "details": "Optional allows null."
@@ -680,7 +686,7 @@
       "Custom inject"
     ],
     "correctOptions": [
-      "Specifies injection token to inject: @Inject(MY_TOKEN) value"
+      "Specify token"
     ],
     "time": 55,
     "details": "Inject specifies token."
@@ -694,7 +700,7 @@
       "Opaque token"
     ],
     "correctOptions": [
-      "Creates DI token: new InjectionToken('desc') for non-class dependencies"
+      "DI token"
     ],
     "time": 55,
     "details": "InjectionToken for non-classes."
@@ -708,24 +714,27 @@
       "Override"
     ],
     "correctOptions": [
-      "Use different class than token: { provide: Service, useClass: MockService }"
+      "Different implementation"
     ],
     "time": 55,
     "details": "useClass replaces implementation."
   },
   {
-    "question": "What is useValue in provider?",
+    "question": "What is type checking?",
     "options": [
-      "Use value",
-      "Value provider",
-      "Plain value",
-      "Static value"
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
     ],
     "correctOptions": [
-      "Use existing value instead of class: { provide: CONFIG, useValue: { ... } }"
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
     ],
-    "time": 50,
-    "details": "useValue provides value."
+    "time": 35,
+    "details": "What is type checking? explanation."
   },
   {
     "question": "What is useFactory in provider?",
@@ -736,7 +745,7 @@
       "Function"
     ],
     "correctOptions": [
-      "Use factory function: { provide: X, useFactory: () => new X() } - can inject deps via deps array"
+      "Factory function"
     ],
     "time": 55,
     "details": "useFactory creates with function."
@@ -750,7 +759,7 @@
       "Array of values"
     ],
     "correctOptions": [
-      "Allows multiple values for same token: { provide: X, useValue: A, multi: true } - need multi: true on each"
+      "Multiple providers"
     ],
     "time": 60,
     "details": "multi allows multiple."
@@ -764,7 +773,7 @@
       "Early initialization"
     ],
     "correctOptions": [
-      "Run function before app initializes: { provide: APP_INITIALIZER, useFactory: () => () => init(), multi: true }"
+      "App startup"
     ],
     "time": 65,
     "details": "APP_INITIALIZER runs at startup."
@@ -778,7 +787,7 @@
       "Startup listener"
     ],
     "correctOptions": [
-      "Called for eachbootstrap: APP_BOOTSTRAP_LISTENER runs after each component bootstrapped"
+      "Bootstrap callback"
     ],
     "time": 70,
     "details": "Runs on bootstrap."
@@ -792,7 +801,7 @@
       "Platform hook"
     ],
     "correctOptions": [
-      "Runs once platform is ready (before any module): useFactory in root app's providers"
+      "Platform init"
     ],
     "time": 70,
     "details": "Runs when platform ready."
@@ -806,7 +815,7 @@
       "Request/response"
     ],
     "correctOptions": [
-      "Middleware to modify requests/responses: implements HttpInterceptor { intercept(req, next) }"
+      "HTTP middleware"
     ],
     "time": 55,
     "details": "Interceptor modifies HTTP."
@@ -820,7 +829,7 @@
       "Multiple interceptors"
     ],
     "correctOptions": [
-      "Multi-provider token for HttpInterceptors: { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true }"
+      "Interceptor token"
     ],
     "time": 60,
     "details": "HTTP_INTERCEPTORS is multi token."
@@ -834,7 +843,7 @@
       "ngModel"
     ],
     "correctOptions": [
-      "Implement ControlValueAccessor: writeValue, registerOnChange, registerOnTouched, setDisabledState"
+      "ControlValueAccessor"
     ],
     "time": 60,
     "details": "ControlValueAccessor for forms."
@@ -848,7 +857,7 @@
       "Input token"
     ],
     "correctOptions": [
-      "Provider token for form controls: { provide: NG_VALUE_ACCESSOR, useClass: MyControl, multi: true }"
+      "Control token"
     ],
     "time": 65,
     "details": "NG_VALUE_ACCESSOR for form controls."
@@ -862,7 +871,7 @@
       "Multi token"
     ],
     "correctOptions": [
-      "Multi-provider for validators: { provide: NG_VALIDATORS, useClass: MyValidator, multi: true }"
+      "Validator token"
     ],
     "time": 60,
     "details": "NG_VALIDATORS for validation."
@@ -876,7 +885,7 @@
       "Async check"
     ],
     "correctOptions": [
-      "Validator returning Promise or Observable: { provide: NG_ASYNC_VALIDATORS, useClass: MyValidator }"
+      "Async validation"
     ],
     "time": 60,
     "details": "AsyncValidator for async validation."
@@ -890,7 +899,7 @@
       "Enable/disable"
     ],
     "correctOptions": [
-      "ControlValueAccessor method called when disabled state changes - implement to update UI"
+      "Disable control"
     ],
     "time": 60,
     "details": "setDisabledState handles disabled."
@@ -904,7 +913,7 @@
       "FormControl/FormGroup base"
     ],
     "correctOptions": [
-      "Base class for FormControl, FormGroup, FormArray with valueChanges, statusChanges, setValue, patchValue"
+      "Base control"
     ],
     "time": 60,
     "details": "AbstractControl is base."
@@ -918,7 +927,7 @@
       "Control group"
     ],
     "correctOptions": [
-      "Container for controls: new FormGroup({ name: new FormControl(), address: new FormGroup({...}) })"
+      "Form container"
     ],
     "time": 55,
     "details": "FormGroup groups controls."
@@ -932,7 +941,7 @@
       "Repeated controls"
     ],
     "correctOptions": [
-      "Array of controls: new FormArray([new FormControl(), new FormControl()) - supports push, insert, removeAt"
+      "Array of controls"
     ],
     "time": 55,
     "details": "FormArray is dynamic array."
@@ -946,7 +955,7 @@
       "Form field"
     ],
     "correctOptions": [
-      "Single form control: new FormControl('default', [validators], [asyncValidators])"
+      "Single input"
     ],
     "time": 50,
     "details": "FormControl single input."
@@ -960,7 +969,7 @@
       "Input changes"
     ],
     "correctOptions": [
-      "Observable emitting value on every change: control.valueChanges.subscribe(v => ...)"
+      "Value Observable"
     ],
     "time": 50,
     "details": "valueChanges emits on changes."
@@ -974,7 +983,7 @@
       "Valid/invalid"
     ],
     "correctOptions": [
-      "Observable emitting status: VALID, INVALID, PENDING, DISABLED"
+      "Status Observable"
     ],
     "time": 50,
     "details": "statusChanges emits validation."
@@ -988,7 +997,7 @@
       "Two ways"
     ],
     "correctOptions": [
-      "setValue requires all fields, patchValue updates only provided (partial)"
+      "Full vs partial update"
     ],
     "time": 55,
     "details": "setValue full, patchValue partial."
@@ -1002,7 +1011,7 @@
       "Form dirty"
     ],
     "correctOptions": [
-      "Marks control as dirty (touched + value changed from initial): markAsDirty() vs markAsPristine()"
+      "Mark dirty"
     ],
     "time": 55,
     "details": "markAsDirty tracks changes."
@@ -1016,7 +1025,7 @@
       "Field touched"
     ],
     "correctOptions": [
-      "Marks control as touched (blurred): used in validation, touched state tracks blur"
+      "Mark touched"
     ],
     "time": 55,
     "details": "markAsTouched marks field."
@@ -1030,7 +1039,7 @@
       "Initial value"
     ],
     "correctOptions": [
-      "Resets to default or provided value and clears status: control.reset() or control.reset('default')"
+      "Clear form"
     ],
     "time": 50,
     "details": "reset clears form."
@@ -1044,7 +1053,7 @@
       "Control access"
     ],
     "correctOptions": [
-      "Gets nested control: form.get('address.city') returns FormControl for nested path"
+      "Get control"
     ],
     "time": 50,
     "details": "get accesses nested controls."
@@ -1058,7 +1067,7 @@
       "Value strategy"
     ],
     "correctOptions": [
-      "Controls when update triggers: 'change' (default), 'blur', 'submit'"
+      "When to update"
     ],
     "time": 55,
     "details": "updateOn controls update timing."
@@ -1072,7 +1081,7 @@
       "Silent update"
     ],
     "correctOptions": [
-      "Option to skip emitting valueChanges/statusChanges: setValue(val, { emitEvent: false })"
+      "Skip events"
     ],
     "time": 60,
     "details": "emitEvent controls changes."
@@ -1086,7 +1095,7 @@
       "One-way"
     ],
     "correctOptions": [
-      "Option to emit to view (defaults true): only affects legacy notify option"
+      "Model to view"
     ],
     "time": 60,
     "details": "Legacy option."
@@ -1100,7 +1109,7 @@
       "Self only"
     ],
     "correctOptions": [
-      "Option to only mark this control (not parent): markAsTouched({ onlySelf: true })"
+      "Touch self only"
     ],
     "time": 60,
     "details": "onlySelf touches self only."
@@ -1114,7 +1123,7 @@
       "Builder service"
     ],
     "correctOptions": [
-      "Service to create forms: constructor(private fb: FormBuilder) - fb.group(), fb.control(), fb.array()"
+      "Form factory"
     ],
     "time": 50,
     "details": "FormBuilder creates forms."
@@ -1128,7 +1137,7 @@
       "Build group"
     ],
     "correctOptions": [
-      "Creates FormGroup: fb.group({ name: [default], email: [default, validators] })"
+      "Create FormGroup"
     ],
     "time": 50,
     "details": "group creates FormGroup."
@@ -1142,7 +1151,7 @@
       "Create control"
     ],
     "correctOptions": [
-      "Creates FormControl: fb.control(default, validators)"
+      "Create FormControl"
     ],
     "time": 50,
     "details": "control creates FormControl."
@@ -1156,7 +1165,7 @@
       "Create array"
     ],
     "correctOptions": [
-      "Creates FormArray: fb.array([controls], validator)"
+      "Create FormArray"
     ],
     "time": 50,
     "details": "array creates FormArray."
@@ -1170,7 +1179,7 @@
       "Async removal"
     ],
     "correctOptions": [
-      "Removes all async validators: control.clearAsyncValidators()"
+      "Clear async"
     ],
     "time": 55,
     "details": "clearAsyncValidators clears async."
@@ -1184,7 +1193,7 @@
       "Async check"
     ],
     "correctOptions": [
-      "Status when async validator running: PENDING means validation in progress"
+      "Async validating"
     ],
     "time": 55,
     "details": "PENDING means validating."
@@ -1198,7 +1207,7 @@
       "Input output"
     ],
     "correctOptions": [
-      "Two-way binding: binds property and input synchronously"
+      "Two-way binding"
     ],
     "time": 55,
     "details": "ngModel two-way binds."
@@ -1212,7 +1221,7 @@
       "Output event"
     ],
     "correctOptions": [
-      "Event emitted when value changes"
+      "Event"
     ],
     "time": 55,
     "details": "ngModelChange emits."
@@ -1226,7 +1235,7 @@
       "Template forms"
     ],
     "correctOptions": [
-      "Required for ngModel: import FormsModule in app"
+      "Module for forms"
     ],
     "time": 50,
     "details": "FormsModule enables ngModel."
@@ -1240,7 +1249,7 @@
       "Reactive module"
     ],
     "correctOptions": [
-      "Required for reactive forms: import ReactiveFormsModule"
+      "Reactive forms"
     ],
     "time": 50,
     "details": "ReactiveFormsModule required."
@@ -1254,7 +1263,7 @@
       "All values"
     ],
     "correctOptions": [
-      "form.value returns object with all form control values"
+      "Get values"
     ],
     "time": 50,
     "details": "form.value gets values."
@@ -1268,7 +1277,7 @@
       "Set"
     ],
     "correctOptions": [
-      "patchValue updates fields provided; setValue requires all fields"
+      "Partial update"
     ],
     "time": 55,
     "details": "patch updates partial."
@@ -1282,7 +1291,7 @@
       "Changed"
     ],
     "correctOptions": [
-      "form.dirty is true if user changed value"
+      "Check dirty"
     ],
     "time": 55,
     "details": "dirty tracks changes."
@@ -1296,7 +1305,7 @@
       "Tapped"
     ],
     "correctOptions": [
-      "form.touched true if user blurred any control"
+      "Touched flag"
     ],
     "time": 55,
     "details": "touched after blur."
@@ -1310,7 +1319,7 @@
       "Async status"
     ],
     "correctOptions": [
-      "PENDING status when async validators running"
+      "Validating"
     ],
     "time": 55,
     "details": "Pending while validating."
@@ -1324,7 +1333,7 @@
       "Form group"
     ],
     "correctOptions": [
-      "control.parent returns containing FormGroup or FormArray"
+      "Parent group"
     ],
     "time": 55,
     "details": "parent is container."
@@ -1338,7 +1347,7 @@
       "Number"
     ],
     "correctOptions": [
-      "FormArray.length returns number of controls"
+      "Controls count"
     ],
     "time": 50,
     "details": "length is control count."
@@ -1352,7 +1361,7 @@
       "Get"
     ],
     "correctOptions": [
-      "Returns control at index: array.at(index)"
+      "Get at index"
     ],
     "time": 50,
     "details": "at gets control."
@@ -1366,7 +1375,7 @@
       "Insert"
     ],
     "correctOptions": [
-      "Adds control to end of FormArray: array.push(control)"
+      "Add control"
     ],
     "time": 50,
     "details": "push adds control."
@@ -1380,7 +1389,7 @@
       "Delete"
     ],
     "correctOptions": [
-      "Removes control at index: array.removeAt(index)"
+      "Remove"
     ],
     "time": 50,
     "details": "removeAt deletes control."
@@ -1394,7 +1403,7 @@
       "Raw form"
     ],
     "correctOptions": [
-      "form.getRawValue() includes disabled controls (value excludes them)"
+      "Raw values including disabled"
     ],
     "time": 55,
     "details": "getRawValue includes disabled."
@@ -1408,9 +1417,519 @@
       "States"
     ],
     "correctOptions": [
-      "dirty means changed from initial; pristine means unchanged"
+      "Dirty vs pristine"
     ],
     "time": 55,
     "details": " opposites."
+  },
+  {
+    "question": "What is directive? (Level 6 #102)",
+    "options": [
+      "DOM manipulation",
+      "Structural",
+      "Attribute",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "DOM manipulation",
+      "Structural",
+      "Attribute",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is directive? explanation."
+  },
+  {
+    "question": "What is service? (Level 6 #103)",
+    "options": [
+      "Dependency injection",
+      "Singleton",
+      "Business logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Dependency injection",
+      "Singleton",
+      "Business logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is service? explanation."
+  },
+  {
+    "question": "What is pipe? (Level 6 #104)",
+    "options": [
+      "Transform",
+      "Pure",
+      "Impure",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Transform",
+      "Pure",
+      "Impure",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is pipe? explanation."
+  },
+  {
+    "question": "What is module? (Level 6 #105)",
+    "options": [
+      "Bootstrap",
+      "Declarations",
+      "Imports",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Bootstrap",
+      "Declarations",
+      "Imports",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is module? explanation."
+  },
+  {
+    "question": "What is component? (Level 6 #106)",
+    "options": [
+      "Template",
+      "Class",
+      "Metadata",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Template",
+      "Class",
+      "Metadata",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is component? explanation."
+  },
+  {
+    "question": "What is routing? (Level 6 #107)",
+    "options": [
+      "Path",
+      "Component",
+      "Parameters",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Path",
+      "Component",
+      "Parameters",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is lazy loading? (Level 6 #108)",
+    "options": [
+      "Performance",
+      "On-demand",
+      "Module",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Performance",
+      "On-demand",
+      "Module",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is lazy loading? explanation."
+  },
+  {
+    "question": "What is AOT? (Level 6 #109)",
+    "options": [
+      "Compilation",
+      "Performance",
+      "Production",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Compilation",
+      "Performance",
+      "Production",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is AOT? explanation."
+  },
+  {
+    "question": "What is change detection? (Level 6 #110)",
+    "options": [
+      "OnPush",
+      "Default",
+      "Manual",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "OnPush",
+      "Default",
+      "Manual",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is change detection? explanation."
+  },
+  {
+    "question": "What is dependency injection? (Level 6 #111)",
+    "options": [
+      "Service",
+      "Provider",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Service",
+      "Provider",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
   }
 ]

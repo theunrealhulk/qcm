@@ -462,18 +462,21 @@
     "details": "Interactive rebase lets you reorder commits."
   },
   {
-    "question": "How do you split a commit in rebase?",
+    "question": "What is a closure in JavaScript?",
     "options": [
-      "Use edit, reset, re-commit",
-      "Use squash",
-      "Use drop",
-      "Use pick"
+      "Function scope",
+      "Lexical environment",
+      "Private variables",
+      "All of the above"
     ],
     "correctOptions": [
-      "Use edit, reset, re-commit"
+      "Function scope",
+      "Lexical environment",
+      "Private variables",
+      "All of the above"
     ],
-    "time": 50,
-    "details": "Edit, then reset and re-commit individual changes."
+    "time": 35,
+    "details": "What is a closure in JavaScript? explanation."
   },
   {
     "question": "What is autosquash?",
@@ -868,398 +871,6 @@
     "details": "pull --rebase fetches then runs rebase."
   },
   {
-    "question": "What is git rebase?",
-    "options": [
-      "Reapply commits on new base",
-      "Delete commits",
-      "Merge branches",
-      "Create branches"
-    ],
-    "correctOptions": [
-      "Reapply commits on new base"
-    ],
-    "time": 30,
-    "details": "Rebase moves commits to a new base commit."
-  },
-  {
-    "question": "What is the main purpose of rebase?",
-    "options": [
-      "Create linear history",
-      "Delete commits",
-      "Merge branches",
-      "Push changes"
-    ],
-    "correctOptions": [
-      "Create linear history"
-    ],
-    "time": 35,
-    "details": "Rebase creates a cleaner, linear commit history."
-  },
-  {
-    "question": "What is the difference between merge and rebase?",
-    "options": [
-      "Merge preserves history, rebase rewrites",
-      "Both rewrite history",
-      "Both preserve history",
-      "Neither matters"
-    ],
-    "correctOptions": [
-      "Merge preserves history, rebase rewrites"
-    ],
-    "time": 40,
-    "details": "Merge keeps true history, rebase rewrites commits."
-  },
-  {
-    "question": "What happens during rebase?",
-    "options": [
-      "Commits are replayed",
-      "Commits are deleted",
-      "Branches are merged",
-      "Files are deleted"
-    ],
-    "correctOptions": [
-      "Commits are replayed"
-    ],
-    "time": 35,
-    "details": "Rebase replays commits on the new base."
-  },
-  {
-    "question": "How do you rebase onto another branch?",
-    "options": [
-      "git rebase branch-name",
-      "git merge branch-name",
-      "git checkout branch-name",
-      "git branch branch-name"
-    ],
-    "correctOptions": [
-      "git rebase branch-name"
-    ],
-    "time": 30,
-    "details": "git rebase applies your commits on another branch."
-  },
-  {
-    "question": "What is interactive rebase?",
-    "options": [
-      "Modify commits during rebase",
-      "Automatic rebase",
-      "Merge rebase",
-      "Remote rebase"
-    ],
-    "correctOptions": [
-      "Modify commits during rebase"
-    ],
-    "time": 40,
-    "details": "Interactive rebase allows editing, squashing, reordering."
-  },
-  {
-    "question": "How do you start interactive rebase?",
-    "options": [
-      "git rebase -i HEAD~n",
-      "git rebase interactive",
-      "git rebase --modify",
-      "git rebase --edit"
-    ],
-    "correctOptions": [
-      "git rebase -i HEAD~n"
-    ],
-    "time": 35,
-    "details": "-i opens interactive editor for rebase."
-  },
-  {
-    "question": "What does pick mean in interactive rebase?",
-    "options": [
-      "Keep commit as-is",
-      "Squash commit",
-      "Drop commit",
-      "Edit commit"
-    ],
-    "correctOptions": [
-      "Keep commit as-is"
-    ],
-    "time": 35,
-    "details": "pick keeps the commit unchanged."
-  },
-  {
-    "question": "What does squash mean in rebase?",
-    "options": [
-      "Combine with previous commit",
-      "Delete commit",
-      "Split commit",
-      "Edit commit"
-    ],
-    "correctOptions": [
-      "Combine with previous commit"
-    ],
-    "time": 35,
-    "details": "squash combines commits together."
-  },
-  {
-    "question": "What does fixup mean in rebase?",
-    "options": [
-      "Combine without message",
-      "Combine with message",
-      "Delete commit",
-      "Split commit"
-    ],
-    "correctOptions": [
-      "Combine without message"
-    ],
-    "time": 40,
-    "details": "fixup combines commits, discarding this commit's message."
-  },
-  {
-    "question": "What does drop mean in rebase?",
-    "options": [
-      "Remove commit",
-      "Keep commit",
-      "Edit commit",
-      "Split commit"
-    ],
-    "correctOptions": [
-      "Remove commit"
-    ],
-    "time": 35,
-    "details": "drop removes the commit entirely."
-  },
-  {
-    "question": "What does reword mean in rebase?",
-    "options": [
-      "Change commit message",
-      "Keep message",
-      "Delete message",
-      "Split message"
-    ],
-    "correctOptions": [
-      "Change commit message"
-    ],
-    "time": 35,
-    "details": "reword allows changing the commit message."
-  },
-  {
-    "question": "What does edit mean in rebase?",
-    "options": [
-      "Stop to amend commit",
-      "Continue rebase",
-      "Abort rebase",
-      "Skip commit"
-    ],
-    "correctOptions": [
-      "Stop to amend commit"
-    ],
-    "time": 40,
-    "details": "edit pauses rebase to modify the commit."
-  },
-  {
-    "question": "What does exec mean in rebase?",
-    "options": [
-      "Run shell command",
-      "Execute commit",
-      "Exit rebase",
-      "Skip step"
-    ],
-    "correctOptions": [
-      "Run shell command"
-    ],
-    "time": 40,
-    "details": "exec runs a shell command during rebase."
-  },
-  {
-    "question": "What is git rebase --continue?",
-    "options": [
-      "Resume after resolving",
-      "Continue without resolving",
-      "Start rebase",
-      "Abort rebase"
-    ],
-    "correctOptions": [
-      "Resume after resolving"
-    ],
-    "time": 35,
-    "details": "--continue resumes rebase after conflict resolution."
-  },
-  {
-    "question": "What is git rebase --abort?",
-    "options": [
-      "Cancel and return to before",
-      "Continue rebase",
-      "Complete rebase",
-      "Skip conflicts"
-    ],
-    "correctOptions": [
-      "Cancel and return to before"
-    ],
-    "time": 30,
-    "details": "--abort cancels rebase and returns to original state."
-  },
-  {
-    "question": "What is git rebase --skip?",
-    "options": [
-      "Skip current commit",
-      "Skip conflict",
-      "Skip all",
-      "Skip merge"
-    ],
-    "correctOptions": [
-      "Skip current commit"
-    ],
-    "time": 35,
-    "details": "--skip skips the problematic commit."
-  },
-  {
-    "question": "What is an upstream branch?",
-    "options": [
-      "Branch you track from remote",
-      "Your local branch",
-      "Main branch",
-      "Deleted branch"
-    ],
-    "correctOptions": [
-      "Branch you track from remote"
-    ],
-    "time": 35,
-    "details": "Upstream is the remote branch you're working with."
-  },
-  {
-    "question": "What is git rebase onto new-branch?",
-    "options": [
-      "Rebase commits to new branch",
-      "Delete commits",
-      "Merge branches",
-      "Create branch"
-    ],
-    "correctOptions": [
-      "Rebase commits to new branch"
-    ],
-    "time": 40,
-    "details": "rebase --onto moves commits to a different branch."
-  },
-  {
-    "question": "What is --onto flag?",
-    "options": [
-      "Specify new base branch",
-      "Specify old base",
-      "Specify branch",
-      "Specify commit"
-    ],
-    "correctOptions": [
-      "Specify new base branch"
-    ],
-    "time": 40,
-    "details": "--onto defines where to place rebased commits."
-  },
-  {
-    "question": "What is a divergent branch?",
-    "options": [
-      "Branches that have diverged",
-      "Same branches",
-      "Fast-forward branches",
-      "Clean branches"
-    ],
-    "correctOptions": [
-      "Branches that have diverged"
-    ],
-    "time": 40,
-    "details": "Divergent branches have different commit histories."
-  },
-  {
-    "question": "When should you rebase?",
-    "options": [
-      "Local cleanup before push",
-      "Shared commits",
-      "After push",
-      "Remote branches"
-    ],
-    "correctOptions": [
-      "Local cleanup before push"
-    ],
-    "time": 40,
-    "details": "Rebase is safe for local unpublished commits."
-  },
-  {
-    "question": "When should you NOT rebase?",
-    "options": [
-      "Public/shared commits",
-      "Local commits",
-      "Feature branches",
-      "Hotfix branches"
-    ],
-    "correctOptions": [
-      "Public/shared commits"
-    ],
-    "time": 40,
-    "details": "Never rebase commits that others may have based work on."
-  },
-  {
-    "question": "What is golden rule of rebase?",
-    "options": [
-      "Don't rebase public branches",
-      "Always rebase",
-      "Never merge",
-      "Always force push"
-    ],
-    "correctOptions": [
-      "Don't rebase public branches"
-    ],
-    "time": 40,
-    "details": "The golden rule: never rebase public/shared branches."
-  },
-  {
-    "question": "What is rebase vs cherry-pick?",
-    "options": [
-      "Rebase replays many, cherry-pick one",
-      "Both do same thing",
-      "Cherry-pick replays many",
-      "Neither replays"
-    ],
-    "correctOptions": [
-      "Rebase replays many, cherry-pick one"
-    ],
-    "time": 45,
-    "details": "Rebase applies multiple commits, cherry-pick applies one."
-  },
-  {
-    "question": "What happens to original commits after rebase?",
-    "options": [
-      "They still exist until garbage collected",
-      "They are deleted immediately",
-      "They are archived",
-      "They are backed up"
-    ],
-    "correctOptions": [
-      "They still exist until garbage collected"
-    ],
-    "time": 45,
-    "details": "Original commits exist until reflog expires and GC runs."
-  },
-  {
-    "question": "What is a dangling commit?",
-    "options": [
-      "Unreachable commit",
-      "Reachable commit",
-      "Merged commit",
-      "Tagged commit"
-    ],
-    "correctOptions": [
-      "Unreachable commit"
-    ],
-    "time": 45,
-    "details": "Dangling commits have no reference pointing to them."
-  },
-  {
-    "question": "Can you recover dangling commits?",
-    "options": [
-      "Yes via reflog",
-      "No, never",
-      "Only via backup",
-      "Only from remote"
-    ],
-    "correctOptions": [
-      "Yes via reflog"
-    ],
-    "time": 45,
-    "details": "Reflog can recover commits after rebase."
-  },
-  {
     "question": "What is git stash?",
     "options": [
       "Temporarily save work",
@@ -1386,17 +997,510 @@
     "details": "Stash@{0} is the most recent stash entry."
   },
   {
-    "question": "What is reflog?",
+    "question": "What does git add do?",
     "options": [
-      "Reference log of operations",
-      "Remote log",
-      "Repository log",
-      "Commit log"
+      "Stage changes",
+      "Index",
+      "Track files",
+      "All of the above"
     ],
     "correctOptions": [
-      "Reference log of operations"
+      "Stage changes",
+      "Index"
     ],
-    "time": 30,
-    "details": "Reflog records all changes to HEAD and branches."
+    "time": 35,
+    "details": "What does git add do? explanation."
+  },
+  {
+    "question": "What is git reset?",
+    "options": [
+      "Undo",
+      "Move HEAD",
+      "Unstage",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Undo",
+      "Move HEAD",
+      "Unstage"
+    ],
+    "time": 35,
+    "details": "What is git reset? explanation."
+  },
+  {
+    "question": "What is git init? (Level 3 #103)",
+    "options": [
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git init? explanation."
+  },
+  {
+    "question": "What is git clone? (Level 3 #104)",
+    "options": [
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git clone? explanation."
+  },
+  {
+    "question": "What is git branch? (Level 3 #105)",
+    "options": [
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git branch? explanation."
+  },
+  {
+    "question": "What is git merge? (Level 3 #106)",
+    "options": [
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git merge? explanation."
+  },
+  {
+    "question": "What is git diff? (Level 3 #110)",
+    "options": [
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git diff? explanation."
+  },
+  {
+    "question": "What is git log? (Level 3 #111)",
+    "options": [
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git log? explanation."
+  },
+  {
+    "question": "What is git remote? (Level 3 #112)",
+    "options": [
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git remote? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
   }
 ]

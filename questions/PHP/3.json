@@ -1,108 +1,2029 @@
 [
-  {"question": "What is the difference between == and === in PHP?", "options": ["Type comparison", "Loose vs strict", "Equality", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "== compares value only; === compares value and type."},
-  {"question": "What is the spaceship operator (<=>) in PHP?", "options": ["Combined comparison", "Three-way", "Order", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "<=> returns -1, 0, or 1 for less than, equal, or greater than."},
-  {"question": "What is the null coalescing operator (??) in PHP?", "options": ["Null check", "Default value", "Ternary", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "?? returns left operand if exists and not null; otherwise right operand."},
-  {"question": "What is the spaceship operator return values?", "options": ["-1, 0, 1", "Comparison", "Ordering", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Returns -1 if left < right, 0 if equal, 1 if left > right."},
-  {"question": "What is type hinting in PHP?", "options": ["Type declarations", "Function parameters", "Type safety", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Type hints specify expected parameter types."},
-  {"question": "What is return type declaration in PHP?", "options": ["Function return type", "Type hint", "Declaration", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Return type specifies function return type."},
-  {"question": "What is strict typing in PHP?", "options": ["Strict mode", "Type enforcement", "declare", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "declare(strict_types=1) enables strict type checking."},
-  {"question": "What is variable variables in PHP?", "options": ["Dynamic variables", "$$var", "Reference", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "$$name creates variable from value of $name."},
-  {"question": "What is the use of 'global' keyword?", "options": ["Global scope", "Access", "Variable", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "global allows access to global variables."},
-  {"question": "What is the purpose of 'static' keyword in functions?", "options": ["Persistent", "Static variable", "Memory", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Static variables retain value between calls."},
-  {"question": "What is anonymous function in PHP?", "options": ["Lambda", "Closure", "Function without name", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Anonymous functions are functions without names."},
-  {"question": "What is closure in PHP?", "options": ["Anonymous function", "Can access scope", "Use keyword", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Closures can access variables from outer scope using 'use'."},
-  {"question": "What is arrow function in PHP?", "options": ["Short closure", "fn keyword", "Expression", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Arrow functions (fn) provide shorter syntax for simple closures."},
-  {"question": "What is the use of 'use' in closures?", "options": ["Capture variables", "Scope", "Closure", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "use captures variables from parent scope."},
-  {"question": "What is the difference between 'use' by value vs by reference?", "options": ["Copy vs reference", "Mutation", "Scope", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "use $var copies; use &$var references for mutation."},
-  {"question": "What is variable scope in PHP?", "options": ["Variable visibility", "Global/local", "Access", "All of the above"], "time": 35, "details": "Scope determines where variables are accessible."},
-  {"question": "What is the difference between 'require' and 'include'?", "options": ["Fatal vs warning", "Error handling", "Loading", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "require generates fatal error on failure; include generates warning."},
-  {"question": "What is namespace in PHP?", "options": ["Code organization", "Logical grouping", "Package", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Namespaces organize code into logical groups."},
-  {"question": "What is the purpose of 'use' statement in namespaces?", "options": ["Import namespace", "Alias", "Namespace", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "use imports namespaces and creates aliases."},
-  {"question": "What is the difference between 'use' and 'use as'?", "options": ["Import vs alias", "Namespace", "Naming", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "use imports; use as creates alias."},
-  {"question": "What is a trait in PHP?", "options": ["Code reuse", "Horizontal reuse", "Multiple", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Traits enable code reuse without inheritance."},
-  {"question": "What is trait conflict resolution in PHP?", "options": ["Insteadof", "Alias", "Conflict", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "insteadof resolves method conflicts between traits."},
-  {"question": "What is the purpose of 'as' in trait conflict resolution?", "options": ["Rename method", "Alias", "Conflict", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "as renames method from trait."},
-  {"question": "What is abstract class in PHP?", "options": ["Cannot instantiate", "Blueprint", "Abstract methods", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Abstract classes cannot be instantiated directly."},
-  {"question": "What is abstract method in PHP?", "options": ["No implementation", "Must override", "Declaration", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Abstract methods have no implementation and must be overridden."},
-  {"question": "What is interface vs abstract class?", "options": ["Contract only", "Implementation", "Multiple interfaces", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Interfaces define contracts; abstract classes can provide implementations."},
-  {"question": "What is polymorphism in PHP?", "options": ["Multiple forms", "Same interface", "Different implementations", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Polymorphism allows objects to be treated as their parent type."},
-  {"question": "What is method overloading in PHP?", "options": ["Magic methods", "__call", "Dynamic", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Method overloading uses __call, __callStatic magic methods."},
-  {"question": "What is property overloading in PHP?", "options": ["Magic properties", "__get/__set", "Dynamic", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Property overloading uses __get and __set magic methods."},
-  {"question": "What is type juggling in PHP?", "options": ["Automatic type conversion", "Type casting", "PHP", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "PHP automatically converts types in operations."},
-  {"question": "What is explicit type casting?", "options": ["Type conversion", "(type)$var", "Casting", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "(int)$var explicitly converts type."},
-  {"question": "What is the difference between 'unset' and 'null'?", "options": ["Remove vs assign", "Variable state", "Memory", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "unset() removes variable; null assigns null value."},
-  {"question": "What is the difference between 'empty' and 'isset'?", "options": ["Existence vs value", "Check", "Null", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "isset() checks existence; empty() checks if value is considered empty."},
-  {"question": "What is magic method __construct?", "options": ["Constructor", "Object init", "Initialization", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__construct is called when object is created."},
-  {"question": "What is magic method __destruct?", "options": ["Destructor", "Cleanup", "Object", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__destruct is called when object is destroyed."},
-  {"question": "What is __get magic method?", "options": ["Get property", "Overloading", "Access", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__get is called when accessing undefined property."},
-  {"question": "What is __set magic method?", "options": ["Set property", "Overloading", "Assignment", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__set is called when setting undefined property."},
-  {"question": "What is __isset magic method?", "options": ["Check property", "isset()", "Overloading", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__isset is called when checking undefined property with isset()."},
-  {"question": "What is __unset magic method?", "options": ["Unset property", "unset()", "Overloading", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__unset is called when unsetting undefined property."},
-  {"question": "What is __call magic method?", "options": ["Call method", "Overloading", "Method", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__call is called when calling undefined method."},
-  {"question": "What is __callStatic magic method?", "options": ["Static call", "Overloading", "Method", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__callStatic is called when calling undefined static method."},
-  {"question": "What is __toString magic method?", "options": ["String conversion", "Object to string", "Output", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__toString defines string representation of object."},
-  {"question": "What is __invoke magic method?", "options": ["Callable object", "Object as function", "Invoke", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__invoke allows object to be called as function."},
-  {"question": "What is __debugInfo magic method?", "options": ["Debug output", "var_dump", "Information", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__debugInfo defines output for var_dump()."},
-  {"question": "What is __clone magic method?", "options": ["Clone", "Object cloning", "Copy", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "__clone is called when object is cloned."},
-  {"question": "What is the difference between 'self' and '$this'?", "options": ["Static vs instance", "Class vs object", "Scope", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "self refers to class; $this refers to instance."},
-  {"question": "What is 'final' class in PHP?", "options": ["Cannot extend", "Sealed", "Inheritance", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Final classes cannot be inherited."},
-  {"question": "What is 'final' method in PHP?", "options": ["Cannot override", "Sealed", "Method", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Final methods cannot be overridden."},
-  {"question": "What is 'interface' default methods in PHP?", "options": ["Default implementation", "Since PHP 8", "Optional", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Interfaces can have default implementations since PHP 8."},
-  {"question": "What is 'interface' static methods in PHP?", "options": ["Static", "Interface", "Since PHP 8", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Interfaces can have static methods since PHP 8."},
-  {"question": "What is named arguments in PHP 8?", "options": ["Parameter names", "Order-independent", "Arguments", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Named arguments allow passing parameters by name."},
-  {"question": "What is attributes in PHP 8?", "options": ["Metadata", "Annotations", "Declaration", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Attributes add metadata to classes, methods, properties."},
-  {"question": "What is match expression in PHP 8?", "options": ["Switch replacement", "Expression", "Match", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "match is expression-based switch replacement."},
-  {"question": "What is nullsafe operator (?->) in PHP?", "options": ["Null safety", "Chaining", "Method", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "?-> returns null if object is null instead of error."},
-  {"question": "What is union types in PHP 8?", "options": ["Multiple types", "Type hint", "Declaration", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Union types allow specifying multiple possible types."},
-  {"question": "What is mixed type in PHP 8?", "options": ["Any type", "Type hint", "Universal", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "mixed accepts any type."},
-  {"question": "What is return mixed type in PHP 8?", "options": ["Any return type", "Type hint", "mixed", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "mixed return type accepts any return value."},
-  {"question": "What is static return type in PHP?", "options": ["Self return", "Instance", "Type hint", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "static return type returns instance of called class."},
-  {"question": "What is return type covariance in PHP?", "options": ["Child return type", "Inheritance", "Override", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Child classes can return more specific types."},
-  {"question": "What is constructor property promotion in PHP 8?", "options": ["Class properties", "Constructor", "Shorthand", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Constructor parameters can be promoted to properties."},
-  {"question": "What is the difference between 'throw' and 'throw new'?", "options": ["Expression", "Exception", "Statement", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "throw is now an expression since PHP 8."},
-  {"question": "What is ::class magic constant?", "options": ["Class name", "Fully qualified", "Namespace", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "ClassName::class returns fully qualified class name."},
-  {"question": "What is mysqli prepared statements?", "options": ["Parameterized", "SQL injection", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Prepared statements prevent SQL injection."},
-  {"question": "What is PDO prepared statements?", "options": ["Parameterized", "Database abstraction", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "PDO prepared statements work across databases."},
-  {"question": "What is PDO::ATTR_ERRMODE?", "options": ["Error mode", "PDO", "Configuration", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "ATTR_ERRMODE sets error reporting mode."},
-  {"question": "What is PDO::FETCH_ASSOC?", "options": ["Associative array", "Result", "Fetch mode", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "FETCH_ASSOC returns associative array."},
-  {"question": "What is PDO::FETCH_OBJ?", "options": ["Object", "Result", "Fetch mode", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "FETCH_OBJ returns object."},
-  {"question": "What is PDO transaction?", "options": ["Atomic operations", "Rollback", "Commit", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Transactions ensure atomicity of operations."},
-  {"question": "What is the purpose of beginTransaction?", "options": ["Start transaction", "PDO", "Atomic", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "beginTransaction starts a transaction."},
-  {"question": "What is commit in PDO?", "options": ["Save changes", "Transaction", "Persist", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "commit saves all changes in transaction."},
-  {"question": "What is rollback in PDO?", "options": ["Undo changes", "Transaction", "Cancel", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "rollback undoes all changes in transaction."},
-  {"question": "What is SQL JOIN in MySQL?", "options": ["Combine tables", "Relationships", "Query", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "JOIN combines rows from tables."},
-  {"question": "What is INNER JOIN?", "options": ["Matching rows", "Intersection", "Join", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "INNER JOIN returns matching rows from both tables."},
-  {"question": "What is LEFT JOIN?", "options": ["All from left", "Outer join", "Join", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "LEFT JOIN returns all left table rows and matching right."},
-  {"question": "What is RIGHT JOIN?", "options": ["All from right", "Outer join", "Join", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "RIGHT JOIN returns all right table rows and matching left."},
-  {"question": "What is GROUP BY?", "options": ["Group rows", "Aggregation", "Clause", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "GROUP BY groups rows for aggregation."},
-  {"question": "What is HAVING clause?", "options": ["Filter groups", "WHERE for groups", "Condition", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "HAVING filters grouped results."},
-  {"question": "What is ORDER BY?", "options": ["Sort results", "Ascending/Descending", "Clause", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "ORDER BY sorts result set."},
-  {"question": "What is LIMIT clause?", "options": ["Limit rows", "Pagination", "Clause", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "LIMIT restricts number of rows."},
-  {"question": "What is database normalization?", "options": ["Organize data", "Reduce redundancy", "Tables", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "Normalization organizes data to reduce redundancy."},
-  {"question": "What is primary key?", "options": ["Unique identifier", "Row", "Table", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Primary key uniquely identifies each row."},
-  {"question": "What is foreign key?", "options": ["Relationship", "Reference", "Table", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Foreign key references primary key in another table."},
-  {"question": "What is index in MySQL?", "options": ["Speed up queries", "Data structure", "Search", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Indexes speed up data retrieval."},
-  {"question": "What is unique index?", "options": ["Unique values", "Constraint", "Index", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Unique index ensures unique column values."},
-  {"question": "What is Laravel's Eloquent ORM?", "options": ["Object-relational", "Models", "Database", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Eloquent provides active record pattern for database."},
-  {"question": "What is Laravel's 'hasOne' relationship?", "options": ["One to one", "Relationship", "Model", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "hasOne defines one-to-one relationship."},
-  {"question": "What is Laravel's 'hasMany' relationship?", "options": ["One to many", "Relationship", "Model", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "hasMany defines one-to-many relationship."},
-  {"question": "What is Laravel's 'belongsTo' relationship?", "options": ["Inverse relationship", "Foreign key", "Model", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "belongsTo defines inverse of hasOne/hasMany."},
-  {"question": "What is Laravel's 'belongsToMany' relationship?", "options": ["Many to many", "Pivot table", "Relationship", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "belongsToMany defines many-to-many relationship."},
-  {"question": "What is Laravel's 'with' for eager loading?", "options": ["Load relationships", "Eager", "Query", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "with() eagerly loads relationships."},
-  {"question": "What is Laravel's lazy loading?", "options": ["Load on demand", "Relationship", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Lazy loading loads relationships when accessed."},
-  {"question": "What is Laravel's eager loading?", "options": ["Load upfront", "Relationships", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Eager loading loads relationships in single query."},
-  {"question": "What is Laravel's accessor?", "options": ["Attribute modifier", "Model", "Get", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Accessors modify attribute values when reading."},
-  {"question": "What is Laravel's mutator?", "options": ["Attribute modifier", "Model", "Set", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Mutators modify attribute values when setting."},
-  {"question": "What is Laravel's $fillable?", "options": ["Mass assignment", "Whitelist", "Model", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "fillable specifies which attributes can be mass assigned."},
-  {"question": "What is Laravel's $guarded?", "options": ["Mass assignment", "Blacklist", "Model", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "guarded specifies which attributes cannot be mass assigned."},
-  {"question": "What is Laravel's timestamps?", "options": ["Auto columns", "Created/Updated", "Model", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Timestamps automatically manage created_at and updated_at."},
-  {"question": "What is Laravel's 'create' method?", "options": ["Insert record", "Model", "Save", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "create() creates new record with mass assignment."},
-  {"question": "What is Laravel's 'update' method?", "options": ["Update record", "Model", "Save", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "update() updates existing record."},
-  {"question": "What is Laravel's 'delete' method?", "options": ["Delete record", "Model", "Remove", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "delete() removes record from database."},
-  {"question": "What is Laravel's 'find' method?", "options": ["Find by ID", "Model", "Query", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "find() retrieves record by primary key."},
-  {"question": "What is Laravel's 'first' method?", "options": ["First record", "Query", "Result", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "first() returns first record matching query."},
-  {"question": "What is Laravel's 'get' method?", "options": ["All records", "Query", "Result", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "get() returns all records matching query."},
-  {"question": "What is Laravel's 'where' method?", "options": ["Filter", "Query", "Condition", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "where() adds conditions to query."},
-  {"question": "What is Laravel's 'orderBy' method?", "options": ["Sort", "Query", "Order", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "orderBy() sorts query results."},
-  {"question": "What is Laravel's 'limit' method?", "options": ["Limit results", "Query", "Pagination", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "limit() restricts number of results."}
+  {
+    "question": "What is Array.slice?",
+    "options": [
+      "Extract portion",
+      "Non-mutating",
+      "Returns new array",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Extract portion",
+      "Non-mutating",
+      "Returns new array",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Array.slice? explanation."
+  },
+  {
+    "question": "What is the spaceship operator (<=>) in PHP?",
+    "options": [
+      "Combined comparison",
+      "Three-way",
+      "Order",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "<=> returns -1, 0, or 1 for less than, equal, or greater than."
+  },
+  {
+    "question": "What is the null coalescing operator (??) in PHP?",
+    "options": [
+      "Null check",
+      "Default value",
+      "Ternary",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "?? returns left operand if exists and not null; otherwise right operand."
+  },
+  {
+    "question": "What is the spaceship operator return values?",
+    "options": [
+      "-1, 0, 1",
+      "Comparison",
+      "Ordering",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Returns -1 if left < right, 0 if equal, 1 if left > right."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is variable variables in PHP?",
+    "options": [
+      "Dynamic variables",
+      "$$var",
+      "Reference",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "$$name creates variable from value of $name."
+  },
+  {
+    "question": "What is the use of 'global' keyword?",
+    "options": [
+      "Global scope",
+      "Access",
+      "Variable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "global allows access to global variables."
+  },
+  {
+    "question": "What is the purpose of 'static' keyword in functions?",
+    "options": [
+      "Persistent",
+      "Static variable",
+      "Memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Static variables retain value between calls."
+  },
+  {
+    "question": "What is anonymous function in PHP?",
+    "options": [
+      "Lambda",
+      "Closure",
+      "Function without name",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Anonymous functions are functions without names."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is arrow function in PHP?",
+    "options": [
+      "Short closure",
+      "fn keyword",
+      "Expression",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Arrow functions (fn) provide shorter syntax for simple closures."
+  },
+  {
+    "question": "What is the use of 'use' in closures?",
+    "options": [
+      "Capture variables",
+      "Scope",
+      "Closure",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "use captures variables from parent scope."
+  },
+  {
+    "question": "What is the difference between 'use' by value vs by reference?",
+    "options": [
+      "Copy vs reference",
+      "Mutation",
+      "Scope",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "use $var copies; use &$var references for mutation."
+  },
+  {
+    "question": "What is variable scope in PHP?",
+    "options": [
+      "Variable visibility",
+      "Global/local",
+      "Access",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Scope determines where variables are accessible."
+  },
+  {
+    "question": "What is the difference between 'require' and 'include'?",
+    "options": [
+      "Fatal vs warning",
+      "Error handling",
+      "Loading",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "require generates fatal error on failure; include generates warning."
+  },
+  {
+    "question": "What is namespace in PHP?",
+    "options": [
+      "Code organization",
+      "Logical grouping",
+      "Package",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Namespaces organize code into logical groups."
+  },
+  {
+    "question": "What is the purpose of 'use' statement in namespaces?",
+    "options": [
+      "Import namespace",
+      "Alias",
+      "Namespace",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "use imports namespaces and creates aliases."
+  },
+  {
+    "question": "What is the difference between 'use' and 'use as'?",
+    "options": [
+      "Import vs alias",
+      "Namespace",
+      "Naming",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "use imports; use as creates alias."
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "options": [
+      "Code reuse",
+      "Horizontal reuse",
+      "Multiple",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Traits enable code reuse without inheritance."
+  },
+  {
+    "question": "What is trait conflict resolution in PHP?",
+    "options": [
+      "Insteadof",
+      "Alias",
+      "Conflict",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "insteadof resolves method conflicts between traits."
+  },
+  {
+    "question": "What is the purpose of 'as' in trait conflict resolution?",
+    "options": [
+      "Rename method",
+      "Alias",
+      "Conflict",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "as renames method from trait."
+  },
+  {
+    "question": "What is abstract class in PHP?",
+    "options": [
+      "Cannot instantiate",
+      "Blueprint",
+      "Abstract methods",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Abstract classes cannot be instantiated directly."
+  },
+  {
+    "question": "What is abstract method in PHP?",
+    "options": [
+      "No implementation",
+      "Must override",
+      "Declaration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Abstract methods have no implementation and must be overridden."
+  },
+  {
+    "question": "What is interface vs abstract class?",
+    "options": [
+      "Contract only",
+      "Implementation",
+      "Multiple interfaces",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Interfaces define contracts; abstract classes can provide implementations."
+  },
+  {
+    "question": "What is polymorphism in PHP?",
+    "options": [
+      "Multiple forms",
+      "Same interface",
+      "Different implementations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Polymorphism allows objects to be treated as their parent type."
+  },
+  {
+    "question": "What is method overloading in PHP?",
+    "options": [
+      "Magic methods",
+      "__call",
+      "Dynamic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Method overloading uses __call, __callStatic magic methods."
+  },
+  {
+    "question": "What is property overloading in PHP?",
+    "options": [
+      "Magic properties",
+      "__get/__set",
+      "Dynamic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Property overloading uses __get and __set magic methods."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is the difference between 'unset' and 'null'?",
+    "options": [
+      "Remove vs assign",
+      "Variable state",
+      "Memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "unset() removes variable; null assigns null value."
+  },
+  {
+    "question": "What is the difference between 'empty' and 'isset'?",
+    "options": [
+      "Existence vs value",
+      "Check",
+      "Null",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "isset() checks existence; empty() checks if value is considered empty."
+  },
+  {
+    "question": "What is magic method __construct?",
+    "options": [
+      "Constructor",
+      "Object init",
+      "Initialization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__construct is called when object is created."
+  },
+  {
+    "question": "What is magic method __destruct?",
+    "options": [
+      "Destructor",
+      "Cleanup",
+      "Object",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__destruct is called when object is destroyed."
+  },
+  {
+    "question": "What is __get magic method?",
+    "options": [
+      "Get property",
+      "Overloading",
+      "Access",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__get is called when accessing undefined property."
+  },
+  {
+    "question": "What is __set magic method?",
+    "options": [
+      "Set property",
+      "Overloading",
+      "Assignment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__set is called when setting undefined property."
+  },
+  {
+    "question": "What is __isset magic method?",
+    "options": [
+      "Check property",
+      "isset()",
+      "Overloading",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__isset is called when checking undefined property with isset()."
+  },
+  {
+    "question": "What is __unset magic method?",
+    "options": [
+      "Unset property",
+      "unset()",
+      "Overloading",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__unset is called when unsetting undefined property."
+  },
+  {
+    "question": "What is __call magic method?",
+    "options": [
+      "Call method",
+      "Overloading",
+      "Method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__call is called when calling undefined method."
+  },
+  {
+    "question": "What is __callStatic magic method?",
+    "options": [
+      "Static call",
+      "Overloading",
+      "Method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__callStatic is called when calling undefined static method."
+  },
+  {
+    "question": "What is __toString magic method?",
+    "options": [
+      "String conversion",
+      "Object to string",
+      "Output",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__toString defines string representation of object."
+  },
+  {
+    "question": "What is __invoke magic method?",
+    "options": [
+      "Callable object",
+      "Object as function",
+      "Invoke",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__invoke allows object to be called as function."
+  },
+  {
+    "question": "What is __debugInfo magic method?",
+    "options": [
+      "Debug output",
+      "var_dump",
+      "Information",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__debugInfo defines output for var_dump()."
+  },
+  {
+    "question": "What is __clone magic method?",
+    "options": [
+      "Clone",
+      "Object cloning",
+      "Copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "__clone is called when object is cloned."
+  },
+  {
+    "question": "What is the difference between 'self' and '$this'?",
+    "options": [
+      "Static vs instance",
+      "Class vs object",
+      "Scope",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "self refers to class; $this refers to instance."
+  },
+  {
+    "question": "What is 'final' class in PHP?",
+    "options": [
+      "Cannot extend",
+      "Sealed",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Final classes cannot be inherited."
+  },
+  {
+    "question": "What is 'final' method in PHP?",
+    "options": [
+      "Cannot override",
+      "Sealed",
+      "Method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Final methods cannot be overridden."
+  },
+  {
+    "question": "What is 'interface' default methods in PHP?",
+    "options": [
+      "Default implementation",
+      "Since PHP 8",
+      "Optional",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Interfaces can have default implementations since PHP 8."
+  },
+  {
+    "question": "What is 'interface' static methods in PHP?",
+    "options": [
+      "Static",
+      "Interface",
+      "Since PHP 8",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Interfaces can have static methods since PHP 8."
+  },
+  {
+    "question": "What is named arguments in PHP 8?",
+    "options": [
+      "Parameter names",
+      "Order-independent",
+      "Arguments",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Named arguments allow passing parameters by name."
+  },
+  {
+    "question": "What is attributes in PHP 8?",
+    "options": [
+      "Metadata",
+      "Annotations",
+      "Declaration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Attributes add metadata to classes, methods, properties."
+  },
+  {
+    "question": "What is match expression in PHP 8?",
+    "options": [
+      "Switch replacement",
+      "Expression",
+      "Match",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "match is expression-based switch replacement."
+  },
+  {
+    "question": "What is nullsafe operator (?->) in PHP?",
+    "options": [
+      "Null safety",
+      "Chaining",
+      "Method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "?-> returns null if object is null instead of error."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is return type covariance in PHP?",
+    "options": [
+      "Child return type",
+      "Inheritance",
+      "Override",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Child classes can return more specific types."
+  },
+  {
+    "question": "What is constructor property promotion in PHP 8?",
+    "options": [
+      "Class properties",
+      "Constructor",
+      "Shorthand",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Constructor parameters can be promoted to properties."
+  },
+  {
+    "question": "What is the difference between 'throw' and 'throw new'?",
+    "options": [
+      "Expression",
+      "Exception",
+      "Statement",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "throw is now an expression since PHP 8."
+  },
+  {
+    "question": "What is ::class magic constant?",
+    "options": [
+      "Class name",
+      "Fully qualified",
+      "Namespace",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "ClassName::class returns fully qualified class name."
+  },
+  {
+    "question": "What is mysqli prepared statements?",
+    "options": [
+      "Parameterized",
+      "SQL injection",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Prepared statements prevent SQL injection."
+  },
+  {
+    "question": "What is PDO prepared statements?",
+    "options": [
+      "Parameterized",
+      "Database abstraction",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "PDO prepared statements work across databases."
+  },
+  {
+    "question": "What is PDO::ATTR_ERRMODE?",
+    "options": [
+      "Error mode",
+      "PDO",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "ATTR_ERRMODE sets error reporting mode."
+  },
+  {
+    "question": "What is PDO::FETCH_ASSOC?",
+    "options": [
+      "Associative array",
+      "Result",
+      "Fetch mode",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "FETCH_ASSOC returns associative array."
+  },
+  {
+    "question": "What is PDO::FETCH_OBJ?",
+    "options": [
+      "Object",
+      "Result",
+      "Fetch mode",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "FETCH_OBJ returns object."
+  },
+  {
+    "question": "What is PDO transaction?",
+    "options": [
+      "Atomic operations",
+      "Rollback",
+      "Commit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Transactions ensure atomicity of operations."
+  },
+  {
+    "question": "What is the purpose of beginTransaction?",
+    "options": [
+      "Start transaction",
+      "PDO",
+      "Atomic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "beginTransaction starts a transaction."
+  },
+  {
+    "question": "What is commit in PDO?",
+    "options": [
+      "Save changes",
+      "Transaction",
+      "Persist",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "commit saves all changes in transaction."
+  },
+  {
+    "question": "What is rollback in PDO?",
+    "options": [
+      "Undo changes",
+      "Transaction",
+      "Cancel",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "rollback undoes all changes in transaction."
+  },
+  {
+    "question": "What is SQL JOIN in MySQL?",
+    "options": [
+      "Combine tables",
+      "Relationships",
+      "Query",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "JOIN combines rows from tables."
+  },
+  {
+    "question": "What is INNER JOIN?",
+    "options": [
+      "Matching rows",
+      "Intersection",
+      "Join",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "INNER JOIN returns matching rows from both tables."
+  },
+  {
+    "question": "What is LEFT JOIN?",
+    "options": [
+      "All from left",
+      "Outer join",
+      "Join",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "LEFT JOIN returns all left table rows and matching right."
+  },
+  {
+    "question": "What is RIGHT JOIN?",
+    "options": [
+      "All from right",
+      "Outer join",
+      "Join",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "RIGHT JOIN returns all right table rows and matching left."
+  },
+  {
+    "question": "What is GROUP BY?",
+    "options": [
+      "Group rows",
+      "Aggregation",
+      "Clause",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "GROUP BY groups rows for aggregation."
+  },
+  {
+    "question": "What is HAVING clause?",
+    "options": [
+      "Filter groups",
+      "WHERE for groups",
+      "Condition",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "HAVING filters grouped results."
+  },
+  {
+    "question": "What is ORDER BY?",
+    "options": [
+      "Sort results",
+      "Ascending/Descending",
+      "Clause",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "ORDER BY sorts result set."
+  },
+  {
+    "question": "What is LIMIT clause?",
+    "options": [
+      "Limit rows",
+      "Pagination",
+      "Clause",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "LIMIT restricts number of rows."
+  },
+  {
+    "question": "What is database normalization?",
+    "options": [
+      "Organize data",
+      "Reduce redundancy",
+      "Tables",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "Normalization organizes data to reduce redundancy."
+  },
+  {
+    "question": "What is primary key?",
+    "options": [
+      "Unique identifier",
+      "Row",
+      "Table",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Primary key uniquely identifies each row."
+  },
+  {
+    "question": "What is foreign key?",
+    "options": [
+      "Relationship",
+      "Reference",
+      "Table",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Foreign key references primary key in another table."
+  },
+  {
+    "question": "What is index in MySQL?",
+    "options": [
+      "Speed up queries",
+      "Data structure",
+      "Search",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Indexes speed up data retrieval."
+  },
+  {
+    "question": "What is unique index?",
+    "options": [
+      "Unique values",
+      "Constraint",
+      "Index",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Unique index ensures unique column values."
+  },
+  {
+    "question": "What is Laravel's Eloquent ORM?",
+    "options": [
+      "Object-relational",
+      "Models",
+      "Database",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Eloquent provides active record pattern for database."
+  },
+  {
+    "question": "What is Laravel's 'hasOne' relationship?",
+    "options": [
+      "One to one",
+      "Relationship",
+      "Model",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "hasOne defines one-to-one relationship."
+  },
+  {
+    "question": "What is Laravel's 'hasMany' relationship?",
+    "options": [
+      "One to many",
+      "Relationship",
+      "Model",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "hasMany defines one-to-many relationship."
+  },
+  {
+    "question": "What is Laravel's 'belongsTo' relationship?",
+    "options": [
+      "Inverse relationship",
+      "Foreign key",
+      "Model",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "belongsTo defines inverse of hasOne/hasMany."
+  },
+  {
+    "question": "What is Laravel's 'belongsToMany' relationship?",
+    "options": [
+      "Many to many",
+      "Pivot table",
+      "Relationship",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "belongsToMany defines many-to-many relationship."
+  },
+  {
+    "question": "What is Laravel's 'with' for eager loading?",
+    "options": [
+      "Load relationships",
+      "Eager",
+      "Query",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "with() eagerly loads relationships."
+  },
+  {
+    "question": "What is Laravel's lazy loading?",
+    "options": [
+      "Load on demand",
+      "Relationship",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Lazy loading loads relationships when accessed."
+  },
+  {
+    "question": "What is Laravel's eager loading?",
+    "options": [
+      "Load upfront",
+      "Relationships",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Eager loading loads relationships in single query."
+  },
+  {
+    "question": "What is Laravel's accessor?",
+    "options": [
+      "Attribute modifier",
+      "Model",
+      "Get",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Accessors modify attribute values when reading."
+  },
+  {
+    "question": "What is Laravel's mutator?",
+    "options": [
+      "Attribute modifier",
+      "Model",
+      "Set",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Mutators modify attribute values when setting."
+  },
+  {
+    "question": "What is Laravel's $fillable?",
+    "options": [
+      "Mass assignment",
+      "Whitelist",
+      "Model",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "fillable specifies which attributes can be mass assigned."
+  },
+  {
+    "question": "What is Laravel's $guarded?",
+    "options": [
+      "Mass assignment",
+      "Blacklist",
+      "Model",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "guarded specifies which attributes cannot be mass assigned."
+  },
+  {
+    "question": "What is Laravel's timestamps?",
+    "options": [
+      "Auto columns",
+      "Created/Updated",
+      "Model",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Timestamps automatically manage created_at and updated_at."
+  },
+  {
+    "question": "What is Laravel's 'create' method?",
+    "options": [
+      "Insert record",
+      "Model",
+      "Save",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "create() creates new record with mass assignment."
+  },
+  {
+    "question": "What is Laravel's 'update' method?",
+    "options": [
+      "Update record",
+      "Model",
+      "Save",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "update() updates existing record."
+  },
+  {
+    "question": "What is Laravel's 'delete' method?",
+    "options": [
+      "Delete record",
+      "Model",
+      "Remove",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "delete() removes record from database."
+  },
+  {
+    "question": "What is Laravel's 'find' method?",
+    "options": [
+      "Find by ID",
+      "Model",
+      "Query",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "find() retrieves record by primary key."
+  },
+  {
+    "question": "What is Laravel's 'first' method?",
+    "options": [
+      "First record",
+      "Query",
+      "Result",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "first() returns first record matching query."
+  },
+  {
+    "question": "What is Laravel's 'get' method?",
+    "options": [
+      "All records",
+      "Query",
+      "Result",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "get() returns all records matching query."
+  },
+  {
+    "question": "What is Laravel's 'where' method?",
+    "options": [
+      "Filter",
+      "Query",
+      "Condition",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "where() adds conditions to query."
+  },
+  {
+    "question": "What is Laravel's 'orderBy' method?",
+    "options": [
+      "Sort",
+      "Query",
+      "Order",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "orderBy() sorts query results."
+  },
+  {
+    "question": "What is Laravel's 'limit' method?",
+    "options": [
+      "Limit results",
+      "Query",
+      "Pagination",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "limit() restricts number of results."
+  },
+  {
+    "question": "What is OOP? (Level 3 #107)",
+    "options": [
+      "Class",
+      "Object",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Class",
+      "Object",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is PDO? (Level 3 #108)",
+    "options": [
+      "Database",
+      "Prepared statement",
+      "Multiple databases",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Database",
+      "Prepared statement",
+      "Multiple databases",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is PDO? explanation."
+  },
+  {
+    "question": "What is namespace? (Level 3 #109)",
+    "options": [
+      "Scope",
+      "Autoloading",
+      "Organization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Scope",
+      "Autoloading",
+      "Organization",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is namespace? explanation."
+  },
+  {
+    "question": "What is trait? (Level 3 #110)",
+    "options": [
+      "Code reuse",
+      "Multiple",
+      "Method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Code reuse",
+      "Multiple",
+      "Method",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is trait? explanation."
+  },
+  {
+    "question": "What is interface? (Level 3 #111)",
+    "options": [
+      "Contract",
+      "Multiple",
+      "Implementation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Contract",
+      "Multiple",
+      "Implementation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interface? explanation."
+  },
+  {
+    "question": "What is closure? (Level 3 #112)",
+    "options": [
+      "Anonymous",
+      "Use",
+      "Callback",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Anonymous",
+      "Use",
+      "Callback",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is closure? explanation."
+  },
+  {
+    "question": "What is composer? (Level 3 #113)",
+    "options": [
+      "Dependency",
+      "Autoload",
+      "Package",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Dependency",
+      "Autoload",
+      "Package",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composer? explanation."
+  },
+  {
+    "question": "What is PSR? (Level 3 #114)",
+    "options": [
+      "Standard",
+      "Coding",
+      "Guidelines",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Standard",
+      "Coding",
+      "Guidelines",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is PSR? explanation."
+  },
+  {
+    "question": "What is autoloading? (Level 3 #115)",
+    "options": [
+      "Class",
+      "PSR-4",
+      "Require",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Class",
+      "PSR-4",
+      "Require",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is autoloading? explanation."
+  },
+  {
+    "question": "What is exception? (Level 3 #116)",
+    "options": [
+      "Try",
+      "Catch",
+      "Throw",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Try",
+      "Catch",
+      "Throw",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is exception? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  }
 ]

@@ -1,103 +1,1548 @@
 [
-  {"question": "What is Laravel's file storage?", "options": ["File system abstraction", "Database storage", "Cache storage", "Session storage"], "correctOptions": ["File system abstraction"], "time": 30, "details": "Laravel provides a filesystem abstraction."},
-  {"question": "What disks are available?", "options": ["local, public, s3, ftp, sftp", "mysql, postgres, sqlite", "redis, memcached, file", "s3, rackspace, azure"], "correctOptions": ["local, public, s3, ftp, sftp"], "time": 35, "details": "Laravel supports multiple storage disks."},
-  {"question": "Where is local storage?", "options": ["storage/app", "storage/framework", "storage/logs", "app/storage"], "correctOptions": ["storage/app"], "time": 30, "details": "Local files are stored in storage/app."},
-  {"question": "How do you get Storage facade?", "options": ["use Illuminate\\Support\\Facades\\Storage", "use Storage", "use File", "use Disk"], "correctOptions": ["use Illuminate\\Support\\Facades\\Storage"], "time": 35, "details": "Import the Storage facade for file operations."},
-  {"question": "How do you put a file?", "options": ["Storage::put()", "Storage::save()", "Storage::create()", "Storage::add()"], "correctOptions": ["Storage::put()"], "time": 30, "details": "put() stores a file on disk."},
-  {"question": "How do you get a file?", "options": ["Storage::get()", "Storage::read()", "Storage::fetch()", "Storage::load()"], "correctOptions": ["Storage::get()"], "time": 30, "details": "get() retrieves file contents."},
-  {"question": "How do you check if file exists?", "options": ["Storage::exists()", "Storage::has()", "Storage::check()", "Storage::find()"], "correctOptions": ["Storage::exists()"], "time": 30, "details": "exists() checks if a file exists."},
-  {"question": "How do you delete a file?", "options": ["Storage::delete()", "Storage::remove()", "Storage::unlink()", "Storage::destroy()"], "correctOptions": ["Storage::delete()"], "time": 30, "details": "delete() removes a file from storage."},
-  {"question": "How do you copy a file?", "options": ["Storage::copy()", "Storage::move()", "Storage::duplicate()", "Storage::clone()"], "correctOptions": ["Storage::copy()"], "time": 30, "details": "copy() duplicates a file to new location."},
-  {"question": "How do you move a file?", "options": ["Storage::move()", "Storage::copy()", "Storage::rename()", "Storage::transfer()"], "correctOptions": ["Storage::move()"], "time": 30, "details": "move() relocates a file."},
-  {"question": "How do you get file URL?", "options": ["Storage::url()", "Storage::link()", "Storage::path()", "Storage::route()"], "correctOptions": ["Storage::url()"], "time": 30, "details": "url() generates a temporary URL."},
-  {"question": "What is temporary URL?", "options": ["Time-limited access URL", "Permanent URL", "Local URL", "Public URL"], "correctOptions": ["Time-limited access URL"], "time": 35, "details": "Temporary URLs grant time-limited access."},
-  {"question": "How do you upload files?", "options": ["$request->file()", "$_FILES", "$request->upload()", "Input::file()"], "correctOptions": ["$request->file()"], "time": 30, "details": "request->file() retrieves uploaded files."},
-  {"question": "What is store() method?", "options": ["Store uploaded file", "Get uploaded file", "Delete uploaded file", "Validate file"], "correctOptions": ["Store uploaded file"], "time": 35, "details": "store() moves uploaded file to storage."},
-  {"question": "What is storeAs()?", "options": ["Store with custom name", "Store as is", "Store and return", "Store and link"], "correctOptions": ["Store with custom name"], "time": 35, "details": "storeAs() stores file with specified name."},
-  {"question": "How do you get file size?", "options": ["$file->getSize()", "$file->size()", "$file->get()", "$file->length()"], "correctOptions": ["$file->getSize()"], "time": 30, "details": "getSize() returns file size in bytes."},
-  {"question": "How do you get file extension?", "options": ["$file->getClientOriginalExtension()", "$file->extension()", "$file->type()", "$file->mime()"], "correctOptions": ["$file->getClientOriginalExtension()"], "time": 35, "details": "getClientOriginalExtension() gets file extension."},
-  {"question": "How do you validate file uploads?", "options": ["'file' => 'required|mimes:jpg,png'", "'file' => 'required|image'", "'file' => 'required|upload'", "'file' => 'required|file'"], "correctOptions": ["'file' => 'required|mimes:jpg,png'"], "time": 40, "details": "Use mimes rule to validate file types."},
-  {"question": "What is the image validation rule?", "options": ["Validate image file", "Validate any file", "Validate size", "Validate name"], "correctOptions": ["Validate image file"], "time": 35, "details": "image rule validates image MIME types."},
-  {"question": "What is the mimes rule?", "options": ["File extension validation", "File size validation", "File name validation", "File content validation"], "correctOptions": ["File extension validation"], "time": 35, "details": "mimes validates allowed file extensions."},
-  {"question": "What is the max validation rule?", "options": ["Maximum file size", "Minimum file size", "File type", "File name"], "correctOptions": ["Maximum file size"], "time": 35, "details": "max validates maximum file size in KB."},
-  {"question": "What is intervention/image?", "options": ["Image manipulation library", "File storage", "PDF generation", "File upload"], "correctOptions": ["Image manipulation library"], "time": 35, "details": "Intervention provides image processing."},
-  {"question": "How do you resize an image?", "options": ["Image::make()->resize()", "Image::resize()", "make()->resize()", "resize()"], "correctOptions": ["Image::make()->resize()"], "time": 40, "details": "Intervention's make()->resize() resizes images."},
-  {"question": "What is Laravel's session?", "options": ["User state storage", "Database", "Cache", "File storage"], "correctOptions": ["User state storage"], "time": 30, "details": "Sessions store user state between requests."},
-  {"question": "What session drivers are available?", "options": ["file, cookie, database, redis, memcached", "mysql, postgres, sqlite", "s3, rackspace, local", "cache, session, queue"], "correctOptions": ["file, cookie, database, redis, memcached"], "time": 35, "details": "Laravel supports multiple session drivers."},
-  {"question": "How do you store session data?", "options": ["session()->put('key', 'value')", "session()->set('key', 'value')", "session()->add('key', 'value')", "session()->store('key', 'value')"], "correctOptions": ["session()->put('key', 'value')"], "time": 30, "details": "put() stores data in the session."},
-  {"question": "How do you retrieve session data?", "options": ["session()->get('key')", "session()->read('key')", "session()->fetch('key')", "session()->find('key')"], "correctOptions": ["session()->get('key')"], "time": 30, "details": "get() retrieves data from the session."},
-  {"question": "How do you delete session data?", "options": ["session()->forget('key')", "session()->delete('key')", "session()->remove('key')", "session()->clear('key')"], "correctOptions": ["session()->forget('key')"], "time": 30, "details": "forget() removes data from the session."},
-  {"question": "How do you clear all session data?", "options": ["session()->flush()", "session()->clear()", "session()->destroy()", "session()->reset()"], "correctOptions": ["session()->flush()"], "time": 30, "details": "flush() clears all session data."},
-  {"question": "What is the flash() method?", "options": ["Store data for next request", "Store permanently", "Get data", "Delete data"], "correctOptions": ["Store data for next request"], "time": 35, "details": "flash() stores data for only the next request."},
-  {"question": "What is middleware 'web'?", "options": ["Web session middleware", "API middleware", "Auth middleware", "Cache middleware"], "correctOptions": ["Web session middleware"], "time": 30, "details": "web middleware group enables sessions and cookies."},
-  {"question": "What is the session helper?", "options": ["Global session access", "Session class", "Session driver", "Session config"], "correctOptions": ["Global session access"], "time": 30, "details": "session() is a global helper for sessions."},
-  {"question": "What is CSRF middleware?", "options": ["Prevent CSRF attacks", "Session handling", "Cache handling", "Route handling"], "correctOptions": ["Prevent CSRF attacks"], "time": 35, "details": "CSRF middleware prevents cross-site request forgery."},
-  {"question": "What is the @csrf directive?", "options": ["CSRF token field", "CSRF check", "CSRF protection", "CSRF validation"], "correctOptions": ["CSRF token field"], "time": 30, "details": "@csrf generates a CSRF token input."},
-  {"question": "What is the session:table command?", "options": ["Create session migration", "Clear session", "List session", "Config session"], "correctOptions": ["Create session migration"], "time": 35, "details": "session:table creates database session migration."},
-  {"question": "What is Laravel's mail?", "options": ["Email sending", "Email receiving", "Email validation", "Email storage"], "correctOptions": ["Email sending"], "time": 30, "details": "Laravel provides email sending capabilities."},
-  {"question": "What mail drivers are available?", "options": ["smtp, sendmail, mailgun, ses, postmark", "mysql, postgres, sqlite", "redis, memcached, file", "s3, rackspace, local"], "correctOptions": ["smtp, sendmail, mailgun, ses, postmark"], "time": 35, "details": "Laravel supports multiple mail drivers."},
-  {"question": "How do you create a mailable class?", "options": ["php artisan make:mail OrderShipped", "php artisan create:mail OrderShipped", "php make mail OrderShipped", "composer mail OrderShipped"], "correctOptions": ["php artisan make:mail OrderShipped"], "time": 30, "details": "make:mail creates a mailable class."},
-  {"question": "What is the build() method in Mailable?", "options": ["Define email content", "Send email", "Queue email", "Config email"], "correctOptions": ["Define email content"], "time": 35, "details": "build() defines the email content and recipient."},
-  {"question": "How do you send mail?", "options": ["Mail::to()->send(new OrderShipped())", "Mail::send(new OrderShipped())", "sendMail(new OrderShipped())", "Mail::send(new OrderShipped()->to())"], "correctOptions": ["Mail::to()->send(new OrderShipped())"], "time": 35, "details": "Mail::to()->send() sends the mailable."},
-  {"question": "What is the Mailable view property?", "options": ["Blade template for email", "Data for email", "Subject line", "Sender address"], "correctOptions": ["Blade template for email"], "time": 35, "details": "view property specifies the email template."},
-  {"question": "What is the subject() method?", "options": ["Set email subject", "Get subject", "Validate subject", "Render subject"], "correctOptions": ["Set email subject"], "time": 35, "details": "subject() sets the email subject line."},
-  {"question": "What is the text() method?", "options": ["Plain text version", "HTML version", "Attachment", "Subject"], "correctOptions": ["Plain text version"], "time": 35, "details": "text() sets the plain text email version."},
-  {"question": "What is attach()?", "options": ["Add file attachment", "Add recipient", "Add subject", "Add content"], "correctOptions": ["Add file attachment"], "time": 35, "details": "attach() adds file attachments to emails."},
-  {"question": "What is attachFromStorage()?", "options": ["Attach from storage disk", "Attach local file", "Attach data", "Attach stream"], "correctOptions": ["Attach from storage disk"], "time": 40, "details": "attachFromStorage() attaches files from storage."},
-  {"question": "What is markdown mail?", "options": ["Markdown-based template", "HTML template", "Plain text", "Blade template"], "correctOptions": ["Markdown-based template"], "time": 35, "details": "Markdown mailables use Markdown syntax."},
-  {"question": "How do you create markdown mail?", "options": ["php artisan make:mail OrderShipped --markdown", "php artisan create:mail OrderShipped --markdown", "php make mail OrderShipped --markdown", "composer mail OrderShipped --markdown"], "correctOptions": ["php artisan make:mail OrderShipped --markdown"], "time": 35, "details": "--markdown flag creates markdown mailable."},
-  {"question": "What is Queueable in Mail?", "options": ["Queue mail for background", "Priority mail", "Express mail", "Bulk mail"], "correctOptions": ["Queue mail for background"], "time": 40, "details": "Queueable mailables send via queues."},
-  {"question": "What is Mail::fake()?", "options": ["Prevent actual sending", "Send immediately", "Queue mail", "Store mail"], "correctOptions": ["Prevent actual sending"], "time": 40, "details": "Mail::fake() prevents actual mail delivery."},
-  {"question": "What is assertSent()?", "options": ["Assert mail was sent", "Count sent", "Get sent", "Clear sent"], "correctOptions": ["Assert mail was sent"], "time": 40, "details": "assertSent() checks if mailable was sent."},
-  {"question": "What is Mailtrap?", "options": ["Mail testing service", "Mail sending", "Mail receiving", "Mail storage"], "correctOptions": ["Mail testing service"], "time": 35, "details": "Mailtrap catches development emails."},
-  {"question": "What is Laravel notifications?", "options": ["Multi-channel messaging", "Email only", "Database only", "SMS only"], "correctOptions": ["Multi-channel messaging"], "time": 35, "details": "Notifications support multiple channels."},
-  {"question": "How do you create a notification?", "options": ["php artisan make:notification InvoicePaid", "php artisan create:notification InvoicePaid", "php make notification InvoicePaid", "composer notification InvoicePaid"], "correctOptions": ["php artisan make:notification InvoicePaid"], "time": 30, "details": "make:notification creates a notification class."},
-  {"question": "What is the toMail() method?", "options": ["Email notification channel", "Database channel", "SMS channel", "Slack channel"], "correctOptions": ["Email notification channel"], "time": 35, "details": "toMail() defines the email notification."},
-  {"question": "What is the toDatabase() method?", "options": ["Database notification channel", "Email channel", "SMS channel", "Slack channel"], "correctOptions": ["Database notification channel"], "time": 35, "details": "toDatabase() stores notification in database."},
-  {"question": "What is the toNexmo() method?", "options": ["SMS notification channel", "Email channel", "Database channel", "Slack channel"], "correctOptions": ["SMS notification channel"], "time": 35, "details": "toNexmo() sends SMS notifications."},
-  {"question": "What is the toSlack() method?", "options": ["Slack notification channel", "Email channel", "Database channel", "SMS channel"], "correctOptions": ["Slack notification channel"], "time": 35, "details": "toSlack() sends Slack notifications."},
-  {"question": "How do you send notifications?", "options": ["$user->notify(new InvoicePaid())", "$user->send(new InvoicePaid())", "$user->mail(new InvoicePaid())", "$user->notify()->send()"], "correctOptions": ["$user->notify(new InvoicePaid())"], "time": 35, "details": "notify() sends a notification to user."},
-  {"question": "What is Notification::route()?", "options": ["Custom notification channel", "Email channel", "Database channel", "SMS channel"], "correctOptions": ["Custom notification channel"], "time": 40, "details": "route() sends to custom notification channel."},
-  {"question": "What is Markdown in notifications?", "options": ["Pre-built template", "Custom template", "Simple text", "Basic email"], "correctOptions": ["Pre-built template"], "time": 35, "details": "Markdown provides pre-built notification templates."},
-  {"question": "What is the Notifiable trait?", "options": ["Enables notifications", "Creates notifications", "Sends notifications", "Queues notifications"], "correctOptions": ["Enables notifications"], "time": 35, "details": "Notifiable trait adds notification methods."},
-  {"question": "What is Localizable notification?", "options": ["Multi-language support", "Single language", "Email only", "Database only"], "correctOptions": ["Multi-language support"], "time": 40, "details": "Localizable enables translated notifications."},
-  {"question": "What is database notification?", "options": ["Store in database table", "Email notification", "SMS notification", "Slack notification"], "correctOptions": ["Store in database table"], "time": 35, "details": "Database notifications store in notifications table."},
-  {"question": "What is the notifications table?", "options": ["Store database notifications", "Store email notifications", "Store all emails", "Store users"], "correctOptions": ["Store database notifications"], "time": 35, "details": "notifications table stores in-app notifications."},
-  {"question": "What is notifications:table command?", "options": ["Create notifications migration", "Clear notifications", "List notifications", "Send notifications"], "correctOptions": ["Create notifications migration"], "time": 35, "details": "notifications:table creates the migration."},
-  {"question": "How do you mark notification as read?", "options": ["$notification->markAsRead()", "$notification->read()", "$notification->markRead()", "$notification->seen()"], "correctOptions": ["$notification->markAsRead()"], "time": 40, "details": "markAsRead() marks notification as read."},
-  {"question": "What is Broadcast notification?", "options": ["Real-time notification", "Stored notification", "Email notification", "SMS notification"], "correctOptions": ["Real-time notification"], "time": 40, "details": "BroadcastChannel sends real-time notifications."},
-  {"question": "What is Queueable notification?", "options": ["Async notification sending", "Sync notification", "Priority notification", "Bulk notification"], "correctOptions": ["Async notification sending"], "time": 40, "details": "Implements ShouldQueue for async sending."},
-  {"question": "What is Action in notifications?", "options": ["Button/link in notification", "Email action", "Database action", "SMS action"], "correctOptions": ["Button/link in notification"], "time": 40, "details": "Action adds buttons/links to notifications."},
-  {"question": "What is Error notification?", "options": ["Error-level notification", "Info notification", "Success notification", "Warning notification"], "correctOptions": ["Error-level notification"], "time": 40, "details": "Error notifications indicate serious problems."},
-  {"question": "What is Failure notification?", "options": ["Job/command failure", "Success notification", "Info notification", "Warning notification"], "correctOptions": ["Job/command failure"], "time": 40, "details": "Failure notifications alert on failures."},
-  {"question": "What is database channel priority?", "options": ["Storage priority", "Delivery priority", "Queue priority", "Display priority"], "correctOptions": ["Storage priority"], "time": 40, "details": "Priority determines channel order in database."},
-  {"question": "What is trait Notifiable?", "options": ["Enables model for notifications", "Creates notifications", "Sends notifications", "Queues notifications"], "correctOptions": ["Enables model for notifications"], "time": 35, "details": "Notifiable trait enables receiving notifications."},
-  {"question": "What is Notification::sent()?", "options": ["Check if sent", "Send notification", "Queue notification", "Create notification"], "correctOptions": ["Check if sent"], "time": 40, "details": "sent() checks if notification was sent."},
-  {"question": "What is Laravel's file storage?", "options": ["File system abstraction", "Database storage", "Cache storage", "Session storage"], "correctOptions": ["File system abstraction"], "time": 30, "details": "Laravel provides a filesystem abstraction."},
-  {"question": "What disks are available?", "options": ["local, public, s3, ftp, sftp", "mysql, postgres, sqlite", "redis, memcached, file", "s3, rackspace, azure"], "correctOptions": ["local, public, s3, ftp, sftp"], "time": 35, "details": "Laravel supports multiple storage disks."},
-  {"question": "Where is local storage?", "options": ["storage/app", "storage/framework", "storage/logs", "app/storage"], "correctOptions": ["storage/app"], "time": 30, "details": "Local files are stored in storage/app."},
-  {"question": "How do you get Storage facade?", "options": ["use Illuminate\\Support\\Facades\\Storage", "use Storage", "use File", "use Disk"], "correctOptions": ["use Illuminate\\Support\\Facades\\Storage"], "time": 35, "details": "Import the Storage facade for file operations."},
-  {"question": "How do you put a file?", "options": ["Storage::put()", "Storage::save()", "Storage::create()", "Storage::add()"], "correctOptions": ["Storage::put()"], "time": 30, "details": "put() stores a file on disk."},
-  {"question": "How do you get a file?", "options": ["Storage::get()", "Storage::read()", "Storage::fetch()", "Storage::load()"], "correctOptions": ["Storage::get()"], "time": 30, "details": "get() retrieves file contents."},
-  {"question": "How do you check if file exists?", "options": ["Storage::exists()", "Storage::has()", "Storage::check()", "Storage::find()"], "correctOptions": ["Storage::exists()"], "time": 30, "details": "exists() checks if a file exists."},
-  {"question": "How do you delete a file?", "options": ["Storage::delete()", "Storage::remove()", "Storage::unlink()", "Storage::destroy()"], "correctOptions": ["Storage::delete()"], "time": 30, "details": "delete() removes a file from storage."},
-  {"question": "How do you copy a file?", "options": ["Storage::copy()", "Storage::move()", "Storage::duplicate()", "Storage::clone()"], "correctOptions": ["Storage::copy()"], "time": 30, "details": "copy() duplicates a file to new location."},
-  {"question": "How do you move a file?", "options": ["Storage::move()", "Storage::copy()", "Storage::rename()", "Storage::transfer()"], "correctOptions": ["Storage::move()"], "time": 30, "details": "move() relocates a file."},
-  {"question": "How do you get file URL?", "options": ["Storage::url()", "Storage::link()", "Storage::path()", "Storage::route()"], "correctOptions": ["Storage::url()"], "time": 30, "details": "url() generates a temporary URL."},
-  {"question": "What is temporary URL?", "options": ["Time-limited access URL", "Permanent URL", "Local URL", "Public URL"], "correctOptions": ["Time-limited access URL"], "time": 35, "details": "Temporary URLs grant time-limited access."},
-  {"question": "How do you upload files?", "options": ["$request->file()", "$_FILES", "$request->upload()", "Input::file()"], "correctOptions": ["$request->file()"], "time": 30, "details": "request->file() retrieves uploaded files."},
-  {"question": "What is store() method?", "options": ["Store uploaded file", "Get uploaded file", "Delete uploaded file", "Validate file"], "correctOptions": ["Store uploaded file"], "time": 35, "details": "store() moves uploaded file to storage."},
-  {"question": "What is storeAs()?", "options": ["Store with custom name", "Store as is", "Store and return", "Store and link"], "correctOptions": ["Store with custom name"], "time": 35, "details": "storeAs() stores file with specified name."},
-  {"question": "How do you get file size?", "options": ["$file->getSize()", "$file->size()", "$file->get()", "$file->length()"], "correctOptions": ["$file->getSize()"], "time": 30, "details": "getSize() returns file size in bytes."},
-  {"question": "How do you get file extension?", "options": ["$file->getClientOriginalExtension()", "$file->extension()", "$file->type()", "$file->mime()"], "correctOptions": ["$file->getClientOriginalExtension()"], "time": 35, "details": "getClientOriginalExtension() gets file extension."},
-  {"question": "How do you validate file uploads?", "options": ["'file' => 'required|mimes:jpg,png'", "'file' => 'required|image'", "'file' => 'required|upload'", "'file' => 'required|file'"], "correctOptions": ["'file' => 'required|mimes:jpg,png'"], "time": 40, "details": "Use mimes rule to validate file types."},
-  {"question": "What is the image validation rule?", "options": ["Validate image file", "Validate any file", "Validate size", "Validate name"], "correctOptions": ["Validate image file"], "time": 35, "details": "image rule validates image MIME types."},
-  {"question": "What is the mimes rule?", "options": ["File extension validation", "File size validation", "File name validation", "File content validation"], "correctOptions": ["File extension validation"], "time": 35, "details": "mimes validates allowed file extensions."},
-  {"question": "What is the max validation rule?", "options": ["Maximum file size", "Minimum file size", "File type", "File name"], "correctOptions": ["Maximum file size"], "time": 35, "details": "max validates maximum file size in KB."},
-  {"question": "What is intervention/image?", "options": ["Image manipulation library", "File storage", "PDF generation", "File upload"], "correctOptions": ["Image manipulation library"], "time": 35, "details": "Intervention provides image processing."},
-  {"question": "How do you resize an image?", "options": ["Image::make()->resize()", "Image::resize()", "make()->resize()", "resize()"], "correctOptions": ["Image::make()->resize()"], "time": 40, "details": "Intervention's make()->resize() resizes images."},
-  {"question": "What is Laravel's session?", "options": ["User state storage", "Database", "Cache", "File storage"], "correctOptions": ["User state storage"], "time": 30, "details": "Sessions store user state between requests."},
-  {"question": "What session drivers are available?", "options": ["file, cookie, database, redis, memcached", "mysql, postgres, sqlite", "s3, rackspace, local", "cache, session, queue"], "correctOptions": ["file, cookie, database, redis, memcached"], "time": 35, "details": "Laravel supports multiple session drivers."},
-  {"question": "How do you store session data?", "options": ["session()->put('key', 'value')", "session()->set('key', 'value')", "session()->add('key', 'value')", "session()->store('key', 'value')"], "correctOptions": ["session()->put('key', 'value')"], "time": 30, "details": "put() stores data in the session."},
-  {"question": "How do you retrieve session data?", "options": ["session()->get('key')", "session()->read('key')", "session()->fetch('key')", "session()->find('key')"], "correctOptions": ["session()->get('key')"], "time": 30, "details": "get() retrieves data from the session."}
+  {
+    "question": "What is Laravel's file storage?",
+    "options": [
+      "File system abstraction",
+      "Database storage",
+      "Cache storage",
+      "Session storage"
+    ],
+    "correctOptions": [
+      "File system abstraction"
+    ],
+    "time": 30,
+    "details": "Laravel provides a filesystem abstraction."
+  },
+  {
+    "question": "What disks are available?",
+    "options": [
+      "local, public, s3, ftp, sftp",
+      "mysql, postgres, sqlite",
+      "redis, memcached, file",
+      "s3, rackspace, azure"
+    ],
+    "correctOptions": [
+      "local, public, s3, ftp, sftp"
+    ],
+    "time": 35,
+    "details": "Laravel supports multiple storage disks."
+  },
+  {
+    "question": "Where is local storage?",
+    "options": [
+      "storage/app",
+      "storage/framework",
+      "storage/logs",
+      "app/storage"
+    ],
+    "correctOptions": [
+      "storage/app"
+    ],
+    "time": 30,
+    "details": "Local files are stored in storage/app."
+  },
+  {
+    "question": "How do you get Storage facade?",
+    "options": [
+      "use Illuminate\\Support\\Facades\\Storage",
+      "use Storage",
+      "use File",
+      "use Disk"
+    ],
+    "correctOptions": [
+      "use Illuminate\\Support\\Facades\\Storage"
+    ],
+    "time": 35,
+    "details": "Import the Storage facade for file operations."
+  },
+  {
+    "question": "How do you put a file?",
+    "options": [
+      "Storage::put()",
+      "Storage::save()",
+      "Storage::create()",
+      "Storage::add()"
+    ],
+    "correctOptions": [
+      "Storage::put()"
+    ],
+    "time": 30,
+    "details": "put() stores a file on disk."
+  },
+  {
+    "question": "How do you get a file?",
+    "options": [
+      "Storage::get()",
+      "Storage::read()",
+      "Storage::fetch()",
+      "Storage::load()"
+    ],
+    "correctOptions": [
+      "Storage::get()"
+    ],
+    "time": 30,
+    "details": "get() retrieves file contents."
+  },
+  {
+    "question": "How do you check if file exists?",
+    "options": [
+      "Storage::exists()",
+      "Storage::has()",
+      "Storage::check()",
+      "Storage::find()"
+    ],
+    "correctOptions": [
+      "Storage::exists()"
+    ],
+    "time": 30,
+    "details": "exists() checks if a file exists."
+  },
+  {
+    "question": "How do you delete a file?",
+    "options": [
+      "Storage::delete()",
+      "Storage::remove()",
+      "Storage::unlink()",
+      "Storage::destroy()"
+    ],
+    "correctOptions": [
+      "Storage::delete()"
+    ],
+    "time": 30,
+    "details": "delete() removes a file from storage."
+  },
+  {
+    "question": "How do you copy a file?",
+    "options": [
+      "Storage::copy()",
+      "Storage::move()",
+      "Storage::duplicate()",
+      "Storage::clone()"
+    ],
+    "correctOptions": [
+      "Storage::copy()"
+    ],
+    "time": 30,
+    "details": "copy() duplicates a file to new location."
+  },
+  {
+    "question": "How do you move a file?",
+    "options": [
+      "Storage::move()",
+      "Storage::copy()",
+      "Storage::rename()",
+      "Storage::transfer()"
+    ],
+    "correctOptions": [
+      "Storage::move()"
+    ],
+    "time": 30,
+    "details": "move() relocates a file."
+  },
+  {
+    "question": "How do you get file URL?",
+    "options": [
+      "Storage::url()",
+      "Storage::link()",
+      "Storage::path()",
+      "Storage::route()"
+    ],
+    "correctOptions": [
+      "Storage::url()"
+    ],
+    "time": 30,
+    "details": "url() generates a temporary URL."
+  },
+  {
+    "question": "What is temporary URL?",
+    "options": [
+      "Time-limited access URL",
+      "Permanent URL",
+      "Local URL",
+      "Public URL"
+    ],
+    "correctOptions": [
+      "Time-limited access URL"
+    ],
+    "time": 35,
+    "details": "Temporary URLs grant time-limited access."
+  },
+  {
+    "question": "How do you upload files?",
+    "options": [
+      "$request->file()",
+      "$_FILES",
+      "$request->upload()",
+      "Input::file()"
+    ],
+    "correctOptions": [
+      "$request->file()"
+    ],
+    "time": 30,
+    "details": "request->file() retrieves uploaded files."
+  },
+  {
+    "question": "What is store() method?",
+    "options": [
+      "Store uploaded file",
+      "Get uploaded file",
+      "Delete uploaded file",
+      "Validate file"
+    ],
+    "correctOptions": [
+      "Store uploaded file"
+    ],
+    "time": 35,
+    "details": "store() moves uploaded file to storage."
+  },
+  {
+    "question": "What is storeAs()?",
+    "options": [
+      "Store with custom name",
+      "Store as is",
+      "Store and return",
+      "Store and link"
+    ],
+    "correctOptions": [
+      "Store with custom name"
+    ],
+    "time": 35,
+    "details": "storeAs() stores file with specified name."
+  },
+  {
+    "question": "How do you get file size?",
+    "options": [
+      "$file->getSize()",
+      "$file->size()",
+      "$file->get()",
+      "$file->length()"
+    ],
+    "correctOptions": [
+      "$file->getSize()"
+    ],
+    "time": 30,
+    "details": "getSize() returns file size in bytes."
+  },
+  {
+    "question": "How do you get file extension?",
+    "options": [
+      "$file->getClientOriginalExtension()",
+      "$file->extension()",
+      "$file->type()",
+      "$file->mime()"
+    ],
+    "correctOptions": [
+      "$file->getClientOriginalExtension()"
+    ],
+    "time": 35,
+    "details": "getClientOriginalExtension() gets file extension."
+  },
+  {
+    "question": "How do you validate file uploads?",
+    "options": [
+      "'file' => 'required|mimes:jpg,png'",
+      "'file' => 'required|image'",
+      "'file' => 'required|upload'",
+      "'file' => 'required|file'"
+    ],
+    "correctOptions": [
+      "'file' => 'required|mimes:jpg,png'"
+    ],
+    "time": 40,
+    "details": "Use mimes rule to validate file types."
+  },
+  {
+    "question": "What is the image validation rule?",
+    "options": [
+      "Validate image file",
+      "Validate any file",
+      "Validate size",
+      "Validate name"
+    ],
+    "correctOptions": [
+      "Validate image file"
+    ],
+    "time": 35,
+    "details": "image rule validates image MIME types."
+  },
+  {
+    "question": "What is the mimes rule?",
+    "options": [
+      "File extension validation",
+      "File size validation",
+      "File name validation",
+      "File content validation"
+    ],
+    "correctOptions": [
+      "File extension validation"
+    ],
+    "time": 35,
+    "details": "mimes validates allowed file extensions."
+  },
+  {
+    "question": "What is the max validation rule?",
+    "options": [
+      "Maximum file size",
+      "Minimum file size",
+      "File type",
+      "File name"
+    ],
+    "correctOptions": [
+      "Maximum file size"
+    ],
+    "time": 35,
+    "details": "max validates maximum file size in KB."
+  },
+  {
+    "question": "What is intervention/image?",
+    "options": [
+      "Image manipulation library",
+      "File storage",
+      "PDF generation",
+      "File upload"
+    ],
+    "correctOptions": [
+      "Image manipulation library"
+    ],
+    "time": 35,
+    "details": "Intervention provides image processing."
+  },
+  {
+    "question": "How do you resize an image?",
+    "options": [
+      "Image::make()->resize()",
+      "Image::resize()",
+      "make()->resize()",
+      "resize()"
+    ],
+    "correctOptions": [
+      "Image::make()->resize()"
+    ],
+    "time": 40,
+    "details": "Intervention's make()->resize() resizes images."
+  },
+  {
+    "question": "What is Laravel's session?",
+    "options": [
+      "User state storage",
+      "Database",
+      "Cache",
+      "File storage"
+    ],
+    "correctOptions": [
+      "User state storage"
+    ],
+    "time": 30,
+    "details": "Sessions store user state between requests."
+  },
+  {
+    "question": "What session drivers are available?",
+    "options": [
+      "file, cookie, database, redis, memcached",
+      "mysql, postgres, sqlite",
+      "s3, rackspace, local",
+      "cache, session, queue"
+    ],
+    "correctOptions": [
+      "file, cookie, database, redis, memcached"
+    ],
+    "time": 35,
+    "details": "Laravel supports multiple session drivers."
+  },
+  {
+    "question": "How do you store session data?",
+    "options": [
+      "session()->put('key', 'value')",
+      "session()->set('key', 'value')",
+      "session()->add('key', 'value')",
+      "session()->store('key', 'value')"
+    ],
+    "correctOptions": [
+      "session()->put('key', 'value')"
+    ],
+    "time": 30,
+    "details": "put() stores data in the session."
+  },
+  {
+    "question": "How do you retrieve session data?",
+    "options": [
+      "session()->get('key')",
+      "session()->read('key')",
+      "session()->fetch('key')",
+      "session()->find('key')"
+    ],
+    "correctOptions": [
+      "session()->get('key')"
+    ],
+    "time": 30,
+    "details": "get() retrieves data from the session."
+  },
+  {
+    "question": "How do you delete session data?",
+    "options": [
+      "session()->forget('key')",
+      "session()->delete('key')",
+      "session()->remove('key')",
+      "session()->clear('key')"
+    ],
+    "correctOptions": [
+      "session()->forget('key')"
+    ],
+    "time": 30,
+    "details": "forget() removes data from the session."
+  },
+  {
+    "question": "How do you clear all session data?",
+    "options": [
+      "session()->flush()",
+      "session()->clear()",
+      "session()->destroy()",
+      "session()->reset()"
+    ],
+    "correctOptions": [
+      "session()->flush()"
+    ],
+    "time": 30,
+    "details": "flush() clears all session data."
+  },
+  {
+    "question": "What is the flash() method?",
+    "options": [
+      "Store data for next request",
+      "Store permanently",
+      "Get data",
+      "Delete data"
+    ],
+    "correctOptions": [
+      "Store data for next request"
+    ],
+    "time": 35,
+    "details": "flash() stores data for only the next request."
+  },
+  {
+    "question": "What is middleware 'web'?",
+    "options": [
+      "Web session middleware",
+      "API middleware",
+      "Auth middleware",
+      "Cache middleware"
+    ],
+    "correctOptions": [
+      "Web session middleware"
+    ],
+    "time": 30,
+    "details": "web middleware group enables sessions and cookies."
+  },
+  {
+    "question": "What is the session helper?",
+    "options": [
+      "Global session access",
+      "Session class",
+      "Session driver",
+      "Session config"
+    ],
+    "correctOptions": [
+      "Global session access"
+    ],
+    "time": 30,
+    "details": "session() is a global helper for sessions."
+  },
+  {
+    "question": "What is CSRF middleware?",
+    "options": [
+      "Prevent CSRF attacks",
+      "Session handling",
+      "Cache handling",
+      "Route handling"
+    ],
+    "correctOptions": [
+      "Prevent CSRF attacks"
+    ],
+    "time": 35,
+    "details": "CSRF middleware prevents cross-site request forgery."
+  },
+  {
+    "question": "What is the @csrf directive?",
+    "options": [
+      "CSRF token field",
+      "CSRF check",
+      "CSRF protection",
+      "CSRF validation"
+    ],
+    "correctOptions": [
+      "CSRF token field"
+    ],
+    "time": 30,
+    "details": "@csrf generates a CSRF token input."
+  },
+  {
+    "question": "What is the session:table command?",
+    "options": [
+      "Create session migration",
+      "Clear session",
+      "List session",
+      "Config session"
+    ],
+    "correctOptions": [
+      "Create session migration"
+    ],
+    "time": 35,
+    "details": "session:table creates database session migration."
+  },
+  {
+    "question": "What is Laravel's mail?",
+    "options": [
+      "Email sending",
+      "Email receiving",
+      "Email validation",
+      "Email storage"
+    ],
+    "correctOptions": [
+      "Email sending"
+    ],
+    "time": 30,
+    "details": "Laravel provides email sending capabilities."
+  },
+  {
+    "question": "What mail drivers are available?",
+    "options": [
+      "smtp, sendmail, mailgun, ses, postmark",
+      "mysql, postgres, sqlite",
+      "redis, memcached, file",
+      "s3, rackspace, local"
+    ],
+    "correctOptions": [
+      "smtp, sendmail, mailgun, ses, postmark"
+    ],
+    "time": 35,
+    "details": "Laravel supports multiple mail drivers."
+  },
+  {
+    "question": "How do you create a mailable class?",
+    "options": [
+      "php artisan make:mail OrderShipped",
+      "php artisan create:mail OrderShipped",
+      "php make mail OrderShipped",
+      "composer mail OrderShipped"
+    ],
+    "correctOptions": [
+      "php artisan make:mail OrderShipped"
+    ],
+    "time": 30,
+    "details": "make:mail creates a mailable class."
+  },
+  {
+    "question": "What is the build() method in Mailable?",
+    "options": [
+      "Define email content",
+      "Send email",
+      "Queue email",
+      "Config email"
+    ],
+    "correctOptions": [
+      "Define email content"
+    ],
+    "time": 35,
+    "details": "build() defines the email content and recipient."
+  },
+  {
+    "question": "How do you send mail?",
+    "options": [
+      "Mail::to()->send(new OrderShipped())",
+      "Mail::send(new OrderShipped())",
+      "sendMail(new OrderShipped())",
+      "Mail::send(new OrderShipped()->to())"
+    ],
+    "correctOptions": [
+      "Mail::to()->send(new OrderShipped())"
+    ],
+    "time": 35,
+    "details": "Mail::to()->send() sends the mailable."
+  },
+  {
+    "question": "What is the Mailable view property?",
+    "options": [
+      "Blade template for email",
+      "Data for email",
+      "Subject line",
+      "Sender address"
+    ],
+    "correctOptions": [
+      "Blade template for email"
+    ],
+    "time": 35,
+    "details": "view property specifies the email template."
+  },
+  {
+    "question": "What is the subject() method?",
+    "options": [
+      "Set email subject",
+      "Get subject",
+      "Validate subject",
+      "Render subject"
+    ],
+    "correctOptions": [
+      "Set email subject"
+    ],
+    "time": 35,
+    "details": "subject() sets the email subject line."
+  },
+  {
+    "question": "What is the text() method?",
+    "options": [
+      "Plain text version",
+      "HTML version",
+      "Attachment",
+      "Subject"
+    ],
+    "correctOptions": [
+      "Plain text version"
+    ],
+    "time": 35,
+    "details": "text() sets the plain text email version."
+  },
+  {
+    "question": "What is attach()?",
+    "options": [
+      "Add file attachment",
+      "Add recipient",
+      "Add subject",
+      "Add content"
+    ],
+    "correctOptions": [
+      "Add file attachment"
+    ],
+    "time": 35,
+    "details": "attach() adds file attachments to emails."
+  },
+  {
+    "question": "What is attachFromStorage()?",
+    "options": [
+      "Attach from storage disk",
+      "Attach local file",
+      "Attach data",
+      "Attach stream"
+    ],
+    "correctOptions": [
+      "Attach from storage disk"
+    ],
+    "time": 40,
+    "details": "attachFromStorage() attaches files from storage."
+  },
+  {
+    "question": "What is markdown mail?",
+    "options": [
+      "Markdown-based template",
+      "HTML template",
+      "Plain text",
+      "Blade template"
+    ],
+    "correctOptions": [
+      "Markdown-based template"
+    ],
+    "time": 35,
+    "details": "Markdown mailables use Markdown syntax."
+  },
+  {
+    "question": "How do you create markdown mail?",
+    "options": [
+      "php artisan make:mail OrderShipped --markdown",
+      "php artisan create:mail OrderShipped --markdown",
+      "php make mail OrderShipped --markdown",
+      "composer mail OrderShipped --markdown"
+    ],
+    "correctOptions": [
+      "php artisan make:mail OrderShipped --markdown"
+    ],
+    "time": 35,
+    "details": "--markdown flag creates markdown mailable."
+  },
+  {
+    "question": "What is Queueable in Mail?",
+    "options": [
+      "Queue mail for background",
+      "Priority mail",
+      "Express mail",
+      "Bulk mail"
+    ],
+    "correctOptions": [
+      "Queue mail for background"
+    ],
+    "time": 40,
+    "details": "Queueable mailables send via queues."
+  },
+  {
+    "question": "What is Mail::fake()?",
+    "options": [
+      "Prevent actual sending",
+      "Send immediately",
+      "Queue mail",
+      "Store mail"
+    ],
+    "correctOptions": [
+      "Prevent actual sending"
+    ],
+    "time": 40,
+    "details": "Mail::fake() prevents actual mail delivery."
+  },
+  {
+    "question": "What is assertSent()?",
+    "options": [
+      "Assert mail was sent",
+      "Count sent",
+      "Get sent",
+      "Clear sent"
+    ],
+    "correctOptions": [
+      "Assert mail was sent"
+    ],
+    "time": 40,
+    "details": "assertSent() checks if mailable was sent."
+  },
+  {
+    "question": "What is Mailtrap?",
+    "options": [
+      "Mail testing service",
+      "Mail sending",
+      "Mail receiving",
+      "Mail storage"
+    ],
+    "correctOptions": [
+      "Mail testing service"
+    ],
+    "time": 35,
+    "details": "Mailtrap catches development emails."
+  },
+  {
+    "question": "What is Laravel notifications?",
+    "options": [
+      "Multi-channel messaging",
+      "Email only",
+      "Database only",
+      "SMS only"
+    ],
+    "correctOptions": [
+      "Multi-channel messaging"
+    ],
+    "time": 35,
+    "details": "Notifications support multiple channels."
+  },
+  {
+    "question": "How do you create a notification?",
+    "options": [
+      "php artisan make:notification InvoicePaid",
+      "php artisan create:notification InvoicePaid",
+      "php make notification InvoicePaid",
+      "composer notification InvoicePaid"
+    ],
+    "correctOptions": [
+      "php artisan make:notification InvoicePaid"
+    ],
+    "time": 30,
+    "details": "make:notification creates a notification class."
+  },
+  {
+    "question": "What is the toMail() method?",
+    "options": [
+      "Email notification channel",
+      "Database channel",
+      "SMS channel",
+      "Slack channel"
+    ],
+    "correctOptions": [
+      "Email notification channel"
+    ],
+    "time": 35,
+    "details": "toMail() defines the email notification."
+  },
+  {
+    "question": "What is the toDatabase() method?",
+    "options": [
+      "Database notification channel",
+      "Email channel",
+      "SMS channel",
+      "Slack channel"
+    ],
+    "correctOptions": [
+      "Database notification channel"
+    ],
+    "time": 35,
+    "details": "toDatabase() stores notification in database."
+  },
+  {
+    "question": "What is the toNexmo() method?",
+    "options": [
+      "SMS notification channel",
+      "Email channel",
+      "Database channel",
+      "Slack channel"
+    ],
+    "correctOptions": [
+      "SMS notification channel"
+    ],
+    "time": 35,
+    "details": "toNexmo() sends SMS notifications."
+  },
+  {
+    "question": "What is the toSlack() method?",
+    "options": [
+      "Slack notification channel",
+      "Email channel",
+      "Database channel",
+      "SMS channel"
+    ],
+    "correctOptions": [
+      "Slack notification channel"
+    ],
+    "time": 35,
+    "details": "toSlack() sends Slack notifications."
+  },
+  {
+    "question": "How do you send notifications?",
+    "options": [
+      "$user->notify(new InvoicePaid())",
+      "$user->send(new InvoicePaid())",
+      "$user->mail(new InvoicePaid())",
+      "$user->notify()->send()"
+    ],
+    "correctOptions": [
+      "$user->notify(new InvoicePaid())"
+    ],
+    "time": 35,
+    "details": "notify() sends a notification to user."
+  },
+  {
+    "question": "What is Notification::route()?",
+    "options": [
+      "Custom notification channel",
+      "Email channel",
+      "Database channel",
+      "SMS channel"
+    ],
+    "correctOptions": [
+      "Custom notification channel"
+    ],
+    "time": 40,
+    "details": "route() sends to custom notification channel."
+  },
+  {
+    "question": "What is Markdown in notifications?",
+    "options": [
+      "Pre-built template",
+      "Custom template",
+      "Simple text",
+      "Basic email"
+    ],
+    "correctOptions": [
+      "Pre-built template"
+    ],
+    "time": 35,
+    "details": "Markdown provides pre-built notification templates."
+  },
+  {
+    "question": "What is the Notifiable trait?",
+    "options": [
+      "Enables notifications",
+      "Creates notifications",
+      "Sends notifications",
+      "Queues notifications"
+    ],
+    "correctOptions": [
+      "Enables notifications"
+    ],
+    "time": 35,
+    "details": "Notifiable trait adds notification methods."
+  },
+  {
+    "question": "What is Localizable notification?",
+    "options": [
+      "Multi-language support",
+      "Single language",
+      "Email only",
+      "Database only"
+    ],
+    "correctOptions": [
+      "Multi-language support"
+    ],
+    "time": 40,
+    "details": "Localizable enables translated notifications."
+  },
+  {
+    "question": "What is database notification?",
+    "options": [
+      "Store in database table",
+      "Email notification",
+      "SMS notification",
+      "Slack notification"
+    ],
+    "correctOptions": [
+      "Store in database table"
+    ],
+    "time": 35,
+    "details": "Database notifications store in notifications table."
+  },
+  {
+    "question": "What is the notifications table?",
+    "options": [
+      "Store database notifications",
+      "Store email notifications",
+      "Store all emails",
+      "Store users"
+    ],
+    "correctOptions": [
+      "Store database notifications"
+    ],
+    "time": 35,
+    "details": "notifications table stores in-app notifications."
+  },
+  {
+    "question": "What is notifications:table command?",
+    "options": [
+      "Create notifications migration",
+      "Clear notifications",
+      "List notifications",
+      "Send notifications"
+    ],
+    "correctOptions": [
+      "Create notifications migration"
+    ],
+    "time": 35,
+    "details": "notifications:table creates the migration."
+  },
+  {
+    "question": "How do you mark notification as read?",
+    "options": [
+      "$notification->markAsRead()",
+      "$notification->read()",
+      "$notification->markRead()",
+      "$notification->seen()"
+    ],
+    "correctOptions": [
+      "$notification->markAsRead()"
+    ],
+    "time": 40,
+    "details": "markAsRead() marks notification as read."
+  },
+  {
+    "question": "What is Broadcast notification?",
+    "options": [
+      "Real-time notification",
+      "Stored notification",
+      "Email notification",
+      "SMS notification"
+    ],
+    "correctOptions": [
+      "Real-time notification"
+    ],
+    "time": 40,
+    "details": "BroadcastChannel sends real-time notifications."
+  },
+  {
+    "question": "What is Queueable notification?",
+    "options": [
+      "Async notification sending",
+      "Sync notification",
+      "Priority notification",
+      "Bulk notification"
+    ],
+    "correctOptions": [
+      "Async notification sending"
+    ],
+    "time": 40,
+    "details": "Implements ShouldQueue for async sending."
+  },
+  {
+    "question": "What is Action in notifications?",
+    "options": [
+      "Button/link in notification",
+      "Email action",
+      "Database action",
+      "SMS action"
+    ],
+    "correctOptions": [
+      "Button/link in notification"
+    ],
+    "time": 40,
+    "details": "Action adds buttons/links to notifications."
+  },
+  {
+    "question": "What is Error notification?",
+    "options": [
+      "Error-level notification",
+      "Info notification",
+      "Success notification",
+      "Warning notification"
+    ],
+    "correctOptions": [
+      "Error-level notification"
+    ],
+    "time": 40,
+    "details": "Error notifications indicate serious problems."
+  },
+  {
+    "question": "What is Failure notification?",
+    "options": [
+      "Job/command failure",
+      "Success notification",
+      "Info notification",
+      "Warning notification"
+    ],
+    "correctOptions": [
+      "Job/command failure"
+    ],
+    "time": 40,
+    "details": "Failure notifications alert on failures."
+  },
+  {
+    "question": "What is database channel priority?",
+    "options": [
+      "Storage priority",
+      "Delivery priority",
+      "Queue priority",
+      "Display priority"
+    ],
+    "correctOptions": [
+      "Storage priority"
+    ],
+    "time": 40,
+    "details": "Priority determines channel order in database."
+  },
+  {
+    "question": "What is trait Notifiable?",
+    "options": [
+      "Enables model for notifications",
+      "Creates notifications",
+      "Sends notifications",
+      "Queues notifications"
+    ],
+    "correctOptions": [
+      "Enables model for notifications"
+    ],
+    "time": 35,
+    "details": "Notifiable trait enables receiving notifications."
+  },
+  {
+    "question": "What is Notification::sent()?",
+    "options": [
+      "Check if sent",
+      "Send notification",
+      "Queue notification",
+      "Create notification"
+    ],
+    "correctOptions": [
+      "Check if sent"
+    ],
+    "time": 40,
+    "details": "sent() checks if notification was sent."
+  },
+  {
+    "question": "What is Eloquent? (Level 6 #102)",
+    "options": [
+      "ORM",
+      "Model",
+      "Relationships",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "ORM",
+      "Model",
+      "Relationships",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Eloquent? explanation."
+  },
+  {
+    "question": "What is Blade? (Level 6 #103)",
+    "options": [
+      "Template",
+      "Directives",
+      "Components",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Template",
+      "Directives",
+      "Components",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Blade? explanation."
+  },
+  {
+    "question": "What is migration? (Level 6 #104)",
+    "options": [
+      "Schema",
+      "Version control",
+      "Rollback",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Schema",
+      "Version control",
+      "Rollback",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is migration? explanation."
+  },
+  {
+    "question": "What is seeder? (Level 6 #105)",
+    "options": [
+      "Test data",
+      "Factory",
+      "Database",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Test data",
+      "Factory",
+      "Database",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is seeder? explanation."
+  },
+  {
+    "question": "What is middleware? (Level 6 #106)",
+    "options": [
+      "Request",
+      "Response",
+      "Filter",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request",
+      "Response",
+      "Filter",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is route? (Level 6 #107)",
+    "options": [
+      "URL",
+      "Controller",
+      "Method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL",
+      "Controller",
+      "Method",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is route? explanation."
+  },
+  {
+    "question": "What is artisan? (Level 6 #108)",
+    "options": [
+      "CLI",
+      "Commands",
+      "Scaffolding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "CLI",
+      "Commands",
+      "Scaffolding",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is artisan? explanation."
+  },
+  {
+    "question": "What is service provider? (Level 6 #109)",
+    "options": [
+      "DI",
+      "Register",
+      "Boot",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "DI",
+      "Register",
+      "Boot",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is service provider? explanation."
+  },
+  {
+    "question": "What is facades? (Level 6 #110)",
+    "options": [
+      "Static access",
+      "Service",
+      "Proxy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Static access",
+      "Service",
+      "Proxy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is facades? explanation."
+  },
+  {
+    "question": "What is validation? (Level 6 #111)",
+    "options": [
+      "Rules",
+      "Messages",
+      "Custom",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Messages",
+      "Custom",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is validation? explanation."
+  },
+  {
+    "question": "What is Array.splice?",
+    "options": [
+      "Add/remove elements",
+      "Mutates array",
+      "Change contents",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Add/remove elements",
+      "Mutates array",
+      "Change contents",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Array.splice? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  }
 ]

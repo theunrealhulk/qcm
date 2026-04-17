@@ -1,103 +1,1977 @@
 [
-  {"question": "What is type-level TypeScript?", "options": ["Only types", "Compile-time", "Types as code", "Typel"], "correctOptions": ["Compile-time"], "time": 55, "details": "Type-level TS runs at compile-time."},
-  {"question": "What is complex TypeScript?", "options": ["Type-level programming", "Advanced types", "Typel", "Meta"], "correctOptions": ["Type-level programming"], "time": 60, "details": "Complex TS uses types as functions."},
-  {"question": "How implement type fizzbuzz?", "options": ["Conditional types", "Recursion", "Math in types", "Complex"], "correctOptions": ["Conditional types"], "time": 65, "details": "Can implement FizzBuzz in types."},
-  {"question": "Is TypeScript Turing complete?", "options": ["Yes at type-level", "Types compute", "Complete", "Turing"], "correctOptions": ["Yes at type-level"], "time": 60, "details": "Type system is Turing complete."},
-  {"question": "What is type FizzBuzz?", "options": ["Compile-time fizzbuzz", "Type function", "Example", "Complex"], "correctOptions": ["Compile-time fizzbuzz"], "time": 65, "details": "Type computes fizzbuzz at compile."},
-  {"question": "What is dependent typing?", "options": ["Type from value", "Based on value", "Parametric", "Conditional"], "correctOptions": ["Type from value"], "time": 65, "details": "Dependent types depend on values."},
-  {"question": "What is generic pattern matching?", "options": ["Type switch", "Match types", "Conditional", "Pattern"], "correctOptions": ["Conditional"], "time": 70, "details": "Generic pattern matching via conditionals."},
-  {"question": "What is type-level parser?", "options": ["String to types", "Parse string", "Transform", "Compile"], "correctOptions": ["String to types"], "time": 75, "details": "Type parsers transform strings."},
-  {"question": "What is type-level JSON parser?", "options": ["Parse JSON type", "String to type", "Compile-time", "Parse"], "correctOptions": ["Parse JSON type"], "time": 70, "details": "Can parse JSON at compile-time."},
-  {"question": "What is type-level validation?", "options": ["Runtime validation types", "Compile-time check", "Validate", "Types"], "correctOptions": ["Compile-time check"], "time": 70, "details": "Type validation catches errors."},
-  {"question": "What is schema validation types?", "options": ["Zod-like types", "Type validation", "Schema", "Check"], "correctOptions": ["Type validation"], "time": 70, "details": "Schema libraries use types."},
-  {"question": "What is TypeScript compiler API?", "options": ["TS programmatical", "Programmatic", "API", "ts module"], "correctOptions": ["TS programmatical"], "time": 55, "details": "Compiler API programmatic access."},
-  {"question": "What is createSourceFile?", "options": ["Parse source", "AST", "Program", "File"], "correctOptions": ["Parse source"], "time": 55, "details": "Creates AST from source."},
-  {"question": "What is Transfomer?", "options": ["AST transform", "Transform", "Compile transform", "Visitor"], "correctOptions": ["AST transform"], "time": 55, "details": "Transforms AST nodes."},
-  {"question": "What is Visitor pattern?", "options": ["AST traversal", "Walk tree", "Traverse", "Node visitor"], "correctOptions": ["AST traversal"], "time": 55, "details": "Visitor walks AST."},
-  {"question": "What is Printer?", "options": ["AST to text", "Print", "Output", "Stringify"], "correctOptions": ["AST to text"], "time": 55, "details": "Printer outputs code."},
-  {"question": "What is ts.createProgram?", "options": ["Create program", "Config", "Entry", "Program"], "correctOptions": ["Create program"], "time": 50, "details": "Creates compilation program."},
-  {"question": "What is emitToString?", "options": ["Output as string", "Result", "Emit", "String"], "correctOptions": ["Output as string"], "time": 55, "details": "getEmitOutput returns results."},
-  {"question": "What is getPreEmitDiagnostics?", "options": ["Pre-emit warnings", "Diagnostics", "Errors", "Warnings"], "correctOptions": ["Pre-emit warnings"], "time": 60, "details": "Returns diagnostics before emit."},
-  {"question": "What is ts.getSyntacticDiagnostics?", "options": ["Syntax errors", "Parser errors", "Errors", "Diagnostics"], "correctOptions": ["Syntax errors"], "time": 55, "details": "Syntax diagnostics."},
-  {"question": "What is getTypeChecker?", "options": ["Type analyzer", "Type check", "Checker", "Return"], "correctOptions": ["Type analyzer"], "time": 55, "details": "Get type checker service."},
-  {"question": "What is getSymbolAtLocation?", "options": ["Get symbol", "Lookup", "Symbol", "Find"], "correctOptions": ["Get symbol"], "time": 55, "details": "Gets symbol at position."},
-  {"question": "What is getTypeOfSymbolAtLocation?", "options": ["Symbol type", "Type", "At position", "TypeCheck"], "correctOptions": ["Symbol type"], "time": 55, "details": "Gets symbol's type."},
-  {"question": "What is getTypeFromTypeNode?", "options": ["Get node type", "Type", "From node", "TypeCheck"], "correctOptions": ["Get node type"], "time": 60, "details": "Gets type from type node."},
-  {"question": "What is typeToString?", "options": ["Type to string", "Print", "Type string", "Display"], "correctOptions": ["Type to string"], "time": 55, "details": "typeToString represents type."},
-  {"question": "What is getPropertiesOfType?", "options": ["Type properties", "Properties", "Members", "Symbols"], "correctOptions": ["Type properties"], "time": 60, "details": "Gets type's properties."},
-  {"question": "What is getReturnTypeOfSignature?", "options": ["Return type", "Function", "Return", "Type"], "correctOptions": ["Return type"], "time": 60, "details": "Gets return type of function."},
-  {"question": "What is getParameters?", "options": ["Function params", "Parameters", "Arguments", "Symbols"], "correctOptions": ["Function params"], "time": 55, "details": "Gets function parameters."},
-  {"question": "What is get JsxAst?", "options": ["JSX AST", "JSX to AST", "Transform", "Parse"], "correctOptions": ["JSX AST"], "time": 60, "details": "Parses JSX to AST."},
-  {"question": "What is createPrinter with JSX?", "options": ["JSX output", "Print JSX", "Preserve", "Transform"], "correctOptions": ["JSX output"], "time": 60, "details": "Printer can preserve JSX."},
-  {"question": "What is tsconfig pps?", "options": ["Project references", "Multi-project", "Build system", "Composite"], "correctOptions": ["Project references"], "time": 60, "details": "Project references enable scaling."},
-  {"question": "What is incremental build?", "options": ["Cached rebuild", "Faster", "Incremental", "Optimize"], "correctOptions": ["Cached rebuild"], "time": 55, "details": "Incremental caches builds."},
-  {"question": "What is source maps for types?", "options": ["Debug .d.ts", "Map", "Source", "Emit"], "correctOptions": ["Debug .d.ts"], "time": 60, "details": "declarationMap enables debugging."},
-  {"question": "What is TypeScript project?", "options": ["Project context", "Compilation", "Build", "Files"], "correctOptions": ["Compilation context"], "time": 50, "details": "Project represents compilation."},
-  {"question": "What is getProjectOfConfigFile?", "options": ["Load config", "Create project", "Config", "TS"], "correctOptions": ["Load config"], "time": 55, "details": "Creates project from config."},
-  {"question": "What is LanguageService?", "options": ["Editor features", "IntelliSense", "Completions", "API"], "correctOptions": ["Editor features"], "time": 50, "details": "Language service provides features."},
-  {"question": "What is getCompletionsAtPosition?", "options": ["Code completions", "IntelliSense", "Suggestions", "Auto"], "correctOptions": ["Code completions"], "time": 55, "details": "Returns code completions."},
-  {"question": "What is getQuickInfoAtPosition?", "options": ["Type info", "Hover", "Tooltip", "Display"], "correctOptions": ["Type info"], "time": 55, "details": "Returns hover info."},
-  {"question": "What is getFindAllReferences?", "options": ["Find references", "Usage", "Rename", "Search"], "correctOptions": ["Find references"], "time": 55, "details": "Finds all symbol references."},
-  {"question": "What is getDefinitionAtPosition?", "options": ["Jump to definition", "Navigate", "Definition", "Go"], "correctOptions": ["Jump to definition"], "time": 55, "details": "Returns definition location."},
-  {"question": "What is getSemanticDiagnostics?", "options": ["Type errors", "Semantic", "Errors", "Warnings"], "correctOptions": ["Type errors"], "time": 55, "details": "Semantic diagnostics."},
-  {"question": "What is getEmitFiles?", "options": ["Output files", "Emit", "Files", "Build"], "correctOptions": ["Output files"], "time": 55, "details": "Gets emitted files."},
-  {"question": "What is type augmentation?", "options": ["Add types", "Extend", "Modify", "Module"], "correctOptions": ["Add types"], "time": 50, "details": "Can add types to types."},
-  {"question": "What is declaration merging?", "options": ["Combine types", "Same name", "Merge", "Augment"], "correctOptions": ["Combine types"], "time": 55, "details": "Types can merge."},
-  {"question": "What is namespace merging?", "options": ["Merge namespaces", "Globals", "Combine", "Add"], "correctOptions": ["Merge namespaces"], "time": 55, "details": "Namespaces can merge."},
-  {"question": "What is module augmentation?", "options": ["Extend module", "Add to module", "Augment", "Type"], "correctOptions": ["Extend module"], "time": 55, "details": "Module augmentation works."},
-  {"question": "What is global augmentation?", "options": ["Add to global", "Global types", "Extend", "Type"], "correctOptions": ["Add to global"], "time": 55, "details": "Global augmentation works."},
-  {"question": "What is ambient declaration?", "options": ["Type definition", "d.ts", "External", "Declare"], "correctOptions": ["Type definition"], "time": 50, "details": "Ambient declares external types."},
-  {"question": "What is triple-slash reference?", "options": ["Include .d.ts", "Reference", "Include", "Import"], "correctOptions": ["Include .d.ts"], "time": 50, "details": "/// references declare files."},
-  {"question": "What is package.json types?", "options": ["Entry .d.ts", "Main entry", "Export", "Type entry"], "correctOptions": ["Entry .d.ts"], "time": 50, "details": "types points to entry .d.ts."},
-  {"question": "What is package.json typing?", "options": ["Typings alias", "Types alias", "Field", "Alternative"], "correctOptions": ["Typings alias"], "time": 55, "details": "typings is alias for types."},
-  {"question": "What is package.json exports field?", "options": ["Conditional export", "Modern", "Node", "Export"], "correctOptions": ["Conditional export"], "time": 55, "details": "exports enables conditional exports."},
-  {"question": "What is package.json import condition?", "options": ["Import path", "main vs import", "CJS vs ESM", "Resolve"], "correctOptions": ["CJS vs ESM"], "time": 60, "details": "import selects import target."},
-  {"question": "What is package.json require condition?", "options": ["Require path", "CJS target", "Require", "Resolve"], "correctOptions": ["CJS target"], "time": 60, "details": "require selects CJS target."},
-  {"question": "What is @types/*?", "options": ["DefinitelyTyped", "Type packages", "Community", "npm"], "correctOptions": ["Type packages"], "time": 50, "details": "@types/* are official types."},
-  {"question": "What is @types/node?", "options": ["Node types", "Node.js", "Runtime", "Library"], "correctOptions": ["Node types"], "time": 45, "details": "@types/node is Node.js types."},
-  {"question": "What is @types/react?", "options": ["React types", "React", "Library", "Package"], "correctOptions": ["React types"], "time": 45, "details": "@types/react is React types."},
-  {"question": "What is DefinitelyTyped?", "options": ["Community types", "Open source", "Type repo", "Definitions"], "correctOptions": ["Community types"], "time": 50, "details": "DefinitelyTyped is type repo."},
-  {"question": "What is type-root?", "options": ["Types location", "Config", "path", "Setting"], "correctOptions": ["Types location"], "time": 50, "details": "typeRoots set type locations."},
-  {"question": "What is types in tsconfig?", "options": ["Include types", "Include", "Packages", "Whitelist"], "correctOptions": ["Include types"], "time": 50, "details": "types includes type packages."},
-  {"question": "What is skipLibCheck?", "options": ["Skip .d.ts", "Optimize", "Build", "Faster"], "correctOptions": ["Skip .d.ts"], "time": 50, "details": "skipLibCheck speeds builds."},
-  {"question": "What is lib in tsconfig?", "options": ["Built-in types", "Source types", "APIs", "Environment"], "correctOptions": ["Built-in types"], "time": 50, "details": "lib adds built-in types."},
-  {"question": "What is target in tsconfig?", "options": ["Output ES version", "Compile target", "ECMAScript", "Version"], "correctOptions": ["Output ES version"], "time": 50, "details": "target sets output version."},
-  {"question": "What is module setting?", "options": ["Module system", "Output format", "CommonJS/ESM", "Module"], "correctOptions": ["Module system"], "time": 50, "details": "module sets output format."},
-  {"question": "What is moduleResolution?", "options": ["Resolution strategy", "Config", "Node/classic", "Resolve"], "correctOptions": ["Resolution strategy"], "time": 55, "details": "moduleResolution sets strategy."},
-  {"question": "What is tsickle?", "options": ["Angular compiler", "Closure", "Optimizer", "Tool"], "correctOptions": ["Angular compiler"], "time": 60, "details": "Tsickle compiles TS to JS."},
-  {"question": "What is tsc-alias?", "options": ["Path resolver", "Resolve", "Build tool", "Plugin"], "correctOptions": ["Path resolver"], "time": 55, "details": "Resolves import paths."},
-  {"question": "What is tsconfig-paths?", "options": ["Path mapping", "Resolve", "Config", "Plugin"], "correctOptions": ["Path mapping"], "time": 55, "details": "Resolves paths via config."},
-  {"question": "What is @babel/preset-typescript?", "options": ["Babel support", "TS via Babel", "Transpile", "Preset"], "correctOptions": ["TS via Babel"], "time": 55, "details": "Enables Babel to compile TS."},
-  {"question": "What is swc?", "options": ["Rust compiler", "Fast", "Alternative", "Transpiler"], "correctOptions": ["Rust compiler"], "time": 55, "details": "swc is fast Rust compiler."},
-  {"question": "What is esbuild?", "options": ["Go compiler", "Bundle + compile", "Fast", "Tool"], "correctOptions": ["Go compiler"], "time": 55, "details": "esbuild is fast compiler."},
-  {"question": "What is esbuild in TypeScript?", "options": ["Compile TS", "TypeScript", "Go", "Transpile"], "correctOptions": ["Compile TS"], "time": 50, "details": "esbuild compiles TypeScript."},
-  {"question": "What is tsm module?", "options": ["TS runner", "Execute TS", "node-like", "Script"], "correctOptions": ["TS runner"], "time": 55, "details": "Runs TypeScript directly."},
-  {"question": "What is ts-node?", "options": ["TS runner", "Execute TS", "node", "Compiler"], "correctOptions": ["Execute TS"], "time": 50, "details": "Runs TypeScript in Node."},
-  {"question": "What is ts-node execution?", "options": ["Transpile + run", "Compile", "Run", "Execute"], "correctOptions": ["Transpile + run"], "time": 55, "details": "ts-node transpiles then runs."},
-  {"question": "What is ts-node compiler register?", "options": ["Hook register", "Auto register", "Transpile", "Hook"], "correctOptions": ["Hook register"], "time": 60, "details": "register loads compiler automatically."},
-  {"question": "What is ts-node --transpile-only?", "options": ["No type check", "Skips types", "Fast", "Execute"], "correctOptions": ["No type check"], "time": 60, "details": "Skips type checking."},
-  {"question": "What is TSTL?", "options": ["TypeScript to TypeScript", "Transformer", "Compile", "Output"], "correctOptions": ["TypeScript to TypeScript"], "time": 65, "details": "TSTL transforms TypeScript."},
-  {"question": "What is type tests?", "options": ["Compile-time tests", "Expect errors", "Test types", "Tests"], "correctOptions": ["Compile-time tests"], "time": 60, "details": "Type tests validate types."},
-  {"question": "What is typo-correct?", "options": ["Type error testing", "Expect errors", "Test", "TypeCheck"], "correctOptions": ["Type error testing"], "time": 65, "details": "Expects type errors."},
-  {"question": "What is tsd?", "options": ["Type testing", "Expect errors", "Library", "Test"], "correctOptions": ["Type testing"], "time": 60, "details": "tsd tests types."},
-  {"question": "What is tsd assert?", "options": ["Expect type", "Type assertion", "Check", "Assert"], "correctOptions": ["Expect type"], "time": 65, "details": "assertExpect type."},
-  {"question": "What is tsd stringOf?", "options": ["String to type", "Type", "String", "Test"], "correctOptions": ["String to type"], "time": 70, "details": "stringOf extracts string type."},
-  {"question": "What is type-level sorting?", "options": ["Sort types", "Conditional", "Recursion", "Sort values"], "correctOptions": ["Sort types"], "time": 70, "details": "Type-level sorting uses recursive conditional types."},
-  {"question": "What is type-level binary search?", "options": ["Search types", "Divide conquer", "Algorithm", "Find"], "correctOptions": ["Search types"], "time": 75, "details": "Binary search can be implemented at type-level."},
-  {"question": "What is type-level fizzbuzz with modulo?", "options": ["Type arithmetic", "Modulo operation", "Divisibility", "Type compute"], "correctOptions": ["Modulo operation"], "time": 75, "details": "Modulo at type-level enables FizzBuzz."},
-  {"question": "What is recursive type inference?", "options": ["Recursive types", "Infer recursively", "Type recursion", "Deep inference"], "correctOptions": ["Recursive types"], "time": 70, "details": "Recursive type inference enables deep type transformations."},
-  {"question": "What is type-level map?", "options": ["Transform types", "Map over types", "Morph", "Convert"], "correctOptions": ["Transform types"], "time": 65, "details": "Type-level map transforms every type in a union."},
-  {"question": "What is type-level filter?", "options": ["Filter types", "Conditional type", "Exclude", "Select"], "correctOptions": ["Filter types"], "time": 65, "details": "Type-level filter excludes matching types."},
-  {"question": "What is type-level reduce?", "options": ["Reduce types", "Aggregate", "Accumulate", "Fold"], "correctOptions": ["Reduce types"], "time": 70, "details": "Type-level reduce aggregates union types."},
-  {"question": "What is deep partial type?", "options": ["Nested optional", "Recursive Partial", "All nested", "Deep"], "correctOptions": ["Nested optional"], "time": 65, "details": "DeepPartial makes all nested properties optional."},
-  {"question": "What is deep readonly type?", "options": ["Nested readonly", "Readonly recursively", "All nested", "Immutable"], "correctOptions": ["Nested readonly"], "time": 65, "details": "DeepReadonly makes all nested properties readonly."},
-  {"question": "What is recursive required type?", "options": ["All required", "Nested Required", "Force required", "Complete"], "correctOptions": ["All required"], "time": 65, "details": "Recursive Required makes all nested properties required."},
-  {"question": "What is type-level includes?", "options": ["Check type", "In union", "Search", "Boolean"], "correctOptions": ["Check type"], "time": 60, "details": "type-level includes checks if type is in union."},
-  {"question": "What is type-level length?", "options": ["Tuple length", "Count elements", "Number", "Size"], "correctOptions": ["Count elements"], "time": 60, "details": "type-level length gets tuple/countable type length."},
-  {"question": "What is type-level append?", "options": ["Add to tuple", "Push type", "Extend", "Add"], "correctOptions": ["Add to tuple"], "time": 60, "details": "type-level append adds type to tuple."},
-  {"question": "What is type-level prepend?", "options": ["Add to start", "Unshift type", "Prepend", "Insert"], "correctOptions": ["Add to start"], "time": 60, "details": "type-level prepend adds type at tuple start."},
-  {"question": "What is type-level reverse?", "options": ["Reverse tuple", "Flip order", "Reverse", "Invert"], "correctOptions": ["Reverse tuple"], "time": 60, "details": "type-level reverse reverses tuple order."},
-  {"question": "What is type-level zip?", "options": ["Zip tuples", "Pair types", "Combine", "Merge"], "correctOptions": ["Zip tuples"], "time": 70, "details": "type-level zip pairs corresponding tuple elements."},
-  {"question": "What is type-level curry?", "options": ["Curry function", "Transform", "Curry type", "Higher-order"], "correctOptions": ["Curry function"], "time": 70, "details": "type-level curry transforms function types."},
-  {"question": "What is type-level uncurry?", "options": ["Uncurry function", "Flatten", "Transform", "Uncurry type"], "correctOptions": ["Uncurry function"], "time": 70, "details": "type-level uncurry flattens curried types."}
+  {
+    "question": "What is type-level TypeScript?",
+    "options": [
+      "Only types",
+      "Compile-time",
+      "Types as code",
+      "Typel"
+    ],
+    "correctOptions": [
+      "Compile-time"
+    ],
+    "time": 55,
+    "details": "Type-level TS runs at compile-time."
+  },
+  {
+    "question": "What is complex TypeScript?",
+    "options": [
+      "Type-level programming",
+      "Advanced types",
+      "Typel",
+      "Meta"
+    ],
+    "correctOptions": [
+      "Type-level programming"
+    ],
+    "time": 60,
+    "details": "Complex TS uses types as functions."
+  },
+  {
+    "question": "How implement type fizzbuzz?",
+    "options": [
+      "Conditional types",
+      "Recursion",
+      "Math in types",
+      "Complex"
+    ],
+    "correctOptions": [
+      "Conditional types"
+    ],
+    "time": 65,
+    "details": "Can implement FizzBuzz in types."
+  },
+  {
+    "question": "Is TypeScript Turing complete?",
+    "options": [
+      "Yes at type-level",
+      "Types compute",
+      "Complete",
+      "Turing"
+    ],
+    "correctOptions": [
+      "Yes at type-level"
+    ],
+    "time": 60,
+    "details": "Type system is Turing complete."
+  },
+  {
+    "question": "What is a callback function?",
+    "options": [
+      "Passed as argument",
+      "Executed later",
+      "Asynchronous",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Passed as argument",
+      "Executed later",
+      "Asynchronous",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is a callback function? explanation."
+  },
+  {
+    "question": "What is dependent typing?",
+    "options": [
+      "Type from value",
+      "Based on value",
+      "Parametric",
+      "Conditional"
+    ],
+    "correctOptions": [
+      "Type from value"
+    ],
+    "time": 65,
+    "details": "Dependent types depend on values."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is type-level parser?",
+    "options": [
+      "String to types",
+      "Parse string",
+      "Transform",
+      "Compile"
+    ],
+    "correctOptions": [
+      "String to types"
+    ],
+    "time": 75,
+    "details": "Type parsers transform strings."
+  },
+  {
+    "question": "What is type-level JSON parser?",
+    "options": [
+      "Parse JSON type",
+      "String to type",
+      "Compile-time",
+      "Parse"
+    ],
+    "correctOptions": [
+      "Parse JSON type"
+    ],
+    "time": 70,
+    "details": "Can parse JSON at compile-time."
+  },
+  {
+    "question": "What is type-level validation?",
+    "options": [
+      "Runtime validation types",
+      "Compile-time check",
+      "Validate",
+      "Types"
+    ],
+    "correctOptions": [
+      "Compile-time check"
+    ],
+    "time": 70,
+    "details": "Type validation catches errors."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is TypeScript compiler API?",
+    "options": [
+      "TS programmatical",
+      "Programmatic",
+      "API",
+      "ts module"
+    ],
+    "correctOptions": [
+      "TS programmatical"
+    ],
+    "time": 55,
+    "details": "Compiler API programmatic access."
+  },
+  {
+    "question": "What is createSourceFile?",
+    "options": [
+      "Parse source",
+      "AST",
+      "Program",
+      "File"
+    ],
+    "correctOptions": [
+      "Parse source"
+    ],
+    "time": 55,
+    "details": "Creates AST from source."
+  },
+  {
+    "question": "What is Transfomer?",
+    "options": [
+      "AST transform",
+      "Transform",
+      "Compile transform",
+      "Visitor"
+    ],
+    "correctOptions": [
+      "AST transform"
+    ],
+    "time": 55,
+    "details": "Transforms AST nodes."
+  },
+  {
+    "question": "What is Visitor pattern?",
+    "options": [
+      "AST traversal",
+      "Walk tree",
+      "Traverse",
+      "Node visitor"
+    ],
+    "correctOptions": [
+      "AST traversal"
+    ],
+    "time": 55,
+    "details": "Visitor walks AST."
+  },
+  {
+    "question": "What is Printer?",
+    "options": [
+      "AST to text",
+      "Print",
+      "Output",
+      "Stringify"
+    ],
+    "correctOptions": [
+      "AST to text"
+    ],
+    "time": 55,
+    "details": "Printer outputs code."
+  },
+  {
+    "question": "What is ts.createProgram?",
+    "options": [
+      "Create program",
+      "Config",
+      "Entry",
+      "Program"
+    ],
+    "correctOptions": [
+      "Create program"
+    ],
+    "time": 50,
+    "details": "Creates compilation program."
+  },
+  {
+    "question": "What is emitToString?",
+    "options": [
+      "Output as string",
+      "Result",
+      "Emit",
+      "String"
+    ],
+    "correctOptions": [
+      "Output as string"
+    ],
+    "time": 55,
+    "details": "getEmitOutput returns results."
+  },
+  {
+    "question": "What is getPreEmitDiagnostics?",
+    "options": [
+      "Pre-emit warnings",
+      "Diagnostics",
+      "Errors",
+      "Warnings"
+    ],
+    "correctOptions": [
+      "Pre-emit warnings"
+    ],
+    "time": 60,
+    "details": "Returns diagnostics before emit."
+  },
+  {
+    "question": "What is ts.getSyntacticDiagnostics?",
+    "options": [
+      "Syntax errors",
+      "Parser errors",
+      "Errors",
+      "Diagnostics"
+    ],
+    "correctOptions": [
+      "Syntax errors"
+    ],
+    "time": 55,
+    "details": "Syntax diagnostics."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is getSymbolAtLocation?",
+    "options": [
+      "Get symbol",
+      "Lookup",
+      "Symbol",
+      "Find"
+    ],
+    "correctOptions": [
+      "Get symbol"
+    ],
+    "time": 55,
+    "details": "Gets symbol at position."
+  },
+  {
+    "question": "What is getTypeOfSymbolAtLocation?",
+    "options": [
+      "Symbol type",
+      "Type",
+      "At position",
+      "TypeCheck"
+    ],
+    "correctOptions": [
+      "Symbol type"
+    ],
+    "time": 55,
+    "details": "Gets symbol's type."
+  },
+  {
+    "question": "What is getTypeFromTypeNode?",
+    "options": [
+      "Get node type",
+      "Type",
+      "From node",
+      "TypeCheck"
+    ],
+    "correctOptions": [
+      "Get node type"
+    ],
+    "time": 60,
+    "details": "Gets type from type node."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is getReturnTypeOfSignature?",
+    "options": [
+      "Return type",
+      "Function",
+      "Return",
+      "Type"
+    ],
+    "correctOptions": [
+      "Return type"
+    ],
+    "time": 60,
+    "details": "Gets return type of function."
+  },
+  {
+    "question": "What is getParameters?",
+    "options": [
+      "Function params",
+      "Parameters",
+      "Arguments",
+      "Symbols"
+    ],
+    "correctOptions": [
+      "Function params"
+    ],
+    "time": 55,
+    "details": "Gets function parameters."
+  },
+  {
+    "question": "What is get JsxAst?",
+    "options": [
+      "JSX AST",
+      "JSX to AST",
+      "Transform",
+      "Parse"
+    ],
+    "correctOptions": [
+      "JSX AST"
+    ],
+    "time": 60,
+    "details": "Parses JSX to AST."
+  },
+  {
+    "question": "What is createPrinter with JSX?",
+    "options": [
+      "JSX output",
+      "Print JSX",
+      "Preserve",
+      "Transform"
+    ],
+    "correctOptions": [
+      "JSX output"
+    ],
+    "time": 60,
+    "details": "Printer can preserve JSX."
+  },
+  {
+    "question": "What is tsconfig pps?",
+    "options": [
+      "Project references",
+      "Multi-project",
+      "Build system",
+      "Composite"
+    ],
+    "correctOptions": [
+      "Project references"
+    ],
+    "time": 60,
+    "details": "Project references enable scaling."
+  },
+  {
+    "question": "What is incremental build?",
+    "options": [
+      "Cached rebuild",
+      "Faster",
+      "Incremental",
+      "Optimize"
+    ],
+    "correctOptions": [
+      "Cached rebuild"
+    ],
+    "time": 55,
+    "details": "Incremental caches builds."
+  },
+  {
+    "question": "What is source maps for types?",
+    "options": [
+      "Debug .d.ts",
+      "Map",
+      "Source",
+      "Emit"
+    ],
+    "correctOptions": [
+      "Debug .d.ts"
+    ],
+    "time": 60,
+    "details": "declarationMap enables debugging."
+  },
+  {
+    "question": "What is TypeScript project?",
+    "options": [
+      "Project context",
+      "Compilation",
+      "Build",
+      "Files"
+    ],
+    "correctOptions": [
+      "Compilation"
+    ],
+    "time": 50,
+    "details": "Project represents compilation."
+  },
+  {
+    "question": "What is getProjectOfConfigFile?",
+    "options": [
+      "Load config",
+      "Create project",
+      "Config",
+      "TS"
+    ],
+    "correctOptions": [
+      "Load config"
+    ],
+    "time": 55,
+    "details": "Creates project from config."
+  },
+  {
+    "question": "What is LanguageService?",
+    "options": [
+      "Editor features",
+      "IntelliSense",
+      "Completions",
+      "API"
+    ],
+    "correctOptions": [
+      "Editor features"
+    ],
+    "time": 50,
+    "details": "Language service provides features."
+  },
+  {
+    "question": "What is getCompletionsAtPosition?",
+    "options": [
+      "Code completions",
+      "IntelliSense",
+      "Suggestions",
+      "Auto"
+    ],
+    "correctOptions": [
+      "Code completions"
+    ],
+    "time": 55,
+    "details": "Returns code completions."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is getFindAllReferences?",
+    "options": [
+      "Find references",
+      "Usage",
+      "Rename",
+      "Search"
+    ],
+    "correctOptions": [
+      "Find references"
+    ],
+    "time": 55,
+    "details": "Finds all symbol references."
+  },
+  {
+    "question": "What is getDefinitionAtPosition?",
+    "options": [
+      "Jump to definition",
+      "Navigate",
+      "Definition",
+      "Go"
+    ],
+    "correctOptions": [
+      "Jump to definition"
+    ],
+    "time": 55,
+    "details": "Returns definition location."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is getEmitFiles?",
+    "options": [
+      "Output files",
+      "Emit",
+      "Files",
+      "Build"
+    ],
+    "correctOptions": [
+      "Output files"
+    ],
+    "time": 55,
+    "details": "Gets emitted files."
+  },
+  {
+    "question": "What is type augmentation?",
+    "options": [
+      "Add types",
+      "Extend",
+      "Modify",
+      "Module"
+    ],
+    "correctOptions": [
+      "Add types"
+    ],
+    "time": 50,
+    "details": "Can add types to types."
+  },
+  {
+    "question": "What is declaration merging?",
+    "options": [
+      "Combine types",
+      "Same name",
+      "Merge",
+      "Augment"
+    ],
+    "correctOptions": [
+      "Combine types"
+    ],
+    "time": 55,
+    "details": "Types can merge."
+  },
+  {
+    "question": "What is namespace merging?",
+    "options": [
+      "Merge namespaces",
+      "Globals",
+      "Combine",
+      "Add"
+    ],
+    "correctOptions": [
+      "Merge namespaces"
+    ],
+    "time": 55,
+    "details": "Namespaces can merge."
+  },
+  {
+    "question": "What is module augmentation?",
+    "options": [
+      "Extend module",
+      "Add to module",
+      "Augment",
+      "Type"
+    ],
+    "correctOptions": [
+      "Extend module"
+    ],
+    "time": 55,
+    "details": "Module augmentation works."
+  },
+  {
+    "question": "What is global augmentation?",
+    "options": [
+      "Add to global",
+      "Global types",
+      "Extend",
+      "Type"
+    ],
+    "correctOptions": [
+      "Add to global"
+    ],
+    "time": 55,
+    "details": "Global augmentation works."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is triple-slash reference?",
+    "options": [
+      "Include .d.ts",
+      "Reference",
+      "Include",
+      "Import"
+    ],
+    "correctOptions": [
+      "Include .d.ts"
+    ],
+    "time": 50,
+    "details": "/// references declare files."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is package.json typing?",
+    "options": [
+      "Typings alias",
+      "Types alias",
+      "Field",
+      "Alternative"
+    ],
+    "correctOptions": [
+      "Typings alias"
+    ],
+    "time": 55,
+    "details": "typings is alias for types."
+  },
+  {
+    "question": "What is package.json exports field?",
+    "options": [
+      "Conditional export",
+      "Modern",
+      "Node",
+      "Export"
+    ],
+    "correctOptions": [
+      "Conditional export"
+    ],
+    "time": 55,
+    "details": "exports enables conditional exports."
+  },
+  {
+    "question": "What is package.json import condition?",
+    "options": [
+      "Import path",
+      "main vs import",
+      "CJS vs ESM",
+      "Resolve"
+    ],
+    "correctOptions": [
+      "CJS vs ESM"
+    ],
+    "time": 60,
+    "details": "import selects import target."
+  },
+  {
+    "question": "What is package.json require condition?",
+    "options": [
+      "Require path",
+      "CJS target",
+      "Require",
+      "Resolve"
+    ],
+    "correctOptions": [
+      "CJS target"
+    ],
+    "time": 60,
+    "details": "require selects CJS target."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is @types/node?",
+    "options": [
+      "Node types",
+      "Node.js",
+      "Runtime",
+      "Library"
+    ],
+    "correctOptions": [
+      "Node types"
+    ],
+    "time": 45,
+    "details": "@types/node is Node.js types."
+  },
+  {
+    "question": "What is @types/react?",
+    "options": [
+      "React types",
+      "React",
+      "Library",
+      "Package"
+    ],
+    "correctOptions": [
+      "React types"
+    ],
+    "time": 45,
+    "details": "@types/react is React types."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is type-root?",
+    "options": [
+      "Types location",
+      "Config",
+      "path",
+      "Setting"
+    ],
+    "correctOptions": [
+      "Types location"
+    ],
+    "time": 50,
+    "details": "typeRoots set type locations."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is skipLibCheck?",
+    "options": [
+      "Skip .d.ts",
+      "Optimize",
+      "Build",
+      "Faster"
+    ],
+    "correctOptions": [
+      "Skip .d.ts"
+    ],
+    "time": 50,
+    "details": "skipLibCheck speeds builds."
+  },
+  {
+    "question": "What is lib in tsconfig?",
+    "options": [
+      "Built-in types",
+      "Source types",
+      "APIs",
+      "Environment"
+    ],
+    "correctOptions": [
+      "Built-in types"
+    ],
+    "time": 50,
+    "details": "lib adds built-in types."
+  },
+  {
+    "question": "What is target in tsconfig?",
+    "options": [
+      "Output ES version",
+      "Compile target",
+      "ECMAScript",
+      "Version"
+    ],
+    "correctOptions": [
+      "Output ES version"
+    ],
+    "time": 50,
+    "details": "target sets output version."
+  },
+  {
+    "question": "What is module setting?",
+    "options": [
+      "Module system",
+      "Output format",
+      "CommonJS/ESM",
+      "Module"
+    ],
+    "correctOptions": [
+      "Module system"
+    ],
+    "time": 50,
+    "details": "module sets output format."
+  },
+  {
+    "question": "What is moduleResolution?",
+    "options": [
+      "Resolution strategy",
+      "Config",
+      "Node/classic",
+      "Resolve"
+    ],
+    "correctOptions": [
+      "Resolution strategy"
+    ],
+    "time": 55,
+    "details": "moduleResolution sets strategy."
+  },
+  {
+    "question": "What is tsickle?",
+    "options": [
+      "Angular compiler",
+      "Closure",
+      "Optimizer",
+      "Tool"
+    ],
+    "correctOptions": [
+      "Angular compiler"
+    ],
+    "time": 60,
+    "details": "Tsickle compiles TS to JS."
+  },
+  {
+    "question": "What is tsc-alias?",
+    "options": [
+      "Path resolver",
+      "Resolve",
+      "Build tool",
+      "Plugin"
+    ],
+    "correctOptions": [
+      "Path resolver"
+    ],
+    "time": 55,
+    "details": "Resolves import paths."
+  },
+  {
+    "question": "What is tsconfig-paths?",
+    "options": [
+      "Path mapping",
+      "Resolve",
+      "Config",
+      "Plugin"
+    ],
+    "correctOptions": [
+      "Path mapping"
+    ],
+    "time": 55,
+    "details": "Resolves paths via config."
+  },
+  {
+    "question": "What is @babel/preset-typescript?",
+    "options": [
+      "Babel support",
+      "TS via Babel",
+      "Transpile",
+      "Preset"
+    ],
+    "correctOptions": [
+      "TS via Babel"
+    ],
+    "time": 55,
+    "details": "Enables Babel to compile TS."
+  },
+  {
+    "question": "What is swc?",
+    "options": [
+      "Rust compiler",
+      "Fast",
+      "Alternative",
+      "Transpiler"
+    ],
+    "correctOptions": [
+      "Rust compiler"
+    ],
+    "time": 55,
+    "details": "swc is fast Rust compiler."
+  },
+  {
+    "question": "What is esbuild?",
+    "options": [
+      "Go compiler",
+      "Bundle + compile",
+      "Fast",
+      "Tool"
+    ],
+    "correctOptions": [
+      "Go compiler"
+    ],
+    "time": 55,
+    "details": "esbuild is fast compiler."
+  },
+  {
+    "question": "What is esbuild in TypeScript?",
+    "options": [
+      "Compile TS",
+      "TypeScript",
+      "Go",
+      "Transpile"
+    ],
+    "correctOptions": [
+      "Compile TS"
+    ],
+    "time": 50,
+    "details": "esbuild compiles TypeScript."
+  },
+  {
+    "question": "What is tsm module?",
+    "options": [
+      "TS runner",
+      "Execute TS",
+      "node-like",
+      "Script"
+    ],
+    "correctOptions": [
+      "TS runner"
+    ],
+    "time": 55,
+    "details": "Runs TypeScript directly."
+  },
+  {
+    "question": "What is ts-node?",
+    "options": [
+      "TS runner",
+      "Execute TS",
+      "node",
+      "Compiler"
+    ],
+    "correctOptions": [
+      "Execute TS"
+    ],
+    "time": 50,
+    "details": "Runs TypeScript in Node."
+  },
+  {
+    "question": "What is ts-node execution?",
+    "options": [
+      "Transpile + run",
+      "Compile",
+      "Run",
+      "Execute"
+    ],
+    "correctOptions": [
+      "Transpile + run"
+    ],
+    "time": 55,
+    "details": "ts-node transpiles then runs."
+  },
+  {
+    "question": "What is ts-node compiler register?",
+    "options": [
+      "Hook register",
+      "Auto register",
+      "Transpile",
+      "Hook"
+    ],
+    "correctOptions": [
+      "Hook register"
+    ],
+    "time": 60,
+    "details": "register loads compiler automatically."
+  },
+  {
+    "question": "What is ts-node --transpile-only?",
+    "options": [
+      "No type check",
+      "Skips types",
+      "Fast",
+      "Execute"
+    ],
+    "correctOptions": [
+      "No type check"
+    ],
+    "time": 60,
+    "details": "Skips type checking."
+  },
+  {
+    "question": "What is TSTL?",
+    "options": [
+      "TypeScript to TypeScript",
+      "Transformer",
+      "Compile",
+      "Output"
+    ],
+    "correctOptions": [
+      "TypeScript to TypeScript"
+    ],
+    "time": 65,
+    "details": "TSTL transforms TypeScript."
+  },
+  {
+    "question": "What is type tests?",
+    "options": [
+      "Compile-time tests",
+      "Expect errors",
+      "Test types",
+      "Tests"
+    ],
+    "correctOptions": [
+      "Compile-time tests"
+    ],
+    "time": 60,
+    "details": "Type tests validate types."
+  },
+  {
+    "question": "What is typo-correct?",
+    "options": [
+      "Type error testing",
+      "Expect errors",
+      "Test",
+      "TypeCheck"
+    ],
+    "correctOptions": [
+      "Type error testing"
+    ],
+    "time": 65,
+    "details": "Expects type errors."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is tsd stringOf?",
+    "options": [
+      "String to type",
+      "Type",
+      "String",
+      "Test"
+    ],
+    "correctOptions": [
+      "String to type"
+    ],
+    "time": 70,
+    "details": "stringOf extracts string type."
+  },
+  {
+    "question": "What is type-level sorting?",
+    "options": [
+      "Sort types",
+      "Conditional",
+      "Recursion",
+      "Sort values"
+    ],
+    "correctOptions": [
+      "Sort types"
+    ],
+    "time": 70,
+    "details": "Type-level sorting uses recursive conditional types."
+  },
+  {
+    "question": "What is type-level binary search?",
+    "options": [
+      "Search types",
+      "Divide conquer",
+      "Algorithm",
+      "Find"
+    ],
+    "correctOptions": [
+      "Search types"
+    ],
+    "time": 75,
+    "details": "Binary search can be implemented at type-level."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type-level map?",
+    "options": [
+      "Transform types",
+      "Map over types",
+      "Morph",
+      "Convert"
+    ],
+    "correctOptions": [
+      "Transform types"
+    ],
+    "time": 65,
+    "details": "Type-level map transforms every type in a union."
+  },
+  {
+    "question": "What is type-level filter?",
+    "options": [
+      "Filter types",
+      "Conditional type",
+      "Exclude",
+      "Select"
+    ],
+    "correctOptions": [
+      "Filter types"
+    ],
+    "time": 65,
+    "details": "Type-level filter excludes matching types."
+  },
+  {
+    "question": "What is type-level reduce?",
+    "options": [
+      "Reduce types",
+      "Aggregate",
+      "Accumulate",
+      "Fold"
+    ],
+    "correctOptions": [
+      "Reduce types"
+    ],
+    "time": 70,
+    "details": "Type-level reduce aggregates union types."
+  },
+  {
+    "question": "What is deep partial type?",
+    "options": [
+      "Nested optional",
+      "Recursive Partial",
+      "All nested",
+      "Deep"
+    ],
+    "correctOptions": [
+      "Nested optional"
+    ],
+    "time": 65,
+    "details": "DeepPartial makes all nested properties optional."
+  },
+  {
+    "question": "What is deep readonly type?",
+    "options": [
+      "Nested readonly",
+      "Readonly recursively",
+      "All nested",
+      "Immutable"
+    ],
+    "correctOptions": [
+      "Nested readonly"
+    ],
+    "time": 65,
+    "details": "DeepReadonly makes all nested properties readonly."
+  },
+  {
+    "question": "What is recursive required type?",
+    "options": [
+      "All required",
+      "Nested Required",
+      "Force required",
+      "Complete"
+    ],
+    "correctOptions": [
+      "All required"
+    ],
+    "time": 65,
+    "details": "Recursive Required makes all nested properties required."
+  },
+  {
+    "question": "What is type-level includes?",
+    "options": [
+      "Check type",
+      "In union",
+      "Search",
+      "Boolean"
+    ],
+    "correctOptions": [
+      "Check type"
+    ],
+    "time": 60,
+    "details": "type-level includes checks if type is in union."
+  },
+  {
+    "question": "What is type-level length?",
+    "options": [
+      "Tuple length",
+      "Count elements",
+      "Number",
+      "Size"
+    ],
+    "correctOptions": [
+      "Count elements"
+    ],
+    "time": 60,
+    "details": "type-level length gets tuple/countable type length."
+  },
+  {
+    "question": "What is type-level append?",
+    "options": [
+      "Add to tuple",
+      "Push type",
+      "Extend",
+      "Add"
+    ],
+    "correctOptions": [
+      "Add to tuple"
+    ],
+    "time": 60,
+    "details": "type-level append adds type to tuple."
+  },
+  {
+    "question": "What is type-level prepend?",
+    "options": [
+      "Add to start",
+      "Unshift type",
+      "Prepend",
+      "Insert"
+    ],
+    "correctOptions": [
+      "Add to start"
+    ],
+    "time": 60,
+    "details": "type-level prepend adds type at tuple start."
+  },
+  {
+    "question": "What is type-level reverse?",
+    "options": [
+      "Reverse tuple",
+      "Flip order",
+      "Reverse",
+      "Invert"
+    ],
+    "correctOptions": [
+      "Reverse tuple"
+    ],
+    "time": 60,
+    "details": "type-level reverse reverses tuple order."
+  },
+  {
+    "question": "What is type-level zip?",
+    "options": [
+      "Zip tuples",
+      "Pair types",
+      "Combine",
+      "Merge"
+    ],
+    "correctOptions": [
+      "Zip tuples"
+    ],
+    "time": 70,
+    "details": "type-level zip pairs corresponding tuple elements."
+  },
+  {
+    "question": "What is type-level curry?",
+    "options": [
+      "Curry function",
+      "Transform",
+      "Curry type",
+      "Higher-order"
+    ],
+    "correctOptions": [
+      "Curry function"
+    ],
+    "time": 70,
+    "details": "type-level curry transforms function types."
+  },
+  {
+    "question": "What is type-level uncurry?",
+    "options": [
+      "Uncurry function",
+      "Flatten",
+      "Transform",
+      "Uncurry type"
+    ],
+    "correctOptions": [
+      "Uncurry function"
+    ],
+    "time": 70,
+    "details": "type-level uncurry flattens curried types."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is type? (Level 7 #103)",
+    "options": [
+      "Union",
+      "Intersection",
+      "Alias",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Union",
+      "Intersection",
+      "Alias",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is enum? (Level 7 #105)",
+    "options": [
+      "Numeric",
+      "String",
+      "Const",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Numeric",
+      "String",
+      "Const",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is enum? explanation."
+  },
+  {
+    "question": "What is decorator? (Level 7 #106)",
+    "options": [
+      "Class",
+      "Method",
+      "Property",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Class",
+      "Method",
+      "Property",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is decorator? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is utility types? (Level 7 #108)",
+    "options": [
+      "Partial",
+      "Required",
+      "Readonly",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Partial",
+      "Required",
+      "Readonly",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is utility types? explanation."
+  },
+  {
+    "question": "What is namespace? (Level 7 #109)",
+    "options": [
+      "Module",
+      "Scope",
+      "Organization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Module",
+      "Scope",
+      "Organization",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is namespace? explanation."
+  },
+  {
+    "question": "What is type guard? (Level 7 #110)",
+    "options": [
+      "Narrowing",
+      "Custom",
+      "typeof",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Narrowing",
+      "Custom",
+      "typeof",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type guard? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  }
 ]

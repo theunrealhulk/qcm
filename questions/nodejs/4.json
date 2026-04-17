@@ -1,128 +1,2276 @@
 [
-  {"question": "What is NVM?", "options": ["Node version manager", "Version manager", "Node manager", "Package"], "correctOptions": ["Node version manager"], "time": 30, "details": "NVM manages multiple Node.js versions on one system."},
-  {"question": "What is REPL?", "options": ["Shell", "Interactive console", "Debugger", "Console"], "correctOptions": ["Interactive console"], "time": 30, "details": "REPL is Read-Eval-Print-Loop for interactive coding."},
-  {"question": "How exit REPL?", "options": [".exit", "Ctrl+C", "Ctrl+D", "quit"], "correctOptions": ["Ctrl+D"], "time": 30, "details": "Ctrl+D or .exit exits REPL."},
-  {"question": "What is Readable stream paused mode?", "options": ["Flow controlled", "Back-pressure", "Manual mode", "Buffer"], "correctOptions": ["Back-pressure"], "time": 40, "details": "Paused mode applies back-pressure automatically."},
-  {"question": "What is flowing mode?", "options": ["Auto-read", "No back-pressure", "Push mode", "Rapid"], "correctOptions": ["Auto-read"], "time": 40, "details": "Flowing mode reads data automatically as fast as possible."},
-  {"question": "How switch to flowing mode?", "options": ["Attach data handler", "Listen to data", "on('data')", "pipe"], "correctOptions": ["on('data')"], "time": 45, "details": "Attaching 'data' listener switches to flowing mode."},
-  {"question": "What is object mode stream?", "options": ["Objects not buffers", "Typed data", "Any data", "Custom"], "correctOptions": ["Objects not buffers"], "time": 45, "details": "object mode streams pass JavaScript objects."},
-  {"question": "What is highWaterMark?:", "options": ["Buffer size", "Internal buffer", "Threshold", "Limit"], "correctOptions": ["Internal buffer"], "time": 40, "details": "highWaterMark sets internal buffer size."},
-  {"question": "What is Transform stream?", "options": ["Data converter", "Modify on fly", "Pipeline", "Processing"], "correctOptions": ["Modify on fly"], "time": 40, "details": "Transform streams modify data as passing through."},
-  {"question": "What does transform.push() do?", "options": ["Output data", "Push transformed", "Write", "Send"], "correctOptions": ["Push transformed"], "time": 45, "details": "push() outputs transformed data."},
-  {"question": "What is PassThrough stream?", "options": ["No-op", "Passthrough", "Identity", "Null"], "correctOptions": ["No-op"], "time": 45, "details": "PassThrough is identity transform stream."},
-  {"question": "What is back-pressure?", "options": ["Flow control", "Slow consumer", "Pause", "Wait"], "correctOptions": ["Flow control"], "time": 45, "details": "Back-pressure occurs when consumer can't keep up."},
-  {"question": "How handle back-pressure manually?", "options": ["Check writable.write()", "pause/resume", "drain event", "buffer"], "correctOptions": ["drain event"], "time": 50, "details": "Wait for 'drain' event before writing more."},
-  {"question": "What is pipeline()?", "options": ["Pipe streams", "Connect", "Safe pipe", "Chain"], "correctOptions": ["Safe pipe"], "time": 45, "details": "pipeline() pipes streams with error handling."},
-  {"question": "What is composed pipeline?", "options": ["Multiple pipes", "Multiple streams", "Chain all", "Compose"], "correctOptions": ["Multiple streams"], "time": 50, "details": "compose() combines multiple transforms."},
-  {"question": "What is crypto.createCipheriv()?", "options": ["Symmetric cipher", "AES", "Direct encryption", "Encrypt"], "correctOptions": ["Symmetric cipher"], "time": 50, "details": "createCipheriv() creates symmetric cipher."},
-  {"question": "What does randomBytes() generate?", "options": ["Random bytes", "Secure bytes", "Bytes", "Salt"], "correctOptions": ["Random bytes"], "time": 40, "details": "randomBytes() generates cryptographically random bytes."},
-  {"question": "What is timing attack vulnerability?", "options": ["Time leaks info", "Slow compare", "Side channel", "Vector"], "correctOptions": ["Time leaks info"], "time": 55, "details": "Attackers measure time to infer secrets."},
-  {"question": "What is constant-time comparison?", "options": ["Fixed duration", "Timing safe", "Secure", "timingSafeEqual"], "correctOptions": ["Timing safe"], "time": 50, "details": "crypto.timingSafeEqual compares in fixed time."},
-  {"question": "What is Buffer.allocUnsafe()?", "options": ["Uninitiailized", "Fast", "Raw memory", "Empty"], "correctOptions": ["Uninitiailized"], "time": 45, "details": "AllocUnsafe may contain old data - faster."},
-  {"question": "What is Buffer.alloc()?", "options": ["Initialized", "Zero-filled", "Safe", "Clean"], "correctOptions": ["Zero-filled"], "time": 40, "details": "Alloc zeroes memory for security."},
-  {"question": "What is StringDecoder?", "options": ["Handle partial", "Decode strings", "Multi-byte", "UTF"], "correctOptions": ["Handle partial"], "time": 50, "details": "StringDecoder handles incomplete multibyte chars."},
-  {"question": "What is Readline module?", "options": ["Line by line", "Interactive", "CLI", "Prompt"], "correctOptions": ["Line by line"], "time": 40, "details": "Readline reads input line by line."},
-  {"question": "What is Interface?", "options": ["Input/out", "Readline interface", "Stream", "Wrapper"], "correctOptions": ["Readline interface"], "time": 45, "details": "createInterface() creates readline interface."},
-  {"question": "What is TTY?", "options": ["Terminal", "Console", "Terminal interface", "IO"], "correctOptions": ["Terminal"], "time": 40, "details": "TTY represents terminal device."},
-  {"question": "What is TTY.setRawMode()?", "options": ["Raw input", "Raw mode", "Direct", "Passthrough"], "correctOptions": ["Raw mode"], "time": 50, "details": "setRawMode enables raw terminal input."},
-  {"question": "What is Zlib createDeflate()?", "options": ["Compression stream", "Deflate", "Zip", "Encoder"], "correctOptions": ["Compression stream"], "time": 45, "details": "createDeflate creates compression stream."},
-  {"question": "What is brotli?", "options": ["Newer compression", "Better than gzip", "Modern", "Algorithm"], "correctOptions": ["Better than gzip"], "time": 45, "details": "Brotli offers better compression than gzip."},
-  {"question": "What is createGzip()?", "options": ["Compress stream", "Gzip encoder", "Encode", "Zip"], "correctOptions": ["Compress stream"], "time": 40, "details": "Gzip compression stream."},
-  {"question": "What is createGunzip()?", "options": ["Decompress", "Decompression", "Unzip", "Decode"], "correctOptions": ["Decompress"], "time": 40, "details": "Decompress gzip stream."},
-  {"question": "What is createBrotliCompress()?", "options": ["Brotli compression", "Modern encode", "Encode", "Compress"], "correctOptions": ["Brotli compression"], "time": 50, "details": "Brotli compression."},
-  {"question": "What is createBrotliDecompress()?", "options": ["Brotli decompress", "Brotli decode", "Decompress", "Expand"], "correctOptions": ["Brotli decompress"], "time": 50, "details": "Brotli decompression."},
-  {"question": "What is zlib.brotli*?", "options": ["Brotli options", "Compress/decompress", "API", "Functions"], "correctOptions": ["Compress/decompress"], "time": 50, "details": "Brotli functions available in zlib module."},
-  {"question": "What is http.Agent?", "options": ["HTTP connection", "Pool sockets", "Manage", "Socket"], "correctOptions": ["Pool sockets"], "time": 45, "details": "Agent manages HTTP connection pool."},
-  {"question": "What is keepAlive in Agent?", "options": ["Reuse connections", "Persist", "Socket", "Connection"], "correctOptions": ["Reuse connections"], "time": 45, "details": "keepAlive reuses connections."},
-  {"question": "What is http.request()?", "options": ["HTTP client", "Make request", "Client", "Fetch"], "correctOptions": ["HTTP client"], "time": 40, "details": "http.request() makes HTTP requests."},
-  {"question": "What is http.ClientRequest?", "options": ["Request object", "Client", "Instance", "Object"], "correctOptions": ["Request object"], "time": 45, "details": "ClientRequest represents request."},
-  {"question": "What is IncomingMessage?", "options": ["Response", "Server response", "Message", "Object"], "correctOptions": ["Server response"], "time": 45, "details": "IncomingMessage is HTTP response."},
-  {"question": "What is ServerResponse?", "options": ["Response writer", "Server", "Response object", "Write"], "correctOptions": ["Response writer"], "time": 45, "details": "ServerResponse handles response."},
-  {"question": "What is http.createServer()?", "options": ["Create server", "HTTP server", "New server", "Server"], "correctOptions": ["HTTP server"], "time": 40, "details": "Creates HTTP server."},
-  {"question": "What is server.listen()?", "options": ["Start server", "Bind port", "Listen", "Activate"], "correctOptions": ["Bind port"], "time": 40, "details": "listen() binds to port."},
-  {"question": "What is net.createServer()?", "options": ["TCP server", "TCP", "Network server", "Socket"], "correctOptions": ["TCP server"], "time": 40, "details": "Creates TCP server."},
-  {"question": "What is net.connect()?", "options": ["Connect client", "Connect to server", "Socket connect", "Connect"], "correctOptions": ["Connect to server"], "time": 40, "details": "connect() creates client connection."},
-  {"question": "What is Socket address()?", "options": ["Get address", "Socket info", "Address", "Info"], "correctOptions": ["Socket info"], "time": 45, "details": "address() returns socket address."},
-  {"question": "What is Socket remoteAddress?", "options": ["Peer address", "Remote", "Client IP", "IP"], "correctOptions": ["Peer address"], "time": 40, "details": "Remote address of the client."},
-  {"question": "What is tls.createServer()?", "options": ["TLS server", "Secure server", "HTTPS server", "SSL"], "correctOptions": ["Secure server"], "time": 40, "details": "Creates TLS/SSL server."},
-  {"question": "What is tls.connect()?", "options": ["TLS client", "Secure connect", "Connect", "SSL"], "correctOptions": ["TLS client"], "time": 40, "details": "TLS client connection."},
-  {"question": "What is https module?", "options": ["HTTPS", "Secure HTTP", "TLS wrapper", "HTTP TLS"], "correctOptions": ["HTTP TLS"], "time": 35, "details": "https is HTTP over TLS."},
-  {"question": "What is https.request()?", "options": ["Secure request", "HTTPS client", "Secure", "Fetch"], "correctOptions": ["Secure request"], "time": 40, "details": "Makes secure HTTP request."},
-  {"question": "What is TLS/SSL key?", "options": ["Private key", "Encryption key", "Secret", "Decrypt"], "correctOptions": ["Private key"], "time": 35, "details": "Private key for decryption."},
-  {"question": "What is TLS/SSL certificate?", "options": ["Public key", "Certificate", "Public", "Verify"], "correctOptions": ["Public key"], "time": 35, "details": "Public key certificate."},
-  {"question": "What is CSR?", "options": ["Certificate request", "Request", "Signing request", "Generate"], "correctOptions": ["Certificate request"], "time": 40, "details": "Certificate Signing Request."},
-  {"question": "What is self-signed certificate?", "options": ["Test certificate", "Self-signed", "Development", "Local"], "correctOptions": ["Test certificate"], "time": 40, "details": "Self-signed for testing."},
-  {"question": "What is mTLS?", "options": ["Mutual TLS", "Two-way auth", "Both verify", "Client cert"], "correctOptions": ["Two-way auth"], "time": 55, "details": "Mutual TLS requires client certificate."},
-  {"question": "What is http2 module?", "options": ["HTTP/2", "Protocol", "New HTTP", "h2"], "correctOptions": ["HTTP/2"], "time": 35, "details": "http2 provides HTTP/2 support."},
-  {"question": "What is http2.createServer()?", "options": ["HTTP/2 server", "h2 server", "New server", "Server"], "correctOptions": ["HTTP/2 server"], "time": 40, "details": "Creates HTTP/2 server."},
-  {"question": "What is push in HTTP/2?", "options": ["Server push", "Send resources", "Preload", "Stream"], "correctOptions": ["Send resources"], "time": 50, "details": "HTTP/2 server push sends extra resources."},
-  {"question": "What is multiplexing?", "options": ["Concurrent streams", "Parallel", "Multiple", "Combine"], "correctOptions": ["Concurrent streams"], "time": 50, "details": "HTTP/2 multiplexes multiple streams."},
-  {"question": "What is header compression?", "options": ["HPACK", "Compress headers", "Reduce size", "Optimize"], "correctOptions": ["Compress headers"], "time": 50, "details": "HPACK compresses headers."},
-  {"question": "What is server push?", "options": ["Proactive send", "Initiate", "Push", "Preload"], "correctOptions": ["Proactive send"], "time": 55, "details": "Server sends resources before requested."},
-  {"question": "What is ALPN?", "options": ["Protocol negotiation", "TLS extension", "Handshake", "Negotiate"], "correctOptions": ["Protocol negotiation"], "time": 55, "details": "ALPN negotiates protocol in TLS handshake."},
-  {"question": "What is h2 via TLS?", "options": ["HTTP/2 over TLS", "HTTPS upgrade", "Secure h2", "Upgrade"], "correctOptions": ["HTTP/2 over TLS"], "time": 50, "details": "HTTP/2 over TLS (not SSL)."},
-  {"question": "What is QUIC?", "options": ["New protocol", "UDP-based", "HTTP/3", "Transport"], "correctOptions": ["UDP-based"], "time": 50, "details": "QUIC is UDP-based transport."},
-  {"question": "What is HTTP/3?", "options": ["HTTP over QUIC", "New HTTP", "Protocol", "Next"], "correctOptions": ["HTTP over QUIC"], "time": 50, "details": "HTTP/3 uses QUIC transport."},
-  {"question": "What is connection priorities?", "options": ["Stream weights", "Resource priority", "Weighting", "Prioritize"], "correctOptions": ["Stream weights"], "time": 55, "details": "HTTP/2 uses stream weights for prioritization."},
-  {"question": "What is stream dependency?", "options": ["Parent stream", "Stream hierarchy", "Link", "Priority"], "correctOptions": ["Parent stream"], "time": 60, "details": "Streams can depend on other streams."},
-  {"question": "What is DNS lookup?", "options": ["Resolve domain", "IP lookup", "Resolve", "Address"], "correctOptions": ["Resolve domain"], "time": 40, "details": "dns.lookup resolves hostname."},
-  {"question": "What is DNS resolve?", "options": ["DNS query", "Generic resolve", "Lookup", "Find"], "correctOptions": ["DNS query"], "time": 40, "details": "dns.resolve performs DNS queries."},
-  {"question": "What is DNS reverse?", "options": ["IP to hostname", "PTR", "Reverse lookup", "IP"], "correctOptions": ["IP to hostname"], "time": 45, "details": "dns.reverse does IP to hostname lookup."},
-  {"question": "What is DNS resolve4?", "options": ["IPv4 lookup", "A record", "Query", "Get"], "correctOptions": ["IPv4 lookup"], "time": 45, "details": "resolve4 queries A records."},
-  {"question": "What is DNS resolve6?", "options": ["IPv6 lookup", "AAAA", "Query", "Get"], "correctOptions": ["IPv6 lookup"], "time": 45, "details": "resolve6 queries AAAA records."},
-  {"question": "What is DNS resolveMx?", "options": ["Mail exchange", "MX record", "Query", "Get"], "correctOptions": ["Mail exchange"], "time": 45, "details": "resolveMx queries MX records."},
-  {"question": "What is DNS resolveTxt?", "options": ["Text record", "TXT", "Query", "Get"], "correctOptions": ["Text record"], "time": 45, "details": "resolveTxt queries TXT records."},
-  {"question": "What is DNS resolveSrv?", "options": ["Service record", "SRV", "Query", "Get"], "correctOptions": ["Service record"], "time": 50, "details": "resolveSrv queries SRV records."},
-  {"question": "What is DNS resolveSoa?", "options": ["Start of authority", "SOA", "Query", "Get"], "correctOptions": ["Start of authority"], "time": 50, "details": "resolveSoa queries SOA records."},
-  {"question": "What is DNS resolveNs?", "options": ["Name server", "NS", "Query", "Get"], "correctOptions": ["Name server"], "time": 45, "details": "resolveNs queries NS records."},
-  {"question": "What is DNS resolveCname?", "options": ["Canonical name", "CNAME", "Query", "Get"], "correctOptions": ["Canonical name"], "time": 50, "details": "resolveCname queries CNAME records."},
-  {"question": "What is DNS resolveAny?", "options": ["All records", "ANY", "Query", "Get"], "correctOptions": ["All records"], "time": 50, "details": "resolveAny queries any record."},
-  {"question": "What is setServers()?", "options": ["Set DNS servers", "Configure", "Servers", "Custom"], "correctOptions": ["Set DNS servers"], "time": 45, "details": "setServers() sets custom DNS servers."},
-  {"question": "What is getServers()?", "options": ["Get DNS servers", "List", "Servers", "Config"], "correctOptions": ["Get DNS servers"], "time": 45, "details": "getServers() returns DNS servers."},
-  {"question": "What is setDefaultResultOrder?", "options": ["Set sort order", "Configure", "Order", "Priority"], "correctOptions": ["Set sort order"], "time": 55, "details": "Sets order for results."},
-  {"question": "What is resolver?", "options": ["Custom resolver", "DNS resolver", "Custom", "Instance"], "correctOptions": ["Custom resolver"], "time": 55, "details": "Create custom resolver."},
-  {"question": "What is resolve() resolver method?", "options": ["Custom resolve", "Specific", "Resolve", "Lookup"], "correctOptions": ["Specific"], "time": 55, "details": "resolve() uses custom resolver."},
-  {"question": "What is reverse() resolver method?", "options": ["Custom reverse", "PTR lookup", "Reverse", "IP"], "correctOptions": ["PTR lookup"], "time": 55, "details": "reverse() does IP lookup via custom resolver."},
-  {"question": "What is GetAddrInfoReqWrappable?", "options": ["Async wrapper", "Internal", "Request", "Wrap"], "correctOptions": ["Async wrapper"], "time": 60, "details": "Internal async wrapper class."},
-  {"question": "What is dns.ADVERTISED_EXTERNAL_ADDRESSES?", "options": ["Public IPs", "Advertised", "External", "Addresses"], "correctOptions": ["Public IPs"], "time": 60, "details": "Returns advertised external addresses."},
-  {"question": "What is URL pattern?", "options": ["URL glob", "Wildcard", "Pattern matching", "Regex"], "correctOptions": ["URL glob"], "time": 55, "details": "URLPattern matches URLs with wildcards."},
-  {"question": "What is globalZn?", "options": ["Zone", "Process", "ID", "Identifier"], "correctOptions": ["Process"], "time": 55, "details": "Isolate is process in workers API."},
-  {"question": "What is worker_threads?", "options": ["Multi-threading", "CPU workers", "Parallel", "Thread"], "correctOptions": ["Multi-threading"], "time": 50, "details": "worker_threads enables threading."},
-  {"question": "What is MessageChannel?", "options": ["Port pair", "PostMessage", "Channel", "Link"], "correctOptions": ["Port pair"], "time": 55, "details": "MessageChannel creates port pair."},
-  {"question": "What is MessagePort?", "options": ["Message conduit", "Port", "Channel", "Transfer"], "correctOptions": ["Message conduit"], "time": 55, "details": "Ports send messages between contexts."},
-  {"question": "What is SharedArrayBuffer?", "options": ["Shared memory", "Cross-thread", "Memory", "Buffer"], "correctOptions": ["Shared memory"], "time": 50, "details": "SAB shares memory across threads."},
-  {"question": "What is Atomics.add()?", "options": ["Atomic add", "Add and store", "Operation", "Add"], "correctOptions": ["Add and store"], "time": 55, "details": "Atomically adds value to index."},
-  {"question": "What is Atomics.sub()?", "options": ["Atomic sub", "Subtract", "Operation", "Minus"], "correctOptions": ["Subtract"], "time": 50, "details": "Atomically subtracts value."},
-  {"question": "What is Atomics.and()?", "options": ["Atomic AND", "Bitwise and", "Operation", "And"], "correctOptions": ["Bitwise and"], "time": 50, "details": "Atomically performs AND operation."},
-  {"question": "What is Atomics.or()?", "options": ["Atomic OR", "Bitwise or", "Operation", "Or"], "correctOptions": ["Bitwise or"], "time": 50, "details": "Atomically performs OR operation."},
-  {"question": "What is Atomics.xor()?", "options": ["Atomic XOR", "Bitwise xor", "Operation", "Xor"], "correctOptions": ["Bitwise xor"], "time": 50, "details": "Atomically performs XOR."},
-  {"question": "What is Atomics.store()?", "options": ["Atomic write", "Set value", "Write", "Assign"], "correctOptions": ["Set value"], "time": 50, "details": "Atomically stores value."},
-  {"question": "What is Atomics.load()?", "options": ["Atomic read", "Get value", "Read", "Fetch"], "correctOptions": ["Get value"], "time": 50, "details": "Atomically loads value."},
-  {"question": "What is Atomics.compareExchange()?", "options": ["Atomic CAS", "Conditional", "Compare", "Swap"], "correctOptions": ["Conditional"], "time": 55, "details": "Atomic compare and exchange."},
-  {"question": "What is Atomics.exchange()?", "options": ["Atomic swap", "Set return", "Swap", "Replace"], "correctOptions": ["Atomic swap"], "time": 55, "details": "Atomically exchanges value."},
-  {"question": "What is Atomics.wait()?", "options": ["Wait for value", "Futex wait", "Block", "Suspend"], "correctOptions": ["Wait for value"], "time": 55, "details": "Wait for value at index."},
-  {"question": "What is Atomics.notify()?", "options": ["Wake waiters", "Signal", "Wake", "Nofify"], "correctOptions": ["Wake waiters"], "time": 55, "details": "Wakes waiters at index."},
-  {"question": "What is Atomics.isLockFree()?", "options": ["Check lock-free", "Supported", "Free", "Test"], "correctOptions": ["Check lock-free"], "time": 55, "details": "Check if operation is lock-free."},
-  {"question": "What is perf_hooks?", "options": ["Performance", "Timers", "Monitor", "Hooks"], "correctOptions": ["Performance"], "time": 45, "details": "perf_hooks provides performance monitoring."},
-  {"question": "What is PerformanceEntry?", "options": ["Metric", "Event record", "Data", "Event"], "correctOptions": ["Event record"], "time": 50, "details": "PerformanceEntry is metric event."},
-  {"question": "What is PerformanceMark?", "options": ["Custom marker", "User mark", "Mark", "Time"], "correctOptions": ["Custom marker"], "time": 50, "details": "User-defined performance mark."},
-  {"question": "What is PerformanceMeasure?", "options": ["Duration", "Timed measure", "Measure", "Delta"], "correctOptions": ["Duration"], "time": 50, "details": "Measure between marks."},
-  {"question": "What is PerformanceObserver?", "options": ["Monitor metrics", "Observer", "Collect", "Watch"], "correctOptions": ["Monitor metrics"], "time": 55, "details": "Observes performance metrics."},
-  {"question": "What does observe() do?", "options": ["Start observing", "Register", "Watch", "Monitor"], "correctOptions": ["Start observing"], "time": 55, "details": "observe() starts observation."},
-  {"question": "What is performance.mark()?", "options": ["Create mark", "Mark", "Set mark", "Time"], "correctOptions": ["Create mark"], "time": 45, "details": "Creates named mark."},
-  {"question": "What is performance.measure()?", "options": ["Measure duration", "Calculate", "Measure", "Delta"], "correctOptions": ["Measure duration"], "time": 50, "details": "Measures between marks."},
-  {"question": "What is performance.timerify()?", "options": ["Wrap function", "Profile", "Timerify", "Wrap"], "correctOptions": ["Wrap function"], "time": 55, "details": "timerify wraps function for timing."},
-  {"question": "What is performance.now()?", "options": ["Timestamp", "High-res time", "Now", "Time"], "correctOptions": ["High-res time"], "time": 45, "details": "High-resolution timestamp."},
-  {"question": "What is performance.timeOrigin?", "options": ["Start time", "Epoch", "Origin", "Time"], "correctOptions": ["Epoch"], "time": 50, "details": "Time origin timestamp."},
-  {"question": "What is eventLoopLag?", "options": ["Event loop delay", "Lag", "Delay", "Time"], "correctOptions": ["Event loop delay"], "time": 50, "details": "eventLoopLag measures event loop delay."},
-  {"question": "What is eventLoopUtilization()?", "options": ["CPU usage", "Utilization", "Ratio", "Load"], "correctOptions": ["CPU usage"], "time": 55, "details": "eventLoopUtilization returns CPU ratio."},
-  {"question": "What is async_hooks?", "options": ["Async monitoring", "Trace", "Monitor", "Hooks"], "correctOptions": ["Async monitoring"], "time": 50, "details": "async_hooks monitors async operations."},
-  {"question": "What is AsyncResource?", "options": ["Async context", "Wrap async", "Resource", "Context"], "correctOptions": ["Async context"], "time": 55, "details": "AsyncResource creates async context."},
-  {"question": "What is asyncId?", "options": ["Async ID", "Unique ID", "Identifier", "ID"], "correctOptions": ["Unique ID"], "time": 50, "details": "asyncId identifies async operation."},
-  {"question": "What is triggerAsyncId?", "options": ["Parent async", "Trigger ID", "Cause", "Parent"], "correctOptions": ["Parent async"], "time": 55, "details": "triggerAsyncId is parent async ID."},
-  {"question": "What is createHook()?", "options": ["Create observer", "Setup hooks", "Init", "Register"], "correctOptions": ["Create observer"], "time": 55, "details": "Creates async hooks."},
-  {"question": "What does createHook() return?", "options": ["Hook interface", "Callback", "Control object", "Object"], "correctOptions": ["Hook interface"], "time": 55, "details": "Returns hook control interface."},
-  {"question": "What is hooks.emulateAsyncId()?", "options": ["Simulate async", "Set async ID", "Emulate", "Fake"], "correctOptions": ["Set async ID"], "time": 60, "details": "Makes async appear as child of another."},
-  {"question": "What is wase()?", "options": ["WASM", "WebAssembly", "Module", "Run WASM"], "correctOptions": ["WebAssembly"], "time": 45, "details": "wasm compiles and runs WebAssembly."},
-  {"question": "What does wasm.instantiate()?", "options": ["Compile module", "Instantiate", "Load", "Run"], "correctOptions": ["Instantiate"], "time": 50, "details": "Instantiates WebAssembly module."}
+  {
+    "question": "What is NVM?",
+    "options": [
+      "Node version manager",
+      "Version manager",
+      "Node manager",
+      "Package"
+    ],
+    "correctOptions": [
+      "Node version manager"
+    ],
+    "time": 30,
+    "details": "NVM manages multiple Node.js versions on one system."
+  },
+  {
+    "question": "What is REPL?",
+    "options": [
+      "Shell",
+      "Interactive console",
+      "Debugger",
+      "Console"
+    ],
+    "correctOptions": [
+      "Interactive console"
+    ],
+    "time": 30,
+    "details": "REPL is Read-Eval-Print-Loop for interactive coding."
+  },
+  {
+    "question": "How exit REPL?",
+    "options": [
+      ".exit",
+      "Ctrl+C",
+      "Ctrl+D",
+      "quit"
+    ],
+    "correctOptions": [
+      "Ctrl+D"
+    ],
+    "time": 30,
+    "details": "Ctrl+D or .exit exits REPL."
+  },
+  {
+    "question": "What is Readable stream paused mode?",
+    "options": [
+      "Flow controlled",
+      "Back-pressure",
+      "Manual mode",
+      "Buffer"
+    ],
+    "correctOptions": [
+      "Back-pressure"
+    ],
+    "time": 40,
+    "details": "Paused mode applies back-pressure automatically."
+  },
+  {
+    "question": "What is flowing mode?",
+    "options": [
+      "Auto-read",
+      "No back-pressure",
+      "Push mode",
+      "Rapid"
+    ],
+    "correctOptions": [
+      "Auto-read"
+    ],
+    "time": 40,
+    "details": "Flowing mode reads data automatically as fast as possible."
+  },
+  {
+    "question": "How switch to flowing mode?",
+    "options": [
+      "Attach data handler",
+      "Listen to data",
+      "on('data')",
+      "pipe"
+    ],
+    "correctOptions": [
+      "on('data')"
+    ],
+    "time": 45,
+    "details": "Attaching 'data' listener switches to flowing mode."
+  },
+  {
+    "question": "What is object mode stream?",
+    "options": [
+      "Objects not buffers",
+      "Typed data",
+      "Any data",
+      "Custom"
+    ],
+    "correctOptions": [
+      "Objects not buffers"
+    ],
+    "time": 45,
+    "details": "object mode streams pass JavaScript objects."
+  },
+  {
+    "question": "What is highWaterMark?:",
+    "options": [
+      "Buffer size",
+      "Internal buffer",
+      "Threshold",
+      "Limit"
+    ],
+    "correctOptions": [
+      "Internal buffer"
+    ],
+    "time": 40,
+    "details": "highWaterMark sets internal buffer size."
+  },
+  {
+    "question": "What is Transform stream?",
+    "options": [
+      "Data converter",
+      "Modify on fly",
+      "Pipeline",
+      "Processing"
+    ],
+    "correctOptions": [
+      "Modify on fly"
+    ],
+    "time": 40,
+    "details": "Transform streams modify data as passing through."
+  },
+  {
+    "question": "What does transform.push() do?",
+    "options": [
+      "Output data",
+      "Push transformed",
+      "Write",
+      "Send"
+    ],
+    "correctOptions": [
+      "Push transformed"
+    ],
+    "time": 45,
+    "details": "push() outputs transformed data."
+  },
+  {
+    "question": "What is PassThrough stream?",
+    "options": [
+      "No-op",
+      "Passthrough",
+      "Identity",
+      "Null"
+    ],
+    "correctOptions": [
+      "No-op"
+    ],
+    "time": 45,
+    "details": "PassThrough is identity transform stream."
+  },
+  {
+    "question": "What is back-pressure?",
+    "options": [
+      "Flow control",
+      "Slow consumer",
+      "Pause",
+      "Wait"
+    ],
+    "correctOptions": [
+      "Flow control"
+    ],
+    "time": 45,
+    "details": "Back-pressure occurs when consumer can't keep up."
+  },
+  {
+    "question": "How handle back-pressure manually?",
+    "options": [
+      "Check writable.write()",
+      "pause/resume",
+      "drain event",
+      "buffer"
+    ],
+    "correctOptions": [
+      "drain event"
+    ],
+    "time": 50,
+    "details": "Wait for 'drain' event before writing more."
+  },
+  {
+    "question": "What is pipeline()?",
+    "options": [
+      "Pipe streams",
+      "Connect",
+      "Safe pipe",
+      "Chain"
+    ],
+    "correctOptions": [
+      "Safe pipe"
+    ],
+    "time": 45,
+    "details": "pipeline() pipes streams with error handling."
+  },
+  {
+    "question": "What is composed pipeline?",
+    "options": [
+      "Multiple pipes",
+      "Multiple streams",
+      "Chain all",
+      "Compose"
+    ],
+    "correctOptions": [
+      "Multiple streams"
+    ],
+    "time": 50,
+    "details": "compose() combines multiple transforms."
+  },
+  {
+    "question": "What is crypto.createCipheriv()?",
+    "options": [
+      "Symmetric cipher",
+      "AES",
+      "Direct encryption",
+      "Encrypt"
+    ],
+    "correctOptions": [
+      "Symmetric cipher"
+    ],
+    "time": 50,
+    "details": "createCipheriv() creates symmetric cipher."
+  },
+  {
+    "question": "What does randomBytes() generate?",
+    "options": [
+      "Random bytes",
+      "Secure bytes",
+      "Bytes",
+      "Salt"
+    ],
+    "correctOptions": [
+      "Random bytes"
+    ],
+    "time": 40,
+    "details": "randomBytes() generates cryptographically random bytes."
+  },
+  {
+    "question": "What is timing attack vulnerability?",
+    "options": [
+      "Time leaks info",
+      "Slow compare",
+      "Side channel",
+      "Vector"
+    ],
+    "correctOptions": [
+      "Time leaks info"
+    ],
+    "time": 55,
+    "details": "Attackers measure time to infer secrets."
+  },
+  {
+    "question": "What is constant-time comparison?",
+    "options": [
+      "Fixed duration",
+      "Timing safe",
+      "Secure",
+      "timingSafeEqual"
+    ],
+    "correctOptions": [
+      "Timing safe"
+    ],
+    "time": 50,
+    "details": "crypto.timingSafeEqual compares in fixed time."
+  },
+  {
+    "question": "What is Buffer.allocUnsafe()?",
+    "options": [
+      "Uninitiailized",
+      "Fast",
+      "Raw memory",
+      "Empty"
+    ],
+    "correctOptions": [
+      "Uninitiailized"
+    ],
+    "time": 45,
+    "details": "AllocUnsafe may contain old data - faster."
+  },
+  {
+    "question": "What is Buffer.alloc()?",
+    "options": [
+      "Initialized",
+      "Zero-filled",
+      "Safe",
+      "Clean"
+    ],
+    "correctOptions": [
+      "Zero-filled"
+    ],
+    "time": 40,
+    "details": "Alloc zeroes memory for security."
+  },
+  {
+    "question": "What is StringDecoder?",
+    "options": [
+      "Handle partial",
+      "Decode strings",
+      "Multi-byte",
+      "UTF"
+    ],
+    "correctOptions": [
+      "Handle partial"
+    ],
+    "time": 50,
+    "details": "StringDecoder handles incomplete multibyte chars."
+  },
+  {
+    "question": "What is Readline module?",
+    "options": [
+      "Line by line",
+      "Interactive",
+      "CLI",
+      "Prompt"
+    ],
+    "correctOptions": [
+      "Line by line"
+    ],
+    "time": 40,
+    "details": "Readline reads input line by line."
+  },
+  {
+    "question": "What is Interface?",
+    "options": [
+      "Input/out",
+      "Readline interface",
+      "Stream",
+      "Wrapper"
+    ],
+    "correctOptions": [
+      "Readline interface"
+    ],
+    "time": 45,
+    "details": "createInterface() creates readline interface."
+  },
+  {
+    "question": "What is TTY?",
+    "options": [
+      "Terminal",
+      "Console",
+      "Terminal interface",
+      "IO"
+    ],
+    "correctOptions": [
+      "Terminal"
+    ],
+    "time": 40,
+    "details": "TTY represents terminal device."
+  },
+  {
+    "question": "What is TTY.setRawMode()?",
+    "options": [
+      "Raw input",
+      "Raw mode",
+      "Direct",
+      "Passthrough"
+    ],
+    "correctOptions": [
+      "Raw mode"
+    ],
+    "time": 50,
+    "details": "setRawMode enables raw terminal input."
+  },
+  {
+    "question": "What is Zlib createDeflate()?",
+    "options": [
+      "Compression stream",
+      "Deflate",
+      "Zip",
+      "Encoder"
+    ],
+    "correctOptions": [
+      "Compression stream"
+    ],
+    "time": 45,
+    "details": "createDeflate creates compression stream."
+  },
+  {
+    "question": "What is brotli?",
+    "options": [
+      "Newer compression",
+      "Better than gzip",
+      "Modern",
+      "Algorithm"
+    ],
+    "correctOptions": [
+      "Better than gzip"
+    ],
+    "time": 45,
+    "details": "Brotli offers better compression than gzip."
+  },
+  {
+    "question": "What is createGzip()?",
+    "options": [
+      "Compress stream",
+      "Gzip encoder",
+      "Encode",
+      "Zip"
+    ],
+    "correctOptions": [
+      "Compress stream"
+    ],
+    "time": 40,
+    "details": "Gzip compression stream."
+  },
+  {
+    "question": "What is createGunzip()?",
+    "options": [
+      "Decompress",
+      "Decompression",
+      "Unzip",
+      "Decode"
+    ],
+    "correctOptions": [
+      "Decompress"
+    ],
+    "time": 40,
+    "details": "Decompress gzip stream."
+  },
+  {
+    "question": "What is createBrotliCompress()?",
+    "options": [
+      "Brotli compression",
+      "Modern encode",
+      "Encode",
+      "Compress"
+    ],
+    "correctOptions": [
+      "Brotli compression"
+    ],
+    "time": 50,
+    "details": "Brotli compression."
+  },
+  {
+    "question": "What is createBrotliDecompress()?",
+    "options": [
+      "Brotli decompress",
+      "Brotli decode",
+      "Decompress",
+      "Expand"
+    ],
+    "correctOptions": [
+      "Brotli decompress"
+    ],
+    "time": 50,
+    "details": "Brotli decompression."
+  },
+  {
+    "question": "What is zlib.brotli*?",
+    "options": [
+      "Brotli options",
+      "Compress/decompress",
+      "API",
+      "Functions"
+    ],
+    "correctOptions": [
+      "Compress/decompress"
+    ],
+    "time": 50,
+    "details": "Brotli functions available in zlib module."
+  },
+  {
+    "question": "What is http.Agent?",
+    "options": [
+      "HTTP connection",
+      "Pool sockets",
+      "Manage",
+      "Socket"
+    ],
+    "correctOptions": [
+      "Pool sockets"
+    ],
+    "time": 45,
+    "details": "Agent manages HTTP connection pool."
+  },
+  {
+    "question": "What is keepAlive in Agent?",
+    "options": [
+      "Reuse connections",
+      "Persist",
+      "Socket",
+      "Connection"
+    ],
+    "correctOptions": [
+      "Reuse connections"
+    ],
+    "time": 45,
+    "details": "keepAlive reuses connections."
+  },
+  {
+    "question": "What is http.request()?",
+    "options": [
+      "HTTP client",
+      "Make request",
+      "Client",
+      "Fetch"
+    ],
+    "correctOptions": [
+      "HTTP client"
+    ],
+    "time": 40,
+    "details": "http.request() makes HTTP requests."
+  },
+  {
+    "question": "What is http.ClientRequest?",
+    "options": [
+      "Request object",
+      "Client",
+      "Instance",
+      "Object"
+    ],
+    "correctOptions": [
+      "Request object"
+    ],
+    "time": 45,
+    "details": "ClientRequest represents request."
+  },
+  {
+    "question": "What is IncomingMessage?",
+    "options": [
+      "Response",
+      "Server response",
+      "Message",
+      "Object"
+    ],
+    "correctOptions": [
+      "Server response"
+    ],
+    "time": 45,
+    "details": "IncomingMessage is HTTP response."
+  },
+  {
+    "question": "What is ServerResponse?",
+    "options": [
+      "Response writer",
+      "Server",
+      "Response object",
+      "Write"
+    ],
+    "correctOptions": [
+      "Response writer"
+    ],
+    "time": 45,
+    "details": "ServerResponse handles response."
+  },
+  {
+    "question": "What is http.createServer()?",
+    "options": [
+      "Create server",
+      "HTTP server",
+      "New server",
+      "Server"
+    ],
+    "correctOptions": [
+      "HTTP server"
+    ],
+    "time": 40,
+    "details": "Creates HTTP server."
+  },
+  {
+    "question": "What is server.listen()?",
+    "options": [
+      "Start server",
+      "Bind port",
+      "Listen",
+      "Activate"
+    ],
+    "correctOptions": [
+      "Bind port"
+    ],
+    "time": 40,
+    "details": "listen() binds to port."
+  },
+  {
+    "question": "What is net.createServer()?",
+    "options": [
+      "TCP server",
+      "TCP",
+      "Network server",
+      "Socket"
+    ],
+    "correctOptions": [
+      "TCP server"
+    ],
+    "time": 40,
+    "details": "Creates TCP server."
+  },
+  {
+    "question": "What is net.connect()?",
+    "options": [
+      "Connect client",
+      "Connect to server",
+      "Socket connect",
+      "Connect"
+    ],
+    "correctOptions": [
+      "Connect to server"
+    ],
+    "time": 40,
+    "details": "connect() creates client connection."
+  },
+  {
+    "question": "What is Socket address()?",
+    "options": [
+      "Get address",
+      "Socket info",
+      "Address",
+      "Info"
+    ],
+    "correctOptions": [
+      "Socket info"
+    ],
+    "time": 45,
+    "details": "address() returns socket address."
+  },
+  {
+    "question": "What is Socket remoteAddress?",
+    "options": [
+      "Peer address",
+      "Remote",
+      "Client IP",
+      "IP"
+    ],
+    "correctOptions": [
+      "Peer address"
+    ],
+    "time": 40,
+    "details": "Remote address of the client."
+  },
+  {
+    "question": "What is tls.createServer()?",
+    "options": [
+      "TLS server",
+      "Secure server",
+      "HTTPS server",
+      "SSL"
+    ],
+    "correctOptions": [
+      "Secure server"
+    ],
+    "time": 40,
+    "details": "Creates TLS/SSL server."
+  },
+  {
+    "question": "What is tls.connect()?",
+    "options": [
+      "TLS client",
+      "Secure connect",
+      "Connect",
+      "SSL"
+    ],
+    "correctOptions": [
+      "TLS client"
+    ],
+    "time": 40,
+    "details": "TLS client connection."
+  },
+  {
+    "question": "What is https module?",
+    "options": [
+      "HTTPS",
+      "Secure HTTP",
+      "TLS wrapper",
+      "HTTP TLS"
+    ],
+    "correctOptions": [
+      "HTTP TLS"
+    ],
+    "time": 35,
+    "details": "https is HTTP over TLS."
+  },
+  {
+    "question": "What is https.request()?",
+    "options": [
+      "Secure request",
+      "HTTPS client",
+      "Secure",
+      "Fetch"
+    ],
+    "correctOptions": [
+      "Secure request"
+    ],
+    "time": 40,
+    "details": "Makes secure HTTP request."
+  },
+  {
+    "question": "What is TLS/SSL key?",
+    "options": [
+      "Private key",
+      "Encryption key",
+      "Secret",
+      "Decrypt"
+    ],
+    "correctOptions": [
+      "Private key"
+    ],
+    "time": 35,
+    "details": "Private key for decryption."
+  },
+  {
+    "question": "What is TLS/SSL certificate?",
+    "options": [
+      "Public key",
+      "Certificate",
+      "Public",
+      "Verify"
+    ],
+    "correctOptions": [
+      "Public key"
+    ],
+    "time": 35,
+    "details": "Public key certificate."
+  },
+  {
+    "question": "What is CSR?",
+    "options": [
+      "Certificate request",
+      "Request",
+      "Signing request",
+      "Generate"
+    ],
+    "correctOptions": [
+      "Certificate request"
+    ],
+    "time": 40,
+    "details": "Certificate Signing Request."
+  },
+  {
+    "question": "What is self-signed certificate?",
+    "options": [
+      "Test certificate",
+      "Self-signed",
+      "Development",
+      "Local"
+    ],
+    "correctOptions": [
+      "Test certificate"
+    ],
+    "time": 40,
+    "details": "Self-signed for testing."
+  },
+  {
+    "question": "What is mTLS?",
+    "options": [
+      "Mutual TLS",
+      "Two-way auth",
+      "Both verify",
+      "Client cert"
+    ],
+    "correctOptions": [
+      "Two-way auth"
+    ],
+    "time": 55,
+    "details": "Mutual TLS requires client certificate."
+  },
+  {
+    "question": "What is http2 module?",
+    "options": [
+      "HTTP/2",
+      "Protocol",
+      "New HTTP",
+      "h2"
+    ],
+    "correctOptions": [
+      "HTTP/2"
+    ],
+    "time": 35,
+    "details": "http2 provides HTTP/2 support."
+  },
+  {
+    "question": "What is http2.createServer()?",
+    "options": [
+      "HTTP/2 server",
+      "h2 server",
+      "New server",
+      "Server"
+    ],
+    "correctOptions": [
+      "HTTP/2 server"
+    ],
+    "time": 40,
+    "details": "Creates HTTP/2 server."
+  },
+  {
+    "question": "What is push in HTTP/2?",
+    "options": [
+      "Server push",
+      "Send resources",
+      "Preload",
+      "Stream"
+    ],
+    "correctOptions": [
+      "Send resources"
+    ],
+    "time": 50,
+    "details": "HTTP/2 server push sends extra resources."
+  },
+  {
+    "question": "What is multiplexing?",
+    "options": [
+      "Concurrent streams",
+      "Parallel",
+      "Multiple",
+      "Combine"
+    ],
+    "correctOptions": [
+      "Concurrent streams"
+    ],
+    "time": 50,
+    "details": "HTTP/2 multiplexes multiple streams."
+  },
+  {
+    "question": "What is header compression?",
+    "options": [
+      "HPACK",
+      "Compress headers",
+      "Reduce size",
+      "Optimize"
+    ],
+    "correctOptions": [
+      "Compress headers"
+    ],
+    "time": 50,
+    "details": "HPACK compresses headers."
+  },
+  {
+    "question": "What is server push?",
+    "options": [
+      "Proactive send",
+      "Initiate",
+      "Push",
+      "Preload"
+    ],
+    "correctOptions": [
+      "Proactive send"
+    ],
+    "time": 55,
+    "details": "Server sends resources before requested."
+  },
+  {
+    "question": "What is ALPN?",
+    "options": [
+      "Protocol negotiation",
+      "TLS extension",
+      "Handshake",
+      "Negotiate"
+    ],
+    "correctOptions": [
+      "Protocol negotiation"
+    ],
+    "time": 55,
+    "details": "ALPN negotiates protocol in TLS handshake."
+  },
+  {
+    "question": "What is h2 via TLS?",
+    "options": [
+      "HTTP/2 over TLS",
+      "HTTPS upgrade",
+      "Secure h2",
+      "Upgrade"
+    ],
+    "correctOptions": [
+      "HTTP/2 over TLS"
+    ],
+    "time": 50,
+    "details": "HTTP/2 over TLS (not SSL)."
+  },
+  {
+    "question": "What is QUIC?",
+    "options": [
+      "New protocol",
+      "UDP-based",
+      "HTTP/3",
+      "Transport"
+    ],
+    "correctOptions": [
+      "UDP-based"
+    ],
+    "time": 50,
+    "details": "QUIC is UDP-based transport."
+  },
+  {
+    "question": "What is HTTP/3?",
+    "options": [
+      "HTTP over QUIC",
+      "New HTTP",
+      "Protocol",
+      "Next"
+    ],
+    "correctOptions": [
+      "HTTP over QUIC"
+    ],
+    "time": 50,
+    "details": "HTTP/3 uses QUIC transport."
+  },
+  {
+    "question": "What is connection priorities?",
+    "options": [
+      "Stream weights",
+      "Resource priority",
+      "Weighting",
+      "Prioritize"
+    ],
+    "correctOptions": [
+      "Stream weights"
+    ],
+    "time": 55,
+    "details": "HTTP/2 uses stream weights for prioritization."
+  },
+  {
+    "question": "What is stream dependency?",
+    "options": [
+      "Parent stream",
+      "Stream hierarchy",
+      "Link",
+      "Priority"
+    ],
+    "correctOptions": [
+      "Parent stream"
+    ],
+    "time": 60,
+    "details": "Streams can depend on other streams."
+  },
+  {
+    "question": "What is DNS lookup?",
+    "options": [
+      "Resolve domain",
+      "IP lookup",
+      "Resolve",
+      "Address"
+    ],
+    "correctOptions": [
+      "Resolve domain"
+    ],
+    "time": 40,
+    "details": "dns.lookup resolves hostname."
+  },
+  {
+    "question": "What is DNS resolve?",
+    "options": [
+      "DNS query",
+      "Generic resolve",
+      "Lookup",
+      "Find"
+    ],
+    "correctOptions": [
+      "DNS query"
+    ],
+    "time": 40,
+    "details": "dns.resolve performs DNS queries."
+  },
+  {
+    "question": "What is DNS reverse?",
+    "options": [
+      "IP to hostname",
+      "PTR",
+      "Reverse lookup",
+      "IP"
+    ],
+    "correctOptions": [
+      "IP to hostname"
+    ],
+    "time": 45,
+    "details": "dns.reverse does IP to hostname lookup."
+  },
+  {
+    "question": "What is DNS resolve4?",
+    "options": [
+      "IPv4 lookup",
+      "A record",
+      "Query",
+      "Get"
+    ],
+    "correctOptions": [
+      "IPv4 lookup"
+    ],
+    "time": 45,
+    "details": "resolve4 queries A records."
+  },
+  {
+    "question": "What is DNS resolve6?",
+    "options": [
+      "IPv6 lookup",
+      "AAAA",
+      "Query",
+      "Get"
+    ],
+    "correctOptions": [
+      "IPv6 lookup"
+    ],
+    "time": 45,
+    "details": "resolve6 queries AAAA records."
+  },
+  {
+    "question": "What is DNS resolveMx?",
+    "options": [
+      "Mail exchange",
+      "MX record",
+      "Query",
+      "Get"
+    ],
+    "correctOptions": [
+      "Mail exchange"
+    ],
+    "time": 45,
+    "details": "resolveMx queries MX records."
+  },
+  {
+    "question": "What is DNS resolveTxt?",
+    "options": [
+      "Text record",
+      "TXT",
+      "Query",
+      "Get"
+    ],
+    "correctOptions": [
+      "Text record"
+    ],
+    "time": 45,
+    "details": "resolveTxt queries TXT records."
+  },
+  {
+    "question": "What is DNS resolveSrv?",
+    "options": [
+      "Service record",
+      "SRV",
+      "Query",
+      "Get"
+    ],
+    "correctOptions": [
+      "Service record"
+    ],
+    "time": 50,
+    "details": "resolveSrv queries SRV records."
+  },
+  {
+    "question": "What is DNS resolveSoa?",
+    "options": [
+      "Start of authority",
+      "SOA",
+      "Query",
+      "Get"
+    ],
+    "correctOptions": [
+      "Start of authority"
+    ],
+    "time": 50,
+    "details": "resolveSoa queries SOA records."
+  },
+  {
+    "question": "What is DNS resolveNs?",
+    "options": [
+      "Name server",
+      "NS",
+      "Query",
+      "Get"
+    ],
+    "correctOptions": [
+      "Name server"
+    ],
+    "time": 45,
+    "details": "resolveNs queries NS records."
+  },
+  {
+    "question": "What is DNS resolveCname?",
+    "options": [
+      "Canonical name",
+      "CNAME",
+      "Query",
+      "Get"
+    ],
+    "correctOptions": [
+      "Canonical name"
+    ],
+    "time": 50,
+    "details": "resolveCname queries CNAME records."
+  },
+  {
+    "question": "What is DNS resolveAny?",
+    "options": [
+      "All records",
+      "ANY",
+      "Query",
+      "Get"
+    ],
+    "correctOptions": [
+      "All records"
+    ],
+    "time": 50,
+    "details": "resolveAny queries any record."
+  },
+  {
+    "question": "What is setServers()?",
+    "options": [
+      "Set DNS servers",
+      "Configure",
+      "Servers",
+      "Custom"
+    ],
+    "correctOptions": [
+      "Set DNS servers"
+    ],
+    "time": 45,
+    "details": "setServers() sets custom DNS servers."
+  },
+  {
+    "question": "What is getServers()?",
+    "options": [
+      "Get DNS servers",
+      "List",
+      "Servers",
+      "Config"
+    ],
+    "correctOptions": [
+      "Get DNS servers"
+    ],
+    "time": 45,
+    "details": "getServers() returns DNS servers."
+  },
+  {
+    "question": "What is setDefaultResultOrder?",
+    "options": [
+      "Set sort order",
+      "Configure",
+      "Order",
+      "Priority"
+    ],
+    "correctOptions": [
+      "Set sort order"
+    ],
+    "time": 55,
+    "details": "Sets order for results."
+  },
+  {
+    "question": "What is resolver?",
+    "options": [
+      "Custom resolver",
+      "DNS resolver",
+      "Custom",
+      "Instance"
+    ],
+    "correctOptions": [
+      "Custom resolver"
+    ],
+    "time": 55,
+    "details": "Create custom resolver."
+  },
+  {
+    "question": "What is resolve() resolver method?",
+    "options": [
+      "Custom resolve",
+      "Specific",
+      "Resolve",
+      "Lookup"
+    ],
+    "correctOptions": [
+      "Specific"
+    ],
+    "time": 55,
+    "details": "resolve() uses custom resolver."
+  },
+  {
+    "question": "What is reverse() resolver method?",
+    "options": [
+      "Custom reverse",
+      "PTR lookup",
+      "Reverse",
+      "IP"
+    ],
+    "correctOptions": [
+      "PTR lookup"
+    ],
+    "time": 55,
+    "details": "reverse() does IP lookup via custom resolver."
+  },
+  {
+    "question": "What is GetAddrInfoReqWrappable?",
+    "options": [
+      "Async wrapper",
+      "Internal",
+      "Request",
+      "Wrap"
+    ],
+    "correctOptions": [
+      "Async wrapper"
+    ],
+    "time": 60,
+    "details": "Internal async wrapper class."
+  },
+  {
+    "question": "What is dns.ADVERTISED_EXTERNAL_ADDRESSES?",
+    "options": [
+      "Public IPs",
+      "Advertised",
+      "External",
+      "Addresses"
+    ],
+    "correctOptions": [
+      "Public IPs"
+    ],
+    "time": 60,
+    "details": "Returns advertised external addresses."
+  },
+  {
+    "question": "What is URL pattern?",
+    "options": [
+      "URL glob",
+      "Wildcard",
+      "Pattern matching",
+      "Regex"
+    ],
+    "correctOptions": [
+      "URL glob"
+    ],
+    "time": 55,
+    "details": "URLPattern matches URLs with wildcards."
+  },
+  {
+    "question": "What is globalZn?",
+    "options": [
+      "Zone",
+      "Process",
+      "ID",
+      "Identifier"
+    ],
+    "correctOptions": [
+      "Process"
+    ],
+    "time": 55,
+    "details": "Isolate is process in workers API."
+  },
+  {
+    "question": "What is worker_threads?",
+    "options": [
+      "Multi-threading",
+      "CPU workers",
+      "Parallel",
+      "Thread"
+    ],
+    "correctOptions": [
+      "Multi-threading"
+    ],
+    "time": 50,
+    "details": "worker_threads enables threading."
+  },
+  {
+    "question": "What is MessageChannel?",
+    "options": [
+      "Port pair",
+      "PostMessage",
+      "Channel",
+      "Link"
+    ],
+    "correctOptions": [
+      "Port pair"
+    ],
+    "time": 55,
+    "details": "MessageChannel creates port pair."
+  },
+  {
+    "question": "What is MessagePort?",
+    "options": [
+      "Message conduit",
+      "Port",
+      "Channel",
+      "Transfer"
+    ],
+    "correctOptions": [
+      "Message conduit"
+    ],
+    "time": 55,
+    "details": "Ports send messages between contexts."
+  },
+  {
+    "question": "What is SharedArrayBuffer?",
+    "options": [
+      "Shared memory",
+      "Cross-thread",
+      "Memory",
+      "Buffer"
+    ],
+    "correctOptions": [
+      "Shared memory"
+    ],
+    "time": 50,
+    "details": "SAB shares memory across threads."
+  },
+  {
+    "question": "What is Atomics.add()?",
+    "options": [
+      "Atomic add",
+      "Add and store",
+      "Operation",
+      "Add"
+    ],
+    "correctOptions": [
+      "Add and store"
+    ],
+    "time": 55,
+    "details": "Atomically adds value to index."
+  },
+  {
+    "question": "What is Atomics.sub()?",
+    "options": [
+      "Atomic sub",
+      "Subtract",
+      "Operation",
+      "Minus"
+    ],
+    "correctOptions": [
+      "Subtract"
+    ],
+    "time": 50,
+    "details": "Atomically subtracts value."
+  },
+  {
+    "question": "What is Atomics.and()?",
+    "options": [
+      "Atomic AND",
+      "Bitwise and",
+      "Operation",
+      "And"
+    ],
+    "correctOptions": [
+      "Bitwise and"
+    ],
+    "time": 50,
+    "details": "Atomically performs AND operation."
+  },
+  {
+    "question": "What is Atomics.or()?",
+    "options": [
+      "Atomic OR",
+      "Bitwise or",
+      "Operation",
+      "Or"
+    ],
+    "correctOptions": [
+      "Bitwise or"
+    ],
+    "time": 50,
+    "details": "Atomically performs OR operation."
+  },
+  {
+    "question": "What is Atomics.xor()?",
+    "options": [
+      "Atomic XOR",
+      "Bitwise xor",
+      "Operation",
+      "Xor"
+    ],
+    "correctOptions": [
+      "Bitwise xor"
+    ],
+    "time": 50,
+    "details": "Atomically performs XOR."
+  },
+  {
+    "question": "What is Atomics.store()?",
+    "options": [
+      "Atomic write",
+      "Set value",
+      "Write",
+      "Assign"
+    ],
+    "correctOptions": [
+      "Set value"
+    ],
+    "time": 50,
+    "details": "Atomically stores value."
+  },
+  {
+    "question": "What is Atomics.load()?",
+    "options": [
+      "Atomic read",
+      "Get value",
+      "Read",
+      "Fetch"
+    ],
+    "correctOptions": [
+      "Get value"
+    ],
+    "time": 50,
+    "details": "Atomically loads value."
+  },
+  {
+    "question": "What is Atomics.compareExchange()?",
+    "options": [
+      "Atomic CAS",
+      "Conditional",
+      "Compare",
+      "Swap"
+    ],
+    "correctOptions": [
+      "Conditional"
+    ],
+    "time": 55,
+    "details": "Atomic compare and exchange."
+  },
+  {
+    "question": "What is Atomics.exchange()?",
+    "options": [
+      "Atomic swap",
+      "Set return",
+      "Swap",
+      "Replace"
+    ],
+    "correctOptions": [
+      "Atomic swap"
+    ],
+    "time": 55,
+    "details": "Atomically exchanges value."
+  },
+  {
+    "question": "What is Atomics.wait()?",
+    "options": [
+      "Wait for value",
+      "Futex wait",
+      "Block",
+      "Suspend"
+    ],
+    "correctOptions": [
+      "Wait for value"
+    ],
+    "time": 55,
+    "details": "Wait for value at index."
+  },
+  {
+    "question": "What is Atomics.notify()?",
+    "options": [
+      "Wake waiters",
+      "Signal",
+      "Wake",
+      "Nofify"
+    ],
+    "correctOptions": [
+      "Wake waiters"
+    ],
+    "time": 55,
+    "details": "Wakes waiters at index."
+  },
+  {
+    "question": "What is Atomics.isLockFree()?",
+    "options": [
+      "Check lock-free",
+      "Supported",
+      "Free",
+      "Test"
+    ],
+    "correctOptions": [
+      "Check lock-free"
+    ],
+    "time": 55,
+    "details": "Check if operation is lock-free."
+  },
+  {
+    "question": "What is perf_hooks?",
+    "options": [
+      "Performance",
+      "Timers",
+      "Monitor",
+      "Hooks"
+    ],
+    "correctOptions": [
+      "Performance"
+    ],
+    "time": 45,
+    "details": "perf_hooks provides performance monitoring."
+  },
+  {
+    "question": "What is PerformanceEntry?",
+    "options": [
+      "Metric",
+      "Event record",
+      "Data",
+      "Event"
+    ],
+    "correctOptions": [
+      "Event record"
+    ],
+    "time": 50,
+    "details": "PerformanceEntry is metric event."
+  },
+  {
+    "question": "What is PerformanceMark?",
+    "options": [
+      "Custom marker",
+      "User mark",
+      "Mark",
+      "Time"
+    ],
+    "correctOptions": [
+      "Custom marker"
+    ],
+    "time": 50,
+    "details": "User-defined performance mark."
+  },
+  {
+    "question": "What is PerformanceMeasure?",
+    "options": [
+      "Duration",
+      "Timed measure",
+      "Measure",
+      "Delta"
+    ],
+    "correctOptions": [
+      "Duration"
+    ],
+    "time": 50,
+    "details": "Measure between marks."
+  },
+  {
+    "question": "What is PerformanceObserver?",
+    "options": [
+      "Monitor metrics",
+      "Observer",
+      "Collect",
+      "Watch"
+    ],
+    "correctOptions": [
+      "Monitor metrics"
+    ],
+    "time": 55,
+    "details": "Observes performance metrics."
+  },
+  {
+    "question": "What does observe() do?",
+    "options": [
+      "Start observing",
+      "Register",
+      "Watch",
+      "Monitor"
+    ],
+    "correctOptions": [
+      "Start observing"
+    ],
+    "time": 55,
+    "details": "observe() starts observation."
+  },
+  {
+    "question": "What is performance.mark()?",
+    "options": [
+      "Create mark",
+      "Mark",
+      "Set mark",
+      "Time"
+    ],
+    "correctOptions": [
+      "Create mark"
+    ],
+    "time": 45,
+    "details": "Creates named mark."
+  },
+  {
+    "question": "What is performance.measure()?",
+    "options": [
+      "Measure duration",
+      "Calculate",
+      "Measure",
+      "Delta"
+    ],
+    "correctOptions": [
+      "Measure duration"
+    ],
+    "time": 50,
+    "details": "Measures between marks."
+  },
+  {
+    "question": "What is performance.timerify()?",
+    "options": [
+      "Wrap function",
+      "Profile",
+      "Timerify",
+      "Wrap"
+    ],
+    "correctOptions": [
+      "Wrap function"
+    ],
+    "time": 55,
+    "details": "timerify wraps function for timing."
+  },
+  {
+    "question": "What is performance.now()?",
+    "options": [
+      "Timestamp",
+      "High-res time",
+      "Now",
+      "Time"
+    ],
+    "correctOptions": [
+      "High-res time"
+    ],
+    "time": 45,
+    "details": "High-resolution timestamp."
+  },
+  {
+    "question": "What is performance.timeOrigin?",
+    "options": [
+      "Start time",
+      "Epoch",
+      "Origin",
+      "Time"
+    ],
+    "correctOptions": [
+      "Epoch"
+    ],
+    "time": 50,
+    "details": "Time origin timestamp."
+  },
+  {
+    "question": "What is eventLoopLag?",
+    "options": [
+      "Event loop delay",
+      "Lag",
+      "Delay",
+      "Time"
+    ],
+    "correctOptions": [
+      "Event loop delay"
+    ],
+    "time": 50,
+    "details": "eventLoopLag measures event loop delay."
+  },
+  {
+    "question": "What is eventLoopUtilization()?",
+    "options": [
+      "CPU usage",
+      "Utilization",
+      "Ratio",
+      "Load"
+    ],
+    "correctOptions": [
+      "CPU usage"
+    ],
+    "time": 55,
+    "details": "eventLoopUtilization returns CPU ratio."
+  },
+  {
+    "question": "What is async_hooks?",
+    "options": [
+      "Async monitoring",
+      "Trace",
+      "Monitor",
+      "Hooks"
+    ],
+    "correctOptions": [
+      "Async monitoring"
+    ],
+    "time": 50,
+    "details": "async_hooks monitors async operations."
+  },
+  {
+    "question": "What is AsyncResource?",
+    "options": [
+      "Async context",
+      "Wrap async",
+      "Resource",
+      "Context"
+    ],
+    "correctOptions": [
+      "Async context"
+    ],
+    "time": 55,
+    "details": "AsyncResource creates async context."
+  },
+  {
+    "question": "What is asyncId?",
+    "options": [
+      "Async ID",
+      "Unique ID",
+      "Identifier",
+      "ID"
+    ],
+    "correctOptions": [
+      "Unique ID"
+    ],
+    "time": 50,
+    "details": "asyncId identifies async operation."
+  },
+  {
+    "question": "What is triggerAsyncId?",
+    "options": [
+      "Parent async",
+      "Trigger ID",
+      "Cause",
+      "Parent"
+    ],
+    "correctOptions": [
+      "Parent async"
+    ],
+    "time": 55,
+    "details": "triggerAsyncId is parent async ID."
+  },
+  {
+    "question": "What is createHook()?",
+    "options": [
+      "Create observer",
+      "Setup hooks",
+      "Init",
+      "Register"
+    ],
+    "correctOptions": [
+      "Create observer"
+    ],
+    "time": 55,
+    "details": "Creates async hooks."
+  },
+  {
+    "question": "What does createHook() return?",
+    "options": [
+      "Hook interface",
+      "Callback",
+      "Control object",
+      "Object"
+    ],
+    "correctOptions": [
+      "Hook interface"
+    ],
+    "time": 55,
+    "details": "Returns hook control interface."
+  },
+  {
+    "question": "What is hooks.emulateAsyncId()?",
+    "options": [
+      "Simulate async",
+      "Set async ID",
+      "Emulate",
+      "Fake"
+    ],
+    "correctOptions": [
+      "Set async ID"
+    ],
+    "time": 60,
+    "details": "Makes async appear as child of another."
+  },
+  {
+    "question": "What is wase()?",
+    "options": [
+      "WASM",
+      "WebAssembly",
+      "Module",
+      "Run WASM"
+    ],
+    "correctOptions": [
+      "WebAssembly"
+    ],
+    "time": 45,
+    "details": "wasm compiles and runs WebAssembly."
+  },
+  {
+    "question": "What does wasm.instantiate()?",
+    "options": [
+      "Compile module",
+      "Instantiate",
+      "Load",
+      "Run"
+    ],
+    "correctOptions": [
+      "Instantiate"
+    ],
+    "time": 50,
+    "details": "Instantiates WebAssembly module."
+  },
+  {
+    "question": "What is Express? (Level 4 #127)",
+    "options": [
+      "Framework",
+      "Middleware",
+      "Routing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Framework",
+      "Middleware",
+      "Routing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Express? explanation."
+  },
+  {
+    "question": "What is npm? (Level 4 #128)",
+    "options": [
+      "Package manager",
+      "Registry",
+      "Scripts",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Package manager",
+      "Registry",
+      "Scripts",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is npm? explanation."
+  },
+  {
+    "question": "What is middleware? (Level 4 #129)",
+    "options": [
+      "Request",
+      "Response",
+      "Next",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request",
+      "Response",
+      "Next",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is callback? (Level 4 #130)",
+    "options": [
+      "Asynchronous",
+      "Error-first",
+      "Node.js pattern",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Asynchronous",
+      "Error-first",
+      "Node.js pattern",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is callback? explanation."
+  },
+  {
+    "question": "What is streams? (Level 4 #131)",
+    "options": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is streams? explanation."
+  },
+  {
+    "question": "What is Buffer? (Level 4 #132)",
+    "options": [
+      "Binary data",
+      "Encoding",
+      "Memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Binary data",
+      "Encoding",
+      "Memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Buffer? explanation."
+  },
+  {
+    "question": "What is EventEmitter? (Level 4 #133)",
+    "options": [
+      "Events",
+      "Listeners",
+      "Emitters",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Events",
+      "Listeners",
+      "Emitters",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is EventEmitter? explanation."
+  },
+  {
+    "question": "What is require? (Level 4 #134)",
+    "options": [
+      "Modules",
+      "Caching",
+      "Resolution",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Modules",
+      "Caching",
+      "Resolution",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is require? explanation."
+  },
+  {
+    "question": "What is process? (Level 4 #135)",
+    "options": [
+      "Env",
+      "Argv",
+      "Exit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Env",
+      "Argv",
+      "Exit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is process? explanation."
+  },
+  {
+    "question": "What is module? (Level 4 #136)",
+    "options": [
+      "Export",
+      "Import",
+      "Scope",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Export",
+      "Import",
+      "Scope",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is module? explanation."
+  },
+  {
+    "question": "What is Set in JavaScript?",
+    "options": [
+      "Unique values",
+      "No duplicates",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Unique values",
+      "No duplicates",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Set in JavaScript? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  }
 ]

@@ -1,164 +1,2783 @@
 [
-  {"question": "What is domain in Node.js?", "options": ["Error handling", "Domain module", "Catch async errors", "Error domain"], "correctOptions": ["Error handling for async operations"], "time": 55, "details": "Domain provides error handling for async."},
-  {"question": "What is createDomain?", "options": ["Create domain", "Domain", "Initialize", "Create error domain"], "correctOptions": ["Create and return new Domain"], "time": 55, "details": "Creates a domain."},
-  {"question": "What is domain.run?", "options": ["Execute in domain", "Wrap", "Function execute", "Run callback"], "correctOptions": ["Run given function in domain context"], "time": 55, "details": "Runs function in domain."},
-  {"question": "What is domain.on error?", "options": ["Error handler", "Error listener", "Error callback", "Error capture"], "correctOptions": ["Listens for emitted errors"], "time": 55, "details": "Emits error events."},
-  {"question": "What is Domain interception?", "options": ["Intercept errors", "Error catching", "Wrapper", "Intercept evented"], "correctOptions": ["Intercepts emitter error event"], "time": 65, "details": "Intercepts evented errors."},
-  {"question": "What is domain.add?", "options": ["Add to domain", "Add script", "Bind", "Add child"], "correctOptions": ["Adds script to domain"], "time": 55, "details": "Adds emitter to domain."},
-  {"question": "What is domain.remove?", "options": ["Remove from domain", "Unbind", "Remove emitter", "Remove script"], "correctOptions": ["Removes emitter from domain"], "time": 60, "details": "Removes from domain."},
-  {"question": "What is createAsyncId?", "options": ["Next id", "ID", "Get id", "Next async"], "correctOptions": ["Returns next unique async ID for custom resources"], "time": 55, "details": "createAsyncId gets ID."},
-  {"question": "What is executionAsyncId?", "options": ["Current id", "Active id", "This async", "ID"], "correctOptions": ["Returns ID of currently executing async resource"], "time": 55, "details": "executionAsyncId is current."},
-  {"question": "What is triggerAsyncId?", "options": ["Trigger id", "Parent id", "Origin id", "Async id"], "correctOptions": ["Returns ID of async that triggered current execution"], "time": 60, "details": "triggerAsyncId is origin."},
-  {"question": "What is new TextEncoder?", "options": ["Create encoder", "Encoder", "Stream", "Encode string"], "correctOptions": ["Encodes strings to Uint8Arrays"], "time": 55, "details": "Encodes strings to Uint8Array."},
-  {"question": "What is new TextDecoder?", "options": ["Create decoder", "Decoder", "Decode", "Decode bytes"], "correctOptions": ["Decodes Uint8Arrays to strings"], "time": 55, "details": "Decodes Uint8Array to string."},
-  {"question": "What is encoder.encode?", "options": ["Return Uint8Array", "Encode", "Function", "Convert"], "correctOptions": ["Encodes string to Uint8Array"], "time": 55, "details": "encode returns encoded bytes."},
-  {"question": "What is decoder.decode?", "options": ["Return string", "Decode", "String", "Decode bytes"], "correctOptions": ["Decodes Uint8Array to string"], "time": 55, "details": "decodes returns string."},
-  {"question": "What is Stream API in Node?", "options": ["Data stream abstraction", "Streaming API", "Flow control", "Piping"], "correctOptions": ["Abstract interface for streaming data"], "time": 60, "details": "Unified streaming data interface."},
-  {"question": "What is Buffer in Node?", "options": ["Binary data buffer", "Binary buffer", "Byte representation", "Raw memory"], "correctOptions": ["Raw binary data storage"], "time": 50, "details": "Buffer handles binary data."},
-  {"question": "What is Buffer.alloc?", "options": ["Create empty buffer", "Allocate", "Create safe buffer", "Initialize"], "correctOptions": ["Allocates exact size zero-filled buffer"], "time": 50, "details": "Returns zero-filled buffer."},
-  {"question": "What is Buffer.allocUnsafe?", "options": ["Create uninitialized", "Allocate unsafe", "Fast", "Buffer"], "correctOptions": ["Allocate uninitialized - may contain old data but faster"], "time": 55, "details": "Fast but may have garbage."},
-  {"question": "What is Buffer.allocUnsafeSlow?", "options": ["Create pool buffer", "Slow alloc", "Buffer pool", "Create"], "correctOptions": ["Create using slower internal slab allocator"], "time": 65, "details": "Uses slow allocation."},
-  {"question": "What is Buffer.from?", "options": ["From input", "Create from data", "Wrap", "Convert"], "correctOptions": ["Creates buffer from string or buffer or array-like"], "time": 50, "details": "Creates buffer from input."},
-  {"question": "What is Buffer.concat?", "options": ["Join buffers", "Concatenate", "Join buffers", "Return buffer"], "correctOptions": ["Returns new buffer from concatenated list"], "time": 55, "details": "Concatenates multiple buffers."},
-  {"question": "What is buffer.write?", "options": ["Write to buffer", "Write string", "Modify", "Set"], "correctOptions": ["Writes string to buffer at specified offset"], "time": 55, "details": "Writes string to buffer."},
-  {"question": "What is buffer.toString?", "options": ["Convert to string", "Decode", "String", "Display"], "correctOptions": ["Decodes buffer to string using encoding"], "time": 50, "details": "Decodes buffer to string."},
-  {"question": "What is buffer.toJSON?", "options": ["Return JSON", "Serialize", "JSON", "Object"], "correctOptions": ["Returns JSON representation with type and data"], "time": 60, "details": "Returns simplified JSON form."},
-  {"question": "What is buffer length?", "options": ["Byte length", "Size in bytes", "Size", "Length"], "correctOptions": ["Total size in bytes"], "time": 50, "details": "Byte length, not char count."},
-  {"question": "What is buffer.compare?", "options": ["Compare buffers", "Equal test", "Compare", "Return"], "correctOptions": ["Returns 1, 0, or -1 for difference"], "time": 60, "details": "Compare returns sort order."},
-  {"question": "What is buffer.equals?", "options": ["Are same", "Boolean equal", "Comparison", "Verify"], "correctOptions": ["Returns true if both buffers have same bytes"], "time": 60, "details": "Returns true if equal."},
-  {"question": "What is buffer.fill?", "options": ["Fill buffer", "Zero out", "Initialize", "Fill"], "correctOptions": ["Fills buffer with specified value in-place"], "time": 55, "details": "Fills buffer with value."},
-  {"question": "What is buffer.copy?", "options": ["Copy section", "Copy target", "Copy bytes", "Clone"], "correctOptions": ["Copies data from source to target buffer"], "time": 60, "details": "Copy source to target."},
-  {"question": "What is buffer.slice?", "options": ["Create sub-buffer", "Copy range", "Buffer range", "Create"], "correctOptions": ["Creates new Buffer from start to end"], "time": 55, "details": "Creates sub-buffer slice."},
-  {"question": "What is StringDecoder?", "options": ["Multi-byte decoder", "Decode partial", "Handle chunks", "Correct"], "correctOptions": ["Handles split multi-byte characters across boundaries"], "time": 75, "details": "Handles multi-byte splitting."},
-  {"question": "What is readable readableHighWaterMark?", "options": ["Internal buffer size", "Buffer capacity", "Watermark", "Threshold"], "correctOptions": ["Internal buffer size when objectMode is false"], "time": 70, "details": "Internal buffer size."},
-  {"question": "What is readable flow mode?", "options": ["Automatic reading", "Flow", "Auto read", "Mode"], "correctOptions": ["Stream automatically calls data events - no read needed"], "time": 65, "details": "Flowing reads automatically."},
-  {"question": "What is readable readable mode?", "options": ["Manual reading", "Read mode", "Manual", "Mode"], "correctOptions": ["Stream does not call data - read must be called"], "time": 70, "details": "Manual reads with read()."},
-  {"question": "What is isPaused?", "options": ["Check paused state", "Paused flag", "Read", "State"], "correctOptions": ["True if paused - not flowing"], "time": 65, "details": "Check paused state."},
-  {"question": "What is readable.pause?", "options": ["Pause reading", "Stop flow", "Readable", "Manual"], "correctOptions": ["Pauses readable flowing - switches mode"], "time": 60, "details": "Pause switches modes."},
-  {"question": "What is readable.resume?", "options": ["Resume reading", "Start flow", "Resume", "Drain"], "correctOptions": ["Resumes from paused - switches to flowing"], "time": 60, "details": "Resume returns data."},
-  {"question": "What is readable.pipe?", "options": ["Pipe to destination", "Connect", "Write to", "Route"], "correctOptions": ["Pipes data to writable - returns dest"], "time": 60, "details": "Pipe to destination."},
-  {"question": "What is readable.unpipe?", "options": ["Unpipe", "Disconnect", "Stop pipe", "Remove"], "correctOptions": ["Unpipes from destination"], "time": 65, "details": "unpipe disconnects."},
-  {"question": "What is Transform stream?", "options": ["Transformation", "Transform", "Modify", "Map"], "correctOptions": ["Both readable and writable - transforms data"], "time": 55, "details": "Transforms data."},
-  {"question": "What is _transform?", "options": ["Process chunk", "Transform method", "Callback", "Function"], "correctOptions": ["Required for Transform - transforms chunk"], "time": 60, "details": "_transform is required."},
-  {"question": "What is _flush?", "options": ["Finalize", "End transform", "Flush", "Callback"], "correctOptions": ["Optional - called at end for final output"], "time": 60, "details": "_flush is optional."},
-  {"question": "What is PassThrough stream?", "options": ["Null transform", "Simple pass", "No-op", "Passthrough"], "correctOptions": ["Simple no-op Transform - passes data through"], "time": 55, "details": "Passes through."},
-  {"question": "What is Duplex stream?", "options": ["Both readable and writable", "Bidirectional", "Read-write", "Two-way"], "correctOptions": ["Both readable and writable - independent"], "time": 60, "details": "Both read and write."},
-  {"question": "What is writable.write?", "options": ["Write data", "Add data", "Emit", "Buffer"], "correctOptions": ["Write to stream - returns boolean"], "time": 50, "details": "write sends data."},
-  {"question": "What is writable.cork?", "options": ["Buffer writes", "Hold", "Block", "Pause"], "correctOptions": ["Buffers all writes"], "time": 60, "details": "Cork buffers writes."},
-  {"question": "What is writable.uncork?", "options": ["Write buffered", "Flush", "Release", "Uncork"], "correctOptions": ["Writes all corked data"], "time": 60, "details": "Uncork flushes."},
-  {"question": "What is writable.end?", "options": ["End writeable", "Finish", "Close", "EOF"], "correctOptions": ["Signals EOF - then finish event fires"], "time": 50, "details": "end ends stream."},
-  {"question": "What is close event on writable?", "options": ["Close event", "End", "Closed", "Done"], "correctOptions": ["Fires when stream closed"], "time": 60, "details": "Close event fires."},
-  {"question": "What is finish event on writable?", "options": ["Finish event", "Write done", "Complete", "Done"], "correctOptions": ["Fires after end called and data flushed"], "time": 60, "details": "Finish after end."},
-  {"question": "What is stream.Readable?", "options": ["Readable base", "Class", "Base", "Interface"], "correctOptions": ["Base for readable streams"], "time": 55, "details": "Readable is base."},
-  {"question": "What is stream.Writable?", "options": ["Writable base", "Class", "Base", "Interface"], "correctOptions": ["Base for writable streams"], "time": 55, "details": "Writable is base."},
-  {"question": "What is stream.Transform?", "options": ["Transform base", "Class", "Base", "Interface"], "correctOptions": ["Base for transform streams"], "time": 60, "details": "Transform is base."},
-  {"question": "What is stream.Duplex?", "options": ["Duplex base", "Class", "Base", "Interface"], "correctOptions": ["Base for duplex streams"], "time": 60, "details": "Duplex is base."},
-  {"question": "What is readable event readable?", "options": ["Data available", "Ready", "Readable", "Data"], "correctOptions": ["Emits when can read"], "time": 60, "details": "readable fires when ready."},
-  {"question": "What is readable event data?", "options": ["Data chunk", "Chunk", "New data", "Emitted"], "correctOptions": ["Emits data in flowing mode"], "time": 55, "details": "data fires per chunk."},
-  {"question": "What is readable event end?", "options": ["No more data", "Done", "EOF", "Complete"], "correctOptions": ["Emits when no more data"], "time": 50, "details": "end fires at EOF."},
-  {"question": "What is readable event pause?", "options": ["Pause event", "Paused", "Stopped", "Cannot read"], "correctOptions": ["Emits when pause called"], "time": 60, "details": "pause fires."},
-  {"question": "What is readable event resume?", "options": ["Resume event", "Continue", "Start flowing", "Resume"], "correctOptions": ["Emits when resume called"], "time": 60, "details": "resume fires."},
-  {"question": "What is readable event close?", "options": ["Close event", "Closed", "Done", "Ended"], "correctOptions": ["Emits when underlying resource closed"], "time": 55, "details": "close fires."},
-  {"question": "What is readable event error?", "options": ["Error event", "Exception", "Failed", "Error"], "correctOptions": ["Emits readable error"], "time": 55, "details": "error fires on error."},
-  {"question": "What is fs in Node?", "options": ["File system", "File operations", "IO", "Files"], "correctOptions": ["File system module"], "time": 40, "details": "fs for files."},
-  {"question": "What is fs.readFile?", "options": ["Read file", "Async read", "Load", "Read"], "correctOptions": ["Asynchronous read - returns Buffer or string"], "time": 50, "details": "readFile reads async."},
-  {"question": "What is fs.writeFile?", "options": ["Write file", "Async write", "Save", "Write"], "correctOptions": ["Asynchronous write - overwrites existing"], "time": 50, "details": "writeFile writes."},
-  {"question": "What is fs.appendFile?", "options": ["Append to file", "Add", "Append", "Ends"], "correctOptions": ["Asynchronous append - adds to end"], "time": 55, "details": "appendFile appends."},
-  {"question": "What is fs.existsSync?", "options": ["Check exists", "Exists", "Is file", "Verify"], "correctOptions": ["Returns true if file exists"], "time": 45, "details": "existsSync checks."},
-  {"question": "What is fs.mkdir?", "options": ["Create directory", "Make dir", "Folder", "Directory"], "correctOptions": ["Creates directory"], "time": 50, "details": "mkdir creates dir."},
-  {"question": "What is fs.rmdir?", "options": ["Remove directory", "Delete dir", "Folder", "Remove"], "correctOptions": ["Removes directory - must be empty"], "time": 55, "details": "rmdir deletes."},
-  {"question": "What is fs.readdir?", "options": ["Read directory", "List dir", "Folders", "List"], "correctOptions": ["Lists directory contents"], "time": 55, "details": "readdir lists."},
-  {"question": "What is fs.unlink?", "options": ["Delete file", "Remove", "Remove file", "Delete"], "correctOptions": ["Deletes file"], "time": 50, "details": "unlink deletes file."},
-  {"question": "What is fs.stat?", "options": ["File stats", "Info", "Metadata", "Status"], "correctOptions": ["Gets stats - returns fs.Stats"], "time": 55, "details": "stat gets info."},
-  {"question": "What is fs.rename?", "options": ["Rename", "Rename or move", "Move", "Change name"], "correctOptions": ["Renames or moves file"], "time": 50, "details": "rename renames."},
-  {"question": "What is fs.copyFile?", "options": ["Copy file", "Duplicate", "Clone", "Copy"], "correctOptions": ["Copies file - flags controls overwrite"], "time": 55, "details": "copyFile copies."},
-  {"question": "What is fs.access?", "options": ["Check access", "Permissions", "Test", "Verify"], "correctOptions": ["Tests permissions with callback"], "time": 60, "details": "access checks."},
-  {"question": "What is fs.mkdirSync?", "options": ["Create dir", "Make dir", "Sync make", "Folder"], "correctOptions": ["Creates directory synchronously"], "time": 55, "details": "mkdirSync creates."},
-  {"question": "What is fs.symlink?", "options": ["Create symlink", "Link", "Shortlink", "Symbolic link"], "correctOptions": ["Creates symlink"], "time": 60, "details": "symlink creates."},
-  {"question": "What is fs.readlink?", "options": ["Read link", "Link target", "Target", "Resolve link"], "correctOptions": ["Reads target of symlink"], "time": 65, "details": "readlink reads."},
-  {"question": "What is fs.realpath?", "options": ["Resolve path", "Full path", "Canonical", "Absolute"], "correctOptions": ["Resolves to absolute path"], "time": 65, "details": "realpath resolves."},
-  {"question": "What is fs.watch?", "options": ["Watch file", "Track changes", "Monitor", "Changes"], "correctOptions": ["Watches file changes"], "time": 60, "details": "watch monitors."},
-  {"question": "What is fs.createReadStream?", "options": ["Create read stream", "Stream read", "Read stream", "File stream"], "correctOptions": ["Creates readable stream from file"], "time": 60, "details": "ReadStream reads."},
-  {"question": "What is fs.createWriteStream?", "options": ["Create write stream", "Write stream", "Stream write", "File stream"], "correctOptions": ["Creates writable stream from file"], "time": 60, "details": "WriteStream writes."},
-  {"question": "What is fsPromises?", "options": ["Promise API", "Async fs", "fs/promises", "Async"], "correctOptions": ["fs promise-version returning promises"], "time": 55, "details": "fs/promises is async."},
-  {"question": "What is path module?", "options": ["Path utilities", "Path manipulation", "File paths", "Path ops"], "correctOptions": ["Path utilities module"], "time": 50, "details": "path module."},
-  {"question": "What is path.resolve?", "options": ["Resolve path", "Absolute path", "Full path", "Resolve"], "correctOptions": ["Resolves to absolute path"], "time": 55, "details": "resolve gives absolute."},
-  {"question": "What is path.join?", "options": ["Join paths", "Combine", "Concatenate", "Join"], "correctOptions": ["Combines paths with separators"], "time": 50, "details": "join combines."},
-  {"question": "What is path.basename?", "options": ["Filename", "Last part", "Name", "Base"], "correctOptions": ["Gets filename from path"], "time": 50, "details": "basename is filename."},
-  {"question": "What is path.extname?", "options": ["Extension", "Extension part", "Ext", "Suffix"], "correctOptions": ["Gets extension from path"], "time": 50, "details": "extname is extension."},
-  {"question": "What is path.dirname?", "options": ["Directory", "Folder", "Parent", "Dirname"], "correctOptions": ["Gets folder from path"], "time": 50, "details": "dirname is folder."},
-  {"question": "What is path.parse?", "options": ["Parse path", "Break down", "Parse to object", "Analyze"], "correctOptions": ["Returns object with path parts"], "time": 55, "details": "parse returns parts."},
-  {"question": "What is path.format?", "options": ["Format path", "Build string", "Create path", "Stringify"], "correctOptions": ["Creates path string from parts"], "time": 55, "details": "format combines."},
-  {"question": "What is path.normalize?", "options": ["Normalize", "Clean path", "Simplify", "Simplify"], "correctOptions": ["Resolves dot and dot-dot paths"], "time": 55, "details": "normalize cleans."},
-  {"question": "What is path.isAbsolute?", "options": ["Check absolute", "Absolute check", "Check", "Boolean"], "correctOptions": ["Returns true if path is absolute"], "time": 50, "details": "isAbsolute checks."},
-  {"question": "What is path.relative?", "options": ["Get relative", "Relative path", "Relative", "From"], "correctOptions": ["Gets relative path between two paths"], "time": 60, "details": "relative calculates."},
-  {"question": "What is path.sep?", "options": ["Separator", "Path separator", "OS separator", "Delimiter"], "correctOptions": ["Path separator - forward slash or backslash"], "time": 45, "details": "sep is separator."},
-  {"question": "What is path.delimiter?", "options": ["Path delimiter", "Env delimiter", "Env separator", "Colon"], "correctOptions": ["Environment PATH delimiter"], "time": 50, "details": "delimiter for PATH."},
-  {"question": "What is URL class in Node?", "options": ["URL parsing", "URL object", "Parser", "Web URL"], "correctOptions": ["URL object for parsing URLs"], "time": 55, "details": "URL class."},
-  {"question": "What is url.origin?", "options": ["Origin", "Protocol and host", "Source", "Base"], "correctOptions": ["protocol plus host plus port"], "time": 60, "details": "origin is protocol plus host."},
-  {"question": "What is URLSearchParams?", "options": ["Query params", "Search params", "URL params", "Query string"], "correctOptions": ["URLSearchParams for query strings"], "time": 55, "details": "URLSearchParams utilities."},
-  {"question": "What is url.searchParams?", "options": ["Search params", "Query params", "URLSearchParams", "Query"], "correctOptions": ["url.search as URLSearchParams"], "time": 60, "details": "searchParams property."},
-  {"question": "What is url.host vs hostname?", "options": ["Host vs hostname", "Port vs name", "Two options", "Compare"], "correctOptions": ["host includes port - hostname excludes"], "time": 60, "details": "host includes port."},
-  {"question": "What is http in Node?", "options": ["HTTP server", "HTTP client", "Web server", "HTTP"], "correctOptions": ["HTTP module for server and client"], "time": 45, "details": "http is HTTP."},
-  {"question": "What is http.createServer?", "options": ["Create server", "HTTP server", "Start server", "Bind"], "correctOptions": ["Creates HTTP server"], "time": 50, "details": "createServer makes server."},
-  {"question": "What is server.listen?", "options": ["Start server", "Listen on port", "Bind port", "Start HTTP"], "correctOptions": ["Starts server on port"], "time": 50, "details": "listen starts."},
-  {"question": "What is http.request?", "options": ["Make request", "HTTP request", "Request client", "Outgoing"], "correctOptions": ["Creates outgoing HTTP request"], "time": 55, "details": "request makes request."},
-  {"question": "What is http.get?", "options": ["HTTP GET", "Get request", "GET", "Shorthand"], "correctOptions": ["Shorthand for GET request"], "time": 55, "details": "get is shorthand."},
-  {"question": "What is req.method?", "options": ["Request method", "HTTP method", "GET or POST", "Method"], "correctOptions": ["Request method like GET or POST"], "time": 45, "details": "method is HTTP verb."},
-  {"question": "What is req.url?", "options": ["Request URL", "Path", "URL", "Resource"], "correctOptions": ["URI - absolute or relative path"], "time": 45, "details": "url is path."},
-  {"question": "What is req.headers?", "options": ["Request headers", "HTTP headers", "Headers", "In"], "correctOptions": ["Object of request headers"], "time": 50, "details": "headers object."},
-  {"question": "What is req.on data?", "options": ["Body data", "Chunk", "Event", "Body"], "correctOptions": ["Emits request body in chunks"], "time": 55, "details": "data event."},
-  {"question": "What is req.on end?", "options": ["Done event", "End", "Complete", "Finish"], "correctOptions": ["Emits when request body complete"], "time": 60, "details": "end when done."},
-  {"question": "What is res.statusCode?", "options": ["Status code", "HTTP code", "Response code", "Code"], "correctOptions": ["Sets response status code"], "time": 45, "details": "statusCode sets."},
-  {"question": "What is res.setHeader?", "options": ["Set header", "Add header", "Header", "Set"], "correctOptions": ["Sets response header"], "time": 45, "details": "setHeader adds."},
-  {"question": "What is res.write?", "options": ["Write response", "Send data", "Response", "Write body"], "correctOptions": ["Sends response body"], "time": 55, "details": "write sends."},
-  {"question": "What is res.end?", "options": ["End response", "Finish", "Complete", "End body"], "correctOptions": ["Signals done - must call"], "time": 50, "details": "end sends finish."},
-  {"question": "What is server.on request?", "options": ["Request event", "Server event", "Incoming", "Handler"], "correctOptions": ["Server emits request when received"], "time": 60, "details": "request fires."},
-  {"question": "What is https in Node?", "options": ["HTTPS", "Secure HTTP", "TLS HTTP", "Encrypted"], "correctOptions": ["HTTPS over TLS"], "time": 50, "details": "https is secure HTTP."},
-  {"question": "What is https.createServer?", "options": ["TLS server", "HTTPS server", "Secure server", "TLS"], "correctOptions": ["Creates TLS server"], "time": 60, "details": "createServer secure."},
-  {"question": "What is https.request?", "options": ["HTTPS request", "TLS request", "Secure request", "Request"], "correctOptions": ["Makes HTTPS request using TLS"], "time": 60, "details": "request secure."},
-  {"question": "What is net module?", "options": ["TCP", "TCP sockets", "Network", "Sockets"], "correctOptions": ["TCP and Unix sockets module"], "time": 55, "details": "Network sockets."},
-  {"question": "What is net.createServer?", "options": ["Create server", "TCP server", "Server", "Listen"], "correctOptions": ["Creates TCP server"], "time": 60, "details": "TCP server."},
-  {"question": "What is net.createConnection?", "options": ["Create client", "Connect", "Client connect", "Connection"], "correctOptions": ["Creates TCP client connection"], "time": 65, "details": "Connects."},
-  {"question": "What is dgram module?", "options": ["UDP", "Datagrams", "UDP sockets", "UDP"], "correctOptions": ["UDP sockets module"], "time": 55, "details": "UDP sockets."},
-  {"question": "What is dgram.createSocket?", "options": ["Create UDP", "UDP", "Socket", "Create socket"], "correctOptions": ["Creates UDP socket"], "time": 60, "details": "Creates UDP."},
-  {"question": "What is socket.bind?", "options": ["Bind port", "Listen", "Attach", "Start"], "correctOptions": ["Binds socket to port"], "time": 60, "details": "bind listens."},
-  {"question": "What is socket.send?", "options": ["Send udp", "Write", "Write to", "Packet"], "correctOptions": ["Sends UDP packet"], "time": 60, "details": "send writes."},
-  {"question": "What is events module?", "options": ["Events", "Event emitter", "Pub or sub", "Event handler"], "correctOptions": ["Event emitter module"], "time": 50, "details": "Events class."},
-  {"question": "What is EventEmitter?", "options": ["Events core", "Emitter class", "Listener", "Event system"], "correctOptions": ["Base class for custom events"], "time": 55, "details": "EventEmitter is base."},
-  {"question": "What is emitter.on?", "options": ["Listen", "Register", "Subscribe", "Register"], "correctOptions": ["Register listener for event"], "time": 50, "details": "on registers."},
-  {"question": "What is emitter.once?", "options": ["Listen once", "One-time", "Single", "Single"], "correctOptions": ["Registers one-time listener"], "time": 55, "details": "once runs once."},
-  {"question": "What is emitter.emit?", "options": ["Fire event", "Trigger", "Dispatch", "Execute"], "correctOptions": ["Call all listeners with args"], "time": 50, "details": "emit calls."},
-  {"question": "What is emitter.off?", "options": ["Remove listener", "Unsubscribe", "Remove", "Unregister"], "correctOptions": ["Removes listener"], "time": 55, "details": "off removes."},
-  {"question": "What is emitter.listeners?", "options": ["Get listeners", "Array of", "Listener list", "Functions"], "correctOptions": ["Returns array of listener functions"], "time": 55, "details": "listeners returns array."},
-  {"question": "What is emitter.listenerCount?", "options": ["Count listeners", "Number", "Count", "Int"], "correctOptions": ["Returns number of listeners"], "time": 60, "details": "listenerCount returns count."},
-  {"question": "What is Node globals?", "options": ["Global object", "Top-level", "Namespace", "Root"], "correctOptions": ["Global - like globalThis"], "time": 60, "details": "global scope in Node."},
-  {"question": "What is globalThis?", "options": ["Global scope", "Standard", "Unified", "Global"], "correctOptions": ["ES2022 standard for global access"], "time": 60, "details": "globalThis standard."},
-  {"question": "What is require global?", "options": ["File access", "CommonJS", "Module loader", "Function"], "correctOptions": ["Global function for loading modules"], "time": 50, "details": "require is global."},
-  {"question": "What is __dirname?", "options": ["Current directory", "Directory path", "Folder", "Directory"], "correctOptions": ["Directory of currently executing file"], "time": 45, "details": "__dirname is directory."},
-  {"question": "What is __filename?", "options": ["Current file", "File path", "File", "Path"], "correctOptions": ["Full path to current file"], "time": 45, "details": "__filename is file."},
-  {"question": "What is console.log?", "options": ["Log", "Print", "Output", "Show"], "correctOptions": ["Prints to stdout"], "time": 40, "details": "console.log prints."},
-  {"question": "What is console.error?", "options": ["Error log", "Print to stderr", "Output", "Error output"], "correctOptions": ["Prints error to stderr"], "time": 45, "details": "console.error prints to stderr."},
-  {"question": "What is console.warn?", "options": ["Warning", "Print warning", "Warning log", "Warning output"], "correctOptions": ["Prints warning to stderr"], "time": 45, "details": "console.warn prints warning."},
-  {"question": "What is console.time?", "options": ["Time code", "Timer", "Measure time", "Measure"], "correctOptions": ["Starts timer for code"], "time": 50, "details": "timer measures execution."},
-  {"question": "What is console.timeEnd?", "options": ["End timer", "Stop timer", "Measure", "Timer end"], "correctOptions": ["Stops timer and outputs time"], "time": 50, "details": "timeEnd outputs elapsed."},
-  {"question": "What is console.dir?", "options": ["Inspect", "Object", "Print", "Show"], "correctOptions": ["Inspect object with options"], "time": 50, "details": "dir inspects."},
-  {"question": "What is console.trace?", "options": ["Stack trace", "Trace", "Print trace", "Log"], "correctOptions": ["Outputs stack trace to stderr"], "time": 50, "details": "trace outputs."},
-  {"question": "What is assert module?", "options": ["Assertion library", "Testing assert", "Verify", "Check"], "correctOptions": ["Assertion functions for testing"], "time": 55, "details": "assert is assertion."},
-  {"question": "What is assert.equal?", "options": ["Check equal", "Equal", "Compare", "Match"], "correctOptions": ["Tests equality with =="], "time": 50, "details": "equal checks loose equality."},
-  {"question": "What is assert.strictEqual?", "options": ["Strict equal", "Compare", "Equal", "Match"], "correctOptions": ["Tests equality with =="], "time": 50, "details": "strictEqual checks strict equality."},
-  {"question": "What is assert.deepEqual?", "options": ["Deep equal", "Compare objects", "Equal", "Match"], "correctOptions": ["Tests deep equality of objects"], "time": 55, "details": "deepEqual compares deeply."},
-  {"question": "What is assert.ok?", "options": ["Check truthy", "Truthy", "Verify", "Boolean"], "correctOptions": ["Tests if value is truthy"], "time": 45, "details": "ok checks truthiness."},
-  {"question": "What is assert.throws?", "options": ["Expect throw", "Throws", "Error", "Test"], "correctOptions": ["Tests if function throws error"], "time": 50, "details": "throws expects error."},
-  {"question": "What is assert.doesNotThrow?", "options": ["Assert no throw", "No error", "Verify", "Test"], "correctOptions": ["Tests if function does not throw"], "time": 55, "details": "doesNotThrow checks no error."},
-  {"question": "What is setTimeout?", "options": ["Delay", "Timer", "Schedule", "Timeout"], "correctOptions": ["Schedules callback after delay"], "time": 45, "details": "setTimeout schedules."},
-  {"question": "What is setInterval?", "options": ["Interval", "Repeated timer", "Repeat", "Loop"], "correctOptions": ["Runs callback repeatedly"], "time": 45, "details": "setInterval repeats."},
-  {"question": "What is setImmediate?", "options": ["Immediate", "Next loop", "Async", "Callback"], "correctOptions": ["Runs callback in check phase"], "time": 50, "details": "setImmediate runs soon."},
-  {"question": "What is clearTimeout?", "options": ["Clear timeout", "Cancel", "Cancel timer", "Remove"], "correctOptions": ["Cancels setTimeout"], "time": 45, "details": "clearTimeout cancels."},
-  {"question": "What is clearInterval?", "options": ["Clear interval", "Stop interval", "Cancel", "Remove"], "correctOptions": ["Cancels setInterval"], "time": 45, "details": "clearInterval cancels."},
-  {"question": "What is v8 module?", "options": ["V8 API", "V8 Engine", "Memory", "Caches"], "correctOptions": ["V8-specific APIs"], "time": 50, "details": "V8 module specific."},
-  {"question": "What is cluster module?", "options": ["Cluster workers", "CPU", "Scaling", "Multi-process"], "correctOptions": ["Module for scaling with multiple processes"], "time": 50, "details": "cluster for scaling."},
-  {"question": "What is worker_threads?", "options": ["CPU intensive", "True threading", "Multi-thread", "Parallel"], "correctOptions": ["True threading in Node"], "time": 45, "details": "worker_threads enables threads."},
-  {"question": "What is crypto module?", "options": ["Encryption", "Security", "Hash", "Cipher"], "correctOptions": ["Crypto module for encryption"], "time": 40, "details": "crypto for encryption."},
-  {"question": "What is tls module?", "options": ["TLS and SSL", "Secure transport", "HTTPS", "Encryption"], "correctOptions": ["TLS and SSL encrypted streams"], "time": 45, "details": "tls for secure transport."}
+  {
+    "question": "What is domain in Node.js?",
+    "options": [
+      "Error handling",
+      "Domain module",
+      "Catch async errors",
+      "Error domain"
+    ],
+    "correctOptions": [
+      "Error handling"
+    ],
+    "time": 55,
+    "details": "Domain provides error handling for async."
+  },
+  {
+    "question": "What is createDomain?",
+    "options": [
+      "Create domain",
+      "Domain",
+      "Initialize",
+      "Create error domain"
+    ],
+    "correctOptions": [
+      "Domain"
+    ],
+    "time": 55,
+    "details": "Creates a domain."
+  },
+  {
+    "question": "What is domain.run?",
+    "options": [
+      "Execute in domain",
+      "Wrap",
+      "Function execute",
+      "Run callback"
+    ],
+    "correctOptions": [
+      "Execute in domain"
+    ],
+    "time": 55,
+    "details": "Runs function in domain."
+  },
+  {
+    "question": "What is domain.on error?",
+    "options": [
+      "Error handler",
+      "Error listener",
+      "Error callback",
+      "Error capture"
+    ],
+    "correctOptions": [
+      "Error handler"
+    ],
+    "time": 55,
+    "details": "Emits error events."
+  },
+  {
+    "question": "What is Domain interception?",
+    "options": [
+      "Intercept errors",
+      "Error catching",
+      "Wrapper",
+      "Intercept evented"
+    ],
+    "correctOptions": [
+      "Intercept errors"
+    ],
+    "time": 65,
+    "details": "Intercepts evented errors."
+  },
+  {
+    "question": "What is domain.add?",
+    "options": [
+      "Add to domain",
+      "Add script",
+      "Bind",
+      "Add child"
+    ],
+    "correctOptions": [
+      "Add to domain"
+    ],
+    "time": 55,
+    "details": "Adds emitter to domain."
+  },
+  {
+    "question": "What is domain.remove?",
+    "options": [
+      "Remove from domain",
+      "Unbind",
+      "Remove emitter",
+      "Remove script"
+    ],
+    "correctOptions": [
+      "Remove from domain"
+    ],
+    "time": 60,
+    "details": "Removes from domain."
+  },
+  {
+    "question": "What is createAsyncId?",
+    "options": [
+      "Next id",
+      "ID",
+      "Get id",
+      "Next async"
+    ],
+    "correctOptions": [
+      "ID"
+    ],
+    "time": 55,
+    "details": "createAsyncId gets ID."
+  },
+  {
+    "question": "What is executionAsyncId?",
+    "options": [
+      "Current id",
+      "Active id",
+      "This async",
+      "ID"
+    ],
+    "correctOptions": [
+      "ID"
+    ],
+    "time": 55,
+    "details": "executionAsyncId is current."
+  },
+  {
+    "question": "What is triggerAsyncId?",
+    "options": [
+      "Trigger id",
+      "Parent id",
+      "Origin id",
+      "Async id"
+    ],
+    "correctOptions": [
+      "Trigger id"
+    ],
+    "time": 60,
+    "details": "triggerAsyncId is origin."
+  },
+  {
+    "question": "What is new TextEncoder?",
+    "options": [
+      "Create encoder",
+      "Encoder",
+      "Stream",
+      "Encode string"
+    ],
+    "correctOptions": [
+      "Create encoder"
+    ],
+    "time": 55,
+    "details": "Encodes strings to Uint8Array."
+  },
+  {
+    "question": "What is new TextDecoder?",
+    "options": [
+      "Create decoder",
+      "Decoder",
+      "Decode",
+      "Decode bytes"
+    ],
+    "correctOptions": [
+      "Decode"
+    ],
+    "time": 55,
+    "details": "Decodes Uint8Array to string."
+  },
+  {
+    "question": "What is encoder.encode?",
+    "options": [
+      "Return Uint8Array",
+      "Encode",
+      "Function",
+      "Convert"
+    ],
+    "correctOptions": [
+      "Encode"
+    ],
+    "time": 55,
+    "details": "encode returns encoded bytes."
+  },
+  {
+    "question": "What is decoder.decode?",
+    "options": [
+      "Return string",
+      "Decode",
+      "String",
+      "Decode bytes"
+    ],
+    "correctOptions": [
+      "Decode"
+    ],
+    "time": 55,
+    "details": "decodes returns string."
+  },
+  {
+    "question": "What is Stream API in Node?",
+    "options": [
+      "Data stream abstraction",
+      "Streaming API",
+      "Flow control",
+      "Piping"
+    ],
+    "correctOptions": [
+      "Data stream abstraction"
+    ],
+    "time": 60,
+    "details": "Unified streaming data interface."
+  },
+  {
+    "question": "What is Buffer in Node?",
+    "options": [
+      "Binary data buffer",
+      "Binary buffer",
+      "Byte representation",
+      "Raw memory"
+    ],
+    "correctOptions": [
+      "Binary data buffer"
+    ],
+    "time": 50,
+    "details": "Buffer handles binary data."
+  },
+  {
+    "question": "What is Buffer.alloc?",
+    "options": [
+      "Create empty buffer",
+      "Allocate",
+      "Create safe buffer",
+      "Initialize"
+    ],
+    "correctOptions": [
+      "Allocate"
+    ],
+    "time": 50,
+    "details": "Returns zero-filled buffer."
+  },
+  {
+    "question": "What is Buffer.allocUnsafe?",
+    "options": [
+      "Create uninitialized",
+      "Allocate unsafe",
+      "Fast",
+      "Buffer"
+    ],
+    "correctOptions": [
+      "Create uninitialized"
+    ],
+    "time": 55,
+    "details": "Fast but may have garbage."
+  },
+  {
+    "question": "What is Buffer.allocUnsafeSlow?",
+    "options": [
+      "Create pool buffer",
+      "Slow alloc",
+      "Buffer pool",
+      "Create"
+    ],
+    "correctOptions": [
+      "Create"
+    ],
+    "time": 65,
+    "details": "Uses slow allocation."
+  },
+  {
+    "question": "What is Buffer.from?",
+    "options": [
+      "From input",
+      "Create from data",
+      "Wrap",
+      "Convert"
+    ],
+    "correctOptions": [
+      "From input"
+    ],
+    "time": 50,
+    "details": "Creates buffer from input."
+  },
+  {
+    "question": "What is Buffer.concat?",
+    "options": [
+      "Join buffers",
+      "Concatenate",
+      "Join buffers",
+      "Return buffer"
+    ],
+    "correctOptions": [
+      "Join buffers"
+    ],
+    "time": 55,
+    "details": "Concatenates multiple buffers."
+  },
+  {
+    "question": "What is buffer.write?",
+    "options": [
+      "Write to buffer",
+      "Write string",
+      "Modify",
+      "Set"
+    ],
+    "correctOptions": [
+      "Write to buffer"
+    ],
+    "time": 55,
+    "details": "Writes string to buffer."
+  },
+  {
+    "question": "What is buffer.toString?",
+    "options": [
+      "Convert to string",
+      "Decode",
+      "String",
+      "Display"
+    ],
+    "correctOptions": [
+      "Decode"
+    ],
+    "time": 50,
+    "details": "Decodes buffer to string."
+  },
+  {
+    "question": "What is buffer.toJSON?",
+    "options": [
+      "Return JSON",
+      "Serialize",
+      "JSON",
+      "Object"
+    ],
+    "correctOptions": [
+      "JSON"
+    ],
+    "time": 60,
+    "details": "Returns simplified JSON form."
+  },
+  {
+    "question": "What is buffer length?",
+    "options": [
+      "Byte length",
+      "Size in bytes",
+      "Size",
+      "Length"
+    ],
+    "correctOptions": [
+      "Byte length"
+    ],
+    "time": 50,
+    "details": "Byte length, not char count."
+  },
+  {
+    "question": "What is buffer.compare?",
+    "options": [
+      "Compare buffers",
+      "Equal test",
+      "Compare",
+      "Return"
+    ],
+    "correctOptions": [
+      "Return"
+    ],
+    "time": 60,
+    "details": "Compare returns sort order."
+  },
+  {
+    "question": "What is buffer.equals?",
+    "options": [
+      "Are same",
+      "Boolean equal",
+      "Comparison",
+      "Verify"
+    ],
+    "correctOptions": [
+      "Are same"
+    ],
+    "time": 60,
+    "details": "Returns true if equal."
+  },
+  {
+    "question": "What is buffer.fill?",
+    "options": [
+      "Fill buffer",
+      "Zero out",
+      "Initialize",
+      "Fill"
+    ],
+    "correctOptions": [
+      "Fill"
+    ],
+    "time": 55,
+    "details": "Fills buffer with value."
+  },
+  {
+    "question": "What is buffer.copy?",
+    "options": [
+      "Copy section",
+      "Copy target",
+      "Copy bytes",
+      "Clone"
+    ],
+    "correctOptions": [
+      "Copy section"
+    ],
+    "time": 60,
+    "details": "Copy source to target."
+  },
+  {
+    "question": "What is buffer.slice?",
+    "options": [
+      "Create sub-buffer",
+      "Copy range",
+      "Buffer range",
+      "Create"
+    ],
+    "correctOptions": [
+      "Create"
+    ],
+    "time": 55,
+    "details": "Creates sub-buffer slice."
+  },
+  {
+    "question": "What is StringDecoder?",
+    "options": [
+      "Multi-byte decoder",
+      "Decode partial",
+      "Handle chunks",
+      "Correct"
+    ],
+    "correctOptions": [
+      "Multi-byte decoder"
+    ],
+    "time": 75,
+    "details": "Handles multi-byte splitting."
+  },
+  {
+    "question": "What is readable readableHighWaterMark?",
+    "options": [
+      "Internal buffer size",
+      "Buffer capacity",
+      "Watermark",
+      "Threshold"
+    ],
+    "correctOptions": [
+      "Internal buffer size"
+    ],
+    "time": 70,
+    "details": "Internal buffer size."
+  },
+  {
+    "question": "What is readable flow mode?",
+    "options": [
+      "Automatic reading",
+      "Flow",
+      "Auto read",
+      "Mode"
+    ],
+    "correctOptions": [
+      "Automatic reading"
+    ],
+    "time": 65,
+    "details": "Flowing reads automatically."
+  },
+  {
+    "question": "What is readable readable mode?",
+    "options": [
+      "Manual reading",
+      "Read mode",
+      "Manual",
+      "Mode"
+    ],
+    "correctOptions": [
+      "Manual reading"
+    ],
+    "time": 70,
+    "details": "Manual reads with read()."
+  },
+  {
+    "question": "What is isPaused?",
+    "options": [
+      "Check paused state",
+      "Paused flag",
+      "Read",
+      "State"
+    ],
+    "correctOptions": [
+      "Check paused state"
+    ],
+    "time": 65,
+    "details": "Check paused state."
+  },
+  {
+    "question": "What is readable.pause?",
+    "options": [
+      "Pause reading",
+      "Stop flow",
+      "Readable",
+      "Manual"
+    ],
+    "correctOptions": [
+      "Pause reading"
+    ],
+    "time": 60,
+    "details": "Pause switches modes."
+  },
+  {
+    "question": "What is readable.resume?",
+    "options": [
+      "Resume reading",
+      "Start flow",
+      "Resume",
+      "Drain"
+    ],
+    "correctOptions": [
+      "Resume"
+    ],
+    "time": 60,
+    "details": "Resume returns data."
+  },
+  {
+    "question": "What is readable.pipe?",
+    "options": [
+      "Pipe to destination",
+      "Connect",
+      "Write to",
+      "Route"
+    ],
+    "correctOptions": [
+      "Pipe to destination"
+    ],
+    "time": 60,
+    "details": "Pipe to destination."
+  },
+  {
+    "question": "What is readable.unpipe?",
+    "options": [
+      "Unpipe",
+      "Disconnect",
+      "Stop pipe",
+      "Remove"
+    ],
+    "correctOptions": [
+      "Unpipe"
+    ],
+    "time": 65,
+    "details": "unpipe disconnects."
+  },
+  {
+    "question": "What is Transform stream?",
+    "options": [
+      "Transformation",
+      "Transform",
+      "Modify",
+      "Map"
+    ],
+    "correctOptions": [
+      "Transformation"
+    ],
+    "time": 55,
+    "details": "Transforms data."
+  },
+  {
+    "question": "What is _transform?",
+    "options": [
+      "Process chunk",
+      "Transform method",
+      "Callback",
+      "Function"
+    ],
+    "correctOptions": [
+      "Process chunk"
+    ],
+    "time": 60,
+    "details": "_transform is required."
+  },
+  {
+    "question": "What is _flush?",
+    "options": [
+      "Finalize",
+      "End transform",
+      "Flush",
+      "Callback"
+    ],
+    "correctOptions": [
+      "Finalize"
+    ],
+    "time": 60,
+    "details": "_flush is optional."
+  },
+  {
+    "question": "What is PassThrough stream?",
+    "options": [
+      "Null transform",
+      "Simple pass",
+      "No-op",
+      "Passthrough"
+    ],
+    "correctOptions": [
+      "Null transform"
+    ],
+    "time": 55,
+    "details": "Passes through."
+  },
+  {
+    "question": "What is Duplex stream?",
+    "options": [
+      "Both readable and writable",
+      "Bidirectional",
+      "Read-write",
+      "Two-way"
+    ],
+    "correctOptions": [
+      "Both readable and writable"
+    ],
+    "time": 60,
+    "details": "Both read and write."
+  },
+  {
+    "question": "What is writable.write?",
+    "options": [
+      "Write data",
+      "Add data",
+      "Emit",
+      "Buffer"
+    ],
+    "correctOptions": [
+      "Write data"
+    ],
+    "time": 50,
+    "details": "write sends data."
+  },
+  {
+    "question": "What is writable.cork?",
+    "options": [
+      "Buffer writes",
+      "Hold",
+      "Block",
+      "Pause"
+    ],
+    "correctOptions": [
+      "Buffer writes"
+    ],
+    "time": 60,
+    "details": "Cork buffers writes."
+  },
+  {
+    "question": "What is writable.uncork?",
+    "options": [
+      "Write buffered",
+      "Flush",
+      "Release",
+      "Uncork"
+    ],
+    "correctOptions": [
+      "Write buffered"
+    ],
+    "time": 60,
+    "details": "Uncork flushes."
+  },
+  {
+    "question": "What is writable.end?",
+    "options": [
+      "End writeable",
+      "Finish",
+      "Close",
+      "EOF"
+    ],
+    "correctOptions": [
+      "EOF"
+    ],
+    "time": 50,
+    "details": "end ends stream."
+  },
+  {
+    "question": "What is close event on writable?",
+    "options": [
+      "Close event",
+      "End",
+      "Closed",
+      "Done"
+    ],
+    "correctOptions": [
+      "Close event"
+    ],
+    "time": 60,
+    "details": "Close event fires."
+  },
+  {
+    "question": "What is finish event on writable?",
+    "options": [
+      "Finish event",
+      "Write done",
+      "Complete",
+      "Done"
+    ],
+    "correctOptions": [
+      "Finish event"
+    ],
+    "time": 60,
+    "details": "Finish after end."
+  },
+  {
+    "question": "What is stream.Readable?",
+    "options": [
+      "Readable base",
+      "Class",
+      "Base",
+      "Interface"
+    ],
+    "correctOptions": [
+      "Base"
+    ],
+    "time": 55,
+    "details": "Readable is base."
+  },
+  {
+    "question": "What is stream.Writable?",
+    "options": [
+      "Writable base",
+      "Class",
+      "Base",
+      "Interface"
+    ],
+    "correctOptions": [
+      "Base"
+    ],
+    "time": 55,
+    "details": "Writable is base."
+  },
+  {
+    "question": "What is stream.Transform?",
+    "options": [
+      "Transform base",
+      "Class",
+      "Base",
+      "Interface"
+    ],
+    "correctOptions": [
+      "Base"
+    ],
+    "time": 60,
+    "details": "Transform is base."
+  },
+  {
+    "question": "What is stream.Duplex?",
+    "options": [
+      "Duplex base",
+      "Class",
+      "Base",
+      "Interface"
+    ],
+    "correctOptions": [
+      "Base"
+    ],
+    "time": 60,
+    "details": "Duplex is base."
+  },
+  {
+    "question": "What is readable event readable?",
+    "options": [
+      "Data available",
+      "Ready",
+      "Readable",
+      "Data"
+    ],
+    "correctOptions": [
+      "Data available"
+    ],
+    "time": 60,
+    "details": "readable fires when ready."
+  },
+  {
+    "question": "What is readable event data?",
+    "options": [
+      "Data chunk",
+      "Chunk",
+      "New data",
+      "Emitted"
+    ],
+    "correctOptions": [
+      "Data chunk"
+    ],
+    "time": 55,
+    "details": "data fires per chunk."
+  },
+  {
+    "question": "What is readable event end?",
+    "options": [
+      "No more data",
+      "Done",
+      "EOF",
+      "Complete"
+    ],
+    "correctOptions": [
+      "No more data"
+    ],
+    "time": 50,
+    "details": "end fires at EOF."
+  },
+  {
+    "question": "What is readable event pause?",
+    "options": [
+      "Pause event",
+      "Paused",
+      "Stopped",
+      "Cannot read"
+    ],
+    "correctOptions": [
+      "Pause event"
+    ],
+    "time": 60,
+    "details": "pause fires."
+  },
+  {
+    "question": "What is readable event resume?",
+    "options": [
+      "Resume event",
+      "Continue",
+      "Start flowing",
+      "Resume"
+    ],
+    "correctOptions": [
+      "Resume event"
+    ],
+    "time": 60,
+    "details": "resume fires."
+  },
+  {
+    "question": "What is readable event close?",
+    "options": [
+      "Close event",
+      "Closed",
+      "Done",
+      "Ended"
+    ],
+    "correctOptions": [
+      "Close event"
+    ],
+    "time": 55,
+    "details": "close fires."
+  },
+  {
+    "question": "What is readable event error?",
+    "options": [
+      "Error event",
+      "Exception",
+      "Failed",
+      "Error"
+    ],
+    "correctOptions": [
+      "Error event"
+    ],
+    "time": 55,
+    "details": "error fires on error."
+  },
+  {
+    "question": "What is fs in Node?",
+    "options": [
+      "File system",
+      "File operations",
+      "IO",
+      "Files"
+    ],
+    "correctOptions": [
+      "File system"
+    ],
+    "time": 40,
+    "details": "fs for files."
+  },
+  {
+    "question": "What is fs.readFile?",
+    "options": [
+      "Read file",
+      "Async read",
+      "Load",
+      "Read"
+    ],
+    "correctOptions": [
+      "Read file"
+    ],
+    "time": 50,
+    "details": "readFile reads async."
+  },
+  {
+    "question": "What is fs.writeFile?",
+    "options": [
+      "Write file",
+      "Async write",
+      "Save",
+      "Write"
+    ],
+    "correctOptions": [
+      "Write file"
+    ],
+    "time": 50,
+    "details": "writeFile writes."
+  },
+  {
+    "question": "What is fs.appendFile?",
+    "options": [
+      "Append to file",
+      "Add",
+      "Append",
+      "Ends"
+    ],
+    "correctOptions": [
+      "Append to file"
+    ],
+    "time": 55,
+    "details": "appendFile appends."
+  },
+  {
+    "question": "What is fs.existsSync?",
+    "options": [
+      "Check exists",
+      "Exists",
+      "Is file",
+      "Verify"
+    ],
+    "correctOptions": [
+      "Check exists"
+    ],
+    "time": 45,
+    "details": "existsSync checks."
+  },
+  {
+    "question": "What is fs.mkdir?",
+    "options": [
+      "Create directory",
+      "Make dir",
+      "Folder",
+      "Directory"
+    ],
+    "correctOptions": [
+      "Create directory"
+    ],
+    "time": 50,
+    "details": "mkdir creates dir."
+  },
+  {
+    "question": "What is fs.rmdir?",
+    "options": [
+      "Remove directory",
+      "Delete dir",
+      "Folder",
+      "Remove"
+    ],
+    "correctOptions": [
+      "Remove"
+    ],
+    "time": 55,
+    "details": "rmdir deletes."
+  },
+  {
+    "question": "What is fs.readdir?",
+    "options": [
+      "Read directory",
+      "List dir",
+      "Folders",
+      "List"
+    ],
+    "correctOptions": [
+      "List"
+    ],
+    "time": 55,
+    "details": "readdir lists."
+  },
+  {
+    "question": "What is fs.unlink?",
+    "options": [
+      "Delete file",
+      "Remove",
+      "Remove file",
+      "Delete"
+    ],
+    "correctOptions": [
+      "Delete"
+    ],
+    "time": 50,
+    "details": "unlink deletes file."
+  },
+  {
+    "question": "What is fs.stat?",
+    "options": [
+      "File stats",
+      "Info",
+      "Metadata",
+      "Status"
+    ],
+    "correctOptions": [
+      "File stats"
+    ],
+    "time": 55,
+    "details": "stat gets info."
+  },
+  {
+    "question": "What is fs.rename?",
+    "options": [
+      "Rename",
+      "Rename or move",
+      "Move",
+      "Change name"
+    ],
+    "correctOptions": [
+      "Rename"
+    ],
+    "time": 50,
+    "details": "rename renames."
+  },
+  {
+    "question": "What is fs.copyFile?",
+    "options": [
+      "Copy file",
+      "Duplicate",
+      "Clone",
+      "Copy"
+    ],
+    "correctOptions": [
+      "Copy file"
+    ],
+    "time": 55,
+    "details": "copyFile copies."
+  },
+  {
+    "question": "What is fs.access?",
+    "options": [
+      "Check access",
+      "Permissions",
+      "Test",
+      "Verify"
+    ],
+    "correctOptions": [
+      "Test"
+    ],
+    "time": 60,
+    "details": "access checks."
+  },
+  {
+    "question": "What is fs.mkdirSync?",
+    "options": [
+      "Create dir",
+      "Make dir",
+      "Sync make",
+      "Folder"
+    ],
+    "correctOptions": [
+      "Create dir"
+    ],
+    "time": 55,
+    "details": "mkdirSync creates."
+  },
+  {
+    "question": "What is fs.symlink?",
+    "options": [
+      "Create symlink",
+      "Link",
+      "Shortlink",
+      "Symbolic link"
+    ],
+    "correctOptions": [
+      "Create symlink"
+    ],
+    "time": 60,
+    "details": "symlink creates."
+  },
+  {
+    "question": "What is fs.readlink?",
+    "options": [
+      "Read link",
+      "Link target",
+      "Target",
+      "Resolve link"
+    ],
+    "correctOptions": [
+      "Read link"
+    ],
+    "time": 65,
+    "details": "readlink reads."
+  },
+  {
+    "question": "What is fs.realpath?",
+    "options": [
+      "Resolve path",
+      "Full path",
+      "Canonical",
+      "Absolute"
+    ],
+    "correctOptions": [
+      "Resolve path"
+    ],
+    "time": 65,
+    "details": "realpath resolves."
+  },
+  {
+    "question": "What is fs.watch?",
+    "options": [
+      "Watch file",
+      "Track changes",
+      "Monitor",
+      "Changes"
+    ],
+    "correctOptions": [
+      "Watch file"
+    ],
+    "time": 60,
+    "details": "watch monitors."
+  },
+  {
+    "question": "What is fs.createReadStream?",
+    "options": [
+      "Create read stream",
+      "Stream read",
+      "Read stream",
+      "File stream"
+    ],
+    "correctOptions": [
+      "Create read stream"
+    ],
+    "time": 60,
+    "details": "ReadStream reads."
+  },
+  {
+    "question": "What is fs.createWriteStream?",
+    "options": [
+      "Create write stream",
+      "Write stream",
+      "Stream write",
+      "File stream"
+    ],
+    "correctOptions": [
+      "Create write stream"
+    ],
+    "time": 60,
+    "details": "WriteStream writes."
+  },
+  {
+    "question": "What is fsPromises?",
+    "options": [
+      "Promise API",
+      "Async fs",
+      "fs/promises",
+      "Async"
+    ],
+    "correctOptions": [
+      "Promise API"
+    ],
+    "time": 55,
+    "details": "fs/promises is async."
+  },
+  {
+    "question": "What is path module?",
+    "options": [
+      "Path utilities",
+      "Path manipulation",
+      "File paths",
+      "Path ops"
+    ],
+    "correctOptions": [
+      "Path utilities"
+    ],
+    "time": 50,
+    "details": "path module."
+  },
+  {
+    "question": "What is path.resolve?",
+    "options": [
+      "Resolve path",
+      "Absolute path",
+      "Full path",
+      "Resolve"
+    ],
+    "correctOptions": [
+      "Resolve"
+    ],
+    "time": 55,
+    "details": "resolve gives absolute."
+  },
+  {
+    "question": "What is path.join?",
+    "options": [
+      "Join paths",
+      "Combine",
+      "Concatenate",
+      "Join"
+    ],
+    "correctOptions": [
+      "Combine"
+    ],
+    "time": 50,
+    "details": "join combines."
+  },
+  {
+    "question": "What is path.basename?",
+    "options": [
+      "Filename",
+      "Last part",
+      "Name",
+      "Base"
+    ],
+    "correctOptions": [
+      "Filename"
+    ],
+    "time": 50,
+    "details": "basename is filename."
+  },
+  {
+    "question": "What is path.extname?",
+    "options": [
+      "Extension",
+      "Extension part",
+      "Ext",
+      "Suffix"
+    ],
+    "correctOptions": [
+      "Extension"
+    ],
+    "time": 50,
+    "details": "extname is extension."
+  },
+  {
+    "question": "What is path.dirname?",
+    "options": [
+      "Directory",
+      "Folder",
+      "Parent",
+      "Dirname"
+    ],
+    "correctOptions": [
+      "Directory"
+    ],
+    "time": 50,
+    "details": "dirname is folder."
+  },
+  {
+    "question": "What is path.parse?",
+    "options": [
+      "Parse path",
+      "Break down",
+      "Parse to object",
+      "Analyze"
+    ],
+    "correctOptions": [
+      "Parse path"
+    ],
+    "time": 55,
+    "details": "parse returns parts."
+  },
+  {
+    "question": "What is path.format?",
+    "options": [
+      "Format path",
+      "Build string",
+      "Create path",
+      "Stringify"
+    ],
+    "correctOptions": [
+      "Format path"
+    ],
+    "time": 55,
+    "details": "format combines."
+  },
+  {
+    "question": "What is path.normalize?",
+    "options": [
+      "Normalize",
+      "Clean path",
+      "Simplify",
+      "Simplify"
+    ],
+    "correctOptions": [
+      "Normalize"
+    ],
+    "time": 55,
+    "details": "normalize cleans."
+  },
+  {
+    "question": "What is path.isAbsolute?",
+    "options": [
+      "Check absolute",
+      "Absolute check",
+      "Check",
+      "Boolean"
+    ],
+    "correctOptions": [
+      "Check absolute"
+    ],
+    "time": 50,
+    "details": "isAbsolute checks."
+  },
+  {
+    "question": "What is path.relative?",
+    "options": [
+      "Get relative",
+      "Relative path",
+      "Relative",
+      "From"
+    ],
+    "correctOptions": [
+      "Get relative"
+    ],
+    "time": 60,
+    "details": "relative calculates."
+  },
+  {
+    "question": "What is path.sep?",
+    "options": [
+      "Separator",
+      "Path separator",
+      "OS separator",
+      "Delimiter"
+    ],
+    "correctOptions": [
+      "Path separator"
+    ],
+    "time": 45,
+    "details": "sep is separator."
+  },
+  {
+    "question": "What is path.delimiter?",
+    "options": [
+      "Path delimiter",
+      "Env delimiter",
+      "Env separator",
+      "Colon"
+    ],
+    "correctOptions": [
+      "Path delimiter"
+    ],
+    "time": 50,
+    "details": "delimiter for PATH."
+  },
+  {
+    "question": "What is URL class in Node?",
+    "options": [
+      "URL parsing",
+      "URL object",
+      "Parser",
+      "Web URL"
+    ],
+    "correctOptions": [
+      "URL object"
+    ],
+    "time": 55,
+    "details": "URL class."
+  },
+  {
+    "question": "What is url.origin?",
+    "options": [
+      "Origin",
+      "Protocol and host",
+      "Source",
+      "Base"
+    ],
+    "correctOptions": [
+      "Origin"
+    ],
+    "time": 60,
+    "details": "origin is protocol plus host."
+  },
+  {
+    "question": "What is URLSearchParams?",
+    "options": [
+      "Query params",
+      "Search params",
+      "URL params",
+      "Query string"
+    ],
+    "correctOptions": [
+      "Query params"
+    ],
+    "time": 55,
+    "details": "URLSearchParams utilities."
+  },
+  {
+    "question": "What is url.searchParams?",
+    "options": [
+      "Search params",
+      "Query params",
+      "URLSearchParams",
+      "Query"
+    ],
+    "correctOptions": [
+      "URLSearchParams"
+    ],
+    "time": 60,
+    "details": "searchParams property."
+  },
+  {
+    "question": "What is url.host vs hostname?",
+    "options": [
+      "Host vs hostname",
+      "Port vs name",
+      "Two options",
+      "Compare"
+    ],
+    "correctOptions": [
+      "Host vs hostname"
+    ],
+    "time": 60,
+    "details": "host includes port."
+  },
+  {
+    "question": "What is http in Node?",
+    "options": [
+      "HTTP server",
+      "HTTP client",
+      "Web server",
+      "HTTP"
+    ],
+    "correctOptions": [
+      "HTTP"
+    ],
+    "time": 45,
+    "details": "http is HTTP."
+  },
+  {
+    "question": "What is http.createServer?",
+    "options": [
+      "Create server",
+      "HTTP server",
+      "Start server",
+      "Bind"
+    ],
+    "correctOptions": [
+      "HTTP server"
+    ],
+    "time": 50,
+    "details": "createServer makes server."
+  },
+  {
+    "question": "What is server.listen?",
+    "options": [
+      "Start server",
+      "Listen on port",
+      "Bind port",
+      "Start HTTP"
+    ],
+    "correctOptions": [
+      "Start server"
+    ],
+    "time": 50,
+    "details": "listen starts."
+  },
+  {
+    "question": "What is http.request?",
+    "options": [
+      "Make request",
+      "HTTP request",
+      "Request client",
+      "Outgoing"
+    ],
+    "correctOptions": [
+      "HTTP request"
+    ],
+    "time": 55,
+    "details": "request makes request."
+  },
+  {
+    "question": "What is http.get?",
+    "options": [
+      "HTTP GET",
+      "Get request",
+      "GET",
+      "Shorthand"
+    ],
+    "correctOptions": [
+      "GET"
+    ],
+    "time": 55,
+    "details": "get is shorthand."
+  },
+  {
+    "question": "What is req.method?",
+    "options": [
+      "Request method",
+      "HTTP method",
+      "GET or POST",
+      "Method"
+    ],
+    "correctOptions": [
+      "Request method"
+    ],
+    "time": 45,
+    "details": "method is HTTP verb."
+  },
+  {
+    "question": "What is req.url?",
+    "options": [
+      "Request URL",
+      "Path",
+      "URL",
+      "Resource"
+    ],
+    "correctOptions": [
+      "Request URL"
+    ],
+    "time": 45,
+    "details": "url is path."
+  },
+  {
+    "question": "What is req.headers?",
+    "options": [
+      "Request headers",
+      "HTTP headers",
+      "Headers",
+      "In"
+    ],
+    "correctOptions": [
+      "Request headers"
+    ],
+    "time": 50,
+    "details": "headers object."
+  },
+  {
+    "question": "What is req.on data?",
+    "options": [
+      "Body data",
+      "Chunk",
+      "Event",
+      "Body"
+    ],
+    "correctOptions": [
+      "Body data"
+    ],
+    "time": 55,
+    "details": "data event."
+  },
+  {
+    "question": "What is req.on end?",
+    "options": [
+      "Done event",
+      "End",
+      "Complete",
+      "Finish"
+    ],
+    "correctOptions": [
+      "Done event"
+    ],
+    "time": 60,
+    "details": "end when done."
+  },
+  {
+    "question": "What is res.statusCode?",
+    "options": [
+      "Status code",
+      "HTTP code",
+      "Response code",
+      "Code"
+    ],
+    "correctOptions": [
+      "Status code"
+    ],
+    "time": 45,
+    "details": "statusCode sets."
+  },
+  {
+    "question": "What is res.setHeader?",
+    "options": [
+      "Set header",
+      "Add header",
+      "Header",
+      "Set"
+    ],
+    "correctOptions": [
+      "Set"
+    ],
+    "time": 45,
+    "details": "setHeader adds."
+  },
+  {
+    "question": "What is res.write?",
+    "options": [
+      "Write response",
+      "Send data",
+      "Response",
+      "Write body"
+    ],
+    "correctOptions": [
+      "Write response"
+    ],
+    "time": 55,
+    "details": "write sends."
+  },
+  {
+    "question": "What is res.end?",
+    "options": [
+      "End response",
+      "Finish",
+      "Complete",
+      "End body"
+    ],
+    "correctOptions": [
+      "End response"
+    ],
+    "time": 50,
+    "details": "end sends finish."
+  },
+  {
+    "question": "What is server.on request?",
+    "options": [
+      "Request event",
+      "Server event",
+      "Incoming",
+      "Handler"
+    ],
+    "correctOptions": [
+      "Request event"
+    ],
+    "time": 60,
+    "details": "request fires."
+  },
+  {
+    "question": "What is https in Node?",
+    "options": [
+      "HTTPS",
+      "Secure HTTP",
+      "TLS HTTP",
+      "Encrypted"
+    ],
+    "correctOptions": [
+      "HTTPS"
+    ],
+    "time": 50,
+    "details": "https is secure HTTP."
+  },
+  {
+    "question": "What is https.createServer?",
+    "options": [
+      "TLS server",
+      "HTTPS server",
+      "Secure server",
+      "TLS"
+    ],
+    "correctOptions": [
+      "TLS server"
+    ],
+    "time": 60,
+    "details": "createServer secure."
+  },
+  {
+    "question": "What is https.request?",
+    "options": [
+      "HTTPS request",
+      "TLS request",
+      "Secure request",
+      "Request"
+    ],
+    "correctOptions": [
+      "HTTPS request"
+    ],
+    "time": 60,
+    "details": "request secure."
+  },
+  {
+    "question": "What is net module?",
+    "options": [
+      "TCP",
+      "TCP sockets",
+      "Network",
+      "Sockets"
+    ],
+    "correctOptions": [
+      "TCP"
+    ],
+    "time": 55,
+    "details": "Network sockets."
+  },
+  {
+    "question": "What is net.createServer?",
+    "options": [
+      "Create server",
+      "TCP server",
+      "Server",
+      "Listen"
+    ],
+    "correctOptions": [
+      "TCP server"
+    ],
+    "time": 60,
+    "details": "TCP server."
+  },
+  {
+    "question": "What is net.createConnection?",
+    "options": [
+      "Create client",
+      "Connect",
+      "Client connect",
+      "Connection"
+    ],
+    "correctOptions": [
+      "Create client"
+    ],
+    "time": 65,
+    "details": "Connects."
+  },
+  {
+    "question": "What is dgram module?",
+    "options": [
+      "UDP",
+      "Datagrams",
+      "UDP sockets",
+      "UDP"
+    ],
+    "correctOptions": [
+      "UDP"
+    ],
+    "time": 55,
+    "details": "UDP sockets."
+  },
+  {
+    "question": "What is dgram.createSocket?",
+    "options": [
+      "Create UDP",
+      "UDP",
+      "Socket",
+      "Create socket"
+    ],
+    "correctOptions": [
+      "UDP"
+    ],
+    "time": 60,
+    "details": "Creates UDP."
+  },
+  {
+    "question": "What is socket.bind?",
+    "options": [
+      "Bind port",
+      "Listen",
+      "Attach",
+      "Start"
+    ],
+    "correctOptions": [
+      "Bind port"
+    ],
+    "time": 60,
+    "details": "bind listens."
+  },
+  {
+    "question": "What is socket.send?",
+    "options": [
+      "Send udp",
+      "Write",
+      "Write to",
+      "Packet"
+    ],
+    "correctOptions": [
+      "Send udp"
+    ],
+    "time": 60,
+    "details": "send writes."
+  },
+  {
+    "question": "What is events module?",
+    "options": [
+      "Events",
+      "Event emitter",
+      "Pub or sub",
+      "Event handler"
+    ],
+    "correctOptions": [
+      "Event emitter"
+    ],
+    "time": 50,
+    "details": "Events class."
+  },
+  {
+    "question": "What is EventEmitter?",
+    "options": [
+      "Events core",
+      "Emitter class",
+      "Listener",
+      "Event system"
+    ],
+    "correctOptions": [
+      "Events core"
+    ],
+    "time": 55,
+    "details": "EventEmitter is base."
+  },
+  {
+    "question": "What is emitter.on?",
+    "options": [
+      "Listen",
+      "Register",
+      "Subscribe",
+      "Register"
+    ],
+    "correctOptions": [
+      "Register"
+    ],
+    "time": 50,
+    "details": "on registers."
+  },
+  {
+    "question": "What is emitter.once?",
+    "options": [
+      "Listen once",
+      "One-time",
+      "Single",
+      "Single"
+    ],
+    "correctOptions": [
+      "Listen once"
+    ],
+    "time": 55,
+    "details": "once runs once."
+  },
+  {
+    "question": "What is emitter.emit?",
+    "options": [
+      "Fire event",
+      "Trigger",
+      "Dispatch",
+      "Execute"
+    ],
+    "correctOptions": [
+      "Fire event"
+    ],
+    "time": 50,
+    "details": "emit calls."
+  },
+  {
+    "question": "What is emitter.off?",
+    "options": [
+      "Remove listener",
+      "Unsubscribe",
+      "Remove",
+      "Unregister"
+    ],
+    "correctOptions": [
+      "Remove"
+    ],
+    "time": 55,
+    "details": "off removes."
+  },
+  {
+    "question": "What is emitter.listeners?",
+    "options": [
+      "Get listeners",
+      "Array of",
+      "Listener list",
+      "Functions"
+    ],
+    "correctOptions": [
+      "Get listeners"
+    ],
+    "time": 55,
+    "details": "listeners returns array."
+  },
+  {
+    "question": "What is emitter.listenerCount?",
+    "options": [
+      "Count listeners",
+      "Number",
+      "Count",
+      "Int"
+    ],
+    "correctOptions": [
+      "Count listeners"
+    ],
+    "time": 60,
+    "details": "listenerCount returns count."
+  },
+  {
+    "question": "What is Node globals?",
+    "options": [
+      "Global object",
+      "Top-level",
+      "Namespace",
+      "Root"
+    ],
+    "correctOptions": [
+      "Global object"
+    ],
+    "time": 60,
+    "details": "global scope in Node."
+  },
+  {
+    "question": "What is globalThis?",
+    "options": [
+      "Global scope",
+      "Standard",
+      "Unified",
+      "Global"
+    ],
+    "correctOptions": [
+      "Global scope"
+    ],
+    "time": 60,
+    "details": "globalThis standard."
+  },
+  {
+    "question": "What is require global?",
+    "options": [
+      "File access",
+      "CommonJS",
+      "Module loader",
+      "Function"
+    ],
+    "correctOptions": [
+      "File access"
+    ],
+    "time": 50,
+    "details": "require is global."
+  },
+  {
+    "question": "What is __dirname?",
+    "options": [
+      "Current directory",
+      "Directory path",
+      "Folder",
+      "Directory"
+    ],
+    "correctOptions": [
+      "Directory"
+    ],
+    "time": 45,
+    "details": "__dirname is directory."
+  },
+  {
+    "question": "What is __filename?",
+    "options": [
+      "Current file",
+      "File path",
+      "File",
+      "Path"
+    ],
+    "correctOptions": [
+      "Current file"
+    ],
+    "time": 45,
+    "details": "__filename is file."
+  },
+  {
+    "question": "What is console.log?",
+    "options": [
+      "Log",
+      "Print",
+      "Output",
+      "Show"
+    ],
+    "correctOptions": [
+      "Print"
+    ],
+    "time": 40,
+    "details": "console.log prints."
+  },
+  {
+    "question": "What is console.error?",
+    "options": [
+      "Error log",
+      "Print to stderr",
+      "Output",
+      "Error output"
+    ],
+    "correctOptions": [
+      "Error log"
+    ],
+    "time": 45,
+    "details": "console.error prints to stderr."
+  },
+  {
+    "question": "What is console.warn?",
+    "options": [
+      "Warning",
+      "Print warning",
+      "Warning log",
+      "Warning output"
+    ],
+    "correctOptions": [
+      "Warning"
+    ],
+    "time": 45,
+    "details": "console.warn prints warning."
+  },
+  {
+    "question": "What is console.time?",
+    "options": [
+      "Time code",
+      "Timer",
+      "Measure time",
+      "Measure"
+    ],
+    "correctOptions": [
+      "Time code"
+    ],
+    "time": 50,
+    "details": "timer measures execution."
+  },
+  {
+    "question": "What is console.timeEnd?",
+    "options": [
+      "End timer",
+      "Stop timer",
+      "Measure",
+      "Timer end"
+    ],
+    "correctOptions": [
+      "End timer"
+    ],
+    "time": 50,
+    "details": "timeEnd outputs elapsed."
+  },
+  {
+    "question": "What is console.dir?",
+    "options": [
+      "Inspect",
+      "Object",
+      "Print",
+      "Show"
+    ],
+    "correctOptions": [
+      "Inspect"
+    ],
+    "time": 50,
+    "details": "dir inspects."
+  },
+  {
+    "question": "What is console.trace?",
+    "options": [
+      "Stack trace",
+      "Trace",
+      "Print trace",
+      "Log"
+    ],
+    "correctOptions": [
+      "Stack trace"
+    ],
+    "time": 50,
+    "details": "trace outputs."
+  },
+  {
+    "question": "What is assert module?",
+    "options": [
+      "Assertion library",
+      "Testing assert",
+      "Verify",
+      "Check"
+    ],
+    "correctOptions": [
+      "Assertion library"
+    ],
+    "time": 55,
+    "details": "assert is assertion."
+  },
+  {
+    "question": "What is assert.equal?",
+    "options": [
+      "Check equal",
+      "Equal",
+      "Compare",
+      "Match"
+    ],
+    "correctOptions": [
+      "Check equal"
+    ],
+    "time": 50,
+    "details": "equal checks loose equality."
+  },
+  {
+    "question": "What is assert.strictEqual?",
+    "options": [
+      "Strict equal",
+      "Compare",
+      "Equal",
+      "Match"
+    ],
+    "correctOptions": [
+      "Strict equal"
+    ],
+    "time": 50,
+    "details": "strictEqual checks strict equality."
+  },
+  {
+    "question": "What is assert.deepEqual?",
+    "options": [
+      "Deep equal",
+      "Compare objects",
+      "Equal",
+      "Match"
+    ],
+    "correctOptions": [
+      "Deep equal"
+    ],
+    "time": 55,
+    "details": "deepEqual compares deeply."
+  },
+  {
+    "question": "What is assert.ok?",
+    "options": [
+      "Check truthy",
+      "Truthy",
+      "Verify",
+      "Boolean"
+    ],
+    "correctOptions": [
+      "Check truthy"
+    ],
+    "time": 45,
+    "details": "ok checks truthiness."
+  },
+  {
+    "question": "What is assert.throws?",
+    "options": [
+      "Expect throw",
+      "Throws",
+      "Error",
+      "Test"
+    ],
+    "correctOptions": [
+      "Test"
+    ],
+    "time": 50,
+    "details": "throws expects error."
+  },
+  {
+    "question": "What is assert.doesNotThrow?",
+    "options": [
+      "Assert no throw",
+      "No error",
+      "Verify",
+      "Test"
+    ],
+    "correctOptions": [
+      "Test"
+    ],
+    "time": 55,
+    "details": "doesNotThrow checks no error."
+  },
+  {
+    "question": "What is setTimeout?",
+    "options": [
+      "Delay",
+      "Timer",
+      "Schedule",
+      "Timeout"
+    ],
+    "correctOptions": [
+      "Schedule"
+    ],
+    "time": 45,
+    "details": "setTimeout schedules."
+  },
+  {
+    "question": "What is setInterval?",
+    "options": [
+      "Interval",
+      "Repeated timer",
+      "Repeat",
+      "Loop"
+    ],
+    "correctOptions": [
+      "Interval"
+    ],
+    "time": 45,
+    "details": "setInterval repeats."
+  },
+  {
+    "question": "What is setImmediate?",
+    "options": [
+      "Immediate",
+      "Next loop",
+      "Async",
+      "Callback"
+    ],
+    "correctOptions": [
+      "Immediate"
+    ],
+    "time": 50,
+    "details": "setImmediate runs soon."
+  },
+  {
+    "question": "What is clearTimeout?",
+    "options": [
+      "Clear timeout",
+      "Cancel",
+      "Cancel timer",
+      "Remove"
+    ],
+    "correctOptions": [
+      "Cancel"
+    ],
+    "time": 45,
+    "details": "clearTimeout cancels."
+  },
+  {
+    "question": "What is clearInterval?",
+    "options": [
+      "Clear interval",
+      "Stop interval",
+      "Cancel",
+      "Remove"
+    ],
+    "correctOptions": [
+      "Cancel"
+    ],
+    "time": 45,
+    "details": "clearInterval cancels."
+  },
+  {
+    "question": "What is v8 module?",
+    "options": [
+      "V8 API",
+      "V8 Engine",
+      "Memory",
+      "Caches"
+    ],
+    "correctOptions": [
+      "V8 API"
+    ],
+    "time": 50,
+    "details": "V8 module specific."
+  },
+  {
+    "question": "What is cluster module?",
+    "options": [
+      "Cluster workers",
+      "CPU",
+      "Scaling",
+      "Multi-process"
+    ],
+    "correctOptions": [
+      "Cluster workers"
+    ],
+    "time": 50,
+    "details": "cluster for scaling."
+  },
+  {
+    "question": "What is JSON.parse?",
+    "options": [
+      "Parse JSON string",
+      "Returns object",
+      "String to data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Parse JSON string",
+      "Returns object",
+      "String to data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON.parse? explanation."
+  },
+  {
+    "question": "What is crypto module?",
+    "options": [
+      "Encryption",
+      "Security",
+      "Hash",
+      "Cipher"
+    ],
+    "correctOptions": [
+      "Encryption"
+    ],
+    "time": 40,
+    "details": "crypto for encryption."
+  },
+  {
+    "question": "What is tls module?",
+    "options": [
+      "TLS and SSL",
+      "Secure transport",
+      "HTTPS",
+      "Encryption"
+    ],
+    "correctOptions": [
+      "TLS and SSL"
+    ],
+    "time": 45,
+    "details": "tls for secure transport."
+  },
+  {
+    "question": "What is Express? (Level 7 #163)",
+    "options": [
+      "Framework",
+      "Middleware",
+      "Routing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Framework",
+      "Middleware",
+      "Routing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Express? explanation."
+  },
+  {
+    "question": "What is npm? (Level 7 #164)",
+    "options": [
+      "Package manager",
+      "Registry",
+      "Scripts",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Package manager",
+      "Registry",
+      "Scripts",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is npm? explanation."
+  },
+  {
+    "question": "What is middleware? (Level 7 #165)",
+    "options": [
+      "Request",
+      "Response",
+      "Next",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request",
+      "Response",
+      "Next",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is callback? (Level 7 #166)",
+    "options": [
+      "Asynchronous",
+      "Error-first",
+      "Node.js pattern",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Asynchronous",
+      "Error-first",
+      "Node.js pattern",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is callback? explanation."
+  },
+  {
+    "question": "What is streams? (Level 7 #167)",
+    "options": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is streams? explanation."
+  },
+  {
+    "question": "What is Buffer? (Level 7 #168)",
+    "options": [
+      "Binary data",
+      "Encoding",
+      "Memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Binary data",
+      "Encoding",
+      "Memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Buffer? explanation."
+  },
+  {
+    "question": "What is require? (Level 7 #170)",
+    "options": [
+      "Modules",
+      "Caching",
+      "Resolution",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Modules",
+      "Caching",
+      "Resolution",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is require? explanation."
+  },
+  {
+    "question": "What is process? (Level 7 #171)",
+    "options": [
+      "Env",
+      "Argv",
+      "Exit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Env",
+      "Argv",
+      "Exit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is process? explanation."
+  },
+  {
+    "question": "What is module? (Level 7 #172)",
+    "options": [
+      "Export",
+      "Import",
+      "Scope",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Export",
+      "Import",
+      "Scope",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is module? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  }
 ]

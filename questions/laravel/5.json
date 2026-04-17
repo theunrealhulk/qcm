@@ -1078,76 +1078,6 @@
     "details": "@cache caches Blade template fragments."
   },
   {
-    "question": "What is Laravel Mix?",
-    "options": [
-      "Build tool for assets",
-      "Database tool",
-      "Testing tool",
-      "Routing tool"
-    ],
-    "correctOptions": [
-      "Build tool for assets"
-    ],
-    "time": 25,
-    "details": "Laravel Mix compiles and bundles assets."
-  },
-  {
-    "question": "What is webpack?",
-    "options": [
-      "Module bundler",
-      "Database",
-      "Server",
-      "Framework"
-    ],
-    "correctOptions": [
-      "Module bundler"
-    ],
-    "time": 25,
-    "details": "Webpack bundles JavaScript modules."
-  },
-  {
-    "question": "What file configures Mix?",
-    "options": [
-      "webpack.mix.js",
-      "mix.config.js",
-      "webpack.config.js",
-      "laravel.mix.js"
-    ],
-    "correctOptions": [
-      "webpack.mix.js"
-    ],
-    "time": 25,
-    "details": "webpack.mix.js is the Mix configuration file."
-  },
-  {
-    "question": "How do you compile JS with Mix?",
-    "options": [
-      "mix.js()",
-      "mix.compile()",
-      "mix.javascript()",
-      "mix.bundle()"
-    ],
-    "correctOptions": [
-      "mix.js()"
-    ],
-    "time": 30,
-    "details": "mix.js() compiles JavaScript files."
-  },
-  {
-    "question": "How do you compile CSS with Mix?",
-    "options": [
-      "mix.css()",
-      "mix.style()",
-      "mix.sass()",
-      "mix.less()"
-    ],
-    "correctOptions": [
-      "mix.css()"
-    ],
-    "time": 30,
-    "details": "mix.css() processes CSS files."
-  },
-  {
     "question": "What is npm run dev command?",
     "options": [
       "Compile assets for development",
@@ -1162,255 +1092,513 @@
     "details": "npm run dev compiles for development."
   },
   {
-    "question": "What is npm run prod command?",
+    "question": "What is Eloquent? (Level 5 #102)",
     "options": [
-      "Compile for production",
-      "Compile for dev",
-      "Watch files",
-      "Clean files"
+      "ORM",
+      "Model",
+      "Relationships",
+      "All of the above"
     ],
     "correctOptions": [
-      "Compile for production"
-    ],
-    "time": 30,
-    "details": "npm run prod compiles optimized assets."
-  },
-  {
-    "question": "What is npm run watch?",
-    "options": [
-      "Auto-recompile on changes",
-      "Single compile",
-      "Production build",
-      "Clean build"
-    ],
-    "correctOptions": [
-      "Auto-recompile on changes"
-    ],
-    "time": 30,
-    "details": "watch auto-recompiles when files change."
-  },
-  {
-    "question": "How do you enable source maps?",
-    "options": [
-      "mix.sourceMaps()",
-      "mix.maps()",
-      "mix.debug()",
-      "mix.sourcemaps()"
-    ],
-    "correctOptions": [
-      "mix.sourceMaps()"
+      "ORM",
+      "Model",
+      "Relationships",
+      "All of the above"
     ],
     "time": 35,
-    "details": "sourceMaps() enables debugging source maps."
+    "details": "What is Eloquent? explanation."
   },
   {
-    "question": "What does mix.browserSync() do?",
+    "question": "What is Blade? (Level 5 #103)",
     "options": [
-      "Live reload in browser",
-      "Sync files",
-      "Watch files",
-      "Cache files"
+      "Template",
+      "Directives",
+      "Components",
+      "All of the above"
     ],
     "correctOptions": [
-      "Live reload in browser"
+      "Template",
+      "Directives",
+      "Components",
+      "All of the above"
     ],
     "time": 35,
-    "details": "browserSync enables live browser reloading."
+    "details": "What is Blade? explanation."
   },
   {
-    "question": "What is versioning in Mix?",
+    "question": "What is migration? (Level 5 #104)",
     "options": [
-      "Cache-bust file names",
+      "Schema",
       "Version control",
-      "File versioning",
-      "Asset versioning"
+      "Rollback",
+      "All of the above"
     ],
     "correctOptions": [
-      "Cache-bust file names"
+      "Schema",
+      "Version control",
+      "Rollback",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Versioning appends hashes for cache busting."
+    "details": "What is migration? explanation."
   },
   {
-    "question": "How do you enable versioning?",
+    "question": "What is seeder? (Level 5 #105)",
     "options": [
-      "mix.version()",
-      "mix.cache()",
-      "mix.hash()",
-      "mix.bust()"
-    ],
-    "correctOptions": [
-      "mix.version()"
-    ],
-    "time": 30,
-    "details": "version() adds content hashes to filenames."
-  },
-  {
-    "question": "What is Vue.js?",
-    "options": [
-      "JavaScript framework",
-      "CSS framework",
+      "Test data",
+      "Factory",
       "Database",
-      "Server"
+      "All of the above"
     ],
     "correctOptions": [
-      "JavaScript framework"
-    ],
-    "time": 25,
-    "details": "Vue.js is a progressive JavaScript framework."
-  },
-  {
-    "question": "What is React?",
-    "options": [
-      "JavaScript library",
-      "CSS library",
+      "Test data",
+      "Factory",
       "Database",
-      "Server"
-    ],
-    "correctOptions": [
-      "JavaScript library"
-    ],
-    "time": 25,
-    "details": "React is a JavaScript library for UI."
-  },
-  {
-    "question": "What is Inertia.js?",
-    "options": [
-      "SPA in Laravel",
-      "Database tool",
-      "Testing tool",
-      "API tool"
-    ],
-    "correctOptions": [
-      "SPA in Laravel"
+      "All of the above"
     ],
     "time": 35,
-    "details": "Inertia enables SPA building in Laravel."
+    "details": "What is seeder? explanation."
   },
   {
-    "question": "What is @vite directive?",
+    "question": "What is middleware? (Level 5 #106)",
     "options": [
-      "Vite integration tag",
-      "Asset tag",
-      "Style tag",
-      "Script tag"
+      "Request",
+      "Response",
+      "Filter",
+      "All of the above"
     ],
     "correctOptions": [
-      "Vite integration tag"
+      "Request",
+      "Response",
+      "Filter",
+      "All of the above"
     ],
     "time": 35,
-    "details": "@vite integrates Vite in Blade templates."
+    "details": "What is middleware? explanation."
   },
   {
-    "question": "What is Vite?",
+    "question": "What is route? (Level 5 #107)",
     "options": [
-      "Build tool",
-      "Database",
-      "Testing tool",
-      "Server"
+      "URL",
+      "Controller",
+      "Method",
+      "All of the above"
     ],
     "correctOptions": [
-      "Build tool"
-    ],
-    "time": 30,
-    "details": "Vite is Laravel's new asset bundler."
-  },
-  {
-    "question": "What is Tailwind CSS?",
-    "options": [
-      "Utility-first CSS",
-      "Component library",
-      "JavaScript",
-      "Server"
-    ],
-    "correctOptions": [
-      "Utility-first CSS"
-    ],
-    "time": 30,
-    "details": "Tailwind is a utility-first CSS framework."
-  },
-  {
-    "question": "What is Sass?",
-    "options": [
-      "CSS preprocessor",
-      "JavaScript",
-      "Database",
-      "HTML"
-    ],
-    "correctOptions": [
-      "CSS preprocessor"
-    ],
-    "time": 30,
-    "details": "Sass extends CSS with variables and nesting."
-  },
-  {
-    "question": "What is PostCSS?",
-    "options": [
-      "CSS transformation tool",
-      "JavaScript tool",
-      "Database",
-      "Server"
-    ],
-    "correctOptions": [
-      "CSS transformation tool"
+      "URL",
+      "Controller",
+      "Method",
+      "All of the above"
     ],
     "time": 35,
-    "details": "PostCSS transforms CSS with JavaScript plugins."
+    "details": "What is route? explanation."
   },
   {
-    "question": "What is Autoprefixer?",
+    "question": "What is artisan? (Level 5 #108)",
     "options": [
-      "CSS vendor prefixer",
-      "JavaScript bundler",
-      "HTML minifier",
-      "Asset loader"
+      "CLI",
+      "Commands",
+      "Scaffolding",
+      "All of the above"
     ],
     "correctOptions": [
-      "CSS vendor prefixer"
+      "CLI",
+      "Commands",
+      "Scaffolding",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Autoprefixer adds vendor prefixes automatically."
+    "details": "What is artisan? explanation."
   },
   {
-    "question": "What is npm?",
+    "question": "What is service provider? (Level 5 #109)",
     "options": [
-      "Node package manager",
-      "PHP manager",
-      "Database manager",
-      "Package manager"
+      "DI",
+      "Register",
+      "Boot",
+      "All of the above"
     ],
     "correctOptions": [
-      "Node package manager"
+      "DI",
+      "Register",
+      "Boot",
+      "All of the above"
     ],
-    "time": 25,
-    "details": "npm manages JavaScript packages."
+    "time": 35,
+    "details": "What is service provider? explanation."
   },
   {
-    "question": "What is package.json?",
+    "question": "What is facades? (Level 5 #110)",
     "options": [
-      "Node dependencies config",
-      "PHP config",
-      "Database config",
-      "Route config"
+      "Static access",
+      "Service",
+      "Proxy",
+      "All of the above"
     ],
     "correctOptions": [
-      "Node dependencies config"
+      "Static access",
+      "Service",
+      "Proxy",
+      "All of the above"
     ],
-    "time": 25,
-    "details": "package.json lists npm dependencies."
+    "time": 35,
+    "details": "What is facades? explanation."
   },
   {
-    "question": "What is npm install?",
+    "question": "What is validation? (Level 5 #111)",
     "options": [
-      "Install dependencies",
-      "Uninstall dependencies",
-      "Update dependencies",
-      "List dependencies"
+      "Rules",
+      "Messages",
+      "Custom",
+      "All of the above"
     ],
     "correctOptions": [
-      "Install dependencies"
+      "Rules",
+      "Messages",
+      "Custom",
+      "All of the above"
     ],
-    "time": 25,
-    "details": "npm install installs all dependencies."
+    "time": 35,
+    "details": "What is validation? explanation."
+  },
+  {
+    "question": "What is Array.slice?",
+    "options": [
+      "Extract portion",
+      "Non-mutating",
+      "Returns new array",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Extract portion",
+      "Non-mutating",
+      "Returns new array",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Array.slice? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
   }
 ]

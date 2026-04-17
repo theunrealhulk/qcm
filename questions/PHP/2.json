@@ -1,102 +1,1921 @@
 [
-  {"question": "What is the difference between single quotes and double quotes in PHP?", "options": ["Variable parsing", "Escape sequences", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Double quotes parse variables and escape sequences; single quotes treat everything as literal."},
-  {"question": "What is the purpose of the 'echo' statement in PHP?", "options": ["Output", "Print", "Display", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "echo outputs one or more strings to the browser."},
-  {"question": "What is the difference between 'echo' and 'print' in PHP?", "options": ["Return value", "Performance", "Usage", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "echo is slightly faster and doesn't return a value; print returns 1."},
-  {"question": "What is a variable in PHP?", "options": ["Data container", "Dollar sign", "Dynamic type", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Variables in PHP start with $ and can hold any type of data."},
-  {"question": "What is the purpose of 'isset()' in PHP?", "options": ["Check variable", "Existence", "Null check", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "isset() checks if a variable is set and not null."},
-  {"question": "What is 'empty()' in PHP?", "options": ["Check empty", "Null/zero/empty string", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "empty() returns true if variable is empty or doesn't exist."},
-  {"question": "What is an array in PHP?", "options": ["Collection", "Ordered map", "Multiple values", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "PHP arrays are ordered maps that can hold multiple values."},
-  {"question": "What is the difference between indexed and associative arrays?", "options": ["Key type", "Index vs string key", "Structure", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Indexed arrays use numeric keys; associative arrays use string keys."},
-  {"question": "What is the purpose of 'foreach' in PHP?", "options": ["Array iteration", "Loop", "Traversal", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "foreach iterates over arrays and objects."},
-  {"question": "What is a function in PHP?", "options": ["Reusable code", "Block of code", "Method", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Functions are reusable blocks of code."},
-  {"question": "What is the purpose of 'return' in functions?", "options": ["Return value", "Output", "Function result", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "return returns a value from a function."},
-  {"question": "What is the difference between 'include' and 'require'?", "options": ["Error handling", "File loading", "Fatal error", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "include generates warning on failure; require generates fatal error."},
-  {"question": "What is 'include_once' vs 'include'?", "options": ["Once only", "Multiple includes", "Prevention", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "include_once includes file only once to prevent duplicates."},
-  {"question": "What is a class in PHP?", "options": ["Blueprint", "Template", "Object definition", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Classes define blueprints for objects."},
-  {"question": "What is an object in PHP?", "options": ["Class instance", "Runtime entity", "Reference", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Objects are instances of classes."},
-  {"question": "What is a constructor in PHP?", "options": ["Init method", "__construct", "Object setup", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "__construct initializes new objects."},
-  {"question": "What is a destructor in PHP?", "options": ["Cleanup", "__destruct", "Object cleanup", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "__destruct is called when object is destroyed."},
-  {"question": "What is 'public' visibility in PHP?", "options": ["Accessible everywhere", "Class/outside", "Visibility", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Public members are accessible from anywhere."},
-  {"question": "What is 'private' visibility in PHP?", "options": ["Class only", "Restricted", "Visibility", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Private members are accessible only within the class."},
-  {"question": "What is 'protected' visibility in PHP?", "options": ["Inherited classes", "Extended", "Visibility", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Protected members are accessible in class and subclasses."},
-  {"question": "What is inheritance in PHP?", "options": ["Class relationship", "Extends", "Reuse", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Inheritance allows classes to inherit from other classes."},
-  {"question": "What is the purpose of 'extends' keyword?", "options": ["Inherit", "Class relationship", "Parent", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "extends defines parent class for inheritance."},
-  {"question": "What is method overriding in PHP?", "options": ["Replace method", "Inheritance", "Redefinition", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Override replaces parent class method in child class."},
-  {"question": "What is the purpose of 'parent' keyword?", "options": ["Parent class", "Scope resolution", "Reference", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "parent:: refers to parent class members."},
-  {"question": "What is an interface in PHP?", "options": ["Contract", "Blueprint", "Abstraction", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Interfaces define contracts that classes must implement."},
-  {"question": "What is 'implements' in PHP?", "options": ["Interface", "Implementation", "Contract", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "implements defines interface implementation."},
-  {"question": "What is a trait in PHP?", "options": ["Code reuse", "Horizontal reuse", "Multiple inheritance", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Traits enable code reuse without inheritance."},
-  {"question": "What is 'use' for traits?", "options": ["Include trait", "Code reuse", "Trait", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "use includes a trait in a class."},
-  {"question": "What is static keyword in PHP?", "options": ["Class-level", "Shared", "No instance", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Static members belong to class, not instances."},
-  {"question": "What is a constant in PHP?", "options": ["Fixed value", "Define constant", "Immutable", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Constants hold fixed values that don't change."},
-  {"question": "What is the purpose of 'define()'?", "options": ["Define constant", "Global constant", "Constant", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "define() creates constants."},
-  {"question": "What is 'const' vs 'define()'?", "options": ["Compile vs runtime", "Class vs global", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "const is evaluated at compile time; define() at runtime."},
-  {"question": "What is a magic constant in PHP?", "options": ["Pre-defined", "Dynamic", "Special", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Magic constants like __DIR__ and __FILE__ provide special values."},
-  {"question": "What is '$_GET' in PHP?", "options": ["URL parameters", "Form data", "Request", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "$_GET contains URL query parameters."},
-  {"question": "What is '$_POST' in PHP?", "options": ["Form data", "Request body", "Data", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "$_POST contains form data sent via POST."},
-  {"question": "What is '$_SESSION' in PHP?", "options": ["Session data", "User state", "Server-side", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "$_SESSION stores session data across requests."},
-  {"question": "What is '$_COOKIE' in PHP?", "options": ["Cookie data", "Client storage", "HTTP", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "$_COOKIE contains cookie values from client."},
-  {"question": "What is '$_SERVER' in PHP?", "options": ["Server info", "Environment", "Headers", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "$_SERVER contains server and request information."},
-  {"question": "What is '$_FILES' in PHP?", "options": ["Uploaded files", "File data", "Multipart", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "$_FILES contains uploaded file information."},
-  {"question": "What is '$_REQUEST' in PHP?", "options": ["All input", "Combined", "Request", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "$_REQUEST combines GET, POST, and COOKIE data."},
-  {"question": "What is form handling in PHP?", "options": ["Process input", "Validation", "Submission", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Form handling processes user input from forms."},
-  {"question": "What is SQL injection?", "options": ["SQL attack", "Injection", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "SQL injection injects malicious SQL code through input."},
-  {"question": "How to prevent SQL injection in PHP?", "options": ["Prepared statements", "Escape", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Prepared statements prevent SQL injection."},
-  {"question": "What is XSS in PHP?", "options": ["Cross-site scripting", "Script injection", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "XSS injects malicious scripts into pages."},
-  {"question": "How to prevent XSS in PHP?", "options": ["Escape output", "htmlspecialchars", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "htmlspecialchars escapes HTML output."},
-  {"question": "What is CSRF in PHP?", "options": ["Cross-site request forgery", "Attack", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "CSRF tricks users into submitting unintended requests."},
-  {"question": "What is MySQL?", "options": ["Database", "RDBMS", "SQL", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "MySQL is a popular relational database."},
-  {"question": "What is the purpose of mysqli?", "options": ["MySQL improved", "Extension", "Database", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "mysqli provides MySQL database functions."},
-  {"question": "What is PDO in PHP?", "options": ["PHP Data Objects", "Database abstraction", "Interface", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "PDO provides database-independent interface."},
-  {"question": "What is a prepared statement?", "options": ["Parameterized query", "SQL template", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Prepared statements separate SQL from data."},
-  {"question": "What is the difference between mysqli and PDO?", "options": ["Abstraction level", "Database support", "API", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "mysqli is MySQL-specific; PDO is database-agnostic."},
-  {"question": "What is object-oriented MySQLi?", "options": ["OOP style", "mysqli", "Classes", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Object-oriented mysqli uses classes and methods."},
-  {"question": "What is Composer?", "options": ["Package manager", "Dependencies", "PHP", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Composer manages PHP project dependencies."},
-  {"question": "What is the purpose of 'composer require'?", "options": ["Add package", "Install", "Dependency", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "composer require adds packages to project."},
-  {"question": "What is composer.json?", "options": ["Project config", "Dependencies", "Manifest", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "composer.json defines project dependencies."},
-  {"question": "What is autoloading in PHP?", "options": ["Auto load classes", "No require", "Optimization", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Autoloading automatically loads class files."},
-  {"question": "What is PSR-4 autoloading?", "options": ["Standard", "Namespace mapping", "Autoload", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "PSR-4 maps namespaces to file paths."},
-  {"question": "What is Laravel?", "options": ["Framework", "PHP framework", "MVC", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Laravel is a popular PHP framework."},
-  {"question": "What is the purpose of Artisan in Laravel?", "options": ["CLI tool", "Commands", "Tooling", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Artisan is Laravel's command-line interface."},
-  {"question": "What is Eloquent in Laravel?", "options": ["ORM", "Database", "Models", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Eloquent is Laravel's ORM system."},
-  {"question": "What is a Laravel migration?", "options": ["Database version", "Schema", "Migrations", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Migrations manage database schema changes."},
-  {"question": "What is a Laravel seeder?", "options": ["Test data", "Database", "Seed", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Seeders populate database with test data."},
-  {"question": "What is a Laravel model?", "options": ["Data model", "Eloquent", "Database", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Models represent database tables in Eloquent."},
-  {"question": "What is a Laravel controller?", "options": ["Request handler", "Business logic", "MVC", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Controllers handle HTTP requests."},
-  {"question": "What is a Laravel route?", "options": ["URL mapping", "Endpoint", "Routing", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Routes map URLs to controller actions."},
-  {"question": "What is Blade in Laravel?", "options": ["Templating", "Views", "Engine", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Blade is Laravel's templating engine."},
-  {"question": "What is the purpose of 'php artisan serve'?", "options": ["Start server", "Development", "CLI", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "artisan serve starts development server."},
-  {"question": "What is Laravel's routing middleware?", "options": ["Request filtering", "Pipeline", "Preprocessing", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Middleware filters HTTP requests."},
-  {"question": "What is a Laravel service provider?", "options": ["DI container", "Services", "Registration", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Service providers register services in container."},
-  {"question": "What is dependency injection in Laravel?", "options": ["DI", "IoC", "Container", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Laravel container manages dependencies."},
-  {"question": "What is Laravel's validation?", "options": ["Data validation", "Rules", "Request", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Laravel provides powerful validation."},
-  {"question": "What is 'required' validation rule?", "options": ["Required field", "Not empty", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "required validates field is not empty."},
-  {"question": "What is 'email' validation rule?", "options": ["Email format", "Validation", "Format", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "email validates email format."},
-  {"question": "What is 'min' and 'max' validation?", "options": ["Length/number", "Bounds", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "min/max validate length or numeric bounds."},
-  {"question": "What is 'unique' validation rule?", "options": ["Database uniqueness", "Validation", "Duplicate", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "unique validates value doesn't exist in database."},
-  {"question": "What is 'confirmed' validation rule?", "options": ["Password match", "Confirmation", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "confirmed validates field matches confirmation field."},
-  {"question": "What is a Laravel facade?", "options": ["Static access", "Service", "Wrapper", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Facades provide static access to services."},
-  {"question": "What is 'route()' helper in Laravel?", "options": ["URL generation", "Named routes", "Link", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "route() generates URL for named routes."},
-  {"question": "What is 'redirect()' in Laravel?", "options": ["Redirect response", "HTTP redirect", "Route", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "redirect() creates redirect response."},
-  {"question": "What is 'back()' in Laravel?", "options": ["Back redirect", "Previous URL", "Redirect", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "back() redirects to previous URL."},
-  {"question": "What is 'view()' in Laravel?", "options": ["View response", "Blade", "Response", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "view() returns view response."},
-  {"question": "What is 'with()' in Laravel responses?", "options": ["Flash data", "Session", "Redirect", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "with() adds flash data to session."},
-  {"question": "What is the purpose of '@yield' in Blade?", "options": ["Section placeholder", "Content", "Template", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "@yield defines section placeholder."},
-  {"question": "What is '@section' in Blade?", "options": ["Define section", "Content", "Block", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "@section defines content for a section."},
-  {"question": "What is '@extends' in Blade?", "options": ["Parent template", "Layout", "Inheritance", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "@extends specifies parent layout."},
-  {"question": "What is '@include' in Blade?", "options": ["Include partial", "Reuse", "View", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "@include includes another view."},
-  {"question": "What is '@foreach' in Blade?", "options": ["Loop", "Iteration", "Array", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "@foreach iterates over arrays."},
-  {"question": "What is '@if' in Blade?", "options": ["Conditional", "Logic", "Statement", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "@if implements conditional logic."},
-  {"question": "What is Laravel's Auth scaffold?", "options": ["Authentication", "Scaffold", "Login/Register", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Auth scaffold generates login/register/reset."},
-  {"question": "What is Laravel Breeze?", "options": ["Auth starter", "Scaffold", "Jetstream", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Breeze provides minimal auth scaffolding."},
-  {"question": "What is Laravel Mix?", "options": ["Build tool", "Assets", "Webpack", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Mix compiles and bundles assets."},
-  {"question": "What is 'npm run dev' in Laravel?", "options": ["Development build", "Assets", "Compile", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "npm run dev compiles assets for development."},
-  {"question": "What is Laravel's tinker?", "options": ["REPL", "Interactive", "Console", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Tinker is interactive REPL for Laravel."},
-  {"question": "What is PHP's match expression?", "options": ["Switch replacement", "Expression", "Value matching", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Match expressions return values based on conditions."},
-  {"question": "What is named arguments in PHP?", "options": ["Named parameters", "Skip positional", "Arguments", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Named arguments allow passing parameters by name."},
-  {"question": "What is attributes in PHP?", "options": ["Metadata", "Annotations", "Decorators", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Attributes provide metadata for classes and methods."},
-  {"question": "What is constructor promotion in PHP?", "options": ["Auto property", "Shorthand", "Property definition", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Constructor promotion simplifies property declaration."},
-  {"question": "What is nullsafe operator in PHP?", "options": ["?. operator", "Null check", "Optional chaining", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Nullsafe operator returns null if any part is null."},
-  {"question": "What is fiber in PHP?", "options": ["Coroutine", "Suspension", "Async", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "Fibers enable suspending and resuming execution."},
-  {"question": "What is JIT in PHP?", "options": ["Just-in-time", "Compilation", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "JIT compiles code at runtime for better performance."}
+  {
+    "question": "What is the difference between single quotes and double quotes in PHP?",
+    "options": [
+      "Variable parsing",
+      "Escape sequences",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Double quotes parse variables and escape sequences; single quotes treat everything as literal."
+  },
+  {
+    "question": "What is the purpose of the 'echo' statement in PHP?",
+    "options": [
+      "Output",
+      "Print",
+      "Display",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "echo outputs one or more strings to the browser."
+  },
+  {
+    "question": "What is the difference between 'echo' and 'print' in PHP?",
+    "options": [
+      "Return value",
+      "Performance",
+      "Usage",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "echo is slightly faster and doesn't return a value; print returns 1."
+  },
+  {
+    "question": "What is a variable in PHP?",
+    "options": [
+      "Data container",
+      "Dollar sign",
+      "Dynamic type",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Variables in PHP start with $ and can hold any type of data."
+  },
+  {
+    "question": "What is the purpose of 'isset()' in PHP?",
+    "options": [
+      "Check variable",
+      "Existence",
+      "Null check",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "isset() checks if a variable is set and not null."
+  },
+  {
+    "question": "What is 'empty()' in PHP?",
+    "options": [
+      "Check empty",
+      "Null/zero/empty string",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "empty() returns true if variable is empty or doesn't exist."
+  },
+  {
+    "question": "What is an array in PHP?",
+    "options": [
+      "Collection",
+      "Ordered map",
+      "Multiple values",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "PHP arrays are ordered maps that can hold multiple values."
+  },
+  {
+    "question": "What is Array.includes?",
+    "options": [
+      "Check existence",
+      "Returns boolean",
+      "Value search",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Check existence",
+      "Returns boolean",
+      "Value search",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Array.includes? explanation."
+  },
+  {
+    "question": "What is the purpose of 'foreach' in PHP?",
+    "options": [
+      "Array iteration",
+      "Loop",
+      "Traversal",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "foreach iterates over arrays and objects."
+  },
+  {
+    "question": "What is a function in PHP?",
+    "options": [
+      "Reusable code",
+      "Block of code",
+      "Method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Functions are reusable blocks of code."
+  },
+  {
+    "question": "What is the purpose of 'return' in functions?",
+    "options": [
+      "Return value",
+      "Output",
+      "Function result",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "return returns a value from a function."
+  },
+  {
+    "question": "What is the difference between 'include' and 'require'?",
+    "options": [
+      "Error handling",
+      "File loading",
+      "Fatal error",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "include generates warning on failure; require generates fatal error."
+  },
+  {
+    "question": "What is 'include_once' vs 'include'?",
+    "options": [
+      "Once only",
+      "Multiple includes",
+      "Prevention",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "include_once includes file only once to prevent duplicates."
+  },
+  {
+    "question": "What is a class in PHP?",
+    "options": [
+      "Blueprint",
+      "Template",
+      "Object definition",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Classes define blueprints for objects."
+  },
+  {
+    "question": "What is an object in PHP?",
+    "options": [
+      "Class instance",
+      "Runtime entity",
+      "Reference",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Objects are instances of classes."
+  },
+  {
+    "question": "What is a constructor in PHP?",
+    "options": [
+      "Init method",
+      "__construct",
+      "Object setup",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "__construct initializes new objects."
+  },
+  {
+    "question": "What is a destructor in PHP?",
+    "options": [
+      "Cleanup",
+      "__destruct",
+      "Object cleanup",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "__destruct is called when object is destroyed."
+  },
+  {
+    "question": "What is 'public' visibility in PHP?",
+    "options": [
+      "Accessible everywhere",
+      "Class/outside",
+      "Visibility",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Public members are accessible from anywhere."
+  },
+  {
+    "question": "What is 'private' visibility in PHP?",
+    "options": [
+      "Class only",
+      "Restricted",
+      "Visibility",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Private members are accessible only within the class."
+  },
+  {
+    "question": "What is 'protected' visibility in PHP?",
+    "options": [
+      "Inherited classes",
+      "Extended",
+      "Visibility",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Protected members are accessible in class and subclasses."
+  },
+  {
+    "question": "What is inheritance in PHP?",
+    "options": [
+      "Class relationship",
+      "Extends",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Inheritance allows classes to inherit from other classes."
+  },
+  {
+    "question": "What is the purpose of 'extends' keyword?",
+    "options": [
+      "Inherit",
+      "Class relationship",
+      "Parent",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "extends defines parent class for inheritance."
+  },
+  {
+    "question": "What is method overriding in PHP?",
+    "options": [
+      "Replace method",
+      "Inheritance",
+      "Redefinition",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Override replaces parent class method in child class."
+  },
+  {
+    "question": "What is the purpose of 'parent' keyword?",
+    "options": [
+      "Parent class",
+      "Scope resolution",
+      "Reference",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "parent:: refers to parent class members."
+  },
+  {
+    "question": "What is an interface in PHP?",
+    "options": [
+      "Contract",
+      "Blueprint",
+      "Abstraction",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Interfaces define contracts that classes must implement."
+  },
+  {
+    "question": "What is 'implements' in PHP?",
+    "options": [
+      "Interface",
+      "Implementation",
+      "Contract",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "implements defines interface implementation."
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "options": [
+      "Code reuse",
+      "Horizontal reuse",
+      "Multiple inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Traits enable code reuse without inheritance."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is static keyword in PHP?",
+    "options": [
+      "Class-level",
+      "Shared",
+      "No instance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Static members belong to class, not instances."
+  },
+  {
+    "question": "What is a constant in PHP?",
+    "options": [
+      "Fixed value",
+      "Define constant",
+      "Immutable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Constants hold fixed values that don't change."
+  },
+  {
+    "question": "What is the purpose of 'define()'?",
+    "options": [
+      "Define constant",
+      "Global constant",
+      "Constant",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "define() creates constants."
+  },
+  {
+    "question": "What is 'const' vs 'define()'?",
+    "options": [
+      "Compile vs runtime",
+      "Class vs global",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "const is evaluated at compile time; define() at runtime."
+  },
+  {
+    "question": "What is a magic constant in PHP?",
+    "options": [
+      "Pre-defined",
+      "Dynamic",
+      "Special",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Magic constants like __DIR__ and __FILE__ provide special values."
+  },
+  {
+    "question": "What is '$_GET' in PHP?",
+    "options": [
+      "URL parameters",
+      "Form data",
+      "Request",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "$_GET contains URL query parameters."
+  },
+  {
+    "question": "What is '$_POST' in PHP?",
+    "options": [
+      "Form data",
+      "Request body",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "$_POST contains form data sent via POST."
+  },
+  {
+    "question": "What is '$_SESSION' in PHP?",
+    "options": [
+      "Session data",
+      "User state",
+      "Server-side",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "$_SESSION stores session data across requests."
+  },
+  {
+    "question": "What is '$_COOKIE' in PHP?",
+    "options": [
+      "Cookie data",
+      "Client storage",
+      "HTTP",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "$_COOKIE contains cookie values from client."
+  },
+  {
+    "question": "What is '$_SERVER' in PHP?",
+    "options": [
+      "Server info",
+      "Environment",
+      "Headers",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "$_SERVER contains server and request information."
+  },
+  {
+    "question": "What is '$_FILES' in PHP?",
+    "options": [
+      "Uploaded files",
+      "File data",
+      "Multipart",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "$_FILES contains uploaded file information."
+  },
+  {
+    "question": "What is '$_REQUEST' in PHP?",
+    "options": [
+      "All input",
+      "Combined",
+      "Request",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "$_REQUEST combines GET, POST, and COOKIE data."
+  },
+  {
+    "question": "What is form handling in PHP?",
+    "options": [
+      "Process input",
+      "Validation",
+      "Submission",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Form handling processes user input from forms."
+  },
+  {
+    "question": "What is SQL injection?",
+    "options": [
+      "SQL attack",
+      "Injection",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "SQL injection injects malicious SQL code through input."
+  },
+  {
+    "question": "How to prevent SQL injection in PHP?",
+    "options": [
+      "Prepared statements",
+      "Escape",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Prepared statements prevent SQL injection."
+  },
+  {
+    "question": "What is XSS in PHP?",
+    "options": [
+      "Cross-site scripting",
+      "Script injection",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "XSS injects malicious scripts into pages."
+  },
+  {
+    "question": "How to prevent XSS in PHP?",
+    "options": [
+      "Escape output",
+      "htmlspecialchars",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "htmlspecialchars escapes HTML output."
+  },
+  {
+    "question": "What is CSRF in PHP?",
+    "options": [
+      "Cross-site request forgery",
+      "Attack",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "CSRF tricks users into submitting unintended requests."
+  },
+  {
+    "question": "What is MySQL?",
+    "options": [
+      "Database",
+      "RDBMS",
+      "SQL",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "MySQL is a popular relational database."
+  },
+  {
+    "question": "What is the purpose of mysqli?",
+    "options": [
+      "MySQL improved",
+      "Extension",
+      "Database",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "mysqli provides MySQL database functions."
+  },
+  {
+    "question": "What is PDO in PHP?",
+    "options": [
+      "PHP Data Objects",
+      "Database abstraction",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "PDO provides database-independent interface."
+  },
+  {
+    "question": "What is a prepared statement?",
+    "options": [
+      "Parameterized query",
+      "SQL template",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Prepared statements separate SQL from data."
+  },
+  {
+    "question": "What is the difference between mysqli and PDO?",
+    "options": [
+      "Abstraction level",
+      "Database support",
+      "API",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "mysqli is MySQL-specific; PDO is database-agnostic."
+  },
+  {
+    "question": "What is object-oriented MySQLi?",
+    "options": [
+      "OOP style",
+      "mysqli",
+      "Classes",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Object-oriented mysqli uses classes and methods."
+  },
+  {
+    "question": "What is Composer?",
+    "options": [
+      "Package manager",
+      "Dependencies",
+      "PHP",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Composer manages PHP project dependencies."
+  },
+  {
+    "question": "What is the purpose of 'composer require'?",
+    "options": [
+      "Add package",
+      "Install",
+      "Dependency",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "composer require adds packages to project."
+  },
+  {
+    "question": "What is composer.json?",
+    "options": [
+      "Project config",
+      "Dependencies",
+      "Manifest",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "composer.json defines project dependencies."
+  },
+  {
+    "question": "What is autoloading in PHP?",
+    "options": [
+      "Auto load classes",
+      "No require",
+      "Optimization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Autoloading automatically loads class files."
+  },
+  {
+    "question": "What is PSR-4 autoloading?",
+    "options": [
+      "Standard",
+      "Namespace mapping",
+      "Autoload",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "PSR-4 maps namespaces to file paths."
+  },
+  {
+    "question": "What is Laravel?",
+    "options": [
+      "Framework",
+      "PHP framework",
+      "MVC",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Laravel is a popular PHP framework."
+  },
+  {
+    "question": "What is the purpose of Artisan in Laravel?",
+    "options": [
+      "CLI tool",
+      "Commands",
+      "Tooling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Artisan is Laravel's command-line interface."
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "options": [
+      "ORM",
+      "Database",
+      "Models",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Eloquent is Laravel's ORM system."
+  },
+  {
+    "question": "What is a Laravel migration?",
+    "options": [
+      "Database version",
+      "Schema",
+      "Migrations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Migrations manage database schema changes."
+  },
+  {
+    "question": "What is a Laravel seeder?",
+    "options": [
+      "Test data",
+      "Database",
+      "Seed",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Seeders populate database with test data."
+  },
+  {
+    "question": "What is a Laravel model?",
+    "options": [
+      "Data model",
+      "Eloquent",
+      "Database",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Models represent database tables in Eloquent."
+  },
+  {
+    "question": "What is a Laravel controller?",
+    "options": [
+      "Request handler",
+      "Business logic",
+      "MVC",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Controllers handle HTTP requests."
+  },
+  {
+    "question": "What is a Laravel route?",
+    "options": [
+      "URL mapping",
+      "Endpoint",
+      "Routing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Routes map URLs to controller actions."
+  },
+  {
+    "question": "What is Blade in Laravel?",
+    "options": [
+      "Templating",
+      "Views",
+      "Engine",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Blade is Laravel's templating engine."
+  },
+  {
+    "question": "What is the purpose of 'php artisan serve'?",
+    "options": [
+      "Start server",
+      "Development",
+      "CLI",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "artisan serve starts development server."
+  },
+  {
+    "question": "What is Laravel's routing middleware?",
+    "options": [
+      "Request filtering",
+      "Pipeline",
+      "Preprocessing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Middleware filters HTTP requests."
+  },
+  {
+    "question": "What is a Laravel service provider?",
+    "options": [
+      "DI container",
+      "Services",
+      "Registration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Service providers register services in container."
+  },
+  {
+    "question": "What is dependency injection in Laravel?",
+    "options": [
+      "DI",
+      "IoC",
+      "Container",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Laravel container manages dependencies."
+  },
+  {
+    "question": "What is Laravel's validation?",
+    "options": [
+      "Data validation",
+      "Rules",
+      "Request",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Laravel provides powerful validation."
+  },
+  {
+    "question": "What is 'required' validation rule?",
+    "options": [
+      "Required field",
+      "Not empty",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "required validates field is not empty."
+  },
+  {
+    "question": "What is 'email' validation rule?",
+    "options": [
+      "Email format",
+      "Validation",
+      "Format",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "email validates email format."
+  },
+  {
+    "question": "What is 'min' and 'max' validation?",
+    "options": [
+      "Length/number",
+      "Bounds",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "min/max validate length or numeric bounds."
+  },
+  {
+    "question": "What is 'unique' validation rule?",
+    "options": [
+      "Database uniqueness",
+      "Validation",
+      "Duplicate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "unique validates value doesn't exist in database."
+  },
+  {
+    "question": "What is 'confirmed' validation rule?",
+    "options": [
+      "Password match",
+      "Confirmation",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "confirmed validates field matches confirmation field."
+  },
+  {
+    "question": "What is a Laravel facade?",
+    "options": [
+      "Static access",
+      "Service",
+      "Wrapper",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Facades provide static access to services."
+  },
+  {
+    "question": "What is 'route()' helper in Laravel?",
+    "options": [
+      "URL generation",
+      "Named routes",
+      "Link",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "route() generates URL for named routes."
+  },
+  {
+    "question": "What is 'redirect()' in Laravel?",
+    "options": [
+      "Redirect response",
+      "HTTP redirect",
+      "Route",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "redirect() creates redirect response."
+  },
+  {
+    "question": "What is 'back()' in Laravel?",
+    "options": [
+      "Back redirect",
+      "Previous URL",
+      "Redirect",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "back() redirects to previous URL."
+  },
+  {
+    "question": "What is 'view()' in Laravel?",
+    "options": [
+      "View response",
+      "Blade",
+      "Response",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "view() returns view response."
+  },
+  {
+    "question": "What is 'with()' in Laravel responses?",
+    "options": [
+      "Flash data",
+      "Session",
+      "Redirect",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "with() adds flash data to session."
+  },
+  {
+    "question": "What is the purpose of '@yield' in Blade?",
+    "options": [
+      "Section placeholder",
+      "Content",
+      "Template",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "@yield defines section placeholder."
+  },
+  {
+    "question": "What is '@section' in Blade?",
+    "options": [
+      "Define section",
+      "Content",
+      "Block",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "@section defines content for a section."
+  },
+  {
+    "question": "What is '@extends' in Blade?",
+    "options": [
+      "Parent template",
+      "Layout",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "@extends specifies parent layout."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is '@foreach' in Blade?",
+    "options": [
+      "Loop",
+      "Iteration",
+      "Array",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "@foreach iterates over arrays."
+  },
+  {
+    "question": "What is '@if' in Blade?",
+    "options": [
+      "Conditional",
+      "Logic",
+      "Statement",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "@if implements conditional logic."
+  },
+  {
+    "question": "What is Laravel's Auth scaffold?",
+    "options": [
+      "Authentication",
+      "Scaffold",
+      "Login/Register",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Auth scaffold generates login/register/reset."
+  },
+  {
+    "question": "What is Laravel Breeze?",
+    "options": [
+      "Auth starter",
+      "Scaffold",
+      "Jetstream",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Breeze provides minimal auth scaffolding."
+  },
+  {
+    "question": "What is Laravel Mix?",
+    "options": [
+      "Build tool",
+      "Assets",
+      "Webpack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Mix compiles and bundles assets."
+  },
+  {
+    "question": "What is 'npm run dev' in Laravel?",
+    "options": [
+      "Development build",
+      "Assets",
+      "Compile",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "npm run dev compiles assets for development."
+  },
+  {
+    "question": "What is Laravel's tinker?",
+    "options": [
+      "REPL",
+      "Interactive",
+      "Console",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Tinker is interactive REPL for Laravel."
+  },
+  {
+    "question": "What is PHP's match expression?",
+    "options": [
+      "Switch replacement",
+      "Expression",
+      "Value matching",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Match expressions return values based on conditions."
+  },
+  {
+    "question": "What is named arguments in PHP?",
+    "options": [
+      "Named parameters",
+      "Skip positional",
+      "Arguments",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Named arguments allow passing parameters by name."
+  },
+  {
+    "question": "What is attributes in PHP?",
+    "options": [
+      "Metadata",
+      "Annotations",
+      "Decorators",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Attributes provide metadata for classes and methods."
+  },
+  {
+    "question": "What is constructor promotion in PHP?",
+    "options": [
+      "Auto property",
+      "Shorthand",
+      "Property definition",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Constructor promotion simplifies property declaration."
+  },
+  {
+    "question": "What is nullsafe operator in PHP?",
+    "options": [
+      "?. operator",
+      "Null check",
+      "Optional chaining",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Nullsafe operator returns null if any part is null."
+  },
+  {
+    "question": "What is fiber in PHP?",
+    "options": [
+      "Coroutine",
+      "Suspension",
+      "Async",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "Fibers enable suspending and resuming execution."
+  },
+  {
+    "question": "What is JIT in PHP?",
+    "options": [
+      "Just-in-time",
+      "Compilation",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "JIT compiles code at runtime for better performance."
+  },
+  {
+    "question": "What is OOP? (Level 2 #101)",
+    "options": [
+      "Class",
+      "Object",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Class",
+      "Object",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is PDO? (Level 2 #102)",
+    "options": [
+      "Database",
+      "Prepared statement",
+      "Multiple databases",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Database",
+      "Prepared statement",
+      "Multiple databases",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is PDO? explanation."
+  },
+  {
+    "question": "What is namespace? (Level 2 #103)",
+    "options": [
+      "Scope",
+      "Autoloading",
+      "Organization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Scope",
+      "Autoloading",
+      "Organization",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is namespace? explanation."
+  },
+  {
+    "question": "What is trait? (Level 2 #104)",
+    "options": [
+      "Code reuse",
+      "Multiple",
+      "Method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Code reuse",
+      "Multiple",
+      "Method",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is trait? explanation."
+  },
+  {
+    "question": "What is interface? (Level 2 #105)",
+    "options": [
+      "Contract",
+      "Multiple",
+      "Implementation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Contract",
+      "Multiple",
+      "Implementation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interface? explanation."
+  },
+  {
+    "question": "What is closure? (Level 2 #106)",
+    "options": [
+      "Anonymous",
+      "Use",
+      "Callback",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Anonymous",
+      "Use",
+      "Callback",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is closure? explanation."
+  },
+  {
+    "question": "What is composer? (Level 2 #107)",
+    "options": [
+      "Dependency",
+      "Autoload",
+      "Package",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Dependency",
+      "Autoload",
+      "Package",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composer? explanation."
+  },
+  {
+    "question": "What is PSR? (Level 2 #108)",
+    "options": [
+      "Standard",
+      "Coding",
+      "Guidelines",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Standard",
+      "Coding",
+      "Guidelines",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is PSR? explanation."
+  },
+  {
+    "question": "What is autoloading? (Level 2 #109)",
+    "options": [
+      "Class",
+      "PSR-4",
+      "Require",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Class",
+      "PSR-4",
+      "Require",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is autoloading? explanation."
+  },
+  {
+    "question": "What is exception? (Level 2 #110)",
+    "options": [
+      "Try",
+      "Catch",
+      "Throw",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Try",
+      "Catch",
+      "Throw",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is exception? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  }
 ]

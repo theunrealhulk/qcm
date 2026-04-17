@@ -1,111 +1,2131 @@
 [
-  {"question": "What is TypeScript?", "options": ["JavaScript library", "Superset of JavaScript", "Framework", "Database"], "correctOptions": ["Superset of JavaScript"], "time": 25, "details": "TypeScript is JavaScript with syntax for types. It compiles to plain JavaScript."},
-  {"question": "What does 'let x: string' do?", "options": ["Declares variable x", "Declares string type for x", "Creates string", "Defines x as string"], "correctOptions": ["Declares string type for x"], "time": 25, "details": "Type annotations (after :) specify the expected type of a variable."},
-  {"question": "What is an interface?", "options": ["Object definition", "Type definition", "Class definition", "Function definition"], "correctOptions": ["Type definition"], "time": 25, "details": "Interfaces define object shapes and contract for objects."},
-  {"question": "What is type alias?", "options": ["New type", "Type name", "Type reference", "Type definition"], "correctOptions": ["Type name"], "time": 25, "details": "type creates a named type alias. Use type for unions, primitives."},
-  {"question": "What does 'as' do in TypeScript?", "options": ["Type assertion", "Type cast", "Type assertion or cast", "Type conversion"], "correctOptions": ["Type assertion"], "time": 25, "details": "as tells the compiler to treat value as a specific type."},
-  {"question": "What is generics?", "options": ["Generic type", "Parameterized type", "Generic function", "Template type"], "correctOptions": ["Parameterized type"], "time": 30, "details": "Generics allow reusable code that works with any type while maintaining type safety."},
-  {"question": "What is 'any' type?", "options": ["No type", "Any type allowed", "Any value", "Unknown type"], "correctOptions": ["Any type allowed"], "time": 25, "details": "any disables type checking - avoid it as it defeats TypeScript's purpose."},
-  {"question": "What is 'unknown' type?", "options": ["Any type", "Type safe any", "Generic type", "Union type"], "correctOptions": ["Type safe any"], "time": 30, "details": "unknown is type-safe 'any'. Must narrow type before use."},
-  {"question": "What is 'never' type?", "options": ["Empty type", "No return type", "Impossible type", "Null type"], "correctOptions": ["Impossible type"], "time": 30, "details": "never represents values that never occur (e.g., function that throws)."},
-  {"question": "What is void in TypeScript?", "options": ["Null", "Undefined", "Nothing", "Empty"], "correctOptions": ["Nothing"], "time": 25, "details": "void indicates function doesn't return a value."},
-  {"question": "What does '?' mean in type?", "options": ["Optional", "Nullable", "Optional property", "Null check"], "correctOptions": ["Optional property"], "time": 25, "details": "? makes property optional - may be undefined."},
-  {"question": "What is readonly?", "options": ["Read only property", "Cannot modify", "Cannot reassign", "Constant"], "correctOptions": ["Cannot modify"], "time": 25, "details": "readonly prevents property modification after initialization."},
-  {"question": "What is mapped type?", "options": ["Type mapping", "Transform types", "Map to type", "Type transform"], "correctOptions": ["Transform types"], "time": 35, "details": "Mapped types transform existing types by applying modifiers to properties."},
-  {"question": "What is conditional type?", "options": ["Type if/else", "Ternary type", "Type based on condition", "Choice type"], "correctOptions": ["Type based on condition"], "time": 35, "details": "Conditional types select type based on a condition: T extends U ? X : Y"},
-  {"question": "What is infer in TypeScript?", "options": ["Inference", "Type inference", "Infer type", "Deduce type"], "correctOptions": ["Type inference"], "time": 30, "details": "infer declares a type variable to be inferred from a type."},
-  {"question": "What is discriminated union?", "options": ["Union type", "Tagged union", "Discriminated type", "Union with tag"], "correctOptions": ["Tagged union"], "time": 35, "details": "Discriminated unions use a common property to narrow types in type guards."},
-  {"question": "What does keyof return?", "options": ["Array", "Keys as union", "Object keys", "Key array"], "correctOptions": ["Keys as union"], "time": 30, "details": "keyof returns a union of the keys of a type."},
-  {"question": "What is Pick<T, K>?", "options": ["Remove properties", "Select properties", "Optional properties", "Required properties"], "correctOptions": ["Select properties"], "time": 30, "details": "Pick<T, K> creates type with only specified properties K from T."},
-  {"question": "What is Omit<T, K>?", "options": ["Select properties", "Remove properties", "Required type", "Optional type"], "correctOptions": ["Remove properties"], "time": 30, "details": "Omit<T, K> creates type with all properties of T except K."},
-  {"question": "What is Partial<T>?", "options": ["All optional", "All required", "Nullable", "Partial type"], "correctOptions": ["All optional"], "time": 30, "details": "Partial<T> makes all properties optional."},
-  {"question": "What is Required<T>?", "options": ["All required", "All optional", "Non-nullable", "Complete type"], "correctOptions": ["All required"], "time": 30, "details": "Required<T> removes optional (?) from all properties."},
-  {"question": "What is Readonly<T>?", "options": ["Immutable type", "Read only properties", "Constant type", "Locked type"], "correctOptions": ["Read only properties"], "time": 30, "details": "Readonly<T> makes all properties readonly."},
-  {"question": "What is Record<K, T>?", "options": ["Object type", "Map type", "Key-value type", "Dictionary type"], "correctOptions": ["Key-value type"], "time": 30, "details": "Record<K, T> defines object type with keys K and values T."},
-  {"question": "What is Extract<T, U>?", "options": ["Remove type", "Extract type from union", "Intersection", "Union type"], "correctOptions": ["Extract type from union"], "time": 35, "details": "Extract<T, U> extracts types from T that are assignable to U."},
-  {"question": "What is Exclude<T, U>?", "options": ["Include type", "Remove type from union", "Exclude from union", "Filter type"], "correctOptions": ["Remove type from union"], "time": 35, "details": "Exclude<T, U> removes types from T that are assignable to U."},
-  {"question": "What is NonNullable<T>?", "options": ["Non-null type", "Filter null/undefined", "Remove nulls", "Clean type"], "correctOptions": ["Filter null/undefined"], "time": 35, "details": "NonNullable<T> removes null and undefined from type T."},
-  {"question": "What is ReturnType<T>?", "options": ["Function return", "Return type of function", "Return value type", "Function type"], "correctOptions": ["Return type of function"], "time": 35, "details": "ReturnType<T> extracts the return type of function T."},
-  {"question": "What is Parameters<T>?", "options": ["Function params", "Parameter types", "Function arguments", "Args type"], "correctOptions": ["Parameter types"], "time": 35, "details": "Parameters<T> extracts parameter types as tuple."},
-  {"question": "What is InstanceType<T>?", "options": ["Instance type", "Constructor type", "Object type", "Class instance"], "correctOptions": ["Constructor type"], "time": 35, "details": "InstanceType<T> gets the instance type of a constructor."},
-  {"question": "What does 'as const' do?", "options": ["Const assertion", "Literal type", "Type assertion", "Constant type"], "correctOptions": ["Literal type"], "time": 30, "details": "as const narrows type to literal type and makes properties readonly."},
-  {"question": "What is namespace in TS?", "options": ["Module", "Code organization", "Global scope", "Container"], "correctOptions": ["Code organization"], "time": 30, "details": "Namespaces organize code into containers. Use module instead (modern)."},
-  {"question": "What is module in TS?", "options": ["File", "ES module", "Code container", "Namespace"], "correctOptions": ["ES module"], "time": 25, "details": "Modules have their own scope. Use import/export."},
-  {"question": "What is declare in TS?", "options": ["Type only", "Type declaration", "No implementation", "Definition only"], "correctOptions": ["Type declaration"], "time": 30, "details": "declare tells compiler about types without generating code."},
-  {"question": "What is ambient declaration?", "options": ["Global type", "External type", "Type definition", "Module type"], "correctOptions": ["External type"], "time": 35, "details": "Ambient declarations describe types from external JavaScript."},
-  {"question": "What is d.ts file?", "options": ["Definition file", "Type declarations", "Type file", "Declaration types"], "correctOptions": ["Type declarations"], "time": 30, "details": "d.ts files provide type information for JavaScript files."},
-  {"question": "What is triple-slash directive?", "options": ["Comment", "Reference directive", "Compiler directive", "Module reference"], "correctOptions": ["Reference directive"], "time": 35, "details": "/// <reference path='...' /> includes another file."},
-  {"question": "What is 'noImplicitAny'?", "options": ["Require types", "No any allowed", "Strict mode", "Type check"], "correctOptions": ["Require types"], "time": 35, "details": "noImplicitAny errors when type cannot be inferred (must have annotation)."},
-  {"question": "What is 'strictNullChecks'?", "options": ["Null check", "Nullable allowed", "Null safety", "Null handling"], "correctOptions": ["Null safety"], "time": 35, "details": "strictNullChecks requires handling null/undefined before use."},
-  {"question": "What does 'implements' do?", "options": ["Creates class", "Implements interface", "Class contract", "Interface implementation"], "correctOptions": ["Implements interface"], "time": 25, "details": "class C implements I ensures C has all members of I."},
-  {"question": "What is abstract class?", "options": ["Cannot instantiate", "Base class", "Partial implementation", "Interface class"], "correctOptions": ["Cannot instantiate"], "time": 35, "details": "Abstract classes can't be instantiated directly. Must subclass."},
-  {"question": "What is abstract method?", "options": ["Empty method", "Must override", "Base method", "Virtual method"], "correctOptions": ["Must override"], "time": 35, "details": "Abstract methods must be implemented by subclasses."},
-  {"question": "What is enum?", "options": ["Object", "Named constants", "Type", "Collection"], "correctOptions": ["Named constants"], "time": 25, "details": "Enums create sets of named constants. Use const enum for inlining."},
-  {"question": "What is const enum?", "options": ["Inlined constants", "Compile-time enum", "Static enum", "Frozen enum"], "correctOptions": ["Inlined constants"], "time": 35, "details": "const enum values are inlined at compile time, no JS code generated."},
-  {"question": "What is global augmentation?", "options": ["Add to global", "Global scope", "Extend global", "Module global"], "correctOptions": ["Extend global"], "time": 40, "details": "Global augmentation adds declarations to global scope."},
-  {"question": "What is module augmentation?", "options": ["Extend module", "Add to module", "Module extension", "Module merge"], "correctOptions": ["Extend module"], "time": 40, "details": "Module augmentation adds exports to existing modules."},
-  {"question": "What is 'this' parameter?", "options": ["Parameter type", "This typing", "Type of this", "Function this"], "correctOptions": ["This typing"], "time": 35, "details": "this parameter types 'this' in function."},
-  {"question": "What is function overload?", "options": ["Multiple signatures", "Multiple functions", "Function variants", "Overloaded function"], "correctOptions": ["Multiple signatures"], "time": 35, "details": "Overloads define multiple call signatures for the same function."},
-  {"question": "What is type guard?", "options": ["Boolean check", "Type narrowing", "Type check", "Type safety"], "correctOptions": ["Type narrowing"], "time": 35, "details": "Type guards narrow union types based on runtime checks."},
-  {"question": "What is assertion function?", "options": ["Casts type", "Type guard function", "Validate type", "Check type"], "correctOptions": ["Type guard function"], "time": 40, "details": "Assertion functions return boolean and narrow type in if blocks."},
-  {"question": "What is in operator guard?", "options": ["Property check", "Type narrowing", "Key check", "Object check"], "correctOptions": ["Property check"], "time": 35, "details": "'k in obj' narrows type to where k exists."},
-  {"question": "What is truthiness guard?", "options": ["Null check", "Falsy check", "Type narrowing", "Boolean check"], "correctOptions": ["Type narrowing"], "time": 35, "details": "if (x) narrows from null/undefined."},
-  {"question": "What is equality guard?", "options": ["Type check", "Value comparison", "Type narrowing", "Equality check"], "correctOptions": ["Type narrowing"], "time": 35, "details": "=== check can narrow union types."},
-  {"question": "What is narrowing?", "options": ["Type reduction", "Reduce type", "Type constraint", "Type limitation"], "correctOptions": ["Reduce type"], "time": 35, "details": "Narrowing reduces type possibilities based on conditions."},
-  {"question": "What is union type?", "options": ["Multiple types", "One of types", "Either type", "Any type"], "correctOptions": ["One of types"], "time": 25, "details": "A | B means type can be A or B."},
-  {"question": "What is intersection type?", "options": ["Combined types", "Type merge", "All types", "Union of types"], "correctOptions": ["Combined types"], "time": 30, "details": "A & B means type has all properties of A AND B."},
-  {"question": "What is literal type?", "options": ["Exact value type", "Specific type", "Constant type", "Value type"], "correctOptions": ["Exact value type"], "time": 30, "details": "'hello' is a literal type for exact string 'hello'."},
-  {"question": "What is 'keyof' operator?", "options": ["Get keys", "Return keys", "Object keys", "Type keys"], "correctOptions": ["Return keys"], "time": 30, "details": "keyof T returns union of keys of T."},
-  {"question": "What is 'in' operator?", "options": ["Check property", "Check key", "Property exists", "Value in object"], "correctOptions": ["Property exists"], "time": 30, "details": "k in obj checks if property exists."},
-  {"question": "What is type predicate?", "options": ["Type check", "Return type guard", "Boolean type", "Type assertion"], "correctOptions": ["Return type guard"], "time": 40, "details": "Type predicate is 'x is Type' return type for type guards."},
-  {"question": "What is 'satisfies' operator?", "options": ["Assignment", "Type verification", "Type check", "Assertion"], "correctOptions": ["Type verification"], "time": 40, "details": "x satisfies T checks if x matches T without changing its type."},
-  {"question": "What is 'enum' members type?", "options": ["Number", "String", "Enum type", "Any"], "correctOptions": ["Enum type"], "time": 30, "details": "By default, enum members are number type."},
-  {"question": "What is declaration merging?", "options": ["Combine declarations", "Merge interfaces", "Merge types", "Extend declarations"], "correctOptions": ["Merge interfaces"], "time": 40, "details": "Interfaces can be declared multiple times and merged."},
-  {"question": "What is symbol type?", "options": ["Primitive type", "Unique identifier", "Key type", "Property key"], "correctOptions": ["Unique identifier"], "time": 30, "details": "symbol is a primitive type for unique identifiers."},
-  {"question": "What is bigint type?", "options": ["Large integer", "Big number", "Integer type", "Number type"], "correctOptions": ["Large integer"], "time": 30, "details": "bigint handles integers beyond safe Number limit."},
-  {"question": "What is template literal type?", "options": ["String type", "Built from strings", "Template type", "String template"], "correctOptions": ["Built from strings"], "time": 35, "details": "Template literal types build string types via string interpolation."},
-  {"question": "What is recursive type?", "options": ["Self reference", "Loop type", "Nested type", "Complex type"], "correctOptions": ["Self reference"], "time": 40, "details": "Recursive types reference themselves (e.g., tree nodes)."},
-  {"question": "What is 'infer' in conditional?", "options": ["Extract type", "Infer from type", "Capture type", "Deduce type"], "correctOptions": ["Capture type"], "time": 40, "details": "infer extracts type to use in true branch of conditional."},
-  {"question": "What is built-in utility type?", "options": ["Generic types", "Helper types", "Utility types", "Common types"], "correctOptions": ["Helper types"], "time": 30, "details": "Utility types like Partial, Required, Pick are built-in helpers."},
-  {"question": "What is ConstructorParameters?", "options": ["Class params", "Constructor args", "Instance params", "Build params"], "correctOptions": ["Constructor args"], "time": 40, "details": "ConstructorParameters<T> gets constructor parameter types as tuple."},
-  {"question": "What is ThisParameterType?", "options": ["This type", "Parameter this", "This parameter", "Function this"], "correctOptions": ["This parameter"], "time": 40, "details": "ThisParameterType<T> extracts the 'this' parameter type."},
-  {"question": "What is OmitThisParameter?", "options": ["Remove this", "Without this", "No this param", "Function without this"], "correctOptions": ["Without this"], "time": 45, "details": "OmitThisParameter removes 'this' parameter from function."},
-  {"question": "What is Awaited<T>?", "options": ["Promise type", "Unwrapped Promise", "Async type", "Promise value"], "correctOptions": ["Unwrapped Promise"], "time": 40, "details": "Awaited<T> unwraps Promise<T> to T."},
-  {"question": "What is tsconfig.json?", "options": ["Config file", "TypeScript config", "Compiler options", "Project settings"], "correctOptions": ["Compiler options"], "time": 25, "details": "tsconfig.json configures TypeScript compilation."},
-  {"question": "What is 'target' in config?", "options": ["Output version", "ES version", "Compilation target", "JS version"], "correctOptions": ["ES version"], "time": 30, "details": "target specifies output JavaScript version (ES5, ES6, etc)."},
-  {"question": "What is 'module' in config?", "options": ["Module system", "Output module", "ES module", "Module format"], "correctOptions": ["Module system"], "time": 30, "details": "module specifies module system (commonjs, ES2020, etc)."},
-  {"question": "What is 'strict' mode?", "options": ["All strict checks", "Type safety", "Full checking", "Strict mode"], "correctOptions": ["All strict checks"], "time": 35, "details": "strict enables all strict type checking options."},
-  {"question": "What is 'esModuleInterop'?", "options": ["Module compatibility", "Interop enable", "CommonJS interop", "ES module support"], "correctOptions": ["CommonJS interop"], "time": 40, "details": "esModuleInterop allows default imports from CommonJS."},
-  {"question": "What is 'skipLibCheck'?", "options": ["Skip checking", "Skip library", "No type check", "Fast compile"], "correctOptions": ["Skip library"], "time": 40, "details": "skipLibCheck skips type checking .d.ts files (faster compilation)."},
-  {"question": "What is 'declaration' option?", "options": ["Generate .d.ts", "Type files", "Declaration output", "Type output"], "correctOptions": ["Generate .d.ts"], "time": 40, "details": "declaration generates .d.ts files."},
-  {"question": "What is 'outDir' option?", "options": ["Output directory", "Build folder", "Compiled files", "Output path"], "correctOptions": ["Output directory"], "time": 30, "details": "outDir specifies output directory for compiled files."},
-  {"question": "What is 'rootDir' option?", "options": ["Source directory", "Project root", "Files location", "Source root"], "correctOptions": ["Source directory"], "time": 30, "details": "rootDir specifies root of source files."},
-  {"question": "What is 'baseUrl' for?", "options": ["Base path", "Module resolution", "Path alias", "Root URL"], "correctOptions": ["Module resolution"], "time": 40, "details": "baseUrl sets base path for module resolution."},
-  {"question": "What is 'paths' for?", "options": ["Aliases", "Module paths", "Path mapping", "Import mapping"], "correctOptions": ["Path mapping"], "time": 40, "details": "paths maps import paths to actual locations."},
-  {"question": "What is 'paths' vs 'baseUrl'?", "options": ["Relative paths", "Same location", "Aliases resolve", "Module resolve"], "correctOptions": ["Path mapping"], "time": 40, "details": "paths are relative to baseUrl."},
-  {"question": "What is 'include' in config?", "options": ["Files to compile", "Include files", "Source files", "Project files"], "correctOptions": ["Files to compile"], "time": 30, "details": "include specifies files to compile."},
-  {"question": "What is 'exclude' in config?", "options": ["Files to skip", "Ignore files", "Excluded files", "Skip files"], "correctOptions": ["Files to skip"], "time": 30, "details": "exclude specifies files to skip."},
-  {"question": "What is 'extends' in config?", "options": ["Inherit config", "Base config", "Parent config", "Config inheritance"], "correctOptions": ["Inherit config"], "time": 35, "details": "extends inherits from another config file."},
-  {"question": "What is 'references' in config?", "options": ["Project references", "Build order", "Dependencies", "Project graph"], "correctOptions": ["Project references"], "time": 40, "details": "references link TypeScript projects."},
-  {"question": "What is project references?", "options": ["Multi-project", "Build dependencies", "Composite builds", "Project linking"], "correctOptions": ["Build dependencies"], "time": 45, "details": "Project references enable incremental builds across projects."},
-  {"question": "What is 'composite' in project?", "options": ["Enable references", "Project type", "Build mode", "Composite"], "correctOptions": ["Allow references and faster incremental"], "time": 45, "details": "composite enables project references."},
-  {"question": "What is 'incremental' in config?", "options": ["Cache builds", "Faster rebuild", "Cache", "Build cache"], "correctOptions": ["Cache build info for faster recompilation"], "time": 45, "details": "incremental caches builds."},
-  {"question": "What is 'lib' in config?", "options": ["Built-in types", "Type definitions", "Runtime libs", "API"], "correctOptions": ["Included built-in type definitions (ES5, ES2015, DOM, etc)"], "time": 40, "details": "lib includes type definitions."},
-  {"question": "What is 'types' in config?", "options": ["Type roots", "Type packages", "Included types", "Global types"], "correctOptions": ["Explicit type packages to include (@types)"], "time": 40, "details": "types specifies which @types to include."},
-  {"question": "What is 'typeRoots' in config?", "options": ["Type folders", "Type locations", "Custom paths", "Type dirs"], "correctOptions": ["Folders to search for type definitions"], "time": 40, "details": "typeRoots specifies custom folders."},
-  {"question": "What is 'allowJs' in config?", "options": ["Compile JS", "Include JS", "JS files", "Mixed"], "correctOptions": ["Allow compiling JavaScript files"], "time": 35, "details": "allowJs allows .js files."},
-  {"question": "What is 'checkJs' in config?", "options": ["Type check JS", "JS validation", "JavaScript check", "Check JS"], "correctOptions": ["Type check JavaScript files (with allowJs)"], "time": 40, "details": "checkJs type-checks JavaScript."},
-  {"question": "What is 'jsx' in config?", "options": ["JSX mode", "React JSX", "React mode", "JSX handling"], "correctOptions": ["JSX mode for React: 'react', 'react-native', 'preserve', 'react-jsx'"], "time": 35, "details": "jsx controls React JSX output."},
-  {"question": "What is 'jsxFactory' in config?", "options": ["JSX function", "React function", "H function", "JSX pragma"], "correctOptions": ["JSX pragma: default is React.createElement, can set to h or preact.h"], "time": 40, "details": "jsxFactory specifies JSX function."},
-  {"question": "What is 'jsxFragment' in config?", "options": ["JSX fragment", "Fragment type", "React fragment", "Fragment"], "correctOptions": ["JSX fragment type: 'React.Fragment' or 'Fragment' (React 17+)"], "time": 45, "details": "jsxFragment specifies fragment."},
-  {"question": "What is 'keyofStrings'?", "options": ["Key to strings", "Key to string", "String keys", "Map keys"], "correctOptions": ["Generate string union from keyof"], "time": 45, "details": "Emits keyof as string union."},
-  {"question": "What is 'noStrictGenericChecks'?", "options": ["Allow any generics", "Generic mode", "Loose generics", "Type param"], "correctOptions": ["Disable strict generic type checks (for libaries)"], "time": 50, "details": "Loosens generic checking."},
-  {"question": "What is Generic defaults (TS 4.7+)?", "options": ["Default type", "Generic default", "Type param default", "Default"], "correctOptions": ["<T = string> syntax for default type parameter"], "time": 45, "details": "Generic defaults like function params."},
-  {"question": "What is Type 'only' exports?", "options": ["Type only export", "Export types", "Emit types", "Types only"], "correctOptions": ["export type { Interface } - only emits type, not value"], "time": 40, "details": "Type-only exports."},
-  {"question": "What is 'importsNotUsedAsValues'?", "options": ["Type-only imports", "Separate types", "Type import", "No emit"], "correctOptions": ["'error' | 'preserve' - what to do with type-only imports"], "time": 50, "details": "Controls type import handling."},
-  {"question": "What is 'isolatedModules'?", "options": ["Enforce separation", "Separate module", "Module check", "Independent"], "correctOptions": ["Require each file as separate compilation (catches cross-file issues)"], "time": 50, "details": "independent compiles each file."},
-  {"question": "What is 'preserveSymlinks'?", "options": ["Don't resolve", "Keep symlinks", "Symlink mode", "Link preserve"], "correctOptions": ["Don't resolve symlinks (match Node behavior)"], "time": 50, "details": "preserve symlinks in resolution."},
-  {"question": "What is 'resolvePackageJsonAuto'?", "options": ["Auto package.js", "Package lookup", "Auto import", "Package JSON"], "correctOptions": ["Auto-lookup package.json 'exports' field (Node 12+)"], "time": 55, "details": "Auto-resolve package.json."},
-  {"question": "What is 'useDefineForClassFields'?", "options": ["Define fields", "Class fields", "Define in ctor", "Fields"], "correctOptions": ["Use defineProperty semantics for class fields (ES2022)"], "time": 55, "details": "Class fields defineProperty."},
-  {"question": "What is 'useUnknownInCatchVariables'?", "options": ["Catch as unknown", "Error type", "Exception", "Catch"], "correctOptions": ["catch clause variables typed as unknown (safer)"], "time": 50, "details": "Catch as unknown"}
+  {
+    "question": "What is TypeScript?",
+    "options": [
+      "JavaScript library",
+      "Superset of JavaScript",
+      "Framework",
+      "Database"
+    ],
+    "correctOptions": [
+      "Superset of JavaScript"
+    ],
+    "time": 25,
+    "details": "TypeScript is JavaScript with syntax for types. It compiles to plain JavaScript."
+  },
+  {
+    "question": "What does 'let x: string' do?",
+    "options": [
+      "Declares variable x",
+      "Declares string type for x",
+      "Creates string",
+      "Defines x as string"
+    ],
+    "correctOptions": [
+      "Declares string type for x"
+    ],
+    "time": 25,
+    "details": "Type annotations (after :) specify the expected type of a variable."
+  },
+  {
+    "question": "What is destructuring assignment?",
+    "options": [
+      "Extract values",
+      "Array/object",
+      "Short syntax",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Extract values",
+      "Array/object",
+      "Short syntax",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is destructuring assignment? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is generics?",
+    "options": [
+      "Generic type",
+      "Parameterized type",
+      "Generic function",
+      "Template type"
+    ],
+    "correctOptions": [
+      "Parameterized type"
+    ],
+    "time": 30,
+    "details": "Generics allow reusable code that works with any type while maintaining type safety."
+  },
+  {
+    "question": "What is 'any' type?",
+    "options": [
+      "No type",
+      "Any type allowed",
+      "Any value",
+      "Unknown type"
+    ],
+    "correctOptions": [
+      "Any type allowed"
+    ],
+    "time": 25,
+    "details": "any disables type checking - avoid it as it defeats TypeScript's purpose."
+  },
+  {
+    "question": "What is 'unknown' type?",
+    "options": [
+      "Any type",
+      "Type safe any",
+      "Generic type",
+      "Union type"
+    ],
+    "correctOptions": [
+      "Type safe any"
+    ],
+    "time": 30,
+    "details": "unknown is type-safe 'any'. Must narrow type before use."
+  },
+  {
+    "question": "What is 'never' type?",
+    "options": [
+      "Empty type",
+      "No return type",
+      "Impossible type",
+      "Null type"
+    ],
+    "correctOptions": [
+      "Impossible type"
+    ],
+    "time": 30,
+    "details": "never represents values that never occur (e.g., function that throws)."
+  },
+  {
+    "question": "What is void in TypeScript?",
+    "options": [
+      "Null",
+      "Undefined",
+      "Nothing",
+      "Empty"
+    ],
+    "correctOptions": [
+      "Nothing"
+    ],
+    "time": 25,
+    "details": "void indicates function doesn't return a value."
+  },
+  {
+    "question": "What does '?' mean in type?",
+    "options": [
+      "Optional",
+      "Nullable",
+      "Optional property",
+      "Null check"
+    ],
+    "correctOptions": [
+      "Optional"
+    ],
+    "time": 25,
+    "details": "? makes property optional - may be undefined."
+  },
+  {
+    "question": "What is readonly?",
+    "options": [
+      "Read only property",
+      "Cannot modify",
+      "Cannot reassign",
+      "Constant"
+    ],
+    "correctOptions": [
+      "Cannot modify"
+    ],
+    "time": 25,
+    "details": "readonly prevents property modification after initialization."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is conditional type?",
+    "options": [
+      "Type if/else",
+      "Ternary type",
+      "Type based on condition",
+      "Choice type"
+    ],
+    "correctOptions": [
+      "Type based on condition"
+    ],
+    "time": 35,
+    "details": "Conditional types select type based on a condition: T extends U ? X : Y"
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is discriminated union?",
+    "options": [
+      "Union type",
+      "Tagged union",
+      "Discriminated type",
+      "Union with tag"
+    ],
+    "correctOptions": [
+      "Tagged union"
+    ],
+    "time": 35,
+    "details": "Discriminated unions use a common property to narrow types in type guards."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is Pick<T, K>?",
+    "options": [
+      "Remove properties",
+      "Select properties",
+      "Optional properties",
+      "Required properties"
+    ],
+    "correctOptions": [
+      "Select properties"
+    ],
+    "time": 30,
+    "details": "Pick<T, K> creates type with only specified properties K from T."
+  },
+  {
+    "question": "What is Omit<T, K>?",
+    "options": [
+      "Select properties",
+      "Remove properties",
+      "Required type",
+      "Optional type"
+    ],
+    "correctOptions": [
+      "Remove properties"
+    ],
+    "time": 30,
+    "details": "Omit<T, K> creates type with all properties of T except K."
+  },
+  {
+    "question": "What is Partial<T>?",
+    "options": [
+      "All optional",
+      "All required",
+      "Nullable",
+      "Partial type"
+    ],
+    "correctOptions": [
+      "All optional"
+    ],
+    "time": 30,
+    "details": "Partial<T> makes all properties optional."
+  },
+  {
+    "question": "What is Required<T>?",
+    "options": [
+      "All required",
+      "All optional",
+      "Non-nullable",
+      "Complete type"
+    ],
+    "correctOptions": [
+      "All required"
+    ],
+    "time": 30,
+    "details": "Required<T> removes optional (?) from all properties."
+  },
+  {
+    "question": "What is Readonly<T>?",
+    "options": [
+      "Immutable type",
+      "Read only properties",
+      "Constant type",
+      "Locked type"
+    ],
+    "correctOptions": [
+      "Read only properties"
+    ],
+    "time": 30,
+    "details": "Readonly<T> makes all properties readonly."
+  },
+  {
+    "question": "What is Record<K, T>?",
+    "options": [
+      "Object type",
+      "Map type",
+      "Key-value type",
+      "Dictionary type"
+    ],
+    "correctOptions": [
+      "Key-value type"
+    ],
+    "time": 30,
+    "details": "Record<K, T> defines object type with keys K and values T."
+  },
+  {
+    "question": "What is Extract<T, U>?",
+    "options": [
+      "Remove type",
+      "Extract type from union",
+      "Intersection",
+      "Union type"
+    ],
+    "correctOptions": [
+      "Extract type from union"
+    ],
+    "time": 35,
+    "details": "Extract<T, U> extracts types from T that are assignable to U."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is NonNullable<T>?",
+    "options": [
+      "Non-null type",
+      "Filter null/undefined",
+      "Remove nulls",
+      "Clean type"
+    ],
+    "correctOptions": [
+      "Filter null/undefined"
+    ],
+    "time": 35,
+    "details": "NonNullable<T> removes null and undefined from type T."
+  },
+  {
+    "question": "What is ReturnType<T>?",
+    "options": [
+      "Function return",
+      "Return type of function",
+      "Return value type",
+      "Function type"
+    ],
+    "correctOptions": [
+      "Return type of function"
+    ],
+    "time": 35,
+    "details": "ReturnType<T> extracts the return type of function T."
+  },
+  {
+    "question": "What is Parameters<T>?",
+    "options": [
+      "Function params",
+      "Parameter types",
+      "Function arguments",
+      "Args type"
+    ],
+    "correctOptions": [
+      "Parameter types"
+    ],
+    "time": 35,
+    "details": "Parameters<T> extracts parameter types as tuple."
+  },
+  {
+    "question": "What is InstanceType<T>?",
+    "options": [
+      "Instance type",
+      "Constructor type",
+      "Object type",
+      "Class instance"
+    ],
+    "correctOptions": [
+      "Constructor type"
+    ],
+    "time": 35,
+    "details": "InstanceType<T> gets the instance type of a constructor."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is namespace in TS?",
+    "options": [
+      "Module",
+      "Code organization",
+      "Global scope",
+      "Container"
+    ],
+    "correctOptions": [
+      "Code organization"
+    ],
+    "time": 30,
+    "details": "Namespaces organize code into containers. Use module instead (modern)."
+  },
+  {
+    "question": "What is module in TS?",
+    "options": [
+      "File",
+      "ES module",
+      "Code container",
+      "Namespace"
+    ],
+    "correctOptions": [
+      "ES module"
+    ],
+    "time": 25,
+    "details": "Modules have their own scope. Use import/export."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is triple-slash directive?",
+    "options": [
+      "Comment",
+      "Reference directive",
+      "Compiler directive",
+      "Module reference"
+    ],
+    "correctOptions": [
+      "Reference directive"
+    ],
+    "time": 35,
+    "details": "/// <reference path='...' /> includes another file."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is 'strictNullChecks'?",
+    "options": [
+      "Null check",
+      "Nullable allowed",
+      "Null safety",
+      "Null handling"
+    ],
+    "correctOptions": [
+      "Null safety"
+    ],
+    "time": 35,
+    "details": "strictNullChecks requires handling null/undefined before use."
+  },
+  {
+    "question": "What does 'implements' do?",
+    "options": [
+      "Creates class",
+      "Implements interface",
+      "Class contract",
+      "Interface implementation"
+    ],
+    "correctOptions": [
+      "Implements interface"
+    ],
+    "time": 25,
+    "details": "class C implements I ensures C has all members of I."
+  },
+  {
+    "question": "What is abstract class?",
+    "options": [
+      "Cannot instantiate",
+      "Base class",
+      "Partial implementation",
+      "Interface class"
+    ],
+    "correctOptions": [
+      "Cannot instantiate"
+    ],
+    "time": 35,
+    "details": "Abstract classes can't be instantiated directly. Must subclass."
+  },
+  {
+    "question": "What is abstract method?",
+    "options": [
+      "Empty method",
+      "Must override",
+      "Base method",
+      "Virtual method"
+    ],
+    "correctOptions": [
+      "Must override"
+    ],
+    "time": 35,
+    "details": "Abstract methods must be implemented by subclasses."
+  },
+  {
+    "question": "What is enum?",
+    "options": [
+      "Object",
+      "Named constants",
+      "Type",
+      "Collection"
+    ],
+    "correctOptions": [
+      "Named constants"
+    ],
+    "time": 25,
+    "details": "Enums create sets of named constants. Use const enum for inlining."
+  },
+  {
+    "question": "What is const enum?",
+    "options": [
+      "Inlined constants",
+      "Compile-time enum",
+      "Static enum",
+      "Frozen enum"
+    ],
+    "correctOptions": [
+      "Inlined constants"
+    ],
+    "time": 35,
+    "details": "const enum values are inlined at compile time, no JS code generated."
+  },
+  {
+    "question": "What is global augmentation?",
+    "options": [
+      "Add to global",
+      "Global scope",
+      "Extend global",
+      "Module global"
+    ],
+    "correctOptions": [
+      "Extend global"
+    ],
+    "time": 40,
+    "details": "Global augmentation adds declarations to global scope."
+  },
+  {
+    "question": "What is module augmentation?",
+    "options": [
+      "Extend module",
+      "Add to module",
+      "Module extension",
+      "Module merge"
+    ],
+    "correctOptions": [
+      "Extend module"
+    ],
+    "time": 40,
+    "details": "Module augmentation adds exports to existing modules."
+  },
+  {
+    "question": "What is 'this' parameter?",
+    "options": [
+      "Parameter type",
+      "This typing",
+      "Type of this",
+      "Function this"
+    ],
+    "correctOptions": [
+      "This typing"
+    ],
+    "time": 35,
+    "details": "this parameter types 'this' in function."
+  },
+  {
+    "question": "What is function overload?",
+    "options": [
+      "Multiple signatures",
+      "Multiple functions",
+      "Function variants",
+      "Overloaded function"
+    ],
+    "correctOptions": [
+      "Multiple signatures"
+    ],
+    "time": 35,
+    "details": "Overloads define multiple call signatures for the same function."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is assertion function?",
+    "options": [
+      "Casts type",
+      "Type guard function",
+      "Validate type",
+      "Check type"
+    ],
+    "correctOptions": [
+      "Type guard function"
+    ],
+    "time": 40,
+    "details": "Assertion functions return boolean and narrow type in if blocks."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is union type?",
+    "options": [
+      "Multiple types",
+      "One of types",
+      "Either type",
+      "Any type"
+    ],
+    "correctOptions": [
+      "One of types"
+    ],
+    "time": 25,
+    "details": "A | B means type can be A or B."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is literal type?",
+    "options": [
+      "Exact value type",
+      "Specific type",
+      "Constant type",
+      "Value type"
+    ],
+    "correctOptions": [
+      "Exact value type"
+    ],
+    "time": 30,
+    "details": "'hello' is a literal type for exact string 'hello'."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is 'in' operator?",
+    "options": [
+      "Check property",
+      "Check key",
+      "Property exists",
+      "Value in object"
+    ],
+    "correctOptions": [
+      "Property exists"
+    ],
+    "time": 30,
+    "details": "k in obj checks if property exists."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is 'enum' members type?",
+    "options": [
+      "Number",
+      "String",
+      "Enum type",
+      "Any"
+    ],
+    "correctOptions": [
+      "Enum type"
+    ],
+    "time": 30,
+    "details": "By default, enum members are number type."
+  },
+  {
+    "question": "What is declaration merging?",
+    "options": [
+      "Combine declarations",
+      "Merge interfaces",
+      "Merge types",
+      "Extend declarations"
+    ],
+    "correctOptions": [
+      "Merge interfaces"
+    ],
+    "time": 40,
+    "details": "Interfaces can be declared multiple times and merged."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is bigint type?",
+    "options": [
+      "Large integer",
+      "Big number",
+      "Integer type",
+      "Number type"
+    ],
+    "correctOptions": [
+      "Large integer"
+    ],
+    "time": 30,
+    "details": "bigint handles integers beyond safe Number limit."
+  },
+  {
+    "question": "What is template literal type?",
+    "options": [
+      "String type",
+      "Built from strings",
+      "Template type",
+      "String template"
+    ],
+    "correctOptions": [
+      "Built from strings"
+    ],
+    "time": 35,
+    "details": "Template literal types build string types via string interpolation."
+  },
+  {
+    "question": "What is recursive type?",
+    "options": [
+      "Self reference",
+      "Loop type",
+      "Nested type",
+      "Complex type"
+    ],
+    "correctOptions": [
+      "Self reference"
+    ],
+    "time": 40,
+    "details": "Recursive types reference themselves (e.g., tree nodes)."
+  },
+  {
+    "question": "What is 'infer' in conditional?",
+    "options": [
+      "Extract type",
+      "Infer from type",
+      "Capture type",
+      "Deduce type"
+    ],
+    "correctOptions": [
+      "Capture type"
+    ],
+    "time": 40,
+    "details": "infer extracts type to use in true branch of conditional."
+  },
+  {
+    "question": "What is built-in utility type?",
+    "options": [
+      "Generic types",
+      "Helper types",
+      "Utility types",
+      "Common types"
+    ],
+    "correctOptions": [
+      "Helper types"
+    ],
+    "time": 30,
+    "details": "Utility types like Partial, Required, Pick are built-in helpers."
+  },
+  {
+    "question": "What is ConstructorParameters?",
+    "options": [
+      "Class params",
+      "Constructor args",
+      "Instance params",
+      "Build params"
+    ],
+    "correctOptions": [
+      "Constructor args"
+    ],
+    "time": 40,
+    "details": "ConstructorParameters<T> gets constructor parameter types as tuple."
+  },
+  {
+    "question": "What is ThisParameterType?",
+    "options": [
+      "This type",
+      "Parameter this",
+      "This parameter",
+      "Function this"
+    ],
+    "correctOptions": [
+      "This parameter"
+    ],
+    "time": 40,
+    "details": "ThisParameterType<T> extracts the 'this' parameter type."
+  },
+  {
+    "question": "What is OmitThisParameter?",
+    "options": [
+      "Remove this",
+      "Without this",
+      "No this param",
+      "Function without this"
+    ],
+    "correctOptions": [
+      "Without this"
+    ],
+    "time": 45,
+    "details": "OmitThisParameter removes 'this' parameter from function."
+  },
+  {
+    "question": "What is Awaited<T>?",
+    "options": [
+      "Promise type",
+      "Unwrapped Promise",
+      "Async type",
+      "Promise value"
+    ],
+    "correctOptions": [
+      "Unwrapped Promise"
+    ],
+    "time": 40,
+    "details": "Awaited<T> unwraps Promise<T> to T."
+  },
+  {
+    "question": "What is tsconfig.json?",
+    "options": [
+      "Config file",
+      "TypeScript config",
+      "Compiler options",
+      "Project settings"
+    ],
+    "correctOptions": [
+      "Compiler options"
+    ],
+    "time": 25,
+    "details": "tsconfig.json configures TypeScript compilation."
+  },
+  {
+    "question": "What is 'target' in config?",
+    "options": [
+      "Output version",
+      "ES version",
+      "Compilation target",
+      "JS version"
+    ],
+    "correctOptions": [
+      "ES version"
+    ],
+    "time": 30,
+    "details": "target specifies output JavaScript version (ES5, ES6, etc)."
+  },
+  {
+    "question": "What is 'module' in config?",
+    "options": [
+      "Module system",
+      "Output module",
+      "ES module",
+      "Module format"
+    ],
+    "correctOptions": [
+      "Module system"
+    ],
+    "time": 30,
+    "details": "module specifies module system (commonjs, ES2020, etc)."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is 'esModuleInterop'?",
+    "options": [
+      "Module compatibility",
+      "Interop enable",
+      "CommonJS interop",
+      "ES module support"
+    ],
+    "correctOptions": [
+      "CommonJS interop"
+    ],
+    "time": 40,
+    "details": "esModuleInterop allows default imports from CommonJS."
+  },
+  {
+    "question": "What is 'skipLibCheck'?",
+    "options": [
+      "Skip checking",
+      "Skip library",
+      "No type check",
+      "Fast compile"
+    ],
+    "correctOptions": [
+      "Skip library"
+    ],
+    "time": 40,
+    "details": "skipLibCheck skips type checking .d.ts files (faster compilation)."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is 'outDir' option?",
+    "options": [
+      "Output directory",
+      "Build folder",
+      "Compiled files",
+      "Output path"
+    ],
+    "correctOptions": [
+      "Output directory"
+    ],
+    "time": 30,
+    "details": "outDir specifies output directory for compiled files."
+  },
+  {
+    "question": "What is 'rootDir' option?",
+    "options": [
+      "Source directory",
+      "Project root",
+      "Files location",
+      "Source root"
+    ],
+    "correctOptions": [
+      "Source directory"
+    ],
+    "time": 30,
+    "details": "rootDir specifies root of source files."
+  },
+  {
+    "question": "What is 'baseUrl' for?",
+    "options": [
+      "Base path",
+      "Module resolution",
+      "Path alias",
+      "Root URL"
+    ],
+    "correctOptions": [
+      "Module resolution"
+    ],
+    "time": 40,
+    "details": "baseUrl sets base path for module resolution."
+  },
+  {
+    "question": "What is 'paths' for?",
+    "options": [
+      "Aliases",
+      "Module paths",
+      "Path mapping",
+      "Import mapping"
+    ],
+    "correctOptions": [
+      "Path mapping"
+    ],
+    "time": 40,
+    "details": "paths maps import paths to actual locations."
+  },
+  {
+    "question": "What is 'paths' vs 'baseUrl'?",
+    "options": [
+      "Relative paths",
+      "Same location",
+      "Aliases resolve",
+      "Module resolve"
+    ],
+    "correctOptions": [
+      "Relative paths"
+    ],
+    "time": 40,
+    "details": "paths are relative to baseUrl."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is 'exclude' in config?",
+    "options": [
+      "Files to skip",
+      "Ignore files",
+      "Excluded files",
+      "Skip files"
+    ],
+    "correctOptions": [
+      "Files to skip"
+    ],
+    "time": 30,
+    "details": "exclude specifies files to skip."
+  },
+  {
+    "question": "What is 'extends' in config?",
+    "options": [
+      "Inherit config",
+      "Base config",
+      "Parent config",
+      "Config inheritance"
+    ],
+    "correctOptions": [
+      "Inherit config"
+    ],
+    "time": 35,
+    "details": "extends inherits from another config file."
+  },
+  {
+    "question": "What is 'references' in config?",
+    "options": [
+      "Project references",
+      "Build order",
+      "Dependencies",
+      "Project graph"
+    ],
+    "correctOptions": [
+      "Project references"
+    ],
+    "time": 40,
+    "details": "references link TypeScript projects."
+  },
+  {
+    "question": "What is project references?",
+    "options": [
+      "Multi-project",
+      "Build dependencies",
+      "Composite builds",
+      "Project linking"
+    ],
+    "correctOptions": [
+      "Build dependencies"
+    ],
+    "time": 45,
+    "details": "Project references enable incremental builds across projects."
+  },
+  {
+    "question": "What is 'composite' in project?",
+    "options": [
+      "Enable references",
+      "Project type",
+      "Build mode",
+      "Composite"
+    ],
+    "correctOptions": [
+      "Enable references"
+    ],
+    "time": 45,
+    "details": "composite enables project references."
+  },
+  {
+    "question": "What is 'incremental' in config?",
+    "options": [
+      "Cache builds",
+      "Faster rebuild",
+      "Cache",
+      "Build cache"
+    ],
+    "correctOptions": [
+      "Cache"
+    ],
+    "time": 45,
+    "details": "incremental caches builds."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is 'checkJs' in config?",
+    "options": [
+      "Type check JS",
+      "JS validation",
+      "JavaScript check",
+      "Check JS"
+    ],
+    "correctOptions": [
+      "Type check JS"
+    ],
+    "time": 40,
+    "details": "checkJs type-checks JavaScript."
+  },
+  {
+    "question": "What is 'jsx' in config?",
+    "options": [
+      "JSX mode",
+      "React JSX",
+      "React mode",
+      "JSX handling"
+    ],
+    "correctOptions": [
+      "JSX mode"
+    ],
+    "time": 35,
+    "details": "jsx controls React JSX output."
+  },
+  {
+    "question": "What is 'jsxFactory' in config?",
+    "options": [
+      "JSX function",
+      "React function",
+      "H function",
+      "JSX pragma"
+    ],
+    "correctOptions": [
+      "JSX pragma"
+    ],
+    "time": 40,
+    "details": "jsxFactory specifies JSX function."
+  },
+  {
+    "question": "What is 'jsxFragment' in config?",
+    "options": [
+      "JSX fragment",
+      "Fragment type",
+      "React fragment",
+      "Fragment"
+    ],
+    "correctOptions": [
+      "JSX fragment"
+    ],
+    "time": 45,
+    "details": "jsxFragment specifies fragment."
+  },
+  {
+    "question": "What is 'keyofStrings'?",
+    "options": [
+      "Key to strings",
+      "Key to string",
+      "String keys",
+      "Map keys"
+    ],
+    "correctOptions": [
+      "Key to strings"
+    ],
+    "time": 45,
+    "details": "Emits keyof as string union."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is Generic defaults (TS 4.7+)?",
+    "options": [
+      "Default type",
+      "Generic default",
+      "Type param default",
+      "Default"
+    ],
+    "correctOptions": [
+      "Default type"
+    ],
+    "time": 45,
+    "details": "Generic defaults like function params."
+  },
+  {
+    "question": "What is Type 'only' exports?",
+    "options": [
+      "Type only export",
+      "Export types",
+      "Emit types",
+      "Types only"
+    ],
+    "correctOptions": [
+      "Type only export"
+    ],
+    "time": 40,
+    "details": "Type-only exports."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is 'isolatedModules'?",
+    "options": [
+      "Enforce separation",
+      "Separate module",
+      "Module check",
+      "Independent"
+    ],
+    "correctOptions": [
+      "Enforce separation"
+    ],
+    "time": 50,
+    "details": "independent compiles each file."
+  },
+  {
+    "question": "What is 'preserveSymlinks'?",
+    "options": [
+      "Don't resolve",
+      "Keep symlinks",
+      "Symlink mode",
+      "Link preserve"
+    ],
+    "correctOptions": [
+      "Don't resolve"
+    ],
+    "time": 50,
+    "details": "preserve symlinks in resolution."
+  },
+  {
+    "question": "What is 'resolvePackageJsonAuto'?",
+    "options": [
+      "Auto package.js",
+      "Package lookup",
+      "Auto import",
+      "Package JSON"
+    ],
+    "correctOptions": [
+      "Auto package.js"
+    ],
+    "time": 55,
+    "details": "Auto-resolve package.json."
+  },
+  {
+    "question": "What is 'useDefineForClassFields'?",
+    "options": [
+      "Define fields",
+      "Class fields",
+      "Define in ctor",
+      "Fields"
+    ],
+    "correctOptions": [
+      "Define fields"
+    ],
+    "time": 55,
+    "details": "Class fields defineProperty."
+  },
+  {
+    "question": "What is 'useUnknownInCatchVariables'?",
+    "options": [
+      "Catch as unknown",
+      "Error type",
+      "Exception",
+      "Catch"
+    ],
+    "correctOptions": [
+      "Catch as unknown"
+    ],
+    "time": 50,
+    "details": "Catch as unknown"
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is type? (Level 1 #111)",
+    "options": [
+      "Union",
+      "Intersection",
+      "Alias",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Union",
+      "Intersection",
+      "Alias",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type? explanation."
+  },
+  {
+    "question": "What is decorator? (Level 1 #114)",
+    "options": [
+      "Class",
+      "Method",
+      "Property",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Class",
+      "Method",
+      "Property",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is decorator? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is utility types? (Level 1 #116)",
+    "options": [
+      "Partial",
+      "Required",
+      "Readonly",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Partial",
+      "Required",
+      "Readonly",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is utility types? explanation."
+  },
+  {
+    "question": "What is namespace? (Level 1 #117)",
+    "options": [
+      "Module",
+      "Scope",
+      "Organization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Module",
+      "Scope",
+      "Organization",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is namespace? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is error handling?",
+    "options": [
+      "Try-catch",
+      "Exceptions",
+      "Graceful",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Try-catch",
+      "Exceptions",
+      "Graceful",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is error handling? explanation."
+  },
+  {
+    "question": "What is caching?",
+    "options": [
+      "Store data",
+      "Faster access",
+      "Memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Store data",
+      "Faster access",
+      "Memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is caching? explanation."
+  },
+  {
+    "question": "What is refactoring?",
+    "options": [
+      "Restructure",
+      "Clean code",
+      "Improve",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Restructure",
+      "Clean code",
+      "Improve",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is refactoring? explanation."
+  },
+  {
+    "question": "What is logging?",
+    "options": [
+      "Record events",
+      "Debug",
+      "Track",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Record events",
+      "Debug",
+      "Track",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is logging? explanation."
+  },
+  {
+    "question": "What is optimization?",
+    "options": [
+      "Improve performance",
+      "Speed",
+      "Efficiency",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Improve performance",
+      "Speed",
+      "Efficiency",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is optimization? explanation."
+  },
+  {
+    "question": "What is error handling?",
+    "options": [
+      "Try-catch",
+      "Exceptions",
+      "Graceful",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Try-catch",
+      "Exceptions",
+      "Graceful",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is error handling? explanation."
+  }
 ]

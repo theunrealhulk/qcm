@@ -1,582 +1,1903 @@
 [
-  {"question": "What is the difference between EF Core AsNoTracking() vs AsNoTrackingWithIdentityResolution()?",
-    "options": ["Identity resolution", "Object caching", "Query behavior", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the difference between EF Core AsNoTracking() vs AsNoTrackingWithIdentityResolution()?",
+    "options": [
+      "Identity resolution",
+      "Object caching",
+      "Query behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "AsNoTrackingWithIdentityResolution caches entities for referential integrity while still not tracking."
   },
-  {"question": "What is the purpose of EF Core Split Queries?",
-    "options": ["Avoid cartesian product", "Separate SQL", "Performance", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of EF Core Split Queries?",
+    "options": [
+      "Avoid cartesian product",
+      "Separate SQL",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "Split queries execute separate SQL statements for each Include/ThenInclude to avoid Cartesian products."
   },
-  {"question": "What is the difference between Owned Entities and Table Splitting in EF Core?",
-    "options": ["Same table vs separate", "Ownership", "Relationship", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the difference between Owned Entities and Table Splitting in EF Core?",
+    "options": [
+      "Same table vs separate",
+      "Ownership",
+      "Relationship",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "Owned entities map to same table; Table splitting maps split entity to same table."
   },
-  {"question": "What is the purpose of Entity Configuration in EF Core?",
-    "options": ["Fluent API", "Mapping configuration", "Model building", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of Entity Configuration in EF Core?",
+    "options": [
+      "Fluent API",
+      "Mapping configuration",
+      "Model building",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IEntityTypeConfiguration<T> provides fluent configuration for entity mapping."
   },
-  {"question": "What is the purpose of ValueObject in EF Core?",
-    "options": ["Complex type", "Immutable", "Owned types", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of ValueObject in EF Core?",
+    "options": [
+      "Complex type",
+      "Immutable",
+      "Owned types",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "details": "ValueObjects using owned types represent immutable value concepts."
   },
-  {"question": "What is the difference between AddDbContext and AddDbContextPool?",
-    "options": ["Pooling", "Performance", "Reuse", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the difference between AddDbContext and AddDbContextPool?",
+    "options": [
+      "Pooling",
+      "Performance",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "DbContextPool reuses DbContext instances for better performance."
   },
-  {"question": "What is the purpose of IDesignTimeDbContextFactory<T>?",
-    "options": ["Migration design", "Context creation", "Tooling", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IDesignTimeDbContextFactory<T>?",
+    "options": [
+      "Migration design",
+      "Context creation",
+      "Tooling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IDesignTimeDbContextFactory creates DbContext for design-time tools."
   },
-  {"question": "What is the purpose of EnsureCreated and EnsureDeleted?",
-    "options": ["Database init", "Schema creation", "Operations", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of EnsureCreated and EnsureDeleted?",
+    "options": [
+      "Database init",
+      "Schema creation",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "EnsureCreated creates database if not exists; EnsureDeleted deletes."
   },
-  {"question": "What is the difference between EF Core and EF6 architecture?",
-    "options": ["Provider model", "DbContext", "Patterns", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the difference between EF Core and EF6 architecture?",
+    "options": [
+      "Provider model",
+      "DbContext",
+      "Patterns",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "EF Core has different provider model, no ObjectContext, and different patterns."
   },
-  {"question": "What is the purpose of IQueryable in EF Core?",
-    "options": ["Deferred query", "Provider specific", "Expression trees", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IQueryable in EF Core?",
+    "options": [
+      "Deferred query",
+      "Provider specific",
+      "Expression trees",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IQueryable enables building queries that translate to SQL at enumeration."
   },
-  {"question": "What is the purpose of Compiled Models in EF Core?",
-    "options": ["Pre-compiled model", "Startup performance", "Caching", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of Compiled Models in EF Core?",
+    "options": [
+      "Pre-compiled model",
+      "Startup performance",
+      "Caching",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "Compiled models skip model building at startup for faster startup."
   },
-  {"question": "What is the purpose of Lazy Loading Proxies in EF Core?",
-    "options": ["On-demand loading", "Virtual properties", "Runtime generation", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of Lazy Loading Proxies in EF Core?",
+    "options": [
+      "On-demand loading",
+      "Virtual properties",
+      "Runtime generation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "Proxies inherit from entity types and override virtual navigation properties."
   },
-  {"question": "What is the purpose of ChangeTracker.AutoDetectChangesEnabled?",
-    "options": ["Auto detection", "Performance", "Control", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of ChangeTracker.AutoDetectChangesEnabled?",
+    "options": [
+      "Auto detection",
+      "Performance",
+      "Control",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "Disabling AutoDetectChanges improves bulk performance."
   },
-  {"question": "What is the purpose of Query tags in EF Core?",
-    "options": ["SQL comments", "Logging", "Identification", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of Query tags in EF Core?",
+    "options": [
+      "SQL comments",
+      "Logging",
+      "Identification",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "TagWith adds SQL comments for query identification in logs."
   },
-  {"question": "What is the purpose of Query Filters in EF Core?",
-    "options": ["Global filters", "Automatic", "Soft delete", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of Query Filters in EF Core?",
+    "options": [
+      "Global filters",
+      "Automatic",
+      "Soft delete",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "Global query filters apply automatically to all queries (e.g., soft delete)."
   },
-  {"question": "What is the purpose of Interceptors in EF Core?",
-    "options": ["Command interception", "Logging", "Modification", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of Interceptors in EF Core?",
+    "options": [
+      "Command interception",
+      "Logging",
+      "Modification",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "Interceptors hook into EF operations for logging/modification."
   },
-  {"question": "What is the purpose of IInterceptor?",
-    "options": ["Command interception", "DbCommand", "Execution", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IInterceptor?",
+    "options": [
+      "Command interception",
+      "DbCommand",
+      "Execution",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IInterceptor intercepts DbCommand execution."
   },
-  {"question": "What is the purpose of RelationalTypeMappingInfo?",
-    "options": ["Type mapping", "Database type", "Configuration", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 50,
-    "details": "RelationalTypeMappingInfo configures database type mapping."
+  {
+    "question": "What is the Array filter method?",
+    "options": [
+      "Filter elements",
+      "Returns new array",
+      "Predicate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Filter elements",
+      "Returns new array",
+      "Predicate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is the Array filter method? explanation."
   },
-  {"question": "What is the purpose of IModelCacheKeyFactory?",
-    "options": ["Model caching", "Cache key", "Context", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IModelCacheKeyFactory?",
+    "options": [
+      "Model caching",
+      "Cache key",
+      "Context",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IModelCacheKeyFactory creates keys for caching DbContext models."
   },
-  {"question": "What is the purpose of IModelCustomizer?",
-    "options": ["Model customization", "Configuration", "Building", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IModelCustomizer?",
+    "options": [
+      "Model customization",
+      "Configuration",
+      "Building",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IModelCustomizer provides custom model configuration."
   },
-  {"question": "What is the purpose of IPropertyChangedListener<T>?",
-    "options": ["Property notifications", "Change tracking", "Events", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IPropertyChangedListener<T>?",
+    "options": [
+      "Property notifications",
+      "Change tracking",
+      "Events",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IPropertyChangedListener tracks entity property changes."
   },
-  {"question": "What is the purpose of IEntityEntrySubscriber?",
-    "options": ["Entity events", "Change tracking", "Notifications", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IEntityEntrySubscriber?",
+    "options": [
+      "Entity events",
+      "Change tracking",
+      "Notifications",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IEntityEntrySubscriber subscribes to entity change notifications."
   },
-  {"question": "What is the purpose of IQueryExpressionInterceptor?",
-    "options": ["Query interception", "Translation", "Modification", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IQueryExpressionInterceptor?",
+    "options": [
+      "Query interception",
+      "Translation",
+      "Modification",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IQueryExpressionInterceptor modifies LINQ expressions before translation."
   },
-  {"question": "What is the purpose of IQueryCompilationInterceptor?",
-    "options": ["Compile interception", "Post-translation", "Modification", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IQueryCompilationInterceptor?",
+    "options": [
+      "Compile interception",
+      "Post-translation",
+      "Modification",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IQueryCompilationInterceptor modifies compiled queries."
   },
-  {"question": "What is the purpose of IRelationalCommandBuilder?",
-    "options": ["Command building", "SQL generation", "Relational", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IRelationalCommandBuilder?",
+    "options": [
+      "Command building",
+      "SQL generation",
+      "Relational",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IRelationalCommandBuilder builds relational commands."
   },
-  {"question": "What is the purpose of IMaterializationContext?",
-    "options": ["Materialization", "Entity creation", "Query results", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IMaterializationContext?",
+    "options": [
+      "Materialization",
+      "Entity creation",
+      "Query results",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IMaterializationContext provides context for materializing entities."
   },
-  {"question": "What is the purpose of EntityMaterializerSource?",
-    "options": ["Entity creation", "Materialization logic", "Projection", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of EntityMaterializerSource?",
+    "options": [
+      "Entity creation",
+      "Materialization logic",
+      "Projection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "EntityMaterializerSource handles entity materialization from query results."
   },
-  {"question": "What is the purpose of IRelationalProjectionBindingReader?",
-    "options": ["Projection binding", "Expression reading", "Results", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IRelationalProjectionBindingReader?",
+    "options": [
+      "Projection binding",
+      "Expression reading",
+      "Results",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IRelationalProjectionBindingReader reads projection expressions."
   },
-  {"question": "What is the purpose of IQueryTranslationPostprocessor?",
-    "options": ["Post-processing", "Translation", "Optimization", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IQueryTranslationPostprocessor?",
+    "options": [
+      "Post-processing",
+      "Translation",
+      "Optimization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IQueryTranslationPostprocessor optimizes translated queries."
   },
-  {"question": "What is the purpose of IQueryableExtensions?",
-    "options": ["Query extensions", "EF extensions", "Linq", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IQueryableExtensions?",
+    "options": [
+      "Query extensions",
+      "EF extensions",
+      "Linq",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "QueryableExtensions provide additional query operators."
   },
-  {"question": "What is the purpose of IAsyncQueryProvider?",
-    "options": ["Async execution", "Query provider", "Async LINQ", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IAsyncQueryProvider?",
+    "options": [
+      "Async execution",
+      "Query provider",
+      "Async LINQ",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IAsyncQueryProvider executes async queries."
   },
-  {"question": "What is the difference between IAsyncEnumerable and IAsyncEnumerator?",
-    "options": ["Interface vs enumerator", "Usage", "Iteration", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the difference between IAsyncEnumerable and IAsyncEnumerator?",
+    "options": [
+      "Interface vs enumerator",
+      "Usage",
+      "Iteration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IAsyncEnumerable is the interface; IAsyncEnumerator provides iteration."
   },
-  {"question": "What is the purpose of IIncludableQueryable?",
-    "options": ["Include chain", "ThenInclude", "Queryable", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 50,
-    "details": "IIncludableQueryable enables Include/ThenInclude chaining."
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
   },
-  {"question": "What is the purpose of IQueryableOfExtensions?",
-    "options": ["Include extensions", "Eager loading", "Query", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 50,
-    "details": "IQueryableExtensions provides ThenInclude for nested eager loading."
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
   },
-  {"question": "What is the purpose of DbContextOptionsBuilder.UseInternalServiceProvider?",
-    "options": ["Service provider", "DI container", "Configuration", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of DbContextOptionsBuilder.UseInternalServiceProvider?",
+    "options": [
+      "Service provider",
+      "DI container",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "UseInternalServiceProvider configures internal service provider."
   },
-  {"question": "What is the purpose of IResettableService?",
-    "options": ["Service reset", "Pool reset", "State", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IResettableService?",
+    "options": [
+      "Service reset",
+      "Pool reset",
+      "State",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IResettableService allows resetting pooled services."
   },
-  {"question": "What is the purpose of IConventionSetBuilder?",
-    "options": ["Convention building", "Model conventions", "Configuration", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IConventionSetBuilder?",
+    "options": [
+      "Convention building",
+      "Model conventions",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IConventionSetBuilder builds conventions for model configuration."
   },
-  {"question": "What is the purpose of IModelCustomizer?",
-    "options": ["Customize model", "Configuration", "Convention", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 50,
-    "details": "IModelCustomizer customizes the EF model."
-  },
-  {"question": "What is the purpose of IConventionBuilder?",
-    "options": ["Convention builder", "Fluent API", "Configuration", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IConventionBuilder?",
+    "options": [
+      "Convention builder",
+      "Fluent API",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IConventionBuilder provides fluent API for conventions."
   },
-  {"question": "What is the purpose of ICSharpGenerator?",
-    "options": ["Code generation", "C# generation", "Scaffolding", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of ICSharpGenerator?",
+    "options": [
+      "Code generation",
+      "C# generation",
+      "Scaffolding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "ICSharpGenerator generates C# code from EF model."
   },
-  {"question": "What is the purpose of IAnnotation?",
-    "options": ["Annotation", "Metadata", "Custom", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IAnnotation?",
+    "options": [
+      "Annotation",
+      "Metadata",
+      "Custom",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IAnnotation stores custom annotation on model elements."
   },
-  {"question": "What is the purpose of IModel?",
-    "options": ["Model metadata", "Entity types", "Relationships", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IModel?",
+    "options": [
+      "Model metadata",
+      "Entity types",
+      "Relationships",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IModel represents the conceptual EF model."
   },
-  {"question": "What is the purpose of IEntityType?",
-    "options": ["Entity metadata", "Mapping", "Configuration", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IEntityType?",
+    "options": [
+      "Entity metadata",
+      "Mapping",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IEntityType provides metadata for an entity type."
   },
-  {"question": "What is the purpose of IProperty?",
-    "options": ["Property metadata", "Column mapping", "Configuration", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IProperty?",
+    "options": [
+      "Property metadata",
+      "Column mapping",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IProperty provides metadata for entity properties."
   },
-  {"question": "What is the purpose of INavigation?",
-    "options": ["Navigation metadata", "Relationships", "Properties", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of INavigation?",
+    "options": [
+      "Navigation metadata",
+      "Relationships",
+      "Properties",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "INavigation provides metadata for navigation properties."
   },
-  {"question": "What is the purpose of IForeignKey?",
-    "options": ["Foreign key metadata", "Relationships", "Integrity", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IForeignKey?",
+    "options": [
+      "Foreign key metadata",
+      "Relationships",
+      "Integrity",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IForeignKey provides metadata for foreign keys."
   },
-  {"question": "What is the purpose of IKey?",
-    "options": ["Key metadata", "Primary key", "Unique", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 50,
-    "details": "IKey provides metadata for primary/unique keys."
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
   },
-  {"question": "What is the purpose of IIndex?",
-    "options": ["Index metadata", "Database index", "Performance", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IIndex?",
+    "options": [
+      "Index metadata",
+      "Database index",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IIndex provides metadata for indexes."
   },
-  {"question": "What is the purpose of ISeedData<TEntity>?",
-    "options": ["Seed data", "Initial data", "Database", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of ISeedData<TEntity>?",
+    "options": [
+      "Seed data",
+      "Initial data",
+      "Database",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "ISeedData provides initial data for entities."
   },
-  {"question": "What is the purpose of IHasDbFunction?",
-    "options": ["DbFunction mapping", "Method translation", "SQL", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IHasDbFunction?",
+    "options": [
+      "DbFunction mapping",
+      "Method translation",
+      "SQL",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IHasDbFunction maps methods to database functions."
   },
-  {"question": "What is the purpose of IHasDbQuery?",
-    "options": ["DbQuery mapping", "Raw SQL", "Mapping", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IHasDbQuery?",
+    "options": [
+      "DbQuery mapping",
+      "Raw SQL",
+      "Mapping",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IHasDbQuery maps types to raw SQL queries."
   },
-  {"question": "What is the purpose of IHasDefaultValue?",
-    "options": ["Default value", "Column default", "Database", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IHasDefaultValue?",
+    "options": [
+      "Default value",
+      "Column default",
+      "Database",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IHasDefaultValue sets column default values."
   },
-  {"question": "What is the purpose of IHasPrecision?",
-    "options": ["Precision", "Decimal config", "Numeric", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IHasPrecision?",
+    "options": [
+      "Precision",
+      "Decimal config",
+      "Numeric",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IHasPrecision configures decimal precision and scale."
   },
-  {"question": "What is the purpose of IHasMaxLength?",
-    "options": ["Max length", "String config", "Column", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IHasMaxLength?",
+    "options": [
+      "Max length",
+      "String config",
+      "Column",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IHasMaxLength configures string/maximum length."
   },
-  {"question": "What is the purpose of IPropertyBuilderEntityTypeBuilder?",
-    "options": ["Property builder", "Fluent API", "Configuration", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IPropertyBuilderEntityTypeBuilder?",
+    "options": [
+      "Property builder",
+      "Fluent API",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "PropertyBuilderEntityTypeBuilder provides fluent API for property configuration."
   },
-  {"question": "What is the purpose of IEntityTypeConfiguration<T>?",
-    "options": ["Fluent config", "Separation", "Convention", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IEntityTypeConfiguration<T>?",
+    "options": [
+      "Fluent config",
+      "Separation",
+      "Convention",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IEntityTypeConfiguration<T> separates entity configuration into dedicated classes."
   },
-  {"question": "What is the purpose of ModelBuilder.ApplyConfiguration?",
-    "options": ["Apply config", "Configuration", "Mapping", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of ModelBuilder.ApplyConfiguration?",
+    "options": [
+      "Apply config",
+      "Configuration",
+      "Mapping",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "ApplyConfiguration applies IEntityTypeConfiguration to model."
   },
-  {"question": "What is the purpose of RelationshipBuilder?",
-    "options": ["Relationship config", "Fluent API", "Navigation", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of RelationshipBuilder?",
+    "options": [
+      "Relationship config",
+      "Fluent API",
+      "Navigation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "RelationshipBuilder configures entity relationships."
   },
-  {"question": "What is the purpose of KeyBuilder?",
-    "options": ["Key configuration", "Primary key", "Unique", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 50,
-    "details": "KeyBuilder configures primary/unique keys."
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
   },
-  {"question": "What is the purpose of IndexBuilder?",
-    "options": ["Index configuration", "Database index", "Performance", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IndexBuilder?",
+    "options": [
+      "Index configuration",
+      "Database index",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IndexBuilder configures database indexes."
   },
-  {"question": "What is the purpose of PropertyBuilder?",
-    "options": ["Property config", "Column mapping", "Validation", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of PropertyBuilder?",
+    "options": [
+      "Property config",
+      "Column mapping",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "PropertyBuilder configures entity properties."
   },
-  {"question": "What is the purpose of EntityTypeBuilder?",
-    "options": ["Entity config", "Table mapping", "Schema", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of EntityTypeBuilder?",
+    "options": [
+      "Entity config",
+      "Table mapping",
+      "Schema",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "EntityTypeBuilder configures entity types and table mapping."
   },
-  {"question": "What is the purpose of DbModelBuilder?",
-    "options": ["Model building", "Configuration", "Convention", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of DbModelBuilder?",
+    "options": [
+      "Model building",
+      "Configuration",
+      "Convention",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "DbModelBuilder builds the conceptual model."
   },
-  {"question": "What is the purpose of IModelBuilderDependency?",
-    "options": ["Dependencies", "Services", "Resolution", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IModelBuilderDependency?",
+    "options": [
+      "Dependencies",
+      "Services",
+      "Resolution",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IModelBuilderDependency provides dependencies for model building."
   },
-  {"question": "What is the purpose of IModelCacheKeyFactory?",
-    "options": ["Cache key", "Model caching", "Context key", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 50,
-    "details": "IModelCacheKeyFactory creates keys for cached models."
-  },
-  {"question": "What is the purpose of IProviderInvariantName?",
-    "options": ["Provider name", "Invariant", "Database", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IProviderInvariantName?",
+    "options": [
+      "Provider name",
+      "Invariant",
+      "Database",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IProviderInvariantName provides the provider invariant name."
   },
-  {"question": "What is the purpose of IProviderServices?",
-    "options": ["Provider services", "Database services", "Capabilities", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IProviderServices?",
+    "options": [
+      "Provider services",
+      "Database services",
+      "Capabilities",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IProviderServices provides database-specific services."
   },
-  {"question": "What is the purpose of IDatabaseCreator?",
-    "options": ["Database operations", "Creation", "Schema", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IDatabaseCreator?",
+    "options": [
+      "Database operations",
+      "Creation",
+      "Schema",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IDatabaseCreator handles database creation/management."
   },
-  {"question": "What is the purpose of IRelationalDatabaseCreator?",
-    "options": ["Relational DB", "Operations", "Schema", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IRelationalDatabaseCreator?",
+    "options": [
+      "Relational DB",
+      "Operations",
+      "Schema",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IRelationalDatabaseCreator provides relational database operations."
   },
-  {"question": "What is the purpose of IHistoryRepository?",
-    "options": ["Migration history", "EFMigrations", "Table", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IHistoryRepository?",
+    "options": [
+      "Migration history",
+      "EFMigrations",
+      "Table",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IHistoryRepository manages migration history table."
   },
-  {"question": "What is the purpose of IMigrator?",
-    "options": ["Migration execution", "Database migration", "Updates", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IMigrator?",
+    "options": [
+      "Migration execution",
+      "Database migration",
+      "Updates",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IMigrator executes pending migrations."
   },
-  {"question": "What is the purpose of IDatabaseMigrationsSqlGenerator?",
-    "options": ["SQL generation", "Migration SQL", "DDL", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IDatabaseMigrationsSqlGenerator?",
+    "options": [
+      "SQL generation",
+      "Migration SQL",
+      "DDL",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IDatabaseMigrationsSqlGenerator generates migration SQL."
   },
-  {"question": "What is the purpose of IMigrationSqlGenerator?",
-    "options": ["Migration DDL", "SQL generation", "Operations", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IMigrationSqlGenerator?",
+    "options": [
+      "Migration DDL",
+      "SQL generation",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IMigrationSqlGenerator generates SQL for migration operations."
   },
-  {"question": "What is the purpose of IMigrationOperation?",
-    "options": ["Migration operations", "Abstraction", "Model", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IMigrationOperation?",
+    "options": [
+      "Migration operations",
+      "Abstraction",
+      "Model",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IMigrationOperation represents migration operations."
   },
-  {"question": "What is the purpose of IRelationalCommand?",
-    "options": ["Execute command", "SQL", "Database", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IRelationalCommand?",
+    "options": [
+      "Execute command",
+      "SQL",
+      "Database",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IRelationalCommand executes database commands."
   },
-  {"question": "What is the purpose of IRelationalConnection?",
-    "options": ["Database connection", "Connection", "Transaction", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IRelationalConnection?",
+    "options": [
+      "Database connection",
+      "Connection",
+      "Transaction",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IRelationalConnection manages database connections."
   },
-  {"question": "What is the purpose of ITransactionManager?",
-    "options": ["Transaction", "Management", "Commit/Rollback", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of ITransactionManager?",
+    "options": [
+      "Transaction",
+      "Management",
+      "Commit/Rollback",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "ITransactionManager manages database transactions."
   },
-  {"question": "What is the purpose of IDbContextTransactionManager?",
-    "options": ["Context transaction", "EF transaction", "Management", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IDbContextTransactionManager?",
+    "options": [
+      "Context transaction",
+      "EF transaction",
+      "Management",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IDbContextTransactionManager provides transaction management."
   },
-  {"question": "What is the purpose of IExecutionStrategy?",
-    "options": ["Retry strategy", "Execution", "Error handling", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IExecutionStrategy?",
+    "options": [
+      "Retry strategy",
+      "Execution",
+      "Error handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IExecutionStrategy provides retry/failure handling."
   },
-  {"question": "What is the purpose of IRelationalTypeMapper?",
-    "options": ["Type mapping", "Database types", "CLR types", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 50,
-    "details": "IRelationalTypeMapper maps CLR types to database types."
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
   },
-  {"question": "What is the purpose of IValueGenerator?",
-    "options": ["Value generation", "Keys", "Defaults", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IValueGenerator?",
+    "options": [
+      "Value generation",
+      "Keys",
+      "Defaults",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IValueGenerator generates values for properties."
   },
-  {"question": "What is the purpose of IValueGeneratorSelector?",
-    "options": ["Select generator", "Value generation", "Context", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IValueGeneratorSelector?",
+    "options": [
+      "Select generator",
+      "Value generation",
+      "Context",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IValueGeneratorSelector selects appropriate value generators."
   },
-  {"question": "What is the purpose of IValueConverterSelector?",
-    "options": ["Converter selection", "Value conversion", "Type", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IValueConverterSelector?",
+    "options": [
+      "Converter selection",
+      "Value conversion",
+      "Type",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IValueConverterSelector selects value converters."
   },
-  {"question": "What is the purpose of IValueConverter?",
-    "options": ["Value conversion", "Property conversion", "Database", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IValueConverter?",
+    "options": [
+      "Value conversion",
+      "Property conversion",
+      "Database",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IValueConverter converts between model and database values."
   },
-  {"question": "What is the purpose of ITypeMappingSource?",
-    "options": ["Type mapping", "CLR to DB", "Model", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 50,
-    "details": "ITypeMappingSource provides type mappings."
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
   },
-  {"question": "What is the purpose of IMemberClassifier?",
-    "options": ["Classify members", "Model building", "Convention", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IMemberClassifier?",
+    "options": [
+      "Classify members",
+      "Model building",
+      "Convention",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IMemberClassifier classifies entity members during model building."
   },
-  {"question": "What is the purpose of INavigationBase?",
-    "options": ["Navigation base", "Properties", "Metadata", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of INavigationBase?",
+    "options": [
+      "Navigation base",
+      "Properties",
+      "Metadata",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "INavigationBase provides base navigation property metadata."
   },
-  {"question": "What is the purpose of IDependentKeyPropertyMetadata?",
-    "options": ["Dependent key", "FK metadata", "Properties", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IDependentKeyPropertyMetadata?",
+    "options": [
+      "Dependent key",
+      "FK metadata",
+      "Properties",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IDependentKeyPropertyMetadata provides dependent key property metadata."
   },
-  {"question": "What is the purpose of IReferenceEntry?",
-    "options": ["Reference entry", "Navigation", "State", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IReferenceEntry?",
+    "options": [
+      "Reference entry",
+      "Navigation",
+      "State",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IReferenceEntry represents reference navigation entry."
   },
-  {"question": "What is the purpose of ILocalSet<T>?",
-    "options": ["Local set", "Entity set", "Tracking", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of ILocalSet<T>?",
+    "options": [
+      "Local set",
+      "Entity set",
+      "Tracking",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "ILocalSet<T> provides access to local entity set."
   },
-  {"question": "What is the purpose of IEntityEntryGraphIterator?",
-    "options": ["Graph iteration", "Navigation", "Traversal", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IEntityEntryGraphIterator?",
+    "options": [
+      "Graph iteration",
+      "Navigation",
+      "Traversal",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IEntityEntryGraphIterator iterates entity graphs."
   },
-  {"question": "What is the purpose of IEntityGraphAttacher?",
-    "options": ["Graph attach", "Entity graph", "Attachment", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IEntityGraphAttacher?",
+    "options": [
+      "Graph attach",
+      "Entity graph",
+      "Attachment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IEntityGraphAttacher attaches entity graphs to context."
   },
-  {"question": "What is the purpose of INavigationFixer?",
-    "options": ["Navigation fix", "Relationships", "Integrity", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of INavigationFixer?",
+    "options": [
+      "Navigation fix",
+      "Relationships",
+      "Integrity",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "INavigationFixer maintains navigation property consistency."
   },
-  {"question": "What is the purpose of IChangeDetector?",
-    "options": ["Change detection", "Property changes", "Notification", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IChangeDetector?",
+    "options": [
+      "Change detection",
+      "Property changes",
+      "Notification",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IChangeDetector detects entity property changes."
   },
-  {"question": "What is the purpose of IEntityStateListener?",
-    "options": ["State listener", "Entity state", "Events", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IEntityStateListener?",
+    "options": [
+      "State listener",
+      "Entity state",
+      "Events",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IEntityStateListener listens to entity state changes."
   },
-  {"question": "What is the purpose of IQueryProvider?",
-    "options": ["Query provider", "Expression", "Execution", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of IQueryProvider?",
+    "options": [
+      "Query provider",
+      "Expression",
+      "Execution",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 50,
     "details": "IQueryProvider executes expression trees to return queries."
   },
-  {"question": "What is the purpose of DbProviderServices?",
-    "options": ["Provider services", "Database operations", "EF services", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the purpose of DbProviderServices?",
+    "options": [
+      "Provider services",
+      "Database operations",
+      "EF services",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "details": "DbProviderServices provides database-specific implementations."
+  },
+  {
+    "question": "What is a delegate? (98)",
+    "options": [
+      "Function pointer",
+      "Type-safe",
+      "Callback",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is a delegate? explanation."
+  },
+  {
+    "question": "What is an event? (99)",
+    "options": [
+      "Delegate instance",
+      "Notification",
+      "Handler",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is an event? explanation."
+  },
+  {
+    "question": "What is async/await? (100)",
+    "options": [
+      "Asynchronous",
+      "Non-blocking",
+      "Task-based",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is async/await? explanation."
+  },
+  {
+    "question": "What is LINQ? (Level 5 #101)",
+    "options": [
+      "Query",
+      "Method",
+      "Lambda",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Query",
+      "Method",
+      "Lambda",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is LINQ? explanation."
+  },
+  {
+    "question": "What is delegate? (Level 5 #103)",
+    "options": [
+      "Type",
+      "Function pointer",
+      "Multicast",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Type",
+      "Function pointer",
+      "Multicast",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is delegate? explanation."
+  },
+  {
+    "question": "What is event? (Level 5 #104)",
+    "options": [
+      "Delegate",
+      "Publisher",
+      "Subscriber",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Delegate",
+      "Publisher",
+      "Subscriber",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event? explanation."
+  },
+  {
+    "question": "What is interface? (Level 5 #105)",
+    "options": [
+      "Contract",
+      "Multiple",
+      "Implementation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Contract",
+      "Multiple",
+      "Implementation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interface? explanation."
+  },
+  {
+    "question": "What is abstract class? (Level 5 #106)",
+    "options": [
+      "Cannot instantiate",
+      "Can have implementation",
+      "Derived",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot instantiate",
+      "Can have implementation",
+      "Derived",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstract class? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is nullable? (Level 5 #108)",
+    "options": [
+      "Value type",
+      "Null",
+      "Operator",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Value type",
+      "Null",
+      "Operator",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is nullable? explanation."
+  },
+  {
+    "question": "What is lambda? (Level 5 #109)",
+    "options": [
+      "Expression",
+      "Statement",
+      "Delegate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Expression",
+      "Statement",
+      "Delegate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is lambda? explanation."
+  },
+  {
+    "question": "What is yield? (Level 5 #110)",
+    "options": [
+      "Iterator",
+      "Deferred",
+      "State",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Iterator",
+      "Deferred",
+      "State",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is yield? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
   }
 ]

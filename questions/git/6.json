@@ -854,549 +854,666 @@
     "details": "pre-commit or pre-push can check file sizes."
   },
   {
-    "question": "What are Git hooks?",
+    "question": "What is git init? (Level 6 #101)",
     "options": [
-      "Scripts that run on events",
-      "Git commands",
-      "Remote operations",
-      "Merge tools"
-    ],
-    "correctOptions": [
-      "Scripts that run on events"
-    ],
-    "time": 25,
-    "details": "Git hooks are scripts that trigger at certain points."
-  },
-  {
-    "question": "Where are Git hooks stored?",
-    "options": [
-      ".git/hooks/",
-      "hooks/",
-      ".git/",
-      "repo/hooks/"
-    ],
-    "correctOptions": [
-      ".git/hooks/"
-    ],
-    "time": 20,
-    "details": "Hooks are stored in the .git/hooks directory."
-  },
-  {
-    "question": "What is a pre-commit hook?",
-    "options": [
-      "Runs before commit is created",
-      "Runs after commit",
-      "Runs during commit",
-      "Runs instead of commit"
-    ],
-    "correctOptions": [
-      "Runs before commit is created"
-    ],
-    "time": 30,
-    "details": "pre-commit runs before each commit is created."
-  },
-  {
-    "question": "What is a commit-msg hook?",
-    "options": [
-      "Validates commit messages",
-      "Creates commits",
-      "Edits commits",
-      "Deletes commits"
-    ],
-    "correctOptions": [
-      "Validates commit messages"
-    ],
-    "time": 30,
-    "details": "commit-msg checks commit message format."
-  },
-  {
-    "question": "What is a post-commit hook?",
-    "options": [
-      "Runs after commit is created",
-      "Runs before commit",
-      "Runs during commit",
-      "Runs instead of commit"
-    ],
-    "correctOptions": [
-      "Runs after commit is created"
-    ],
-    "time": 30,
-    "details": "post-commit runs after each commit completes."
-  },
-  {
-    "question": "What is a pre-push hook?",
-    "options": [
-      "Runs before push",
-      "Runs after push",
-      "Runs during push",
-      "Replaces push"
-    ],
-    "correctOptions": [
-      "Runs before push"
-    ],
-    "time": 30,
-    "details": "pre-push runs before push is executed."
-  },
-  {
-    "question": "What is a post-push hook?",
-    "options": [
-      "Runs after push completes",
-      "Runs before push",
-      "Runs during push",
-      "Replaces push"
-    ],
-    "correctOptions": [
-      "Runs after push completes"
-    ],
-    "time": 30,
-    "details": "post-push runs after push completes."
-  },
-  {
-    "question": "What is a pre-receive hook?",
-    "options": [
-      "Runs on remote before push",
-      "Runs locally",
-      "Runs after receive",
-      "Replaces push"
-    ],
-    "correctOptions": [
-      "Runs on remote before push"
-    ],
-    "time": 35,
-    "details": "pre-receive is server-side, runs before receiving push."
-  },
-  {
-    "question": "What is a post-receive hook?",
-    "options": [
-      "Runs on remote after push",
-      "Runs locally",
-      "Runs before receive",
-      "Cancels push"
-    ],
-    "correctOptions": [
-      "Runs on remote after push"
-    ],
-    "time": 35,
-    "details": "post-receive is server-side, runs after receiving push."
-  },
-  {
-    "question": "What is update hook?",
-    "options": [
-      "Per-branch pre-receive",
-      "Per-commit",
-      "Post-commit",
-      "Pre-push"
-    ],
-    "correctOptions": [
-      "Per-branch pre-receive"
-    ],
-    "time": 35,
-    "details": "update runs per branch before accepting changes."
-  },
-  {
-    "question": "What is a pre-merge hook?",
-    "options": [
-      "Runs before merge",
-      "Runs after merge",
-      "During merge",
-      "Instead of merge"
-    ],
-    "correctOptions": [
-      "Runs before merge"
-    ],
-    "time": 35,
-    "details": "pre-merge runs before a merge is executed."
-  },
-  {
-    "question": "What is a post-merge hook?",
-    "options": [
-      "Runs after merge",
-      "Runs before merge",
-      "During merge",
-      "Instead of merge"
-    ],
-    "correctOptions": [
-      "Runs after merge"
-    ],
-    "time": 35,
-    "details": "post-merge runs after a merge completes."
-  },
-  {
-    "question": "What is a post-checkout hook?",
-    "options": [
-      "Runs after checkout",
-      "Runs before checkout",
-      "During checkout",
-      "Instead of checkout"
-    ],
-    "correctOptions": [
-      "Runs after checkout"
-    ],
-    "time": 35,
-    "details": "post-checkout runs after successful checkout."
-  },
-  {
-    "question": "What is a pre-rebase hook?",
-    "options": [
-      "Runs before rebase",
-      "Runs after rebase",
-      "During rebase",
-      "Instead of rebase"
-    ],
-    "correctOptions": [
-      "Runs before rebase"
-    ],
-    "time": 35,
-    "details": "pre-rebase runs before rebase starts."
-  },
-  {
-    "question": "What is a post-rewrite hook?",
-    "options": [
-      "Runs after rewriting history",
-      "Runs before rewrite",
-      "During rewrite",
-      "Instead of rewrite"
-    ],
-    "correctOptions": [
-      "Runs after rewriting history"
-    ],
-    "time": 35,
-    "details": "post-rewrite runs after commits are rewritten."
-  },
-  {
-    "question": "How do you enable a hook?",
-    "options": [
-      "Make script executable",
-      "Rename file without .sample",
-      "Both methods work",
-      "No action needed"
-    ],
-    "correctOptions": [
-      "Both methods work"
-    ],
-    "time": 30,
-    "details": "Rename without .sample or make executable."
-  },
-  {
-    "question": "What does exiting with 1 in hook do?",
-    "options": [
-      "Blocks the action",
-      "Allows action",
-      "Logs only",
-      "Ignores hook"
-    ],
-    "correctOptions": [
-      "Blocks the action"
-    ],
-    "time": 30,
-    "details": "Exit code 1 in pre-hooks blocks the operation."
-  },
-  {
-    "question": "What does exiting with 0 in hook do?",
-    "options": [
-      "Allows action to proceed",
-      "Blocks action",
-      "Logs only",
-      "Pauses action"
-    ],
-    "correctOptions": [
-      "Allows action to proceed"
-    ],
-    "time": 30,
-    "details": "Exit code 0 allows the operation to continue."
-  },
-  {
-    "question": "What is the commit-msg hook argument?",
-    "options": [
-      "File containing message",
-      "Branch name",
-      "Commit hash",
-      "Remote name"
-    ],
-    "correctOptions": [
-      "File containing message"
-    ],
-    "time": 35,
-    "details": "commit-msg receives the message file path."
-  },
-  {
-    "question": "What are pre-push hook arguments?",
-    "options": [
-      "Remote name and URL",
-      "Branch names",
-      "Commit hashes",
-      "File names"
-    ],
-    "correctOptions": [
-      "Remote name and URL"
-    ],
-    "time": 35,
-    "details": "pre-push gets remote name and URL as arguments."
-  },
-  {
-    "question": "What are pre-receive hook arguments?",
-    "options": [
-      "None from stdin",
-      "Branch names",
-      "Commit hashes",
-      "File names"
-    ],
-    "correctOptions": [
-      "None from stdin"
-    ],
-    "time": 40,
-    "details": "pre-receive receives refs via stdin, not args."
-  },
-  {
-    "question": "What stdin format for pre-receive?",
-    "options": [
-      "oldsha newsha ref",
-      "ref oldsha newsha",
-      "oldsha ref newsha",
-      "newsha oldsha ref"
-    ],
-    "correctOptions": [
-      "oldsha newsha ref"
-    ],
-    "time": 40,
-    "details": "Each line is: <oldsha> <newsha> <ref>"
-  },
-  {
-    "question": "What is a client-side hook?",
-    "options": [
-      "Runs on developer's machine",
-      "Runs on server",
-      "Runs on remote",
-      "Runs on shared"
-    ],
-    "correctOptions": [
-      "Runs on developer's machine"
-    ],
-    "time": 35,
-    "details": "Client hooks run locally on each developer's machine."
-  },
-  {
-    "question": "What is a server-side hook?",
-    "options": [
-      "Runs on remote repository",
-      "Runs locally",
-      "Runs on clone",
-      "Runs on push"
-    ],
-    "correctOptions": [
-      "Runs on remote repository"
-    ],
-    "time": 35,
-    "details": "Server hooks run on the central repository server."
-  },
-  {
-    "question": "How do you skip hooks?",
-    "options": [
-      "--no-verify flag",
-      "Skip hook config",
-      "Hook skip flag",
-      "No way"
-    ],
-    "correctOptions": [
-      "--no-verify flag"
-    ],
-    "time": 30,
-    "details": "--no-verify bypasses pre-hooks for commits/pushes."
-  },
-  {
-    "question": "What is .gitignore for hooks?",
-    "options": [
-      "Hooks are not ignored",
-      "Some hooks ignored",
-      "Template hooks ignored",
-      "Custom hooks ignored"
-    ],
-    "correctOptions": [
-      "Hooks are not ignored"
-    ],
-    "time": 35,
-    "details": ".gitignore doesn't apply to hooks directory."
-  },
-  {
-    "question": "Can you share hooks with team?",
-    "options": [
-      "Via .git/hooks in repo",
-      "Not built-in",
-      "Only via custom config",
-      "Only manually"
-    ],
-    "correctOptions": [
-      "Via .git/hooks in repo"
-    ],
-    "time": 40,
-    "details": "You can commit hooks to repo and symlink."
-  },
-  {
-    "question": "What is core.hooksPath?",
-    "options": [
-      "Custom hooks directory",
-      "Default hooks",
-      "Hook name",
-      "Hook config"
-    ],
-    "correctOptions": [
-      "Custom hooks directory"
-    ],
-    "time": 40,
-    "details": "core.hooksPath specifies where Git looks for hooks."
-  },
-  {
-    "question": "What is a common use for pre-commit?",
-    "options": [
-      "Run tests/linters",
-      "Send emails",
-      "Create branches",
-      "Push code"
-    ],
-    "correctOptions": [
-      "Run tests/linters"
-    ],
-    "time": 35,
-    "details": "pre-commit often runs code quality checks."
-  },
-  {
-    "question": "What is a common use for commit-msg?",
-    "options": [
-      "Enforce message format",
-      "Create files",
-      "Send notifications",
-      "Update branches"
-    ],
-    "correctOptions": [
-      "Enforce message format"
-    ],
-    "time": 35,
-    "details": "commit-msg ensures consistent commit messages."
-  },
-  {
-    "question": "What is a common use for post-receive?",
-    "options": [
-      "Deploy code",
-      "Create backups",
-      "Update tracking",
-      "Send notifications"
-    ],
-    "correctOptions": [
-      "Send notifications"
-    ],
-    "time": 35,
-    "details": "post-receive often sends notifications or deploys."
-  },
-  {
-    "question": "What is a CI/CD hook?",
-    "options": [
-      "Trigger build pipeline",
-      "Create commit",
-      "Delete commit",
-      "Modify commit"
-    ],
-    "correctOptions": [
-      "Trigger build pipeline"
-    ],
-    "time": 35,
-    "details": "Hooks often trigger CI/CD pipelines."
-  },
-  {
-    "question": "What is the shebang in hooks?",
-    "options": [
-      "Script interpreter directive",
-      "Comment",
-      "Hook name",
-      "Variable"
-    ],
-    "correctOptions": [
-      "Script interpreter directive"
-    ],
-    "time": 40,
-    "details": "#!/bin/bash specifies the script interpreter."
-  },
-  {
-    "question": "Can hooks be in any language?",
-    "options": [
-      "Yes, any executable",
-      "Only shell",
-      "Only Python",
-      "Only Ruby"
-    ],
-    "correctOptions": [
-      "Yes, any executable"
-    ],
-    "time": 35,
-    "details": "Hooks can be in any language with executable permission."
-  },
-  {
-    "question": "What environment variables are available to hooks?",
-    "options": [
-      "GIT_DIR, GIT_WORK_TREE",
-      "Only GIT_DIR",
-      "Only PATH",
-      "Only HOME"
-    ],
-    "correctOptions": [
-      "GIT_DIR, GIT_WORK_TREE"
-    ],
-    "time": 45,
-    "details": "Several GIT_* environment variables are set."
-  },
-  {
-    "question": "What is GIT_DIR?",
-    "options": [
-      "Repository location",
-      "Working tree",
-      "Remote URL",
-      "Branch name"
-    ],
-    "correctOptions": [
-      "Repository location"
-    ],
-    "time": 40,
-    "details": "GIT_DIR points to the .git directory."
-  },
-  {
-    "question": "What is GIT_WORK_TREE?",
-    "options": [
-      "Working directory location",
       "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git init? explanation."
+  },
+  {
+    "question": "What is git clone? (Level 6 #102)",
+    "options": [
+      "Copy",
       "Remote",
-      "Hook location"
+      "History",
+      "All of the above"
     ],
     "correctOptions": [
-      "Working directory location"
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
     ],
-    "time": 40,
-    "details": "GIT_WORK_TREE points to working directory."
+    "time": 35,
+    "details": "What is git clone? explanation."
   },
   {
-    "question": "Can hooks modify commits?",
+    "question": "What is git branch? (Level 6 #103)",
     "options": [
-      "Only some can",
-      "None can",
-      "All can",
-      "By default"
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
     ],
     "correctOptions": [
-      "Only some can"
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
     ],
-    "time": 45,
-    "details": "Only certain hooks (commit-msg, post-rewrite) can."
+    "time": 35,
+    "details": "What is git branch? explanation."
   },
   {
-    "question": "What is pre-commit with husky?",
+    "question": "What is git merge? (Level 6 #104)",
     "options": [
-      "Git hooks made easy",
-      "New hook type",
-      "Hook manager",
-      "Both 1 and 3"
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
     ],
     "correctOptions": [
-      "Both 1 and 3"
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
     ],
-    "time": 50,
-    "details": "Husky makes Git hooks easier to manage."
+    "time": 35,
+    "details": "What is git merge? explanation."
+  },
+  {
+    "question": "What is git rebase? (Level 6 #105)",
+    "options": [
+      "History",
+      "Linear",
+      "Interactive",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "History",
+      "Linear",
+      "Interactive",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git rebase? explanation."
+  },
+  {
+    "question": "What is git stash? (Level 6 #106)",
+    "options": [
+      "Temporary",
+      "Save",
+      "Pop",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Temporary",
+      "Save",
+      "Pop",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git stash? explanation."
+  },
+  {
+    "question": "What is git reset? (Level 6 #107)",
+    "options": [
+      "Undo",
+      "Staging",
+      "Soft",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Undo",
+      "Staging",
+      "Soft",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git reset? explanation."
+  },
+  {
+    "question": "What is git diff? (Level 6 #108)",
+    "options": [
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git diff? explanation."
+  },
+  {
+    "question": "What is git log? (Level 6 #109)",
+    "options": [
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git log? explanation."
+  },
+  {
+    "question": "What is git remote? (Level 6 #110)",
+    "options": [
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git remote? explanation."
+  },
+  {
+    "question": "What is destructuring assignment?",
+    "options": [
+      "Extract values",
+      "Array/object",
+      "Short syntax",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Extract values",
+      "Array/object",
+      "Short syntax",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is destructuring assignment? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
   }
 ]

@@ -1,130 +1,2307 @@
 [
-  {"question": "What is React Compiler (formerly React Forget)?", "options": ["Auto memoization", "Automatic optimization at compile time", "Compile-time", "New compiler"], "correctOptions": ["Auto memoization"], "time": 60, "details": "React Compiler automatically optimizes by determining what to memoize."},
-  {"question": "What is useMemo automatic?", "options": ["Avoid explicit", "Compiler handles memoization automatically", "Compiler", "Manual"], "correctOptions": ["Compiler handles memoization automatically"], "time": 65, "details": "React Compiler reduces need for manual useMemo/useCallback."},
-  {"question": "What is useCallback automatic?", "options": ["Avoid explicit", "Compiler handles callback stabilization automatically", "Compiler", "Manual"], "correctOptions": ["Compiler handles callback stabilization automatically"], "time": 65, "details": "React Compiler determines when callbacks need stability."},
-  {"question": "What are React Server Actions?", "options": ["Invoke server", "Functions that run on the server callable from client components", "RPC mechanism", "Server call"], "correctOptions": ["Functions that run on the server callable from client components"], "time": 55, "details": "Server Actions allow calling server code directly from components."},
-  {"question": "What is the Next.js App Router?", "options": ["File-based routing", "File-based routing using app/ directory", "App dir", "Framework"], "correctOptions": ["File-based routing using app/ directory"], "time": 55, "details": "App Router uses file-based routing in the app/ directory."},
-  {"question": "What are Server Components?", "options": ["Run on server", "Components that only render on server, never sent to client", "RSC", "Render"], "correctOptions": ["Components that only render on server, never sent to client"], "time": 55, "details": "Server Components reduce client bundle size significantly."},
-  {"question": "What is Streaming SSR?", "options": ["Chunked streaming", "Sending HTML in chunks as components resolve", "Server streaming", "Streaming"], "correctOptions": ["Sending HTML in chunks as components resolve"], "time": 60, "details": "Streaming SSR sends partial HTML while waiting for slow components."},
-  {"question": "What is Selective Hydration?", "options": ["Hydrate needed", "Prioritizing hydration of interactive parts first", "Prioritized", "Suspense"], "correctOptions": ["Prioritizing hydration of interactive parts first"], "time": 60, "details": "Selective hydration improves Time to Interactive."},
-  {"question": "What is the Pipe Operator pattern?", "options": ["Pipe to hook", "Passing component to hook for enhanced functionality", "Function pipe", "Compose"], "correctOptions": ["Passing component to hook for enhanced functionality"], "time": 60, "details": "Pipe pattern passes value through multiple transformations."},
-  {"question": "What is React Forget?", "options": ["Auto memo", "Project name for React Compiler", "Experimental", "Name"], "correctOptions": ["Project name for React Compiler"], "time": 65, "details": "React Forget was the original project name for React Compiler."},
-  {"question": "What is Taint Analysis?", "options": ["Sensitive data", "Analysis to track sensitive data like API keys through components", "Taint tracking", "Security"], "correctOptions": ["Analysis to track sensitive data like API keys through components"], "time": 65, "details": "Taint analysis prevents leaking secrets to client."},
-  {"question": "What is a Tainted Value?", "options": ["Sensitive", "A value that contains secrets or sensitive information", "Marked", "Secret"], "correctOptions": ["A value that contains secrets or sensitive information"], "time": 60, "details": "Tainted values are flagged as containing sensitive data."},
-  {"question": "What is checkTaint()?", "options": ["Check if tainted", "Function to check if a value contains sensitive data", "Validate", "Security"], "correctOptions": ["Function to check if a value contains sensitive data"], "time": 60, "details": "checkTaint validates whether data is sensitive."},
-  {"question": "What are Tainted Constants?", "options": ["Environment", "API keys, tokens, and other secrets stored in env", "Config", "All"], "correctOptions": ["API keys, tokens, and other secrets stored in env"], "time": 55, "details": "Environment variables with secrets become tainted constants."},
-  {"question": "What is Security Best Practice?", "options": ["Don't pass secrets", "Never pass secrets to client components", "Validate", "Taint check"], "correctOptions": ["Never pass secrets to client components"], "time": 60, "details": "Avoid passing secrets to client components in Server Actions."},
-  {"question": "What is React Native?", "options": ["Mobile React", "Framework for building native iOS and Android apps with React", "iOS/Android", "Framework"], "correctOptions": ["Framework for building native iOS and Android apps with React"], "time": 40, "details": "React Native builds truly native mobile applications."},
-  {"question": "What is a React Native Component?", "options": ["Native element", "A component that renders native platform views", "Native view", "Component"], "correctOptions": ["A component that renders native platform views"], "time": 45, "details": "RN components translate to native platform widgets."},
-  {"question": "What is View in React Native?", "options": ["Container", "Fundamental component for layout, like div for web", "Native div", "Box"], "correctOptions": ["Fundamental component for layout, like div for web"], "time": 45, "details": "View is the basic building block for UI layout."},
-  {"question": "What is Text in React Native?", "options": ["Text display", "Component for displaying text", "Label", "Native text"], "correctOptions": ["Component for displaying displaying text"], "time": 40, "details": "Text renders text content in the app."},
-  {"question": "What is TextInput in React Native?", "options": ["Text input", "Component for text input fields", "Input field", "Native input"], "correctOptions": ["Component for text input fields"], "time": 40, "details": "TextInput is the text entry component."},
-  {"question": "What is TouchableOpacity?", "options": ["Touchable button", "Button component that responds to touches with opacity change", "Pressable", "Native button"], "correctOptions": ["Button component that responds to touches with opacity change"], "time": 45, "details": "TouchableOpacity provides press feedback with opacity."},
-  {"question": "What is StyleSheet?", "options": ["Style system", "API for creating and managing styles in React Native", "Styles", "CSS-like"], "correctOptions": ["API for creating and managing styles in React Native"], "time": 45, "details": "StyleSheet creates optimized style objects."},
-  {"question": "What are Flat Styles?", "options": ["Plain JS object", "Styles defined as plain JavaScript objects", "No nesting", "Stylesheet"], "correctOptions": ["Styles defined as plain JavaScript objects"], "time": 50, "details": "RN styles are plain objects, not CSS strings."},
-  {"question": "What is useNativeDriver?", "options": ["Native animation", "Config for running animations on native thread", "Animation flag", "JS bridge"], "correctOptions": ["Config for running animations on native thread"], "time": 50, "details": "useNativeDriver moves animations to native for performance."},
-  {"question": "What is the Animated API?", "options": ["Native animations", "React Native's declarative animation system", "Animation lib", "JS library"], "correctOptions": ["React Native's declarative animation system"], "time": 50, "details": "Animated API provides performant animations."},
-  {"question": "What is useAnimatedStyle?", "options": ["Animated styles", "Hook for creating animated style objects for Reanimated", "Shared values", "Styles"], "correctOptions": ["Hook for creating animated style objects for Reanimated"], "time": 60, "details": "useAnimatedStyle creates animated style objects."},
-  {"question": "What is a Reanimated Worklet?", "options": ["Run on UI thread", "Function that runs on the UI thread for animations", "Animation", "Function"], "correctOptions": ["Function that runs on the UI thread for animations"], "time": 60, "details": "Worklets run on the UI thread for smooth animations."},
-  {"question": "What is runOnJS?", "options": ["Execute JS", "Function to call JavaScript code from worklet", "Cross thread", "Bridge"], "correctOptions": ["Function to call JavaScript code from worklet"], "time": 65, "details": "runOnJS bridges worklet execution to JavaScript thread."},
-  {"question": "What is runOnUI?", "options": ["Execute on UI", "Function to execute code on UI thread from JS", "Native thread", "Bridge"], "correctOptions": ["Function to execute code on UI thread from JS"], "time": 65, "details": "runOnUI schedules work on the UI thread."},
-  {"question": "What is React Native Gesture Handler?", "options": ["Touch handling", "Library for handling complex gestures in React Native", "Gestures", "Native gestures"], "correctOptions": ["Library for handling complex gestures in React Native"], "time": 55, "details": "Gesture Handler provides native gesture handling."},
-  {"question": "What is GestureDetector?", "options": ["Gesture wrapper", "Component for wrapping gesture handlers", "Wrap gestures", "Component"], "correctOptions": ["Component for wrapping gesture handlers"], "time": 55, "details": "GestureDetector wraps gesture configurations."},
-  {"question": "What is a Pan Gesture?", "options": ["Drag movement", "Gesture for detecting dragging/swiping motions", "Pan", "Move"], "correctOptions": ["Gesture for detecting dragging/swiping motions"], "time": 50, "details": "Pan gesture tracks finger movement."},
-  {"question": "What is a Pinch Gesture?", "options": ["Zoom", "Gesture for detecting pinch-to-zoom", "Scale", "Pinch"], "correctOptions": ["Gesture for detecting pinch-to-zoom"], "time": 55, "details": "Pinch gesture is used for scaling/zooming."},
-  {"question": "What is a Rotation Gesture?", "options": ["Rotate", "Gesture for detecting rotation motions", "Turn", "Rotate"], "correctOptions": ["Gesture for detecting rotation motions"], "time": 55, "details": "Rotation gesture detects two-finger rotation."},
-  {"question": "What is a LongPress Gesture?", "options": ["Long press", "Gesture for detecting long press", "Hold", "Long press"], "correctOptions": ["Gesture for detecting long press"], "time": 50, "details": "LongPress waits for sustained finger press."},
-  {"question": "What is a Fling Gesture?", "options": ["Quick swipe", "Gesture for detecting quick swipe motions", "Fling", "Swipe"], "correctOptions": ["Gesture for detecting quick swipe motions"], "time": 55, "details": "Fling detects quick directional swipes."},
-  {"question": "What is React Navigation?", "options": ["Routing", "Navigation library for React Native apps", "Navigator", "Routing lib"], "correctOptions": ["Navigation library for React Native apps"], "time": 45, "details": "React Navigation provides routing for RN apps."},
-  {"question": "What is a Stack Navigator?", "options": ["Screen stack", "Navigation pattern with stack of screens", "Navigation", "Stack"], "correctOptions": ["Navigation pattern with stack of screens"], "time": 50, "details": "Stack Navigator manages screen stack navigation."},
-  {"question": "What is a Tab Navigator?", "options": ["Tab navigation", "Navigation with bottom tab bar", "Bottom tabs", "Tabs"], "correctOptions": ["Navigation with bottom tab bar"], "time": 50, "details": "Tab Navigator provides bottom tab navigation."},
-  {"question": "What is a Drawer Navigator?", "options": ["Side menu", "Navigation with side slide-out menu", "Drawer", "Navigation"], "correctOptions": ["Navigation with side slide-out menu"], "time": 50, "details": "Drawer Navigator provides hamburger menu navigation."},
-  {"question": "What is useNavigation hook?", "options": ["Navigation helper", "Hook to access navigation object for programmatic navigation", "Return nav", "Get nav"], "correctOptions": ["Hook to access navigation object for programmatic navigation"], "time": 55, "details": "useNavigation provides navigation functions."},
-  {"question": "What is useRoute hook?", "options": ["Current route", "Hook to access route params and data", "Route params", "Hook"], "correctOptions": ["Hook to access route params and data"], "time": 55, "details": "useRoute returns current route information."},
-  {"question": "What are Route Params?", "options": ["Route parameters", "Parameters passed through the route URL", "URL params", "Values"], "correctOptions": ["Parameters passed through the route URL"], "time": 50, "details": "Params contain dynamic route data."},
-  {"question": "What is Deep Linking?", "options": ["URL to screen", "Mapping URLs to specific screens in the app", "Link", "Navigation"], "correctOptions": ["Mapping URLs to specific screens in the app"], "time": 50, "details": "Deep linking enables URL-based navigation."},
-  {"question": "What is Navigation State?", "options": ["Stack state", "Data structure tracking navigation history", "History", "State"], "correctOptions": ["Data structure tracking navigation history"], "time": 55, "details": "Navigation state maintains route hierarchy."},
-  {"question": "What is Safe Area?", "options": ["Safe area", "Layout area accounting for device notches and system UI", "Device notch", "Layout guide"], "correctOptions": ["Layout area accounting for device notches and system UI"], "time": 50, "details": "SafeArea handles device cutouts."},
-  {"question": "What is StatusBar?", "options": ["Status bar", "Component for controlling system status bar", "Native bar", "Top bar"], "correctOptions": ["Component for controlling system status bar"], "time": 45, "details": "StatusBar controls the device status bar."},
-  {"question": "What is AsyncStorage?", "options": ["Key-value storage", "Persistent key-value storage for React Native", "Persistent", "Storage"], "correctOptions": ["Persistent key-value storage for React Native"], "time": 50, "details": "AsyncStorage provides persistent local storage."},
-  {"question": "What is Secure Storage?", "options": ["Encrypted", "Encrypted storage for sensitive data (Keychain/Keystore)", "Keychain", "Security"], "correctOptions": ["Encrypted storage for sensitive data (Keychain/Keystore)"], "time": 55, "details": "Secure storage encrypts sensitive data."},
-  {"question": "What is FlashList?", "options": ["Virtualized list", "High-performance list component from Shopify", "Better FlatList", "Performance"], "correctOptions": ["High-performance list component from Shopify"], "time": 55, "details": "FlashList is a performant list replacement."},
-  {"question": "What is Skeleton Loading?", "options": ["Placeholder UI", "Loading placeholders that mimic content shape", "Loading", "Placeholder"], "correctOptions": ["Loading placeholders that mimic content shape"], "time": 50, "details": "Skeleton shows shimmer placeholders during loading."},
-  {"question": "What is Image Caching?", "options": ["Cache images", "Storing images locally for faster loading", "Performance", "Network"], "correctOptions": ["Storing images locally for faster loading"], "time": 50, "details": "Image caching improves performance and reduces network."},
-  {"question": "What is Blur Hash Placeholder?", "options": ["Blur placeholder", "Compact representation of image for immediate display", "Compact blur", "Image"], "correctOptions": ["Compact representation of image for immediate display"], "time": 60, "details": "Blur hash provides instant visual placeholder."},
-  {"question": "What is Expo?", "options": ["Toolchain", "Development platform and SDK for React Native", "Development", "SDK"], "correctOptions": ["Development platform and SDK for React Native"], "time": 45, "details": "Expo provides tooling and SDK for RN development."},
-  {"question": "What is Expo Dev Client?", "options": ["Custom runtime", "Build that includes development tools and custom native code", "Development", "Custom"], "correctOptions": ["Build that includes development tools and custom native code"], "time": 60, "details": "Dev client enables custom native code during dev."},
-  {"question": "What is EAS Update?", "options": ["OTA updates", "Service for pushing over-the-air updates to React Native apps", "Updates", "Remote"], "correctOptions": ["Service for pushing over-the-air updates to React Native apps"], "time": 60, "details": "EAS Update deploys JS updates without app store."},
-  {"question": "What is EAS Build?", "options": ["Build app", "Cloud service for building native app binaries", "Cloud build", "Build"], "correctOptions": ["Cloud service for building native app binaries"], "time": 60, "details": "EAS Build creates native builds in the cloud."},
-  {"question": "What is React Native Web?", "options": ["Web + native", "Running React Native components on the web", "Cross-platform", "Universal"], "correctOptions": ["Running React Native components on the web"], "time": 55, "details": "RN Web enables web deployment from RN code."},
-  {"question": "What is react-native-web?", "options": ["Library", "Library that provides React Native components for web", "Web adapter", "Compatibility"], "correctOptions": ["Library that provides React Native components for web"], "time": 50, "details": "react-native-web makes RN components work on web."},
-  {"question": "What is Tauri?", "options": ["Desktop app", "Framework for building desktop apps with web technologies", "Rust", "Desktop"], "correctOptions": ["Framework for building desktop apps with web technologies"], "time": 50, "details": "Tauri builds desktop apps with web frontend."},
-  {"question": "What is a Tauri App?", "options": ["WebView + Rust", "Desktop app using WebView frontend with Rust backend", "Native", "Desktop"], "correctOptions": ["Desktop app using WebView frontend with Rust backend"], "time": 55, "details": "Tauri combines web UI with native Rust backend."},
-  {"question": "What is Rust Backend?", "options": ["Rust in Tauri", "Native capabilities implemented in Rust", "Backend", "Native"], "correctOptions": ["Native capabilities implemented in Rust"], "time": 60, "details": "Rust provides native performance and system access."},
-  {"question": "What is a Command in Tauri?", "options": ["Rust function", "Exposed Rust function callable from frontend", "IPC", "Function"], "correctOptions": ["Exposed Rust function callable from frontend"], "time": 60, "details": "Commands expose Rust functions to JavaScript."},
-  {"question": "What is the React + Tauri combo?", "options": ["Web UI + desktop", "React UI running in Tauri for desktop capabilities", "Hybrid", "Cross-platform"], "correctOptions": ["React UI running in Tauri for desktop capabilities"], "time": 55, "details": "React with Tauri provides web+desktop solution."},
-  {"question": "What is Desktop App Pattern?", "options": ["Web + native", "Using web technologies with native capabilities", "Hybrid", "Cross"], "correctOptions": ["Using web technologies with native capabilities"], "time": 65, "details": "Modern desktop uses web code with native integration."},
-  {"question": "What is TMA (Tauri Mobile App)?", "options": ["Mobile Tauri", "Running Tauri apps on iOS and Android", "Mobile app", "Cross-platform"], "correctOptions": ["Running Tauri apps on iOS and Android"], "time": 60, "details": "TMA extends Tauri to mobile platforms."},
-  {"question": "What is React Server Components in detail?", "options": ["Server-only", "Components that render only on server with zero client JS", "Client-side", "Shared components"], "correctOptions": ["Components that render only on server with zero client JS"], "time": 60, "details": "RSC never send JavaScript to the client."},
-  {"question": "What is the 'use client' boundary?", "options": ["Boundary marker", "Creates boundary between server and client components", "Client marker", "Server boundary"], "correctOptions": ["Creates boundary between server and client components"], "time": 55, "details": "'use client' marks components that need client JS."},
-  {"question": "What is streaming in RSC?", "options": ["Chunked render", "Server sends RSC responses as they become available", "Full render", "Static"], "correctOptions": ["Server sends RSC responses as they become available"], "time": 60, "details": "RSC streams data as components resolve."},
-  {"question": "What are RSC payloads?", "options": ["Data format", "Serialized data format for server-client communication in RSC", "JSON", "Binary"], "correctOptions": ["Serialized data format for server-client communication in RSC"], "time": 65, "details": "RSC uses special payloads for data transfer."},
-  {"question": "What is the Server Actions mutation flow?", "options": ["Mutation process", "Client calls action, server processes, returns data", "API call", "RPC"], "correctOptions": ["Client calls action, server processes, returns data"], "time": 55, "details": "Server Actions provide type-safe server calls."},
-  {"question": "What is optimistic update with Server Actions?", "options": ["Instant feedback", "UI updates immediately while server processes", "Async update", "Delayed update"], "correctOptions": ["UI updates immediately while server processes"], "time": 55, "details": "Optimistic updates improve perceived performance."},
-  {"question": "What is revalidation in Server Actions?", "options": ["Cache refresh", "Automatically invalidating and refetching data after mutations", "Cache update", "Data refresh"], "correctOptions": ["Automatically invalidating and refetching data after mutations"], "time": 60, "details": "Server Actions can trigger automatic revalidation."},
-  {"question": "What is useFormStatus for Server Actions?", "options": ["Form state", "Hook providing pending state during form submission", "Loading state", "Submit state"], "correctOptions": ["Hook providing pending state during form submission"], "time": 55, "details": "useFormStatus tracks form submission progress."},
-  {"question": "What is the useFormAction hook?", "options": ["Action URL", "Returns the URL for form submissions", "Form handler", "Submit URL"], "correctOptions": ["Returns the URL for form submissions"], "time": 55, "details": "useFormAction gets the form action URL."},
-  {"question": "What is use() for Promises?", "options": ["Await promise", "Awaits Promise directly in component body", "Promise hook", "Suspender"], "correctOptions": ["Awaits Promise directly in component body"], "time": 60, "details": "use() can await Promises without useEffect."},
-  {"question": "What is use() for Context?", "options": ["Read context", "Read Context value directly without useContext", "Context hook", "Context reader"], "correctOptions": ["Read Context value directly without useContext"], "time": 60, "details": "use() can read Context values directly."},
-  {"question": "What is a promise as children?", "options": ["Suspend component", "Component that suspends while Promise resolves", "Promise component", "Async component"], "correctOptions": ["Component that suspends while Promise resolves"], "time": 60, "details": "Promise children can suspend rendering."},
-  {"question": "What is Suspense boundary?", "options": ["Suspend catcher", "Component that catches suspended state and shows fallback", "Loading wrapper", "Boundary"], "correctOptions": ["Component that catches suspended state and shows fallback"], "time": 55, "details": "Suspense catches suspends and shows fallback."},
-  {"question": "What is error catching in Suspense?", "options": ["Error boundary", "Using error boundaries to catch errors alongside Suspense", "Error handler", "Exception catch"], "correctOptions": ["Using error boundaries to catch errors alongside Suspense"], "time": 55, "details": "Error boundaries work with Suspense for error handling."},
-  {"question": "What is the useOptimistic hook pattern?", "options": ["Optimistic state", "Hook showing optimistic UI while async operation completes", "Optimistic update", "Pending state"], "correctOptions": ["Hook showing optimistic UI while async operation completes"], "time": 60, "details": "useOptimistic manages optimistic state transitions."},
-  {"question": "What is partial prerendering in Next.js?", "options": ["Mixed rendering", "Mixing static and dynamic content in single route", "Partial static", "Selective SSR"], "correctOptions": ["Mixing static and dynamic content in single route"], "time": 65, "details": "PPR combines static shells with dynamic streaming."},
-  {"question": "What is static shell in PPR?", "options": ["Static shell", "Static portion of page that can be cached", "Static content", "Cached content"], "correctOptions": ["Static portion of page that can be cached"], "time": 60, "details": "Static shell provides instant loading skeleton."},
-  {"question": "What is dynamic streaming in PPR?", "options": ["Dynamic content", "Dynamic portions streamed after static shell", "Streaming content", "Dynamic route"], "correctOptions": ["Dynamic portions streamed after static shell"], "time": 60, "details": "Dynamic streaming loads personalized content."},
-  {"question": "What is React Server Components vs Client Components?", "options": ["Server vs client", "RSC run on server, client components include JS in bundle", "Server", "Client"], "correctOptions": ["RSC run on server, client components include JS in bundle"], "time": 60, "details": "The distinction determines where code runs."},
-  {"question": "What is the benefit of RSC for data fetching?", "options": ["No client fetch", "Server can directly access databases and APIs without client fetch", "Server database", "Direct access"], "correctOptions": ["Server can directly access databases and APIs without client fetch"], "time": 60, "details": "RSC eliminates client-server data waterfall."},
-  {"question": "What is Server Components for sensitive operations?", "options": ["Server security", "Running sensitive code on server where it can't leak to client", "Security", "Sensitive code"], "correctOptions": ["Running sensitive code on server where it can't leak to client"], "time": 60, "details": "RSC keeps secrets on the server."},
-  {"question": "What is the React Server Actions pattern?", "options": ["Form actions", "Using 'use server' to define server functions callable from components", "Server functions", "RPC pattern"], "correctOptions": ["Using 'use server' to define server functions callable from components"], "time": 60, "details": "Server Actions define server-side functions in component files."},
-  {"question": "What is the benefit of Server Actions for mutations?", "options": ["Type safety", "Full TypeScript support for server mutations", "Type-safe", "TypeScript"], "correctOptions": ["Full TypeScript support for server mutations"], "time": 55, "details": "Server Actions provide end-to-end type safety."},
-  {"question": "What is sequential vs parallel data fetching?", "options": ["Data loading", "Sequential loads one after another, parallel loads simultaneously", "Serial", "Concurrent"], "correctOptions": ["Sequential loads one after another, parallel loads simultaneously"], "time": 55, "details": "Parallel fetching improves performance by loading concurrently."},
-  {"question": "What is data fetching pattern in Server Components?", "options": ["Direct fetch", "Fetch directly in component body without useEffect", "Direct call", "Component fetch"], "correctOptions": ["Fetch directly in component body without useEffect"], "time": 55, "details": "RSC can fetch data directly in components."},
-  {"question": "What is caching in Next.js App Router?", "options": ["Data cache", "Server-side caching of fetch results and static content", "Request cache", "Data store"], "correctOptions": ["Server-side caching of fetch results and static content"], "time": 60, "details": "Next.js caches data by default for performance."},
-  {"question": "What is dynamic rendering in Next.js?", "options": ["Dynamic content", "Rendering based on request-time data like cookies/headers", "Static render", "Runtime render"], "correctOptions": ["Rendering based on request-time data like cookies/headers"], "time": 60, "details": "Dynamic rendering uses request-time data."},
-  {"question": "What is static rendering in Next.js?", "options": ["Build time render", "Rendering at build time, cached for all requests", "Compile render", "Fixed render"], "correctOptions": ["Rendering at build time, cached for all requests"], "time": 55, "details": "Static rendering happens at build time."},
-  {"question": "What is ISR (Incremental Static Regeneration)?", "options": ["Hybrid update", "Updating static pages in background without full rebuild", "Background update", "Auto rebuild"], "correctOptions": ["Updating static pages in background without full rebuild"], "time": 60, "details": "ISR updates static pages after a time interval."},
-  {"question": "What is on-demand ISR?", "options": ["Manual trigger", "Manually triggering revalidation via API", "API trigger", "Manual update"], "correctOptions": ["Manually triggering revalidation via API"], "time": 60, "details": "On-demand ISR revalidates when data changes."},
-  {"question": "What is route segment config in Next.js?", "options": ["Route options", "Options like dynamic, revalidate for route segments", "Segment config", "Route config"], "correctOptions": ["Options like dynamic, revalidate for route segments"], "time": 55, "details": "Segment config controls route behavior."},
-  {"question": "What is dynamic route segment?", "options": ["Dynamic URL", "Route segment using [param] for dynamic values", "URL param", "Wildcard"], "correctOptions": ["Route segment using [param] for dynamic values"], "time": 50, "details": "[slug] creates dynamic route segments."},
-  {"question": "What is catch-all route in Next.js?", "options": ["Wildcard", "[[...slug]] for optional or [...slug] for required segments", "Optional wildcard", "Path wildcard"], "correctOptions": ["[[...slug]] for optional or [...slug] for required segments"], "time": 60, "details": "Catch-all routes capture multiple URL segments."},
-  {"question": "What are route groups in Next.js?", "options": ["Folder group", "(folder) naming for organizing routes without affecting URL", "Path group", "URL group"], "correctOptions": ["(folder) naming for organizing routes without affecting URL"], "time": 55, "details": "Route groups organize without affecting URLs."},
-  {"question": "What are parallel routes in Next.js?", "options": ["Multiple routes", "@folder syntax for rendering multiple routes simultaneously", "Side routes", "Multi-route"], "correctOptions": ["@folder syntax for rendering multiple routes simultaneously"], "time": 65, "details": "Parallel routes render multiple pages in one slot."},
-  {"question": "What are intercepting routes in Next.js?", "options": ["Modal routes", "(.)folder syntax for showing modal while preserving URL", "Modal pattern", "Intercept"], "correctOptions": ["(.)folder syntax for showing modal while preserving URL"], "time": 65, "details": "Intercepting routes enable modal-with-URL patterns."},
-  {"question": "What is middleware in Next.js?", "options": ["Edge function", "Function running before requests for redirects/rewrites", "Request handler", "Edge handler"], "correctOptions": ["Function running before requests for redirects/rewrites"], "time": 55, "details": "Middleware runs before request completion."},
-  {"question": "What is the Next.js Image component?", "options": ["Optimized image", "Component for optimized image loading with lazy loading", "Image loader", "Picture"], "correctOptions": ["Component for optimized image loading with lazy loading"], "time": 50, "details": "next/image provides automatic optimization."},
-  {"question": "What is next/font?", "options": ["Font optimization", "Automatic font optimization with Google fonts", "Font loader", "Google fonts"], "correctOptions": ["Automatic font optimization with Google fonts"], "time": 50, "details": "next/font optimizes font loading and prevents layout shift."},
-  {"question": "What is the App Router vs Pages Router?", "options": ["Router difference", "App Router uses RSC, layout, streaming; Pages uses directory-based", "New router", "Legacy router"], "correctOptions": ["App Router uses RSC, layout, streaming; Pages uses directory-based"], "time": 60, "details": "App Router is the new rendering model."},
-  {"question": "What are layouts in App Router?", "options": ["Shared UI", "Components wrapping routes that persist across navigation", "Shared component", "Wrapper"], "correctOptions": ["Components wrapping routes that persist across navigation"], "time": 50, "details": "Layouts provide shared UI and preserve state."},
-  {"question": "What is root layout in App Router?", "options": ["Base layout", "Required layout wrapping all routes", "Base component", "Main layout"], "correctOptions": ["Required layout wrapping all routes"], "time": 50, "details": "Root layout is required and wraps all pages."},
-  {"question": "What is nested layout in App Router?", "options": ["Child layout", "Layout in nested folders that wraps child routes", "Sub layout", "Route layout"], "correctOptions": ["Layout in nested folders that wraps child routes"], "time": 55, "details": "Nested layouts wrap specific route segments."},
-  {"question": "What is template in App Router?", "options": ["Per-request wrapper", "Component like layout but remounts on navigation", "Navigation wrapper", "State wrapper"], "correctOptions": ["Component like layout but remounts on navigation"], "time": 60, "details": "Templates remount on navigation unlike layouts."},
-  {"question": "What is the loading.js file?", "options": ["Loading component", "Component shown during route loading with Suspense", "Loading UI", "Skeleton"], "correctOptions": ["Component shown during route loading with Suspense"], "time": 50, "details": "loading.js provides instant loading UI."},
-  {"question": "What is the error.js file?", "options": ["Error component", "Component for handling route errors with Error Boundaries", "Error boundary", "Catch error"], "correctOptions": ["Component for handling route errors with Error Boundaries"], "time": 55, "details": "error.js provides route-level error handling."},
-  {"question": "What is the not-found.js file?", "options": ["404 component", "Component for 404 errors", "Missing page", "404 page"], "correctOptions": ["Component for 404 errors"], "time": 50, "details": "not-found.js handles route not found."},
-  {"question": "What is the page.js file?", "options": ["Page component", "Required component for route that renders content", "Route component", "Content"], "correctOptions": ["Required component for route that renders content"], "time": 45, "details": "page.js is the page component for each route."},
-  {"question": "What is the layout.js file?", "options": ["Layout component", "Component providing shared UI for routes", "Wrapper", "Shared UI"], "correctOptions": ["Component providing shared UI for routes"], "time": 50, "details": "layout.js provides shared UI structure."},
-  {"question": "What is the route.js file?", "options": ["API route", "File for creating API routes (Route Handlers)", "API endpoint", "Handler"], "correctOptions": ["File for creating API routes (Route Handlers)"], "time": 50, "details": "route.js creates API endpoints."},
-  {"question": "What is fetch caching in Next.js?", "options": ["Data cache", "Caching fetch results based on unique keys", "Cache key", "Data store"], "correctOptions": ["Caching fetch results based on unique keys"], "time": 60, "details": "Next.js caches fetch requests by default."},
-  {"question": "What is fetch no-store?", "options": ["No cache", "Option to opt-out of caching for dynamic data", "Dynamic fetch", "No cache"], "correctOptions": ["Option to opt-out of caching for dynamic data"], "time": 55, "details": "no-store disables caching for the fetch."},
-  {"question": "What is fetch revalidate?", "options": ["Revalidation time", "Time in seconds for revalidating cached data", "Cache time", "Refresh time"], "correctOptions": ["Time in seconds for revalidating cached data"], "time": 55, "details": "revalidate sets ISR interval for the fetch."},
-  {"question": "What is the fetch cache default?", "options": ["Auto cache", "By default fetch results are cached indefinitely", "Default cache", "Standard cache"], "correctOptions": ["By default fetch results are cached indefinitely"], "time": 55, "details": "Fetch results are cached by default."},
-  {"question": "What is route handler in App Router?", "options": ["API endpoint", "Function for handling API requests in route.js", "Request handler", "API handler"], "correctOptions": ["Function for handling API requests in route.js"], "time": 55, "details": "Route handlers replace API routes."},
-  {"question": "What is NextResponse?", "options": ["Response helper", "Helper for creating responses in route handlers", "Response object", "Return value"], "correctOptions": ["Helper for creating responses in route handlers"], "time": 50, "details": "NextResponse creates HTTP responses."},
-  {"question": "What is redirect in Next.js?", "options": ["URL redirect", "Function to redirect to another URL", "Route redirect", "URL change"], "correctOptions": ["Function to redirect to another URL"], "time": 50, "details": "redirect performs URL redirects."},
-  {"question": "What is notFound in Next.js?", "options": ["404 trigger", "Function to trigger 404 error page", "Missing trigger", "Error trigger"], "correctOptions": ["Function to trigger 404 error page"], "time": 50, "details": "notFound triggers the not-found page."},
-  {"question": "What are headers in Next.js?", "options": ["Request headers", "Accessing incoming request headers in Server Components", "HTTP headers", "Request data"], "correctOptions": ["Accessing incoming request headers in Server Components"], "time": 55, "details": "headers() provides request header access."},
-  {"question": "What are cookies in Next.js?", "options": ["Cookie access", "Reading and writing cookies in Server Components", "Session", "Browser data"], "correctOptions": ["Reading and writing cookies in Server Components"], "time": 55, "details": "cookies() provides cookie operations."},
-  {"question": "What is params in Next.js Page props?", "options": ["Route params", "Dynamic route parameters for the page", "URL params", "Path params"], "correctOptions": ["Dynamic route parameters for the page"], "time": 50, "details": "params contains dynamic route segments."},
-  {"question": "What is searchParams in Next.js Page props?", "options": ["Query string", "URL search parameters for the page", "URL query", "Query params"], "correctOptions": ["URL search parameters for the page"], "time": 50, "details": "searchParams contains URL query string."}
+  {
+    "question": "What is React Compiler (formerly React Forget)?",
+    "options": [
+      "Auto memoization",
+      "Automatic optimization at compile time",
+      "Compile-time",
+      "New compiler"
+    ],
+    "correctOptions": [
+      "Auto memoization"
+    ],
+    "time": 60,
+    "details": "React Compiler automatically optimizes by determining what to memoize."
+  },
+  {
+    "question": "What is useMemo automatic?",
+    "options": [
+      "Avoid explicit",
+      "Compiler handles memoization automatically",
+      "Compiler",
+      "Manual"
+    ],
+    "correctOptions": [
+      "Compiler handles memoization automatically"
+    ],
+    "time": 65,
+    "details": "React Compiler reduces need for manual useMemo/useCallback."
+  },
+  {
+    "question": "What is useCallback automatic?",
+    "options": [
+      "Avoid explicit",
+      "Compiler handles callback stabilization automatically",
+      "Compiler",
+      "Manual"
+    ],
+    "correctOptions": [
+      "Compiler handles callback stabilization automatically"
+    ],
+    "time": 65,
+    "details": "React Compiler determines when callbacks need stability."
+  },
+  {
+    "question": "What are React Server Actions?",
+    "options": [
+      "Invoke server",
+      "Functions that run on the server callable from client components",
+      "RPC mechanism",
+      "Server call"
+    ],
+    "correctOptions": [
+      "Functions that run on the server callable from client components"
+    ],
+    "time": 55,
+    "details": "Server Actions allow calling server code directly from components."
+  },
+  {
+    "question": "What is the Next.js App Router?",
+    "options": [
+      "File-based routing",
+      "File-based routing using app/ directory",
+      "App dir",
+      "Framework"
+    ],
+    "correctOptions": [
+      "File-based routing"
+    ],
+    "time": 55,
+    "details": "App Router uses file-based routing in the app/ directory."
+  },
+  {
+    "question": "What are Server Components?",
+    "options": [
+      "Run on server",
+      "Components that only render on server, never sent to client",
+      "RSC",
+      "Render"
+    ],
+    "correctOptions": [
+      "Components that only render on server, never sent to client"
+    ],
+    "time": 55,
+    "details": "Server Components reduce client bundle size significantly."
+  },
+  {
+    "question": "What is Streaming SSR?",
+    "options": [
+      "Chunked streaming",
+      "Sending HTML in chunks as components resolve",
+      "Server streaming",
+      "Streaming"
+    ],
+    "correctOptions": [
+      "Sending HTML in chunks as components resolve"
+    ],
+    "time": 60,
+    "details": "Streaming SSR sends partial HTML while waiting for slow components."
+  },
+  {
+    "question": "What is Selective Hydration?",
+    "options": [
+      "Hydrate needed",
+      "Prioritizing hydration of interactive parts first",
+      "Prioritized",
+      "Suspense"
+    ],
+    "correctOptions": [
+      "Prioritizing hydration of interactive parts first"
+    ],
+    "time": 60,
+    "details": "Selective hydration improves Time to Interactive."
+  },
+  {
+    "question": "What is the Pipe Operator pattern?",
+    "options": [
+      "Pipe to hook",
+      "Passing component to hook for enhanced functionality",
+      "Function pipe",
+      "Compose"
+    ],
+    "correctOptions": [
+      "Passing component to hook for enhanced functionality"
+    ],
+    "time": 60,
+    "details": "Pipe pattern passes value through multiple transformations."
+  },
+  {
+    "question": "What is React Forget?",
+    "options": [
+      "Auto memo",
+      "Project name for React Compiler",
+      "Experimental",
+      "Name"
+    ],
+    "correctOptions": [
+      "Project name for React Compiler"
+    ],
+    "time": 65,
+    "details": "React Forget was the original project name for React Compiler."
+  },
+  {
+    "question": "What is Taint Analysis?",
+    "options": [
+      "Sensitive data",
+      "Analysis to track sensitive data like API keys through components",
+      "Taint tracking",
+      "Security"
+    ],
+    "correctOptions": [
+      "Analysis to track sensitive data like API keys through components"
+    ],
+    "time": 65,
+    "details": "Taint analysis prevents leaking secrets to client."
+  },
+  {
+    "question": "What is a Tainted Value?",
+    "options": [
+      "Sensitive",
+      "A value that contains secrets or sensitive information",
+      "Marked",
+      "Secret"
+    ],
+    "correctOptions": [
+      "A value that contains secrets or sensitive information"
+    ],
+    "time": 60,
+    "details": "Tainted values are flagged as containing sensitive data."
+  },
+  {
+    "question": "What is checkTaint()?",
+    "options": [
+      "Check if tainted",
+      "Function to check if a value contains sensitive data",
+      "Validate",
+      "Security"
+    ],
+    "correctOptions": [
+      "Function to check if a value contains sensitive data"
+    ],
+    "time": 60,
+    "details": "checkTaint validates whether data is sensitive."
+  },
+  {
+    "question": "What are Tainted Constants?",
+    "options": [
+      "Environment",
+      "API keys, tokens, and other secrets stored in env",
+      "Config",
+      "All"
+    ],
+    "correctOptions": [
+      "API keys, tokens, and other secrets stored in env"
+    ],
+    "time": 55,
+    "details": "Environment variables with secrets become tainted constants."
+  },
+  {
+    "question": "What is Security Best Practice?",
+    "options": [
+      "Don't pass secrets",
+      "Never pass secrets to client components",
+      "Validate",
+      "Taint check"
+    ],
+    "correctOptions": [
+      "Never pass secrets to client components"
+    ],
+    "time": 60,
+    "details": "Avoid passing secrets to client components in Server Actions."
+  },
+  {
+    "question": "What is React Native?",
+    "options": [
+      "Mobile React",
+      "Framework for building native iOS and Android apps with React",
+      "iOS/Android",
+      "Framework"
+    ],
+    "correctOptions": [
+      "Framework for building native iOS and Android apps with React"
+    ],
+    "time": 40,
+    "details": "React Native builds truly native mobile applications."
+  },
+  {
+    "question": "What is a React Native Component?",
+    "options": [
+      "Native element",
+      "A component that renders native platform views",
+      "Native view",
+      "Component"
+    ],
+    "correctOptions": [
+      "A component that renders native platform views"
+    ],
+    "time": 45,
+    "details": "RN components translate to native platform widgets."
+  },
+  {
+    "question": "What is View in React Native?",
+    "options": [
+      "Container",
+      "Fundamental component for layout, like div for web",
+      "Native div",
+      "Box"
+    ],
+    "correctOptions": [
+      "Fundamental component for layout, like div for web"
+    ],
+    "time": 45,
+    "details": "View is the basic building block for UI layout."
+  },
+  {
+    "question": "What is Text in React Native?",
+    "options": [
+      "Text display",
+      "Component for displaying text",
+      "Label",
+      "Native text"
+    ],
+    "correctOptions": [
+      "Text display"
+    ],
+    "time": 40,
+    "details": "Text renders text content in the app."
+  },
+  {
+    "question": "What is TextInput in React Native?",
+    "options": [
+      "Text input",
+      "Component for text input fields",
+      "Input field",
+      "Native input"
+    ],
+    "correctOptions": [
+      "Component for text input fields"
+    ],
+    "time": 40,
+    "details": "TextInput is the text entry component."
+  },
+  {
+    "question": "What is TouchableOpacity?",
+    "options": [
+      "Touchable button",
+      "Button component that responds to touches with opacity change",
+      "Pressable",
+      "Native button"
+    ],
+    "correctOptions": [
+      "Button component that responds to touches with opacity change"
+    ],
+    "time": 45,
+    "details": "TouchableOpacity provides press feedback with opacity."
+  },
+  {
+    "question": "What is StyleSheet?",
+    "options": [
+      "Style system",
+      "API for creating and managing styles in React Native",
+      "Styles",
+      "CSS-like"
+    ],
+    "correctOptions": [
+      "API for creating and managing styles in React Native"
+    ],
+    "time": 45,
+    "details": "StyleSheet creates optimized style objects."
+  },
+  {
+    "question": "What are Flat Styles?",
+    "options": [
+      "Plain JS object",
+      "Styles defined as plain JavaScript objects",
+      "No nesting",
+      "Stylesheet"
+    ],
+    "correctOptions": [
+      "Styles defined as plain JavaScript objects"
+    ],
+    "time": 50,
+    "details": "RN styles are plain objects, not CSS strings."
+  },
+  {
+    "question": "What is useNativeDriver?",
+    "options": [
+      "Native animation",
+      "Config for running animations on native thread",
+      "Animation flag",
+      "JS bridge"
+    ],
+    "correctOptions": [
+      "Config for running animations on native thread"
+    ],
+    "time": 50,
+    "details": "useNativeDriver moves animations to native for performance."
+  },
+  {
+    "question": "What is the Animated API?",
+    "options": [
+      "Native animations",
+      "React Native's declarative animation system",
+      "Animation lib",
+      "JS library"
+    ],
+    "correctOptions": [
+      "React Native's declarative animation system"
+    ],
+    "time": 50,
+    "details": "Animated API provides performant animations."
+  },
+  {
+    "question": "What is useAnimatedStyle?",
+    "options": [
+      "Animated styles",
+      "Hook for creating animated style objects for Reanimated",
+      "Shared values",
+      "Styles"
+    ],
+    "correctOptions": [
+      "Hook for creating animated style objects for Reanimated"
+    ],
+    "time": 60,
+    "details": "useAnimatedStyle creates animated style objects."
+  },
+  {
+    "question": "What is a Reanimated Worklet?",
+    "options": [
+      "Run on UI thread",
+      "Function that runs on the UI thread for animations",
+      "Animation",
+      "Function"
+    ],
+    "correctOptions": [
+      "Function that runs on the UI thread for animations"
+    ],
+    "time": 60,
+    "details": "Worklets run on the UI thread for smooth animations."
+  },
+  {
+    "question": "What is runOnJS?",
+    "options": [
+      "Execute JS",
+      "Function to call JavaScript code from worklet",
+      "Cross thread",
+      "Bridge"
+    ],
+    "correctOptions": [
+      "Function to call JavaScript code from worklet"
+    ],
+    "time": 65,
+    "details": "runOnJS bridges worklet execution to JavaScript thread."
+  },
+  {
+    "question": "What is runOnUI?",
+    "options": [
+      "Execute on UI",
+      "Function to execute code on UI thread from JS",
+      "Native thread",
+      "Bridge"
+    ],
+    "correctOptions": [
+      "Function to execute code on UI thread from JS"
+    ],
+    "time": 65,
+    "details": "runOnUI schedules work on the UI thread."
+  },
+  {
+    "question": "What is React Native Gesture Handler?",
+    "options": [
+      "Touch handling",
+      "Library for handling complex gestures in React Native",
+      "Gestures",
+      "Native gestures"
+    ],
+    "correctOptions": [
+      "Library for handling complex gestures in React Native"
+    ],
+    "time": 55,
+    "details": "Gesture Handler provides native gesture handling."
+  },
+  {
+    "question": "What is GestureDetector?",
+    "options": [
+      "Gesture wrapper",
+      "Component for wrapping gesture handlers",
+      "Wrap gestures",
+      "Component"
+    ],
+    "correctOptions": [
+      "Component for wrapping gesture handlers"
+    ],
+    "time": 55,
+    "details": "GestureDetector wraps gesture configurations."
+  },
+  {
+    "question": "What is a Pan Gesture?",
+    "options": [
+      "Drag movement",
+      "Gesture for detecting dragging/swiping motions",
+      "Pan",
+      "Move"
+    ],
+    "correctOptions": [
+      "Gesture for detecting dragging/swiping motions"
+    ],
+    "time": 50,
+    "details": "Pan gesture tracks finger movement."
+  },
+  {
+    "question": "What is a Pinch Gesture?",
+    "options": [
+      "Zoom",
+      "Gesture for detecting pinch-to-zoom",
+      "Scale",
+      "Pinch"
+    ],
+    "correctOptions": [
+      "Gesture for detecting pinch-to-zoom"
+    ],
+    "time": 55,
+    "details": "Pinch gesture is used for scaling/zooming."
+  },
+  {
+    "question": "What is a Rotation Gesture?",
+    "options": [
+      "Rotate",
+      "Gesture for detecting rotation motions",
+      "Turn",
+      "Rotate"
+    ],
+    "correctOptions": [
+      "Gesture for detecting rotation motions"
+    ],
+    "time": 55,
+    "details": "Rotation gesture detects two-finger rotation."
+  },
+  {
+    "question": "What is a LongPress Gesture?",
+    "options": [
+      "Long press",
+      "Gesture for detecting long press",
+      "Hold",
+      "Long press"
+    ],
+    "correctOptions": [
+      "Gesture for detecting long press"
+    ],
+    "time": 50,
+    "details": "LongPress waits for sustained finger press."
+  },
+  {
+    "question": "What is a Fling Gesture?",
+    "options": [
+      "Quick swipe",
+      "Gesture for detecting quick swipe motions",
+      "Fling",
+      "Swipe"
+    ],
+    "correctOptions": [
+      "Gesture for detecting quick swipe motions"
+    ],
+    "time": 55,
+    "details": "Fling detects quick directional swipes."
+  },
+  {
+    "question": "What is React Navigation?",
+    "options": [
+      "Routing",
+      "Navigation library for React Native apps",
+      "Navigator",
+      "Routing lib"
+    ],
+    "correctOptions": [
+      "Navigation library for React Native apps"
+    ],
+    "time": 45,
+    "details": "React Navigation provides routing for RN apps."
+  },
+  {
+    "question": "What is a Stack Navigator?",
+    "options": [
+      "Screen stack",
+      "Navigation pattern with stack of screens",
+      "Navigation",
+      "Stack"
+    ],
+    "correctOptions": [
+      "Navigation pattern with stack of screens"
+    ],
+    "time": 50,
+    "details": "Stack Navigator manages screen stack navigation."
+  },
+  {
+    "question": "What is a Tab Navigator?",
+    "options": [
+      "Tab navigation",
+      "Navigation with bottom tab bar",
+      "Bottom tabs",
+      "Tabs"
+    ],
+    "correctOptions": [
+      "Navigation with bottom tab bar"
+    ],
+    "time": 50,
+    "details": "Tab Navigator provides bottom tab navigation."
+  },
+  {
+    "question": "What is a Drawer Navigator?",
+    "options": [
+      "Side menu",
+      "Navigation with side slide-out menu",
+      "Drawer",
+      "Navigation"
+    ],
+    "correctOptions": [
+      "Navigation with side slide-out menu"
+    ],
+    "time": 50,
+    "details": "Drawer Navigator provides hamburger menu navigation."
+  },
+  {
+    "question": "What is useNavigation hook?",
+    "options": [
+      "Navigation helper",
+      "Hook to access navigation object for programmatic navigation",
+      "Return nav",
+      "Get nav"
+    ],
+    "correctOptions": [
+      "Hook to access navigation object for programmatic navigation"
+    ],
+    "time": 55,
+    "details": "useNavigation provides navigation functions."
+  },
+  {
+    "question": "What is useRoute hook?",
+    "options": [
+      "Current route",
+      "Hook to access route params and data",
+      "Route params",
+      "Hook"
+    ],
+    "correctOptions": [
+      "Hook to access route params and data"
+    ],
+    "time": 55,
+    "details": "useRoute returns current route information."
+  },
+  {
+    "question": "What are Route Params?",
+    "options": [
+      "Route parameters",
+      "Parameters passed through the route URL",
+      "URL params",
+      "Values"
+    ],
+    "correctOptions": [
+      "Parameters passed through the route URL"
+    ],
+    "time": 50,
+    "details": "Params contain dynamic route data."
+  },
+  {
+    "question": "What is Deep Linking?",
+    "options": [
+      "URL to screen",
+      "Mapping URLs to specific screens in the app",
+      "Link",
+      "Navigation"
+    ],
+    "correctOptions": [
+      "Mapping URLs to specific screens in the app"
+    ],
+    "time": 50,
+    "details": "Deep linking enables URL-based navigation."
+  },
+  {
+    "question": "What is Navigation State?",
+    "options": [
+      "Stack state",
+      "Data structure tracking navigation history",
+      "History",
+      "State"
+    ],
+    "correctOptions": [
+      "Data structure tracking navigation history"
+    ],
+    "time": 55,
+    "details": "Navigation state maintains route hierarchy."
+  },
+  {
+    "question": "What is Safe Area?",
+    "options": [
+      "Safe area",
+      "Layout area accounting for device notches and system UI",
+      "Device notch",
+      "Layout guide"
+    ],
+    "correctOptions": [
+      "Layout area accounting for device notches and system UI"
+    ],
+    "time": 50,
+    "details": "SafeArea handles device cutouts."
+  },
+  {
+    "question": "What is StatusBar?",
+    "options": [
+      "Status bar",
+      "Component for controlling system status bar",
+      "Native bar",
+      "Top bar"
+    ],
+    "correctOptions": [
+      "Component for controlling system status bar"
+    ],
+    "time": 45,
+    "details": "StatusBar controls the device status bar."
+  },
+  {
+    "question": "What is AsyncStorage?",
+    "options": [
+      "Key-value storage",
+      "Persistent key-value storage for React Native",
+      "Persistent",
+      "Storage"
+    ],
+    "correctOptions": [
+      "Persistent key-value storage for React Native"
+    ],
+    "time": 50,
+    "details": "AsyncStorage provides persistent local storage."
+  },
+  {
+    "question": "What is Secure Storage?",
+    "options": [
+      "Encrypted",
+      "Encrypted storage for sensitive data (Keychain/Keystore)",
+      "Keychain",
+      "Security"
+    ],
+    "correctOptions": [
+      "Encrypted"
+    ],
+    "time": 55,
+    "details": "Secure storage encrypts sensitive data."
+  },
+  {
+    "question": "What is FlashList?",
+    "options": [
+      "Virtualized list",
+      "High-performance list component from Shopify",
+      "Better FlatList",
+      "Performance"
+    ],
+    "correctOptions": [
+      "High-performance list component from Shopify"
+    ],
+    "time": 55,
+    "details": "FlashList is a performant list replacement."
+  },
+  {
+    "question": "What is Skeleton Loading?",
+    "options": [
+      "Placeholder UI",
+      "Loading placeholders that mimic content shape",
+      "Loading",
+      "Placeholder"
+    ],
+    "correctOptions": [
+      "Loading placeholders that mimic content shape"
+    ],
+    "time": 50,
+    "details": "Skeleton shows shimmer placeholders during loading."
+  },
+  {
+    "question": "What is Image Caching?",
+    "options": [
+      "Cache images",
+      "Storing images locally for faster loading",
+      "Performance",
+      "Network"
+    ],
+    "correctOptions": [
+      "Storing images locally for faster loading"
+    ],
+    "time": 50,
+    "details": "Image caching improves performance and reduces network."
+  },
+  {
+    "question": "What is Blur Hash Placeholder?",
+    "options": [
+      "Blur placeholder",
+      "Compact representation of image for immediate display",
+      "Compact blur",
+      "Image"
+    ],
+    "correctOptions": [
+      "Compact representation of image for immediate display"
+    ],
+    "time": 60,
+    "details": "Blur hash provides instant visual placeholder."
+  },
+  {
+    "question": "What is Expo?",
+    "options": [
+      "Toolchain",
+      "Development platform and SDK for React Native",
+      "Development",
+      "SDK"
+    ],
+    "correctOptions": [
+      "Development platform and SDK for React Native"
+    ],
+    "time": 45,
+    "details": "Expo provides tooling and SDK for RN development."
+  },
+  {
+    "question": "What is Expo Dev Client?",
+    "options": [
+      "Custom runtime",
+      "Build that includes development tools and custom native code",
+      "Development",
+      "Custom"
+    ],
+    "correctOptions": [
+      "Build that includes development tools and custom native code"
+    ],
+    "time": 60,
+    "details": "Dev client enables custom native code during dev."
+  },
+  {
+    "question": "What is EAS Update?",
+    "options": [
+      "OTA updates",
+      "Service for pushing over-the-air updates to React Native apps",
+      "Updates",
+      "Remote"
+    ],
+    "correctOptions": [
+      "Service for pushing over-the-air updates to React Native apps"
+    ],
+    "time": 60,
+    "details": "EAS Update deploys JS updates without app store."
+  },
+  {
+    "question": "What is EAS Build?",
+    "options": [
+      "Build app",
+      "Cloud service for building native app binaries",
+      "Cloud build",
+      "Build"
+    ],
+    "correctOptions": [
+      "Cloud service for building native app binaries"
+    ],
+    "time": 60,
+    "details": "EAS Build creates native builds in the cloud."
+  },
+  {
+    "question": "What is React Native Web?",
+    "options": [
+      "Web + native",
+      "Running React Native components on the web",
+      "Cross-platform",
+      "Universal"
+    ],
+    "correctOptions": [
+      "Running React Native components on the web"
+    ],
+    "time": 55,
+    "details": "RN Web enables web deployment from RN code."
+  },
+  {
+    "question": "What is react-native-web?",
+    "options": [
+      "Library",
+      "Library that provides React Native components for web",
+      "Web adapter",
+      "Compatibility"
+    ],
+    "correctOptions": [
+      "Library"
+    ],
+    "time": 50,
+    "details": "react-native-web makes RN components work on web."
+  },
+  {
+    "question": "What is Tauri?",
+    "options": [
+      "Desktop app",
+      "Framework for building desktop apps with web technologies",
+      "Rust",
+      "Desktop"
+    ],
+    "correctOptions": [
+      "Framework for building desktop apps with web technologies"
+    ],
+    "time": 50,
+    "details": "Tauri builds desktop apps with web frontend."
+  },
+  {
+    "question": "What is a Tauri App?",
+    "options": [
+      "WebView + Rust",
+      "Desktop app using WebView frontend with Rust backend",
+      "Native",
+      "Desktop"
+    ],
+    "correctOptions": [
+      "Desktop app using WebView frontend with Rust backend"
+    ],
+    "time": 55,
+    "details": "Tauri combines web UI with native Rust backend."
+  },
+  {
+    "question": "What is Rust Backend?",
+    "options": [
+      "Rust in Tauri",
+      "Native capabilities implemented in Rust",
+      "Backend",
+      "Native"
+    ],
+    "correctOptions": [
+      "Native capabilities implemented in Rust"
+    ],
+    "time": 60,
+    "details": "Rust provides native performance and system access."
+  },
+  {
+    "question": "What is a Command in Tauri?",
+    "options": [
+      "Rust function",
+      "Exposed Rust function callable from frontend",
+      "IPC",
+      "Function"
+    ],
+    "correctOptions": [
+      "Rust function"
+    ],
+    "time": 60,
+    "details": "Commands expose Rust functions to JavaScript."
+  },
+  {
+    "question": "What is the React + Tauri combo?",
+    "options": [
+      "Web UI + desktop",
+      "React UI running in Tauri for desktop capabilities",
+      "Hybrid",
+      "Cross-platform"
+    ],
+    "correctOptions": [
+      "React UI running in Tauri for desktop capabilities"
+    ],
+    "time": 55,
+    "details": "React with Tauri provides web+desktop solution."
+  },
+  {
+    "question": "What is Desktop App Pattern?",
+    "options": [
+      "Web + native",
+      "Using web technologies with native capabilities",
+      "Hybrid",
+      "Cross"
+    ],
+    "correctOptions": [
+      "Using web technologies with native capabilities"
+    ],
+    "time": 65,
+    "details": "Modern desktop uses web code with native integration."
+  },
+  {
+    "question": "What is TMA (Tauri Mobile App)?",
+    "options": [
+      "Mobile Tauri",
+      "Running Tauri apps on iOS and Android",
+      "Mobile app",
+      "Cross-platform"
+    ],
+    "correctOptions": [
+      "Running Tauri apps on iOS and Android"
+    ],
+    "time": 60,
+    "details": "TMA extends Tauri to mobile platforms."
+  },
+  {
+    "question": "What is React Server Components in detail?",
+    "options": [
+      "Server-only",
+      "Components that render only on server with zero client JS",
+      "Client-side",
+      "Shared components"
+    ],
+    "correctOptions": [
+      "Components that render only on server with zero client JS"
+    ],
+    "time": 60,
+    "details": "RSC never send JavaScript to the client."
+  },
+  {
+    "question": "What is the 'use client' boundary?",
+    "options": [
+      "Boundary marker",
+      "Creates boundary between server and client components",
+      "Client marker",
+      "Server boundary"
+    ],
+    "correctOptions": [
+      "Creates boundary between server and client components"
+    ],
+    "time": 55,
+    "details": "'use client' marks components that need client JS."
+  },
+  {
+    "question": "What is streaming in RSC?",
+    "options": [
+      "Chunked render",
+      "Server sends RSC responses as they become available",
+      "Full render",
+      "Static"
+    ],
+    "correctOptions": [
+      "Server sends RSC responses as they become available"
+    ],
+    "time": 60,
+    "details": "RSC streams data as components resolve."
+  },
+  {
+    "question": "What are RSC payloads?",
+    "options": [
+      "Data format",
+      "Serialized data format for server-client communication in RSC",
+      "JSON",
+      "Binary"
+    ],
+    "correctOptions": [
+      "Serialized data format for server-client communication in RSC"
+    ],
+    "time": 65,
+    "details": "RSC uses special payloads for data transfer."
+  },
+  {
+    "question": "What is the Server Actions mutation flow?",
+    "options": [
+      "Mutation process",
+      "Client calls action, server processes, returns data",
+      "API call",
+      "RPC"
+    ],
+    "correctOptions": [
+      "Client calls action, server processes, returns data"
+    ],
+    "time": 55,
+    "details": "Server Actions provide type-safe server calls."
+  },
+  {
+    "question": "What is optimistic update with Server Actions?",
+    "options": [
+      "Instant feedback",
+      "UI updates immediately while server processes",
+      "Async update",
+      "Delayed update"
+    ],
+    "correctOptions": [
+      "UI updates immediately while server processes"
+    ],
+    "time": 55,
+    "details": "Optimistic updates improve perceived performance."
+  },
+  {
+    "question": "What is revalidation in Server Actions?",
+    "options": [
+      "Cache refresh",
+      "Automatically invalidating and refetching data after mutations",
+      "Cache update",
+      "Data refresh"
+    ],
+    "correctOptions": [
+      "Automatically invalidating and refetching data after mutations"
+    ],
+    "time": 60,
+    "details": "Server Actions can trigger automatic revalidation."
+  },
+  {
+    "question": "What is useFormStatus for Server Actions?",
+    "options": [
+      "Form state",
+      "Hook providing pending state during form submission",
+      "Loading state",
+      "Submit state"
+    ],
+    "correctOptions": [
+      "Hook providing pending state during form submission"
+    ],
+    "time": 55,
+    "details": "useFormStatus tracks form submission progress."
+  },
+  {
+    "question": "What is the useFormAction hook?",
+    "options": [
+      "Action URL",
+      "Returns the URL for form submissions",
+      "Form handler",
+      "Submit URL"
+    ],
+    "correctOptions": [
+      "Returns the URL for form submissions"
+    ],
+    "time": 55,
+    "details": "useFormAction gets the form action URL."
+  },
+  {
+    "question": "What is use() for Promises?",
+    "options": [
+      "Await promise",
+      "Awaits Promise directly in component body",
+      "Promise hook",
+      "Suspender"
+    ],
+    "correctOptions": [
+      "Awaits Promise directly in component body"
+    ],
+    "time": 60,
+    "details": "use() can await Promises without useEffect."
+  },
+  {
+    "question": "What is use() for Context?",
+    "options": [
+      "Read context",
+      "Read Context value directly without useContext",
+      "Context hook",
+      "Context reader"
+    ],
+    "correctOptions": [
+      "Read Context value directly without useContext"
+    ],
+    "time": 60,
+    "details": "use() can read Context values directly."
+  },
+  {
+    "question": "What is a promise as children?",
+    "options": [
+      "Suspend component",
+      "Component that suspends while Promise resolves",
+      "Promise component",
+      "Async component"
+    ],
+    "correctOptions": [
+      "Component that suspends while Promise resolves"
+    ],
+    "time": 60,
+    "details": "Promise children can suspend rendering."
+  },
+  {
+    "question": "What is Suspense boundary?",
+    "options": [
+      "Suspend catcher",
+      "Component that catches suspended state and shows fallback",
+      "Loading wrapper",
+      "Boundary"
+    ],
+    "correctOptions": [
+      "Component that catches suspended state and shows fallback"
+    ],
+    "time": 55,
+    "details": "Suspense catches suspends and shows fallback."
+  },
+  {
+    "question": "What is error catching in Suspense?",
+    "options": [
+      "Error boundary",
+      "Using error boundaries to catch errors alongside Suspense",
+      "Error handler",
+      "Exception catch"
+    ],
+    "correctOptions": [
+      "Using error boundaries to catch errors alongside Suspense"
+    ],
+    "time": 55,
+    "details": "Error boundaries work with Suspense for error handling."
+  },
+  {
+    "question": "What is the useOptimistic hook pattern?",
+    "options": [
+      "Optimistic state",
+      "Hook showing optimistic UI while async operation completes",
+      "Optimistic update",
+      "Pending state"
+    ],
+    "correctOptions": [
+      "Hook showing optimistic UI while async operation completes"
+    ],
+    "time": 60,
+    "details": "useOptimistic manages optimistic state transitions."
+  },
+  {
+    "question": "What is partial prerendering in Next.js?",
+    "options": [
+      "Mixed rendering",
+      "Mixing static and dynamic content in single route",
+      "Partial static",
+      "Selective SSR"
+    ],
+    "correctOptions": [
+      "Mixing static and dynamic content in single route"
+    ],
+    "time": 65,
+    "details": "PPR combines static shells with dynamic streaming."
+  },
+  {
+    "question": "What is static shell in PPR?",
+    "options": [
+      "Static shell",
+      "Static portion of page that can be cached",
+      "Static content",
+      "Cached content"
+    ],
+    "correctOptions": [
+      "Static portion of page that can be cached"
+    ],
+    "time": 60,
+    "details": "Static shell provides instant loading skeleton."
+  },
+  {
+    "question": "What is dynamic streaming in PPR?",
+    "options": [
+      "Dynamic content",
+      "Dynamic portions streamed after static shell",
+      "Streaming content",
+      "Dynamic route"
+    ],
+    "correctOptions": [
+      "Dynamic portions streamed after static shell"
+    ],
+    "time": 60,
+    "details": "Dynamic streaming loads personalized content."
+  },
+  {
+    "question": "What is React Server Components vs Client Components?",
+    "options": [
+      "Server vs client",
+      "RSC run on server, client components include JS in bundle",
+      "Server",
+      "Client"
+    ],
+    "correctOptions": [
+      "RSC run on server, client components include JS in bundle"
+    ],
+    "time": 60,
+    "details": "The distinction determines where code runs."
+  },
+  {
+    "question": "What is the benefit of RSC for data fetching?",
+    "options": [
+      "No client fetch",
+      "Server can directly access databases and APIs without client fetch",
+      "Server database",
+      "Direct access"
+    ],
+    "correctOptions": [
+      "Server can directly access databases and APIs without client fetch"
+    ],
+    "time": 60,
+    "details": "RSC eliminates client-server data waterfall."
+  },
+  {
+    "question": "What is Server Components for sensitive operations?",
+    "options": [
+      "Server security",
+      "Running sensitive code on server where it can't leak to client",
+      "Security",
+      "Sensitive code"
+    ],
+    "correctOptions": [
+      "Running sensitive code on server where it can't leak to client"
+    ],
+    "time": 60,
+    "details": "RSC keeps secrets on the server."
+  },
+  {
+    "question": "What is the React Server Actions pattern?",
+    "options": [
+      "Form actions",
+      "Using 'use server' to define server functions callable from components",
+      "Server functions",
+      "RPC pattern"
+    ],
+    "correctOptions": [
+      "Using 'use server' to define server functions callable from components"
+    ],
+    "time": 60,
+    "details": "Server Actions define server-side functions in component files."
+  },
+  {
+    "question": "What is JSX?",
+    "options": [
+      "JavaScript XML",
+      "Syntax extension",
+      "Describes UI",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "JavaScript XML",
+      "Syntax extension",
+      "Describes UI",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSX? explanation."
+  },
+  {
+    "question": "What is sequential vs parallel data fetching?",
+    "options": [
+      "Data loading",
+      "Sequential loads one after another, parallel loads simultaneously",
+      "Serial",
+      "Concurrent"
+    ],
+    "correctOptions": [
+      "Sequential loads one after another, parallel loads simultaneously"
+    ],
+    "time": 55,
+    "details": "Parallel fetching improves performance by loading concurrently."
+  },
+  {
+    "question": "What is data fetching pattern in Server Components?",
+    "options": [
+      "Direct fetch",
+      "Fetch directly in component body without useEffect",
+      "Direct call",
+      "Component fetch"
+    ],
+    "correctOptions": [
+      "Fetch directly in component body without useEffect"
+    ],
+    "time": 55,
+    "details": "RSC can fetch data directly in components."
+  },
+  {
+    "question": "What is caching in Next.js App Router?",
+    "options": [
+      "Data cache",
+      "Server-side caching of fetch results and static content",
+      "Request cache",
+      "Data store"
+    ],
+    "correctOptions": [
+      "Server-side caching of fetch results and static content"
+    ],
+    "time": 60,
+    "details": "Next.js caches data by default for performance."
+  },
+  {
+    "question": "What is dynamic rendering in Next.js?",
+    "options": [
+      "Dynamic content",
+      "Rendering based on request-time data like cookies/headers",
+      "Static render",
+      "Runtime render"
+    ],
+    "correctOptions": [
+      "Rendering based on request-time data like cookies/headers"
+    ],
+    "time": 60,
+    "details": "Dynamic rendering uses request-time data."
+  },
+  {
+    "question": "What is static rendering in Next.js?",
+    "options": [
+      "Build time render",
+      "Rendering at build time, cached for all requests",
+      "Compile render",
+      "Fixed render"
+    ],
+    "correctOptions": [
+      "Rendering at build time, cached for all requests"
+    ],
+    "time": 55,
+    "details": "Static rendering happens at build time."
+  },
+  {
+    "question": "What is ISR (Incremental Static Regeneration)?",
+    "options": [
+      "Hybrid update",
+      "Updating static pages in background without full rebuild",
+      "Background update",
+      "Auto rebuild"
+    ],
+    "correctOptions": [
+      "Updating static pages in background without full rebuild"
+    ],
+    "time": 60,
+    "details": "ISR updates static pages after a time interval."
+  },
+  {
+    "question": "What is on-demand ISR?",
+    "options": [
+      "Manual trigger",
+      "Manually triggering revalidation via API",
+      "API trigger",
+      "Manual update"
+    ],
+    "correctOptions": [
+      "Manually triggering revalidation via API"
+    ],
+    "time": 60,
+    "details": "On-demand ISR revalidates when data changes."
+  },
+  {
+    "question": "What is route segment config in Next.js?",
+    "options": [
+      "Route options",
+      "Options like dynamic, revalidate for route segments",
+      "Segment config",
+      "Route config"
+    ],
+    "correctOptions": [
+      "Options like dynamic, revalidate for route segments"
+    ],
+    "time": 55,
+    "details": "Segment config controls route behavior."
+  },
+  {
+    "question": "What is dynamic route segment?",
+    "options": [
+      "Dynamic URL",
+      "Route segment using [param] for dynamic values",
+      "URL param",
+      "Wildcard"
+    ],
+    "correctOptions": [
+      "Route segment using [param] for dynamic values"
+    ],
+    "time": 50,
+    "details": "[slug] creates dynamic route segments."
+  },
+  {
+    "question": "What is catch-all route in Next.js?",
+    "options": [
+      "Wildcard",
+      "[[...slug]] for optional or [...slug] for required segments",
+      "Optional wildcard",
+      "Path wildcard"
+    ],
+    "correctOptions": [
+      "[[...slug]] for optional or [...slug] for required segments"
+    ],
+    "time": 60,
+    "details": "Catch-all routes capture multiple URL segments."
+  },
+  {
+    "question": "What are route groups in Next.js?",
+    "options": [
+      "Folder group",
+      "(folder) naming for organizing routes without affecting URL",
+      "Path group",
+      "URL group"
+    ],
+    "correctOptions": [
+      "(folder) naming for organizing routes without affecting URL"
+    ],
+    "time": 55,
+    "details": "Route groups organize without affecting URLs."
+  },
+  {
+    "question": "What are parallel routes in Next.js?",
+    "options": [
+      "Multiple routes",
+      "@folder syntax for rendering multiple routes simultaneously",
+      "Side routes",
+      "Multi-route"
+    ],
+    "correctOptions": [
+      "@folder syntax for rendering multiple routes simultaneously"
+    ],
+    "time": 65,
+    "details": "Parallel routes render multiple pages in one slot."
+  },
+  {
+    "question": "What are intercepting routes in Next.js?",
+    "options": [
+      "Modal routes",
+      "(.)folder syntax for showing modal while preserving URL",
+      "Modal pattern",
+      "Intercept"
+    ],
+    "correctOptions": [
+      "(.)folder syntax for showing modal while preserving URL"
+    ],
+    "time": 65,
+    "details": "Intercepting routes enable modal-with-URL patterns."
+  },
+  {
+    "question": "What is middleware in Next.js?",
+    "options": [
+      "Edge function",
+      "Function running before requests for redirects/rewrites",
+      "Request handler",
+      "Edge handler"
+    ],
+    "correctOptions": [
+      "Function running before requests for redirects/rewrites"
+    ],
+    "time": 55,
+    "details": "Middleware runs before request completion."
+  },
+  {
+    "question": "What is the Next.js Image component?",
+    "options": [
+      "Optimized image",
+      "Component for optimized image loading with lazy loading",
+      "Image loader",
+      "Picture"
+    ],
+    "correctOptions": [
+      "Component for optimized image loading with lazy loading"
+    ],
+    "time": 50,
+    "details": "next/image provides automatic optimization."
+  },
+  {
+    "question": "What is next/font?",
+    "options": [
+      "Font optimization",
+      "Automatic font optimization with Google fonts",
+      "Font loader",
+      "Google fonts"
+    ],
+    "correctOptions": [
+      "Automatic font optimization with Google fonts"
+    ],
+    "time": 50,
+    "details": "next/font optimizes font loading and prevents layout shift."
+  },
+  {
+    "question": "What is the App Router vs Pages Router?",
+    "options": [
+      "Router difference",
+      "App Router uses RSC, layout, streaming; Pages uses directory-based",
+      "New router",
+      "Legacy router"
+    ],
+    "correctOptions": [
+      "App Router uses RSC, layout, streaming; Pages uses directory-based"
+    ],
+    "time": 60,
+    "details": "App Router is the new rendering model."
+  },
+  {
+    "question": "What are layouts in App Router?",
+    "options": [
+      "Shared UI",
+      "Components wrapping routes that persist across navigation",
+      "Shared component",
+      "Wrapper"
+    ],
+    "correctOptions": [
+      "Components wrapping routes that persist across navigation"
+    ],
+    "time": 50,
+    "details": "Layouts provide shared UI and preserve state."
+  },
+  {
+    "question": "What is root layout in App Router?",
+    "options": [
+      "Base layout",
+      "Required layout wrapping all routes",
+      "Base component",
+      "Main layout"
+    ],
+    "correctOptions": [
+      "Required layout wrapping all routes"
+    ],
+    "time": 50,
+    "details": "Root layout is required and wraps all pages."
+  },
+  {
+    "question": "What is nested layout in App Router?",
+    "options": [
+      "Child layout",
+      "Layout in nested folders that wraps child routes",
+      "Sub layout",
+      "Route layout"
+    ],
+    "correctOptions": [
+      "Layout in nested folders that wraps child routes"
+    ],
+    "time": 55,
+    "details": "Nested layouts wrap specific route segments."
+  },
+  {
+    "question": "What is template in App Router?",
+    "options": [
+      "Per-request wrapper",
+      "Component like layout but remounts on navigation",
+      "Navigation wrapper",
+      "State wrapper"
+    ],
+    "correctOptions": [
+      "Component like layout but remounts on navigation"
+    ],
+    "time": 60,
+    "details": "Templates remount on navigation unlike layouts."
+  },
+  {
+    "question": "What is the loading.js file?",
+    "options": [
+      "Loading component",
+      "Component shown during route loading with Suspense",
+      "Loading UI",
+      "Skeleton"
+    ],
+    "correctOptions": [
+      "Component shown during route loading with Suspense"
+    ],
+    "time": 50,
+    "details": "loading.js provides instant loading UI."
+  },
+  {
+    "question": "What is the error.js file?",
+    "options": [
+      "Error component",
+      "Component for handling route errors with Error Boundaries",
+      "Error boundary",
+      "Catch error"
+    ],
+    "correctOptions": [
+      "Component for handling route errors with Error Boundaries"
+    ],
+    "time": 55,
+    "details": "error.js provides route-level error handling."
+  },
+  {
+    "question": "What is the not-found.js file?",
+    "options": [
+      "404 component",
+      "Component for 404 errors",
+      "Missing page",
+      "404 page"
+    ],
+    "correctOptions": [
+      "Component for 404 errors"
+    ],
+    "time": 50,
+    "details": "not-found.js handles route not found."
+  },
+  {
+    "question": "What is the page.js file?",
+    "options": [
+      "Page component",
+      "Required component for route that renders content",
+      "Route component",
+      "Content"
+    ],
+    "correctOptions": [
+      "Required component for route that renders content"
+    ],
+    "time": 45,
+    "details": "page.js is the page component for each route."
+  },
+  {
+    "question": "What is the layout.js file?",
+    "options": [
+      "Layout component",
+      "Component providing shared UI for routes",
+      "Wrapper",
+      "Shared UI"
+    ],
+    "correctOptions": [
+      "Component providing shared UI for routes"
+    ],
+    "time": 50,
+    "details": "layout.js provides shared UI structure."
+  },
+  {
+    "question": "What is the route.js file?",
+    "options": [
+      "API route",
+      "File for creating API routes (Route Handlers)",
+      "API endpoint",
+      "Handler"
+    ],
+    "correctOptions": [
+      "API route"
+    ],
+    "time": 50,
+    "details": "route.js creates API endpoints."
+  },
+  {
+    "question": "What is fetch caching in Next.js?",
+    "options": [
+      "Data cache",
+      "Caching fetch results based on unique keys",
+      "Cache key",
+      "Data store"
+    ],
+    "correctOptions": [
+      "Caching fetch results based on unique keys"
+    ],
+    "time": 60,
+    "details": "Next.js caches fetch requests by default."
+  },
+  {
+    "question": "What is fetch no-store?",
+    "options": [
+      "No cache",
+      "Option to opt-out of caching for dynamic data",
+      "Dynamic fetch",
+      "No cache"
+    ],
+    "correctOptions": [
+      "Option to opt-out of caching for dynamic data"
+    ],
+    "time": 55,
+    "details": "no-store disables caching for the fetch."
+  },
+  {
+    "question": "What is fetch revalidate?",
+    "options": [
+      "Revalidation time",
+      "Time in seconds for revalidating cached data",
+      "Cache time",
+      "Refresh time"
+    ],
+    "correctOptions": [
+      "Time in seconds for revalidating cached data"
+    ],
+    "time": 55,
+    "details": "revalidate sets ISR interval for the fetch."
+  },
+  {
+    "question": "What is the fetch cache default?",
+    "options": [
+      "Auto cache",
+      "By default fetch results are cached indefinitely",
+      "Default cache",
+      "Standard cache"
+    ],
+    "correctOptions": [
+      "By default fetch results are cached indefinitely"
+    ],
+    "time": 55,
+    "details": "Fetch results are cached by default."
+  },
+  {
+    "question": "What is route handler in App Router?",
+    "options": [
+      "API endpoint",
+      "Function for handling API requests in route.js",
+      "Request handler",
+      "API handler"
+    ],
+    "correctOptions": [
+      "Function for handling API requests in route.js"
+    ],
+    "time": 55,
+    "details": "Route handlers replace API routes."
+  },
+  {
+    "question": "What is NextResponse?",
+    "options": [
+      "Response helper",
+      "Helper for creating responses in route handlers",
+      "Response object",
+      "Return value"
+    ],
+    "correctOptions": [
+      "Helper for creating responses in route handlers"
+    ],
+    "time": 50,
+    "details": "NextResponse creates HTTP responses."
+  },
+  {
+    "question": "What is redirect in Next.js?",
+    "options": [
+      "URL redirect",
+      "Function to redirect to another URL",
+      "Route redirect",
+      "URL change"
+    ],
+    "correctOptions": [
+      "Function to redirect to another URL"
+    ],
+    "time": 50,
+    "details": "redirect performs URL redirects."
+  },
+  {
+    "question": "What is notFound in Next.js?",
+    "options": [
+      "404 trigger",
+      "Function to trigger 404 error page",
+      "Missing trigger",
+      "Error trigger"
+    ],
+    "correctOptions": [
+      "Function to trigger 404 error page"
+    ],
+    "time": 50,
+    "details": "notFound triggers the not-found page."
+  },
+  {
+    "question": "What are headers in Next.js?",
+    "options": [
+      "Request headers",
+      "Accessing incoming request headers in Server Components",
+      "HTTP headers",
+      "Request data"
+    ],
+    "correctOptions": [
+      "Accessing incoming request headers in Server Components"
+    ],
+    "time": 55,
+    "details": "headers() provides request header access."
+  },
+  {
+    "question": "What are cookies in Next.js?",
+    "options": [
+      "Cookie access",
+      "Reading and writing cookies in Server Components",
+      "Session",
+      "Browser data"
+    ],
+    "correctOptions": [
+      "Reading and writing cookies in Server Components"
+    ],
+    "time": 55,
+    "details": "cookies() provides cookie operations."
+  },
+  {
+    "question": "What is params in Next.js Page props?",
+    "options": [
+      "Route params",
+      "Dynamic route parameters for the page",
+      "URL params",
+      "Path params"
+    ],
+    "correctOptions": [
+      "Dynamic route parameters for the page"
+    ],
+    "time": 50,
+    "details": "params contains dynamic route segments."
+  },
+  {
+    "question": "What is searchParams in Next.js Page props?",
+    "options": [
+      "Query string",
+      "URL search parameters for the page",
+      "URL query",
+      "Query params"
+    ],
+    "correctOptions": [
+      "URL search parameters for the page"
+    ],
+    "time": 50,
+    "details": "searchParams contains URL query string."
+  },
+  {
+    "question": "What is useState? (Level 6 #129)",
+    "options": [
+      "State",
+      "Hook",
+      "Re-render",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "State",
+      "Hook",
+      "Re-render",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useState? explanation."
+  },
+  {
+    "question": "What is useEffect? (Level 6 #130)",
+    "options": [
+      "Side effects",
+      "Cleanup",
+      "Dependencies",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Side effects",
+      "Cleanup",
+      "Dependencies",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useEffect? explanation."
+  },
+  {
+    "question": "What is useContext? (Level 6 #131)",
+    "options": [
+      "Context",
+      "Redux alternative",
+      "Global state",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Context",
+      "Redux alternative",
+      "Global state",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useContext? explanation."
+  },
+  {
+    "question": "What is useReducer? (Level 6 #132)",
+    "options": [
+      "State management",
+      "Complex state",
+      "Actions",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "State management",
+      "Complex state",
+      "Actions",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useReducer? explanation."
+  },
+  {
+    "question": "What is useRef? (Level 6 #133)",
+    "options": [
+      "DOM access",
+      "Mutable value",
+      "Persistence",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "DOM access",
+      "Mutable value",
+      "Persistence",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useRef? explanation."
+  },
+  {
+    "question": "What is useMemo? (Level 6 #134)",
+    "options": [
+      "Performance",
+      "Cache",
+      "Expensive calculation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Performance",
+      "Cache",
+      "Expensive calculation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useMemo? explanation."
+  },
+  {
+    "question": "What is useCallback? (Level 6 #135)",
+    "options": [
+      "Performance",
+      "Function memoization",
+      "Dependencies",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Performance",
+      "Function memoization",
+      "Dependencies",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useCallback? explanation."
+  },
+  {
+    "question": "What is React.memo? (Level 6 #136)",
+    "options": [
+      "Optimization",
+      "Pure component",
+      "Shallow compare",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Optimization",
+      "Pure component",
+      "Shallow compare",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is React.memo? explanation."
+  },
+  {
+    "question": "What is useLayoutEffect? (Level 6 #137)",
+    "options": [
+      "Synchronous",
+      "DOM mutation",
+      "Before paint",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Synchronous",
+      "DOM mutation",
+      "Before paint",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useLayoutEffect? explanation."
+  },
+  {
+    "question": "What is custom hook? (Level 6 #138)",
+    "options": [
+      "Reuse logic",
+      "Stateful",
+      "Side effects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Reuse logic",
+      "Stateful",
+      "Side effects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is custom hook? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  }
 ]

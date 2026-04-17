@@ -1,144 +1,2503 @@
 [
-  {"question": "What is the purpose of opcache in PHP?", "options": ["Bytecode cache", "Performance", "Compilation", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "OPcache stores precompiled bytecode to improve performance."},
-  {"question": "What is JIT in PHP 8?", "options": ["Just-in-time compilation", "Runtime", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "JIT compiles PHP to machine code at runtime."},
-  {"question": "What is the difference between opcache and JIT?", "options": ["Caching vs compilation", "Bytecode vs native", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "OPcache caches bytecode; JIT compiles to native code."},
-  {"question": "What is APCu in PHP?", "options": ["User cache", "Memory", "Key-value", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "APCu provides in-memory user caching."},
-  {"question": "What is the purpose of memory_limit in PHP?", "options": ["Memory limit", "Configuration", "Resource", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "memory_limit restricts PHP script memory usage."},
-  {"question": "What is max_execution_time in PHP?", "options": ["Script timeout", "Configuration", "Time limit", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "max_execution_time limits script running time."},
-  {"question": "What is session.save_handler in PHP?", "options": ["Session storage", "Configuration", "Backend", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "session.save_handler defines session storage backend."},
-  {"question": "What is session.cookie_httponly?", "options": ["HTTP only cookie", "Security", "Session", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "session.cookie_httponly prevents JavaScript access to session cookie."},
-  {"question": "What is session.cookie_secure?", "options": ["Secure cookie", "HTTPS", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "session.cookie_secure restricts session cookie to HTTPS."},
-  {"question": "What is session.use_strict_mode?", "options": ["Strict session", "Security", "Cookie", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "use_strict_mode rejects uninitialized session IDs."},
-  {"question": "What is session.use_only_cookies?", "options": ["Cookie only", "Security", "Session", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "use_only_cookies prevents session ID in URL."},
-  {"question": "What is session.gc_maxlifetime?", "options": ["Session lifetime", "Garbage collection", "Time", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "gc_maxlifetime sets session expiry time."},
-  {"question": "What is session.gc_probability?", "options": ["GC probability", "Garbage collection", "Config", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "gc_probability controls garbage collection probability."},
-  {"question": "What is error_log in PHP?", "options": ["Error log file", "Configuration", "Logging", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "error_log specifies error log file path."},
-  {"question": "What is display_errors in PHP?", "options": ["Show errors", "Configuration", "Display", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "display_errors shows errors in output."},
-  {"question": "What is log_errors in PHP?", "options": ["Log errors", "Configuration", "File", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "log_errors logs errors to error_log."},
-  {"question": "What is max_input_vars in PHP?", "options": ["Input limit", "POST vars", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "max_input_vars limits POST input variables."},
-  {"question": "What is file_uploads in PHP?", "options": ["Enable uploads", "Configuration", "File", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "file_uploads enables HTTP file uploads."},
-  {"question": "What is upload_max_filesize in PHP?", "options": ["Max upload size", "Configuration", "File", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "upload_max_filesize limits upload file size."},
-  {"question": "What is post_max_size in PHP?", "options": ["Max POST size", "Configuration", "Request", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "post_max_size limits POST request size."},
-  {"question": "What is allow_url_fopen in PHP?", "options": ["Remote files", "Security", "Configuration", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "allow_url_fopen allows accessing remote files."},
-  {"question": "What is allow_url_include in PHP?", "options": ["Remote includes", "Security", "Configuration", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "allow_url_include allows including remote files (dangerous)."},
-  {"question": "What is ctype functions in PHP?", "options": ["Character type", "Validation", "ctype", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "ctype functions check character types (digit, alpha, etc.)."},
-  {"question": "What is filter_var in PHP?", "options": ["Validate/filter", "Sanitize", "Input", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "filter_var validates and sanitizes data."},
-  {"question": "What is FILTER_VALIDATE_EMAIL?", "options": ["Email validation", "Filter", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "FILTER_VALIDATE_EMAIL validates email format."},
-  {"question": "What is FILTER_VALIDATE_URL?", "options": ["URL validation", "Filter", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "FILTER_VALIDATE_URL validates URL format."},
-  {"question": "What is FILTER_SANITIZE_STRING?", "options": ["Sanitize string", "Filter", "XSS", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "FILTER_SANITIZE_STRING strips/escapes special characters."},
-  {"question": "What is password_hash in PHP?", "options": ["Hash password", "Security", "Bcrypt", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "password_hash creates secure password hash."},
-  {"question": "What is password_verify in PHP?", "options": ["Verify password", "Hash", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "password_verify verifies password against hash."},
-  {"question": "What is password_hash algorithm in PHP?", "options": ["Default algorithm", "Bcrypt", "Argon2", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "Default is PASSWORD_BCRYPT; PHP 7.4+ supports Argon2."},
-  {"question": "What is hash functions in PHP?", "options": ["Hash algorithms", "Security", "Hashing", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "hash() provides various hashing algorithms."},
-  {"question": "What is hash_hmac in PHP?", "options": ["HMAC hash", "Keyed-hash", "Message", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "hash_hmac creates keyed hash with key."},
-  {"question": "What is password_hash options?", "options": ["Cost", "Algorithm", "Options", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "Options include cost for bcrypt, type for Argon2."},
-  {"question": "What is random_bytes in PHP?", "options": ["Secure random", "Cryptographic", "Bytes", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "random_bytes generates cryptographically secure random bytes."},
-  {"question": "What is random_int in PHP?", "options": ["Secure random integer", "Cryptographic", "Number", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "random_int generates secure random integer."},
-  {"question": "What is openssl_random_pseudo_bytes in PHP?", "options": ["Pseudo-random bytes", "OpenSSL", "Cryptographic", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "openssl_random_pseudo_bytes generates pseudo-random bytes."},
-  {"question": "What is the difference between random_bytes and openssl_random_pseudo_bytes?", "options": ["Secure vs pseudo", "Quality", "Usage", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "random_bytes is cryptographically secure; pseudo is less secure."},
-  {"question": "What is base64 encoding in PHP?", "options": ["Base64 encoding", "Encoding", "Data", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "base64_encode encodes binary to ASCII text."},
-  {"question": "What is urlencode vs rawurlencode in PHP?", "options": ["Encoding differences", "Space handling", "URL", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "urlencode encodes space as +; rawurlencode encodes as %20."},
-  {"question": "What is PHP garbage collection?", "options": ["Memory cleanup", "References", "Cleanup", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "GC cleans up cyclic references and frees memory."},
-  {"question": "What is gc_collect_cycles in PHP?", "options": ["Force GC", "Cycles", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "gc_collect_cycles forces garbage collection of cycles."},
-  {"question": "What is memory_get_usage in PHP?", "options": ["Memory usage", "Peak", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "memory_get_usage returns current memory usage."},
-  {"question": "What is memory_get_peak_usage in PHP?", "options": ["Peak memory", "Maximum", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "memory_get_peak_usage returns peak memory used."},
-  {"question": "What is xdebug in PHP?", "options": ["Debugger", "Extension", "Development", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "Xdebug provides debugging and profiling."},
-  {"question": "What is var_dump vs var_export?", "options": ["Output differences", "Debug", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "var_dump shows type and value; var_export shows valid PHP code."},
-  {"question": "What is debug_backtrace in PHP?", "options": ["Stack trace", "Debug", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "debug_backtrace returns execution stack."},
-  {"question": "What is debug_print_backtrace in PHP?", "options": ["Print stack", "Debug", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "debug_print_backtrace prints execution stack."},
-  {"question": "What is __debugInfo in PHP?", "options": ["Custom debug", "var_dump", "Magic method", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "__debugInfo customizes var_dump output."},
-  {"question": "What is set_time_limit in PHP?", "options": ["Script timeout", "Runtime", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "set_time_limit sets max execution time."},
-  {"question": "What is ini_set in PHP?", "options": ["Set config", "Runtime", "INI", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "ini_set changes configuration at runtime."},
-  {"question": "What is ini_get in PHP?", "options": ["Get config", "INI", "Value", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "ini_get returns configuration value."},
-  {"question": "What is get_loaded_extensions in PHP?", "options": ["Extensions list", "PHP", "Loaded", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "get_loaded_extensions returns loaded extensions."},
-  {"question": "What is extension_loaded in PHP?", "options": ["Check extension", "Loaded", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "extension_loaded checks if extension is loaded."},
-  {"question": "What is function_exists in PHP?", "options": ["Check function", "Exists", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "function_exists checks if function is defined."},
-  {"question": "What is class_exists in PHP?", "options": ["Check class", "Exists", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "class_exists checks if class is defined."},
-  {"question": "What is method_exists in PHP?", "options": ["Check method", "Object", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "method_exists checks if method exists on object."},
-  {"question": "What is property_exists in PHP?", "options": ["Check property", "Object", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "property_exists checks if property exists."},
-  {"question": "What is is_a in PHP?", "options": ["Type check", "Object", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "is_a checks if object is instance of class."},
-  {"question": "What is is_subclass_of in PHP?", "options": ["Inheritance check", "Class", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "is_subclass_of checks if object is from subclass."},
-  {"question": "What is get_class in PHP?", "options": ["Get class name", "Object", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "get_class returns class name of object."},
-  {"question": "What is get_parent_class in PHP?", "options": ["Get parent", "Class", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "get_parent_class returns parent class name."},
-  {"question": "What is get_class_methods in PHP?", "options": ["Get methods", "Class", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "get_class_methods returns all methods of class."},
-  {"question": "What is get_class_vars in PHP?", "options": ["Get properties", "Class", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "get_class_vars returns all properties of class."},
-  {"question": "What is get_object_vars in PHP?", "options": ["Get object properties", "Object", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "get_object_vars returns visible properties of object."},
-  {"question": "What is get_defined_vars in PHP?", "options": ["Get variables", "Scope", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "get_defined_vars returns defined variables in scope."},
-  {"question": "What is get_defined_functions in PHP?", "options": ["Get functions", "PHP", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "get_defined_functions returns defined functions."},
-  {"question": "What is get_defined_constants in PHP?", "options": ["Get constants", "PHP", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "get_defined_constants returns defined constants."},
-  {"question": "What is get_included_files in PHP?", "options": ["Get included files", "Files", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "get_included_files returns included files."},
-  {"question": "What is phpinfo()?", "options": ["PHP information", "Configuration", "System", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "phpinfo() displays PHP configuration."},
-  {"question": "What is PHP_VERSION constant?", "options": ["PHP version", "Constant", "Version", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "PHP_VERSION returns current PHP version."},
-  {"question": "What is PHP_OS constant?", "options": ["OS", "Constant", "System", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "PHP_OS returns operating system."},
-  {"question": "What is DIRECTORY_SEPARATOR in PHP?", "options": ["Path separator", "Constant", "OS", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "DIRECTORY_SEPARATOR returns / or \\ based on OS."},
-  {"question": "What is PATH_SEPARATOR in PHP?", "options": ["Path separator", "Constant", "Environment", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "PATH_SEPARATOR returns : or ; for path."},
-  {"question": "What is PHP_EOL in PHP?", "options": ["Line ending", "Constant", "OS", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "PHP_EOL returns appropriate line ending."},
-  {"question": "What is __COMPILER_HALT_OFFSET__?", "options": ["Compiler halt", "Constant", "Magic", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "__COMPILER_HALT_OFFSET__ provides halt position in files."},
-  {"question": "What is CLI usage of PHP?", "options": ["Command line", "CLI", "Script", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "PHP can run from command line: php script.php."},
-  {"question": "What is $argv in CLI?", "options": ["CLI arguments", "Array", "Command line", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "$argv contains command-line arguments."},
-  {"question": "What is $argc in CLI?", "options": ["Argument count", "Integer", "Command line", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "$argc contains number of arguments."},
-  {"question": "What is getopt() in PHP?", "options": ["Get options", "CLI", "Arguments", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "getopt() parses command-line options."},
-  {"question": "What is Phar class in PHP?", "options": ["PHP archive", "Packaging", "Distribution", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "Phar creates single-file PHP applications."},
-  {"question": "What is phar archive?", "options": ["Single file", "PHP", "Archive", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "Phar packages entire application in single file."},
-  {"question": "What is the difference between php.ini and .user.ini?", "options": ["Scope", "Location", "Configuration", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "php.ini is global; .user.ini is per-directory."},
-  {"question": "What is .user.ini precedence?", "options": ["Per-directory", "Inheritance", "Configuration", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": ".user.ini settings apply to directory and subdirectories."},
-  {"question": "What is ini_parse_quantity in PHP?", "options": ["Parse quantity", "Memory", "INI", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "ini_parse_quantity parses memory abbreviations like 1M."},
-  {"question": "What is header() function in PHP?", "options": ["Send HTTP header", "Response", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "header() sends raw HTTP headers."},
-  {"question": "What is header_remove() in PHP?", "options": ["Remove header", "Response", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "header_remove() removes previously set headers."},
-  {"question": "What is http_response_code() in PHP?", "options": ["Set status code", "Response", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "http_response_code() sets/returns HTTP response code."},
-  {"question": "What is setcookie() function?", "options": ["Set cookie", "Response", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "setcookie() sends cookie with response."},
-  {"question": "What is setrawcookie() function?", "options": ["Set raw cookie", "Value", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "setrawcookie() sets cookie without URL encoding."},
-  {"question": "What is session_start() in PHP?", "options": ["Start session", "Session", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "session_start() starts/resumes session."},
-  {"question": "What is session_destroy() in PHP?", "options": ["Destroy session", "Session", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "session_destroy() destroys all session data."},
-  {"question": "What is session_regenerate_id()?", "options": ["Regenerate ID", "Security", "Session", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "session_regenerate_id() creates new session ID."},
-  {"question": "What is session_write_close()?", "options": ["Save and close", "Session", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "session_write_close() saves and releases session lock."},
-  {"question": "What is stream_context_create in PHP?", "options": ["Create context", "Streams", "Options", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "stream_context_create creates stream context."},
-  {"question": "What is stream_socket_client in PHP?", "options": ["Create client", "Socket", "Connection", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "stream_socket_client connects to socket."},
-  {"question": "What is fsockopen in PHP?", "options": ["Socket connection", "Function", "Network", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "fsockopen opens socket connection."},
-  {"question": "What is cURL in PHP?", "options": ["HTTP client", "Library", "Requests", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "cURL allows making HTTP requests."},
-  {"question": "What is curl_init in PHP?", "options": ["Init cURL", "Handle", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "curl_init() initializes cURL session."},
-  {"question": "What is curl_setopt in PHP?", "options": ["Set options", "cURL", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "curl_setopt() sets cURL options."},
-  {"question": "What is curl_exec in PHP?", "options": ["Execute request", "cURL", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "curl_exec() executes cURL request."},
-  {"question": "What is curl_close in PHP?", "options": ["Close cURL", "Handle", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "curl_close() closes cURL session."},
-  {"question": "What is CURLOPT_URL?", "options": ["Set URL", "cURL", "Option", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "CURLOPT_URL specifies request URL."},
-  {"question": "What is CURLOPT_RETURNTRANSFER?", "options": ["Return as string", "cURL", "Option", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "CURLOPT_RETURNTRANSFER returns string instead of output."},
-  {"question": "What is CURLOPT_POST?", "options": ["POST request", "cURL", "Option", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "CURLOPT_POST enables POST request."},
-  {"question": "What is CURLOPT_POSTFIELDS?", "options": ["POST data", "cURL", "Option", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "CURLOPT_POSTFIELDS specifies POST data."},
-  {"question": "What is CURLOPT_HTTPHEADER?", "options": ["HTTP headers", "cURL", "Option", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "CURLOPT_HTTPHEADER sets request headers."},
-  {"question": "What is CURLOPT_TIMEOUT?", "options": ["Request timeout", "cURL", "Option", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "CURLOPT_TIMEOUT sets request timeout."},
-  {"question": "What is CURLOPT_SSL_VERIFYPEER?", "options": ["SSL verification", "cURL", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "CURLOPT_SSL_VERIFYPEER verifies SSL certificate."},
-  {"question": "What is simplexml_load_string in PHP?", "options": ["Parse XML", "String", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "simplexml_load_string() parses XML string."},
-  {"question": "What is simplexml_load_file in PHP?", "options": ["Parse XML file", "Function", "XML", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "simplexml_load_file() parses XML file."},
-  {"question": "What is DOMDocument in PHP?", "options": ["XML/HTML DOM", "Object", "Parser", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "DOMDocument provides DOM parsing."},
-  {"question": "What is json_encode flags in PHP?", "options": ["JSON options", "Encoding", "Flags", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "json_encode flags like JSON_PRETTY_PRINT format output."},
-  {"question": "What is json_decode assoc parameter?", "options": ["Array vs object", "JSON", "Decode", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "json_decode($json, true) returns associative array."},
-  {"question": "What is preg_match in PHP?", "options": ["Regex match", "Pattern", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "preg_match() performs regex match."},
-  {"question": "What is preg_match_all in PHP?", "options": ["Match all", "Pattern", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "preg_match_all() finds all matches."},
-  {"question": "What is preg_replace in PHP?", "options": ["Regex replace", "Pattern", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "preg_replace() replaces using regex."},
-  {"question": "What is preg_split in PHP?", "options": ["Regex split", "Pattern", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "preg_split() splits by regex."},
-  {"question": "What is preg_grep in PHP?", "options": ["Regex filter", "Pattern", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "preg_grep() filters array by regex."},
-  {"question": "What is preg_quote in PHP?", "options": ["Escape regex", "Pattern", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "preg_quote() escapes regex metacharacters."},
-  {"question": "What is pcre.backtrack_limit in PHP?", "options": ["Backtrack limit", "Regex", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "pcre.backtrack_limit limits regex backtracking."},
-  {"question": "What is pcre.recursion_limit in PHP?", "options": ["Recursion limit", "Regex", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "pcre.recursion_limit limits regex recursion."},
-  {"question": "What is mb_* functions in PHP?", "options": ["Multibyte", "String", "Encoding", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "mb_* functions handle multibyte strings."},
-  {"question": "What is mb_internal_encoding in PHP?", "options": ["Set encoding", "Multibyte", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "mb_internal_encoding sets default encoding."},
-  {"question": "What is mb_strlen vs strlen in PHP?", "options": ["Byte vs character", "Multibyte", "Length", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "mb_strlen counts characters; strlen counts bytes."},
-  {"question": "What is mb_substr vs substr in PHP?", "options": ["Character vs byte", "Multibyte", "Substring", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "mb_substr extracts by character; substr by byte."},
-  {"question": "What is iconv in PHP?", "options": ["Encoding conversion", "Function", "Charset", "All of the above"], "time": 55, "details": "iconv converts character encoding."},
-  {"question": "What is transliteration in iconv?", "options": ["Replace characters", "Encoding", "Output", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "//TRANSLIT replaces unrecognized characters."},
-  {"question": "What is intl extension in PHP?", "options": ["Internationalization", "Extension", "Locale", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "Intl provides internationalization functions."},
-  {"question": "What is MessageFormatter in PHP?", "options": ["Format messages", "Intl", "Plural", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "MessageFormatter formats plural-aware messages."},
-  {"question": "What is Collator in PHP?", "options": ["Compare strings", "Intl", "Locale", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "Collator compares strings per locale."},
-  {"question": "What is NumberFormatter in PHP?", "options": ["Format numbers", "Intl", "Locale", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "NumberFormatter formats numbers per locale."},
-  {"question": "What is DateTime in PHP?", "options": ["Date object", "Object", "DateTime", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "DateTime provides date/time object."},
-  {"question": "What is DateInterval in PHP?", "options": ["Date difference", "Object", "Duration", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "DateInterval represents date/time duration."},
-  {"question": "What is DateTimeZone in PHP?", "options": ["Timezone", "Object", "Time", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "DateTimeZone represents timezone."},
-  {"question": "What is DateTime::diff()?", "options": ["Date difference", "DateTime", "Interval", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "DateTime::diff() returns DateInterval of difference."},
-  {"question": "What is DateTime::modify()?", "options": ["Modify date", "DateTime", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "DateTime::modify() modifies date via string."},
-  {"question": "What is DateTime::format()?", "options": ["Format date", "DateTime", "Output", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "DateTime::format() formats date as string."},
-  {"question": "What is strtotime() in PHP?", "options": ["Parse date string", "Timestamp", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "strtotime() parses English date string to timestamp."},
-  {"question": "What is date() function in PHP?", "options": ["Format date", "Timestamp", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "date() formats timestamp as string."},
-  {"question": "What is time() in PHP?", "options": ["Current timestamp", "Function", "Unix", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "time() returns current Unix timestamp."},
-  {"question": "What is mktime() in PHP?", "options": ["Create timestamp", "Date", "Function", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "mktime() creates timestamp from date components."},
-  {"question": "What is microtime() in PHP?", "options": ["Microsecond timestamp", "Function", "Precise", "All of the above"], "correctOptions": ["All of the above"], "time": 55, "details": "microtime() returns current timestamp with microseconds."}
+  {
+    "question": "What is the purpose of opcache in PHP?",
+    "options": [
+      "Bytecode cache",
+      "Performance",
+      "Compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "OPcache stores precompiled bytecode to improve performance."
+  },
+  {
+    "question": "What is JIT in PHP 8?",
+    "options": [
+      "Just-in-time compilation",
+      "Runtime",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "JIT compiles PHP to machine code at runtime."
+  },
+  {
+    "question": "What is the difference between opcache and JIT?",
+    "options": [
+      "Caching vs compilation",
+      "Bytecode vs native",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "OPcache caches bytecode; JIT compiles to native code."
+  },
+  {
+    "question": "What is APCu in PHP?",
+    "options": [
+      "User cache",
+      "Memory",
+      "Key-value",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "APCu provides in-memory user caching."
+  },
+  {
+    "question": "What is the purpose of memory_limit in PHP?",
+    "options": [
+      "Memory limit",
+      "Configuration",
+      "Resource",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "memory_limit restricts PHP script memory usage."
+  },
+  {
+    "question": "What is max_execution_time in PHP?",
+    "options": [
+      "Script timeout",
+      "Configuration",
+      "Time limit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "max_execution_time limits script running time."
+  },
+  {
+    "question": "What is session.save_handler in PHP?",
+    "options": [
+      "Session storage",
+      "Configuration",
+      "Backend",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "session.save_handler defines session storage backend."
+  },
+  {
+    "question": "What is session.cookie_httponly?",
+    "options": [
+      "HTTP only cookie",
+      "Security",
+      "Session",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "session.cookie_httponly prevents JavaScript access to session cookie."
+  },
+  {
+    "question": "What is session.cookie_secure?",
+    "options": [
+      "Secure cookie",
+      "HTTPS",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "session.cookie_secure restricts session cookie to HTTPS."
+  },
+  {
+    "question": "What is session.use_strict_mode?",
+    "options": [
+      "Strict session",
+      "Security",
+      "Cookie",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "use_strict_mode rejects uninitialized session IDs."
+  },
+  {
+    "question": "What is session.use_only_cookies?",
+    "options": [
+      "Cookie only",
+      "Security",
+      "Session",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "use_only_cookies prevents session ID in URL."
+  },
+  {
+    "question": "What is session.gc_maxlifetime?",
+    "options": [
+      "Session lifetime",
+      "Garbage collection",
+      "Time",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "gc_maxlifetime sets session expiry time."
+  },
+  {
+    "question": "What is session.gc_probability?",
+    "options": [
+      "GC probability",
+      "Garbage collection",
+      "Config",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "gc_probability controls garbage collection probability."
+  },
+  {
+    "question": "What is error_log in PHP?",
+    "options": [
+      "Error log file",
+      "Configuration",
+      "Logging",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "error_log specifies error log file path."
+  },
+  {
+    "question": "What is display_errors in PHP?",
+    "options": [
+      "Show errors",
+      "Configuration",
+      "Display",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "display_errors shows errors in output."
+  },
+  {
+    "question": "What is log_errors in PHP?",
+    "options": [
+      "Log errors",
+      "Configuration",
+      "File",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "log_errors logs errors to error_log."
+  },
+  {
+    "question": "What is max_input_vars in PHP?",
+    "options": [
+      "Input limit",
+      "POST vars",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "max_input_vars limits POST input variables."
+  },
+  {
+    "question": "What is file_uploads in PHP?",
+    "options": [
+      "Enable uploads",
+      "Configuration",
+      "File",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "file_uploads enables HTTP file uploads."
+  },
+  {
+    "question": "What is upload_max_filesize in PHP?",
+    "options": [
+      "Max upload size",
+      "Configuration",
+      "File",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "upload_max_filesize limits upload file size."
+  },
+  {
+    "question": "What is post_max_size in PHP?",
+    "options": [
+      "Max POST size",
+      "Configuration",
+      "Request",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "post_max_size limits POST request size."
+  },
+  {
+    "question": "What is allow_url_fopen in PHP?",
+    "options": [
+      "Remote files",
+      "Security",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "allow_url_fopen allows accessing remote files."
+  },
+  {
+    "question": "What is allow_url_include in PHP?",
+    "options": [
+      "Remote includes",
+      "Security",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "allow_url_include allows including remote files (dangerous)."
+  },
+  {
+    "question": "What is ctype functions in PHP?",
+    "options": [
+      "Character type",
+      "Validation",
+      "ctype",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "ctype functions check character types (digit, alpha, etc.)."
+  },
+  {
+    "question": "What is filter_var in PHP?",
+    "options": [
+      "Validate/filter",
+      "Sanitize",
+      "Input",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "filter_var validates and sanitizes data."
+  },
+  {
+    "question": "What is FILTER_VALIDATE_EMAIL?",
+    "options": [
+      "Email validation",
+      "Filter",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "FILTER_VALIDATE_EMAIL validates email format."
+  },
+  {
+    "question": "What is FILTER_VALIDATE_URL?",
+    "options": [
+      "URL validation",
+      "Filter",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "FILTER_VALIDATE_URL validates URL format."
+  },
+  {
+    "question": "What is FILTER_SANITIZE_STRING?",
+    "options": [
+      "Sanitize string",
+      "Filter",
+      "XSS",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "FILTER_SANITIZE_STRING strips/escapes special characters."
+  },
+  {
+    "question": "What is password_hash in PHP?",
+    "options": [
+      "Hash password",
+      "Security",
+      "Bcrypt",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "password_hash creates secure password hash."
+  },
+  {
+    "question": "What is password_verify in PHP?",
+    "options": [
+      "Verify password",
+      "Hash",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "password_verify verifies password against hash."
+  },
+  {
+    "question": "What is password_hash algorithm in PHP?",
+    "options": [
+      "Default algorithm",
+      "Bcrypt",
+      "Argon2",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "Default is PASSWORD_BCRYPT; PHP 7.4+ supports Argon2."
+  },
+  {
+    "question": "What is hash functions in PHP?",
+    "options": [
+      "Hash algorithms",
+      "Security",
+      "Hashing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "hash() provides various hashing algorithms."
+  },
+  {
+    "question": "What is hash_hmac in PHP?",
+    "options": [
+      "HMAC hash",
+      "Keyed-hash",
+      "Message",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "hash_hmac creates keyed hash with key."
+  },
+  {
+    "question": "What is password_hash options?",
+    "options": [
+      "Cost",
+      "Algorithm",
+      "Options",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "Options include cost for bcrypt, type for Argon2."
+  },
+  {
+    "question": "What is random_bytes in PHP?",
+    "options": [
+      "Secure random",
+      "Cryptographic",
+      "Bytes",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "random_bytes generates cryptographically secure random bytes."
+  },
+  {
+    "question": "What is random_int in PHP?",
+    "options": [
+      "Secure random integer",
+      "Cryptographic",
+      "Number",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "random_int generates secure random integer."
+  },
+  {
+    "question": "What is openssl_random_pseudo_bytes in PHP?",
+    "options": [
+      "Pseudo-random bytes",
+      "OpenSSL",
+      "Cryptographic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "openssl_random_pseudo_bytes generates pseudo-random bytes."
+  },
+  {
+    "question": "What is the difference between random_bytes and openssl_random_pseudo_bytes?",
+    "options": [
+      "Secure vs pseudo",
+      "Quality",
+      "Usage",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "random_bytes is cryptographically secure; pseudo is less secure."
+  },
+  {
+    "question": "What is base64 encoding in PHP?",
+    "options": [
+      "Base64 encoding",
+      "Encoding",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "base64_encode encodes binary to ASCII text."
+  },
+  {
+    "question": "What is urlencode vs rawurlencode in PHP?",
+    "options": [
+      "Encoding differences",
+      "Space handling",
+      "URL",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "urlencode encodes space as +; rawurlencode encodes as %20."
+  },
+  {
+    "question": "What is PHP garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "References",
+      "Cleanup",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "GC cleans up cyclic references and frees memory."
+  },
+  {
+    "question": "What is gc_collect_cycles in PHP?",
+    "options": [
+      "Force GC",
+      "Cycles",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "gc_collect_cycles forces garbage collection of cycles."
+  },
+  {
+    "question": "What is memory_get_usage in PHP?",
+    "options": [
+      "Memory usage",
+      "Peak",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "memory_get_usage returns current memory usage."
+  },
+  {
+    "question": "What is memory_get_peak_usage in PHP?",
+    "options": [
+      "Peak memory",
+      "Maximum",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "memory_get_peak_usage returns peak memory used."
+  },
+  {
+    "question": "What is xdebug in PHP?",
+    "options": [
+      "Debugger",
+      "Extension",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "Xdebug provides debugging and profiling."
+  },
+  {
+    "question": "What is var_dump vs var_export?",
+    "options": [
+      "Output differences",
+      "Debug",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "var_dump shows type and value; var_export shows valid PHP code."
+  },
+  {
+    "question": "What is debug_backtrace in PHP?",
+    "options": [
+      "Stack trace",
+      "Debug",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "debug_backtrace returns execution stack."
+  },
+  {
+    "question": "What is debug_print_backtrace in PHP?",
+    "options": [
+      "Print stack",
+      "Debug",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "debug_print_backtrace prints execution stack."
+  },
+  {
+    "question": "What is __debugInfo in PHP?",
+    "options": [
+      "Custom debug",
+      "var_dump",
+      "Magic method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "__debugInfo customizes var_dump output."
+  },
+  {
+    "question": "What is set_time_limit in PHP?",
+    "options": [
+      "Script timeout",
+      "Runtime",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "set_time_limit sets max execution time."
+  },
+  {
+    "question": "What is ini_set in PHP?",
+    "options": [
+      "Set config",
+      "Runtime",
+      "INI",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "ini_set changes configuration at runtime."
+  },
+  {
+    "question": "What is ini_get in PHP?",
+    "options": [
+      "Get config",
+      "INI",
+      "Value",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "ini_get returns configuration value."
+  },
+  {
+    "question": "What is get_loaded_extensions in PHP?",
+    "options": [
+      "Extensions list",
+      "PHP",
+      "Loaded",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "get_loaded_extensions returns loaded extensions."
+  },
+  {
+    "question": "What is extension_loaded in PHP?",
+    "options": [
+      "Check extension",
+      "Loaded",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "extension_loaded checks if extension is loaded."
+  },
+  {
+    "question": "What is function_exists in PHP?",
+    "options": [
+      "Check function",
+      "Exists",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "function_exists checks if function is defined."
+  },
+  {
+    "question": "What is class_exists in PHP?",
+    "options": [
+      "Check class",
+      "Exists",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "class_exists checks if class is defined."
+  },
+  {
+    "question": "What is method_exists in PHP?",
+    "options": [
+      "Check method",
+      "Object",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "method_exists checks if method exists on object."
+  },
+  {
+    "question": "What is property_exists in PHP?",
+    "options": [
+      "Check property",
+      "Object",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "property_exists checks if property exists."
+  },
+  {
+    "question": "What is Array.sort?",
+    "options": [
+      "Sort elements",
+      "Mutates array",
+      "Compare function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Sort elements",
+      "Mutates array",
+      "Compare function",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Array.sort? explanation."
+  },
+  {
+    "question": "What is is_subclass_of in PHP?",
+    "options": [
+      "Inheritance check",
+      "Class",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "is_subclass_of checks if object is from subclass."
+  },
+  {
+    "question": "What is get_class in PHP?",
+    "options": [
+      "Get class name",
+      "Object",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "get_class returns class name of object."
+  },
+  {
+    "question": "What is get_parent_class in PHP?",
+    "options": [
+      "Get parent",
+      "Class",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "get_parent_class returns parent class name."
+  },
+  {
+    "question": "What is get_class_methods in PHP?",
+    "options": [
+      "Get methods",
+      "Class",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "get_class_methods returns all methods of class."
+  },
+  {
+    "question": "What is get_class_vars in PHP?",
+    "options": [
+      "Get properties",
+      "Class",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "get_class_vars returns all properties of class."
+  },
+  {
+    "question": "What is get_object_vars in PHP?",
+    "options": [
+      "Get object properties",
+      "Object",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "get_object_vars returns visible properties of object."
+  },
+  {
+    "question": "What is get_defined_vars in PHP?",
+    "options": [
+      "Get variables",
+      "Scope",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "get_defined_vars returns defined variables in scope."
+  },
+  {
+    "question": "What is get_defined_functions in PHP?",
+    "options": [
+      "Get functions",
+      "PHP",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "get_defined_functions returns defined functions."
+  },
+  {
+    "question": "What is get_defined_constants in PHP?",
+    "options": [
+      "Get constants",
+      "PHP",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "get_defined_constants returns defined constants."
+  },
+  {
+    "question": "What is get_included_files in PHP?",
+    "options": [
+      "Get included files",
+      "Files",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "get_included_files returns included files."
+  },
+  {
+    "question": "What is phpinfo()?",
+    "options": [
+      "PHP information",
+      "Configuration",
+      "System",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "phpinfo() displays PHP configuration."
+  },
+  {
+    "question": "What is PHP_VERSION constant?",
+    "options": [
+      "PHP version",
+      "Constant",
+      "Version",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "PHP_VERSION returns current PHP version."
+  },
+  {
+    "question": "What is PHP_OS constant?",
+    "options": [
+      "OS",
+      "Constant",
+      "System",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "PHP_OS returns operating system."
+  },
+  {
+    "question": "What is DIRECTORY_SEPARATOR in PHP?",
+    "options": [
+      "Path separator",
+      "Constant",
+      "OS",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "DIRECTORY_SEPARATOR returns / or \\ based on OS."
+  },
+  {
+    "question": "What is PATH_SEPARATOR in PHP?",
+    "options": [
+      "Path separator",
+      "Constant",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "PATH_SEPARATOR returns : or ; for path."
+  },
+  {
+    "question": "What is PHP_EOL in PHP?",
+    "options": [
+      "Line ending",
+      "Constant",
+      "OS",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "PHP_EOL returns appropriate line ending."
+  },
+  {
+    "question": "What is __COMPILER_HALT_OFFSET__?",
+    "options": [
+      "Compiler halt",
+      "Constant",
+      "Magic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "__COMPILER_HALT_OFFSET__ provides halt position in files."
+  },
+  {
+    "question": "What is CLI usage of PHP?",
+    "options": [
+      "Command line",
+      "CLI",
+      "Script",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "PHP can run from command line: php script.php."
+  },
+  {
+    "question": "What is $argv in CLI?",
+    "options": [
+      "CLI arguments",
+      "Array",
+      "Command line",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "$argv contains command-line arguments."
+  },
+  {
+    "question": "What is $argc in CLI?",
+    "options": [
+      "Argument count",
+      "Integer",
+      "Command line",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "$argc contains number of arguments."
+  },
+  {
+    "question": "What is getopt() in PHP?",
+    "options": [
+      "Get options",
+      "CLI",
+      "Arguments",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "getopt() parses command-line options."
+  },
+  {
+    "question": "What is Phar class in PHP?",
+    "options": [
+      "PHP archive",
+      "Packaging",
+      "Distribution",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "Phar creates single-file PHP applications."
+  },
+  {
+    "question": "What is phar archive?",
+    "options": [
+      "Single file",
+      "PHP",
+      "Archive",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "Phar packages entire application in single file."
+  },
+  {
+    "question": "What is the difference between php.ini and .user.ini?",
+    "options": [
+      "Scope",
+      "Location",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "php.ini is global; .user.ini is per-directory."
+  },
+  {
+    "question": "What is .user.ini precedence?",
+    "options": [
+      "Per-directory",
+      "Inheritance",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": ".user.ini settings apply to directory and subdirectories."
+  },
+  {
+    "question": "What is ini_parse_quantity in PHP?",
+    "options": [
+      "Parse quantity",
+      "Memory",
+      "INI",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "ini_parse_quantity parses memory abbreviations like 1M."
+  },
+  {
+    "question": "What is header() function in PHP?",
+    "options": [
+      "Send HTTP header",
+      "Response",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "header() sends raw HTTP headers."
+  },
+  {
+    "question": "What is header_remove() in PHP?",
+    "options": [
+      "Remove header",
+      "Response",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "header_remove() removes previously set headers."
+  },
+  {
+    "question": "What is http_response_code() in PHP?",
+    "options": [
+      "Set status code",
+      "Response",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "http_response_code() sets/returns HTTP response code."
+  },
+  {
+    "question": "What is setcookie() function?",
+    "options": [
+      "Set cookie",
+      "Response",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "setcookie() sends cookie with response."
+  },
+  {
+    "question": "What is setrawcookie() function?",
+    "options": [
+      "Set raw cookie",
+      "Value",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "setrawcookie() sets cookie without URL encoding."
+  },
+  {
+    "question": "What is session_start() in PHP?",
+    "options": [
+      "Start session",
+      "Session",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "session_start() starts/resumes session."
+  },
+  {
+    "question": "What is session_destroy() in PHP?",
+    "options": [
+      "Destroy session",
+      "Session",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "session_destroy() destroys all session data."
+  },
+  {
+    "question": "What is session_regenerate_id()?",
+    "options": [
+      "Regenerate ID",
+      "Security",
+      "Session",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "session_regenerate_id() creates new session ID."
+  },
+  {
+    "question": "What is session_write_close()?",
+    "options": [
+      "Save and close",
+      "Session",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "session_write_close() saves and releases session lock."
+  },
+  {
+    "question": "What is stream_context_create in PHP?",
+    "options": [
+      "Create context",
+      "Streams",
+      "Options",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "stream_context_create creates stream context."
+  },
+  {
+    "question": "What is stream_socket_client in PHP?",
+    "options": [
+      "Create client",
+      "Socket",
+      "Connection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "stream_socket_client connects to socket."
+  },
+  {
+    "question": "What is fsockopen in PHP?",
+    "options": [
+      "Socket connection",
+      "Function",
+      "Network",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "fsockopen opens socket connection."
+  },
+  {
+    "question": "What is cURL in PHP?",
+    "options": [
+      "HTTP client",
+      "Library",
+      "Requests",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "cURL allows making HTTP requests."
+  },
+  {
+    "question": "What is curl_init in PHP?",
+    "options": [
+      "Init cURL",
+      "Handle",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "curl_init() initializes cURL session."
+  },
+  {
+    "question": "What is curl_setopt in PHP?",
+    "options": [
+      "Set options",
+      "cURL",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "curl_setopt() sets cURL options."
+  },
+  {
+    "question": "What is curl_exec in PHP?",
+    "options": [
+      "Execute request",
+      "cURL",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "curl_exec() executes cURL request."
+  },
+  {
+    "question": "What is curl_close in PHP?",
+    "options": [
+      "Close cURL",
+      "Handle",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "curl_close() closes cURL session."
+  },
+  {
+    "question": "What is CURLOPT_URL?",
+    "options": [
+      "Set URL",
+      "cURL",
+      "Option",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "CURLOPT_URL specifies request URL."
+  },
+  {
+    "question": "What is CURLOPT_RETURNTRANSFER?",
+    "options": [
+      "Return as string",
+      "cURL",
+      "Option",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "CURLOPT_RETURNTRANSFER returns string instead of output."
+  },
+  {
+    "question": "What is CURLOPT_POST?",
+    "options": [
+      "POST request",
+      "cURL",
+      "Option",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "CURLOPT_POST enables POST request."
+  },
+  {
+    "question": "What is CURLOPT_POSTFIELDS?",
+    "options": [
+      "POST data",
+      "cURL",
+      "Option",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "CURLOPT_POSTFIELDS specifies POST data."
+  },
+  {
+    "question": "What is CURLOPT_HTTPHEADER?",
+    "options": [
+      "HTTP headers",
+      "cURL",
+      "Option",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "CURLOPT_HTTPHEADER sets request headers."
+  },
+  {
+    "question": "What is CURLOPT_TIMEOUT?",
+    "options": [
+      "Request timeout",
+      "cURL",
+      "Option",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "CURLOPT_TIMEOUT sets request timeout."
+  },
+  {
+    "question": "What is CURLOPT_SSL_VERIFYPEER?",
+    "options": [
+      "SSL verification",
+      "cURL",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "CURLOPT_SSL_VERIFYPEER verifies SSL certificate."
+  },
+  {
+    "question": "What is simplexml_load_string in PHP?",
+    "options": [
+      "Parse XML",
+      "String",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "simplexml_load_string() parses XML string."
+  },
+  {
+    "question": "What is simplexml_load_file in PHP?",
+    "options": [
+      "Parse XML file",
+      "Function",
+      "XML",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "simplexml_load_file() parses XML file."
+  },
+  {
+    "question": "What is DOMDocument in PHP?",
+    "options": [
+      "XML/HTML DOM",
+      "Object",
+      "Parser",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "DOMDocument provides DOM parsing."
+  },
+  {
+    "question": "What is json_encode flags in PHP?",
+    "options": [
+      "JSON options",
+      "Encoding",
+      "Flags",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "json_encode flags like JSON_PRETTY_PRINT format output."
+  },
+  {
+    "question": "What is json_decode assoc parameter?",
+    "options": [
+      "Array vs object",
+      "JSON",
+      "Decode",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "json_decode($json, true) returns associative array."
+  },
+  {
+    "question": "What is preg_match in PHP?",
+    "options": [
+      "Regex match",
+      "Pattern",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "preg_match() performs regex match."
+  },
+  {
+    "question": "What is preg_match_all in PHP?",
+    "options": [
+      "Match all",
+      "Pattern",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "preg_match_all() finds all matches."
+  },
+  {
+    "question": "What is preg_replace in PHP?",
+    "options": [
+      "Regex replace",
+      "Pattern",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "preg_replace() replaces using regex."
+  },
+  {
+    "question": "What is preg_split in PHP?",
+    "options": [
+      "Regex split",
+      "Pattern",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "preg_split() splits by regex."
+  },
+  {
+    "question": "What is preg_grep in PHP?",
+    "options": [
+      "Regex filter",
+      "Pattern",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "preg_grep() filters array by regex."
+  },
+  {
+    "question": "What is preg_quote in PHP?",
+    "options": [
+      "Escape regex",
+      "Pattern",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "preg_quote() escapes regex metacharacters."
+  },
+  {
+    "question": "What is pcre.backtrack_limit in PHP?",
+    "options": [
+      "Backtrack limit",
+      "Regex",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "pcre.backtrack_limit limits regex backtracking."
+  },
+  {
+    "question": "What is pcre.recursion_limit in PHP?",
+    "options": [
+      "Recursion limit",
+      "Regex",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "pcre.recursion_limit limits regex recursion."
+  },
+  {
+    "question": "What is mb_* functions in PHP?",
+    "options": [
+      "Multibyte",
+      "String",
+      "Encoding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "mb_* functions handle multibyte strings."
+  },
+  {
+    "question": "What is mb_internal_encoding in PHP?",
+    "options": [
+      "Set encoding",
+      "Multibyte",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "mb_internal_encoding sets default encoding."
+  },
+  {
+    "question": "What is mb_strlen vs strlen in PHP?",
+    "options": [
+      "Byte vs character",
+      "Multibyte",
+      "Length",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "mb_strlen counts characters; strlen counts bytes."
+  },
+  {
+    "question": "What is mb_substr vs substr in PHP?",
+    "options": [
+      "Character vs byte",
+      "Multibyte",
+      "Substring",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "mb_substr extracts by character; substr by byte."
+  },
+  {
+    "question": "What is iconv in PHP?",
+    "options": [
+      "Encoding conversion",
+      "Function",
+      "Charset",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "iconv converts character encoding."
+  },
+  {
+    "question": "What is transliteration in iconv?",
+    "options": [
+      "Replace characters",
+      "Encoding",
+      "Output",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "//TRANSLIT replaces unrecognized characters."
+  },
+  {
+    "question": "What is intl extension in PHP?",
+    "options": [
+      "Internationalization",
+      "Extension",
+      "Locale",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "Intl provides internationalization functions."
+  },
+  {
+    "question": "What is MessageFormatter in PHP?",
+    "options": [
+      "Format messages",
+      "Intl",
+      "Plural",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "MessageFormatter formats plural-aware messages."
+  },
+  {
+    "question": "What is Collator in PHP?",
+    "options": [
+      "Compare strings",
+      "Intl",
+      "Locale",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "Collator compares strings per locale."
+  },
+  {
+    "question": "What is NumberFormatter in PHP?",
+    "options": [
+      "Format numbers",
+      "Intl",
+      "Locale",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "NumberFormatter formats numbers per locale."
+  },
+  {
+    "question": "What is DateTime in PHP?",
+    "options": [
+      "Date object",
+      "Object",
+      "DateTime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "DateTime provides date/time object."
+  },
+  {
+    "question": "What is DateInterval in PHP?",
+    "options": [
+      "Date difference",
+      "Object",
+      "Duration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "DateInterval represents date/time duration."
+  },
+  {
+    "question": "What is DateTimeZone in PHP?",
+    "options": [
+      "Timezone",
+      "Object",
+      "Time",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "DateTimeZone represents timezone."
+  },
+  {
+    "question": "What is DateTime::diff()?",
+    "options": [
+      "Date difference",
+      "DateTime",
+      "Interval",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "DateTime::diff() returns DateInterval of difference."
+  },
+  {
+    "question": "What is DateTime::modify()?",
+    "options": [
+      "Modify date",
+      "DateTime",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "DateTime::modify() modifies date via string."
+  },
+  {
+    "question": "What is DateTime::format()?",
+    "options": [
+      "Format date",
+      "DateTime",
+      "Output",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "DateTime::format() formats date as string."
+  },
+  {
+    "question": "What is strtotime() in PHP?",
+    "options": [
+      "Parse date string",
+      "Timestamp",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "strtotime() parses English date string to timestamp."
+  },
+  {
+    "question": "What is date() function in PHP?",
+    "options": [
+      "Format date",
+      "Timestamp",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "date() formats timestamp as string."
+  },
+  {
+    "question": "What is time() in PHP?",
+    "options": [
+      "Current timestamp",
+      "Function",
+      "Unix",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "time() returns current Unix timestamp."
+  },
+  {
+    "question": "What is mktime() in PHP?",
+    "options": [
+      "Create timestamp",
+      "Date",
+      "Function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "mktime() creates timestamp from date components."
+  },
+  {
+    "question": "What is microtime() in PHP?",
+    "options": [
+      "Microsecond timestamp",
+      "Function",
+      "Precise",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 55,
+    "details": "microtime() returns current timestamp with microseconds."
+  },
+  {
+    "question": "What is OOP? (Level 6 #143)",
+    "options": [
+      "Class",
+      "Object",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Class",
+      "Object",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is PDO? (Level 6 #144)",
+    "options": [
+      "Database",
+      "Prepared statement",
+      "Multiple databases",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Database",
+      "Prepared statement",
+      "Multiple databases",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is PDO? explanation."
+  },
+  {
+    "question": "What is namespace? (Level 6 #145)",
+    "options": [
+      "Scope",
+      "Autoloading",
+      "Organization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Scope",
+      "Autoloading",
+      "Organization",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is namespace? explanation."
+  },
+  {
+    "question": "What is trait? (Level 6 #146)",
+    "options": [
+      "Code reuse",
+      "Multiple",
+      "Method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Code reuse",
+      "Multiple",
+      "Method",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is trait? explanation."
+  },
+  {
+    "question": "What is interface? (Level 6 #147)",
+    "options": [
+      "Contract",
+      "Multiple",
+      "Implementation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Contract",
+      "Multiple",
+      "Implementation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interface? explanation."
+  },
+  {
+    "question": "What is closure? (Level 6 #148)",
+    "options": [
+      "Anonymous",
+      "Use",
+      "Callback",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Anonymous",
+      "Use",
+      "Callback",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is closure? explanation."
+  },
+  {
+    "question": "What is composer? (Level 6 #149)",
+    "options": [
+      "Dependency",
+      "Autoload",
+      "Package",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Dependency",
+      "Autoload",
+      "Package",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composer? explanation."
+  },
+  {
+    "question": "What is PSR? (Level 6 #150)",
+    "options": [
+      "Standard",
+      "Coding",
+      "Guidelines",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Standard",
+      "Coding",
+      "Guidelines",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is PSR? explanation."
+  },
+  {
+    "question": "What is autoloading? (Level 6 #151)",
+    "options": [
+      "Class",
+      "PSR-4",
+      "Require",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Class",
+      "PSR-4",
+      "Require",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is autoloading? explanation."
+  },
+  {
+    "question": "What is exception? (Level 6 #152)",
+    "options": [
+      "Try",
+      "Catch",
+      "Throw",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Try",
+      "Catch",
+      "Throw",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is exception? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  }
 ]

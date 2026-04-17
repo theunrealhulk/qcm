@@ -938,426 +938,6 @@
     "details": "merge.tool sets which merge tool to use."
   },
   {
-    "question": "What is branching in Git?",
-    "options": [
-      "Creating separate lines of development",
-      "Deleting files",
-      "Merging code",
-      "Committing changes"
-    ],
-    "correctOptions": [
-      "Creating separate lines of development"
-    ],
-    "time": 25,
-    "details": "Branching creates independent development lines."
-  },
-  {
-    "question": "What is the main branch?",
-    "options": [
-      "Primary development line",
-      "Feature branch",
-      "Bug fix branch",
-      "Release branch"
-    ],
-    "correctOptions": [
-      "Primary development line"
-    ],
-    "time": 20,
-    "details": "main/master is the primary branch."
-  },
-  {
-    "question": "What is a feature branch?",
-    "options": [
-      "Branch for new features",
-      "Main branch",
-      "Release branch",
-      "Hotfix branch"
-    ],
-    "correctOptions": [
-      "Branch for new features"
-    ],
-    "time": 25,
-    "details": "Feature branches develop new functionality."
-  },
-  {
-    "question": "What is a hotfix branch?",
-    "options": [
-      "Branch for urgent fixes",
-      "Feature branch",
-      "Release branch",
-      "Develop branch"
-    ],
-    "correctOptions": [
-      "Branch for urgent fixes"
-    ],
-    "time": 25,
-    "details": "Hotfix branches address critical production issues."
-  },
-  {
-    "question": "What is a release branch?",
-    "options": [
-      "Branch for version preparation",
-      "Feature branch",
-      "Hotfix branch",
-      "Develop branch"
-    ],
-    "correctOptions": [
-      "Branch for version preparation"
-    ],
-    "time": 25,
-    "details": "Release branches prepare for production deployment."
-  },
-  {
-    "question": "How do you switch to an existing branch?",
-    "options": [
-      "git checkout branch-name",
-      "git switch branch-name",
-      "git checkout/switch",
-      "All of the above"
-    ],
-    "correctOptions": [
-      "All of the above"
-    ],
-    "time": 25,
-    "details": "git checkout, switch, or checkout -b switch branches."
-  },
-  {
-    "question": "What is git switch?",
-    "options": [
-      "Switch branches command",
-      "Toggle setting",
-      "Remote command",
-      "Stash command"
-    ],
-    "correctOptions": [
-      "Switch branches command"
-    ],
-    "time": 25,
-    "details": "git switch is the modern way to switch branches."
-  },
-  {
-    "question": "What does git checkout -b do?",
-    "options": [
-      "Create and switch to new branch",
-      "Only create branch",
-      "Only switch",
-      "Delete branch"
-    ],
-    "correctOptions": [
-      "Create and switch to new branch"
-    ],
-    "time": 30,
-    "details": "-b creates a new branch and switches to it."
-  },
-  {
-    "question": "How do you rename a branch?",
-    "options": [
-      "git branch -m new-name",
-      "git rename new-name",
-      "git branch rename new-name",
-      "git move new-name"
-    ],
-    "correctOptions": [
-      "git branch -m new-name"
-    ],
-    "time": 30,
-    "details": "git branch -m renames the current branch."
-  },
-  {
-    "question": "How do you rename a remote branch?",
-    "options": [
-      "Delete old and push new",
-      "git branch -m remote",
-      "git rename remote",
-      "Can't rename remotely"
-    ],
-    "correctOptions": [
-      "Delete old and push new"
-    ],
-    "time": 35,
-    "details": "You must delete the old and push the renamed branch."
-  },
-  {
-    "question": "What is branch tracking?",
-    "options": [
-      "Local branch linked to remote",
-      "Remote tracking",
-      "Branch comparison",
-      "Branch history"
-    ],
-    "correctOptions": [
-      "Local branch linked to remote"
-    ],
-    "time": 35,
-    "details": "Tracking connects local branches to remote branches."
-  },
-  {
-    "question": "How do you set upstream branch?",
-    "options": [
-      "git branch -u origin/branch",
-      "git branch --set-upstream",
-      "Both options work",
-      "git track origin/branch"
-    ],
-    "correctOptions": [
-      "Both options work"
-    ],
-    "time": 35,
-    "details": "-u or --set-upstream-to sets tracking."
-  },
-  {
-    "question": "What does git branch -vv show?",
-    "options": [
-      "Branch tracking info",
-      "Branch contents",
-      "Branch commits",
-      "Remote branches"
-    ],
-    "correctOptions": [
-      "Branch tracking info"
-    ],
-    "time": 35,
-    "details": "-vv shows detailed branch tracking information."
-  },
-  {
-    "question": "What is a tracking branch?",
-    "options": [
-      "Branch that tracks remote",
-      "New branch",
-      "Deleted branch",
-      "Merged branch"
-    ],
-    "correctOptions": [
-      "Branch that tracks remote"
-    ],
-    "time": 35,
-    "details": "Tracking branches have a relationship with remote branches."
-  },
-  {
-    "question": "How do you list remote branches?",
-    "options": [
-      "git branch -r",
-      "git branch --remote",
-      "git remote branches",
-      "git list remote"
-    ],
-    "correctOptions": [
-      "git branch -r"
-    ],
-    "time": 25,
-    "details": "git branch -r lists remote-tracking branches."
-  },
-  {
-    "question": "How do you list all branches?",
-    "options": [
-      "git branch -a",
-      "git branch --all",
-      "git branch all",
-      "Both -a and --all"
-    ],
-    "correctOptions": [
-      "Both -a and --all"
-    ],
-    "time": 25,
-    "details": "-a shows both local and remote branches."
-  },
-  {
-    "question": "What is a detached HEAD?",
-    "options": [
-      "HEAD pointing directly to commit",
-      "HEAD is attached",
-      "No HEAD",
-      "Invalid state"
-    ],
-    "correctOptions": [
-      "HEAD pointing directly to commit"
-    ],
-    "time": 40,
-    "details": "Detached HEAD occurs when checking commits directly."
-  },
-  {
-    "question": "What happens in detached HEAD state?",
-    "options": [
-      "Commits have no branch",
-      "Normal branch state",
-      "Error occurs",
-      "Nothing different"
-    ],
-    "correctOptions": [
-      "Commits have no branch"
-    ],
-    "time": 40,
-    "details": "Commits made in detached HEAD aren't on any branch."
-  },
-  {
-    "question": "How do you recover from detached HEAD?",
-    "options": [
-      "git checkout -b new-branch",
-      "git checkout branch-name",
-      "git detach",
-      "git recover"
-    ],
-    "correctOptions": [
-      "git checkout -b new-branch"
-    ],
-    "time": 40,
-    "details": "Create a branch from the commit to keep work."
-  },
-  {
-    "question": "What is git checkout without arguments?",
-    "options": [
-      "Return to last commit",
-      "Create new branch",
-      "Delete files",
-      "Show status"
-    ],
-    "correctOptions": [
-      "Return to last commit"
-    ],
-    "time": 35,
-    "details": "git checkout without branch name returns to last commit."
-  },
-  {
-    "question": "What is merging?",
-    "options": [
-      "Combining branch changes",
-      "Splitting branches",
-      "Deleting branches",
-      "Creating branches"
-    ],
-    "correctOptions": [
-      "Combining branch changes"
-    ],
-    "time": 25,
-    "details": "Merging integrates changes from one branch into another."
-  },
-  {
-    "question": "How do you merge branches?",
-    "options": [
-      "git merge branch-name",
-      "git checkout && git add",
-      "git branch merge",
-      "git combine branch-name"
-    ],
-    "correctOptions": [
-      "git merge branch-name"
-    ],
-    "time": 25,
-    "details": "git merge combines branch history."
-  },
-  {
-    "question": "What is a merge commit?",
-    "options": [
-      "Commit that combines two branches",
-      "Regular commit",
-      "Deleted commit",
-      "Initial commit"
-    ],
-    "correctOptions": [
-      "Commit that combines two branches"
-    ],
-    "time": 30,
-    "details": "Merge commits combine changes from multiple branches."
-  },
-  {
-    "question": "What is fast-forward merge?",
-    "options": [
-      "Moving pointer to new commit",
-      "Creating merge commit",
-      "Resolving conflicts",
-      "Deleting branch"
-    ],
-    "correctOptions": [
-      "Moving pointer to new commit"
-    ],
-    "time": 35,
-    "details": "Fast-forward occurs when no divergence exists."
-  },
-  {
-    "question": "When does fast-forward not occur?",
-    "options": [
-      "When branches have diverged",
-      "When branches are same",
-      "When no commits",
-      "When no branch"
-    ],
-    "correctOptions": [
-      "When branches have diverged"
-    ],
-    "time": 35,
-    "details": "Fast-forward requires linear history on target branch."
-  },
-  {
-    "question": "What is --no-ff flag?",
-    "options": [
-      "Force merge commit",
-      "Fast-forward only",
-      "No merge",
-      "No fetch"
-    ],
-    "correctOptions": [
-      "Force merge commit"
-    ],
-    "time": 40,
-    "details": "--no-ff always creates a merge commit."
-  },
-  {
-    "question": "What is a three-way merge?",
-    "options": [
-      "Uses base, ours, theirs",
-      "Only two branches",
-      "Only one branch",
-      "No branches"
-    ],
-    "correctOptions": [
-      "Uses base, ours, theirs"
-    ],
-    "time": 40,
-    "details": "Three-way merge considers the common ancestor."
-  },
-  {
-    "question": "What is our branch in merge?",
-    "options": [
-      "Destination branch",
-      "Source branch",
-      "Base branch",
-      "Remote branch"
-    ],
-    "correctOptions": [
-      "Destination branch"
-    ],
-    "time": 35,
-    "details": "OURS is the branch you're merging into."
-  },
-  {
-    "question": "What is their branch in merge?",
-    "options": [
-      "Branch being merged in",
-      "Current branch",
-      "Base branch",
-      "Main branch"
-    ],
-    "correctOptions": [
-      "Branch being merged in"
-    ],
-    "time": 35,
-    "details": "THEIRS is the branch you're merging from."
-  },
-  {
-    "question": "What is the base in merge?",
-    "options": [
-      "Common ancestor commit",
-      "Current commit",
-      "Target commit",
-      "Remote commit"
-    ],
-    "correctOptions": [
-      "Common ancestor commit"
-    ],
-    "time": 35,
-    "details": "Base is where both branches split from."
-  },
-  {
     "question": "What is a merge conflict?",
     "options": [
       "Changes that conflict between branches",
@@ -1398,5 +978,512 @@
     ],
     "time": 30,
     "details": "--abort cancels the merge and returns to previous state."
+  },
+  {
+    "question": "What does git add do?",
+    "options": [
+      "Stage changes",
+      "Index",
+      "Track files",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Stage changes",
+      "Index"
+    ],
+    "time": 35,
+    "details": "What does git add do? explanation."
+  },
+  {
+    "question": "What is git reset?",
+    "options": [
+      "Undo",
+      "Move HEAD",
+      "Unstage",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Undo",
+      "Move HEAD",
+      "Unstage"
+    ],
+    "time": 35,
+    "details": "What is git reset? explanation."
+  },
+  {
+    "question": "What is git init? (Level 2 #103)",
+    "options": [
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git init? explanation."
+  },
+  {
+    "question": "What is git clone? (Level 2 #104)",
+    "options": [
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git clone? explanation."
+  },
+  {
+    "question": "What is git branch? (Level 2 #105)",
+    "options": [
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git branch? explanation."
+  },
+  {
+    "question": "What is git merge? (Level 2 #106)",
+    "options": [
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git merge? explanation."
+  },
+  {
+    "question": "What is git rebase? (Level 2 #107)",
+    "options": [
+      "History",
+      "Linear",
+      "Interactive",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "History",
+      "Linear",
+      "Interactive",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git rebase? explanation."
+  },
+  {
+    "question": "What is git stash? (Level 2 #108)",
+    "options": [
+      "Temporary",
+      "Save",
+      "Pop",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Temporary",
+      "Save",
+      "Pop",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git stash? explanation."
+  },
+  {
+    "question": "What is git diff? (Level 2 #110)",
+    "options": [
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git diff? explanation."
+  },
+  {
+    "question": "What is git log? (Level 2 #111)",
+    "options": [
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git log? explanation."
+  },
+  {
+    "question": "What is git remote? (Level 2 #112)",
+    "options": [
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is git remote? explanation."
+  },
+  {
+    "question": "What is finally?",
+    "options": [
+      "Always executes",
+      "Cleanup code",
+      "After try-catch",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Always executes",
+      "Cleanup code",
+      "After try-catch",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is finally? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
   }
 ]

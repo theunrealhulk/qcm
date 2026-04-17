@@ -1,121 +1,2184 @@
 [
-  {"question": "What is React?", "options": ["Framework", "JavaScript library", "Database", "Language"], "correctOptions": ["JavaScript library"], "time": 25, "details": "React is a JavaScript library for building user interfaces, maintained by Meta (Facebook)."},
-  {"question": "What is JSX?", "options": ["JavaScript XML", "Template literal", "HTML in JS", "XML syntax"], "correctOptions": ["JavaScript XML"], "time": 25, "details": "JSX is a syntax extension that lets you write HTML-like code in JavaScript."},
-  {"question": "What is component?", "options": ["Function", "Reusable piece", "Element", "Block"], "correctOptions": ["Reusable piece"], "time": 25, "details": "Components are reusable pieces of UI that combine markup, styles, and logic."},
-  {"question": "What is useState?", "options": ["State hook", "State manager", "Stateful", "State"], "correctOptions": ["State hook"], "time": 25, "details": "useState is a hook that adds state to functional components."},
-  {"question": "What is useEffect?", "options": ["Effect hook", "Side effect", "Lifecycle", "Render"], "correctOptions": ["Effect hook"], "time": 25, "details": "useEffect handles side effects like data fetching and subscriptions in functional components."},
-  {"question": "What is prop?", "options": ["Property", "Component data", "Attribute", "Parameter"], "correctOptions": ["Component data"], "time": 25, "details": "Props are inputs passed to components to customize their behavior."},
-  {"question": "What is state?", "options": ["Props", "Component memory", "Data", "Internal data"], "correctOptions": ["Component memory"], "time": 25, "details": "State is data that changes over time within a component."},
-  {"question": "What does render return?", "options": ["String", "JSX", "HTML", "Element"], "correctOptions": ["JSX"], "time": 25, "details": "Components return JSX describing what to render to the screen."},
-  {"question": "What is virtual DOM?", "options": ["In-memory DOM", "Copy of DOM", "Lightweight DOM", "Virtual UI"], "correctOptions": ["In-memory DOM"], "time": 30, "details": "Virtual DOM is a lightweight copy of the real DOM for efficient updates."},
-  {"question": "What is key prop?", "options": ["ID", "Unique identifier", "Element ID", "Reference"], "correctOptions": ["Unique identifier"], "time": 25, "details": "key helps React identify items in lists for efficient updates."},
-  {"question": "What is conditional rendering?", "options": ["If/else", "Show/hide", "Toggle UI", "Dynamic UI"], "correctOptions": ["Show/hide"], "time": 30, "details": "Conditional rendering shows or hides UI based on conditions using && or ternary."},
-  {"question": "What is list rendering?", "options": ["Array map", "Loop", "For each", "List"], "correctOptions": ["Array map"], "time": 25, "details": "Array.map() renders a list of elements in JSX."},
-  {"question": "What is onClick?", "options": ["Event handler", "Click event", "User action", "Interaction"], "correctOptions": ["Click event"], "time": 25, "details": "onClick handles click events on elements."},
-  {"question": "What is onChange?", "options": ["Input event", "Change event", "Value change", "Update"], "correctOptions": ["Value change"], "time": 25, "details": "onChange fires when input values change."},
-  {"question": "What is event object?", "options": ["Event data", "Synthetic event", "Native event", "DOM event"], "correctOptions": ["Synthetic event"], "time": 30, "details": "Synthetic events are React's cross-browser wrapper around native events."},
-  {"question": "What is controlled input?", "options": ["Value in state", "Managed input", "React input", "Bound input"], "correctOptions": ["Value in state"], "time": 30, "details": "Controlled inputs have their value managed by React state."},
-  {"question": "What is useRef?", "options": ["Reference", "DOM reference", "Hook for refs", "Mutable ref"], "correctOptions": ["DOM reference"], "time": 25, "details": "useRef provides access to DOM elements or holds mutable values."},
-  {"question": "What is useContext?", "options": ["Context hook", "Global data", "Theme", "Shared state"], "correctOptions": ["Context hook"], "time": 30, "details": "useContext accesses context values without props drilling."},
-  {"question": "What is Context?", "options": ["Global state", "Data sharing", "Provider", "Value"], "correctOptions": ["Data sharing"], "time": 30, "details": "Context provides data to components without passing props."},
-  {"question": "What is Provider?", "options": ["Value holder", "Context provider", "Data source", "Wrapper"], "correctOptions": ["Context provider"], "time": 30, "details": "Provider distributes context values to descendant components."},
-  {"question": "What is useReducer?", "options": ["State hook", "Complex state", "State management", "Redux alternative"], "correctOptions": ["Complex state"], "time": 35, "details": "useReducer handles complex state logic with actions."},
-  {"question": "What is reducer function?", "options": ["Pure function", "State transitions", "Action handler", "Logic"], "correctOptions": ["State transitions"], "time": 35, "details": "Reducers return new state based on current state and action."},
-  {"question": "What is action object?", "options": ["Event", "dispatch object", "Command", "Payload"], "correctOptions": ["dispatch object"], "time": 30, "details": "Actions are objects that describe what state change should occur."},
-  {"question": "What is dispatch?", "options": ["Send", "Trigger action", "Send command", "Execute"], "correctOptions": ["Trigger action"], "time": 30, "details": "dispatch sends actions to the reducer to update state."},
-  {"question": "What is CSS module?", "options": ["Scoped CSS", "Local styles", "Module CSS", "Component styles"], "correctOptions": ["Scoped CSS"], "time": 35, "details": "CSS modules scope styles locally to components."},
-  {"question": "What is styled-components?", "options": ["CSS-in-JS", "Styled elements", "Component styling", "CSS library"], "correctOptions": ["CSS-in-JS"], "time": 35, "details": "styled-components lets you write CSS in JavaScript as components."},
-  {"question": "What is className?", "options": ["Class", "CSS class", "Class prop", "Style"], "correctOptions": ["CSS class"], "time": 25, "details": "className applies CSS classes to JSX elements."},
-  {"question": "What is inline styles?", "options": ["Style prop", "Direct styles", "JS styles", "Component styles"], "correctOptions": ["Style prop"], "time": 30, "details": "Inline styles use the style prop with a JavaScript object."},
-  {"question": "What is useMemo?", "options": ["Memo hook", "Memoized value", "Cache", "Optimization"], "correctOptions": ["Memoized value"], "time": 30, "details": "useMemo caches computed values to avoid recalculation."},
-  {"question": "What is useCallback?", "options": ["Callback hook", "Memoized function", "Cached function", "Optimization"], "correctOptions": ["Memoized function"], "time": 30, "details": "useCallback caches functions to prevent unnecessary re-creation."},
-  {"question": "What is React.memo?", "options": ["Memoization", "Component memo", "Optimization", "Pure component"], "correctOptions": ["Component memo"], "time": 30, "details": "React.memo memoizes components to skip re-rendering."},
-  {"question": "What is useLayoutEffect?", "options": ["DOM effect", "Synchronous effect", "Layout effect", "Render effect"], "correctOptions": ["Synchronous effect"], "time": 35, "details": "useLayoutEffect runs synchronously after DOM mutations."},
-  {"question": "What is fragment?", "options": ["Wrapper", "Empty wrapper", "Group elements", "Container"], "correctOptions": ["Group elements"], "time": 30, "details": "Fragments group elements without adding extra DOM nodes."},
-  {"question": "What is <></>?", "options": ["Empty tag", "Fragment", "Short fragment", "JSX fragment"], "correctOptions": ["Fragment"], "time": 25, "details": "<> is shorthand for React.Fragment."},
-  {"question": "What is portal?", "options": ["DOM node", "Render outside", "Port", "DOM portal"], "correctOptions": ["Render outside"], "time": 35, "details": "Portals render components outside the main DOM hierarchy."},
-  {"question": "What is createPortal()?", "options": ["Create portal", "Render to DOM", "DOM node", "Port"], "correctOptions": ["Render to DOM"], "time": 35, "details": "createPortal renders children into a different DOM node."},
-  {"question": "What is error boundary?", "options": ["Error handling", "Error catch", "Error component", "Fallback UI"], "correctOptions": ["Error catch"], "time": 35, "details": "Error boundaries catch JavaScript errors in child components."},
-  {"question": "What is componentDidCatch?", "options": ["Error hook", "Error handler", "Lifecycle", "Catch errors"], "correctOptions": ["Lifecycle"], "time": 35, "details": "componentDidCatch is a lifecycle method for error handling."},
-  {"question": "What is static getDerivedStateFromError?", "options": ["Error state", "Error handling", "Error render", "Fallback"], "correctOptions": ["Error handling"], "time": 40, "details": "getDerivedStateFromError updates state when errors occur."},
-  {"question": "What is forwardRef?", "options": ["Ref passing", "Pass ref", "Forward reference", "Element ref"], "correctOptions": ["Ref passing"], "time": 35, "details": "forwardRef lets components forward refs to DOM nodes."},
-  {"question": "What is useImperativeHandle?", "options": ["Hook for ref", "Custom ref API", "Ref control", "Expose ref"], "correctOptions": ["Custom ref API"], "time": 45, "details": "useImperativeHandle customizes the exposed ref."},
-  {"question": "What is custom hook?", "options": ["Reusable logic", "Hook function", "Custom function", "State hook"], "correctOptions": ["Reusable logic"], "time": 30, "details": "Custom hooks let you extract and reuse stateful logic."},
-  {"question": "What is hook naming?", "options": ["use prefix", "useX", "Custom hook", "Start with use"], "correctOptions": ["use prefix"], "time": 25, "details": "Hooks must start with 'use' to follow React's rules."},
-  {"question": "What is component composition?", "options": ["Props children", "Component nesting", "Wrapper", "Layout"], "correctOptions": ["Component nesting"], "time": 30, "details": "Composition builds UIs by combining smaller components."},
-  {"question": "What is children prop?", "options": ["Content", "Inner content", "Nested elements", "Body"], "correctOptions": ["Nested elements"], "time": 25, "details": "children props pass elements nested inside components."},
-  {"question": "What is props drilling?", "options": ["Pass props down", "Props chain", "Deep props", "Many levels"], "correctOptions": ["Pass props down"], "time": 30, "details": "Props drilling passes props through many levels unnecessarily."},
-  {"question": "What is React Router?", "options": ["Navigation", "Router library", "Routing", "URL handling"], "correctOptions": ["Router library"], "time": 30, "details": "React Router provides client-side routing for React."},
-  {"question": "What is <BrowserRouter>?", "options": ["Router wrapper", "Routing context", "History", "URL context"], "correctOptions": ["Routing context"], "time": 30, "details": "BrowserRouter provides routing context for the app."},
-  {"question": "What is <Route>?", "options": ["Route definition", "URL match", "Path", "Component"], "correctOptions": ["Route definition"], "time": 30, "details": "Route defines which component renders at a path."},
-  {"question": "What is <Link>?", "options": ["Anchor", "Navigation link", "Router link", "URL"], "correctOptions": ["Navigation link"], "time": 30, "details": "Link provides client-side navigation without page reloads."},
-  {"question": "What is useParams?", "options": ["Get params", "URL params", "Route params", "Path params"], "correctOptions": ["URL params"], "time": 30, "details": "useParams returns URL parameters from the route."},
-  {"question": "What is useNavigate?", "options": ["Navigation hook", "Router hook", "Navigate function", "History"], "correctOptions": ["Navigation hook"], "time": 30, "details": "useNavigate returns a function to navigate programmatically."},
-  {"question": "What is redirect?", "options": ["Navigate", "Route redirect", "Forward", "Go to"], "correctOptions": ["Navigate"], "time": 30, "details": "Navigate redirects to a different route."},
-  {"question": "What is <Switch>?", "options": ["Route matcher", "First match", "Single route", "Group routes"], "correctOptions": ["First match"], "time": 35, "details": "Switch renders the first matching route."},
-  {"question": "What is Outlet?", "options": ["Nested route", "Child route", "Render position", "Route context"], "correctOptions": ["Render position"], "time": 35, "details": "Outlet renders child routes in nested routing."},
-  {"question": "What is React.lazy()?", "options": ["Code splitting", "Lazy load", "Dynamic import", "Async component"], "correctOptions": ["Code splitting"], "time": 35, "details": "lazy() enables code splitting for components."},
-  {"question": "What is Suspense?", "options": ["Loading state", "Fallback UI", "Lazy wrapper", "Async wrapper"], "correctOptions": ["Fallback UI"], "time": 30, "details": "Suspense shows a fallback while lazy components load."},
-  {"question": "What is ErrorBoundary?", "options": ["Error catch", "Error handler", "Error display", "Fallback"], "correctOptions": ["Error catch"], "time": 30, "details": "ErrorBoundary catches errors in child components."},
-  {"question": "What is React.lazy?", "options": ["Dynamic import", "Import", "Async load", "Load on demand"], "correctOptions": ["Dynamic import"], "time": 30, "details": "React.lazy imports components dynamically."},
-  {"question": "What is code splitting?", "options": ["Bundle splitting", "Lazy loading", "Chunk loading", "On-demand loading"], "correctOptions": ["Lazy loading"], "time": 35, "details": "Code splitting loads code on demand."},
-  {"question": "What is ReactDOM?", "options": ["DOM renderer", "React renderer", "DOM library", "Render API"], "correctOptions": ["DOM renderer"], "time": 30, "details": "ReactDOM renders React components to the DOM."},
-  {"question": "What is createRoot()?", "options": ["Create root", "Mount point", "Root node", "Container"], "correctOptions": ["Mount point"], "time": 30, "details": "createRoot creates a root for rendering React."},
-  {"question": "What does render() do?", "options": ["Display", "Mount component", "Update DOM", "Show UI"], "correctOptions": ["Mount component"], "time": 30, "details": "render() mounts a React component to the DOM."},
-  {"question": "What is hydration?", "options": ["Attach events", "React attach", "DOM attach", "Event binding"], "correctOptions": ["Attach events"], "time": 35, "details": "Hydration attaches React to server-rendered HTML."},
-  {"question": "What is concurrent mode?", "options": ["Async rendering", "Concurrent", "Parallel", "Non-blocking"], "correctOptions": ["Async rendering"], "time": 40, "details": "Concurrent mode allows rendering without blocking."},
-  {"question": "What is startTransition()?", "options": ["Lower priority", "Defer update", "Schedule", "Delay"], "correctOptions": ["Lower priority"], "time": 40, "details": "startTransition marks updates as non-urgent."},
-  {"question": "What is useDeferredValue?", "options": ["Deferred hook", "Delayed value", "Defer render", "Lazy value"], "correctOptions": ["Deferred value"], "time": 45, "details": "useDeferredValue defers rendering a value."},
-  {"question": "What are hooks rules?", "options": ["Call top-level", "Same component", "Not conditional", "All above"], "correctOptions": ["All above"], "time": 30, "details": "Hooks must be called at top-level, in the same component, and not conditionally."},
-  {"question": "What is state batching?", "options": ["Batch updates", "Group updates", "Combine updates", "Async update"], "correctOptions": ["Group updates"], "time": 35, "details": "State batching groups multiple updates into one re-render."},
-  {"question": "What is automatic batching?", "options": ["Auto batch", "Promise batch", "Async batch", "Background batch"], "correctOptions": ["Auto batch"], "time": 40, "details": "Automatic batching groups all updates automatically."},
-  {"question": "What is fiber architecture?", "options": ["New reconciliation", "Async algorithm", "Reconciler", "New engine"], "correctOptions": ["Async algorithm"], "time": 45, "details": "Fiber is React's async reconciliation algorithm."},
-  {"question": "What is reconcile?", "options": ["Diff algorithm", "Compare trees", "Update DOM", "Virtual DOM"], "correctOptions": ["Diff algorithm"], "time": 40, "details": "Reconciliation compares old and new virtual DOMs."},
-  {"question": "What is React.createElement()?", "options": ["Create element", "JSX transform", "Virtual DOM node", "Object"], "correctOptions": ["Virtual DOM node"], "time": 35, "details": "createElement creates a virtual DOM node."},
-  {"question": "What is React.cloneElement()?", "options": ["Copy element", "Modify props", "Clone element", "New element"], "correctOptions": ["Copy element"], "time": 35, "details": "cloneElement creates a copy of an element with new props."},
-  {"question": "What is React.isValidElement()?", "options": ["Check type", "Validate element", "Type check", "Verify"], "correctOptions": ["Validate element"], "time": 40, "details": "isValidElement checks if a value is a React element."},
-  {"question": "What is React.Children?", "options": ["Utility", "Children helpers", "Array helpers", "Map children"], "correctOptions": ["Children helpers"], "time": 35, "details": "React.Children provides utilities for children props."},
-  {"question": "What is Children.map?", "options": ["Map children", "Loop children", "Iterate", "Transform"], "correctOptions": ["Loop children"], "time": 30, "details": "Children.map iterates over children safely."},
-  {"question": "What is Children.count?", "options": ["Count children", "Get count", "Number", "Length"], "correctOptions": ["Count children"], "time": 30, "details": "Children.count returns the number of children."},
-  {"question": "What is Children.only()?", "options": ["Single child", "One element", "Validate single", "Check"], "correctOptions": ["Validate single"], "time": 35, "details": "Children.only validates there's only one child."},
-  {"question": "What is React.Component?", "options": ["Class base", "Component class", "Base class", "React class"], "correctOptions": ["Class base"], "time": 30, "details": "Component is the base class for class components."},
-  {"question": "What is componentDidMount?", "options": ["After render", "First render", "Mounted", "Ready"], "correctOptions": ["After render"], "time": 30, "details": "componentDidMount runs after first render."},
-  {"question": "What is componentDidUpdate?", "options": ["After update", "Render after", "State change", "Props change"], "correctOptions": ["After update"], "time": 30, "details": "componentDidUpdate runs after updates."},
-  {"question": "What is componentWillUnmount?", "options": ["Before remove", "Cleanup", "Unmount", "Destroy"], "correctOptions": ["Cleanup"], "time": 30, "details": "componentWillUnmount runs before removal for cleanup."},
-  {"question": "What is shouldComponentUpdate?", "options": ["Optimization", "Control render", "Prevent render", "Return boolean"], "correctOptions": ["Return boolean"], "time": 35, "details": "shouldComponentUpdate returns false to skip rendering."},
-  {"question": "What is getDerivedStateFromProps?", "options": ["Update state", "Sync state", "Props to state", "State from props"], "correctOptions": ["Props to state"], "time": 40, "details": "getDerivedStateFromProps syncs state with props."},
-  {"question": "What is PureComponent?", "options": ["Optimized Component", "Shallow compare", "Auto memo", "Fast"], "correctOptions": ["Shallow compare"], "time": 35, "details": "PureComponent does shallow prop comparison."},
-  {"question": "What is shallow compare?", "options": ["Compare props", "Shallow level", "Quick compare", "Level 1"], "correctOptions": ["Compare props"], "time": 35, "details": "Shallow compare checks top-level props only."},
-  {"question": "What is render props?", "options": ["Function as prop", "Props function", "Component prop", "Data function"], "correctOptions": ["Function as prop"], "time": 35, "details": "Render props pass functions that return UI."},
-  {"question": "What is HOC?", "options": ["Higher order", "Component wrapper", "Enhancer", "Decorator"], "correctOptions": ["Component wrapper"], "time": 35, "details": "HOCs wrap components to add functionality."},
-  {"question": "What is withRouter()?", "options": ["Router HOC", "Add router", "History HOC", "Navigate HOC"], "correctOptions": ["Router HOC"], "time": 40, "details": "withRouter injects router props into components."},
-  {"question": "What is connect()?", "options": ["Redux HOC", "Connect to store", "Store HOC", "Bind HOC"], "correctOptions": ["Connect to store"], "time": 40, "details": "connect() connects components to Redux."},
-  {"question": "What is mapDispatchToProps?", "options": ["Dispatch actions", "Bind actions", "Action props", "Dispatch"], "correctOptions": ["Dispatch actions"], "time": 40, "details": "mapDispatchToProps binds actions to props."},
-  {"question": "What is mapStateToProps?", "options": ["State to props", "Get state", "Select state", "Bind state"], "correctOptions": ["Select state"], "time": 40, "details": "mapStateToProps selects state as props."},
-  {"question": "What is Redux?", "options": ["State container", "Store", "State management", "Flux"], "correctOptions": ["State container"], "time": 30, "details": "Redux is a predictable state container."},
-  {"question": "What is Redux store?", "options": ["State container", "Central state", "Data store", "App state"], "correctOptions": ["State container"], "time": 30, "details": "Store holds the application state."},
-  {"question": "What is getState()?", "options": ["Get state", "Current state", "Read state", "Return state"], "correctOptions": ["Current state"], "time": 30, "details": "getState returns the current state."},
-  {"question": "What is subscribe()?", "options": ["Listen to changes", "Watch store", "Notify", "Callback"], "correctOptions": ["Listen to changes"], "time": 30, "details": "subscribe registers change listeners."},
-  {"question": "What is combineReducers()?", "options": ["Combine reducers", "Merge reducers", "Join reducers", "Root reducer"], "correctOptions": ["Combine reducers"], "time": 40, "details": "combineReducers combines multiple reducers."},
-  {"question": "What is applyMiddleware()?", "options": ["Add middleware", "Use middleware", "Enhance store", "Plugin"], "correctOptions": ["Add middleware"], "time": 40, "details": "applyMiddleware adds middleware to the store."},
-  {"question": "What is createStore()?", "options": ["Create store", "Build store", "Init store", "New store"], "correctOptions": ["Create store"], "time": 35, "details": "createStore creates a Redux store."},
-  {"question": "What is action creator?", "options": ["Function returning action", "Create action", "Action factory", "Action"], "correctOptions": ["Function returning action"], "time": 40, "details": "Action creators return action objects."},
-  {"question": "What is bindActionCreators()?", "options": ["Bind actions to dispatch", "Wrap actions", "Auto dispatch", "Combine actions"], "correctOptions": ["Bind actions to dispatch"], "time": 45, "details": "bindActionCreators auto-dispatches actions."},
-  {"question": "What is createSlice()?", "options": ["Redux Toolkit", "Auto reducer", "Create action/reducer", "Toolkit"], "correctOptions": ["Auto reducer"], "time": 45, "details": "createSlice creates reducers and actions."},
-  {"question": "What is createAsyncThunk()?", "options": ["Async action", "Async reducer", "API action", "Promise action"], "correctOptions": ["Async action"], "time": 50, "details": "createAsyncThunk creates async actions."},
-  {"question": "What is configureStore()?", "options": ["Create store", "Setup store", "Init Redux", "New store"], "correctOptions": ["Setup store"], "time": 45, "details": "configureStore sets up Redux store."},
-  {"question": "What is selector hook?", "options": ["Get state", "Select from state", "Query state", "Read state"], "correctOptions": ["Select from state"], "time": 40, "details": "Selector hooks select state slices."},
-  {"question": "What is useDispatch()?", "options": ["Get dispatch", "Hook for dispatch", "Dispatch hook", "Action hook"], "correctOptions": ["Get dispatch"], "time": 35, "details": "useDispatch gets the dispatch function."},
-  {"question": "What is useSelector()?", "options": ["Get from store", "Select state", "Read state", "Pick state"], "correctOptions": ["Select state"], "time": 35, "details": "useSelector selects state from the store."},
-  {"question": "What is React Testing Library?", "options": ["Testing utility", "Test framework", "Component test", "DOM test"], "correctOptions": ["Testing utility"], "time": 40, "details": "React Testing Library tests components as users do."},
-  {"question": "What is render()?", "options": ["Test render", "Mount component", "Render testing", "Output"], "correctOptions": ["Mount component"], "time": 35, "details": "render mounts components for testing."},
-  {"question": "What is screen object?", "options": ["Query methods", "Testing queries", "Find elements", "DOM queries"], "correctOptions": ["Query methods"], "time": 40, "details": "screen provides query methods for elements."},
-  {"question": "What is getByText()?", "options": ["Query by text", "Find text", "Locate element", "Text query"], "correctOptions": ["Query by text"], "time": 35, "details": "getByText finds elements by text."},
-  {"question": "What is fireEvent()?", "options": ["Trigger event", "Event emitter", "Simulate", "Action"], "correctOptions": ["Trigger event"], "time": 35, "details": "fireEvent triggers events in tests."},
-  {"question": "What is waitFor()?", "options": ["Wait async", "Wait for callback", "Async helper", "Promise"], "correctOptions": ["Wait for callback"], "time": 40, "details": "waitFor waits for async assertions."},
-  {"question": "What is jest?", "options": ["Test runner", "Testing framework", "Test tool", "Unit test"], "correctOptions": ["Testing framework"], "time": 30, "details": "Jest is a testing framework by Meta."},
-  {"question": "What is describe()?", "options": ["Test suite", "Group tests", "Test block", "Section"], "correctOptions": ["Test suite"], "time": 30, "details": "describe groups related tests."},
-  {"question": "What is test()?", "options": ["Test case", "Individual test", "Test unit", "Spec"], "correctOptions": ["Test case"], "time": 30, "details": "test defines an individual test case."},
-  {"question": "What is expect()?", "options": ["Assertion", "Assert", "Verify", "Check"], "correctOptions": ["Assertion"], "time": 30, "details": "expect creates assertions."},
-  {"question": "What is toBe()?", "options": ["Exact match", "Equality", "Same", "Compare"], "correctOptions": ["Exact match"], "time": 30, "details": "toBe checks exact equality."}
+  {
+    "question": "What is React?",
+    "options": [
+      "Framework",
+      "JavaScript library",
+      "Database",
+      "Language"
+    ],
+    "correctOptions": [
+      "JavaScript library"
+    ],
+    "time": 25,
+    "details": "React is a JavaScript library for building user interfaces, maintained by Meta (Facebook)."
+  },
+  {
+    "question": "What is JSX?",
+    "options": [
+      "JavaScript XML",
+      "Template literal",
+      "HTML in JS",
+      "XML syntax"
+    ],
+    "correctOptions": [
+      "JavaScript XML"
+    ],
+    "time": 25,
+    "details": "JSX is a syntax extension that lets you write HTML-like code in JavaScript."
+  },
+  {
+    "question": "What is component?",
+    "options": [
+      "Function",
+      "Reusable piece",
+      "Element",
+      "Block"
+    ],
+    "correctOptions": [
+      "Reusable piece"
+    ],
+    "time": 25,
+    "details": "Components are reusable pieces of UI that combine markup, styles, and logic."
+  },
+  {
+    "question": "What is useState?",
+    "options": [
+      "State hook",
+      "State manager",
+      "Stateful",
+      "State"
+    ],
+    "correctOptions": [
+      "State hook"
+    ],
+    "time": 25,
+    "details": "useState is a hook that adds state to functional components."
+  },
+  {
+    "question": "What is useEffect?",
+    "options": [
+      "Effect hook",
+      "Side effect",
+      "Lifecycle",
+      "Render"
+    ],
+    "correctOptions": [
+      "Effect hook"
+    ],
+    "time": 25,
+    "details": "useEffect handles side effects like data fetching and subscriptions in functional components."
+  },
+  {
+    "question": "What is prop?",
+    "options": [
+      "Property",
+      "Component data",
+      "Attribute",
+      "Parameter"
+    ],
+    "correctOptions": [
+      "Component data"
+    ],
+    "time": 25,
+    "details": "Props are inputs passed to components to customize their behavior."
+  },
+  {
+    "question": "What is state?",
+    "options": [
+      "Props",
+      "Component memory",
+      "Data",
+      "Internal data"
+    ],
+    "correctOptions": [
+      "Component memory"
+    ],
+    "time": 25,
+    "details": "State is data that changes over time within a component."
+  },
+  {
+    "question": "What does render return?",
+    "options": [
+      "String",
+      "JSX",
+      "HTML",
+      "Element"
+    ],
+    "correctOptions": [
+      "JSX"
+    ],
+    "time": 25,
+    "details": "Components return JSX describing what to render to the screen."
+  },
+  {
+    "question": "What is virtual DOM?",
+    "options": [
+      "In-memory DOM",
+      "Copy of DOM",
+      "Lightweight DOM",
+      "Virtual UI"
+    ],
+    "correctOptions": [
+      "In-memory DOM"
+    ],
+    "time": 30,
+    "details": "Virtual DOM is a lightweight copy of the real DOM for efficient updates."
+  },
+  {
+    "question": "What is key prop?",
+    "options": [
+      "ID",
+      "Unique identifier",
+      "Element ID",
+      "Reference"
+    ],
+    "correctOptions": [
+      "Unique identifier"
+    ],
+    "time": 25,
+    "details": "key helps React identify items in lists for efficient updates."
+  },
+  {
+    "question": "What is conditional rendering?",
+    "options": [
+      "If/else",
+      "Show/hide",
+      "Toggle UI",
+      "Dynamic UI"
+    ],
+    "correctOptions": [
+      "Show/hide"
+    ],
+    "time": 30,
+    "details": "Conditional rendering shows or hides UI based on conditions using && or ternary."
+  },
+  {
+    "question": "What is list rendering?",
+    "options": [
+      "Array map",
+      "Loop",
+      "For each",
+      "List"
+    ],
+    "correctOptions": [
+      "Array map"
+    ],
+    "time": 25,
+    "details": "Array.map() renders a list of elements in JSX."
+  },
+  {
+    "question": "What is onClick?",
+    "options": [
+      "Event handler",
+      "Click event",
+      "User action",
+      "Interaction"
+    ],
+    "correctOptions": [
+      "Click event"
+    ],
+    "time": 25,
+    "details": "onClick handles click events on elements."
+  },
+  {
+    "question": "What is onChange?",
+    "options": [
+      "Input event",
+      "Change event",
+      "Value change",
+      "Update"
+    ],
+    "correctOptions": [
+      "Value change"
+    ],
+    "time": 25,
+    "details": "onChange fires when input values change."
+  },
+  {
+    "question": "What is event object?",
+    "options": [
+      "Event data",
+      "Synthetic event",
+      "Native event",
+      "DOM event"
+    ],
+    "correctOptions": [
+      "Synthetic event"
+    ],
+    "time": 30,
+    "details": "Synthetic events are React's cross-browser wrapper around native events."
+  },
+  {
+    "question": "What is controlled input?",
+    "options": [
+      "Value in state",
+      "Managed input",
+      "React input",
+      "Bound input"
+    ],
+    "correctOptions": [
+      "Value in state"
+    ],
+    "time": 30,
+    "details": "Controlled inputs have their value managed by React state."
+  },
+  {
+    "question": "What is useRef?",
+    "options": [
+      "Reference",
+      "DOM reference",
+      "Hook for refs",
+      "Mutable ref"
+    ],
+    "correctOptions": [
+      "DOM reference"
+    ],
+    "time": 25,
+    "details": "useRef provides access to DOM elements or holds mutable values."
+  },
+  {
+    "question": "What is useContext?",
+    "options": [
+      "Context hook",
+      "Global data",
+      "Theme",
+      "Shared state"
+    ],
+    "correctOptions": [
+      "Context hook"
+    ],
+    "time": 30,
+    "details": "useContext accesses context values without props drilling."
+  },
+  {
+    "question": "What is Context?",
+    "options": [
+      "Global state",
+      "Data sharing",
+      "Provider",
+      "Value"
+    ],
+    "correctOptions": [
+      "Data sharing"
+    ],
+    "time": 30,
+    "details": "Context provides data to components without passing props."
+  },
+  {
+    "question": "What is Provider?",
+    "options": [
+      "Value holder",
+      "Context provider",
+      "Data source",
+      "Wrapper"
+    ],
+    "correctOptions": [
+      "Context provider"
+    ],
+    "time": 30,
+    "details": "Provider distributes context values to descendant components."
+  },
+  {
+    "question": "What is useReducer?",
+    "options": [
+      "State hook",
+      "Complex state",
+      "State management",
+      "Redux alternative"
+    ],
+    "correctOptions": [
+      "Complex state"
+    ],
+    "time": 35,
+    "details": "useReducer handles complex state logic with actions."
+  },
+  {
+    "question": "What is reducer function?",
+    "options": [
+      "Pure function",
+      "State transitions",
+      "Action handler",
+      "Logic"
+    ],
+    "correctOptions": [
+      "State transitions"
+    ],
+    "time": 35,
+    "details": "Reducers return new state based on current state and action."
+  },
+  {
+    "question": "What is action object?",
+    "options": [
+      "Event",
+      "dispatch object",
+      "Command",
+      "Payload"
+    ],
+    "correctOptions": [
+      "dispatch object"
+    ],
+    "time": 30,
+    "details": "Actions are objects that describe what state change should occur."
+  },
+  {
+    "question": "What is dispatch?",
+    "options": [
+      "Send",
+      "Trigger action",
+      "Send command",
+      "Execute"
+    ],
+    "correctOptions": [
+      "Trigger action"
+    ],
+    "time": 30,
+    "details": "dispatch sends actions to the reducer to update state."
+  },
+  {
+    "question": "What is CSS module?",
+    "options": [
+      "Scoped CSS",
+      "Local styles",
+      "Module CSS",
+      "Component styles"
+    ],
+    "correctOptions": [
+      "Scoped CSS"
+    ],
+    "time": 35,
+    "details": "CSS modules scope styles locally to components."
+  },
+  {
+    "question": "What is styled-components?",
+    "options": [
+      "CSS-in-JS",
+      "Styled elements",
+      "Component styling",
+      "CSS library"
+    ],
+    "correctOptions": [
+      "CSS-in-JS"
+    ],
+    "time": 35,
+    "details": "styled-components lets you write CSS in JavaScript as components."
+  },
+  {
+    "question": "What is className?",
+    "options": [
+      "Class",
+      "CSS class",
+      "Class prop",
+      "Style"
+    ],
+    "correctOptions": [
+      "CSS class"
+    ],
+    "time": 25,
+    "details": "className applies CSS classes to JSX elements."
+  },
+  {
+    "question": "What is inline styles?",
+    "options": [
+      "Style prop",
+      "Direct styles",
+      "JS styles",
+      "Component styles"
+    ],
+    "correctOptions": [
+      "Style prop"
+    ],
+    "time": 30,
+    "details": "Inline styles use the style prop with a JavaScript object."
+  },
+  {
+    "question": "What is useMemo?",
+    "options": [
+      "Memo hook",
+      "Memoized value",
+      "Cache",
+      "Optimization"
+    ],
+    "correctOptions": [
+      "Memoized value"
+    ],
+    "time": 30,
+    "details": "useMemo caches computed values to avoid recalculation."
+  },
+  {
+    "question": "What is useCallback?",
+    "options": [
+      "Callback hook",
+      "Memoized function",
+      "Cached function",
+      "Optimization"
+    ],
+    "correctOptions": [
+      "Memoized function"
+    ],
+    "time": 30,
+    "details": "useCallback caches functions to prevent unnecessary re-creation."
+  },
+  {
+    "question": "What is React.memo?",
+    "options": [
+      "Memoization",
+      "Component memo",
+      "Optimization",
+      "Pure component"
+    ],
+    "correctOptions": [
+      "Component memo"
+    ],
+    "time": 30,
+    "details": "React.memo memoizes components to skip re-rendering."
+  },
+  {
+    "question": "What is useLayoutEffect?",
+    "options": [
+      "DOM effect",
+      "Synchronous effect",
+      "Layout effect",
+      "Render effect"
+    ],
+    "correctOptions": [
+      "Synchronous effect"
+    ],
+    "time": 35,
+    "details": "useLayoutEffect runs synchronously after DOM mutations."
+  },
+  {
+    "question": "What is fragment?",
+    "options": [
+      "Wrapper",
+      "Empty wrapper",
+      "Group elements",
+      "Container"
+    ],
+    "correctOptions": [
+      "Group elements"
+    ],
+    "time": 30,
+    "details": "Fragments group elements without adding extra DOM nodes."
+  },
+  {
+    "question": "What is <></>?",
+    "options": [
+      "Empty tag",
+      "Fragment",
+      "Short fragment",
+      "JSX fragment"
+    ],
+    "correctOptions": [
+      "Fragment"
+    ],
+    "time": 25,
+    "details": "<> is shorthand for React.Fragment."
+  },
+  {
+    "question": "What is portal?",
+    "options": [
+      "DOM node",
+      "Render outside",
+      "Port",
+      "DOM portal"
+    ],
+    "correctOptions": [
+      "Render outside"
+    ],
+    "time": 35,
+    "details": "Portals render components outside the main DOM hierarchy."
+  },
+  {
+    "question": "What is createPortal()?",
+    "options": [
+      "Create portal",
+      "Render to DOM",
+      "DOM node",
+      "Port"
+    ],
+    "correctOptions": [
+      "Render to DOM"
+    ],
+    "time": 35,
+    "details": "createPortal renders children into a different DOM node."
+  },
+  {
+    "question": "What is error boundary?",
+    "options": [
+      "Error handling",
+      "Error catch",
+      "Error component",
+      "Fallback UI"
+    ],
+    "correctOptions": [
+      "Error catch"
+    ],
+    "time": 35,
+    "details": "Error boundaries catch JavaScript errors in child components."
+  },
+  {
+    "question": "What is componentDidCatch?",
+    "options": [
+      "Error hook",
+      "Error handler",
+      "Lifecycle",
+      "Catch errors"
+    ],
+    "correctOptions": [
+      "Lifecycle"
+    ],
+    "time": 35,
+    "details": "componentDidCatch is a lifecycle method for error handling."
+  },
+  {
+    "question": "What is static getDerivedStateFromError?",
+    "options": [
+      "Error state",
+      "Error handling",
+      "Error render",
+      "Fallback"
+    ],
+    "correctOptions": [
+      "Error handling"
+    ],
+    "time": 40,
+    "details": "getDerivedStateFromError updates state when errors occur."
+  },
+  {
+    "question": "What is forwardRef?",
+    "options": [
+      "Ref passing",
+      "Pass ref",
+      "Forward reference",
+      "Element ref"
+    ],
+    "correctOptions": [
+      "Ref passing"
+    ],
+    "time": 35,
+    "details": "forwardRef lets components forward refs to DOM nodes."
+  },
+  {
+    "question": "What is useImperativeHandle?",
+    "options": [
+      "Hook for ref",
+      "Custom ref API",
+      "Ref control",
+      "Expose ref"
+    ],
+    "correctOptions": [
+      "Custom ref API"
+    ],
+    "time": 45,
+    "details": "useImperativeHandle customizes the exposed ref."
+  },
+  {
+    "question": "What is custom hook?",
+    "options": [
+      "Reusable logic",
+      "Hook function",
+      "Custom function",
+      "State hook"
+    ],
+    "correctOptions": [
+      "Reusable logic"
+    ],
+    "time": 30,
+    "details": "Custom hooks let you extract and reuse stateful logic."
+  },
+  {
+    "question": "What is hook naming?",
+    "options": [
+      "use prefix",
+      "useX",
+      "Custom hook",
+      "Start with use"
+    ],
+    "correctOptions": [
+      "use prefix"
+    ],
+    "time": 25,
+    "details": "Hooks must start with 'use' to follow React's rules."
+  },
+  {
+    "question": "What is component composition?",
+    "options": [
+      "Props children",
+      "Component nesting",
+      "Wrapper",
+      "Layout"
+    ],
+    "correctOptions": [
+      "Component nesting"
+    ],
+    "time": 30,
+    "details": "Composition builds UIs by combining smaller components."
+  },
+  {
+    "question": "What is children prop?",
+    "options": [
+      "Content",
+      "Inner content",
+      "Nested elements",
+      "Body"
+    ],
+    "correctOptions": [
+      "Nested elements"
+    ],
+    "time": 25,
+    "details": "children props pass elements nested inside components."
+  },
+  {
+    "question": "What is props drilling?",
+    "options": [
+      "Pass props down",
+      "Props chain",
+      "Deep props",
+      "Many levels"
+    ],
+    "correctOptions": [
+      "Pass props down"
+    ],
+    "time": 30,
+    "details": "Props drilling passes props through many levels unnecessarily."
+  },
+  {
+    "question": "What is React Router?",
+    "options": [
+      "Navigation",
+      "Router library",
+      "Routing",
+      "URL handling"
+    ],
+    "correctOptions": [
+      "Router library"
+    ],
+    "time": 30,
+    "details": "React Router provides client-side routing for React."
+  },
+  {
+    "question": "What is <BrowserRouter>?",
+    "options": [
+      "Router wrapper",
+      "Routing context",
+      "History",
+      "URL context"
+    ],
+    "correctOptions": [
+      "Routing context"
+    ],
+    "time": 30,
+    "details": "BrowserRouter provides routing context for the app."
+  },
+  {
+    "question": "What is <Route>?",
+    "options": [
+      "Route definition",
+      "URL match",
+      "Path",
+      "Component"
+    ],
+    "correctOptions": [
+      "Route definition"
+    ],
+    "time": 30,
+    "details": "Route defines which component renders at a path."
+  },
+  {
+    "question": "What is <Link>?",
+    "options": [
+      "Anchor",
+      "Navigation link",
+      "Router link",
+      "URL"
+    ],
+    "correctOptions": [
+      "Navigation link"
+    ],
+    "time": 30,
+    "details": "Link provides client-side navigation without page reloads."
+  },
+  {
+    "question": "What is useParams?",
+    "options": [
+      "Get params",
+      "URL params",
+      "Route params",
+      "Path params"
+    ],
+    "correctOptions": [
+      "URL params"
+    ],
+    "time": 30,
+    "details": "useParams returns URL parameters from the route."
+  },
+  {
+    "question": "What is useNavigate?",
+    "options": [
+      "Navigation hook",
+      "Router hook",
+      "Navigate function",
+      "History"
+    ],
+    "correctOptions": [
+      "Navigation hook"
+    ],
+    "time": 30,
+    "details": "useNavigate returns a function to navigate programmatically."
+  },
+  {
+    "question": "What is redirect?",
+    "options": [
+      "Navigate",
+      "Route redirect",
+      "Forward",
+      "Go to"
+    ],
+    "correctOptions": [
+      "Navigate"
+    ],
+    "time": 30,
+    "details": "Navigate redirects to a different route."
+  },
+  {
+    "question": "What is <Switch>?",
+    "options": [
+      "Route matcher",
+      "First match",
+      "Single route",
+      "Group routes"
+    ],
+    "correctOptions": [
+      "First match"
+    ],
+    "time": 35,
+    "details": "Switch renders the first matching route."
+  },
+  {
+    "question": "What is Outlet?",
+    "options": [
+      "Nested route",
+      "Child route",
+      "Render position",
+      "Route context"
+    ],
+    "correctOptions": [
+      "Render position"
+    ],
+    "time": 35,
+    "details": "Outlet renders child routes in nested routing."
+  },
+  {
+    "question": "What is React.lazy()?",
+    "options": [
+      "Code splitting",
+      "Lazy load",
+      "Dynamic import",
+      "Async component"
+    ],
+    "correctOptions": [
+      "Code splitting"
+    ],
+    "time": 35,
+    "details": "lazy() enables code splitting for components."
+  },
+  {
+    "question": "What is Suspense?",
+    "options": [
+      "Loading state",
+      "Fallback UI",
+      "Lazy wrapper",
+      "Async wrapper"
+    ],
+    "correctOptions": [
+      "Fallback UI"
+    ],
+    "time": 30,
+    "details": "Suspense shows a fallback while lazy components load."
+  },
+  {
+    "question": "What is ErrorBoundary?",
+    "options": [
+      "Error catch",
+      "Error handler",
+      "Error display",
+      "Fallback"
+    ],
+    "correctOptions": [
+      "Error catch"
+    ],
+    "time": 30,
+    "details": "ErrorBoundary catches errors in child components."
+  },
+  {
+    "question": "What is React.lazy?",
+    "options": [
+      "Dynamic import",
+      "Import",
+      "Async load",
+      "Load on demand"
+    ],
+    "correctOptions": [
+      "Dynamic import"
+    ],
+    "time": 30,
+    "details": "React.lazy imports components dynamically."
+  },
+  {
+    "question": "What is code splitting?",
+    "options": [
+      "Bundle splitting",
+      "Lazy loading",
+      "Chunk loading",
+      "On-demand loading"
+    ],
+    "correctOptions": [
+      "Lazy loading"
+    ],
+    "time": 35,
+    "details": "Code splitting loads code on demand."
+  },
+  {
+    "question": "What is ReactDOM?",
+    "options": [
+      "DOM renderer",
+      "React renderer",
+      "DOM library",
+      "Render API"
+    ],
+    "correctOptions": [
+      "DOM renderer"
+    ],
+    "time": 30,
+    "details": "ReactDOM renders React components to the DOM."
+  },
+  {
+    "question": "What is createRoot()?",
+    "options": [
+      "Create root",
+      "Mount point",
+      "Root node",
+      "Container"
+    ],
+    "correctOptions": [
+      "Mount point"
+    ],
+    "time": 30,
+    "details": "createRoot creates a root for rendering React."
+  },
+  {
+    "question": "What does render() do?",
+    "options": [
+      "Display",
+      "Mount component",
+      "Update DOM",
+      "Show UI"
+    ],
+    "correctOptions": [
+      "Mount component"
+    ],
+    "time": 30,
+    "details": "render() mounts a React component to the DOM."
+  },
+  {
+    "question": "What is hydration?",
+    "options": [
+      "Attach events",
+      "React attach",
+      "DOM attach",
+      "Event binding"
+    ],
+    "correctOptions": [
+      "Attach events"
+    ],
+    "time": 35,
+    "details": "Hydration attaches React to server-rendered HTML."
+  },
+  {
+    "question": "What is concurrent mode?",
+    "options": [
+      "Async rendering",
+      "Concurrent",
+      "Parallel",
+      "Non-blocking"
+    ],
+    "correctOptions": [
+      "Async rendering"
+    ],
+    "time": 40,
+    "details": "Concurrent mode allows rendering without blocking."
+  },
+  {
+    "question": "What is startTransition()?",
+    "options": [
+      "Lower priority",
+      "Defer update",
+      "Schedule",
+      "Delay"
+    ],
+    "correctOptions": [
+      "Lower priority"
+    ],
+    "time": 40,
+    "details": "startTransition marks updates as non-urgent."
+  },
+  {
+    "question": "What is useDeferredValue?",
+    "options": [
+      "Deferred hook",
+      "Delayed value",
+      "Defer render",
+      "Lazy value"
+    ],
+    "correctOptions": [
+      "Deferred hook"
+    ],
+    "time": 45,
+    "details": "useDeferredValue defers rendering a value."
+  },
+  {
+    "question": "What are hooks rules?",
+    "options": [
+      "Call top-level",
+      "Same component",
+      "Not conditional",
+      "All above"
+    ],
+    "correctOptions": [
+      "All above"
+    ],
+    "time": 30,
+    "details": "Hooks must be called at top-level, in the same component, and not conditionally."
+  },
+  {
+    "question": "What is state batching?",
+    "options": [
+      "Batch updates",
+      "Group updates",
+      "Combine updates",
+      "Async update"
+    ],
+    "correctOptions": [
+      "Group updates"
+    ],
+    "time": 35,
+    "details": "State batching groups multiple updates into one re-render."
+  },
+  {
+    "question": "What is automatic batching?",
+    "options": [
+      "Auto batch",
+      "Promise batch",
+      "Async batch",
+      "Background batch"
+    ],
+    "correctOptions": [
+      "Auto batch"
+    ],
+    "time": 40,
+    "details": "Automatic batching groups all updates automatically."
+  },
+  {
+    "question": "What is fiber architecture?",
+    "options": [
+      "New reconciliation",
+      "Async algorithm",
+      "Reconciler",
+      "New engine"
+    ],
+    "correctOptions": [
+      "Async algorithm"
+    ],
+    "time": 45,
+    "details": "Fiber is React's async reconciliation algorithm."
+  },
+  {
+    "question": "What is reconcile?",
+    "options": [
+      "Diff algorithm",
+      "Compare trees",
+      "Update DOM",
+      "Virtual DOM"
+    ],
+    "correctOptions": [
+      "Diff algorithm"
+    ],
+    "time": 40,
+    "details": "Reconciliation compares old and new virtual DOMs."
+  },
+  {
+    "question": "What is React.createElement()?",
+    "options": [
+      "Create element",
+      "JSX transform",
+      "Virtual DOM node",
+      "Object"
+    ],
+    "correctOptions": [
+      "Virtual DOM node"
+    ],
+    "time": 35,
+    "details": "createElement creates a virtual DOM node."
+  },
+  {
+    "question": "What is React.cloneElement()?",
+    "options": [
+      "Copy element",
+      "Modify props",
+      "Clone element",
+      "New element"
+    ],
+    "correctOptions": [
+      "Copy element"
+    ],
+    "time": 35,
+    "details": "cloneElement creates a copy of an element with new props."
+  },
+  {
+    "question": "What is onChange event?",
+    "options": [
+      "Input change",
+      "Controlled",
+      "Handler",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Input change",
+      "Controlled",
+      "Handler",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is onChange event? explanation."
+  },
+  {
+    "question": "What is React.Children?",
+    "options": [
+      "Utility",
+      "Children helpers",
+      "Array helpers",
+      "Map children"
+    ],
+    "correctOptions": [
+      "Children helpers"
+    ],
+    "time": 35,
+    "details": "React.Children provides utilities for children props."
+  },
+  {
+    "question": "What is Children.map?",
+    "options": [
+      "Map children",
+      "Loop children",
+      "Iterate",
+      "Transform"
+    ],
+    "correctOptions": [
+      "Loop children"
+    ],
+    "time": 30,
+    "details": "Children.map iterates over children safely."
+  },
+  {
+    "question": "What is Children.count?",
+    "options": [
+      "Count children",
+      "Get count",
+      "Number",
+      "Length"
+    ],
+    "correctOptions": [
+      "Count children"
+    ],
+    "time": 30,
+    "details": "Children.count returns the number of children."
+  },
+  {
+    "question": "What is Children.only()?",
+    "options": [
+      "Single child",
+      "One element",
+      "Validate single",
+      "Check"
+    ],
+    "correctOptions": [
+      "Validate single"
+    ],
+    "time": 35,
+    "details": "Children.only validates there's only one child."
+  },
+  {
+    "question": "What is React.Component?",
+    "options": [
+      "Class base",
+      "Component class",
+      "Base class",
+      "React class"
+    ],
+    "correctOptions": [
+      "Class base"
+    ],
+    "time": 30,
+    "details": "Component is the base class for class components."
+  },
+  {
+    "question": "What is componentDidMount?",
+    "options": [
+      "After render",
+      "First render",
+      "Mounted",
+      "Ready"
+    ],
+    "correctOptions": [
+      "After render"
+    ],
+    "time": 30,
+    "details": "componentDidMount runs after first render."
+  },
+  {
+    "question": "What is componentDidUpdate?",
+    "options": [
+      "After update",
+      "Render after",
+      "State change",
+      "Props change"
+    ],
+    "correctOptions": [
+      "After update"
+    ],
+    "time": 30,
+    "details": "componentDidUpdate runs after updates."
+  },
+  {
+    "question": "What is componentWillUnmount?",
+    "options": [
+      "Before remove",
+      "Cleanup",
+      "Unmount",
+      "Destroy"
+    ],
+    "correctOptions": [
+      "Cleanup"
+    ],
+    "time": 30,
+    "details": "componentWillUnmount runs before removal for cleanup."
+  },
+  {
+    "question": "What is shouldComponentUpdate?",
+    "options": [
+      "Optimization",
+      "Control render",
+      "Prevent render",
+      "Return boolean"
+    ],
+    "correctOptions": [
+      "Return boolean"
+    ],
+    "time": 35,
+    "details": "shouldComponentUpdate returns false to skip rendering."
+  },
+  {
+    "question": "What is getDerivedStateFromProps?",
+    "options": [
+      "Update state",
+      "Sync state",
+      "Props to state",
+      "State from props"
+    ],
+    "correctOptions": [
+      "Props to state"
+    ],
+    "time": 40,
+    "details": "getDerivedStateFromProps syncs state with props."
+  },
+  {
+    "question": "What is PureComponent?",
+    "options": [
+      "Optimized Component",
+      "Shallow compare",
+      "Auto memo",
+      "Fast"
+    ],
+    "correctOptions": [
+      "Shallow compare"
+    ],
+    "time": 35,
+    "details": "PureComponent does shallow prop comparison."
+  },
+  {
+    "question": "What is shallow compare?",
+    "options": [
+      "Compare props",
+      "Shallow level",
+      "Quick compare",
+      "Level 1"
+    ],
+    "correctOptions": [
+      "Compare props"
+    ],
+    "time": 35,
+    "details": "Shallow compare checks top-level props only."
+  },
+  {
+    "question": "What is render props?",
+    "options": [
+      "Function as prop",
+      "Props function",
+      "Component prop",
+      "Data function"
+    ],
+    "correctOptions": [
+      "Function as prop"
+    ],
+    "time": 35,
+    "details": "Render props pass functions that return UI."
+  },
+  {
+    "question": "What is HOC?",
+    "options": [
+      "Higher order",
+      "Component wrapper",
+      "Enhancer",
+      "Decorator"
+    ],
+    "correctOptions": [
+      "Component wrapper"
+    ],
+    "time": 35,
+    "details": "HOCs wrap components to add functionality."
+  },
+  {
+    "question": "What is withRouter()?",
+    "options": [
+      "Router HOC",
+      "Add router",
+      "History HOC",
+      "Navigate HOC"
+    ],
+    "correctOptions": [
+      "Router HOC"
+    ],
+    "time": 40,
+    "details": "withRouter injects router props into components."
+  },
+  {
+    "question": "What is connect()?",
+    "options": [
+      "Redux HOC",
+      "Connect to store",
+      "Store HOC",
+      "Bind HOC"
+    ],
+    "correctOptions": [
+      "Connect to store"
+    ],
+    "time": 40,
+    "details": "connect() connects components to Redux."
+  },
+  {
+    "question": "What is mapDispatchToProps?",
+    "options": [
+      "Dispatch actions",
+      "Bind actions",
+      "Action props",
+      "Dispatch"
+    ],
+    "correctOptions": [
+      "Dispatch actions"
+    ],
+    "time": 40,
+    "details": "mapDispatchToProps binds actions to props."
+  },
+  {
+    "question": "What is mapStateToProps?",
+    "options": [
+      "State to props",
+      "Get state",
+      "Select state",
+      "Bind state"
+    ],
+    "correctOptions": [
+      "Select state"
+    ],
+    "time": 40,
+    "details": "mapStateToProps selects state as props."
+  },
+  {
+    "question": "What is Redux?",
+    "options": [
+      "State container",
+      "Store",
+      "State management",
+      "Flux"
+    ],
+    "correctOptions": [
+      "State container"
+    ],
+    "time": 30,
+    "details": "Redux is a predictable state container."
+  },
+  {
+    "question": "What is Redux store?",
+    "options": [
+      "State container",
+      "Central state",
+      "Data store",
+      "App state"
+    ],
+    "correctOptions": [
+      "State container"
+    ],
+    "time": 30,
+    "details": "Store holds the application state."
+  },
+  {
+    "question": "What is getState()?",
+    "options": [
+      "Get state",
+      "Current state",
+      "Read state",
+      "Return state"
+    ],
+    "correctOptions": [
+      "Current state"
+    ],
+    "time": 30,
+    "details": "getState returns the current state."
+  },
+  {
+    "question": "What is subscribe()?",
+    "options": [
+      "Listen to changes",
+      "Watch store",
+      "Notify",
+      "Callback"
+    ],
+    "correctOptions": [
+      "Listen to changes"
+    ],
+    "time": 30,
+    "details": "subscribe registers change listeners."
+  },
+  {
+    "question": "What is combineReducers()?",
+    "options": [
+      "Combine reducers",
+      "Merge reducers",
+      "Join reducers",
+      "Root reducer"
+    ],
+    "correctOptions": [
+      "Combine reducers"
+    ],
+    "time": 40,
+    "details": "combineReducers combines multiple reducers."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is createStore()?",
+    "options": [
+      "Create store",
+      "Build store",
+      "Init store",
+      "New store"
+    ],
+    "correctOptions": [
+      "Create store"
+    ],
+    "time": 35,
+    "details": "createStore creates a Redux store."
+  },
+  {
+    "question": "What is action creator?",
+    "options": [
+      "Function returning action",
+      "Create action",
+      "Action factory",
+      "Action"
+    ],
+    "correctOptions": [
+      "Function returning action"
+    ],
+    "time": 40,
+    "details": "Action creators return action objects."
+  },
+  {
+    "question": "What is bindActionCreators()?",
+    "options": [
+      "Bind actions to dispatch",
+      "Wrap actions",
+      "Auto dispatch",
+      "Combine actions"
+    ],
+    "correctOptions": [
+      "Bind actions to dispatch"
+    ],
+    "time": 45,
+    "details": "bindActionCreators auto-dispatches actions."
+  },
+  {
+    "question": "What is createSlice()?",
+    "options": [
+      "Redux Toolkit",
+      "Auto reducer",
+      "Create action/reducer",
+      "Toolkit"
+    ],
+    "correctOptions": [
+      "Auto reducer"
+    ],
+    "time": 45,
+    "details": "createSlice creates reducers and actions."
+  },
+  {
+    "question": "What is createAsyncThunk()?",
+    "options": [
+      "Async action",
+      "Async reducer",
+      "API action",
+      "Promise action"
+    ],
+    "correctOptions": [
+      "Async action"
+    ],
+    "time": 50,
+    "details": "createAsyncThunk creates async actions."
+  },
+  {
+    "question": "What is configureStore()?",
+    "options": [
+      "Create store",
+      "Setup store",
+      "Init Redux",
+      "New store"
+    ],
+    "correctOptions": [
+      "Setup store"
+    ],
+    "time": 45,
+    "details": "configureStore sets up Redux store."
+  },
+  {
+    "question": "What is selector hook?",
+    "options": [
+      "Get state",
+      "Select from state",
+      "Query state",
+      "Read state"
+    ],
+    "correctOptions": [
+      "Select from state"
+    ],
+    "time": 40,
+    "details": "Selector hooks select state slices."
+  },
+  {
+    "question": "What is useDispatch()?",
+    "options": [
+      "Get dispatch",
+      "Hook for dispatch",
+      "Dispatch hook",
+      "Action hook"
+    ],
+    "correctOptions": [
+      "Get dispatch"
+    ],
+    "time": 35,
+    "details": "useDispatch gets the dispatch function."
+  },
+  {
+    "question": "What is useSelector()?",
+    "options": [
+      "Get from store",
+      "Select state",
+      "Read state",
+      "Pick state"
+    ],
+    "correctOptions": [
+      "Select state"
+    ],
+    "time": 35,
+    "details": "useSelector selects state from the store."
+  },
+  {
+    "question": "What is React Testing Library?",
+    "options": [
+      "Testing utility",
+      "Test framework",
+      "Component test",
+      "DOM test"
+    ],
+    "correctOptions": [
+      "Testing utility"
+    ],
+    "time": 40,
+    "details": "React Testing Library tests components as users do."
+  },
+  {
+    "question": "What is render()?",
+    "options": [
+      "Test render",
+      "Mount component",
+      "Render testing",
+      "Output"
+    ],
+    "correctOptions": [
+      "Mount component"
+    ],
+    "time": 35,
+    "details": "render mounts components for testing."
+  },
+  {
+    "question": "What is screen object?",
+    "options": [
+      "Query methods",
+      "Testing queries",
+      "Find elements",
+      "DOM queries"
+    ],
+    "correctOptions": [
+      "Query methods"
+    ],
+    "time": 40,
+    "details": "screen provides query methods for elements."
+  },
+  {
+    "question": "What is getByText()?",
+    "options": [
+      "Query by text",
+      "Find text",
+      "Locate element",
+      "Text query"
+    ],
+    "correctOptions": [
+      "Query by text"
+    ],
+    "time": 35,
+    "details": "getByText finds elements by text."
+  },
+  {
+    "question": "What is fireEvent()?",
+    "options": [
+      "Trigger event",
+      "Event emitter",
+      "Simulate",
+      "Action"
+    ],
+    "correctOptions": [
+      "Trigger event"
+    ],
+    "time": 35,
+    "details": "fireEvent triggers events in tests."
+  },
+  {
+    "question": "What is waitFor()?",
+    "options": [
+      "Wait async",
+      "Wait for callback",
+      "Async helper",
+      "Promise"
+    ],
+    "correctOptions": [
+      "Wait for callback"
+    ],
+    "time": 40,
+    "details": "waitFor waits for async assertions."
+  },
+  {
+    "question": "What is jest?",
+    "options": [
+      "Test runner",
+      "Testing framework",
+      "Test tool",
+      "Unit test"
+    ],
+    "correctOptions": [
+      "Testing framework"
+    ],
+    "time": 30,
+    "details": "Jest is a testing framework by Meta."
+  },
+  {
+    "question": "What is describe()?",
+    "options": [
+      "Test suite",
+      "Group tests",
+      "Test block",
+      "Section"
+    ],
+    "correctOptions": [
+      "Test suite"
+    ],
+    "time": 30,
+    "details": "describe groups related tests."
+  },
+  {
+    "question": "What is test()?",
+    "options": [
+      "Test case",
+      "Individual test",
+      "Test unit",
+      "Spec"
+    ],
+    "correctOptions": [
+      "Test case"
+    ],
+    "time": 30,
+    "details": "test defines an individual test case."
+  },
+  {
+    "question": "What is expect()?",
+    "options": [
+      "Assertion",
+      "Assert",
+      "Verify",
+      "Check"
+    ],
+    "correctOptions": [
+      "Assertion"
+    ],
+    "time": 30,
+    "details": "expect creates assertions."
+  },
+  {
+    "question": "What is toBe()?",
+    "options": [
+      "Exact match",
+      "Equality",
+      "Same",
+      "Compare"
+    ],
+    "correctOptions": [
+      "Exact match"
+    ],
+    "time": 30,
+    "details": "toBe checks exact equality."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  }
 ]

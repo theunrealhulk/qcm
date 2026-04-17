@@ -1,113 +1,2052 @@
 [
-  {"question": "What is REPL?", "options": ["Interactive console", "Read-eval-print loop", "Shell", "Node shell"], "correctOptions": ["Interactive console"], "time": 40, "details": "REPL is interactive console."},
-  {"question": "What are .save loads files into the session.", "options": ["Load session", "Load code", "Import", "Exec"], "correctOptions": ["Load session code from file"], "time": 60, "details": "Loads file contents into session."},
-  {"question": "What is .clear command?", "options": ["Clear context", "Clear", "Reset", "Context"], "correctOptions": ["Clear current context"], "time": 55, "details": "Clears current context."},
-  {"question": "What is .exit command?", "options": ["Exit REPL", "Quit", "Stop", "Leave"], "correctOptions": ["Exit REPL session"], "time": 50, "details": ".exit ends REPL session."},
-  {"question": "What is .break command?", "options": ["Exit multi-line", "Break", "Cancel", "Abort"], "correctOptions": ["Exit multi-line input"], "time": 55, "details": "Breaks multi-line input."},
-  {"question": "What is REPL built-in commands?", "options": ["Special REPL", "Commands", "Directives", "Commands"], "correctOptions": ["Special REPL directives"], "time": 60, "details": "REPL has built-in commands."},
-  {"question": "What is eval in REPL?", "options": ["Evaluate code", "Run", "Eval", "Result"], "correctOptions": ["Evaluate code with V8"], "time": 50, "details": "Evaluates JavaScript code."},
-  {"question": "What is Async REPL?", "options": ["Async evaluation", "Await support", "Async", "Support"], "correctOptions": ["Async evaluation support"], "time": 60, "details": "REPL supports async via top-level await."},
-  {"question": "What is REPL server?", "options": ["Network REPL", "Remote", "Server", "Listen"], "correctOptions": ["Network REPL server"], "time": 55, "details": "REPL can run as server."},
-  {"question": "What is repl.start()?", "options": ["Start REPL", "Server", "Initialize", "Start"], "correctOptions": ["Start REPL server"], "time": 60, "details": "Creates and starts REPL."},
-  {"question": "What is REPL options?", "options": ["Configuration", "Setup", "Options", "Config"], "correctOptions": ["REPL configuration"], "time": 60, "details": "Options configure REPL."},
-  {"question": "What is input stream in REPL?", "options": ["Input data", "stdin", "Input", "Read"], "correctOptions": ["Input from stream"], "time": 55, "details": "Input is default from stdin."},
-  {"question": "What is output stream in REPL?", "options": ["Output data", "stdout", "Output", "Write"], "correctOptions": ["Output to stream"], "time": 55, "details": "Output is default to stdout."},
-  {"question": "What is context object?:", "options": ["Global names", "Context", "Variables", "Scope"], "correctOptions": ["Global names added to REPL"], "time": 65, "details": "Context adds globals to names."},
-  {"question": "What is REPLEventEmitter?", "options": ["Events", "Output events", "Events", "Emitter"], "correctOptions": ["Events from REPL instance"], "time": 65, "details": "Emits events during execution."},
-  {"question": "What is --eval flag?", "options": ["Execute code", "Run code", "Eval", "Script"], "correctOptions": ["Evaluate code given -e"], "time": 40, "details": "Runs code from command-line."},
-  {"question": "What is --print flag?", "options": ["Print result", "Auto print", "Output", "Script"], "correctOptions": ["Print result after evaluation"], "time": 45, "details": "Prints expression after running."},
-  {"question": "What is -e flag?", "options": ["Execute code", "Eval", "Run script", "Scripting"], "correctOptions": ["Execute string as script"], "time": 40, "details": "Execute given code."},
-  {"question": "What is -p flag?", "options": ["Execute and print", "Run and output", "Auto print", "Scripting"], "correctOptions": ["Execute and print results"], "time": 45, "details": "Executes and prints result."},
-  {"question": "What is -r flag?", "options": ["Require module", "Load early", "Import", "Preload"], "correctOptions": ["Require module before script"], "time": 45, "details": "Preloads module before script."},
-  {"question": "What is -c flag?", "options": ["Check syntax", "Compile only", "Validate", "Parse"], "correctOptions": ["Check syntax without run"], "time": 45, "details": "Checks syntax without executing."},
-  {"question": "What is --check or -c?", "options": ["Syntax check only", "Parse", "Compile", "Linting"], "correctOptions": ["Parse and validate without executing"], "time": 55, "details": "Checks syntax without execution."},
-  {"question": "What is --require or -r?:", "options": ["Preload require", "Auto-require", "Module early", "Load"], "correctOptions": ["Preload module before script"], "time": 50, "details": "Preloads module before running."},
-  {"question": "What is process.argv?", "options": ["CLI arguments", "Arguments", "Args array", "Command"], "correctOptions": ["CLI arguments array"], "time": 40, "details": "process.argv has CLI args."},
-  {"question": "What is process.execPath?", "options": ["Node executable", "Node path", "Binary", "Exec path"], "correctOptions": ["Path to Node executable"], "time": 40, "details": "Path to the Node binary."},
-  {"question": "What is process.execArgv?:", "options": ["VM flags", "Flags applied", "Options", "Node options"], "correctOptions": ["Node VM-specific options"], "time": 50, "details": "Node VM-specific flags."},
-  {"question": "What is process.env?", "options": ["Environment vars", "Env object", "Variables", "Config"], "correctOptions": ["Environment variables object"], "time": 40, "details": "Environment variables."},
-  {"question": "What is NODE_ENV?", "options": ["Runtime mode", "Env setting", "Mode", "Deployment"], "correctOptions": ["Runtime environment mode (production/development)"], "time": 45, "details": "Common: production/development/test."},
-  {"question": "What is NODE_OPTIONS?", "options": ["Node options", "Flags", "Options", "Global"], "correctOptions": ["Node runtime options (global)"], "time": 50, "details": "NODE_OPTIONS sets global Node flags."},
-  {"question": "What is NODE_TLS_REJECT_UNAUTHORIZED?", "options": ["TLS skip verify", "Environment variable", "TLS option", "Skip"], "correctOptions": ["TLS reject unauthorized setting"], "time": 60, "details": "Skip TLS verification when truthy (insecure!)."},
-  {"question": "What is NO_COLOR?", "options": ["Disable colors", "Color setting", "Colors", "TTY"], "correctOptions": ["Disable colored output in TTY"], "time": 55, "details": "Disables color output."},
-  {"question": "What is HTTP_PROXY / HTTPS_PROXY?", "options": ["Proxy settings", "Environment", "Proxy", "HTTP"], "correctOptions": ["Proxy server settings"], "time": 60, "details": "Proxy server configuration."},
-  {"question": "What is process.platform?", "options": ["OS platform", "Platform", "OS type", "System"], "correctOptions": ["Node.js host platform name"], "time": 40, "details": "Platform (e.g., 'darwin', 'linux', 'win32')."},
-  {"question": "What is process.arch?", "options": ["CPU arch", "Architecture", "Processor", "ISA"], "correctOptions": ["Host CPU architecture name"], "time": 45, "details": "CPU architecture: 'arm', 'x64', etc."},
-  {"question": "What is process.release?", "options": ["Version info", "Release metadata", "Release", "Info"], "correctOptions": ["Release metadata object"], "time": 50, "details": "Release details: name, sourceUrl, headersUrl."},
-  {"question": "What is process.versions?", "options": ["Version info", "Dependency versions", "Versions", "Info"], "correctOptions": ["Dependency versions object"], "time": 50, "details": "node, v8, uv, openssl."},
-  {"question": "What is process.config?", "options": ["Build config", "Node config", "Configuration", "Build"], "correctOptions": ["Build configuration object"], "time": 55, "details": "Configure options used to build Node."},
-  {"question": "What is process.pid?", "options": ["Process ID", "PID", "Identifier", "ID"], "correctOptions": ["Process ID number"], "time": 40, "details": "The current process ID."},
-  {"question": "What is process.ppid?", "options": ["Parent PID", "Parent process", "PPID", "Parent"], "correctOptions": ["Parent process ID"], "time": 45, "details": "The parent process ID."},
-  {"question": "What is process.cwd()?", "options": ["Current directory", "Working dir", "CWD", "Dir"], "correctOptions": ["Current working directory"], "time": 40, "details": "Current directory."},
-  {"question": "What is process.chdir()?", "options": ["Change directory", "Chdir", "cd", "Dir"], "correctOptions": ["Change working directory"], "time": 45, "details": "Changes current directory."},
-  {"question": "What is process.uptime()?", "options": ["Node uptime", "Runtime duration", "Uptime", "Time"], "correctOptions": ["Node process uptime in seconds"], "time": 50, "details": "Returns process uptime."},
-  {"question": "What is process.hrtime()?", "options": ["High-res timer", "Time", "HRT", "Timer"], "correctOptions": ["High-resolution time (seconds + nanoseconds)"], "time": 55, "details": "High-resolution time."},
-  {"question": "What is process.uptime() vs process.hrtime()?", "options": ["Process vs high-res time", "Duration vs instant", "Different", "Comparison"], "correctOptions": ["Uptime vs instantaneous time"], "time": 60, "details": "One is cumulative, one is point in time."},
-  {"question": "What is os module?", "options": ["System interaction", "OS functionality", "System utilities", "APIs"], "correctOptions": ["Operating system interaction utilities"], "time": 40, "details": "os module has OS utilities."},
-  {"question": "What is os.type()?", "options": ["OS name", "Kernel", "System", "Type"], "correctOptions": ["Operating system name"], "time": 45, "details": "Returns OS name ('Linux', 'Darwin')."},
-  {"question": "What is os.platform()?", "options": ["Node platform", "nodePlatform", "Platform", "Compile target"], "correctOptions": ["Node was compiled for this platform"], "time": 55, "details": "The platform Node was compiled for."},
-  {"question": "What is os.release()?:", "options": ["OS version", "Release", "OS", "Version"], "correctOptions": ["OS release version string"], "time": 50, "details": "Returns OS release."},
-  {"question": "What is os.totalmem()?:", "options": ["Total memory", "RAM", "System memory", "Memory"], "correctOptions": ["Total amount of system memory in bytes"], "time": 50, "details": "Total system memory."},
-  {"question": "What is os.freemem()?:", "options": ["Free memory", "Available RAM", "Free", "Memory"], "correctOptions": ["Amount of free system memory in bytes"], "time": 50, "details": "Free system memory."},
-  {"question": "What is os.hostname()?:", "options": ["Machine name", "Hostname", "Host name", "Node name"], "correctOptions": ["Host name for machine"], "time": 50, "details": "Returns machine hostname."},
-  {"question": "What is os.loadavg()?:", "options": ["Load average", "1/5/15 min", "Load", "Averages"], "correctOptions": ["System load averages for 1/5/15 minutes"], "time": 60, "details": "Load avg for 1, 5, 15 minutes."},
-  {"question": "What is os.uptime()?:", "options": ["OS uptime", "System uptime", "Uptime", "Time"], "correctOptions": ["OS uptime in seconds (seconds since boot)"], "time": 55, "details": "OS uptime."},
-  {"question": "What is os.cpus()?:", "options": ["CPU info", "Cpu list", "Processors", "Cores"], "correctOptions": ["Array of CPU information objects: model, speed (MHz), times (user, nice, sys, idle, irq)"], "time": 60, "details": "CPU information."},
-  {"question": "What is os.networkInterfaces()?:", "options": ["Network interfaces", "Network info", "NICs", "Interfaces"], "correctOptions": ["Object containing network interfaces: address, netmask, mac, internal, family"], "time": 60, "details": "Network interfaces."},
-  {"question": "What is os.EOL?", "options": ["Line ending", "Line separator", "End of line", "Platform line"], "correctOptions": ["Platform-specific line ending: '\\n' or '\\r\\n'"], "time": 45, "details": "End of line."},
-  {"question": "What is os.endianness()?", "options": ["Byte order", "Endianness", "CPU type", "Byte preference"], "correctOptions": ["CPU byte order: 'BE' (big-endian) or 'LE' (little-endian)"], "time": 55, "details": "Byte order."},
-  {"question": "What is process.memoryUsage()?", "options": ["Memory stats", "RSS, heap", "Usage", "Info"], "correctOptions": ["Object: rss (total), heapTotal, heapUsed, external, arrayBuffers"], "time": 55, "details": "Memory usage."},
-  {"question": "What is process.cpuUsage()?", "options": ["CPU info", "Stats", "Usage", "Time"], "correctOptions": ["Object: user, system CPU time in ms (call with prev for delta)"], "time": 55, "details": "CPU usage."},
-  {"question": "What is process.resourceUsage()?", "options": ["System resources", "Stats", "Usage", "Metrics"], "correctOptions": ["Object: userCPUTime, systemCPUTime, maxRSS, pageFaults, etc"], "time": 60, "details": "Resource usage."},
-  {"question": "What is process.kill()?", "options": ["Signal process", "Terminate", "Kill", "Signal"], "correctOptions": ["Sends signal to process (default SIGTERM): process.kill(pid, 'SIGKILL')"], "time": 55, "details": "Sends signal."},
-  {"question": "What is process.exit()?", "options": ["Exit node", "End process", "Quit", "Exit"], "correctOptions": ["Terminates with exit code: process.exit(code) - code defaults to 0"], "time": 50, "details": "Exits process."},
-  {"question": "What is process.exitCode?", "options": ["Exit code", "Return code", "Code", "Exit"], "correctOptions": ["Set exit code: process.exitCode = 1 - used when process.exit() called without code"], "time": 55, "details": "Exit code property."},
-  {"question": "What is process.version?", "options": ["Node version", "Node.js version", "Engine version", "Version"], "correctOptions": ["Node.js version as string (e.g., 'v18.5.0')"], "time": 45, "details": "Node version."},
-  {"question": "What is process.versions?", "options": ["Dependency versions", "Component versions", "Versions", "Sub-versions"], "correctOptions": ["Object: node, v8, uv, openssl, modules, brotli, nghttp2, etc"], "time": 55, "details": "Component versions."},
-  {"question": "What is process.release.name?", "options": ["Release name", "Type", "Release type", "Name"], "correctOptions": ["Release codename: 'lts' + codename or 'current'"], "time": 50, "details": "Release name."},
-  {"question": "What is process.release.lts?", "options": ["LTS status", "LTS version", "Long term", "Support"], "correctOptions": ["LTS codename if LTS (e.g., 'Hydrogen') or false if current"], "time": 55, "details": "LTS status."},
-  {"question": "What is process.features?", "options": ["Feature flags", "Compiled features", "Options", "Flags"], "correctOptions": ["Object of compile flags: inspector, debug, ipv6, tls, preload, snapshot"], "time": 60, "details": "Build features."},
-  {"question": "What is process.stdin?", "options": ["Standard input", "stdin", "Input stream", "Read"], "correctOptions": ["Read-only stream for stdin"], "time": 45, "details": "Standard input."},
-  {"question": "What is process.stdout?", "options": ["Standard output", "stdout", "Output stream", "Write"], "correctOptions": ["Writable stream for stdout"], "time": 45, "details": "Standard output."},
-  {"question": "What is process.stderr?", "options": ["Standard error", "stderr", "Error stream", "Write"], "correctOptions": ["Writable stream for stderr (separate from stdout)"], "time": 50, "details": "Standard error."},
-  {"question": "What is process.mainModule?", "options": ["Main module", "Entry module", "Script", "Module"], "correctOptions": ["Main module (from require.mainModule): id, filename, loaded"], "time": 55, "details": "Main module reference."},
-  {"question": "What is require.main?", "options": ["Main module", "Entry", "Module", "Main"], "correctOptions": ["Reference to main module (mainModule.id === require.main.id or 'main' in ESM)"], "time": 55, "details": "Main module."},
-  {"question": "What is process.emitWarning()?", "options": ["Emit warning", "Warning event", "Warning", "Trigger"], "correctOptions": ["Emits warning event: emitWarning(msg, type, code) or emitWarning(warningObj)"], "time": 60, "details": "Emit warning."},
-  {"question": "What is --trace-warnings?", "options": ["Trace warnings", "Warning stack", "Debug", "Stack trace"], "correctOptions": ["Node flag to show warning stack traces (node --trace-warnings)"], "time": 55, "details": "Trace warnings."},
-  {"question": "What is --warning-all?", "options": ["All warnings", "Warning count", "Show all", "Flag"], "correctOptions": ["Show all warnings (Node shows some no-alarm warnings only in debug)"], "time": 60, "details": "Show all warnings."},
-  {"question": "What is NODE_PENDING_DEPRECATION?", "options": ["Pending deprecation", "Warning", "Deprecation", "Future removal"], "correctOptions": ["Show pending deprecation warnings (for soon-to-be-removed features)"], "time": 60, "details": "Pending deprecation."},
-  {"question": "What is NODE_NO_WARNINGS?", "options": ["Suppress warnings", "No warnings", "Silent", "Flag"], "correctOptions": ["Suppress warnings (set to '1' to suppress deprecation too)"], "time": 60, "details": "Suppress warnings."},
-  {"question": "What is MaxListenersWarnThreshold?", "options": ["Listener warning", "Max", "Threshold", "Count"], "correctOptions": ["Warn when listeners > default (10): set via process.env.MAX_LISTENERS_WARNING_THRESHOLD"], "time": 70, "details": "Listener warning threshold."},
-  {"question": "What is process.nextTick()?", "options": ["Next tick", "Async", "Schedule", "Immediate"], "correctOptions": ["Schedules callback after current operation: nextTick(cb) - always before I/O"], "time": 50, "details": "nextTick runs soon."},
-  {"question": "What is setImmediate()?", "options": ["Immediate", "Next loop", "Async", "Callbacks"], "correctOptions": ["Schedules callback in check phase (next event loop): setImmediate(cb)"], "time": 50, "details": "setImmediate runs soon."},
-  {"question": "What is setTimeout() vs setImmediate()?", "options": ["Timer vs immediate", "Two async", "Different phases", "Compare"], "correctOptions": ["setTimeout: timer phase, setImmediate: check phase - immediate runs after I/O callbacks"], "time": 60, "details": "Different phases."},
-  {"question": "What is setInterval()?", "options": ["Interval", "Repeated timer", "Repeat", "Loop"], "correctOptions": ["Runs callback every ms: setInterval(cb, ms) - use returned interval to clear"], "time": 45, "details": "setInterval repeats."},
-  {"question": "What is clearInterval()?", "options": ["Clear timer", "Stop interval", "Cancel", "Timer"], "correctOptions": ["Stops interval: clearInterval(id) - from returned interval or setTimeout ref"], "time": 50, "details": "clearInterval stops."},
-  {"question": "What is setUnmmediateRef?","options": ["Keep timer ref", "Timer ref", "Not cleared", "Flag"], "correctOptions": ["Timer reference that is not cleared: setUnmmediateRef - setImmediate keeps timer"], "time": 60, "details": "Timer has ref."},
-  {"question": "What is unref() on timer?", "options": ["Allow exit", "Remove ref", "Keep alive", "Stop keep"], "correctOptions": ["Allows event loop to exit even if timer active (doesn't keep process running)"], "time": 60, "details": "unref lets exit."},
-  {"question": "What is ref() on timer?", "options": ["Prevent exit", "Keep ref", "Keep alive", "Restart"], "correctOptions": ["Reverses unref: keeps event loop (default for setTimeout)"], "time": 60, "details": "ref blocks exit."},
-  {"question": "What is Buffer.alloc?", "options": ["Create buffer", "Allocate", "Fill buffer", "Make buffer"], "correctOptions": ["Creates buffer: 3 methods"], "time": 45, "details": "Buffer.alloc methods."},
-  {"question": "What is Buffer.allocUnsafe?", "options": ["Fast buffer", "Uninitialized", "Fast", "Buffer"], "correctOptions": ["Creates buffer: faster, but may contain old data (must fill or use slow)"], "time": 50, "details": "allocUnsafe faster."},
-  {"question": "What is Buffer.from?", "options": ["Convert", "Create", "Create from", "From"], "correctOptions": ["Creates from string/buffer/array: Buffer.from('test')"], "time": 45, "details": "Buffer.from methods."},
-  {"question": "What is Buffer.concat?", "options": ["Join", "Combine", "Join", "Join"], "correctOptions": ["Join buffers: Buffer.concat([buf1, buf2], totalLength?)"], "time": 50, "details": "Buffer.concat joins."},
-  {"question": "What is Buffer.isBuffer?", "options": ["Check", "Is buffer", "Verify", "Test"], "correctOptions": ["True if buffer: Buffer.isBuffer(obj)"], "time": 45, "details": "Is buffer check."},
-  {"question": "What is Buffer.isEncoding?", "options": ["Check encoding", "Has encoding", "Valid", "Test"], "correctOptions": ["True if encoding supported: 'utf8', 'hex', 'base64', 'utf16le', 'ascii', etc."], "time": 50, "details": "Encoding check."},
-  {"question": "What is buf.write(string, offset)?", "options": ["Append", "Add to", "Extend", "Write"], "correctOptions": ["Write string to buffer: offset defaults to 0, returns bytes written"], "time": 55, "details": "buf.write appends."},
-  {"question": "What is buf.toString(encoding)?", "options": ["Convert to string", "Decode", "Stringify", "Convert"], "correctOptions": ["Decodes buffer to string (encoding defaults 'utf8')"], "time": 50, "details": "toString converts."},
-  {"question": "What is buf.fill(value, offset)?", "options": ["Fill", "Set", "Initialize", "Reset"], "correctOptions": ["Fills entire buffer: fill(value) - returns buffer (chainable)"], "time": 50, "details": "buf.fill sets all."},
-  {"question": "What is buf.equals(other)?", "options": ["Check equal", "Compare", "Match", "Boolean"], "correctOptions": ["True if equal: same bytes"], "time": 50, "details": "equals compares."},
-  {"question": "What is buf.compare(other)?", "options": ["Compare", "Sort order", "Compare", "Return"], "correctOptions": ["Returns sort order: -1, 0, 1"], "time": 55, "details": "compare sorts."},
-  {"question": "What is buf.copy(target, targetStart)?", "options": ["Copy", "Clone", "Copy to", "Transfer"], "correctOptions": ["Copy to target buffer: copy(target, srcStart?, srcEnd?, tgtStart?)"], "time": 55, "details": "copy clones."},
-  {"question": "What is buf.slice(start, end)?", "options": ["Slice", " subrange", "Sub", "Range"], "correctOptions": ["Returns new view (same memory): slice(start, end)"], "time": 50, "details": "slice gives view."},
-  {"question": "What is buf.subarray(start, end)?", "options": ["Sub buffer", "Sub view", "Sub range", "Same"], "correctOptions": ["Same as slice (aliased in newer versions: just slice)"], "time": 55, "details": "subarray same as slice."},
-  {"question": "What is buf.indexOf(value, byteOffset)?", "options": ["Find", "Search", "Find value", "Position"], "correctOptions": ["Index of value (or -1): indexOf(string, byteOffset, encoding?)"], "time": 55, "details": "indexOf finds."},
-  {"question": "What is buf.includes(value, byteOffset)?", "options": ["Contains", "Has", "Check", "Boolean"], "correctOptions": ["True if contains value: includes(value, byteOffset)"], "time": 50, "details": "includes checks."},
-  {"question": "What is buf.lastIndexOf(value, byteOffset)?", "options": ["Find from end", "Search end", "Last", "Position"], "correctOptions": ["Index of last occurrence: lastIndexOf(value, byteOffset)"], "time": 55, "details": "lastIndexOf from end."},
-  {"question": "What is buf.entries()?", "options": ["Iterate", "Key-value", "Pairs", "Loop"], "correctOptions": ["Returns iterator: [index, byte] for each byte"], "time": 50, "details": "entries is iterator."},
-  {"question": "What is buf.keys()?", "options": ["Iterate indices", "Indices", "Loop", "Index"], "correctOptions": ["Returns iterator: index for each byte"], "time": 50, "details": "keys is iterator."},
-  {"question": "What is buf.values()?", "options": ["Iterate bytes", "Byte values", "Loop", "Values"], "correctOptions": ["Returns iterator: byte for each index"], "time": 50, "details": "values is iterator."},
-  {"question": "What is buf.length property?", "options": ["Byte length", "Size", "Length", "Count"], "correctOptions": ["Number of bytes (not string length): byteLength"], "time": 45, "details": "byte length."},
-  {"question": "What is buf.byteLength?", "options": ["String length in bytes", "Byte count", "Encoding length", "Size"], "correctOptions": ["Byte length of string: Buffer.byteLength(string, encoding?)"], "time": 55, "details": "Byte length method."},
-  {"question": "What is buf.compare() vs buf.equals()?", "options": ["Sort vs equality", "Two methods", "Difference", "Compare types"], "correctOptions": ["compare returns sort order (-1/0/1), equals returns boolean"], "time": 60, "details": "Different return values."},
-  {"question": "What is Buffer.constant?", "options": ["Fastest alloc", "Constant pool", "No init", "Fast"], "correctOptions": ["Fastest (for constants): Buffer.alloc(0) uses constant pool"], "time": 65, "details": "Fastest for constants."}
+  {
+    "question": "What is REPL?",
+    "options": [
+      "Interactive console",
+      "Read-eval-print loop",
+      "Shell",
+      "Node shell"
+    ],
+    "correctOptions": [
+      "Interactive console"
+    ],
+    "time": 40,
+    "details": "REPL is interactive console."
+  },
+  {
+    "question": "What are .save loads files into the session.",
+    "options": [
+      "Load session",
+      "Load code",
+      "Import",
+      "Exec"
+    ],
+    "correctOptions": [
+      "Load session"
+    ],
+    "time": 60,
+    "details": "Loads file contents into session."
+  },
+  {
+    "question": "What is .clear command?",
+    "options": [
+      "Clear context",
+      "Clear",
+      "Reset",
+      "Context"
+    ],
+    "correctOptions": [
+      "Clear"
+    ],
+    "time": 55,
+    "details": "Clears current context."
+  },
+  {
+    "question": "What is .exit command?",
+    "options": [
+      "Exit REPL",
+      "Quit",
+      "Stop",
+      "Leave"
+    ],
+    "correctOptions": [
+      "Exit REPL"
+    ],
+    "time": 50,
+    "details": ".exit ends REPL session."
+  },
+  {
+    "question": "What is .break command?",
+    "options": [
+      "Exit multi-line",
+      "Break",
+      "Cancel",
+      "Abort"
+    ],
+    "correctOptions": [
+      "Exit multi-line"
+    ],
+    "time": 55,
+    "details": "Breaks multi-line input."
+  },
+  {
+    "question": "What is REPL built-in commands?",
+    "options": [
+      "Special REPL",
+      "Commands",
+      "Directives",
+      "Commands"
+    ],
+    "correctOptions": [
+      "Special REPL"
+    ],
+    "time": 60,
+    "details": "REPL has built-in commands."
+  },
+  {
+    "question": "What is eval in REPL?",
+    "options": [
+      "Evaluate code",
+      "Run",
+      "Eval",
+      "Result"
+    ],
+    "correctOptions": [
+      "Evaluate code"
+    ],
+    "time": 50,
+    "details": "Evaluates JavaScript code."
+  },
+  {
+    "question": "What is Async REPL?",
+    "options": [
+      "Async evaluation",
+      "Await support",
+      "Async",
+      "Support"
+    ],
+    "correctOptions": [
+      "Async evaluation"
+    ],
+    "time": 60,
+    "details": "REPL supports async via top-level await."
+  },
+  {
+    "question": "What is REPL server?",
+    "options": [
+      "Network REPL",
+      "Remote",
+      "Server",
+      "Listen"
+    ],
+    "correctOptions": [
+      "Network REPL"
+    ],
+    "time": 55,
+    "details": "REPL can run as server."
+  },
+  {
+    "question": "What is repl.start()?",
+    "options": [
+      "Start REPL",
+      "Server",
+      "Initialize",
+      "Start"
+    ],
+    "correctOptions": [
+      "Start REPL"
+    ],
+    "time": 60,
+    "details": "Creates and starts REPL."
+  },
+  {
+    "question": "What is REPL options?",
+    "options": [
+      "Configuration",
+      "Setup",
+      "Options",
+      "Config"
+    ],
+    "correctOptions": [
+      "Configuration"
+    ],
+    "time": 60,
+    "details": "Options configure REPL."
+  },
+  {
+    "question": "What is input stream in REPL?",
+    "options": [
+      "Input data",
+      "stdin",
+      "Input",
+      "Read"
+    ],
+    "correctOptions": [
+      "Input"
+    ],
+    "time": 55,
+    "details": "Input is default from stdin."
+  },
+  {
+    "question": "What is output stream in REPL?",
+    "options": [
+      "Output data",
+      "stdout",
+      "Output",
+      "Write"
+    ],
+    "correctOptions": [
+      "Output"
+    ],
+    "time": 55,
+    "details": "Output is default to stdout."
+  },
+  {
+    "question": "What is context object?:",
+    "options": [
+      "Global names",
+      "Context",
+      "Variables",
+      "Scope"
+    ],
+    "correctOptions": [
+      "Global names"
+    ],
+    "time": 65,
+    "details": "Context adds globals to names."
+  },
+  {
+    "question": "What is REPLEventEmitter?",
+    "options": [
+      "Events",
+      "Output events",
+      "Events",
+      "Emitter"
+    ],
+    "correctOptions": [
+      "Events"
+    ],
+    "time": 65,
+    "details": "Emits events during execution."
+  },
+  {
+    "question": "What is --eval flag?",
+    "options": [
+      "Execute code",
+      "Run code",
+      "Eval",
+      "Script"
+    ],
+    "correctOptions": [
+      "Eval"
+    ],
+    "time": 40,
+    "details": "Runs code from command-line."
+  },
+  {
+    "question": "What is --print flag?",
+    "options": [
+      "Print result",
+      "Auto print",
+      "Output",
+      "Script"
+    ],
+    "correctOptions": [
+      "Print result"
+    ],
+    "time": 45,
+    "details": "Prints expression after running."
+  },
+  {
+    "question": "What is -e flag?",
+    "options": [
+      "Execute code",
+      "Eval",
+      "Run script",
+      "Scripting"
+    ],
+    "correctOptions": [
+      "Execute code"
+    ],
+    "time": 40,
+    "details": "Execute given code."
+  },
+  {
+    "question": "What is -p flag?",
+    "options": [
+      "Execute and print",
+      "Run and output",
+      "Auto print",
+      "Scripting"
+    ],
+    "correctOptions": [
+      "Execute and print"
+    ],
+    "time": 45,
+    "details": "Executes and prints result."
+  },
+  {
+    "question": "What is -r flag?",
+    "options": [
+      "Require module",
+      "Load early",
+      "Import",
+      "Preload"
+    ],
+    "correctOptions": [
+      "Require module"
+    ],
+    "time": 45,
+    "details": "Preloads module before script."
+  },
+  {
+    "question": "What is -c flag?",
+    "options": [
+      "Check syntax",
+      "Compile only",
+      "Validate",
+      "Parse"
+    ],
+    "correctOptions": [
+      "Check syntax"
+    ],
+    "time": 45,
+    "details": "Checks syntax without executing."
+  },
+  {
+    "question": "What is --check or -c?",
+    "options": [
+      "Syntax check only",
+      "Parse",
+      "Compile",
+      "Linting"
+    ],
+    "correctOptions": [
+      "Parse"
+    ],
+    "time": 55,
+    "details": "Checks syntax without execution."
+  },
+  {
+    "question": "What is --require or -r?:",
+    "options": [
+      "Preload require",
+      "Auto-require",
+      "Module early",
+      "Load"
+    ],
+    "correctOptions": [
+      "Preload require"
+    ],
+    "time": 50,
+    "details": "Preloads module before running."
+  },
+  {
+    "question": "What is process.argv?",
+    "options": [
+      "CLI arguments",
+      "Arguments",
+      "Args array",
+      "Command"
+    ],
+    "correctOptions": [
+      "CLI arguments"
+    ],
+    "time": 40,
+    "details": "process.argv has CLI args."
+  },
+  {
+    "question": "What is process.execPath?",
+    "options": [
+      "Node executable",
+      "Node path",
+      "Binary",
+      "Exec path"
+    ],
+    "correctOptions": [
+      "Node executable"
+    ],
+    "time": 40,
+    "details": "Path to the Node binary."
+  },
+  {
+    "question": "What is process.execArgv?:",
+    "options": [
+      "VM flags",
+      "Flags applied",
+      "Options",
+      "Node options"
+    ],
+    "correctOptions": [
+      "VM flags"
+    ],
+    "time": 50,
+    "details": "Node VM-specific flags."
+  },
+  {
+    "question": "What is process.env?",
+    "options": [
+      "Environment vars",
+      "Env object",
+      "Variables",
+      "Config"
+    ],
+    "correctOptions": [
+      "Environment vars"
+    ],
+    "time": 40,
+    "details": "Environment variables."
+  },
+  {
+    "question": "What is NODE_ENV?",
+    "options": [
+      "Runtime mode",
+      "Env setting",
+      "Mode",
+      "Deployment"
+    ],
+    "correctOptions": [
+      "Runtime mode"
+    ],
+    "time": 45,
+    "details": "Common: production/development/test."
+  },
+  {
+    "question": "What is NODE_OPTIONS?",
+    "options": [
+      "Node options",
+      "Flags",
+      "Options",
+      "Global"
+    ],
+    "correctOptions": [
+      "Node options"
+    ],
+    "time": 50,
+    "details": "NODE_OPTIONS sets global Node flags."
+  },
+  {
+    "question": "What is NODE_TLS_REJECT_UNAUTHORIZED?",
+    "options": [
+      "TLS skip verify",
+      "Environment variable",
+      "TLS option",
+      "Skip"
+    ],
+    "correctOptions": [
+      "TLS skip verify"
+    ],
+    "time": 60,
+    "details": "Skip TLS verification when truthy (insecure!)."
+  },
+  {
+    "question": "What is NO_COLOR?",
+    "options": [
+      "Disable colors",
+      "Color setting",
+      "Colors",
+      "TTY"
+    ],
+    "correctOptions": [
+      "TTY"
+    ],
+    "time": 55,
+    "details": "Disables color output."
+  },
+  {
+    "question": "What is HTTP_PROXY / HTTPS_PROXY?",
+    "options": [
+      "Proxy settings",
+      "Environment",
+      "Proxy",
+      "HTTP"
+    ],
+    "correctOptions": [
+      "Proxy"
+    ],
+    "time": 60,
+    "details": "Proxy server configuration."
+  },
+  {
+    "question": "What is process.platform?",
+    "options": [
+      "OS platform",
+      "Platform",
+      "OS type",
+      "System"
+    ],
+    "correctOptions": [
+      "OS platform"
+    ],
+    "time": 40,
+    "details": "Platform (e.g., 'darwin', 'linux', 'win32')."
+  },
+  {
+    "question": "What is process.arch?",
+    "options": [
+      "CPU arch",
+      "Architecture",
+      "Processor",
+      "ISA"
+    ],
+    "correctOptions": [
+      "CPU arch"
+    ],
+    "time": 45,
+    "details": "CPU architecture: 'arm', 'x64', etc."
+  },
+  {
+    "question": "What is process.release?",
+    "options": [
+      "Version info",
+      "Release metadata",
+      "Release",
+      "Info"
+    ],
+    "correctOptions": [
+      "Release metadata"
+    ],
+    "time": 50,
+    "details": "Release details: name, sourceUrl, headersUrl."
+  },
+  {
+    "question": "What is process.versions?",
+    "options": [
+      "Version info",
+      "Dependency versions",
+      "Versions",
+      "Info"
+    ],
+    "correctOptions": [
+      "Dependency versions"
+    ],
+    "time": 50,
+    "details": "node, v8, uv, openssl."
+  },
+  {
+    "question": "What is process.config?",
+    "options": [
+      "Build config",
+      "Node config",
+      "Configuration",
+      "Build"
+    ],
+    "correctOptions": [
+      "Build config"
+    ],
+    "time": 55,
+    "details": "Configure options used to build Node."
+  },
+  {
+    "question": "What is process.pid?",
+    "options": [
+      "Process ID",
+      "PID",
+      "Identifier",
+      "ID"
+    ],
+    "correctOptions": [
+      "Process ID"
+    ],
+    "time": 40,
+    "details": "The current process ID."
+  },
+  {
+    "question": "What is process.ppid?",
+    "options": [
+      "Parent PID",
+      "Parent process",
+      "PPID",
+      "Parent"
+    ],
+    "correctOptions": [
+      "Parent process"
+    ],
+    "time": 45,
+    "details": "The parent process ID."
+  },
+  {
+    "question": "What is process.cwd()?",
+    "options": [
+      "Current directory",
+      "Working dir",
+      "CWD",
+      "Dir"
+    ],
+    "correctOptions": [
+      "Current directory"
+    ],
+    "time": 40,
+    "details": "Current directory."
+  },
+  {
+    "question": "What is process.chdir()?",
+    "options": [
+      "Change directory",
+      "Chdir",
+      "cd",
+      "Dir"
+    ],
+    "correctOptions": [
+      "Change directory"
+    ],
+    "time": 45,
+    "details": "Changes current directory."
+  },
+  {
+    "question": "What is process.uptime()?",
+    "options": [
+      "Node uptime",
+      "Runtime duration",
+      "Uptime",
+      "Time"
+    ],
+    "correctOptions": [
+      "Node uptime"
+    ],
+    "time": 50,
+    "details": "Returns process uptime."
+  },
+  {
+    "question": "What is process.hrtime()?",
+    "options": [
+      "High-res timer",
+      "Time",
+      "HRT",
+      "Timer"
+    ],
+    "correctOptions": [
+      "High-res timer"
+    ],
+    "time": 55,
+    "details": "High-resolution time."
+  },
+  {
+    "question": "What is process.uptime() vs process.hrtime()?",
+    "options": [
+      "Process vs high-res time",
+      "Duration vs instant",
+      "Different",
+      "Comparison"
+    ],
+    "correctOptions": [
+      "Process vs high-res time"
+    ],
+    "time": 60,
+    "details": "One is cumulative, one is point in time."
+  },
+  {
+    "question": "What is os module?",
+    "options": [
+      "System interaction",
+      "OS functionality",
+      "System utilities",
+      "APIs"
+    ],
+    "correctOptions": [
+      "System interaction"
+    ],
+    "time": 40,
+    "details": "os module has OS utilities."
+  },
+  {
+    "question": "What is os.type()?",
+    "options": [
+      "OS name",
+      "Kernel",
+      "System",
+      "Type"
+    ],
+    "correctOptions": [
+      "OS name"
+    ],
+    "time": 45,
+    "details": "Returns OS name ('Linux', 'Darwin')."
+  },
+  {
+    "question": "What is os.platform()?",
+    "options": [
+      "Node platform",
+      "nodePlatform",
+      "Platform",
+      "Compile target"
+    ],
+    "correctOptions": [
+      "Node platform"
+    ],
+    "time": 55,
+    "details": "The platform Node was compiled for."
+  },
+  {
+    "question": "What is os.release()?:",
+    "options": [
+      "OS version",
+      "Release",
+      "OS",
+      "Version"
+    ],
+    "correctOptions": [
+      "OS"
+    ],
+    "time": 50,
+    "details": "Returns OS release."
+  },
+  {
+    "question": "What is os.totalmem()?:",
+    "options": [
+      "Total memory",
+      "RAM",
+      "System memory",
+      "Memory"
+    ],
+    "correctOptions": [
+      "Total memory"
+    ],
+    "time": 50,
+    "details": "Total system memory."
+  },
+  {
+    "question": "What is os.freemem()?:",
+    "options": [
+      "Free memory",
+      "Available RAM",
+      "Free",
+      "Memory"
+    ],
+    "correctOptions": [
+      "Free memory"
+    ],
+    "time": 50,
+    "details": "Free system memory."
+  },
+  {
+    "question": "What is os.hostname()?:",
+    "options": [
+      "Machine name",
+      "Hostname",
+      "Host name",
+      "Node name"
+    ],
+    "correctOptions": [
+      "Host name"
+    ],
+    "time": 50,
+    "details": "Returns machine hostname."
+  },
+  {
+    "question": "What is os.loadavg()?:",
+    "options": [
+      "Load average",
+      "1/5/15 min",
+      "Load",
+      "Averages"
+    ],
+    "correctOptions": [
+      "1/5/15 min"
+    ],
+    "time": 60,
+    "details": "Load avg for 1, 5, 15 minutes."
+  },
+  {
+    "question": "What is os.uptime()?:",
+    "options": [
+      "OS uptime",
+      "System uptime",
+      "Uptime",
+      "Time"
+    ],
+    "correctOptions": [
+      "OS uptime"
+    ],
+    "time": 55,
+    "details": "OS uptime."
+  },
+  {
+    "question": "What is os.cpus()?:",
+    "options": [
+      "CPU info",
+      "Cpu list",
+      "Processors",
+      "Cores"
+    ],
+    "correctOptions": [
+      "CPU info"
+    ],
+    "time": 60,
+    "details": "CPU information."
+  },
+  {
+    "question": "What is os.networkInterfaces()?:",
+    "options": [
+      "Network interfaces",
+      "Network info",
+      "NICs",
+      "Interfaces"
+    ],
+    "correctOptions": [
+      "Network interfaces"
+    ],
+    "time": 60,
+    "details": "Network interfaces."
+  },
+  {
+    "question": "What is os.EOL?",
+    "options": [
+      "Line ending",
+      "Line separator",
+      "End of line",
+      "Platform line"
+    ],
+    "correctOptions": [
+      "Line ending"
+    ],
+    "time": 45,
+    "details": "End of line."
+  },
+  {
+    "question": "What is os.endianness()?",
+    "options": [
+      "Byte order",
+      "Endianness",
+      "CPU type",
+      "Byte preference"
+    ],
+    "correctOptions": [
+      "Byte order"
+    ],
+    "time": 55,
+    "details": "Byte order."
+  },
+  {
+    "question": "What is process.memoryUsage()?",
+    "options": [
+      "Memory stats",
+      "RSS, heap",
+      "Usage",
+      "Info"
+    ],
+    "correctOptions": [
+      "Memory stats"
+    ],
+    "time": 55,
+    "details": "Memory usage."
+  },
+  {
+    "question": "What is process.cpuUsage()?",
+    "options": [
+      "CPU info",
+      "Stats",
+      "Usage",
+      "Time"
+    ],
+    "correctOptions": [
+      "CPU info"
+    ],
+    "time": 55,
+    "details": "CPU usage."
+  },
+  {
+    "question": "What is process.resourceUsage()?",
+    "options": [
+      "System resources",
+      "Stats",
+      "Usage",
+      "Metrics"
+    ],
+    "correctOptions": [
+      "System resources"
+    ],
+    "time": 60,
+    "details": "Resource usage."
+  },
+  {
+    "question": "What is process.kill()?",
+    "options": [
+      "Signal process",
+      "Terminate",
+      "Kill",
+      "Signal"
+    ],
+    "correctOptions": [
+      "Signal process"
+    ],
+    "time": 55,
+    "details": "Sends signal."
+  },
+  {
+    "question": "What is process.exit()?",
+    "options": [
+      "Exit node",
+      "End process",
+      "Quit",
+      "Exit"
+    ],
+    "correctOptions": [
+      "Exit node"
+    ],
+    "time": 50,
+    "details": "Exits process."
+  },
+  {
+    "question": "What is process.exitCode?",
+    "options": [
+      "Exit code",
+      "Return code",
+      "Code",
+      "Exit"
+    ],
+    "correctOptions": [
+      "Code"
+    ],
+    "time": 55,
+    "details": "Exit code property."
+  },
+  {
+    "question": "What is process.version?",
+    "options": [
+      "Node version",
+      "Node.js version",
+      "Engine version",
+      "Version"
+    ],
+    "correctOptions": [
+      "Node.js version"
+    ],
+    "time": 45,
+    "details": "Node version."
+  },
+  {
+    "question": "What is process.release.name?",
+    "options": [
+      "Release name",
+      "Type",
+      "Release type",
+      "Name"
+    ],
+    "correctOptions": [
+      "Release name"
+    ],
+    "time": 50,
+    "details": "Release name."
+  },
+  {
+    "question": "What is process.release.lts?",
+    "options": [
+      "LTS status",
+      "LTS version",
+      "Long term",
+      "Support"
+    ],
+    "correctOptions": [
+      "LTS status"
+    ],
+    "time": 55,
+    "details": "LTS status."
+  },
+  {
+    "question": "What is process.features?",
+    "options": [
+      "Feature flags",
+      "Compiled features",
+      "Options",
+      "Flags"
+    ],
+    "correctOptions": [
+      "Feature flags"
+    ],
+    "time": 60,
+    "details": "Build features."
+  },
+  {
+    "question": "What is process.stdin?",
+    "options": [
+      "Standard input",
+      "stdin",
+      "Input stream",
+      "Read"
+    ],
+    "correctOptions": [
+      "stdin"
+    ],
+    "time": 45,
+    "details": "Standard input."
+  },
+  {
+    "question": "What is process.stdout?",
+    "options": [
+      "Standard output",
+      "stdout",
+      "Output stream",
+      "Write"
+    ],
+    "correctOptions": [
+      "stdout"
+    ],
+    "time": 45,
+    "details": "Standard output."
+  },
+  {
+    "question": "What is process.stderr?",
+    "options": [
+      "Standard error",
+      "stderr",
+      "Error stream",
+      "Write"
+    ],
+    "correctOptions": [
+      "stderr"
+    ],
+    "time": 50,
+    "details": "Standard error."
+  },
+  {
+    "question": "What is process.mainModule?",
+    "options": [
+      "Main module",
+      "Entry module",
+      "Script",
+      "Module"
+    ],
+    "correctOptions": [
+      "Main module"
+    ],
+    "time": 55,
+    "details": "Main module reference."
+  },
+  {
+    "question": "What is require.main?",
+    "options": [
+      "Main module",
+      "Entry",
+      "Module",
+      "Main"
+    ],
+    "correctOptions": [
+      "Module"
+    ],
+    "time": 55,
+    "details": "Main module."
+  },
+  {
+    "question": "What is process.emitWarning()?",
+    "options": [
+      "Emit warning",
+      "Warning event",
+      "Warning",
+      "Trigger"
+    ],
+    "correctOptions": [
+      "Warning"
+    ],
+    "time": 60,
+    "details": "Emit warning."
+  },
+  {
+    "question": "What is --trace-warnings?",
+    "options": [
+      "Trace warnings",
+      "Warning stack",
+      "Debug",
+      "Stack trace"
+    ],
+    "correctOptions": [
+      "Trace warnings"
+    ],
+    "time": 55,
+    "details": "Trace warnings."
+  },
+  {
+    "question": "What is --warning-all?",
+    "options": [
+      "All warnings",
+      "Warning count",
+      "Show all",
+      "Flag"
+    ],
+    "correctOptions": [
+      "Show all"
+    ],
+    "time": 60,
+    "details": "Show all warnings."
+  },
+  {
+    "question": "What is NODE_PENDING_DEPRECATION?",
+    "options": [
+      "Pending deprecation",
+      "Warning",
+      "Deprecation",
+      "Future removal"
+    ],
+    "correctOptions": [
+      "Pending deprecation"
+    ],
+    "time": 60,
+    "details": "Pending deprecation."
+  },
+  {
+    "question": "What is NODE_NO_WARNINGS?",
+    "options": [
+      "Suppress warnings",
+      "No warnings",
+      "Silent",
+      "Flag"
+    ],
+    "correctOptions": [
+      "Suppress warnings"
+    ],
+    "time": 60,
+    "details": "Suppress warnings."
+  },
+  {
+    "question": "What is MaxListenersWarnThreshold?",
+    "options": [
+      "Listener warning",
+      "Max",
+      "Threshold",
+      "Count"
+    ],
+    "correctOptions": [
+      "Listener warning"
+    ],
+    "time": 70,
+    "details": "Listener warning threshold."
+  },
+  {
+    "question": "What is process.nextTick()?",
+    "options": [
+      "Next tick",
+      "Async",
+      "Schedule",
+      "Immediate"
+    ],
+    "correctOptions": [
+      "Schedule"
+    ],
+    "time": 50,
+    "details": "nextTick runs soon."
+  },
+  {
+    "question": "What is setImmediate()?",
+    "options": [
+      "Immediate",
+      "Next loop",
+      "Async",
+      "Callbacks"
+    ],
+    "correctOptions": [
+      "Immediate"
+    ],
+    "time": 50,
+    "details": "setImmediate runs soon."
+  },
+  {
+    "question": "What is setTimeout() vs setImmediate()?",
+    "options": [
+      "Timer vs immediate",
+      "Two async",
+      "Different phases",
+      "Compare"
+    ],
+    "correctOptions": [
+      "Timer vs immediate"
+    ],
+    "time": 60,
+    "details": "Different phases."
+  },
+  {
+    "question": "What is setInterval()?",
+    "options": [
+      "Interval",
+      "Repeated timer",
+      "Repeat",
+      "Loop"
+    ],
+    "correctOptions": [
+      "Interval"
+    ],
+    "time": 45,
+    "details": "setInterval repeats."
+  },
+  {
+    "question": "What is clearInterval()?",
+    "options": [
+      "Clear timer",
+      "Stop interval",
+      "Cancel",
+      "Timer"
+    ],
+    "correctOptions": [
+      "Clear timer"
+    ],
+    "time": 50,
+    "details": "clearInterval stops."
+  },
+  {
+    "question": "What is setUnmmediateRef?",
+    "options": [
+      "Keep timer ref",
+      "Timer ref",
+      "Not cleared",
+      "Flag"
+    ],
+    "correctOptions": [
+      "Timer ref"
+    ],
+    "time": 60,
+    "details": "Timer has ref."
+  },
+  {
+    "question": "What is unref() on timer?",
+    "options": [
+      "Allow exit",
+      "Remove ref",
+      "Keep alive",
+      "Stop keep"
+    ],
+    "correctOptions": [
+      "Allow exit"
+    ],
+    "time": 60,
+    "details": "unref lets exit."
+  },
+  {
+    "question": "What is ref() on timer?",
+    "options": [
+      "Prevent exit",
+      "Keep ref",
+      "Keep alive",
+      "Restart"
+    ],
+    "correctOptions": [
+      "Prevent exit"
+    ],
+    "time": 60,
+    "details": "ref blocks exit."
+  },
+  {
+    "question": "What is Buffer.alloc?",
+    "options": [
+      "Create buffer",
+      "Allocate",
+      "Fill buffer",
+      "Make buffer"
+    ],
+    "correctOptions": [
+      "Create buffer"
+    ],
+    "time": 45,
+    "details": "Buffer.alloc methods."
+  },
+  {
+    "question": "What is Buffer.allocUnsafe?",
+    "options": [
+      "Fast buffer",
+      "Uninitialized",
+      "Fast",
+      "Buffer"
+    ],
+    "correctOptions": [
+      "Fast buffer"
+    ],
+    "time": 50,
+    "details": "allocUnsafe faster."
+  },
+  {
+    "question": "What is Buffer.from?",
+    "options": [
+      "Convert",
+      "Create",
+      "Create from",
+      "From"
+    ],
+    "correctOptions": [
+      "Create"
+    ],
+    "time": 45,
+    "details": "Buffer.from methods."
+  },
+  {
+    "question": "What is Buffer.concat?",
+    "options": [
+      "Join",
+      "Combine",
+      "Join",
+      "Join"
+    ],
+    "correctOptions": [
+      "Join"
+    ],
+    "time": 50,
+    "details": "Buffer.concat joins."
+  },
+  {
+    "question": "What is Buffer.isBuffer?",
+    "options": [
+      "Check",
+      "Is buffer",
+      "Verify",
+      "Test"
+    ],
+    "correctOptions": [
+      "Check"
+    ],
+    "time": 45,
+    "details": "Is buffer check."
+  },
+  {
+    "question": "What is Buffer.isEncoding?",
+    "options": [
+      "Check encoding",
+      "Has encoding",
+      "Valid",
+      "Test"
+    ],
+    "correctOptions": [
+      "Check encoding"
+    ],
+    "time": 50,
+    "details": "Encoding check."
+  },
+  {
+    "question": "What is buf.write(string, offset)?",
+    "options": [
+      "Append",
+      "Add to",
+      "Extend",
+      "Write"
+    ],
+    "correctOptions": [
+      "Write"
+    ],
+    "time": 55,
+    "details": "buf.write appends."
+  },
+  {
+    "question": "What is buf.toString(encoding)?",
+    "options": [
+      "Convert to string",
+      "Decode",
+      "Stringify",
+      "Convert"
+    ],
+    "correctOptions": [
+      "Decode"
+    ],
+    "time": 50,
+    "details": "toString converts."
+  },
+  {
+    "question": "What is buf.fill(value, offset)?",
+    "options": [
+      "Fill",
+      "Set",
+      "Initialize",
+      "Reset"
+    ],
+    "correctOptions": [
+      "Fill"
+    ],
+    "time": 50,
+    "details": "buf.fill sets all."
+  },
+  {
+    "question": "What is buf.equals(other)?",
+    "options": [
+      "Check equal",
+      "Compare",
+      "Match",
+      "Boolean"
+    ],
+    "correctOptions": [
+      "Check equal"
+    ],
+    "time": 50,
+    "details": "equals compares."
+  },
+  {
+    "question": "What is buf.compare(other)?",
+    "options": [
+      "Compare",
+      "Sort order",
+      "Compare",
+      "Return"
+    ],
+    "correctOptions": [
+      "Return"
+    ],
+    "time": 55,
+    "details": "compare sorts."
+  },
+  {
+    "question": "What is buf.copy(target, targetStart)?",
+    "options": [
+      "Copy",
+      "Clone",
+      "Copy to",
+      "Transfer"
+    ],
+    "correctOptions": [
+      "Copy"
+    ],
+    "time": 55,
+    "details": "copy clones."
+  },
+  {
+    "question": "What is buf.slice(start, end)?",
+    "options": [
+      "Slice",
+      " subrange",
+      "Sub",
+      "Range"
+    ],
+    "correctOptions": [
+      "Slice"
+    ],
+    "time": 50,
+    "details": "slice gives view."
+  },
+  {
+    "question": "What is buf.subarray(start, end)?",
+    "options": [
+      "Sub buffer",
+      "Sub view",
+      "Sub range",
+      "Same"
+    ],
+    "correctOptions": [
+      "Same"
+    ],
+    "time": 55,
+    "details": "subarray same as slice."
+  },
+  {
+    "question": "What is buf.indexOf(value, byteOffset)?",
+    "options": [
+      "Find",
+      "Search",
+      "Find value",
+      "Position"
+    ],
+    "correctOptions": [
+      "Find"
+    ],
+    "time": 55,
+    "details": "indexOf finds."
+  },
+  {
+    "question": "What is buf.includes(value, byteOffset)?",
+    "options": [
+      "Contains",
+      "Has",
+      "Check",
+      "Boolean"
+    ],
+    "correctOptions": [
+      "Contains"
+    ],
+    "time": 50,
+    "details": "includes checks."
+  },
+  {
+    "question": "What is buf.lastIndexOf(value, byteOffset)?",
+    "options": [
+      "Find from end",
+      "Search end",
+      "Last",
+      "Position"
+    ],
+    "correctOptions": [
+      "Find from end"
+    ],
+    "time": 55,
+    "details": "lastIndexOf from end."
+  },
+  {
+    "question": "What is buf.entries()?",
+    "options": [
+      "Iterate",
+      "Key-value",
+      "Pairs",
+      "Loop"
+    ],
+    "correctOptions": [
+      "Iterate"
+    ],
+    "time": 50,
+    "details": "entries is iterator."
+  },
+  {
+    "question": "What is buf.keys()?",
+    "options": [
+      "Iterate indices",
+      "Indices",
+      "Loop",
+      "Index"
+    ],
+    "correctOptions": [
+      "Iterate indices"
+    ],
+    "time": 50,
+    "details": "keys is iterator."
+  },
+  {
+    "question": "What is buf.values()?",
+    "options": [
+      "Iterate bytes",
+      "Byte values",
+      "Loop",
+      "Values"
+    ],
+    "correctOptions": [
+      "Iterate bytes"
+    ],
+    "time": 50,
+    "details": "values is iterator."
+  },
+  {
+    "question": "What is buf.length property?",
+    "options": [
+      "Byte length",
+      "Size",
+      "Length",
+      "Count"
+    ],
+    "correctOptions": [
+      "Length"
+    ],
+    "time": 45,
+    "details": "byte length."
+  },
+  {
+    "question": "What is buf.byteLength?",
+    "options": [
+      "String length in bytes",
+      "Byte count",
+      "Encoding length",
+      "Size"
+    ],
+    "correctOptions": [
+      "String length in bytes"
+    ],
+    "time": 55,
+    "details": "Byte length method."
+  },
+  {
+    "question": "What is buf.compare() vs buf.equals()?",
+    "options": [
+      "Sort vs equality",
+      "Two methods",
+      "Difference",
+      "Compare types"
+    ],
+    "correctOptions": [
+      "Sort vs equality"
+    ],
+    "time": 60,
+    "details": "Different return values."
+  },
+  {
+    "question": "What is Buffer.constant?",
+    "options": [
+      "Fastest alloc",
+      "Constant pool",
+      "No init",
+      "Fast"
+    ],
+    "correctOptions": [
+      "Fast"
+    ],
+    "time": 65,
+    "details": "Fastest for constants."
+  },
+  {
+    "question": "What is Express? (Level 6 #112)",
+    "options": [
+      "Framework",
+      "Middleware",
+      "Routing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Framework",
+      "Middleware",
+      "Routing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Express? explanation."
+  },
+  {
+    "question": "What is npm? (Level 6 #113)",
+    "options": [
+      "Package manager",
+      "Registry",
+      "Scripts",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Package manager",
+      "Registry",
+      "Scripts",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is npm? explanation."
+  },
+  {
+    "question": "What is middleware? (Level 6 #114)",
+    "options": [
+      "Request",
+      "Response",
+      "Next",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request",
+      "Response",
+      "Next",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is callback? (Level 6 #115)",
+    "options": [
+      "Asynchronous",
+      "Error-first",
+      "Node.js pattern",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Asynchronous",
+      "Error-first",
+      "Node.js pattern",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is callback? explanation."
+  },
+  {
+    "question": "What is streams? (Level 6 #116)",
+    "options": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is streams? explanation."
+  },
+  {
+    "question": "What is Buffer? (Level 6 #117)",
+    "options": [
+      "Binary data",
+      "Encoding",
+      "Memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Binary data",
+      "Encoding",
+      "Memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Buffer? explanation."
+  },
+  {
+    "question": "What is EventEmitter? (Level 6 #118)",
+    "options": [
+      "Events",
+      "Listeners",
+      "Emitters",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Events",
+      "Listeners",
+      "Emitters",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is EventEmitter? explanation."
+  },
+  {
+    "question": "What is require? (Level 6 #119)",
+    "options": [
+      "Modules",
+      "Caching",
+      "Resolution",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Modules",
+      "Caching",
+      "Resolution",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is require? explanation."
+  },
+  {
+    "question": "What is process? (Level 6 #120)",
+    "options": [
+      "Env",
+      "Argv",
+      "Exit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Env",
+      "Argv",
+      "Exit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is process? explanation."
+  },
+  {
+    "question": "What is module? (Level 6 #121)",
+    "options": [
+      "Export",
+      "Import",
+      "Scope",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Export",
+      "Import",
+      "Scope",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is module? explanation."
+  },
+  {
+    "question": "What is WeakSet?",
+    "options": [
+      "Object values only",
+      "Garbage collection",
+      "Limited methods",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object values only",
+      "Garbage collection",
+      "Limited methods",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is WeakSet? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  }
 ]

@@ -1,98 +1,1898 @@
 [
-  {"question": "What are Angular pipes?", "options": ["Data transformation", "Transform filter", "Format", "Format data"], "correctOptions": ["Data transformation"], "time": 35, "details": "Pipes transform displayed data in templates."},
-  {"question": "What is pipe operator |?", "options": ["Apply pipe", "Transform", "Pipe syntax", "Apply"], "correctOptions": ["Apply pipe"], "time": 30, "details": "| applies pipe to value."},
-  {"question": "What is AsyncPipe?", "options": ["Auto-subscribe", "Observable", "Async", "Subscribe"], "correctOptions": ["Auto-subscribe"], "time": 35, "details": "AsyncPipe auto-subscribes to observables."},
-  {"question": "What is DatePipe?", "options": ["Date format", "Time format", "Date/time", "Format"], "correctOptions": ["Date format"], "time": 30, "details": "DatePipe formats dates."},
-  {"question": "What is CurrencyPipe?", "options": ["Format money", "Currency", "Number", "Currency format"], "correctOptions": ["Format money"], "time": 30, "details": "CurrencyPipe formats currency."},
-  {"question": "What is DecimalPipe?", "options": ["Number format", "Precision", "Decimal", "Number"], "correctOptions": ["Number format"], "time": 30, "details": "DecimalPipe formats numbers."},
-  {"question": "What is PercentPipe?", "options": ["Percentage format", "Percent", "Number", "Percentage"], "correctOptions": ["Percentage format"], "time": 30, "details": "PercentPipe formats percentages."},
-  {"question": "What is UpperCasePipe?", "options": ["Uppercase", "Text", "Transform", "Capitalize"], "correctOptions": ["Uppercase"], "time": 30, "details": "UpperCasePipe converts to uppercase."},
-  {"question": "What is LowerCasePipe?", "options": ["Lowercase", "Text", "Transform", "Case"], "correctOptions": ["Lowercase"], "time": 30, "details": "LowerCasePipe converts to lowercase."},
-  {"question": "What is TitleCasePipe?", "options": ["Title case", "Capitalize words", "Title", "Capitalize"], "correctOptions": ["Title case"], "time": 30, "details": "TitleCasePipe capitalizes each word."},
-  {"question": "What is SlicePipe?", "options": ["Array slice", "Substring", "Limit", "Extract"], "correctOptions": ["Array slice"], "time": 30, "details": "SlicePipe extracts array/string portion."},
-  {"question": "What is JsonPipe?", "options": ["Object to JSON", "Debug", "Object", "String"], "correctOptions": ["Object to JSON"], "time": 30, "details": "JsonPipe converts object to JSON string."},
-  {"question": "What is KeyValuePipe?", "options": ["Object to pairs", "Key-value", "Transform", "Pairs"], "correctOptions": ["Object to pairs"], "time": 35, "details": "KeyValuePipe converts object to key-value pairs."},
-  {"question": "What is I18nSelectPipe?", "options": ["Conditional text", "Gender select", "Select", "Message"], "correctOptions": ["Conditional text"], "time": 35, "details": "I18nSelectPipe shows conditional text."},
-  {"question": "What is I18nPluralPipe?", "options": ["Plural ICU", "Pluralization", "Plural", "Choice"], "correctOptions": ["Plural ICU"], "time": 35, "details": "I18nPluralPipe handles plurals."},
-  {"question": "What is custom pipe?", "options": ["@Pipe decorator", "Pipeable", "Pipe transform", "Pipe class"], "correctOptions": ["@Pipe decorator"], "time": 35, "details": "@Pipe decorator defines custom pipe."},
-  {"question": "What is transform method?", "options": ["Pipe logic", "Transform", "Apply", "Method"], "correctOptions": ["Pipe logic"], "time": 35, "details": "transform method contains pipe logic."},
-  {"question": "What is pure pipe?", "options": ["No internal state", "Pure function", "Stateless", "Fresh"], "correctOptions": ["No internal state"], "time": 40, "details": "Pure pipes have no internal state."},
-  {"question": "What is impure pipe?", "options": ["Impure updating", "Has state", "Mutating", "State"], "correctOptions": ["Has state"], "time": 40, "details": "Impure pipes may have internal state."},
-  {"question": "What is pure flag?", "options": ["Pure toggle", "State flag", "Pure", "Pure: true/false"], "correctOptions": ["State flag"], "time": 40, "details": "pure: false makes impure pipe."},
-  {"question": "What is forms module?", "options": ["Form features", "Reactive forms", "Template forms", "Both"], "correctOptions": ["Both"], "time": 35, "details": "FormsModule enables template-driven forms."},
-  {"question": "What is ReactiveFormsModule?", "options": ["Reactive forms", "FormGroup", "Form model", "Model"], "correctOptions": ["Reactive forms"], "time": 35, "details": "ReactiveFormsModule for reactive forms."},
-  {"question": "What is FormControl?", "options": ["Single input", "Field control", "Control", "Input"], "correctOptions": ["Single input"], "time": 30, "details": "FormControl manages single input."},
-  {"question": "What is FormGroup?", "options": ["Form fields", "Group controls", "Controls", "Group"], "correctOptions": ["Form fields"], "time": 30, "details": "FormGroup groups multiple controls."},
-  {"question": "What is FormArray?", "options": ["Dynamic array", "Array of controls", "List", "Controls"], "correctOptions": ["Dynamic array"], "time": 35, "details": "FormArray manages array of controls."},
-  {"question": "What is FormBuilder?", "options": ["Create forms", "Builder", "Factory", "Create"], "correctOptions": ["Create forms"], "time": 30, "details": "FormBuilder creates form controls."},
-  {"question": "What is Validators.required?", "options": ["Required field", "Required", "Not empty", "Must"], "correctOptions": ["Required field"], "time": 30, "details": "Validators.required ensures value present."},
-  {"question": "What is Validators.minLength?", "options": ["Minimum length", "Min chars", "Min", "Length"], "correctOptions": ["Minimum length"], "time": 30, "details": "Validators.minLength checks minimum."},
-  {"question": "What is Validators.maxLength?", "options": ["Maximum length", "Max chars", "Max", "Length"], "correctOptions": ["Maximum length"], "time": 30, "details": "Validators.maxLength checks maximum."},
-  {"question": "What is Validators.pattern?", "options": ["Regex validation", "Pattern", "Regex", "Match"], "correctOptions": ["Regex validation"], "time": 30, "details": "Validators.pattern validates regex."},
-  {"question": "What is Validators.email?", "options": ["Email format", "Email", "Validate", "Format"], "correctOptions": ["Email format"], "time": 30, "details": "Validators.email validates email."},
-  {"question": "What is setValue?", "options": ["Set all values", "Complete", "Fill all", "Assign"], "correctOptions": ["Set all values"], "time": 30, "details": "setValue sets all form values."},
-  {"question": "What is patchValue?", "options": ["Partial update", "Some values", "Partial", "Update"], "correctOptions": ["Partial update"], "time": 30, "details": "patchValue updates subset of values."},
-  {"question": "What is valueChanges?", "options": ["Value observable", "Changes", "Event", "Stream"], "correctOptions": ["Value observable"], "time": 35, "details": "valueChanges emits on value change."},
-  {"question": "What is statusChanges?", "options": ["Status observable", "Validity", "Event", "Stream"], "correctOptions": ["Status observable"], "time": 35, "details": "statusChanges emits on status change."},
-  {"question": "What is dirty?", "options": ["User modified", "Changed", "Edited", "Touched"], "correctOptions": ["User modified"], "time": 30, "details": "dirty indicates user changed value."},
-  {"question": "What is pristine?", "options": ["Unchanged", "Original", "Untouched", "Clean"], "correctOptions": ["Unchanged"], "time": 30, "details": "pristine indicates no user changes."},
-  {"question": "What is touched?", "options": ["Blurred", "Focused", "Lose focus", "Visited"], "correctOptions": ["Blurred"], "time": 30, "details": "touched indicates field was blurred."},
-  {"question": "What is valid?", "options": ["Passes validation", "Valid", "OK", "Correct"], "correctOptions": ["Passes validation"], "time": 30, "details": "valid indicates valid state."},
-  {"question": "What is invalid?", "options": ["Fails validation", "Invalid", "Error", "Wrong"], "correctOptions": ["Fails validation"], "time": 30, "details": "invalid indicates validation failure."},
-  {"question": "What is pending?", "options": ["Async validating", "Validating", "Working", "Check"], "correctOptions": ["Async validating"], "time": 35, "details": "pending indicates async validation."},
-  {"question": "What is disabled?", "options": ["Disabled", "Readonly", "Inactive", "Off"], "correctOptions": ["Disabled"], "time": 30, "details": "disabled indicates control disabled."},
-  {"question": "What is enabled?", "options": ["Enabled", "Active", "Writable", "On"], "correctOptions": ["Enabled"], "time": 30, "details": "enabled indicates control enabled."},
-  {"question": "What is registerOnChange?", "options": ["Callback", "Update model", "On change", "Notify"], "correctOptions": ["Callback"], "time": 35, "details": "registerOnChange registers change callback."},
-  {"question": "What is registerOnTouched?", "options": ["Blur callback", "On touched", "On blur", "Notify"], "correctOptions": ["Blur callback"], "correctOptions": ["Blur callback"], "time": 35, "details": "registerOnTouched registers touched callback."},
-  {"question": "What is setDisabledState?", "options": ["Enable/disable", "Disable state", "Control", "State"], "correctOptions": ["Enable/disable"], "time": 40, "details": "setDisabledState allows disabling control."},
-  {"question": "What is writeValue?", "options": ["Set value", "Write", "Model", "Assign"], "correctOptions": ["Set value"], "time": 35, "details": "writeValue sets control value."},
-  {"question": "What is ngModel?", "options": ["Two-way binding", "Template", "Model", "Bidirectional"], "correctOptions": ["Two-way binding"], "time": 30, "details": "ngModel provides two-way binding."},
-  {"question": "What is [(ngModel)]?", "options": ["Two-way syntax", "Bind both", "Syntactic sugar", "Two-way"], "correctOptions": ["Two-way syntax"], "time": 35, "details": "[(ngModel)] is two-way binding syntax."},
-  {"question": "What is [(ngModel)]?", "options": ["Syntactic", "Shorthand", "Two-way", "Shortcut"], "correctOptions": ["Syntactic", "Shorthand"], "time": 40, "details": "Combines [ngModel] and (ngModelChange)."},
-  {"question": "What is ngModelChange?", "options": ["Change event", "Emitter", "Event", "Output"], "correctOptions": ["Change event"], "time": 30, "details": "ngModelChange emits on change."},
-  {"question": "What is required validator?", "options": ["Required", "Required attribute", "Must have", "Must"], "correctOptions": ["Required"], "time": 30, "details": "required is shorthand for required validator."},
-  {"question": "What is min validator?", "options": ["Minimum value", "Min attribute", "Value", "Check"], "correctOptions": ["Minimum value"], "time": 30, "details": "min validates minimum value."},
-  {"question": "What is max validator?", "options": ["Maximum value", "Max attribute", "Value", "Check"], "correctOptions": ["Maximum value"], "time": 30, "details": "max validates maximum value."},
-  {"question": "What is minlength validator?", "options": ["Minimum chars", "Minlength attr", "Length", "Check"], "correctOptions": ["Minimum chars"], "time": 30, "details": "minlength validates minimum length."},
-  {"question": "What is maxlength validator?", "options": ["Maximum chars", "Maxlength attr", "Length", "Check"], "correctOptions": ["Maximum chars"], "time": 30, "details": "maxlength validates maximum length."},
-  {"question": "What is pattern validator?", "options": ["Regex", "Pattern attribute", "Validate regex", "Match"], "correctOptions": ["Regex"], "time": 30, "details": "pattern validates regex pattern."},
-  {"question": "What is email validator?", "options": ["Email format", "Email attr", "Validate", "Check"], "correctOptions": ["Email format"], "time": 30, "details": "email validates email format."},
-  {"question": "What is ngForm?", "options": ["Form directive", "Form wrapper", "Form", "Directive"], "correctOptions": ["Form directive"], "time": 30, "details": "ngForm creates form container."},
-  {"question": "What is formGroup?", "options": ["Group directive", "Bind FormGroup", "Directive", "Bind"], "correctOptions": ["Group directive"], "time": 30, "details": "formGroup binds FormGroup to form."},
-  {"question": "What is formControlName?", "options": ["Bind control", "Name control", "Directive", "Name"], "correctOptions": ["Bind control"], "time": 30, "details": "formControlName binds FormControl."},
-  {"question": "What is formArrayName?", "options": ["Bind array", "Name array", "Directive", "Name"], "correctOptions": ["Bind array"], "time": 30, "details": "formArrayName binds FormArray."},
-  {"question": "What is HTTP service?", "options": ["HttpClient", "HTTP", "Client", "Request"], "correctOptions": ["HttpClient"], "time": 30, "details": "HttpClient makes HTTP requests."},
-  {"question": "What is HttpClient?", "options": ["HTTP service", "Request client", "Client", "API"], "correctOptions": ["HTTP service"], "time": 30, "details": "HttpClient is Angular HTTP client."},
-  {"question": "What is HttpClientModule?", "options": ["HTTP features", "Module", "HTTP", "Provide"], "correctOptions": ["HTTP features"], "time": 30, "details": "HttpClientModule provides HTTP client."},
-  {"question": "What is get request?", "options": ["Fetch data", "Read", "Retrieve", "GET"], "correctOptions": ["Fetch data"], "time": 25, "details": "HttpClient.get fetches data."},
-  {"question": "What is post request?", "options": ["Create data", "Send", "Create", "POST"], "correctOptions": ["Create data"], "time": 25, "details": "HttpClient.post creates data."},
-  {"question": "What is put request?", "options": ["Update data", "Replace", "Update", "PUT"], "correctOptions": ["Update data"], "time": 25, "details": "HttpClient.put updates data."},
-  {"question": "What is patch request?", "options": ["Partial update", "Modify", "Patch", "PATCH"], "correctOptions": ["Partial update"], "time": 30, "details": "HttpClient.patch partially updates."},
-  {"question": "What is delete request?", "options": ["Remove data", "Delete", "Remove", "DELETE"], "correctOptions": ["Remove data"], "time": 25, "details": "HttpClient.delete removes data."},
-  {"question": "What is request options?", "options": ["Options object", "Config", "Options", "Params"], "correctOptions": ["Options object"], "time": 30, "details": "options configures request."},
-  {"question": "What is responseType?", "options": ["Response format", "Type", "Format", "Return"], "correctOptions": ["Response format"], "time": 30, "details": "responseType specifies format: json/blob/text."},
-  {"question": "What is observe option?", "options": ["Response events", "Response type", "Events", "Observe"], "correctOptions": ["Response events"], "time": 35, "details": "observe returns full response or events."},
-  {"question": "What is reportProgress option?", "options": ["Track upload", "Progress", "Events", "Progress"], "correctOptions": ["Track upload"], "time": 35, "details": "reportProgress tracks upload progress."},
-  {"question": "What is withCredentials?", "options": ["Send cookies", "Credentials", "Cross-origin", "Options"], "correctOptions": ["Send cookies"], "time": 35, "details": "withCredentials includes credentials."},
-  {"question": "What is HttpHeaders?", "options": ["Request headers", "Headers", "Header class", "Class"], "correctOptions": ["Request headers"], "time": 30, "details": "HttpHeaders manages request headers."},
-  {"question": "What is HttpParams?", "options": ["Query params", "Params", "Query string", "Class"], "correctOptions": ["Query params"], "time": 30, "details": "HttpParams builds query parameters."},
-  {"question": "What is HttpRequest?", "options": ["Request object", "Request", "Object", "Class"], "correctOptions": ["Request object"], "time": 30, "details": "HttpRequest represents HTTP request."},
-  {"question": "What is HttpResponse?", "options": ["Response object", "Response", "Object", "Class"], "correctOptions": ["Response object"], "time": 30, "details": "HttpResponse is HTTP response."},
-  {"question": "What is HttpErrorResponse?", "options": ["Error response", "Error", "Exception", "Class"], "correctOptions": ["Error response"], "time": 30, "details": "HttpErrorResponse indicates error."},
-  {"question": "What is HTTP interceptor?", "options": ["Request modifier", "Modify request", "Chain", "Middleware"], "correctOptions": ["Request modifier"], "time": 35, "details": "HTTP interceptors modify requests."},
-  {"question": "What is HttpInterceptor?", "options": ["Interceptor interface", "Interface", "Injectable", "Class"], "correctOptions": ["Interceptor interface"], "time": 35, "details": "HttpInterceptor is interceptor interface."},
-  {"question": "What does intercept method do?", "options": ["Handle request", "Process", "Next", "Chain"], "correctOptions": ["Handle request"], "time": 35, "details": "intercept processes HTTP request."},
-  {"question": "What is HttpEvent?", "options": ["HTTP event", "Event type", "Event", "Union"], "correctOptions": ["HTTP event"], "time": 35, "details": "HttpEvent represents HTTP events."},
-  {"question": "What is HttpEventType?", "options": ["Event types", "Constants", "Enum", "Types"], "correctOptions": ["Event types"], "time": 35, "details": "HttpEventType defines event types."},
-  {"question": "What is HttpSentEvent?", "options": ["Request sent", "Event", "Sent", "Type"], "correctOptions": ["Request sent"], "time": 35, "details": "HttpSentEvent indicates request sent."},
-  {"question": "What is HttpHeaderResponse?", "options": ["Headers received", "Event", "Headers", "Type"], "correctOptions": ["Headers received"], "time": 40, "details": "HttpHeaderResponse is headers received."},
-  {"question": "What is HttpProgressEvent?", "options": ["Progress event", "Upload/download", "Progress", "Type"], "correctOptions": ["Progress event"], "time": 40, "details": "HttpProgressEvent tracks progress."},
-  {"question": "What is HttpResponseEvent?", "options": ["Body received", "Response", "Body", "Type"], "correctOptions": ["Body received"], "time": 35, "details": "HttpResponse is response body."},
-  {"question": "What is HttpClientTestingModule?", "options": ["Test HTTP", "Testing", "Mock", "Module"], "correctOptions": ["Test HTTP"], "time": 40, "details": "HttpClientTestingModule mocks HTTP."},
-  {"question": "What is HttpTestingController?", "options": ["Mock controller", "Test controller", "Mock", "Controller"], "correctOptions": ["Mock controller"], "time": 40, "details": "HttpTestingController mocks requests."},
-  {"question": "What is expectOne()?", "options": ["Expect request", "Expect", "Verify", "Match"], "correctOptions": ["Expect request"], "time": 40, "details": "expectOne expects one request."},
-  {"question": "What is flush()?", "options": ["Flush response", "Return mock", "Respond", "Return"], "correctOptions": ["Flush response"], "time": 40, "details": "flush returns mock response."},
-  {"question": "What is verify()?", "options": ["Verify requests", "Verify", "Check", "All done"], "correctOptions": ["Verify requests"], "time": 40, "details": "verify ensures all matched."},
-  {"question": "What is RouterModule?", "options": ["Routing", "Router", "Module", "Routing package"], "correctOptions": ["Routing"], "time": 30, "details": "RouterModule provides routing."},
-  {"question": "What is router-outlet?", "options": ["Route placeholder", "Insert route", "View", "Component"], "correctOptions": ["Route placeholder"], "time": 30, "details": "router-outlet displays routed component."}
+  {
+    "question": "What are Angular pipes?",
+    "options": [
+      "Data transformation",
+      "Transform filter",
+      "Format",
+      "Format data"
+    ],
+    "correctOptions": [
+      "Data transformation"
+    ],
+    "time": 35,
+    "details": "Pipes transform displayed data in templates."
+  },
+  {
+    "question": "What is pipe operator |?",
+    "options": [
+      "Apply pipe",
+      "Transform",
+      "Pipe syntax",
+      "Apply"
+    ],
+    "correctOptions": [
+      "Apply pipe"
+    ],
+    "time": 30,
+    "details": "| applies pipe to value."
+  },
+  {
+    "question": "What is AsyncPipe?",
+    "options": [
+      "Auto-subscribe",
+      "Observable",
+      "Async",
+      "Subscribe"
+    ],
+    "correctOptions": [
+      "Auto-subscribe"
+    ],
+    "time": 35,
+    "details": "AsyncPipe auto-subscribes to observables."
+  },
+  {
+    "question": "What is DatePipe?",
+    "options": [
+      "Date format",
+      "Time format",
+      "Date/time",
+      "Format"
+    ],
+    "correctOptions": [
+      "Date format"
+    ],
+    "time": 30,
+    "details": "DatePipe formats dates."
+  },
+  {
+    "question": "What is CurrencyPipe?",
+    "options": [
+      "Format money",
+      "Currency",
+      "Number",
+      "Currency format"
+    ],
+    "correctOptions": [
+      "Format money"
+    ],
+    "time": 30,
+    "details": "CurrencyPipe formats currency."
+  },
+  {
+    "question": "What is DecimalPipe?",
+    "options": [
+      "Number format",
+      "Precision",
+      "Decimal",
+      "Number"
+    ],
+    "correctOptions": [
+      "Number format"
+    ],
+    "time": 30,
+    "details": "DecimalPipe formats numbers."
+  },
+  {
+    "question": "What is PercentPipe?",
+    "options": [
+      "Percentage format",
+      "Percent",
+      "Number",
+      "Percentage"
+    ],
+    "correctOptions": [
+      "Percentage format"
+    ],
+    "time": 30,
+    "details": "PercentPipe formats percentages."
+  },
+  {
+    "question": "What is UpperCasePipe?",
+    "options": [
+      "Uppercase",
+      "Text",
+      "Transform",
+      "Capitalize"
+    ],
+    "correctOptions": [
+      "Uppercase"
+    ],
+    "time": 30,
+    "details": "UpperCasePipe converts to uppercase."
+  },
+  {
+    "question": "What is LowerCasePipe?",
+    "options": [
+      "Lowercase",
+      "Text",
+      "Transform",
+      "Case"
+    ],
+    "correctOptions": [
+      "Lowercase"
+    ],
+    "time": 30,
+    "details": "LowerCasePipe converts to lowercase."
+  },
+  {
+    "question": "What is TitleCasePipe?",
+    "options": [
+      "Title case",
+      "Capitalize words",
+      "Title",
+      "Capitalize"
+    ],
+    "correctOptions": [
+      "Title case"
+    ],
+    "time": 30,
+    "details": "TitleCasePipe capitalizes each word."
+  },
+  {
+    "question": "What is SlicePipe?",
+    "options": [
+      "Array slice",
+      "Substring",
+      "Limit",
+      "Extract"
+    ],
+    "correctOptions": [
+      "Array slice"
+    ],
+    "time": 30,
+    "details": "SlicePipe extracts array/string portion."
+  },
+  {
+    "question": "What is JsonPipe?",
+    "options": [
+      "Object to JSON",
+      "Debug",
+      "Object",
+      "String"
+    ],
+    "correctOptions": [
+      "Object to JSON"
+    ],
+    "time": 30,
+    "details": "JsonPipe converts object to JSON string."
+  },
+  {
+    "question": "What is KeyValuePipe?",
+    "options": [
+      "Object to pairs",
+      "Key-value",
+      "Transform",
+      "Pairs"
+    ],
+    "correctOptions": [
+      "Object to pairs"
+    ],
+    "time": 35,
+    "details": "KeyValuePipe converts object to key-value pairs."
+  },
+  {
+    "question": "What is I18nSelectPipe?",
+    "options": [
+      "Conditional text",
+      "Gender select",
+      "Select",
+      "Message"
+    ],
+    "correctOptions": [
+      "Conditional text"
+    ],
+    "time": 35,
+    "details": "I18nSelectPipe shows conditional text."
+  },
+  {
+    "question": "What is I18nPluralPipe?",
+    "options": [
+      "Plural ICU",
+      "Pluralization",
+      "Plural",
+      "Choice"
+    ],
+    "correctOptions": [
+      "Plural ICU"
+    ],
+    "time": 35,
+    "details": "I18nPluralPipe handles plurals."
+  },
+  {
+    "question": "What is custom pipe?",
+    "options": [
+      "@Pipe decorator",
+      "Pipeable",
+      "Pipe transform",
+      "Pipe class"
+    ],
+    "correctOptions": [
+      "@Pipe decorator"
+    ],
+    "time": 35,
+    "details": "@Pipe decorator defines custom pipe."
+  },
+  {
+    "question": "What is transform method?",
+    "options": [
+      "Pipe logic",
+      "Transform",
+      "Apply",
+      "Method"
+    ],
+    "correctOptions": [
+      "Pipe logic"
+    ],
+    "time": 35,
+    "details": "transform method contains pipe logic."
+  },
+  {
+    "question": "What is pure pipe?",
+    "options": [
+      "No internal state",
+      "Pure function",
+      "Stateless",
+      "Fresh"
+    ],
+    "correctOptions": [
+      "No internal state"
+    ],
+    "time": 40,
+    "details": "Pure pipes have no internal state."
+  },
+  {
+    "question": "What is impure pipe?",
+    "options": [
+      "Impure updating",
+      "Has state",
+      "Mutating",
+      "State"
+    ],
+    "correctOptions": [
+      "Has state"
+    ],
+    "time": 40,
+    "details": "Impure pipes may have internal state."
+  },
+  {
+    "question": "What is pure flag?",
+    "options": [
+      "Pure toggle",
+      "State flag",
+      "Pure",
+      "Pure: true/false"
+    ],
+    "correctOptions": [
+      "State flag"
+    ],
+    "time": 40,
+    "details": "pure: false makes impure pipe."
+  },
+  {
+    "question": "What is forms module?",
+    "options": [
+      "Form features",
+      "Reactive forms",
+      "Template forms",
+      "Both"
+    ],
+    "correctOptions": [
+      "Both"
+    ],
+    "time": 35,
+    "details": "FormsModule enables template-driven forms."
+  },
+  {
+    "question": "What is ReactiveFormsModule?",
+    "options": [
+      "Reactive forms",
+      "FormGroup",
+      "Form model",
+      "Model"
+    ],
+    "correctOptions": [
+      "Reactive forms"
+    ],
+    "time": 35,
+    "details": "ReactiveFormsModule for reactive forms."
+  },
+  {
+    "question": "What is FormControl?",
+    "options": [
+      "Single input",
+      "Field control",
+      "Control",
+      "Input"
+    ],
+    "correctOptions": [
+      "Single input"
+    ],
+    "time": 30,
+    "details": "FormControl manages single input."
+  },
+  {
+    "question": "What is FormGroup?",
+    "options": [
+      "Form fields",
+      "Group controls",
+      "Controls",
+      "Group"
+    ],
+    "correctOptions": [
+      "Form fields"
+    ],
+    "time": 30,
+    "details": "FormGroup groups multiple controls."
+  },
+  {
+    "question": "What is FormArray?",
+    "options": [
+      "Dynamic array",
+      "Array of controls",
+      "List",
+      "Controls"
+    ],
+    "correctOptions": [
+      "Dynamic array"
+    ],
+    "time": 35,
+    "details": "FormArray manages array of controls."
+  },
+  {
+    "question": "What is FormBuilder?",
+    "options": [
+      "Create forms",
+      "Builder",
+      "Factory",
+      "Create"
+    ],
+    "correctOptions": [
+      "Create forms"
+    ],
+    "time": 30,
+    "details": "FormBuilder creates form controls."
+  },
+  {
+    "question": "What is Validators.required?",
+    "options": [
+      "Required field",
+      "Required",
+      "Not empty",
+      "Must"
+    ],
+    "correctOptions": [
+      "Required field"
+    ],
+    "time": 30,
+    "details": "Validators.required ensures value present."
+  },
+  {
+    "question": "What is Validators.minLength?",
+    "options": [
+      "Minimum length",
+      "Min chars",
+      "Min",
+      "Length"
+    ],
+    "correctOptions": [
+      "Minimum length"
+    ],
+    "time": 30,
+    "details": "Validators.minLength checks minimum."
+  },
+  {
+    "question": "What is Validators.maxLength?",
+    "options": [
+      "Maximum length",
+      "Max chars",
+      "Max",
+      "Length"
+    ],
+    "correctOptions": [
+      "Maximum length"
+    ],
+    "time": 30,
+    "details": "Validators.maxLength checks maximum."
+  },
+  {
+    "question": "What is Validators.pattern?",
+    "options": [
+      "Regex validation",
+      "Pattern",
+      "Regex",
+      "Match"
+    ],
+    "correctOptions": [
+      "Regex validation"
+    ],
+    "time": 30,
+    "details": "Validators.pattern validates regex."
+  },
+  {
+    "question": "What is Validators.email?",
+    "options": [
+      "Email format",
+      "Email",
+      "Validate",
+      "Format"
+    ],
+    "correctOptions": [
+      "Email format"
+    ],
+    "time": 30,
+    "details": "Validators.email validates email."
+  },
+  {
+    "question": "What is setValue?",
+    "options": [
+      "Set all values",
+      "Complete",
+      "Fill all",
+      "Assign"
+    ],
+    "correctOptions": [
+      "Set all values"
+    ],
+    "time": 30,
+    "details": "setValue sets all form values."
+  },
+  {
+    "question": "What is patchValue?",
+    "options": [
+      "Partial update",
+      "Some values",
+      "Partial",
+      "Update"
+    ],
+    "correctOptions": [
+      "Partial update"
+    ],
+    "time": 30,
+    "details": "patchValue updates subset of values."
+  },
+  {
+    "question": "What is valueChanges?",
+    "options": [
+      "Value observable",
+      "Changes",
+      "Event",
+      "Stream"
+    ],
+    "correctOptions": [
+      "Value observable"
+    ],
+    "time": 35,
+    "details": "valueChanges emits on value change."
+  },
+  {
+    "question": "What is statusChanges?",
+    "options": [
+      "Status observable",
+      "Validity",
+      "Event",
+      "Stream"
+    ],
+    "correctOptions": [
+      "Status observable"
+    ],
+    "time": 35,
+    "details": "statusChanges emits on status change."
+  },
+  {
+    "question": "What is dirty?",
+    "options": [
+      "User modified",
+      "Changed",
+      "Edited",
+      "Touched"
+    ],
+    "correctOptions": [
+      "User modified"
+    ],
+    "time": 30,
+    "details": "dirty indicates user changed value."
+  },
+  {
+    "question": "What is pristine?",
+    "options": [
+      "Unchanged",
+      "Original",
+      "Untouched",
+      "Clean"
+    ],
+    "correctOptions": [
+      "Unchanged"
+    ],
+    "time": 30,
+    "details": "pristine indicates no user changes."
+  },
+  {
+    "question": "What is touched?",
+    "options": [
+      "Blurred",
+      "Focused",
+      "Lose focus",
+      "Visited"
+    ],
+    "correctOptions": [
+      "Blurred"
+    ],
+    "time": 30,
+    "details": "touched indicates field was blurred."
+  },
+  {
+    "question": "What is valid?",
+    "options": [
+      "Passes validation",
+      "Valid",
+      "OK",
+      "Correct"
+    ],
+    "correctOptions": [
+      "Passes validation"
+    ],
+    "time": 30,
+    "details": "valid indicates valid state."
+  },
+  {
+    "question": "What is invalid?",
+    "options": [
+      "Fails validation",
+      "Invalid",
+      "Error",
+      "Wrong"
+    ],
+    "correctOptions": [
+      "Fails validation"
+    ],
+    "time": 30,
+    "details": "invalid indicates validation failure."
+  },
+  {
+    "question": "What is pending?",
+    "options": [
+      "Async validating",
+      "Validating",
+      "Working",
+      "Check"
+    ],
+    "correctOptions": [
+      "Async validating"
+    ],
+    "time": 35,
+    "details": "pending indicates async validation."
+  },
+  {
+    "question": "What is disabled?",
+    "options": [
+      "Disabled",
+      "Readonly",
+      "Inactive",
+      "Off"
+    ],
+    "correctOptions": [
+      "Disabled"
+    ],
+    "time": 30,
+    "details": "disabled indicates control disabled."
+  },
+  {
+    "question": "What is enabled?",
+    "options": [
+      "Enabled",
+      "Active",
+      "Writable",
+      "On"
+    ],
+    "correctOptions": [
+      "Enabled"
+    ],
+    "time": 30,
+    "details": "enabled indicates control enabled."
+  },
+  {
+    "question": "What is registerOnChange?",
+    "options": [
+      "Callback",
+      "Update model",
+      "On change",
+      "Notify"
+    ],
+    "correctOptions": [
+      "Callback"
+    ],
+    "time": 35,
+    "details": "registerOnChange registers change callback."
+  },
+  {
+    "question": "What is registerOnTouched?",
+    "options": [
+      "Blur callback",
+      "On touched",
+      "On blur",
+      "Notify"
+    ],
+    "correctOptions": [
+      "Blur callback"
+    ],
+    "time": 35,
+    "details": "registerOnTouched registers touched callback."
+  },
+  {
+    "question": "What is setDisabledState?",
+    "options": [
+      "Enable/disable",
+      "Disable state",
+      "Control",
+      "State"
+    ],
+    "correctOptions": [
+      "Enable/disable"
+    ],
+    "time": 40,
+    "details": "setDisabledState allows disabling control."
+  },
+  {
+    "question": "What is writeValue?",
+    "options": [
+      "Set value",
+      "Write",
+      "Model",
+      "Assign"
+    ],
+    "correctOptions": [
+      "Set value"
+    ],
+    "time": 35,
+    "details": "writeValue sets control value."
+  },
+  {
+    "question": "What is ngModel?",
+    "options": [
+      "Two-way binding",
+      "Template",
+      "Model",
+      "Bidirectional"
+    ],
+    "correctOptions": [
+      "Two-way binding"
+    ],
+    "time": 30,
+    "details": "ngModel provides two-way binding."
+  },
+  {
+    "question": "What is [(ngModel)]?",
+    "options": [
+      "Two-way syntax",
+      "Bind both",
+      "Syntactic sugar",
+      "Two-way"
+    ],
+    "correctOptions": [
+      "Two-way syntax"
+    ],
+    "time": 35,
+    "details": "[(ngModel)] is two-way binding syntax."
+  },
+  {
+    "question": "What is ngModelChange?",
+    "options": [
+      "Change event",
+      "Emitter",
+      "Event",
+      "Output"
+    ],
+    "correctOptions": [
+      "Change event"
+    ],
+    "time": 30,
+    "details": "ngModelChange emits on change."
+  },
+  {
+    "question": "What is required validator?",
+    "options": [
+      "Required",
+      "Required attribute",
+      "Must have",
+      "Must"
+    ],
+    "correctOptions": [
+      "Required"
+    ],
+    "time": 30,
+    "details": "required is shorthand for required validator."
+  },
+  {
+    "question": "What is min validator?",
+    "options": [
+      "Minimum value",
+      "Min attribute",
+      "Value",
+      "Check"
+    ],
+    "correctOptions": [
+      "Minimum value"
+    ],
+    "time": 30,
+    "details": "min validates minimum value."
+  },
+  {
+    "question": "What is max validator?",
+    "options": [
+      "Maximum value",
+      "Max attribute",
+      "Value",
+      "Check"
+    ],
+    "correctOptions": [
+      "Maximum value"
+    ],
+    "time": 30,
+    "details": "max validates maximum value."
+  },
+  {
+    "question": "What is minlength validator?",
+    "options": [
+      "Minimum chars",
+      "Minlength attr",
+      "Length",
+      "Check"
+    ],
+    "correctOptions": [
+      "Minimum chars"
+    ],
+    "time": 30,
+    "details": "minlength validates minimum length."
+  },
+  {
+    "question": "What is maxlength validator?",
+    "options": [
+      "Maximum chars",
+      "Maxlength attr",
+      "Length",
+      "Check"
+    ],
+    "correctOptions": [
+      "Maximum chars"
+    ],
+    "time": 30,
+    "details": "maxlength validates maximum length."
+  },
+  {
+    "question": "What is pattern validator?",
+    "options": [
+      "Regex",
+      "Pattern attribute",
+      "Validate regex",
+      "Match"
+    ],
+    "correctOptions": [
+      "Regex"
+    ],
+    "time": 30,
+    "details": "pattern validates regex pattern."
+  },
+  {
+    "question": "What is email validator?",
+    "options": [
+      "Email format",
+      "Email attr",
+      "Validate",
+      "Check"
+    ],
+    "correctOptions": [
+      "Email format"
+    ],
+    "time": 30,
+    "details": "email validates email format."
+  },
+  {
+    "question": "What is ngForm?",
+    "options": [
+      "Form directive",
+      "Form wrapper",
+      "Form",
+      "Directive"
+    ],
+    "correctOptions": [
+      "Form directive"
+    ],
+    "time": 30,
+    "details": "ngForm creates form container."
+  },
+  {
+    "question": "What is formGroup?",
+    "options": [
+      "Group directive",
+      "Bind FormGroup",
+      "Directive",
+      "Bind"
+    ],
+    "correctOptions": [
+      "Group directive"
+    ],
+    "time": 30,
+    "details": "formGroup binds FormGroup to form."
+  },
+  {
+    "question": "What is formControlName?",
+    "options": [
+      "Bind control",
+      "Name control",
+      "Directive",
+      "Name"
+    ],
+    "correctOptions": [
+      "Bind control"
+    ],
+    "time": 30,
+    "details": "formControlName binds FormControl."
+  },
+  {
+    "question": "What is formArrayName?",
+    "options": [
+      "Bind array",
+      "Name array",
+      "Directive",
+      "Name"
+    ],
+    "correctOptions": [
+      "Bind array"
+    ],
+    "time": 30,
+    "details": "formArrayName binds FormArray."
+  },
+  {
+    "question": "What is HTTP service?",
+    "options": [
+      "HttpClient",
+      "HTTP",
+      "Client",
+      "Request"
+    ],
+    "correctOptions": [
+      "HttpClient"
+    ],
+    "time": 30,
+    "details": "HttpClient makes HTTP requests."
+  },
+  {
+    "question": "What is HttpClient?",
+    "options": [
+      "HTTP service",
+      "Request client",
+      "Client",
+      "API"
+    ],
+    "correctOptions": [
+      "HTTP service"
+    ],
+    "time": 30,
+    "details": "HttpClient is Angular HTTP client."
+  },
+  {
+    "question": "What is HttpClientModule?",
+    "options": [
+      "HTTP features",
+      "Module",
+      "HTTP",
+      "Provide"
+    ],
+    "correctOptions": [
+      "HTTP features"
+    ],
+    "time": 30,
+    "details": "HttpClientModule provides HTTP client."
+  },
+  {
+    "question": "What is get request?",
+    "options": [
+      "Fetch data",
+      "Read",
+      "Retrieve",
+      "GET"
+    ],
+    "correctOptions": [
+      "Fetch data"
+    ],
+    "time": 25,
+    "details": "HttpClient.get fetches data."
+  },
+  {
+    "question": "What is post request?",
+    "options": [
+      "Create data",
+      "Send",
+      "Create",
+      "POST"
+    ],
+    "correctOptions": [
+      "Create data"
+    ],
+    "time": 25,
+    "details": "HttpClient.post creates data."
+  },
+  {
+    "question": "What is put request?",
+    "options": [
+      "Update data",
+      "Replace",
+      "Update",
+      "PUT"
+    ],
+    "correctOptions": [
+      "Update data"
+    ],
+    "time": 25,
+    "details": "HttpClient.put updates data."
+  },
+  {
+    "question": "What is patch request?",
+    "options": [
+      "Partial update",
+      "Modify",
+      "Patch",
+      "PATCH"
+    ],
+    "correctOptions": [
+      "Partial update"
+    ],
+    "time": 30,
+    "details": "HttpClient.patch partially updates."
+  },
+  {
+    "question": "What is delete request?",
+    "options": [
+      "Remove data",
+      "Delete",
+      "Remove",
+      "DELETE"
+    ],
+    "correctOptions": [
+      "Remove data"
+    ],
+    "time": 25,
+    "details": "HttpClient.delete removes data."
+  },
+  {
+    "question": "What is request options?",
+    "options": [
+      "Options object",
+      "Config",
+      "Options",
+      "Params"
+    ],
+    "correctOptions": [
+      "Options object"
+    ],
+    "time": 30,
+    "details": "options configures request."
+  },
+  {
+    "question": "What is responseType?",
+    "options": [
+      "Response format",
+      "Type",
+      "Format",
+      "Return"
+    ],
+    "correctOptions": [
+      "Response format"
+    ],
+    "time": 30,
+    "details": "responseType specifies format: json/blob/text."
+  },
+  {
+    "question": "What is observe option?",
+    "options": [
+      "Response events",
+      "Response type",
+      "Events",
+      "Observe"
+    ],
+    "correctOptions": [
+      "Response events"
+    ],
+    "time": 35,
+    "details": "observe returns full response or events."
+  },
+  {
+    "question": "What is reportProgress option?",
+    "options": [
+      "Track upload",
+      "Progress",
+      "Events",
+      "Progress"
+    ],
+    "correctOptions": [
+      "Track upload"
+    ],
+    "time": 35,
+    "details": "reportProgress tracks upload progress."
+  },
+  {
+    "question": "What is withCredentials?",
+    "options": [
+      "Send cookies",
+      "Credentials",
+      "Cross-origin",
+      "Options"
+    ],
+    "correctOptions": [
+      "Send cookies"
+    ],
+    "time": 35,
+    "details": "withCredentials includes credentials."
+  },
+  {
+    "question": "What is HttpHeaders?",
+    "options": [
+      "Request headers",
+      "Headers",
+      "Header class",
+      "Class"
+    ],
+    "correctOptions": [
+      "Request headers"
+    ],
+    "time": 30,
+    "details": "HttpHeaders manages request headers."
+  },
+  {
+    "question": "What is HttpParams?",
+    "options": [
+      "Query params",
+      "Params",
+      "Query string",
+      "Class"
+    ],
+    "correctOptions": [
+      "Query params"
+    ],
+    "time": 30,
+    "details": "HttpParams builds query parameters."
+  },
+  {
+    "question": "What is HttpRequest?",
+    "options": [
+      "Request object",
+      "Request",
+      "Object",
+      "Class"
+    ],
+    "correctOptions": [
+      "Request object"
+    ],
+    "time": 30,
+    "details": "HttpRequest represents HTTP request."
+  },
+  {
+    "question": "What is HttpResponse?",
+    "options": [
+      "Response object",
+      "Response",
+      "Object",
+      "Class"
+    ],
+    "correctOptions": [
+      "Response object"
+    ],
+    "time": 30,
+    "details": "HttpResponse is HTTP response."
+  },
+  {
+    "question": "What is HttpErrorResponse?",
+    "options": [
+      "Error response",
+      "Error",
+      "Exception",
+      "Class"
+    ],
+    "correctOptions": [
+      "Error response"
+    ],
+    "time": 30,
+    "details": "HttpErrorResponse indicates error."
+  },
+  {
+    "question": "What is HTTP interceptor?",
+    "options": [
+      "Request modifier",
+      "Modify request",
+      "Chain",
+      "Middleware"
+    ],
+    "correctOptions": [
+      "Request modifier"
+    ],
+    "time": 35,
+    "details": "HTTP interceptors modify requests."
+  },
+  {
+    "question": "What is HttpInterceptor?",
+    "options": [
+      "Interceptor interface",
+      "Interface",
+      "Injectable",
+      "Class"
+    ],
+    "correctOptions": [
+      "Interceptor interface"
+    ],
+    "time": 35,
+    "details": "HttpInterceptor is interceptor interface."
+  },
+  {
+    "question": "What does intercept method do?",
+    "options": [
+      "Handle request",
+      "Process",
+      "Next",
+      "Chain"
+    ],
+    "correctOptions": [
+      "Handle request"
+    ],
+    "time": 35,
+    "details": "intercept processes HTTP request."
+  },
+  {
+    "question": "What is HttpEvent?",
+    "options": [
+      "HTTP event",
+      "Event type",
+      "Event",
+      "Union"
+    ],
+    "correctOptions": [
+      "HTTP event"
+    ],
+    "time": 35,
+    "details": "HttpEvent represents HTTP events."
+  },
+  {
+    "question": "What is HttpEventType?",
+    "options": [
+      "Event types",
+      "Constants",
+      "Enum",
+      "Types"
+    ],
+    "correctOptions": [
+      "Event types"
+    ],
+    "time": 35,
+    "details": "HttpEventType defines event types."
+  },
+  {
+    "question": "What is HttpSentEvent?",
+    "options": [
+      "Request sent",
+      "Event",
+      "Sent",
+      "Type"
+    ],
+    "correctOptions": [
+      "Request sent"
+    ],
+    "time": 35,
+    "details": "HttpSentEvent indicates request sent."
+  },
+  {
+    "question": "What is HttpHeaderResponse?",
+    "options": [
+      "Headers received",
+      "Event",
+      "Headers",
+      "Type"
+    ],
+    "correctOptions": [
+      "Headers received"
+    ],
+    "time": 40,
+    "details": "HttpHeaderResponse is headers received."
+  },
+  {
+    "question": "What is HttpProgressEvent?",
+    "options": [
+      "Progress event",
+      "Upload/download",
+      "Progress",
+      "Type"
+    ],
+    "correctOptions": [
+      "Progress event"
+    ],
+    "time": 40,
+    "details": "HttpProgressEvent tracks progress."
+  },
+  {
+    "question": "What is HttpResponseEvent?",
+    "options": [
+      "Body received",
+      "Response",
+      "Body",
+      "Type"
+    ],
+    "correctOptions": [
+      "Body received"
+    ],
+    "time": 35,
+    "details": "HttpResponse is response body."
+  },
+  {
+    "question": "What is HttpClientTestingModule?",
+    "options": [
+      "Test HTTP",
+      "Testing",
+      "Mock",
+      "Module"
+    ],
+    "correctOptions": [
+      "Test HTTP"
+    ],
+    "time": 40,
+    "details": "HttpClientTestingModule mocks HTTP."
+  },
+  {
+    "question": "What is HttpTestingController?",
+    "options": [
+      "Mock controller",
+      "Test controller",
+      "Mock",
+      "Controller"
+    ],
+    "correctOptions": [
+      "Mock controller"
+    ],
+    "time": 40,
+    "details": "HttpTestingController mocks requests."
+  },
+  {
+    "question": "What is expectOne()?",
+    "options": [
+      "Expect request",
+      "Expect",
+      "Verify",
+      "Match"
+    ],
+    "correctOptions": [
+      "Expect request"
+    ],
+    "time": 40,
+    "details": "expectOne expects one request."
+  },
+  {
+    "question": "What is flush()?",
+    "options": [
+      "Flush response",
+      "Return mock",
+      "Respond",
+      "Return"
+    ],
+    "correctOptions": [
+      "Flush response"
+    ],
+    "time": 40,
+    "details": "flush returns mock response."
+  },
+  {
+    "question": "What is verify()?",
+    "options": [
+      "Verify requests",
+      "Verify",
+      "Check",
+      "All done"
+    ],
+    "correctOptions": [
+      "Verify requests"
+    ],
+    "time": 40,
+    "details": "verify ensures all matched."
+  },
+  {
+    "question": "What is RouterModule?",
+    "options": [
+      "Routing",
+      "Router",
+      "Module",
+      "Routing package"
+    ],
+    "correctOptions": [
+      "Routing"
+    ],
+    "time": 30,
+    "details": "RouterModule provides routing."
+  },
+  {
+    "question": "What is router-outlet?",
+    "options": [
+      "Route placeholder",
+      "Insert route",
+      "View",
+      "Component"
+    ],
+    "correctOptions": [
+      "Route placeholder"
+    ],
+    "time": 30,
+    "details": "router-outlet displays routed component."
+  },
+  {
+    "question": "What is Angular CLI? (97)",
+    "options": [
+      "Command line",
+      "Scaffolding",
+      "Build tool",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is Angular CLI? explanation."
+  },
+  {
+    "question": "What is a service? (98)",
+    "options": [
+      "Singleton",
+      "Business logic",
+      "DI",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is a service? explanation."
+  },
+  {
+    "question": "What is lazy loading? (99)",
+    "options": [
+      "On-demand",
+      "Module loading",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is lazy loading? explanation."
+  },
+  {
+    "question": "What is AOT compilation? (100)",
+    "options": [
+      "Ahead of time",
+      "Build time",
+      "Optimization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is AOT compilation? explanation."
+  },
+  {
+    "question": "What is directive? (Level 2 #101)",
+    "options": [
+      "DOM manipulation",
+      "Structural",
+      "Attribute",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "DOM manipulation",
+      "Structural",
+      "Attribute",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is directive? explanation."
+  },
+  {
+    "question": "What is service? (Level 2 #102)",
+    "options": [
+      "Dependency injection",
+      "Singleton",
+      "Business logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Dependency injection",
+      "Singleton",
+      "Business logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is service? explanation."
+  },
+  {
+    "question": "What is pipe? (Level 2 #103)",
+    "options": [
+      "Transform",
+      "Pure",
+      "Impure",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Transform",
+      "Pure",
+      "Impure",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is pipe? explanation."
+  },
+  {
+    "question": "What is module? (Level 2 #104)",
+    "options": [
+      "Bootstrap",
+      "Declarations",
+      "Imports",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Bootstrap",
+      "Declarations",
+      "Imports",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is module? explanation."
+  },
+  {
+    "question": "What is component? (Level 2 #105)",
+    "options": [
+      "Template",
+      "Class",
+      "Metadata",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Template",
+      "Class",
+      "Metadata",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is component? explanation."
+  },
+  {
+    "question": "What is routing? (Level 2 #106)",
+    "options": [
+      "Path",
+      "Component",
+      "Parameters",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Path",
+      "Component",
+      "Parameters",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is AOT? (Level 2 #108)",
+    "options": [
+      "Compilation",
+      "Performance",
+      "Production",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Compilation",
+      "Performance",
+      "Production",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is AOT? explanation."
+  },
+  {
+    "question": "What is change detection? (Level 2 #109)",
+    "options": [
+      "OnPush",
+      "Default",
+      "Manual",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "OnPush",
+      "Default",
+      "Manual",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is change detection? explanation."
+  },
+  {
+    "question": "What is dependency injection? (Level 2 #110)",
+    "options": [
+      "Service",
+      "Provider",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Service",
+      "Provider",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is validation?",
+    "options": [
+      "Input checking",
+      "Rules",
+      "Reactive",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Input checking",
+      "Rules",
+      "Reactive",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is validation? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  }
 ]

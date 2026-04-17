@@ -910,493 +910,598 @@
     "details": "Amend changes last commit; reset removes commits."
   },
   {
-    "question": "What is git reset?",
+    "question": "What is git init? (Level 7 #101)",
     "options": [
-      "Undo commits and changes",
-      "Create commits",
-      "Delete commits",
-      "Merge commits"
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
     ],
     "correctOptions": [
-      "Undo commits and changes"
-    ],
-    "time": 25,
-    "details": "git reset moves HEAD and optionally modifies files."
-  },
-  {
-    "question": "What are the three reset modes?",
-    "options": [
-      "--soft, --mixed, --hard",
-      "--soft, --hard, --merge",
-      "--keep, --hard, --soft",
-      "--mixed, --hard, --merge"
-    ],
-    "correctOptions": [
-      "--soft, --mixed, --hard"
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Git has three main reset modes."
+    "details": "What is git init? explanation."
   },
   {
-    "question": "What does --soft reset do?",
+    "question": "What is git clone? (Level 7 #102)",
     "options": [
-      "Moves HEAD, keeps staged",
-      "Moves HEAD, unstages",
-      "Deletes changes",
-      "Moves everything"
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
     ],
     "correctOptions": [
-      "Moves HEAD, keeps staged"
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
     ],
     "time": 35,
-    "details": "--soft keeps changes in staging area."
+    "details": "What is git clone? explanation."
   },
   {
-    "question": "What does --mixed reset do?",
+    "question": "What is git branch? (Level 7 #103)",
     "options": [
-      "Moves HEAD, unstages",
-      "Moves HEAD, keeps staged",
-      "Deletes changes",
-      "Moves everything"
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
     ],
     "correctOptions": [
-      "Moves HEAD, unstages"
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
     ],
     "time": 35,
-    "details": "--mixed (default) unstages changes."
+    "details": "What is git branch? explanation."
   },
   {
-    "question": "What does --hard reset do?",
+    "question": "What is git merge? (Level 7 #104)",
     "options": [
-      "Moves HEAD, deletes changes",
-      "Moves HEAD, keeps staged",
-      "Moves HEAD, unstages",
-      "No changes"
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
     ],
     "correctOptions": [
-      "Moves HEAD, deletes changes"
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
     ],
     "time": 35,
-    "details": "--hard is dangerous - it removes all changes!"
+    "details": "What is git merge? explanation."
   },
   {
-    "question": "What is the difference between reset and revert?",
+    "question": "What is git rebase? (Level 7 #105)",
     "options": [
-      "Reset removes history, revert keeps",
-      "Both remove history",
-      "Both keep history",
-      "No difference"
+      "History",
+      "Linear",
+      "Interactive",
+      "All of the above"
     ],
     "correctOptions": [
-      "Reset removes history, revert keeps"
-    ],
-    "time": 40,
-    "details": "Reset rewrites history; revert creates new commit."
-  },
-  {
-    "question": "When should you NOT use reset?",
-    "options": [
-      "On shared commits",
-      "On local commits",
-      "On your own commits",
-      "Before push"
-    ],
-    "correctOptions": [
-      "On shared commits"
-    ],
-    "time": 40,
-    "details": "Never reset commits that have been pushed/shared."
-  },
-  {
-    "question": "How do you undo the last commit?",
-    "options": [
-      "git reset --soft HEAD~1",
-      "git undo",
-      "git revert HEAD",
-      "git reset HEAD~1"
-    ],
-    "correctOptions": [
-      "git reset --soft HEAD~1"
-    ],
-    "time": 30,
-    "details": "--soft keeps changes staged for recommit."
-  },
-  {
-    "question": "How do you completely undo last commit?",
-    "options": [
-      "git reset --hard HEAD~1",
-      "git reset HEAD~1",
-      "git revert HEAD",
-      "git undo HEAD"
-    ],
-    "correctOptions": [
-      "git reset --hard HEAD~1"
-    ],
-    "time": 30,
-    "details": "--hard completely removes the commit and changes."
-  },
-  {
-    "question": "What is HEAD~1?",
-    "options": [
-      "Parent of current commit",
-      "Current commit",
-      "Grandparent",
-      "Child"
-    ],
-    "correctOptions": [
-      "Parent of current commit"
-    ],
-    "time": 25,
-    "details": "HEAD~1 refers to the commit before HEAD."
-  },
-  {
-    "question": "What is HEAD^?",
-    "options": [
-      "First parent of merge",
-      "Second parent",
-      "Current commit",
-      "Child commit"
-    ],
-    "correctOptions": [
-      "First parent of merge"
-    ],
-    "time": 30,
-    "details": "HEAD^ is the first parent (main branch) of merge."
-  },
-  {
-    "question": "What is HEAD~2?",
-    "options": [
-      "Two commits back",
-      "Two commits forward",
-      "Second parent",
-      "Current"
-    ],
-    "correctOptions": [
-      "Two commits back"
-    ],
-    "time": 25,
-    "details": "HEAD~2 is the grandparent of current commit."
-  },
-  {
-    "question": "What does HEAD^2 mean?",
-    "options": [
-      "Second parent of merge",
-      "Two commits back",
-      "Current commit",
-      "Child"
-    ],
-    "correctOptions": [
-      "Second parent of merge"
+      "History",
+      "Linear",
+      "Interactive",
+      "All of the above"
     ],
     "time": 35,
-    "details": "HEAD^2 is the second parent of a merge commit."
+    "details": "What is git rebase? explanation."
   },
   {
-    "question": "How do you reset a specific file?",
+    "question": "What is git stash? (Level 7 #106)",
     "options": [
-      "git checkout -- file",
-      "git reset -- file",
-      "git restore file",
-      "Both checkout and restore work"
+      "Temporary",
+      "Save",
+      "Pop",
+      "All of the above"
     ],
     "correctOptions": [
-      "Both checkout and restore work"
+      "Temporary",
+      "Save",
+      "Pop",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Both commands restore file to HEAD state."
+    "details": "What is git stash? explanation."
   },
   {
-    "question": "What is git restore?",
+    "question": "What is git diff? (Level 7 #108)",
     "options": [
-      "Restore working tree",
-      "Restore staged",
-      "Restore commits",
-      "Restore remote"
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
     ],
     "correctOptions": [
-      "Restore working tree"
-    ],
-    "time": 30,
-    "details": "git restore is modern way to undo changes."
-  },
-  {
-    "question": "How do you unstage a file?",
-    "options": [
-      "git restore --staged file",
-      "git reset HEAD file",
-      "Both work",
-      "Neither works"
-    ],
-    "correctOptions": [
-      "Both work"
-    ],
-    "time": 30,
-    "details": "Both reset and restore can unstage files."
-  },
-  {
-    "question": "What does git restore -S do?",
-    "options": [
-      "Unstage file",
-      "Stage file",
-      "Restore staged",
-      "Restore all"
-    ],
-    "correctOptions": [
-      "Unstage file"
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
     ],
     "time": 35,
-    "details": "-S (--staged) unstages the file."
+    "details": "What is git diff? explanation."
   },
   {
-    "question": "What does git restore -W do?",
+    "question": "What is git log? (Level 7 #109)",
     "options": [
-      "Restore working directory",
-      "Restore staged",
-      "Restore from staging",
-      "Restore commit"
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
     ],
     "correctOptions": [
-      "Restore working directory"
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
     ],
     "time": 35,
-    "details": "-W (--worktree) is default for restoring files."
+    "details": "What is git log? explanation."
   },
   {
-    "question": "What is git revert?",
+    "question": "What is git remote? (Level 7 #110)",
     "options": [
-      "Create new commit undoing changes",
-      "Remove commit",
-      "Reset commit",
-      "Merge commit"
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
     ],
     "correctOptions": [
-      "Create new commit undoing changes"
-    ],
-    "time": 30,
-    "details": "Revert creates a commit that undoes previous changes."
-  },
-  {
-    "question": "What is the advantage of revert?",
-    "options": [
-      "Safe for shared branches",
-      "Faster",
-      "Cleaner history",
-      "No backup"
-    ],
-    "correctOptions": [
-      "Safe for shared branches"
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Revert is safe because it doesn't rewrite history."
+    "details": "What is git remote? explanation."
   },
   {
-    "question": "How do you revert a commit?",
+    "question": "What is the spread operator?",
     "options": [
-      "git revert commit-hash",
-      "git undo commit",
-      "git reset commit",
-      "git back commit"
+      "Expand elements",
+      "Copy arrays",
+      "Function arguments",
+      "All of the above"
     ],
     "correctOptions": [
-      "git revert commit-hash"
-    ],
-    "time": 30,
-    "details": "git revert undo a specific commit safely."
-  },
-  {
-    "question": "Can you revert a merge commit?",
-    "options": [
-      "Yes with -m flag",
-      "No",
-      "Only first parent",
-      "Only second parent"
-    ],
-    "correctOptions": [
-      "Yes with -m flag"
-    ],
-    "time": 40,
-    "details": "Merge commits need -m to specify which parent."
-  },
-  {
-    "question": "What does -m 1 mean in revert?",
-    "options": [
-      "Revert first parent's changes",
-      "Revert second parent",
-      "Revert both",
-      "Revert neither"
-    ],
-    "correctOptions": [
-      "Revert first parent's changes"
-    ],
-    "time": 40,
-    "details": "-m 1 reverts changes from the first parent."
-  },
-  {
-    "question": "What does git revert -n do?",
-    "options": [
-      "Don't auto-commit",
-      "Commit anyway",
-      "No revert",
-      "Abort"
-    ],
-    "correctOptions": [
-      "Don't auto-commit"
-    ],
-    "time": 40,
-    "details": "-n (--no-commit) applies changes without committing."
-  },
-  {
-    "question": "What is the difference between undo and revert?",
-    "options": [
-      "Undo is reset, revert is new commit",
-      "Same thing",
-      "Undo is new commit",
-      "No difference"
-    ],
-    "correctOptions": [
-      "Undo is reset, revert is new commit"
-    ],
-    "time": 45,
-    "details": "git undo doesn't exist; you reset or revert."
-  },
-  {
-    "question": "How do you recover after reset --hard?",
-    "options": [
-      "git reflog and checkout",
-      "Can't recover",
-      "From remote",
-      "From backup"
-    ],
-    "correctOptions": [
-      "git reflog and checkout"
-    ],
-    "time": 40,
-    "details": "Reflog can recover commits even after hard reset."
-  },
-  {
-    "question": "What is reflog?",
-    "options": [
-      "Reference log of operations",
-      "Remote log",
-      "Repository log",
-      "Commit log"
-    ],
-    "correctOptions": [
-      "Reference log of operations"
-    ],
-    "time": 30,
-    "details": "Reflog records all HEAD movements."
-  },
-  {
-    "question": "How do you view reflog?",
-    "options": [
-      "git reflog",
-      "git log",
-      "git show",
-      "git status"
-    ],
-    "correctOptions": [
-      "git reflog"
-    ],
-    "time": 25,
-    "details": "git reflog shows history of changes to HEAD."
-  },
-  {
-    "question": "What format is reflog?",
-    "options": [
-      "hash HEAD@{n} action",
-      "Commit only",
-      "Branch only",
-      "Action only"
-    ],
-    "correctOptions": [
-      "hash HEAD@{n} action"
+      "Expand elements",
+      "Copy arrays",
+      "Function arguments",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Each entry shows hash, position, and action."
+    "details": "What is the spread operator? explanation."
   },
   {
-    "question": "What does HEAD@{n} mean?",
+    "question": "What is cloud computing?",
     "options": [
-      "nth previous HEAD state",
-      "nth commit",
-      "nth branch",
-      "nth stash"
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
     ],
     "correctOptions": [
-      "nth previous HEAD state"
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Reflog references are relative to current."
+    "details": "What is cloud computing? explanation."
   },
   {
-    "question": "How long does reflog keep history?",
+    "question": "What is functional programming?",
     "options": [
-      "90 days by default",
-      "30 days",
-      "Forever",
-      "Until push"
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
     ],
     "correctOptions": [
-      "90 days by default"
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Reflog entries expire after 90 days."
+    "details": "What is functional programming? explanation."
   },
   {
-    "question": "Can you recover from git reset --hard?",
+    "question": "What is type checking?",
     "options": [
-      "Yes via reflog",
-      "No",
-      "Only from backup",
-      "Only from remote"
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
     ],
     "correctOptions": [
-      "Yes via reflog"
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Reflog can recover even after hard reset."
+    "details": "What is type checking? explanation."
   },
   {
-    "question": "What is dangling commit?",
+    "question": "What is REST API?",
     "options": [
-      "Unreachable commit",
-      "Reachable commit",
-      "Merged commit",
-      "Tagged commit"
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
     ],
     "correctOptions": [
-      "Unreachable commit"
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
     ],
-    "time": 40,
-    "details": "Dangling commits have no branch/tag pointing to them."
+    "time": 35,
+    "details": "What is REST API? explanation."
   },
   {
-    "question": "What is orphaned commit?",
+    "question": "What is garbage collection?",
     "options": [
-      "No parent commit",
-      "Has parent",
-      "Is initial",
-      "Is merge"
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
     ],
     "correctOptions": [
-      "No parent commit"
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
     ],
-    "time": 40,
-    "details": "Orphan commits have no parent (like initial commit)."
+    "time": 35,
+    "details": "What is garbage collection? explanation."
   },
   {
-    "question": "What is git checkout?",
+    "question": "What is Docker?",
     "options": [
-      "Switch branches or restore files",
-      "Delete files",
-      "Create branches",
-      "Merge branches"
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
     ],
     "correctOptions": [
-      "Switch branches or restore files"
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
     ],
-    "time": 30,
-    "details": "git checkout switches branches or restores files."
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
   }
 ]

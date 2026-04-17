@@ -8,7 +8,7 @@
       "Observables"
     ],
     "correctOptions": [
-      "Reactive Extensions for JavaScript - library for composing asynchronous/event-based programs using observable sequences"
+      "Reactive library"
     ],
     "time": 40,
     "details": "RxJS is reactive programming library."
@@ -22,7 +22,7 @@
       "Observable sequence"
     ],
     "correctOptions": [
-      "The core primitive in RxJS: a push-based collection that emits items over time and can be subscribed to via observer"
+      "Async sequence"
     ],
     "time": 45,
     "details": "Observable is the core primitive."
@@ -36,7 +36,7 @@
       "Receiver"
     ],
     "correctOptions": [
-      "Object with next, error, and complete methods (next is required, error/complete optional) that consumes Observable emissions"
+      "Consumer"
     ],
     "time": 45,
     "details": "Observer consumes Observable."
@@ -50,7 +50,7 @@
       "Subscribe"
     ],
     "correctOptions": [
-      "Method to connect observer to observable (begins execution) - returns Subscription to enable unsubscribing"
+      "Listen"
     ],
     "time": 40,
     "details": "subscribe listens to stream."
@@ -64,7 +64,7 @@
       "Project"
     ],
     "correctOptions": [
-      "Operator that transforms each emission using project function: map(x => x * 2)"
+      "Transform items"
     ],
     "time": 40,
     "details": "map transforms emissions."
@@ -78,7 +78,7 @@
       "Filter"
     ],
     "correctOptions": [
-      "Operator that only emits items that satisfy predicate: filter(x => x > 5)"
+      "Filter items"
     ],
     "time": 40,
     "details": "filter selects emissions."
@@ -92,7 +92,7 @@
       "Operators chain"
     ],
     "correctOptions": [
-      "Method to chain operators together on Observable: source.pipe(operator1(), operator2()) returns new observable"
+      "Compose operators"
     ],
     "time": 45,
     "details": "pipe composes operators."
@@ -106,7 +106,7 @@
       "Create"
     ],
     "correctOptions": [
-      "Creation operator that emits each argument as separate emission then completes: of(1, 2, 3) emits 1, then 2, then 3, then completes"
+      "Emits items"
     ],
     "time": 50,
     "details": "of emits each value."
@@ -120,7 +120,7 @@
       "Convert"
     ],
     "correctOptions": [
-      "Creation operator that converts arrays/promises/iterables into Observable: from([1,2,3]) emits each item"
+      "Convert iterable"
     ],
     "time": 50,
     "details": "from converts to observable."
@@ -134,7 +134,7 @@
       "Event observable"
     ],
     "correctOptions": [
-      "Creation operator to convert DOM events to Observable: fromEvent(element, 'click')"
+      "DOM events"
     ],
     "time": 50,
     "details": "fromEvent creates event observable."
@@ -148,7 +148,7 @@
       "Replay one"
     ],
     "correctOptions": [
-      "Subject variant that stores current value and emits it to new subscribers immediately upon subscription (like state)"
+      "Subject with value"
     ],
     "time": 50,
     "details": "Stores current value."
@@ -162,7 +162,7 @@
       "Buffer"
     ],
     "correctOptions": [
-      "Subject variant that replays specified number of previous emissions to new subscribers"
+      "Replay items"
     ],
     "time": 50,
     "details": "Replays past emissions."
@@ -176,7 +176,7 @@
       "Future"
     ],
     "correctOptions": [
-      "Subject variant that only emits last value when complete() is called (useful for HTTP)"
+      "Emits last"
     ],
     "time": 55,
     "details": "Emits value on complete."
@@ -190,7 +190,7 @@
       "Both sides"
     ],
     "correctOptions": [
-      "Special type that can act as both Observable (subscribe to) and Observer (call next on), enabling multicasting to multiple subscribers"
+      "Observable and Observer"
     ],
     "time": 50,
     "details": "Subject is dual: Observable/Observer."
@@ -204,7 +204,7 @@
       "Flatten"
     ],
     "correctOptions": [
-      "Operator that switches to a new inner observable when outer emits (cancels previous inner), flattening nestings"
+      "Cancel previous"
     ],
     "time": 50,
     "details": "switchMap cancels previous."
@@ -218,7 +218,7 @@
       "Flatten"
     ],
     "correctOptions": [
-      "Operator that runs inner Observable for each outer emission concurrently (not sequentially like concatMap)"
+      "Run inner in parallel"
     ],
     "time": 50,
     "details": "mergeMap runs concurrently."
@@ -232,7 +232,7 @@
       "Sequential"
     ],
     "correctOptions": [
-      "Operator that runs inner Observable sequentially (waits for each to complete before next)"
+      "Queue inner"
     ],
     "time": 50,
     "details": "concatMap runs sequentially."
@@ -246,7 +246,7 @@
       "Drop incoming"
     ],
     "correctOptions": [
-      "Operator that ignores new outer emissions while inner Observable is still running (useful for submit buttons)"
+      "Ignore emissions while busy"
     ],
     "time": 55,
     "details": "exhaustMap ignores if busy."
@@ -260,7 +260,7 @@
       "Take"
     ],
     "correctOptions": [
-      "Operator that takes only first N emissions then completes: take(5)"
+      "Take N items"
     ],
     "time": 40,
     "details": "take limits emissions."
@@ -274,7 +274,7 @@
       "Stop"
     ],
     "correctOptions": [
-      "Operator that completes when notifier Observable emits (e.g., destroy$), useful for auto-unsubscribe: source.pipe(takeUntil(destroy$))"
+      "Complete when notifier emits"
     ],
     "time": 50,
     "details": "takeUntil completes on notifier."
@@ -288,7 +288,7 @@
       "Conditional take"
     ],
     "correctOptions": [
-      "Operator that continues emitting until predicate returns false (inclusive) - when false appears, observable completes"
+      "Complete on false"
     ],
     "time": 50,
     "details": "takeWhile stops on false."
@@ -302,7 +302,7 @@
       "One item"
     ],
     "correctOptions": [
-      "Operator that emits first item (or first matching predicate) then completes; will error if empty unless default provided"
+      "First or default"
     ],
     "time": 50,
     "details": "Returns first emission."
@@ -316,7 +316,7 @@
       "Final"
     ],
     "correctOptions": [
-      "Operator that emits last item (or last matching predicate) then completes; will error if empty unless default provided"
+      "Last or default"
     ],
     "time": 50,
     "details": "Returns last emission."
@@ -330,7 +330,7 @@
       "One result"
     ],
     "correctOptions": [
-      "Operator that emits only if Observable completes with exactly one matching emission, else error"
+      "Emit if only one"
     ],
     "time": 55,
     "details": "single ensures exactly one."
@@ -344,7 +344,7 @@
       "Time"
     ],
     "correctOptions": [
-      "Operator that only emits after duration passes without another emission; good for search inputs"
+      "Wait after last"
     ],
     "time": 50,
     "details": "debounceTime delays emissions."
@@ -358,7 +358,7 @@
       "Same"
     ],
     "correctOptions": [
-      "Operator that suppresses only consecutive duplicate emissions (not all duplicates), keeps last duplicate in sequence"
+      "Don't repeat consecutive"
     ],
     "time": 55,
     "details": "distinctUntilChanged skips repeats."
@@ -372,7 +372,7 @@
       "Drop start"
     ],
     "correctOptions": [
-      "Operator that skips first N emissions then emits rest: skip(3) skips first 3"
+      "Skip N initial"
     ],
     "time": 45,
     "details": "skip skips initial emissions."
@@ -386,7 +386,7 @@
       "Skip"
     ],
     "correctOptions": [
-      "Operator that skips while predicate returns true, then emits rest (including when become false)"
+      "Skip while true"
     ],
     "time": 50,
     "details": "skipWhile skips during condition."
@@ -400,7 +400,7 @@
       "Accumulator"
     ],
     "correctOptions": [
-      "Operator that runs accumulator on each emission with seed returning new accumulated result (like reduce but emits each intermediate)"
+      "Accumulate"
     ],
     "time": 50,
     "details": "scan accumulates values."
@@ -414,7 +414,7 @@
       "Combine"
     ],
     "correctOptions": [
-      "Operator that accumulates using seed over all emissions then emits only final result (unlike scan which emits intermediates)"
+      "Accumulate all"
     ],
     "time": 50,
     "details": "reduce emits final result."
@@ -428,7 +428,7 @@
       "Inspect"
     ],
     "correctOptions": [
-      "Operator for performing side effects (e.g., logging) without altering emissions: tap(val => console.log(val))"
+      "Side effect"
     ],
     "time": 45,
     "details": "tap performs side effects."
@@ -442,7 +442,7 @@
       "Teardown"
     ],
     "correctOptions": [
-      "Operator that runs callback when Observable completes or errors (regardless of completion cause), usually for cleanup"
+      "Cleanup on complete/error"
     ],
     "time": 50,
     "details": "finalize runs on termination."
@@ -456,7 +456,7 @@
       "Error operation"
     ],
     "correctOptions": [
-      "Operator that catches errors and returns error Observable: catchError(err => of('fallback'))"
+      "Handle error"
     ],
     "time": 50,
     "details": "catchError handles errors."
@@ -470,7 +470,7 @@
       "Repeats"
     ],
     "correctOptions": [
-      "Operator that re-subscribes to source upon error (default attempts infinite, use retry({count: 3}) for limited attempts)"
+      "Retry on error"
     ],
     "time": 55,
     "details": "retry resubscribes."
@@ -484,7 +484,7 @@
       "Controlled"
     ],
     "correctOptions": [
-      "Operator that accepts notifier Observable to control retrying, can use to add delays or max attempts: retryWhen(errors => errors.pipe(delay(1000)))"
+      "Retry conditionally"
     ],
     "time": 60,
     "details": "retryWhen controls retries."
@@ -498,7 +498,7 @@
       "Time shift"
     ],
     "correctOptions": [
-      "Operator that delays emissions by due time (in ms or Date) - good for retry delays"
+      "Delay emissions"
     ],
     "time": 45,
     "details": "delay postpones emissions."
@@ -512,7 +512,7 @@
       "Time emission"
     ],
     "correctOptions": [
-      "Creation function that emits sequential numbers each due time from 0 onward: interval(1000)"
+      "Timer"
     ],
     "time": 45,
     "details": "interval emits periodically."
@@ -526,7 +526,7 @@
       "SetTimeout-like"
     ],
     "correctOptions": [
-      "Creation function that after initial delay can optionally emit repeatedly each period: timer(1000, 2000)"
+      "After delay then optionally period"
     ],
     "time": 50,
     "details": "timer is like setInterval."
@@ -540,7 +540,7 @@
       "All values"
     ],
     "correctOptions": [
-      "Combination operator that emits arrays of latest values from each source when any source emits (requires each to emit at least one)"
+      "Latest from all"
     ],
     "time": 55,
     "details": "combineLatest combines latest."
@@ -554,7 +554,7 @@
       "Last from each"
     ],
     "correctOptions": [
-      "Combination function that waits for all to complete then emits array of last value from each (used for HTTP.parallel)"
+      "Wait all then emit last"
     ],
     "time": 55,
     "details": "forkJoin waits for all complete."
@@ -568,7 +568,7 @@
       "Parallel"
     ],
     "correctOptions": [
-      "Combination operator that pairs emissions by index: source A zip B emits [A0,B0] then [A1,B1], etc."
+      "Pair by index"
     ],
     "time": 55,
     "details": "zip pairs by index."
@@ -582,7 +582,7 @@
       "Winner"
     ],
     "correctOptions": [
-      "Combination function that emits from first source to emit, then ignores others (like Promise.race)"
+      "First wins"
     ],
     "time": 55,
     "details": "race uses first winner."
@@ -596,7 +596,7 @@
       "All"
     ],
     "correctOptions": [
-      "Combination operator that emits items from all inner sources concurrently (not in sequential order like concat)"
+      "All concurrent"
     ],
     "time": 50,
     "details": "merge flattens concurrently."
@@ -610,7 +610,7 @@
       "Sequential"
     ],
     "correctOptions": [
-      "Combination operator that runs inner sources in sequence: subscribes to first, emits all, then subscribes to next"
+      "Sequential"
     ],
     "time": 50,
     "details": "concat runs sequentially."
@@ -624,7 +624,7 @@
       "Before"
     ],
     "correctOptions": [
-      "Transformation operator that prepends initial value(s): source.pipe(startWith(initialValue))"
+      "Prepend initial"
     ],
     "time": 45,
     "details": "startWith preprends values."
@@ -638,7 +638,7 @@
       "After"
     ],
     "correctOptions": [
-      "Transformation operator that appends final value(s) before complete: source.pipe(endWith(finalValue))"
+      "Append final"
     ],
     "time": 50,
     "details": "endWith appends values."
@@ -652,7 +652,7 @@
       "Replay in share"
     ],
     "correctOptions": [
-      "Operator that shares subscriptions AND replays specified number of emissions to new subscribers (keep subscription live)"
+      "Share subscription"
     ],
     "time": 60,
     "details": "shareReplay shares and replays."
@@ -666,7 +666,7 @@
       "Share"
     ],
     "correctOptions": [
-      "Operator that shares Observable source with multiple subscribers, creating single underlying subscription (multicast)"
+      "Share subscription"
     ],
     "time": 50,
     "details": "share shares subscription."
@@ -680,7 +680,7 @@
       "Cleanup when zero subscribers"
     ],
     "correctOptions": [
-      "Operator that automatically unsubscribes when subscriber count drops to zero (used with share or publish to auto-cleanup)"
+      "Auto-unsubscribe when zero"
     ],
     "time": 65,
     "details": "refCount auto-unsubscribes."
@@ -694,7 +694,7 @@
       "Publish"
     ],
     "correctOptions": [
-      "Operator that converts source into Connectable (have to call connect to start), enabling multicast to many with single source subscription"
+      "Connect"
     ],
     "time": 60,
     "details": "publish creates Connectable."
@@ -708,7 +708,7 @@
       "Subject factory"
     ],
     "correctOptions": [
-      "Operator that uses provided subjectFactory to multicast to subscribers: source.pipe(multicast(() => new Subject()))"
+      "Subject factory"
     ],
     "time": 65,
     "details": "multicast uses subject factory."
@@ -722,7 +722,7 @@
       "All"
     ],
     "correctOptions": [
-      "Operator that collects all emissions into array and emits that array when source completes"
+      "Collect to array"
     ],
     "time": 50,
     "details": "toArray collects all."
@@ -736,7 +736,7 @@
       "True/False"
     ],
     "correctOptions": [
-      "Operator that returns Observable<boolean> indicating whether every emission passes predicate: every(x => x > 0) returns true if all positive"
+      "All match test"
     ],
     "time": 55,
     "details": "every checks conditions."
@@ -750,7 +750,7 @@
       "First matching"
     ],
     "correctOptions": [
-      "Operator that emits first emission matching predicate then completes; if not found emits undefined then completes (unlike first with error)"
+      "First match"
     ],
     "time": 55,
     "details": "find finds first match."
@@ -764,7 +764,7 @@
       "Index"
     ],
     "correctOptions": [
-      "Operator that emits index of first element matching predicate (or -1 if not found) then completes"
+      "Index of first match"
     ],
     "time": 55,
     "details": "findIndex finds position."
@@ -778,7 +778,7 @@
       "Boolean"
     ],
     "correctOptions": [
-      "Operator that returns true if source completes without emissions (like empty) else false"
+      "Check if empty"
     ],
     "time": 55,
     "details": "isEmpty checks for emissions."
@@ -792,7 +792,7 @@
       "Fallback"
     ],
     "correctOptions": [
-      "Operator that emits default value if no emissions before complete: source.pipe(defaultIfEmpty('fallback'))"
+      "Emit default if none"
     ],
     "time": 55,
     "details": "defaultIfEmpty provides fallback."
@@ -806,7 +806,7 @@
       "From position"
     ],
     "correctOptions": [
-      "Operator that emits only item at given index (throws error if not found unless default provided as second arg)"
+      "Emit only single at index"
     ],
     "time": 55,
     "details": "elementAt gets single item."
@@ -820,7 +820,7 @@
       "Sample with"
     ],
     "correctOptions": [
-      "Operator that emits latest from source when notifier emits (like sampleTime but triggered). Use: source.pipe(sample(notifier$))"
+      "Emit last with notifier"
     ],
     "time": 60,
     "details": "sample emits latest on notifier."
@@ -834,7 +834,7 @@
       "Timer"
     ],
     "correctOptions": [
-      "Operator that emits latest from source every specified period regardless of source emissions"
+      "Emit periodically"
     ],
     "time": 55,
     "details": "sampleTime emits regularly."
@@ -848,7 +848,7 @@
       "With time"
     ],
     "correctOptions": [
-      "Operator that returns object {value, interval} with ms since previous emission (needs TimeInterval config)"
+      "Interval"
     ],
     "time": 60,
     "details": "TimeInterval provides timing."
@@ -862,7 +862,7 @@
       "Date"
     ],
     "correctOptions": [
-      "Operator that returns {value, timestamp} with Date timestamp for each emission"
+      "Date"
     ],
     "time": 55,
     "details": "timestamp provides date."
@@ -876,7 +876,7 @@
       "Error"
     ],
     "correctOptions": [
-      "Operator that errors if no emission within specified due time (or Date) before source completes"
+      "Error if no emission"
     ],
     "time": 55,
     "details": "timeout triggers error."
@@ -890,7 +890,7 @@
       "Switch"
     ],
     "correctOptions": [
-      "Operator that switch to provided Observable when source times out before emitting (timeoutWith(1000, fallback$))"
+      "Switch on timeout"
     ],
     "time": 60,
     "details": "timeoutWith uses alternate."
@@ -904,7 +904,7 @@
       "Disposables"
     ],
     "correctOptions": [
-      "Creation function that creates Observable using factory that also returns disposable to dispose on unsubscribe"
+      "Create with resources"
     ],
     "time": 60,
     "details": "using creates with resources."
@@ -918,7 +918,7 @@
       "Unsubscribe"
     ],
     "correctOptions": [
-      "Pattern using using() that auto-disposes stream when component destroys via takeUntilDestroy (or similar pattern using takeUntil(destroy$))"
+      "Auto-cleanup"
     ],
     "time": 70,
     "details": "Auto-unsubscribe pattern."
@@ -932,7 +932,7 @@
       "If"
     ],
     "correctOptions": [
-      "Creation function that returns Observable based on condition: iif(condition, trueBranch$, falseBranch$)"
+      "True/false switch"
     ],
     "time": 55,
     "details": "iif conditionally switches."
@@ -946,7 +946,7 @@
       "Lazy create"
     ],
     "correctOptions": [
-      "Creation function that creates Observable each time subscription occurs (good for lazy initialization) by defer(() => createObs$)"
+      "Create lazy observable"
     ],
     "time": 65,
     "details": "defer creates lazily."
@@ -960,7 +960,7 @@
       "Error source"
     ],
     "correctOptions": [
-      "Creation function that creates Observable that errors immediately on subscription: throwError(() => new Error('msg'))"
+      "Error immediately"
     ],
     "time": 55,
     "details": "throwError creates error source."
@@ -974,7 +974,7 @@
       "Immediate complete"
     ],
     "correctOptions": [
-      "Constants representing Observable that completes immediately without emissions (useful as fallback or default value); used with EMPTY if need Observable type"
+      "Complete immediately"
     ],
     "time": 55,
     "details": "EMPTY completes immediately."
@@ -988,7 +988,7 @@
       "No emissions and never"
     ],
     "correctOptions": [
-      "Constant representing Observable that never emits and never completes (used for testing or complex timer patterns) - dangerous because will never auto-unsubscribe"
+      "Never emits or complete"
     ],
     "time": 55,
     "details": "NEVER never completes."
@@ -1002,7 +1002,7 @@
       "Two types"
     ],
     "correctOptions": [
-      "Subject: push-based without store. BehaviorSubject: push-based with latest current value (requires initial value), can getValue() and value (synchronous)"
+      "Subject has no initial/Behavior has last current"
     ],
     "time": 70,
     "details": "Behavior adds current value."
@@ -1016,7 +1016,7 @@
       "Adjacent"
     ],
     "correctOptions": [
-      "Operator that emits consecutive pairs: [prev, current] on each emission"
+      "Previous and current"
     ],
     "time": 55,
     "details": "pairwise emits pairs."
@@ -1030,7 +1030,7 @@
       "Group"
     ],
     "correctOptions": [
-      "Operator that collects emissions into arrays, emitting when closingNotifier emits or completes"
+      "Collect emissions"
     ],
     "time": 55,
     "details": "buffer collects into arrays."
@@ -1044,7 +1044,7 @@
       "Buffer with timer"
     ],
     "correctOptions": [
-      "Operator that collects emissions into arrays on time interval: bufferTime(1000)"
+      "Time-based buffer"
     ],
     "time": 55,
     "details": "bufferTime collects by time."
@@ -1058,7 +1058,7 @@
       "Count buffer"
     ],
     "correctOptions": [
-      "Operator that collects N emissions into arrays: bufferCount(5) emits when 5 items collected"
+      "Count-based buffer"
     ],
     "time": 55,
     "details": "bufferCount collects by count."
@@ -1072,7 +1072,7 @@
       "Create window"
     ],
     "correctOptions": [
-      "Operator that windows emissions into separate Observables when closingNotifier emits"
+      "Window observable"
     ],
     "time": 60,
     "details": "window creates observable windows."
@@ -1086,7 +1086,7 @@
       "Observable window"
     ],
     "correctOptions": [
-      "Operator that creates new Observable each time interval: windowTime(1000)"
+      "Time-based window"
     ],
     "time": 60,
     "details": "windowTime time-windows."
@@ -1100,24 +1100,27 @@
       "Observable window"
     ],
     "correctOptions": [
-      "Operator that creates new Observable every N emissions: windowCount(5)"
+      "Count-based window"
     ],
     "time": 60,
     "details": "windowCount count-windows."
   },
   {
-    "question": "What is groupBy in RxJS?",
+    "question": "What is @ViewChild?",
     "options": [
-      "Group by key",
-      "Group emissions",
-      "Partition",
-      "Key group"
+      "DOM access",
+      "Template reference",
+      "After init",
+      "All of the above"
     ],
     "correctOptions": [
-      "Operator that groups emissions by key function returning Observable for each group"
+      "DOM access",
+      "Template reference",
+      "After init",
+      "All of the above"
     ],
-    "time": 60,
-    "details": "groupBy creates grouped observables."
+    "time": 35,
+    "details": "What is @ViewChild? explanation."
   },
   {
     "question": "What is materialize in RxJS?",
@@ -1128,7 +1131,7 @@
       "Notification wrapper"
     ],
     "correctOptions": [
-      "Operator that wraps emissions as Next notifications and errors as Error notifications, complete as Complete notification"
+      "Wrap in notification"
     ],
     "time": 70,
     "details": "materialize wraps in notifications."
@@ -1142,7 +1145,7 @@
       "Notification unwrapper"
     ],
     "correctOptions": [
-      "Operator that unwraps materialize notifications back to source emissions"
+      "Unwrap notifications"
     ],
     "time": 65,
     "details": "dematerialize unwraps notifications."
@@ -1156,7 +1159,7 @@
       "Async delivery"
     ],
     "correctOptions": [
-      "Operator that changes where emissions are delivered to observers: observeOn(asyncScheduler)"
+      "Schedule on scheduler"
     ],
     "time": 60,
     "details": "observeOn controls scheduler."
@@ -1170,7 +1173,7 @@
       "Start on scheduler"
     ],
     "correctOptions": [
-      "Operator that changes when subscription starts: subscribeOn(asyncScheduler)"
+      "Subscribe on scheduler"
     ],
     "time": 60,
     "details": "subscribeOn controls when subscribed."
@@ -1184,7 +1187,7 @@
       "Different timing"
     ],
     "correctOptions": [
-      "timestamp gives absolute Date; timeInterval gives ms since previous emission"
+      "Date vs time difference"
     ],
     "time": 65,
     "details": "timestamp is absolute, timeInterval relative."
@@ -1198,7 +1201,7 @@
       "Silence"
     ],
     "correctOptions": [
-      "Operator that ignores emissions while inner Observable is emitting, then emits latest after inner completes"
+      "Ignore during emit"
     ],
     "time": 60,
     "details": "audit ignores during activity."
@@ -1212,7 +1215,7 @@
       "Timer-based ignore"
     ],
     "correctOptions": [
-      "Operator that emits latest after duration passes without another source emission: auditTime(1000)"
+      "Time-based audit"
     ],
     "time": 60,
     "details": "auditTime ignores for duration."
@@ -1226,7 +1229,7 @@
       "Throttle"
     ],
     "correctOptions": [
-      "Operator that emits first, ignores until duration passes then repeats: throttleTime(1000)"
+      "Throttle emissions"
     ],
     "time": 60,
     "details": "throttle rate-limits."
@@ -1240,7 +1243,7 @@
       "Limit over time"
     ],
     "correctOptions": [
-      "Operator that emits leading, then ignores until duration passes: throttleTime(1000)"
+      "Time-based throttle"
     ],
     "time": 60,
     "details": "throttleTime rate-limits with time."
@@ -1254,7 +1257,7 @@
       "Empty vs default"
     ],
     "correctOptions": [
-      "empty() completes immediately, defaultIfEmpty emits default if no emissions then completes"
+      "Emit default vs complete immediately"
     ],
     "time": 60,
     "details": "empty completes, defaultIfEmpty emits default."
@@ -1268,7 +1271,7 @@
       "Drop emissions"
     ],
     "correctOptions": [
-      "Operator that suppresses all emissions (ignores next), only passes error and complete"
+      "Suppress all emissions"
     ],
     "time": 55,
     "details": "ignoreElements suppresses emissions."
@@ -1282,7 +1285,7 @@
       "Single vs first"
     ],
     "correctOptions": [
-      "first() returns first emission, single() errors if not exactly one emission (or matching)"
+      "Error on multiple vs return first"
     ],
     "time": 65,
     "details": "single requires exactly one."
@@ -1296,7 +1299,7 @@
       "Number emit"
     ],
     "correctOptions": [
-      "Operator that returns Observable<number> with total count of emissions when source completes"
+      "Count total emissions"
     ],
     "time": 55,
     "details": "count returns total count."
@@ -1310,7 +1313,7 @@
       "Different purposes"
     ],
     "correctOptions": [
-      "empty() creates Observable that completes, isEmpty() returns Observable<boolean> checking if source emits"
+      "Check vs create"
     ],
     "time": 65,
     "details": "empty creates, isEmpty checks."
@@ -1324,7 +1327,7 @@
       "Same sequence"
     ],
     "correctOptions": [
-      "Operator that compares two Observables, returns Observable<boolean> if same sequence"
+      "Compare emissions"
     ],
     "time": 60,
     "details": "sequenceEqual compares sequences."
@@ -1338,7 +1341,7 @@
       "Compare values"
     ],
     "correctOptions": [
-      "Operator that returns minimum or maximum emission using comparator (works with numbers by default)"
+      "Min/max value"
     ],
     "time": 55,
     "details": "min and max find extremes."
@@ -1352,7 +1355,7 @@
       "Accumulator"
     ],
     "correctOptions": [
-      "Operator that returns sum of all numeric emissions when source completes"
+      "Sum of values"
     ],
     "time": 55,
     "details": "sum calculates total."
@@ -1366,21 +1369,7 @@
       "Different purpose"
     ],
     "correctOptions": [
-      "filter() returns emissions matching predicate, every() returns Observable<boolean> if all match"
-    ],
-    "time": 60,
-    "details": "filter selects, every checks."
-  },
-  {
-    "question": "What is every in RxJS vs filter?",
-    "options": [
-      "Check all vs select matching",
-      "Two operations",
-      "Comparison",
-      "Different purpose"
-    ],
-    "correctOptions": [
-      "filter returns emissions matching predicate, every returns Observable boolean if all match"
+      "Check all vs select matching"
     ],
     "time": 60,
     "details": "filter selects, every checks."
@@ -1394,9 +1383,519 @@
       "Difference"
     ],
     "correctOptions": [
-      "empty() creates Observable that completes; EMPTY is constant - same behavior"
+      "Create vs create"
     ],
     "time": 55,
     "details": "empty and EMPTY are same."
+  },
+  {
+    "question": "What is directive? (Level 5 #101)",
+    "options": [
+      "DOM manipulation",
+      "Structural",
+      "Attribute",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "DOM manipulation",
+      "Structural",
+      "Attribute",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is directive? explanation."
+  },
+  {
+    "question": "What is service? (Level 5 #102)",
+    "options": [
+      "Dependency injection",
+      "Singleton",
+      "Business logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Dependency injection",
+      "Singleton",
+      "Business logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is service? explanation."
+  },
+  {
+    "question": "What is pipe? (Level 5 #103)",
+    "options": [
+      "Transform",
+      "Pure",
+      "Impure",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Transform",
+      "Pure",
+      "Impure",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is pipe? explanation."
+  },
+  {
+    "question": "What is module? (Level 5 #104)",
+    "options": [
+      "Bootstrap",
+      "Declarations",
+      "Imports",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Bootstrap",
+      "Declarations",
+      "Imports",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is module? explanation."
+  },
+  {
+    "question": "What is component? (Level 5 #105)",
+    "options": [
+      "Template",
+      "Class",
+      "Metadata",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Template",
+      "Class",
+      "Metadata",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is component? explanation."
+  },
+  {
+    "question": "What is routing? (Level 5 #106)",
+    "options": [
+      "Path",
+      "Component",
+      "Parameters",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Path",
+      "Component",
+      "Parameters",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is lazy loading? (Level 5 #107)",
+    "options": [
+      "Performance",
+      "On-demand",
+      "Module",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Performance",
+      "On-demand",
+      "Module",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is lazy loading? explanation."
+  },
+  {
+    "question": "What is AOT? (Level 5 #108)",
+    "options": [
+      "Compilation",
+      "Performance",
+      "Production",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Compilation",
+      "Performance",
+      "Production",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is AOT? explanation."
+  },
+  {
+    "question": "What is change detection? (Level 5 #109)",
+    "options": [
+      "OnPush",
+      "Default",
+      "Manual",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "OnPush",
+      "Default",
+      "Manual",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is change detection? explanation."
+  },
+  {
+    "question": "What is dependency injection? (Level 5 #110)",
+    "options": [
+      "Service",
+      "Provider",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Service",
+      "Provider",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
   }
 ]

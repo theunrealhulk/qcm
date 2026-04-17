@@ -182,18 +182,21 @@
     "details": "Specify files after -- for selective stashing."
   },
   {
-    "question": "What does -u flag do with stash?",
+    "question": "What is the event loop?",
     "options": [
-      "Include untracked files",
-      "Update stash",
-      "Use message",
-      "Unstage stash"
+      "Async handling",
+      "Call stack",
+      "Task queue",
+      "All of the above"
     ],
     "correctOptions": [
-      "Include untracked files"
+      "Async handling",
+      "Call stack",
+      "Task queue",
+      "All of the above"
     ],
     "time": 35,
-    "details": "-u (--include-untracked) adds new files to stash."
+    "details": "What is the event loop? explanation."
   },
   {
     "question": "What does -a flag do with stash?",
@@ -392,18 +395,21 @@
     "details": "-X removes only .gitignore'd files."
   },
   {
-    "question": "What is the -i flag for git clean?",
+    "question": "What is version control?",
     "options": [
-      "Interactive mode",
-      "Include all",
-      "Ignore errors",
-      "Immediate"
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
     ],
     "correctOptions": [
-      "Interactive mode"
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
     ],
     "time": 35,
-    "details": "-i opens interactive clean mode."
+    "details": "What is version control? explanation."
   },
   {
     "question": "What does git clean require?",
@@ -924,479 +930,581 @@
     "details": "Choose pop when done with stash; apply to keep."
   },
   {
-    "question": "What is a git alias?",
+    "question": "What is git init? (Level 4 #101)",
     "options": [
-      "Shortcut for commands",
-      "Branch name",
-      "Remote name",
-      "Commit reference"
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
     ],
     "correctOptions": [
-      "Shortcut for commands"
-    ],
-    "time": 25,
-    "details": "Aliases create shortcuts for longer commands."
-  },
-  {
-    "question": "How do you create an alias?",
-    "options": [
-      "git config --global alias.co checkout",
-      "git alias co checkout",
-      "alias git.co checkout",
-      "git set alias co checkout"
-    ],
-    "correctOptions": [
-      "git config --global alias.co checkout"
-    ],
-    "time": 30,
-    "details": "git config alias creates command aliases."
-  },
-  {
-    "question": "What is git stash?",
-    "options": [
-      "Temporarily save work",
-      "Delete work",
-      "Share work",
-      "Publish work"
-    ],
-    "correctOptions": [
-      "Temporarily save work"
-    ],
-    "time": 25,
-    "details": "Stash temporarily shelves changes for later use."
-  },
-  {
-    "question": "How do you stash changes?",
-    "options": [
-      "git stash",
-      "git save",
-      "git push",
-      "git store"
-    ],
-    "correctOptions": [
-      "git stash"
-    ],
-    "time": 20,
-    "details": "git stash saves uncommitted changes temporarily."
-  },
-  {
-    "question": "How do you apply stashed changes?",
-    "options": [
-      "git stash apply",
-      "git stash get",
-      "git stash pop",
-      "Both apply and pop work"
-    ],
-    "correctOptions": [
-      "Both apply and pop work"
-    ],
-    "time": 25,
-    "details": "apply keeps stash, pop applies and removes it."
-  },
-  {
-    "question": "What is the difference between stash pop and apply?",
-    "options": [
-      "pop removes stash, apply keeps it",
-      "apply removes stash, pop keeps it",
-      "Both remove",
-      "Neither removes"
-    ],
-    "correctOptions": [
-      "pop removes stash, apply keeps it"
-    ],
-    "time": 30,
-    "details": "pop removes the stash after applying; apply keeps it."
-  },
-  {
-    "question": "How do you stash with a message?",
-    "options": [
-      "git stash push -m 'message'",
-      "git stash -m 'message'",
-      "git stash save 'message'",
-      "Both push and save work"
-    ],
-    "correctOptions": [
-      "Both push and save work"
-    ],
-    "time": 30,
-    "details": "Both -m and save create a stashed change with message."
-  },
-  {
-    "question": "How do you list stashes?",
-    "options": [
-      "git stash list",
-      "git stash show",
-      "git stash display",
-      "git stash all"
-    ],
-    "correctOptions": [
-      "git stash list"
-    ],
-    "time": 20,
-    "details": "git stash list shows all stashed changes."
-  },
-  {
-    "question": "What does git stash show display?",
-    "options": [
-      "Changes in stash",
-      "Stash list",
-      "Stash count",
-      "Stash message"
-    ],
-    "correctOptions": [
-      "Changes in stash"
-    ],
-    "time": 25,
-    "details": "git stash show displays what was stashed."
-  },
-  {
-    "question": "How do you delete a stash?",
-    "options": [
-      "git stash drop stash@{n}",
-      "git stash remove stash@{n}",
-      "git stash delete stash@{n}",
-      "git stash clear stash@{n}"
-    ],
-    "correctOptions": [
-      "git stash drop stash@{n}"
-    ],
-    "time": 30,
-    "details": "git stash drop removes a specific stash."
-  },
-  {
-    "question": "How do you clear all stashes?",
-    "options": [
-      "git stash clear",
-      "git stash drop all",
-      "git stash remove all",
-      "git stash delete all"
-    ],
-    "correctOptions": [
-      "git stash clear"
-    ],
-    "time": 25,
-    "details": "git stash clear removes all stashed changes."
-  },
-  {
-    "question": "What is stash@{0}?",
-    "options": [
-      "Most recent stash",
-      "Oldest stash",
-      "First stash",
-      "Named stash"
-    ],
-    "correctOptions": [
-      "Most recent stash"
-    ],
-    "time": 25,
-    "details": "Stash@{0} is the most recent stash entry."
-  },
-  {
-    "question": "How do you stash specific files?",
-    "options": [
-      "git stash push -m 'msg' file1 file2",
-      "git stash file1 file2",
-      "git stash only file1 file2",
-      "git stash add file1 file2"
-    ],
-    "correctOptions": [
-      "git stash push -m 'msg' file1 file2"
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Specify files after -- for selective stashing."
+    "details": "What is git init? explanation."
   },
   {
-    "question": "What does -u flag do with stash?",
+    "question": "What is git clone? (Level 4 #102)",
     "options": [
-      "Include untracked files",
-      "Update stash",
-      "Use message",
-      "Unstage stash"
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
     ],
     "correctOptions": [
-      "Include untracked files"
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
     ],
     "time": 35,
-    "details": "-u (--include-untracked) adds new files to stash."
+    "details": "What is git clone? explanation."
   },
   {
-    "question": "What does -a flag do with stash?",
+    "question": "What is git branch? (Level 4 #103)",
     "options": [
-      "Include ignored files",
-      "All branches",
-      "All stashes",
-      "All commits"
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
     ],
     "correctOptions": [
-      "Include ignored files"
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
     ],
     "time": 35,
-    "details": "-a (--all) includes .gitignore'd files in stash."
+    "details": "What is git branch? explanation."
   },
   {
-    "question": "What is git stash branch?",
+    "question": "What is git merge? (Level 4 #104)",
     "options": [
-      "Create branch from stash",
-      "Stash current branch",
-      "Switch branch",
-      "Delete branch"
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
     ],
     "correctOptions": [
-      "Create branch from stash"
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
     ],
     "time": 35,
-    "details": "stash branch creates a new branch and applies stash."
+    "details": "What is git merge? explanation."
   },
   {
-    "question": "What does git stash branch name stash@{n} do?",
+    "question": "What is git rebase? (Level 4 #105)",
     "options": [
-      "New branch with stashed changes",
-      "Stash to branch",
-      "Branch to stash",
-      "Delete branch to stash"
+      "History",
+      "Linear",
+      "Interactive",
+      "All of the above"
     ],
     "correctOptions": [
-      "New branch with stashed changes"
-    ],
-    "time": 40,
-    "details": "Creates branch and applies selected stash to it."
-  },
-  {
-    "question": "Can you apply stash to different branch?",
-    "options": [
-      "Yes",
-      "No",
-      "Only same branch",
-      "Only main branch"
-    ],
-    "correctOptions": [
-      "Yes"
-    ],
-    "time": 25,
-    "details": "Stashes can be applied to any branch."
-  },
-  {
-    "question": "What happens to staged changes when you stash?",
-    "options": [
-      "Gets stashed with changes",
-      "Gets unstaged",
-      "Gets committed",
-      "Gets lost"
-    ],
-    "correctOptions": [
-      "Gets stashed with changes"
+      "History",
+      "Linear",
+      "Interactive",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Stashing includes both staged and unstaged changes."
+    "details": "What is git rebase? explanation."
   },
   {
-    "question": "How do you stash untracked files only?",
+    "question": "What is git reset? (Level 4 #107)",
     "options": [
-      "git stash -u",
-      "git stash --tracked",
-      "git stash only-untracked",
-      "git stash -only"
+      "Undo",
+      "Staging",
+      "Soft",
+      "All of the above"
     ],
     "correctOptions": [
-      "git stash -u"
+      "Undo",
+      "Staging",
+      "Soft",
+      "All of the above"
     ],
     "time": 35,
-    "details": "-u stashes untracked files along with changes."
+    "details": "What is git reset? explanation."
   },
   {
-    "question": "What is the stash reference format?",
+    "question": "What is git diff? (Level 4 #108)",
     "options": [
-      "stash@{n}",
-      "stash^n",
-      "stash~n",
-      "stash:n"
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
     ],
     "correctOptions": [
-      "stash@{n}"
-    ],
-    "time": 25,
-    "details": "Stash references use the stash@{n} format."
-  },
-  {
-    "question": "How many stashes can you have?",
-    "options": [
-      "Unlimited",
-      "10",
-      "50",
-      "100"
-    ],
-    "correctOptions": [
-      "Unlimited"
-    ],
-    "time": 20,
-    "details": "You can have unlimited stashes."
-  },
-  {
-    "question": "What is git clean?",
-    "options": [
-      "Remove untracked files",
-      "Remove tracked files",
-      "Remove commits",
-      "Remove branches"
-    ],
-    "correctOptions": [
-      "Remove untracked files"
-    ],
-    "time": 25,
-    "details": "git clean removes untracked files from working directory."
-  },
-  {
-    "question": "What does git clean -n do?",
-    "options": [
-      "Preview what would be deleted",
-      "Delete nothing",
-      "Force delete",
-      "Delete all"
-    ],
-    "correctOptions": [
-      "Preview what would be deleted"
-    ],
-    "time": 30,
-    "details": "-n (--dry-run) shows what would be deleted."
-  },
-  {
-    "question": "What does git clean -f do?",
-    "options": [
-      "Force delete untracked",
-      "No delete",
-      "Preview delete",
-      "Directory delete"
-    ],
-    "correctOptions": [
-      "Force delete untracked"
-    ],
-    "time": 30,
-    "details": "-f (--force) is required to actually delete."
-  },
-  {
-    "question": "What does git clean -d do?",
-    "options": [
-      "Remove directories too",
-      "Files only",
-      "Recursive only",
-      "No effect"
-    ],
-    "correctOptions": [
-      "Remove directories too"
-    ],
-    "time": 30,
-    "details": "-d also removes untracked directories."
-  },
-  {
-    "question": "What is git clean -x?",
-    "options": [
-      "Include ignored files",
-      "Exclude ignored files",
-      "Only ignored",
-      "Skip ignored"
-    ],
-    "correctOptions": [
-      "Include ignored files"
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
     ],
     "time": 35,
-    "details": "-x removes files ignored by .gitignore too."
+    "details": "What is git diff? explanation."
   },
   {
-    "question": "What is git clean -X?",
+    "question": "What is git log? (Level 4 #109)",
     "options": [
-      "Only ignored files",
-      "All files",
-      "No ignored",
-      "Some ignored"
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
     ],
     "correctOptions": [
-      "Only ignored files"
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
     ],
     "time": 35,
-    "details": "-X removes only .gitignore'd files."
+    "details": "What is git log? explanation."
   },
   {
-    "question": "What is git stash?",
+    "question": "What is git remote? (Level 4 #110)",
     "options": [
-      "Temporarily save work",
-      "Delete work",
-      "Share work",
-      "Publish work"
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
     ],
     "correctOptions": [
-      "Temporarily save work"
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
     ],
-    "time": 25,
-    "details": "Stash temporarily shelves changes for later use."
+    "time": 35,
+    "details": "What is git remote? explanation."
   },
   {
-    "question": "How do you stash changes?",
+    "question": "What is algorithm?",
     "options": [
-      "git stash",
-      "git save",
-      "git push",
-      "git store"
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
     ],
     "correctOptions": [
-      "git stash"
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
     ],
-    "time": 20,
-    "details": "git stash saves uncommitted changes temporarily."
+    "time": 35,
+    "details": "What is algorithm? explanation."
   },
   {
-    "question": "How do you apply stashed changes?",
+    "question": "What is routing?",
     "options": [
-      "git stash apply",
-      "git stash get",
-      "git stash pop",
-      "Both apply and pop work"
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
     ],
     "correctOptions": [
-      "Both apply and pop work"
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
     ],
-    "time": 25,
-    "details": "apply keeps stash, pop applies and removes it."
+    "time": 35,
+    "details": "What is routing? explanation."
   },
   {
-    "question": "How do you list stashes?",
+    "question": "What is composition?",
     "options": [
-      "git stash list",
-      "git stash show",
-      "git stash display",
-      "git stash all"
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
     ],
     "correctOptions": [
-      "git stash list"
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
     ],
-    "time": 20,
-    "details": "git stash list shows all stashed changes."
+    "time": 35,
+    "details": "What is composition? explanation."
   },
   {
-    "question": "How do you delete a stash?",
+    "question": "What is YAML?",
     "options": [
-      "git stash drop stash@{n}",
-      "git stash remove stash@{n}",
-      "git stash delete stash@{n}",
-      "git stash clear stash@{n}"
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
     ],
     "correctOptions": [
-      "git stash drop stash@{n}"
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
     ],
-    "time": 30,
-    "details": "git stash drop removes a specific stash."
+    "time": 35,
+    "details": "What is YAML? explanation."
   },
   {
-    "question": "What is stash@{0}?",
+    "question": "What is testing?",
     "options": [
-      "Most recent stash",
-      "Oldest stash",
-      "First stash",
-      "Named stash"
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
     ],
     "correctOptions": [
-      "Most recent stash"
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
     ],
-    "time": 25,
-    "details": "Stash@{0} is the most recent stash entry."
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
   }
 ]

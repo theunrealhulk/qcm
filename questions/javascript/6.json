@@ -1,93 +1,1916 @@
 [
-  {"question": "What is Realms API?", "options": ["Separate globals", "Different realm", "Isolated", "Sandbox"], "correctOptions": ["Separate globals"], "time": 50, "details": "Realms provide separate global environments within same agent."},
-  {"question": "What is ShadowRealm?", "options": ["Realm wrapper", "Secure sandbox", "Isolated world", "VM"], "correctOptions": ["Secure sandbox"], "time": 55, "details": "ShadowRealm creates sandbox with own globals."},
-  {"question": "How does ShadowRealm.evaluate() work?", "options": ["Execute code", "Run in sandbox", "Evaluate", "Run"], "correctOptions": ["Run in sandbox"], "time": 55, "details": "evaluate() executes code in ShadowRealm's global."},
-  {"question": "What is import attributes?", "options": ["Import with metadata", "Type hints", "Assertions", "Metadata"], "correctOptions": ["Import with metadata"], "time": 50, "details": "Import attributes add metadata to imports like with {type: 'json'}."},
-  {"question": "What is JSON modules?", "options": ["Import JSON", "JSON imports", "Direct import", "Static import"], "correctOptions": ["Direct import"], "time": 50, "details": "JSON modules import via import with {type: 'json'}."},
-  {"question": "What is CSS modules?", "options": ["Import CSS", "Scoped styles", "Module import", "Typed CSS"], "correctOptions": ["Scoped styles"], "time": 50, "details": "CSS modules import styles as modules with exports."},
-  {"question": "What is Wasm GC proposals?", "options": ["Wasm with GC", "Garbage collect", "GC for Wasm", "Wasm types"], "correctOptions": ["Garbage collect"], "time": 55, "details": "Wasm GC adds garbage collection to WebAssembly."},
-  {"question": "What is Atomics.waitAsync()?", "options": ["Non-block wait", "Async wait", "Promise-based", "Non-blocking"], "correctOptions": ["Promise-based"], "time": 55, "details": "Atomics.waitAsync() returns Promise instead of blocking."},
-  {"question": "What is SharedArrayBuffer changed?", "options": ["Cross-origin isolated", "Security requirements", "Coep/coop", "Requirements"], "correctOptions": ["Security requirements"], "time": 55, "details": "Now requires cross-origin isolation (COOP/COEP)."},
-  {"question": "What is self.pro卒?", "options": ["Service worker", "Self refer", "Global", "Worker"], "correctOptions": ["Service worker"], "time": 45, "details": "self refers to global scope in workers."},
-  {"question": "What is Cache API?", "options": ["Request/response", "Storage", "Network cache", "Offline"], "correctOptions": ["Request/response"], "time": 50, "details": "Cache API stores Request/Response pairs."},
-  {"question": "What is caches.open()?", "options": ["Open cache", "Get cache", "Create cache", "Access"], "correctOptions": ["Create cache"], "time": 50, "details": "caches.open(name) creates/gets named cache."},
-  {"question": "What is Cache.match()?", "options": ["Find request", "Match response", "Search", "Lookup"], "correctOptions": ["Find request"], "time": 50, "details": "match() finds cached response for request."},
-  {"question": "What is Cache.put()?", "options": ["Store request", "Add to cache", "Cache response", "Save"], "correctOptions": ["Add to cache"], "time": 50, "details": "put() stores request/response pair in cache."},
-  {"question": "What is Cache.matchAll()?", "options": ["All matches", "Multiple responses", "Search all", "Find"], "correctOptions": ["Multiple responses"], "time": 55, "details": "matchAll() returns all matching responses."},
-  {"question": "What is Cache.delete()?", "options": ["Remove cache", "Delete response", "Evict", "Remove"], "correctOptions": ["Delete response"], "time": 50, "details": "delete() removes entry from cache."},
-  {"question": "What is Background Sync?", "options": ["Deferred sync", "Background", "Retry", "Offline"], "correctOptions": ["Deferred sync"], "time": 50, "details": "Background Sync postpones sync until online."},
-  {"question": "What is sync event?", "options": ["Sync trigger", "Background event", "Deferred event", "Retry"], "correctOptions": ["Background event"], "time": 55, "details": "sync event fires when sync is possible."},
-  {"question": "What is Periodic Background Sync?", "options": ["Regular sync", "Scheduled", "Periodic", "Periodic API"], "correctOptions": ["Scheduled"], "time": 55, "details": "Periodic Background Sync allows periodic updates."},
-  {"question": "What is register() for sync?", "options": ["Register sync", "Schedule", "Periodic", "Create"], "correctOptions": ["Schedule"], "time": 55, "details": "register() schedules periodic sync."},
-  {"question": "What is Content Index API?", "options": ["Index content", "List content", "For offline", "Indexing"], "correctOptions": ["Index content"], "time": 55, "details": "Content Index indexes content for offline."},
-  {"question": "What is contentIndex.add()?", "options": ["Add content", "Index item", "Register", "Add"], "correctOptions": ["Index item"], "time": 55, "details": "contentIndex.add() indexes content."},
-  {"question": "What is Compute Pressure?", "options": ["System load", "Performance", "CPU load", "Metrics"], "correctOptions": ["CPU load"], "time": 55, "details": "Compute Pressure API exposes CPU load states."},
-  {"question": "What is pressure state?", "options": ["CPU level", "System state", "Load level", "Category"], "correctOptions": ["CPU level"], "time": 55, "details": "States: nominal, fair, serious, critical."},
-  {"question": "What is File System SyncAccessHandle?", "options": ["Sync file", "Synchronous", "Direct access", "Quick"], "correctOptions": ["Synchronous"], "time": 55, "details": "SyncAccessHandle provides synchronous access."},
-  {"question": "What does write() return in SyncAccessHandle?", "options": ["Bytes written", "Number", "Length", "Result"], "correctOptions": ["Bytes written"], "time": 55, "details": "Returns number of bytes written."},
-  {"question": "What is getWriter()?", "options": ["Create writer", "Writable", "Stream", "Create"], "correctOptions": ["Create writer"], "time": 55, "details": "Creates WritableStream for file."},
-  {"question": "What is isMultiScreen?", "options": ["Multi-display", "Multiple screens", "Screen API", "Detecting"], "correctOptions": ["Multi-display"], "time": 55, "details": "Window Management detects multiple displays."},
-  {"question": "What is getScreens()?", "options": ["Screen list", "All screens", "Display info", "Fetch"], "correctOptions": ["All screens"], "time": 55, "details": "getScreens() returns available screens."},
-  {"question": "What is Detailed Screen info?", "options": ["Screen data", "Properties", "Info", "Extended"], "correctOptions": ["Screen data"], "time": 60, "details": "Returns id, label, scaleFactor, etc."},
-  {"question": "What is multi-window experience?", "options": ["Multiple windows", "Tabs", "Multiple", "Scope"], "correctOptions": ["Multiple windows"], "time": 60, "details": "Opening multiple app windows from single install."},
-  {"question": "What is WindowControlsOverlay?", "options": ["Title bar", "Customize", "Title area", "Overlay"], "correctOptions": ["Title area"], "time": 55, "details": "WindowControlsOverlay customizes title bar."},
-  {"question": "What is getTitlebarSurfaceRect()?", "options": ["Title bar area", "Coordinates", "Bounds", "Rect"], "correctOptions": ["Title bar area"], "time": 60, "details": "Returns bounds of title bar."},
-  {"question": "What is isVisible?", "options": ["Window visible", "In view", "Shown property", "On screen"], "correctOptions": ["In view"], "time": 55, "details": "isVisible indicates window is showing."},
-  {"question": "What is EyeDropper API?", "options": ["Color picker", "System picker", "Sample color", "Sampled"], "correctOptions": ["System picker"], "time": 55, "details": "EyeDropper shows system color picker."},
-  {"question": "What is show() method?", "options": ["Open picker", "Pick color", "Trigger", "Activate"], "correctOptions": ["Open picker"], "time": 55, "details": "show() opens system color picker."},
-  {"question": "What is the return value?", "options": ["Color result", "Promise", "Color", "Hex"], "correctOptions": ["Color result"], "time": 55, "details": "Returns Promise with color hex."},
-  {"question": "What is Idle Detection?", "options": ["User idle", "Timeout", "Inactive", "State"], "correctOptions": ["User idle"], "time": 55, "details": "Detects when user becomes inactive."},
-  {"question": "What is requestIdleCallback()?", "options": ["Queue callback", "Idle work", "Schedule", "When idle"], "correctOptions": ["Queue callback"], "time": 55, "details": "requestIdleCallback() schedules idle work."},
-  {"question": "What does IdleCallback deadline?", "options": ["Time remaining", "Time left", "Time", "Remaining"], "correctOptions": ["Time remaining"], "time": 55, "details": "deadline.timeRemaining() gives remaining time."},
-  {"question": "What is Handwriting Recognition?", "options": ["Ink to text", "Convert writing", "Recognition", "API"], "correctOptions": ["Ink to text"], "time": 60, "details": "Ink Recognition converts pen input to text."},
-  {"question": "What is createRecognizer()?", "options": ["Create recognizer", "Init API", "Instantiate", "Prepare"], "correctOptions": ["Create recognizer"], "time": 60, "details": "Creates Ink Recognizer instance."},
-  {"question": "What is getInkSegments()?", "options": ["Get strokes", "Points", "Segments", "Ink"], "correctOptions": ["Get strokes"], "time": 60, "details": "Gets stroke points for recognition."},
-  {"question": "What is NFC API?", "options": ["Near field", "Contactless", "Read tags", "Tap"], "correctOptions": ["Near field"], "time": 50, "details": "NFC API reads NFC tags."},
-  {"question": "What is NDEFReader?", "options": ["NFC read/write", "NDEF events", "Read", "Scan"], "correctOptions": ["NFC read/write"], "time": 55, "details": "NDEFReader scans and writes NFC tags."},
-  {"question": "What is scan() method?", "options": ["Start scanning", "Detect tags", "Begin", "Listen"], "correctOptions": ["Start scanning"], "time": 55, "details": "scan() starts listening for tags."},
-  {"question": "What is NDEFMessage?", "options": ["Data from tag", "Records", "Parsed data", "Information"], "correctOptions": ["Parsed data"], "time": 55, "details": "NDEFMessage contains parsed records."},
-  {"question": "What is Serial API?", "options": ["Serial port", "Device", "Communication", "USB"], "correctOptions": ["Serial port"], "time": 50, "details": "Serial API communicates with serial devices."},
-  {"question": "What is requestPort()?", "options": ["Select port", "Open device", "Choose", "Connect"], "correctOptions": ["Select port"], "time": 55, "details": "requestPort() shows device picker."},
-  {"question": "What is port.open()?", "options": ["Connect", "Open port", "Initialize", "Start"], "correctOptions": ["Open port"], "time": 55, "details": "port.open() connects to device."},
-  {"question": "What is readable.getReader()?", "options": ["Create reader", "Stream read", "Reader", "Acquire"], "correctOptions": ["Create reader"], "time": 55, "details": "Gets reader for reading data."},
-  {"question": "What is WebUSB?", "options": ["USB device", "Device access", "Custom USB", "Access"], "correctOptions": ["Device access"], "time": 50, "details": "WebUSB accesses USB devices."},
-  {"question": "What is requestDevice()?", "options": ["Select device", "Get device", "Choose", "Access"], "correctOptions": ["Select device"], "time": 55, "details": "requestDevice() picks USB devices."},
-  {"question": "What is WebSerial?", "options": ["Serial device", "Serial ports", "Access", "Communication"], "correctOptions": ["Serial ports"], "time": 50, "details": "WebSerial accesses serial ports."},
-  {"question": "What is WebHID?", "options": ["Human devices", "Input devices", "Gamepads", "HID"], "correctOptions": ["Input devices"], "time": 50, "details": "WebHID accesses HID devices."},
-  {"question": "What is requestDevice() for HID?", "options": ["Select HID", "Get device", "Filter", "Choose"], "correctOptions": ["Select HID"], "time": 55, "details": "requestDevice() selects HID devices."},
-  {"question": "What is Bluetooth device?", "options": ["BLE access", "GATT", "Devices", "Connect"], "correctOptions": ["BLE access"], "time": 50, "details": "Web Bluetooth accesses BLE devices."},
-  {"question": "What is device.gatt?", "options": ["GATT server", "Bluetooth", "Server", "Connection"], "correctOptions": ["GATT server"], "time": 55, "details": "Returns GATT server for device."},
-  {"question": "What is getPrimaryService()?", "options": ["Get service", "GATT service", "Service", "Find"], "correctOptions": ["GATT service"], "time": 55, "details": "Gets Bluetooth GATT service."},
-  {"question": "What is getCharacteristic()?", "options": ["Get characteristic", "GATT char", "Read", "Find"], "correctOptions": ["GATT char"], "time": 55, "details": "Gets Bluetooth characteristic."},
-  {"question": "What is readValue()?", "options": ["Read data", "Get value", "Read", "Acquire"], "correctOptions": ["Get value"], "time": 50, "details": "Reads characteristic value."},
-  {"question": "What is startNotifications()?", "options": ["Subscribe", "Begin notif", "Listen", "Observe"], "correctOptions": ["Subscribe"], "time": 55, "details": "Subscribes to notifications."},
-  {"question": "What is WebXR?", "options": ["VR/AR", "Immersive", "XR API", "Immersive"], "correctOptions": ["VR/AR"], "time": 45, "details": "WebXR provides VR/AR capabilities."},
-  {"question": "What is XRSession?", "options": ["XR session", "Immersive", "Session", "Context"], "correctOptions": ["Immersive"], "time": 50, "details": "XRSession manages immersive session."},
-  {"question": "What is requestSession()?", "options": ["Start XR", "Create session", "Begin", "Init"], "correctOptions": ["Start XR"], "time": 55, "details": "Starts specific XR mode."},
-  {"question": "What is XRReferenceSpace?", "options": ["Space type", "Tracking", "Coordinate", "Origin"], "correctOptions": ["Tracking"], "time": 55, "details": "XRReferenceSpace defines tracking space."},
-  {"question": "What is local-floor?", "options": ["Floor relative", "On floor", "Ground", "Origin"], "correctOptions": ["Floor relative"], "time": 55, "details": "local-floor is at floor level."},
-  {"question": "What is bounded-floor?", "options": ["Physical space", "Room scale", "Boundary", "Area"], "correctOptions": ["Physical space"], "time": 60, "details": "bounded-floor has physical boundaries."},
-  {"question": "What is viewer?", "options": ["Head tracking", "User view", "Camera", "Headset"], "correctOptions": ["Head tracking"], "time": 55, "details": "viewer follows headset position."},
-  {"question": "What is XRLayer?", "options": ["XR layer", "Content layer", "Immersive", "Display"], "correctOptions": ["Content layer"], "time": 55, "details": "XRLayer is base for layers."},
-  {"question": "What is XRWebGLLayer?", "options": ["WebGL layer", "GL context", "Drawing", "Render"], "correctOptions": ["WebGL layer"], "time": 55, "details": "XRWebGLLayer uses WebGL."},
-  {"question": "What is XRProjectionLayer?", "options": ["Stereo view", "Projection", "Dual", "Display"], "correctOptions": ["Stereo view"], "time": 60, "details": "Provides stereo rendering."},
-  {"question": "What is XRQuadLayer?", "options": ["2D plane", "Planar content", "Image", "Display"], "correctOptions": ["Planar content"], "time": 60, "details": "Renders flat content in space."},
-  {"question": "What is XRCylinderLayer?", "options": ["Cylindrical", "Cylinder", "Wrapped", "Display"], "correctOptions": ["Cylindrical"], "time": 60, "details": "Renders on cylinder surface."},
-  {"question": "What is XREquirectLayer?", "options": ["360 image", "Sphere", "Panorama", "Equirectangular"], "correctOptions": ["360 image"], "time": 60, "details": "Renders equirectangular images."},
-  {"question": "What is XRCubeLayer?", "options": ["Cube map", "360 video", "Skybox", "Environment"], "correctOptions": ["Cube map"], "time": 60, "details": "Renders cube map images."},
-  {"question": "What is XRDepthInformation?", "options": ["Depth data", "Scene depth", "Distance", "Depth"], "correctOptions": ["Scene depth"], "time": 60, "details": "Provides scene depth map."},
-  {"question": "What is hit test?", "options": ["Raycast", "Hit detection", "Placement", "Intersect"], "correctOptions": ["Raycast"], "time": 55, "details": "Hit test finds surfaces for placement."},
-  {"question": "What is requestHitTestSource()?", "options": ["Start hit test", "Hit source", "Create source", "Begin"], "correctOptions": ["Start hit test"], "time": 60, "details": "Creates hit test source."},
-  {"question": "What is getHitTestResults()?", "options": ["Get hits", "Intersections", "Results", "Find"], "correctOptions": ["Get hits"], "time": 60, "details": "Returns hit test results."},
-  {"question": "What is Anchoring API?", "options": ["World anchors", "Persist points", "Pin to world", "Anchor"], "correctOptions": ["World anchors"], "time": 60, "details": "World Anchors pin content to physical locations."},
-  {"question": "What is createAnchor()?", "options": ["Create anchor", "Add anchor", "Pin", "Place"], "correctOptions": ["Create anchor"], "time": 60, "details": "Creates world anchor."},
-  {"question": "What is Hand Tracking?", "options": ["Hand input", "Gestures", "Tracking", "Hands"], "correctOptions": ["Hand input"], "time": 55, "details": "Hand Tracking provides hand joints."},
-  {"question": "What is inputSource.hand?", "options": ["Hand data", "Tracking", "Hand joints", "Hand"], "correctOptions": ["Hand joints"], "time": 60, "details": "Returns hand joint data."},
-  {"question": "What is Eye Tracking?", "options": ["Gaze input", "Eyes", "Foveated", "Vision"], "correctOptions": ["Gaze input"], "time": 55, "details": "Eye Tracking provides gaze direction."},
-  {"question": "What is inputSource.eye?", "options": ["Eye data", "Gaze", "Sight", "Look"], "correctOptions": ["Eye data"], "time": 60, "details": "Returns eye tracking data."},
-  {"question": "What is Foveated Rendering?", "options": ["Peripheral blur", "Save rendering", "Focus", "Technique"], "correctOptions": ["Save rendering"], "time": 60, "details": "Foveated renders less at periphery."},
-  {"question": "What is inputSource.targetRaySpace?", "options": ["Ray direction", "Controller", "Pointer", "Ray"], "correctOptions": ["Ray direction"], "time": 60, "details": "Provides pointer ray."},
-  {"question": "What is Web Locks API?", "options": ["Distributed locks", "Async mutex", "Lock manager", "Sync"], "correctOptions": ["Distributed locks"], "time": 55, "details": "Web Locks API provides async locking."},
-  {"question": "What is locks.request()?", "options": ["Acquire lock", "Lock", "Get lock", "Acquire"], "correctOptions": ["Acquire lock"], "time": 55, "details": "Requests a lock."},
-  {"question": "What is LockOptions?", "options": ["Lock parameters", "Mode", "Timeout", "All", "Configuration"], "correctOptions": ["Lock parameters"], "time": 60, "details": "Mode, ifAvailable, timeout options."}
+  {
+    "question": "What is Realms API?",
+    "options": [
+      "Separate globals",
+      "Different realm",
+      "Isolated",
+      "Sandbox"
+    ],
+    "correctOptions": [
+      "Separate globals"
+    ],
+    "time": 50,
+    "details": "Realms provide separate global environments within same agent."
+  },
+  {
+    "question": "What is ShadowRealm?",
+    "options": [
+      "Realm wrapper",
+      "Secure sandbox",
+      "Isolated world",
+      "VM"
+    ],
+    "correctOptions": [
+      "Secure sandbox"
+    ],
+    "time": 55,
+    "details": "ShadowRealm creates sandbox with own globals."
+  },
+  {
+    "question": "How does ShadowRealm.evaluate() work?",
+    "options": [
+      "Execute code",
+      "Run in sandbox",
+      "Evaluate",
+      "Run"
+    ],
+    "correctOptions": [
+      "Run in sandbox"
+    ],
+    "time": 55,
+    "details": "evaluate() executes code in ShadowRealm's global."
+  },
+  {
+    "question": "What is the Array map method?",
+    "options": [
+      "Transform elements",
+      "Returns new array",
+      "Callback function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Transform elements",
+      "Returns new array",
+      "Callback function",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is the Array map method? explanation."
+  },
+  {
+    "question": "What is JSON modules?",
+    "options": [
+      "Import JSON",
+      "JSON imports",
+      "Direct import",
+      "Static import"
+    ],
+    "correctOptions": [
+      "Direct import"
+    ],
+    "time": 50,
+    "details": "JSON modules import via import with {type: 'json'}."
+  },
+  {
+    "question": "What is CSS modules?",
+    "options": [
+      "Import CSS",
+      "Scoped styles",
+      "Module import",
+      "Typed CSS"
+    ],
+    "correctOptions": [
+      "Scoped styles"
+    ],
+    "time": 50,
+    "details": "CSS modules import styles as modules with exports."
+  },
+  {
+    "question": "What is Wasm GC proposals?",
+    "options": [
+      "Wasm with GC",
+      "Garbage collect",
+      "GC for Wasm",
+      "Wasm types"
+    ],
+    "correctOptions": [
+      "Garbage collect"
+    ],
+    "time": 55,
+    "details": "Wasm GC adds garbage collection to WebAssembly."
+  },
+  {
+    "question": "What is Atomics.waitAsync()?",
+    "options": [
+      "Non-block wait",
+      "Async wait",
+      "Promise-based",
+      "Non-blocking"
+    ],
+    "correctOptions": [
+      "Promise-based"
+    ],
+    "time": 55,
+    "details": "Atomics.waitAsync() returns Promise instead of blocking."
+  },
+  {
+    "question": "What is SharedArrayBuffer changed?",
+    "options": [
+      "Cross-origin isolated",
+      "Security requirements",
+      "Coep/coop",
+      "Requirements"
+    ],
+    "correctOptions": [
+      "Security requirements"
+    ],
+    "time": 55,
+    "details": "Now requires cross-origin isolation (COOP/COEP)."
+  },
+  {
+    "question": "What is self.pro卒?",
+    "options": [
+      "Service worker",
+      "Self refer",
+      "Global",
+      "Worker"
+    ],
+    "correctOptions": [
+      "Service worker"
+    ],
+    "time": 45,
+    "details": "self refers to global scope in workers."
+  },
+  {
+    "question": "What is Cache API?",
+    "options": [
+      "Request/response",
+      "Storage",
+      "Network cache",
+      "Offline"
+    ],
+    "correctOptions": [
+      "Request/response"
+    ],
+    "time": 50,
+    "details": "Cache API stores Request/Response pairs."
+  },
+  {
+    "question": "What is caches.open()?",
+    "options": [
+      "Open cache",
+      "Get cache",
+      "Create cache",
+      "Access"
+    ],
+    "correctOptions": [
+      "Create cache"
+    ],
+    "time": 50,
+    "details": "caches.open(name) creates/gets named cache."
+  },
+  {
+    "question": "What is Cache.match()?",
+    "options": [
+      "Find request",
+      "Match response",
+      "Search",
+      "Lookup"
+    ],
+    "correctOptions": [
+      "Find request"
+    ],
+    "time": 50,
+    "details": "match() finds cached response for request."
+  },
+  {
+    "question": "What is Cache.put()?",
+    "options": [
+      "Store request",
+      "Add to cache",
+      "Cache response",
+      "Save"
+    ],
+    "correctOptions": [
+      "Add to cache"
+    ],
+    "time": 50,
+    "details": "put() stores request/response pair in cache."
+  },
+  {
+    "question": "What is Cache.matchAll()?",
+    "options": [
+      "All matches",
+      "Multiple responses",
+      "Search all",
+      "Find"
+    ],
+    "correctOptions": [
+      "Multiple responses"
+    ],
+    "time": 55,
+    "details": "matchAll() returns all matching responses."
+  },
+  {
+    "question": "What is Cache.delete()?",
+    "options": [
+      "Remove cache",
+      "Delete response",
+      "Evict",
+      "Remove"
+    ],
+    "correctOptions": [
+      "Delete response"
+    ],
+    "time": 50,
+    "details": "delete() removes entry from cache."
+  },
+  {
+    "question": "What is Background Sync?",
+    "options": [
+      "Deferred sync",
+      "Background",
+      "Retry",
+      "Offline"
+    ],
+    "correctOptions": [
+      "Deferred sync"
+    ],
+    "time": 50,
+    "details": "Background Sync postpones sync until online."
+  },
+  {
+    "question": "What is sync event?",
+    "options": [
+      "Sync trigger",
+      "Background event",
+      "Deferred event",
+      "Retry"
+    ],
+    "correctOptions": [
+      "Background event"
+    ],
+    "time": 55,
+    "details": "sync event fires when sync is possible."
+  },
+  {
+    "question": "What is Periodic Background Sync?",
+    "options": [
+      "Regular sync",
+      "Scheduled",
+      "Periodic",
+      "Periodic API"
+    ],
+    "correctOptions": [
+      "Scheduled"
+    ],
+    "time": 55,
+    "details": "Periodic Background Sync allows periodic updates."
+  },
+  {
+    "question": "What is register() for sync?",
+    "options": [
+      "Register sync",
+      "Schedule",
+      "Periodic",
+      "Create"
+    ],
+    "correctOptions": [
+      "Schedule"
+    ],
+    "time": 55,
+    "details": "register() schedules periodic sync."
+  },
+  {
+    "question": "What is Content Index API?",
+    "options": [
+      "Index content",
+      "List content",
+      "For offline",
+      "Indexing"
+    ],
+    "correctOptions": [
+      "Index content"
+    ],
+    "time": 55,
+    "details": "Content Index indexes content for offline."
+  },
+  {
+    "question": "What is contentIndex.add()?",
+    "options": [
+      "Add content",
+      "Index item",
+      "Register",
+      "Add"
+    ],
+    "correctOptions": [
+      "Index item"
+    ],
+    "time": 55,
+    "details": "contentIndex.add() indexes content."
+  },
+  {
+    "question": "What is Compute Pressure?",
+    "options": [
+      "System load",
+      "Performance",
+      "CPU load",
+      "Metrics"
+    ],
+    "correctOptions": [
+      "CPU load"
+    ],
+    "time": 55,
+    "details": "Compute Pressure API exposes CPU load states."
+  },
+  {
+    "question": "What is pressure state?",
+    "options": [
+      "CPU level",
+      "System state",
+      "Load level",
+      "Category"
+    ],
+    "correctOptions": [
+      "CPU level"
+    ],
+    "time": 55,
+    "details": "States: nominal, fair, serious, critical."
+  },
+  {
+    "question": "What is File System SyncAccessHandle?",
+    "options": [
+      "Sync file",
+      "Synchronous",
+      "Direct access",
+      "Quick"
+    ],
+    "correctOptions": [
+      "Synchronous"
+    ],
+    "time": 55,
+    "details": "SyncAccessHandle provides synchronous access."
+  },
+  {
+    "question": "What does write() return in SyncAccessHandle?",
+    "options": [
+      "Bytes written",
+      "Number",
+      "Length",
+      "Result"
+    ],
+    "correctOptions": [
+      "Bytes written"
+    ],
+    "time": 55,
+    "details": "Returns number of bytes written."
+  },
+  {
+    "question": "What is getWriter()?",
+    "options": [
+      "Create writer",
+      "Writable",
+      "Stream",
+      "Create"
+    ],
+    "correctOptions": [
+      "Create writer"
+    ],
+    "time": 55,
+    "details": "Creates WritableStream for file."
+  },
+  {
+    "question": "What is isMultiScreen?",
+    "options": [
+      "Multi-display",
+      "Multiple screens",
+      "Screen API",
+      "Detecting"
+    ],
+    "correctOptions": [
+      "Multi-display"
+    ],
+    "time": 55,
+    "details": "Window Management detects multiple displays."
+  },
+  {
+    "question": "What is getScreens()?",
+    "options": [
+      "Screen list",
+      "All screens",
+      "Display info",
+      "Fetch"
+    ],
+    "correctOptions": [
+      "All screens"
+    ],
+    "time": 55,
+    "details": "getScreens() returns available screens."
+  },
+  {
+    "question": "What is Detailed Screen info?",
+    "options": [
+      "Screen data",
+      "Properties",
+      "Info",
+      "Extended"
+    ],
+    "correctOptions": [
+      "Screen data"
+    ],
+    "time": 60,
+    "details": "Returns id, label, scaleFactor, etc."
+  },
+  {
+    "question": "What is multi-window experience?",
+    "options": [
+      "Multiple windows",
+      "Tabs",
+      "Multiple",
+      "Scope"
+    ],
+    "correctOptions": [
+      "Multiple windows"
+    ],
+    "time": 60,
+    "details": "Opening multiple app windows from single install."
+  },
+  {
+    "question": "What is WindowControlsOverlay?",
+    "options": [
+      "Title bar",
+      "Customize",
+      "Title area",
+      "Overlay"
+    ],
+    "correctOptions": [
+      "Title area"
+    ],
+    "time": 55,
+    "details": "WindowControlsOverlay customizes title bar."
+  },
+  {
+    "question": "What is getTitlebarSurfaceRect()?",
+    "options": [
+      "Title bar area",
+      "Coordinates",
+      "Bounds",
+      "Rect"
+    ],
+    "correctOptions": [
+      "Title bar area"
+    ],
+    "time": 60,
+    "details": "Returns bounds of title bar."
+  },
+  {
+    "question": "What is isVisible?",
+    "options": [
+      "Window visible",
+      "In view",
+      "Shown property",
+      "On screen"
+    ],
+    "correctOptions": [
+      "In view"
+    ],
+    "time": 55,
+    "details": "isVisible indicates window is showing."
+  },
+  {
+    "question": "What is EyeDropper API?",
+    "options": [
+      "Color picker",
+      "System picker",
+      "Sample color",
+      "Sampled"
+    ],
+    "correctOptions": [
+      "System picker"
+    ],
+    "time": 55,
+    "details": "EyeDropper shows system color picker."
+  },
+  {
+    "question": "What is show() method?",
+    "options": [
+      "Open picker",
+      "Pick color",
+      "Trigger",
+      "Activate"
+    ],
+    "correctOptions": [
+      "Open picker"
+    ],
+    "time": 55,
+    "details": "show() opens system color picker."
+  },
+  {
+    "question": "What is the return value?",
+    "options": [
+      "Color result",
+      "Promise",
+      "Color",
+      "Hex"
+    ],
+    "correctOptions": [
+      "Color result"
+    ],
+    "time": 55,
+    "details": "Returns Promise with color hex."
+  },
+  {
+    "question": "What is Idle Detection?",
+    "options": [
+      "User idle",
+      "Timeout",
+      "Inactive",
+      "State"
+    ],
+    "correctOptions": [
+      "User idle"
+    ],
+    "time": 55,
+    "details": "Detects when user becomes inactive."
+  },
+  {
+    "question": "What is requestIdleCallback()?",
+    "options": [
+      "Queue callback",
+      "Idle work",
+      "Schedule",
+      "When idle"
+    ],
+    "correctOptions": [
+      "Queue callback"
+    ],
+    "time": 55,
+    "details": "requestIdleCallback() schedules idle work."
+  },
+  {
+    "question": "What does IdleCallback deadline?",
+    "options": [
+      "Time remaining",
+      "Time left",
+      "Time",
+      "Remaining"
+    ],
+    "correctOptions": [
+      "Time remaining"
+    ],
+    "time": 55,
+    "details": "deadline.timeRemaining() gives remaining time."
+  },
+  {
+    "question": "What is Handwriting Recognition?",
+    "options": [
+      "Ink to text",
+      "Convert writing",
+      "Recognition",
+      "API"
+    ],
+    "correctOptions": [
+      "Ink to text"
+    ],
+    "time": 60,
+    "details": "Ink Recognition converts pen input to text."
+  },
+  {
+    "question": "What is createRecognizer()?",
+    "options": [
+      "Create recognizer",
+      "Init API",
+      "Instantiate",
+      "Prepare"
+    ],
+    "correctOptions": [
+      "Create recognizer"
+    ],
+    "time": 60,
+    "details": "Creates Ink Recognizer instance."
+  },
+  {
+    "question": "What is getInkSegments()?",
+    "options": [
+      "Get strokes",
+      "Points",
+      "Segments",
+      "Ink"
+    ],
+    "correctOptions": [
+      "Get strokes"
+    ],
+    "time": 60,
+    "details": "Gets stroke points for recognition."
+  },
+  {
+    "question": "What is NFC API?",
+    "options": [
+      "Near field",
+      "Contactless",
+      "Read tags",
+      "Tap"
+    ],
+    "correctOptions": [
+      "Near field"
+    ],
+    "time": 50,
+    "details": "NFC API reads NFC tags."
+  },
+  {
+    "question": "What is NDEFReader?",
+    "options": [
+      "NFC read/write",
+      "NDEF events",
+      "Read",
+      "Scan"
+    ],
+    "correctOptions": [
+      "NFC read/write"
+    ],
+    "time": 55,
+    "details": "NDEFReader scans and writes NFC tags."
+  },
+  {
+    "question": "What is scan() method?",
+    "options": [
+      "Start scanning",
+      "Detect tags",
+      "Begin",
+      "Listen"
+    ],
+    "correctOptions": [
+      "Start scanning"
+    ],
+    "time": 55,
+    "details": "scan() starts listening for tags."
+  },
+  {
+    "question": "What is NDEFMessage?",
+    "options": [
+      "Data from tag",
+      "Records",
+      "Parsed data",
+      "Information"
+    ],
+    "correctOptions": [
+      "Parsed data"
+    ],
+    "time": 55,
+    "details": "NDEFMessage contains parsed records."
+  },
+  {
+    "question": "What is Serial API?",
+    "options": [
+      "Serial port",
+      "Device",
+      "Communication",
+      "USB"
+    ],
+    "correctOptions": [
+      "Serial port"
+    ],
+    "time": 50,
+    "details": "Serial API communicates with serial devices."
+  },
+  {
+    "question": "What is requestPort()?",
+    "options": [
+      "Select port",
+      "Open device",
+      "Choose",
+      "Connect"
+    ],
+    "correctOptions": [
+      "Select port"
+    ],
+    "time": 55,
+    "details": "requestPort() shows device picker."
+  },
+  {
+    "question": "What is port.open()?",
+    "options": [
+      "Connect",
+      "Open port",
+      "Initialize",
+      "Start"
+    ],
+    "correctOptions": [
+      "Open port"
+    ],
+    "time": 55,
+    "details": "port.open() connects to device."
+  },
+  {
+    "question": "What is readable.getReader()?",
+    "options": [
+      "Create reader",
+      "Stream read",
+      "Reader",
+      "Acquire"
+    ],
+    "correctOptions": [
+      "Create reader"
+    ],
+    "time": 55,
+    "details": "Gets reader for reading data."
+  },
+  {
+    "question": "What is WebUSB?",
+    "options": [
+      "USB device",
+      "Device access",
+      "Custom USB",
+      "Access"
+    ],
+    "correctOptions": [
+      "Device access"
+    ],
+    "time": 50,
+    "details": "WebUSB accesses USB devices."
+  },
+  {
+    "question": "What is requestDevice()?",
+    "options": [
+      "Select device",
+      "Get device",
+      "Choose",
+      "Access"
+    ],
+    "correctOptions": [
+      "Select device"
+    ],
+    "time": 55,
+    "details": "requestDevice() picks USB devices."
+  },
+  {
+    "question": "What is WebSerial?",
+    "options": [
+      "Serial device",
+      "Serial ports",
+      "Access",
+      "Communication"
+    ],
+    "correctOptions": [
+      "Serial ports"
+    ],
+    "time": 50,
+    "details": "WebSerial accesses serial ports."
+  },
+  {
+    "question": "What is WebHID?",
+    "options": [
+      "Human devices",
+      "Input devices",
+      "Gamepads",
+      "HID"
+    ],
+    "correctOptions": [
+      "Input devices"
+    ],
+    "time": 50,
+    "details": "WebHID accesses HID devices."
+  },
+  {
+    "question": "What is requestDevice() for HID?",
+    "options": [
+      "Select HID",
+      "Get device",
+      "Filter",
+      "Choose"
+    ],
+    "correctOptions": [
+      "Select HID"
+    ],
+    "time": 55,
+    "details": "requestDevice() selects HID devices."
+  },
+  {
+    "question": "What is Bluetooth device?",
+    "options": [
+      "BLE access",
+      "GATT",
+      "Devices",
+      "Connect"
+    ],
+    "correctOptions": [
+      "BLE access"
+    ],
+    "time": 50,
+    "details": "Web Bluetooth accesses BLE devices."
+  },
+  {
+    "question": "What is device.gatt?",
+    "options": [
+      "GATT server",
+      "Bluetooth",
+      "Server",
+      "Connection"
+    ],
+    "correctOptions": [
+      "GATT server"
+    ],
+    "time": 55,
+    "details": "Returns GATT server for device."
+  },
+  {
+    "question": "What is getPrimaryService()?",
+    "options": [
+      "Get service",
+      "GATT service",
+      "Service",
+      "Find"
+    ],
+    "correctOptions": [
+      "GATT service"
+    ],
+    "time": 55,
+    "details": "Gets Bluetooth GATT service."
+  },
+  {
+    "question": "What is getCharacteristic()?",
+    "options": [
+      "Get characteristic",
+      "GATT char",
+      "Read",
+      "Find"
+    ],
+    "correctOptions": [
+      "GATT char"
+    ],
+    "time": 55,
+    "details": "Gets Bluetooth characteristic."
+  },
+  {
+    "question": "What is readValue()?",
+    "options": [
+      "Read data",
+      "Get value",
+      "Read",
+      "Acquire"
+    ],
+    "correctOptions": [
+      "Get value"
+    ],
+    "time": 50,
+    "details": "Reads characteristic value."
+  },
+  {
+    "question": "What is startNotifications()?",
+    "options": [
+      "Subscribe",
+      "Begin notif",
+      "Listen",
+      "Observe"
+    ],
+    "correctOptions": [
+      "Subscribe"
+    ],
+    "time": 55,
+    "details": "Subscribes to notifications."
+  },
+  {
+    "question": "What is WebXR?",
+    "options": [
+      "VR/AR",
+      "Immersive",
+      "XR API",
+      "Immersive"
+    ],
+    "correctOptions": [
+      "VR/AR"
+    ],
+    "time": 45,
+    "details": "WebXR provides VR/AR capabilities."
+  },
+  {
+    "question": "What is XRSession?",
+    "options": [
+      "XR session",
+      "Immersive",
+      "Session",
+      "Context"
+    ],
+    "correctOptions": [
+      "Immersive"
+    ],
+    "time": 50,
+    "details": "XRSession manages immersive session."
+  },
+  {
+    "question": "What is requestSession()?",
+    "options": [
+      "Start XR",
+      "Create session",
+      "Begin",
+      "Init"
+    ],
+    "correctOptions": [
+      "Start XR"
+    ],
+    "time": 55,
+    "details": "Starts specific XR mode."
+  },
+  {
+    "question": "What is XRReferenceSpace?",
+    "options": [
+      "Space type",
+      "Tracking",
+      "Coordinate",
+      "Origin"
+    ],
+    "correctOptions": [
+      "Tracking"
+    ],
+    "time": 55,
+    "details": "XRReferenceSpace defines tracking space."
+  },
+  {
+    "question": "What is local-floor?",
+    "options": [
+      "Floor relative",
+      "On floor",
+      "Ground",
+      "Origin"
+    ],
+    "correctOptions": [
+      "Floor relative"
+    ],
+    "time": 55,
+    "details": "local-floor is at floor level."
+  },
+  {
+    "question": "What is bounded-floor?",
+    "options": [
+      "Physical space",
+      "Room scale",
+      "Boundary",
+      "Area"
+    ],
+    "correctOptions": [
+      "Physical space"
+    ],
+    "time": 60,
+    "details": "bounded-floor has physical boundaries."
+  },
+  {
+    "question": "What is viewer?",
+    "options": [
+      "Head tracking",
+      "User view",
+      "Camera",
+      "Headset"
+    ],
+    "correctOptions": [
+      "Head tracking"
+    ],
+    "time": 55,
+    "details": "viewer follows headset position."
+  },
+  {
+    "question": "What is XRLayer?",
+    "options": [
+      "XR layer",
+      "Content layer",
+      "Immersive",
+      "Display"
+    ],
+    "correctOptions": [
+      "Content layer"
+    ],
+    "time": 55,
+    "details": "XRLayer is base for layers."
+  },
+  {
+    "question": "What is XRWebGLLayer?",
+    "options": [
+      "WebGL layer",
+      "GL context",
+      "Drawing",
+      "Render"
+    ],
+    "correctOptions": [
+      "WebGL layer"
+    ],
+    "time": 55,
+    "details": "XRWebGLLayer uses WebGL."
+  },
+  {
+    "question": "What is XRProjectionLayer?",
+    "options": [
+      "Stereo view",
+      "Projection",
+      "Dual",
+      "Display"
+    ],
+    "correctOptions": [
+      "Stereo view"
+    ],
+    "time": 60,
+    "details": "Provides stereo rendering."
+  },
+  {
+    "question": "What is XRQuadLayer?",
+    "options": [
+      "2D plane",
+      "Planar content",
+      "Image",
+      "Display"
+    ],
+    "correctOptions": [
+      "Planar content"
+    ],
+    "time": 60,
+    "details": "Renders flat content in space."
+  },
+  {
+    "question": "What is XRCylinderLayer?",
+    "options": [
+      "Cylindrical",
+      "Cylinder",
+      "Wrapped",
+      "Display"
+    ],
+    "correctOptions": [
+      "Cylindrical"
+    ],
+    "time": 60,
+    "details": "Renders on cylinder surface."
+  },
+  {
+    "question": "What is XREquirectLayer?",
+    "options": [
+      "360 image",
+      "Sphere",
+      "Panorama",
+      "Equirectangular"
+    ],
+    "correctOptions": [
+      "360 image"
+    ],
+    "time": 60,
+    "details": "Renders equirectangular images."
+  },
+  {
+    "question": "What is XRCubeLayer?",
+    "options": [
+      "Cube map",
+      "360 video",
+      "Skybox",
+      "Environment"
+    ],
+    "correctOptions": [
+      "Cube map"
+    ],
+    "time": 60,
+    "details": "Renders cube map images."
+  },
+  {
+    "question": "What is XRDepthInformation?",
+    "options": [
+      "Depth data",
+      "Scene depth",
+      "Distance",
+      "Depth"
+    ],
+    "correctOptions": [
+      "Scene depth"
+    ],
+    "time": 60,
+    "details": "Provides scene depth map."
+  },
+  {
+    "question": "What is hit test?",
+    "options": [
+      "Raycast",
+      "Hit detection",
+      "Placement",
+      "Intersect"
+    ],
+    "correctOptions": [
+      "Raycast"
+    ],
+    "time": 55,
+    "details": "Hit test finds surfaces for placement."
+  },
+  {
+    "question": "What is requestHitTestSource()?",
+    "options": [
+      "Start hit test",
+      "Hit source",
+      "Create source",
+      "Begin"
+    ],
+    "correctOptions": [
+      "Start hit test"
+    ],
+    "time": 60,
+    "details": "Creates hit test source."
+  },
+  {
+    "question": "What is getHitTestResults()?",
+    "options": [
+      "Get hits",
+      "Intersections",
+      "Results",
+      "Find"
+    ],
+    "correctOptions": [
+      "Get hits"
+    ],
+    "time": 60,
+    "details": "Returns hit test results."
+  },
+  {
+    "question": "What is Anchoring API?",
+    "options": [
+      "World anchors",
+      "Persist points",
+      "Pin to world",
+      "Anchor"
+    ],
+    "correctOptions": [
+      "World anchors"
+    ],
+    "time": 60,
+    "details": "World Anchors pin content to physical locations."
+  },
+  {
+    "question": "What is createAnchor()?",
+    "options": [
+      "Create anchor",
+      "Add anchor",
+      "Pin",
+      "Place"
+    ],
+    "correctOptions": [
+      "Create anchor"
+    ],
+    "time": 60,
+    "details": "Creates world anchor."
+  },
+  {
+    "question": "What is Hand Tracking?",
+    "options": [
+      "Hand input",
+      "Gestures",
+      "Tracking",
+      "Hands"
+    ],
+    "correctOptions": [
+      "Hand input"
+    ],
+    "time": 55,
+    "details": "Hand Tracking provides hand joints."
+  },
+  {
+    "question": "What is inputSource.hand?",
+    "options": [
+      "Hand data",
+      "Tracking",
+      "Hand joints",
+      "Hand"
+    ],
+    "correctOptions": [
+      "Hand joints"
+    ],
+    "time": 60,
+    "details": "Returns hand joint data."
+  },
+  {
+    "question": "What is Eye Tracking?",
+    "options": [
+      "Gaze input",
+      "Eyes",
+      "Foveated",
+      "Vision"
+    ],
+    "correctOptions": [
+      "Gaze input"
+    ],
+    "time": 55,
+    "details": "Eye Tracking provides gaze direction."
+  },
+  {
+    "question": "What is inputSource.eye?",
+    "options": [
+      "Eye data",
+      "Gaze",
+      "Sight",
+      "Look"
+    ],
+    "correctOptions": [
+      "Eye data"
+    ],
+    "time": 60,
+    "details": "Returns eye tracking data."
+  },
+  {
+    "question": "What is Foveated Rendering?",
+    "options": [
+      "Peripheral blur",
+      "Save rendering",
+      "Focus",
+      "Technique"
+    ],
+    "correctOptions": [
+      "Save rendering"
+    ],
+    "time": 60,
+    "details": "Foveated renders less at periphery."
+  },
+  {
+    "question": "What is inputSource.targetRaySpace?",
+    "options": [
+      "Ray direction",
+      "Controller",
+      "Pointer",
+      "Ray"
+    ],
+    "correctOptions": [
+      "Ray direction"
+    ],
+    "time": 60,
+    "details": "Provides pointer ray."
+  },
+  {
+    "question": "What is Web Locks API?",
+    "options": [
+      "Distributed locks",
+      "Async mutex",
+      "Lock manager",
+      "Sync"
+    ],
+    "correctOptions": [
+      "Distributed locks"
+    ],
+    "time": 55,
+    "details": "Web Locks API provides async locking."
+  },
+  {
+    "question": "What is locks.request()?",
+    "options": [
+      "Acquire lock",
+      "Lock",
+      "Get lock",
+      "Acquire"
+    ],
+    "correctOptions": [
+      "Acquire lock"
+    ],
+    "time": 55,
+    "details": "Requests a lock."
+  },
+  {
+    "question": "What is LockOptions?",
+    "options": [
+      "Lock parameters",
+      "Mode",
+      "Timeout",
+      "All",
+      "Configuration"
+    ],
+    "correctOptions": [
+      "Lock parameters"
+    ],
+    "time": 60,
+    "details": "Mode, ifAvailable, timeout options."
+  },
+  {
+    "question": "What is a closure? (92)",
+    "options": [
+      "Function scope",
+      "Lexical",
+      "Private variables",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is a closure? explanation."
+  },
+  {
+    "question": "What is the event loop? (93)",
+    "options": [
+      "Async handling",
+      "Queue",
+      "Single thread",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is the event loop? explanation."
+  },
+  {
+    "question": "What is a Promise? (94)",
+    "options": [
+      "Async result",
+      "Future value",
+      "Chainable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is a Promise? explanation."
+  },
+  {
+    "question": "What is destructuring? (95)",
+    "options": [
+      "Extract values",
+      "Array/object",
+      "Short syntax",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is destructuring? explanation."
+  },
+  {
+    "question": "What is spread operator? (96)",
+    "options": [
+      "Expand",
+      "Array/object",
+      "Copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is spread operator? explanation."
+  },
+  {
+    "question": "What is a generator? (97)",
+    "options": [
+      "Iterator",
+      "Yield",
+      "Pause",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is a generator? explanation."
+  },
+  {
+    "question": "What is Map? (98)",
+    "options": [
+      "Key-value",
+      "Ordered",
+      "Any type key",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is Map? explanation."
+  },
+  {
+    "question": "What is Set? (99)",
+    "options": [
+      "Unique values",
+      "Collection",
+      "No duplicates",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is Set? explanation."
+  },
+  {
+    "question": "What is WeakMap? (100)",
+    "options": [
+      "GC-friendly",
+      "Object keys",
+      "Memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is WeakMap? explanation."
+  },
+  {
+    "question": "What is closures in JavaScript? (Level 6 #101)",
+    "options": [
+      "Function scope",
+      "Lexical environment",
+      "Private variables",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Function scope",
+      "Lexical environment",
+      "Private variables",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is closures in JavaScript? explanation."
+  },
+  {
+    "question": "What is event loop? (Level 6 #102)",
+    "options": [
+      "Call stack",
+      "Task queue",
+      "Microtask queue",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Call stack",
+      "Task queue",
+      "Microtask queue",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event loop? explanation."
+  },
+  {
+    "question": "What is Promise? (Level 6 #103)",
+    "options": [
+      "Async result",
+      "Future value",
+      "State management",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Async result",
+      "Future value",
+      "State management",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Promise? explanation."
+  },
+  {
+    "question": "What is hoisting? (Level 6 #106)",
+    "options": [
+      "Variable",
+      "Function",
+      "Class",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Variable",
+      "Function",
+      "Class",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is hoisting? explanation."
+  },
+  {
+    "question": "What is prototype? (Level 6 #107)",
+    "options": [
+      "Inheritance",
+      "Methods",
+      "Properties",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Inheritance",
+      "Methods",
+      "Properties",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is prototype? explanation."
+  },
+  {
+    "question": "What is this binding? (Level 6 #108)",
+    "options": [
+      "Global",
+      "Object",
+      "Arrow function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Global",
+      "Object",
+      "Arrow function",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is this binding? explanation."
+  },
+  {
+    "question": "What is async/await? (Level 6 #109)",
+    "options": [
+      "Promise",
+      "Error handling",
+      "Sequential",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Promise",
+      "Error handling",
+      "Sequential",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is async/await? explanation."
+  },
+  {
+    "question": "What is callback? (Level 6 #110)",
+    "options": [
+      "Function",
+      "Asynchronous",
+      "Higher-order",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Function",
+      "Asynchronous",
+      "Higher-order",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is callback? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  }
 ]

@@ -1120,20 +1120,6 @@
     "details": "Bus facade dispatches jobs and commands."
   },
   {
-    "question": "What is Laravel Vapor?",
-    "options": [
-      "Serverless platform",
-      "IDE plugin",
-      "Testing tool",
-      "CI/CD tool"
-    ],
-    "correctOptions": [
-      "Serverless platform"
-    ],
-    "time": 35,
-    "details": "Vapor deploys Laravel to AWS Lambda."
-  },
-  {
     "question": "What is a scheduled task?",
     "options": [
       "Automated recurring command",
@@ -1232,160 +1218,6 @@
     "details": "runInBackground() runs the task asynchronously."
   },
   {
-    "question": "What is Laravel Passport?",
-    "options": [
-      "OAuth2 authentication",
-      "API tokens",
-      "Session auth",
-      "Basic auth"
-    ],
-    "correctOptions": [
-      "OAuth2 authentication"
-    ],
-    "time": 35,
-    "details": "Passport provides full OAuth2 server implementation."
-  },
-  {
-    "question": "What is Laravel Sanctum?",
-    "options": [
-      "API authentication",
-      "Frontend auth",
-      "Session auth",
-      "OAuth provider"
-    ],
-    "correctOptions": [
-      "API authentication"
-    ],
-    "time": 30,
-    "details": "Sanctum provides lightweight API authentication."
-  },
-  {
-    "question": "What is API token authentication?",
-    "options": [
-      "Token-based auth",
-      "Session auth",
-      "OAuth auth",
-      "Basic auth"
-    ],
-    "correctOptions": [
-      "Token-based auth"
-    ],
-    "time": 30,
-    "details": "API tokens authenticate requests using tokens."
-  },
-  {
-    "question": "How do you hash passwords?",
-    "options": [
-      "Hash::make()",
-      "md5()",
-      "sha1()",
-      "crypt()"
-    ],
-    "correctOptions": [
-      "Hash::make()"
-    ],
-    "time": 25,
-    "details": "Hash::make() creates a hashed password."
-  },
-  {
-    "question": "How do you verify a password?",
-    "options": [
-      "Hash::check()",
-      "Hash::verify()",
-      "Hash::compare()",
-      "Hash::match()"
-    ],
-    "correctOptions": [
-      "Hash::check()"
-    ],
-    "time": 25,
-    "details": "Hash::check() verifies a password against hash."
-  },
-  {
-    "question": "What is bcrypt?",
-    "options": [
-      "Password hashing function",
-      "Encryption",
-      "Encoding",
-      "Signing"
-    ],
-    "correctOptions": [
-      "Password hashing function"
-    ],
-    "time": 30,
-    "details": "bcrypt is a secure password hashing algorithm."
-  },
-  {
-    "question": "What is the HasApiTokens trait?",
-    "options": [
-      "Provide API token functionality",
-      "Generate tokens",
-      "Validate tokens",
-      "Revoke tokens"
-    ],
-    "correctOptions": [
-      "Provide API token functionality"
-    ],
-    "time": 35,
-    "details": "HasApiTokens adds token management to models."
-  },
-  {
-    "question": "How do you create API token?",
-    "options": [
-      "$user->createToken()",
-      "$user->token()",
-      "$user->apiToken()",
-      "$user->generateToken()"
-    ],
-    "correctOptions": [
-      "$user->createToken()"
-    ],
-    "time": 30,
-    "details": "createToken() generates a new API token."
-  },
-  {
-    "question": "What is middleware 'auth:api'?",
-    "options": [
-      "Authenticate API requests",
-      "Cache API",
-      "Log API",
-      "Rate API"
-    ],
-    "correctOptions": [
-      "Authenticate API requests"
-    ],
-    "time": 30,
-    "details": "auth:api middleware protects API routes."
-  },
-  {
-    "question": "What is authorization?",
-    "options": [
-      "Permission checking",
-      "User authentication",
-      "Session management",
-      "Token validation"
-    ],
-    "correctOptions": [
-      "Permission checking"
-    ],
-    "time": 30,
-    "details": "Authorization determines what users can do."
-  },
-  {
-    "question": "What is authentication?",
-    "options": [
-      "User identity verification",
-      "Permission checking",
-      "Role assignment",
-      "Session management"
-    ],
-    "correctOptions": [
-      "User identity verification"
-    ],
-    "time": 30,
-    "details": "Authentication verifies who a user is."
-  },
-  {
     "question": "What is Laravel Dusk?",
     "options": [
       "Browser testing",
@@ -1412,5 +1244,515 @@
     ],
     "time": 35,
     "details": "Socialite handles OAuth social authentication."
+  },
+  {
+    "question": "What is Eloquent? (Level 4 #102)",
+    "options": [
+      "ORM",
+      "Model",
+      "Relationships",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "ORM",
+      "Model",
+      "Relationships",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Eloquent? explanation."
+  },
+  {
+    "question": "What is Blade? (Level 4 #103)",
+    "options": [
+      "Template",
+      "Directives",
+      "Components",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Template",
+      "Directives",
+      "Components",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Blade? explanation."
+  },
+  {
+    "question": "What is migration? (Level 4 #104)",
+    "options": [
+      "Schema",
+      "Version control",
+      "Rollback",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Schema",
+      "Version control",
+      "Rollback",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is migration? explanation."
+  },
+  {
+    "question": "What is seeder? (Level 4 #105)",
+    "options": [
+      "Test data",
+      "Factory",
+      "Database",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Test data",
+      "Factory",
+      "Database",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is seeder? explanation."
+  },
+  {
+    "question": "What is middleware? (Level 4 #106)",
+    "options": [
+      "Request",
+      "Response",
+      "Filter",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request",
+      "Response",
+      "Filter",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is route? (Level 4 #107)",
+    "options": [
+      "URL",
+      "Controller",
+      "Method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL",
+      "Controller",
+      "Method",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is route? explanation."
+  },
+  {
+    "question": "What is artisan? (Level 4 #108)",
+    "options": [
+      "CLI",
+      "Commands",
+      "Scaffolding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "CLI",
+      "Commands",
+      "Scaffolding",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is artisan? explanation."
+  },
+  {
+    "question": "What is service provider? (Level 4 #109)",
+    "options": [
+      "DI",
+      "Register",
+      "Boot",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "DI",
+      "Register",
+      "Boot",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is service provider? explanation."
+  },
+  {
+    "question": "What is facades? (Level 4 #110)",
+    "options": [
+      "Static access",
+      "Service",
+      "Proxy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Static access",
+      "Service",
+      "Proxy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is facades? explanation."
+  },
+  {
+    "question": "What is validation? (Level 4 #111)",
+    "options": [
+      "Rules",
+      "Messages",
+      "Custom",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Messages",
+      "Custom",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is validation? explanation."
+  },
+  {
+    "question": "What is Array.includes?",
+    "options": [
+      "Check existence",
+      "Returns boolean",
+      "Value search",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Check existence",
+      "Returns boolean",
+      "Value search",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Array.includes? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
   }
 ]

@@ -868,535 +868,649 @@
     "details": "Refspecs define how refs are transferred between repos."
   },
   {
-    "question": "What is a remote in Git?",
+    "question": "What is git init? (Level 5 #101)",
     "options": [
-      "Online repository copy",
-      "Local folder",
-      "Backup system",
-      "Code editor"
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
     ],
     "correctOptions": [
-      "Online repository copy"
-    ],
-    "time": 20,
-    "details": "Remotes are URLs pointing to other repositories."
-  },
-  {
-    "question": "What is origin?",
-    "options": [
-      "Default remote name",
-      "Original branch",
-      "First commit",
-      "Main branch"
-    ],
-    "correctOptions": [
-      "Default remote name"
-    ],
-    "time": 20,
-    "details": "origin is the conventional name for the cloned-from remote."
-  },
-  {
-    "question": "How do you add a remote?",
-    "options": [
-      "git remote add name url",
-      "git remote create name url",
-      "git add remote name url",
-      "git remote new name url"
-    ],
-    "correctOptions": [
-      "git remote add name url"
-    ],
-    "time": 25,
-    "details": "git remote add connects your repo to another remote."
-  },
-  {
-    "question": "How do you list remotes?",
-    "options": [
-      "git remote -v",
-      "git remote list",
-      "git remotes",
-      "git remote show"
-    ],
-    "correctOptions": [
-      "git remote -v"
-    ],
-    "time": 20,
-    "details": "-v shows URLs and names of all remotes."
-  },
-  {
-    "question": "How do you rename a remote?",
-    "options": [
-      "git remote rename old new",
-      "git remote change old new",
-      "git remote name old new",
-      "git remote update old new"
-    ],
-    "correctOptions": [
-      "git remote rename old new"
-    ],
-    "time": 25,
-    "details": "git remote rename changes a remote's name."
-  },
-  {
-    "question": "How do you remove a remote?",
-    "options": [
-      "git remote remove name",
-      "git remote delete name",
-      "Both remove and delete work",
-      "git remote rm name"
-    ],
-    "correctOptions": [
-      "Both remove and delete work"
-    ],
-    "time": 25,
-    "details": "Both remove and rm delete a remote."
-  },
-  {
-    "question": "What does git remote show display?",
-    "options": [
-      "Remote details",
-      "Only names",
-      "Only URLs",
-      "Branches"
-    ],
-    "correctOptions": [
-      "Remote details"
-    ],
-    "time": 25,
-    "details": "git remote show provides detailed remote info."
-  },
-  {
-    "question": "How do you change remote URL?",
-    "options": [
-      "git remote set-url name new-url",
-      "git remote url name new-url",
-      "git remote update-url name new-url",
-      "git remote change-url name new-url"
-    ],
-    "correctOptions": [
-      "git remote set-url name new-url"
-    ],
-    "time": 30,
-    "details": "set-url changes the remote's URL."
-  },
-  {
-    "question": "What is git push?",
-    "options": [
-      "Upload commits to remote",
-      "Download commits",
-      "Delete remote",
-      "Create remote"
-    ],
-    "correctOptions": [
-      "Upload commits to remote"
-    ],
-    "time": 20,
-    "details": "git push sends local commits to remote."
-  },
-  {
-    "question": "How do you push to specific remote?",
-    "options": [
-      "git push remote-name branch",
-      "git push --remote remote-name branch",
-      "git upload remote-name branch",
-      "git send remote-name branch"
-    ],
-    "correctOptions": [
-      "git push remote-name branch"
-    ],
-    "time": 25,
-    "details": "git push origin master pushes to origin."
-  },
-  {
-    "question": "What is git pull?",
-    "options": [
-      "Fetch and merge remote",
-      "Only fetch",
-      "Only merge",
-      "Push changes"
-    ],
-    "correctOptions": [
-      "Fetch and merge remote"
-    ],
-    "time": 20,
-    "details": "git pull fetches and automatically merges changes."
-  },
-  {
-    "question": "What does git fetch do?",
-    "options": [
-      "Download without merging",
-      "Download and merge",
-      "Upload commits",
-      "Delete remote"
-    ],
-    "correctOptions": [
-      "Download without merging"
-    ],
-    "time": 25,
-    "details": "git fetch downloads commits without merging."
-  },
-  {
-    "question": "What is the difference between pull and fetch?",
-    "options": [
-      "Pull fetches and merges, fetch only downloads",
-      "Both fetch only",
-      "Both merge",
-      "Fetch is faster"
-    ],
-    "correctOptions": [
-      "Pull fetches and merges, fetch only downloads"
+      "Repository",
+      "Directory",
+      "Tracking",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Fetch updates remote-tracking branches; pull does more."
+    "details": "What is git init? explanation."
   },
   {
-    "question": "How do you clone a repository?",
+    "question": "What is git clone? (Level 5 #102)",
     "options": [
-      "git clone url",
-      "git copy url",
-      "git download url",
-      "git get url"
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
     ],
     "correctOptions": [
-      "git clone url"
-    ],
-    "time": 20,
-    "details": "git clone creates a local copy of a repository."
-  },
-  {
-    "question": "What does --depth flag do in clone?",
-    "options": [
-      "Shallow clone with n commits",
-      "Deep clone",
-      "Full clone",
-      "No clone"
-    ],
-    "correctOptions": [
-      "Shallow clone with n commits"
-    ],
-    "time": 30,
-    "details": "--depth creates a shallow clone with limited history."
-  },
-  {
-    "question": "What is a shallow clone?",
-    "options": [
-      "Clone with partial history",
-      "Full clone",
-      "Empty clone",
-      "Broken clone"
-    ],
-    "correctOptions": [
-      "Clone with partial history"
-    ],
-    "time": 30,
-    "details": "Shallow clones have limited commit history."
-  },
-  {
-    "question": "How do you deepen a shallow clone?",
-    "options": [
-      "git fetch --unshallow",
-      "git pull --deep",
-      "git clone --deep",
-      "git deepen"
-    ],
-    "correctOptions": [
-      "git fetch --unshallow"
+      "Copy",
+      "Remote",
+      "History",
+      "All of the above"
     ],
     "time": 35,
-    "details": "--unshallow converts shallow to full clone."
+    "details": "What is git clone? explanation."
   },
   {
-    "question": "What is git push -u?",
+    "question": "What is git branch? (Level 5 #103)",
     "options": [
-      "Set upstream tracking",
-      "Force push",
-      "Update push",
-      "Undo push"
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
     ],
     "correctOptions": [
-      "Set upstream tracking"
-    ],
-    "time": 30,
-    "details": "-u (--set-upstream) sets default upstream."
-  },
-  {
-    "question": "What is upstream tracking?",
-    "options": [
-      "Link local to remote branch",
-      "Unlink branches",
-      "Delete link",
-      "Push link"
-    ],
-    "correctOptions": [
-      "Link local to remote branch"
+      "Feature",
+      "Isolation",
+      "Merge",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Upstream tracking connects local and remote branches."
+    "details": "What is git branch? explanation."
   },
   {
-    "question": "What does --force push do?",
+    "question": "What is git merge? (Level 5 #104)",
     "options": [
-      "Overwrite remote commits",
-      "Safe push",
-      "New push",
-      "Cancel push"
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
     ],
     "correctOptions": [
-      "Overwrite remote commits"
-    ],
-    "time": 30,
-    "details": "--force overwrites remote with local commits."
-  },
-  {
-    "question": "When should you force push?",
-    "options": [
-      "Never on shared branches",
-      "Always",
-      "On main branch",
-      "When asked"
-    ],
-    "correctOptions": [
-      "Never on shared branches"
+      "Combine",
+      "Fast-forward",
+      "Conflict",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Never force push to shared/public branches!"
+    "details": "What is git merge? explanation."
   },
   {
-    "question": "What is git push --force-with-lease?",
+    "question": "What is git rebase? (Level 5 #105)",
     "options": [
-      "Safer force push",
-      "Cancel push",
-      "No push",
-      "New push"
+      "History",
+      "Linear",
+      "Interactive",
+      "All of the above"
     ],
     "correctOptions": [
-      "Safer force push"
-    ],
-    "time": 40,
-    "details": "--force-with-lease checks before overwriting."
-  },
-  {
-    "question": "What is git push --force-if-includes?",
-    "options": [
-      "Require local commits first",
-      "Force anyway",
-      "Skip check",
-      "Cancel push"
-    ],
-    "correctOptions": [
-      "Require local commits first"
-    ],
-    "time": 45,
-    "details": "Only force push if remote is rebased on local."
-  },
-  {
-    "question": "What is git pull --rebase?",
-    "options": [
-      "Fetch and rebase instead of merge",
-      "Fetch and merge",
-      "Push and rebase",
-      "Rebase remote"
-    ],
-    "correctOptions": [
-      "Fetch and rebase instead of merge"
+      "History",
+      "Linear",
+      "Interactive",
+      "All of the above"
     ],
     "time": 35,
-    "details": "--rebase rebases local commits instead of merging."
+    "details": "What is git rebase? explanation."
   },
   {
-    "question": "What is pull.rebase setting?",
+    "question": "What is git stash? (Level 5 #106)",
     "options": [
-      "Auto-rebase on pull",
-      "Auto-merge on pull",
-      "Disable pull",
-      "Force pull"
+      "Temporary",
+      "Save",
+      "Pop",
+      "All of the above"
     ],
     "correctOptions": [
-      "Auto-rebase on pull"
-    ],
-    "time": 40,
-    "details": "pull.rebase makes rebase the default for pull."
-  },
-  {
-    "question": "What is a remote-tracking branch?",
-    "options": [
-      "Local copy of remote branch",
-      "Remote branch",
-      "Local branch",
-      "New branch"
-    ],
-    "correctOptions": [
-      "Local copy of remote branch"
+      "Temporary",
+      "Save",
+      "Pop",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Remote-tracking branches are local copies of remote."
+    "details": "What is git stash? explanation."
   },
   {
-    "question": "What is origin/master?",
+    "question": "What is git reset? (Level 5 #107)",
     "options": [
-      "Remote-tracking branch",
-      "Remote branch",
-      "Local branch",
-      "Deleted branch"
+      "Undo",
+      "Staging",
+      "Soft",
+      "All of the above"
     ],
     "correctOptions": [
-      "Remote-tracking branch"
-    ],
-    "time": 30,
-    "details": "origin/master is your local copy of remote master."
-  },
-  {
-    "question": "How do you update remote-tracking branches?",
-    "options": [
-      "git fetch origin",
-      "git pull origin",
-      "git fetch",
-      "Both fetch and pull work"
-    ],
-    "correctOptions": [
-      "Both fetch and pull work"
+      "Undo",
+      "Staging",
+      "Soft",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Both fetch and pull update tracking branches."
+    "details": "What is git reset? explanation."
   },
   {
-    "question": "What is git prune?",
+    "question": "What is git diff? (Level 5 #108)",
     "options": [
-      "Remove deleted remote branches",
-      "Create branches",
-      "Delete local branches",
-      "Push branches"
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
     ],
     "correctOptions": [
-      "Remove deleted remote branches"
+      "Changes",
+      "Staged",
+      "Unstaged",
+      "All of the above"
     ],
     "time": 35,
-    "details": "git remote prune removes stale remote-tracking."
+    "details": "What is git diff? explanation."
   },
   {
-    "question": "What is git fetch --prune?",
+    "question": "What is git log? (Level 5 #109)",
     "options": [
-      "Auto-prune stale branches",
-      "Fetch and prune",
-      "Prune and fetch",
-      "No prune"
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
     ],
     "correctOptions": [
-      "Auto-prune stale branches"
+      "History",
+      "Author",
+      "Format",
+      "All of the above"
     ],
     "time": 35,
-    "details": "--prune removes stale remote-tracking branches."
+    "details": "What is git log? explanation."
   },
   {
-    "question": "What are stale branches?",
+    "question": "What is git remote? (Level 5 #110)",
     "options": [
-      "Deleted remote branches",
-      "Old commits",
-      "New branches",
-      "Local branches"
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
     ],
     "correctOptions": [
-      "Deleted remote branches"
+      "Origin",
+      "Push",
+      "Pull",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Stale branches are remote-tracking of deleted remotes."
+    "details": "What is git remote? explanation."
   },
   {
-    "question": "What does fetch.prune do?",
+    "question": "What is a Promise?",
     "options": [
-      "Auto-prune on fetch",
-      "Prune on pull",
-      "Manual prune",
-      "Disable prune"
+      "Async result",
+      "Future value",
+      "State management",
+      "All of the above"
     ],
     "correctOptions": [
-      "Auto-prune on fetch"
-    ],
-    "time": 40,
-    "details": "fetch.prune enables auto-pruning for all fetches."
-  },
-  {
-    "question": "What is git push --all?",
-    "options": [
-      "Push all branches",
-      "Push current",
-      "Push main",
-      "Push new"
-    ],
-    "correctOptions": [
-      "Push all branches"
-    ],
-    "time": 30,
-    "details": "--all pushes all local branches to remote."
-  },
-  {
-    "question": "What is git push --tags?",
-    "options": [
-      "Push all tags",
-      "Push current tag",
-      "Delete tags",
-      "No tags"
-    ],
-    "correctOptions": [
-      "Push all tags"
-    ],
-    "time": 30,
-    "details": "--tags pushes all local tags to remote."
-  },
-  {
-    "question": "What is git push --mirror?",
-    "options": [
-      "Push all refs to remote",
-      "Push only commits",
-      "Push only branches",
-      "Push only tags"
-    ],
-    "correctOptions": [
-      "Push all refs to remote"
-    ],
-    "time": 40,
-    "details": "--mirror pushes all refs including deleted ones."
-  },
-  {
-    "question": "What is git ls-remote?",
-    "options": [
-      "List remote branches",
-      "List local branches",
-      "List commits",
-      "List tags"
-    ],
-    "correctOptions": [
-      "List remote branches"
+      "Async result",
+      "Future value",
+      "State management",
+      "All of the above"
     ],
     "time": 35,
-    "details": "ls-remote shows remote branches without cloning."
+    "details": "What is a Promise? explanation."
   },
   {
-    "question": "What is git remote prune origin?",
+    "question": "What is CI/CD?",
     "options": [
-      "Remove stale branches",
-      "Add branches",
-      "Update branches",
-      "Create branches"
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
     ],
     "correctOptions": [
-      "Remove stale branches"
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Prune removes remote-tracking branches for deleted remote branches."
+    "details": "What is CI/CD? explanation."
   },
   {
-    "question": "What happens when push is rejected?",
+    "question": "What is data structure?",
     "options": [
-      "Remote has newer commits",
-      "Branch doesn't exist",
-      "Permission denied",
-      "Network error"
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
     ],
     "correctOptions": [
-      "Remote has newer commits"
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
     ],
     "time": 35,
-    "details": "Rejection means remote has commits you don't have."
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
   }
 ]

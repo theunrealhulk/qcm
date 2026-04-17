@@ -1,545 +1,2175 @@
 [
-  {"question": "What does the 'readonly' keyword in C# mean?", "options": ["Can only be assigned in constructor", "Cannot be modified", "Compile-time constant", "Immutable"], "correctOptions": ["Can only be assigned in constructor"], "time": 30, "details": "readonly fields can only be assigned at declaration or in the constructor of their containing class."},
-  {"question": "What is the difference between 'const' and 'readonly' in C#?", "options": ["Compile-time vs runtime", "Static vs instance", "Value vs reference", "Global vs local"], "correctOptions": ["Compile-time vs runtime"], "time": 35, "details": "const is evaluated at compile-time, while readonly is evaluated at runtime."},
-  {"question": "What is a delegate in C#?", "options": ["Type-safe function pointer", "Callback mechanism", "Event handler", "Reference type"], "correctOptions": ["Type-safe function pointer"], "time": 30, "details": "A delegate is a type-safe callback that can reference methods."},
-  {"question": "What is an event in C#?", "options": ["Delegate wrapper", "Message system", "Notification", "Observer pattern"], "correctOptions": ["Delegate wrapper"], "time": 30, "details": "Events are encapsulated delegates that provide publish-subscribe functionality."},
-  {"question": "What is the purpose of the 'params' keyword?", "options": ["Variable number of arguments", "Array parameter", "Optional parameter", "Default parameter"], "correctOptions": ["Variable number of arguments"], "time": 30, "details": "params allows methods to accept a variable number of arguments."},
-  {"question": "What is method overloading?", "options": ["Multiple methods same name", "Different parameters", "Compile-time polymorphism", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Method overloading allows multiple methods with the same name but different parameters."},
-  {"question": "What is a generic class in C#?", "options": ["Parameterized type", "Type-safe container", "Template class", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Generic classes work with any type while maintaining type safety."},
-  {"question": "What does 'where' clause do in generics?", "options": ["Type constraint", "Filter results", "Bound check", "Type filter"], "correctOptions": ["Type constraint"], "time": 30, "details": "The where clause specifies constraints on generic type parameters."},
-  {"question": "What is covariance in C#?", "options": ["Return type conversion", "Parameter type conversion", "Assignment conversion", "Inheritance conversion"], "correctOptions": ["Return type conversion"], "time": 35, "details": "Covariance allows returning a more derived type than originally specified."},
-  {"question": "What is contravariance in C#?", "options": ["Parameter type conversion", "Return type conversion", "Assignment conversion", "Inheritance conversion"], "correctOptions": ["Parameter type conversion"], "time": 35, "details": "Contravariance allows accepting a less derived parameter type."},
-  {"question": "What is LINQ used for?", "options": ["Data querying", "Object manipulation", "SQL-like syntax", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "LINQ provides unified syntax for querying various data sources."},
-  {"question": "What is deferred execution in LINQ?", "options": ["Query executes when enumerated", "Query executes immediately", "Query cached", "Query optimized"], "correctOptions": ["Query executes when enumerated"], "time": 35, "details": "Deferred execution means the query is not run until the results are iterated."},
-  {"question": "What is immediate execution in LINQ?", "options": ["Query executes immediately", "Query stored", "Query cached", "Query deferred"], "correctOptions": ["Query executes immediately"], "time": 35, "details": "Methods like ToList(), ToArray() cause immediate execution."},
-  {"question": "What does the 'yield' keyword do?", "options": ["Return iterator", "Produce values", "Lazy enumeration", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "yield return creates an iterator that produces values on demand."},
-  {"question": "What is a lambda expression?", "options": ["Anonymous function", "Delegate instance", "Expression tree", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Lambda expressions are anonymous functions that can be converted to delegates or expression trees."},
-  {"question": "What is the 'async' keyword used for?", "options": ["Asynchronous method", "Non-blocking call", "Task-based operation", "Background work"], "correctOptions": ["Asynchronous method"], "time": 30, "details": "async marks a method as asynchronous that can use await."},
-  {"question": "What does 'await' do in async methods?", "options": ["Pauses until task completes", "Runs synchronously", "Blocks thread", "Returns value"], "correctOptions": ["Pauses until task completes"], "time": 30, "details": "await asynchronously waits for a Task to complete without blocking."},
-  {"question": "What is Task in C#?", "options": ["Represents async operation", "Thread wrapper", "Future result", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Task represents an asynchronous operation that returns a result."},
-  {"question": "What is the difference between Task and Task<T>?", "options": ["Return value", "Generic type", "Result type", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Task<T> returns a result of type T, while Task returns nothing."},
-  {"question": "What is ConfigureAwait(false)?", "options": ["Don't capture context", "Continue on any context", "Fire and forget", "Disable synchronization"], "correctOptions": ["Don't capture context"], "time": 35, "details": "ConfigureAwait(false) prevents capturing the synchronization context."},
-  {"question": "What is Entity Framework?", "options": ["ORM framework", "Database abstraction", "LINQ to SQL", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "EF is an ORM that enables .NET developers to work with databases using LINQ."},
-  {"question": "What is DbContext in Entity Framework?", "options": ["Database session", "Unit of work", "Query gateway", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "DbContext represents a session with the database."},
-  {"question": "What is lazy loading in EF?", "options": ["Load related data on demand", "Load all data", "Load eagerly", "No loading"], "correctOptions": ["Load related data on demand"], "time": 35, "details": "Lazy loading loads related entities when navigation property is accessed."},
-  {"question": "What is eager loading in EF?", "options": ["Load related data upfront", "Load on demand", "Load lazily", "No loading"], "correctOptions": ["Load related data upfront"], "time": 35, "details": "Eager loading loads related data in a single query using Include()."},
-  {"question": "What is explicit loading in EF?", "options": ["Load related data manually", "Load lazily", "Load eagerly", "No loading"], "correctOptions": ["Load related data manually"], "time": 35, "details": "Explicit loading uses Load() method to load related data on demand."},
-  {"question": "What is a navigation property in EF?", "options": ["Related entity reference", "Foreign key", "Relationship", "All of the above"], "correctOptions": ["All of the above"], "details": "Navigation properties represent relationships between entities."},
-  {"question": "What is the 'virtual' keyword for navigation properties?", "options": ["Enable lazy loading", "Enable override", "Enable inheritance", "Enable proxy"], "correctOptions": ["Enable lazy loading"], "time": 35, "details": "Making navigation properties virtual enables lazy loading proxies."},
-  {"question": "What is a migration in EF?", "options": ["Database schema update", "Data migration", "Version control", "All of the above"], "correctOptions": ["Database schema update"], "time": 35, "details": "Migrations update the database schema based on model changes."},
-  {"question": "What is code-first approach in EF?", "options": ["Create DB from classes", "Create classes from DB", "Manual SQL", "All of the above"], "correctOptions": ["Create DB from classes"], "time": 30, "details": "Code-first allows creating database from C# classes."},
-  {"question": "What is DbSet<T> in EF?", "options": ["Entity collection", "Table representation", "Queryable set", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "DbSet<T> represents a table or view in the database."},
-  {"question": "What is the 'using' statement scope for DbContext?", "options": ["Automatic disposal", "Transaction scope", "Connection pooling", "All of the above"], "correctOptions": ["Automatic disposal"], "time": 35, "details": "using ensures DbContext is disposed after use, closing connections."},
-  {"question": "What is AsNoTracking() used for?", "options": ["Performance optimization", "Read-only queries", "No change tracking", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "AsNoTracking() improves performance by disabling change tracking."},
-  {"question": "What is the difference between First() and FirstOrDefault()?",
-    "options": ["Exception on empty", "Default value", "Null handling", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What does the 'readonly' keyword in C# mean?",
+    "options": [
+      "Can only be assigned in constructor",
+      "Cannot be modified",
+      "Compile-time constant",
+      "Immutable"
+    ],
+    "correctOptions": [
+      "Can only be assigned in constructor"
+    ],
+    "time": 30,
+    "details": "readonly fields can only be assigned at declaration or in the constructor of their containing class."
+  },
+  {
+    "question": "What is the difference between 'const' and 'readonly' in C#?",
+    "options": [
+      "Compile-time vs runtime",
+      "Static vs instance",
+      "Value vs reference",
+      "Global vs local"
+    ],
+    "correctOptions": [
+      "Compile-time vs runtime"
+    ],
+    "time": 35,
+    "details": "const is evaluated at compile-time, while readonly is evaluated at runtime."
+  },
+  {
+    "question": "What is a delegate in C#?",
+    "options": [
+      "Type-safe function pointer",
+      "Callback mechanism",
+      "Event handler",
+      "Reference type"
+    ],
+    "correctOptions": [
+      "Type-safe function pointer"
+    ],
+    "time": 30,
+    "details": "A delegate is a type-safe callback that can reference methods."
+  },
+  {
+    "question": "What is an event in C#?",
+    "options": [
+      "Delegate wrapper",
+      "Message system",
+      "Notification",
+      "Observer pattern"
+    ],
+    "correctOptions": [
+      "Delegate wrapper"
+    ],
+    "time": 30,
+    "details": "Events are encapsulated delegates that provide publish-subscribe functionality."
+  },
+  {
+    "question": "What is the purpose of the 'params' keyword?",
+    "options": [
+      "Variable number of arguments",
+      "Array parameter",
+      "Optional parameter",
+      "Default parameter"
+    ],
+    "correctOptions": [
+      "Variable number of arguments"
+    ],
+    "time": 30,
+    "details": "params allows methods to accept a variable number of arguments."
+  },
+  {
+    "question": "What is method overloading?",
+    "options": [
+      "Multiple methods same name",
+      "Different parameters",
+      "Compile-time polymorphism",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Method overloading allows multiple methods with the same name but different parameters."
+  },
+  {
+    "question": "What is a generic class in C#?",
+    "options": [
+      "Parameterized type",
+      "Type-safe container",
+      "Template class",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Generic classes work with any type while maintaining type safety."
+  },
+  {
+    "question": "What is async/await?",
+    "options": [
+      "Async syntax",
+      "Promise-based",
+      "Sequential",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Async syntax",
+      "Promise-based",
+      "Sequential",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is async/await? explanation."
+  },
+  {
+    "question": "What is covariance in C#?",
+    "options": [
+      "Return type conversion",
+      "Parameter type conversion",
+      "Assignment conversion",
+      "Inheritance conversion"
+    ],
+    "correctOptions": [
+      "Return type conversion"
+    ],
+    "time": 35,
+    "details": "Covariance allows returning a more derived type than originally specified."
+  },
+  {
+    "question": "What is contravariance in C#?",
+    "options": [
+      "Parameter type conversion",
+      "Return type conversion",
+      "Assignment conversion",
+      "Inheritance conversion"
+    ],
+    "correctOptions": [
+      "Parameter type conversion"
+    ],
+    "time": 35,
+    "details": "Contravariance allows accepting a less derived parameter type."
+  },
+  {
+    "question": "What is LINQ used for?",
+    "options": [
+      "Data querying",
+      "Object manipulation",
+      "SQL-like syntax",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "LINQ provides unified syntax for querying various data sources."
+  },
+  {
+    "question": "What is deferred execution in LINQ?",
+    "options": [
+      "Query executes when enumerated",
+      "Query executes immediately",
+      "Query cached",
+      "Query optimized"
+    ],
+    "correctOptions": [
+      "Query executes when enumerated"
+    ],
+    "time": 35,
+    "details": "Deferred execution means the query is not run until the results are iterated."
+  },
+  {
+    "question": "What is immediate execution in LINQ?",
+    "options": [
+      "Query executes immediately",
+      "Query stored",
+      "Query cached",
+      "Query deferred"
+    ],
+    "correctOptions": [
+      "Query executes immediately"
+    ],
+    "time": 35,
+    "details": "Methods like ToList(), ToArray() cause immediate execution."
+  },
+  {
+    "question": "What does the 'yield' keyword do?",
+    "options": [
+      "Return iterator",
+      "Produce values",
+      "Lazy enumeration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "yield return creates an iterator that produces values on demand."
+  },
+  {
+    "question": "What is a lambda expression?",
+    "options": [
+      "Anonymous function",
+      "Delegate instance",
+      "Expression tree",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Lambda expressions are anonymous functions that can be converted to delegates or expression trees."
+  },
+  {
+    "question": "What is the 'async' keyword used for?",
+    "options": [
+      "Asynchronous method",
+      "Non-blocking call",
+      "Task-based operation",
+      "Background work"
+    ],
+    "correctOptions": [
+      "Asynchronous method"
+    ],
+    "time": 30,
+    "details": "async marks a method as asynchronous that can use await."
+  },
+  {
+    "question": "What does 'await' do in async methods?",
+    "options": [
+      "Pauses until task completes",
+      "Runs synchronously",
+      "Blocks thread",
+      "Returns value"
+    ],
+    "correctOptions": [
+      "Pauses until task completes"
+    ],
+    "time": 30,
+    "details": "await asynchronously waits for a Task to complete without blocking."
+  },
+  {
+    "question": "What is Task in C#?",
+    "options": [
+      "Represents async operation",
+      "Thread wrapper",
+      "Future result",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Task represents an asynchronous operation that returns a result."
+  },
+  {
+    "question": "What is the difference between Task and Task<T>?",
+    "options": [
+      "Return value",
+      "Generic type",
+      "Result type",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Task<T> returns a result of type T, while Task returns nothing."
+  },
+  {
+    "question": "What is ConfigureAwait(false)?",
+    "options": [
+      "Don't capture context",
+      "Continue on any context",
+      "Fire and forget",
+      "Disable synchronization"
+    ],
+    "correctOptions": [
+      "Don't capture context"
+    ],
+    "time": 35,
+    "details": "ConfigureAwait(false) prevents capturing the synchronization context."
+  },
+  {
+    "question": "What is Entity Framework?",
+    "options": [
+      "ORM framework",
+      "Database abstraction",
+      "LINQ to SQL",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "EF is an ORM that enables .NET developers to work with databases using LINQ."
+  },
+  {
+    "question": "What is DbContext in Entity Framework?",
+    "options": [
+      "Database session",
+      "Unit of work",
+      "Query gateway",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "DbContext represents a session with the database."
+  },
+  {
+    "question": "What is lazy loading in EF?",
+    "options": [
+      "Load related data on demand",
+      "Load all data",
+      "Load eagerly",
+      "No loading"
+    ],
+    "correctOptions": [
+      "Load related data on demand"
+    ],
+    "time": 35,
+    "details": "Lazy loading loads related entities when navigation property is accessed."
+  },
+  {
+    "question": "What is eager loading in EF?",
+    "options": [
+      "Load related data upfront",
+      "Load on demand",
+      "Load lazily",
+      "No loading"
+    ],
+    "correctOptions": [
+      "Load related data upfront"
+    ],
+    "time": 35,
+    "details": "Eager loading loads related data in a single query using Include()."
+  },
+  {
+    "question": "What is explicit loading in EF?",
+    "options": [
+      "Load related data manually",
+      "Load lazily",
+      "Load eagerly",
+      "No loading"
+    ],
+    "correctOptions": [
+      "Load related data manually"
+    ],
+    "time": 35,
+    "details": "Explicit loading uses Load() method to load related data on demand."
+  },
+  {
+    "question": "What is a navigation property in EF?",
+    "options": [
+      "Related entity reference",
+      "Foreign key",
+      "Relationship",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "details": "Navigation properties represent relationships between entities."
+  },
+  {
+    "question": "What is the 'virtual' keyword for navigation properties?",
+    "options": [
+      "Enable lazy loading",
+      "Enable override",
+      "Enable inheritance",
+      "Enable proxy"
+    ],
+    "correctOptions": [
+      "Enable lazy loading"
+    ],
+    "time": 35,
+    "details": "Making navigation properties virtual enables lazy loading proxies."
+  },
+  {
+    "question": "What is a migration in EF?",
+    "options": [
+      "Database schema update",
+      "Data migration",
+      "Version control",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Database schema update"
+    ],
+    "time": 35,
+    "details": "Migrations update the database schema based on model changes."
+  },
+  {
+    "question": "What is code-first approach in EF?",
+    "options": [
+      "Create DB from classes",
+      "Create classes from DB",
+      "Manual SQL",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create DB from classes"
+    ],
+    "time": 30,
+    "details": "Code-first allows creating database from C# classes."
+  },
+  {
+    "question": "What is DbSet<T> in EF?",
+    "options": [
+      "Entity collection",
+      "Table representation",
+      "Queryable set",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "DbSet<T> represents a table or view in the database."
+  },
+  {
+    "question": "What is the 'using' statement scope for DbContext?",
+    "options": [
+      "Automatic disposal",
+      "Transaction scope",
+      "Connection pooling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Automatic disposal"
+    ],
+    "time": 35,
+    "details": "using ensures DbContext is disposed after use, closing connections."
+  },
+  {
+    "question": "What is AsNoTracking() used for?",
+    "options": [
+      "Performance optimization",
+      "Read-only queries",
+      "No change tracking",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "AsNoTracking() improves performance by disabling change tracking."
+  },
+  {
+    "question": "What is the difference between First() and FirstOrDefault()?",
+    "options": [
+      "Exception on empty",
+      "Default value",
+      "Null handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "First() throws exception if no elements; FirstOrDefault() returns default."
   },
-  {"question": "What is Single() vs First()?",
-    "options": ["Exactly one vs first", "Unique vs multiple", "Error behavior", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Single() vs First()?",
+    "options": [
+      "Exactly one vs first",
+      "Unique vs multiple",
+      "Error behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Single() expects exactly one element; First() returns the first."
   },
-  {"question": "What is a struct vs class?",
-    "options": ["Value vs reference", "Stack vs heap", "Mutable vs immutable", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is a struct vs class?",
+    "options": [
+      "Value vs reference",
+      "Stack vs heap",
+      "Mutable vs immutable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Structs are value types stored on stack; classes are reference types on heap."
   },
-  {"question": "When should you use struct?",
-    "options": ["Small data", "Immutable", "Performance", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "When should you use struct?",
+    "options": [
+      "Small data",
+      "Immutable",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Use structs for small, immutable data that benefits from value semantics."
   },
-  {"question": "What is an indexer in C#?",
-    "options": ["Array-like access", "Property with parameters", "Index access", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is an indexer in C#?",
+    "options": [
+      "Array-like access",
+      "Property with parameters",
+      "Index access",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "Indexers allow objects to be indexed like arrays."
   },
-  {"question": "What is the 'is' operator used for?",
-    "options": ["Type checking", "Pattern matching", "Type conversion", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 30,
-    "details": "is checks if an object is of a certain type."
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
   },
-  {"question": "What is the 'as' operator used for?",
-    "options": ["Safe casting", "Type conversion", "Nullable type", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 30,
-    "details": "as safely casts types, returning null on failure instead of exception."
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
   },
-  {"question": "What is a nullable type?",
-    "options": ["Can be null", "Value type wrapper", "Optional value", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is a nullable type?",
+    "options": [
+      "Can be null",
+      "Value type wrapper",
+      "Optional value",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "Nullable<T> allows value types to represent null."
   },
-  {"question": "What is the null-conditional operator?",
-    "options": ["?. operator", "Safe navigation", "Null check", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the null-conditional operator?",
+    "options": [
+      "?. operator",
+      "Safe navigation",
+      "Null check",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "?. returns null if the object is null instead of throwing NullReferenceException."
   },
-  {"question": "What is string interpolation?",
-    "options": ["$ string", "Inline variables", "Format string", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is string interpolation?",
+    "options": [
+      "$ string",
+      "Inline variables",
+      "Format string",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 25,
     "details": "$ string allows embedding variables directly in strings."
   },
-  {"question": "What is verbatim string?",
-    "options": ["@ string", "Raw string", "No escape sequences", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is verbatim string?",
+    "options": [
+      "@ string",
+      "Raw string",
+      "No escape sequences",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 25,
     "details": "@ string treats backslashes as literal characters."
   },
-  {"question": "What is the null coalescing operator??",
-    "options": ["?? operator", "Default value", "Null check", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the null coalescing operator??",
+    "options": [
+      "?? operator",
+      "Default value",
+      "Null check",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "?? returns right operand if left is null."
   },
-  {"question": "What is pattern matching 'is' with pattern?",
-    "options": ["Type + value", "Pattern extraction", "Type checking", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
     "time": 35,
-    "details": "Pattern matching checks type and extracts values in one expression."
+    "details": "What is version control? explanation."
   },
-  {"question": "What is a switch expression?",
-    "options": ["Expression form", "Pattern matching", "Return value", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is a switch expression?",
+    "options": [
+      "Expression form",
+      "Pattern matching",
+      "Return value",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Switch expressions return values based on pattern matching."
   },
-  {"question": "What is tuple deconstruction?",
-    "options": ["Split tuple", "Extract values", "Multiple variables", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is tuple deconstruction?",
+    "options": [
+      "Split tuple",
+      "Extract values",
+      "Multiple variables",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Deconstruction splits tuples into individual variables."
   },
-  {"question": "What is local function in C#?",
-    "options": ["Function within function", "Nested function", "Private function", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is local function in C#?",
+    "options": [
+      "Function within function",
+      "Nested function",
+      "Private function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "Local functions are methods defined inside another method."
   },
-  {"question": "What is a record type?",
-    "options": ["Immutable type", "Value equality", "With expressions", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is a record type?",
+    "options": [
+      "Immutable type",
+      "Value equality",
+      "With expressions",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Records are reference types with built-in value equality."
   },
-  {"question": "What is 'with' expression for records?",
-    "options": ["Copy with changes", "Clone object", "Modify copy", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is 'with' expression for records?",
+    "options": [
+      "Copy with changes",
+      "Clone object",
+      "Modify copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "with creates a copy of a record with specified changes."
   },
-  {"question": "What is dependency injection?",
-    "options": ["Inverting control", "Inject dependencies", "Loose coupling", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Inverting control",
+      "Inject dependencies",
+      "Loose coupling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "DI passes dependencies to classes rather than having them create dependencies."
   },
-  {"question": "What is constructor injection?",
-    "options": ["Inject via constructor", "Required dependencies", "Explicit dependencies", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is constructor injection?",
+    "options": [
+      "Inject via constructor",
+      "Required dependencies",
+      "Explicit dependencies",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Constructor injection passes dependencies through the constructor."
   },
-  {"question": "What is interface segregation?",
-    "options": ["Many small interfaces", "Single responsibility", "Specific contracts", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is interface segregation?",
+    "options": [
+      "Many small interfaces",
+      "Single responsibility",
+      "Specific contracts",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "ISP states clients should not depend on unused methods."
   },
-  {"question": "What is the SOLID principle?",
-    "options": ["Design guidelines", "5 principles", "OOP best practices", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the SOLID principle?",
+    "options": [
+      "Design guidelines",
+      "5 principles",
+      "OOP best practices",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "SOLID: Single responsibility, Open-closed, Liskov substitution, Interface segregation, Dependency inversion."
   },
-  {"question": "What is the Single Responsibility Principle?",
-    "options": ["One reason to change", "One class per task", "Focused class", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the Single Responsibility Principle?",
+    "options": [
+      "One reason to change",
+      "One class per task",
+      "Focused class",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "SRP states a class should have only one reason to change."
   },
-  {"question": "What is the Open/Closed Principle?",
-    "options": ["Open for extension", "Closed for modification", "Flexible design", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the Open/Closed Principle?",
+    "options": [
+      "Open for extension",
+      "Closed for modification",
+      "Flexible design",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "OCP states entities should be open for extension but closed for modification."
   },
-  {"question": "What is the Liskov Substitution Principle?",
-    "options": ["Base substitutable", "Child works as parent", "Type safety", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
     "time": 35,
-    "details": "LSP states objects of a base class should be replaceable with derived class objects."
+    "details": "What is algorithm? explanation."
   },
-  {"question": "What is IDisposable pattern?",
-    "options": ["Resource cleanup", "Dispose method", "Finalizer", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is IDisposable pattern?",
+    "options": [
+      "Resource cleanup",
+      "Dispose method",
+      "Finalizer",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "IDisposable pattern provides deterministic cleanup of unmanaged resources."
   },
-  {"question": "What is a finalizer in C#?",
-    "options": ["Destructor", "Cleanup on GC", "Resource release", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is a finalizer in C#?",
+    "options": [
+      "Destructor",
+      "Cleanup on GC",
+      "Resource release",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Finalizers (~) are called by garbage collector before object is reclaimed."
   },
-  {"question": "What is the difference between ref and out?",
-    "options": ["Initialization required", "Direction", "Usage pattern", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the difference between ref and out?",
+    "options": [
+      "Initialization required",
+      "Direction",
+      "Usage pattern",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "ref requires initialization before passing; out requires assignment inside method."
   },
-  {"question": "What is in parameter modifier?",
-    "options": ["Read-only reference", "Pass by value", "No copy", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is in parameter modifier?",
+    "options": [
+      "Read-only reference",
+      "Pass by value",
+      "No copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "in passes a read-only reference to avoid copying large structs."
   },
-  {"question": "What is the Span<T> type?",
-    "options": ["Stack memory", "Memory buffer", "Zero allocation", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the Span<T> type?",
+    "options": [
+      "Stack memory",
+      "Memory buffer",
+      "Zero allocation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Span<T> provides safe access to contiguous memory without copying."
   },
-  {"question": "What is Memory<T> vs Span<T>?",
-    "options": ["Async compatible", "Can be stored", "Task ownership", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Memory<T> vs Span<T>?",
+    "options": [
+      "Async compatible",
+      "Can be stored",
+      "Task ownership",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Memory<T> is for async operations; Span<T> is for synchronous scenarios."
   },
-  {"question": "What is ArrayPool<T>?",
-    "options": ["Buffer reuse", "Memory optimization", "Performance", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is ArrayPool<T>?",
+    "options": [
+      "Buffer reuse",
+      "Memory optimization",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "ArrayPool<T> recycles array buffers to reduce allocations."
   },
-  {"question": "What is ValueTask<T>?",
-    "options": ["Sync/async result", "Reduced allocation", "Cached task", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is ValueTask<T>?",
+    "options": [
+      "Sync/async result",
+      "Reduced allocation",
+      "Cached task",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "details": "ValueTask<T> avoids allocation when operation completes synchronously."
   },
-  {"question": "What is IFormFile in ASP.NET?",
-    "options": ["File upload", "Request stream", "Multipart data", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is IFormFile in ASP.NET?",
+    "options": [
+      "File upload",
+      "Request stream",
+      "Multipart data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "IFormFile represents a file sent with the HTTP request."
   },
-  {"question": "What is the IConfiguration interface?",
-    "options": ["Configuration access", "Settings provider", "App settings", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is the IConfiguration interface?",
+    "options": [
+      "Configuration access",
+      "Settings provider",
+      "App settings",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "IConfiguration provides access to app configuration settings."
   },
-  {"question": "What is Options pattern?",
-    "options": ["Strongly typed config", "DI integration", "Settings binding", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Options pattern?",
+    "options": [
+      "Strongly typed config",
+      "DI integration",
+      "Settings binding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Options pattern binds configuration to strongly typed objects."
   },
-  {"question": "What is ILogger<T>?",
-    "options": ["Generic logger", "DI logger", "Category logger", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is ILogger<T>?",
+    "options": [
+      "Generic logger",
+      "DI logger",
+      "Category logger",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "ILogger<T> provides typed logging for category T."
   },
-  {"question": "What is a Middleware in ASP.NET Core?",
-    "options": ["Request delegate", "Pipeline component", "HTTP handler", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is a Middleware in ASP.NET Core?",
+    "options": [
+      "Request delegate",
+      "Pipeline component",
+      "HTTP handler",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Middleware are components in the request pipeline that handle requests/responses."
   },
-  {"question": "What is UseMiddleware<T>?",
-    "options": ["Register middleware", "Pipeline setup", "Extension method", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is UseMiddleware<T>?",
+    "options": [
+      "Register middleware",
+      "Pipeline setup",
+      "Extension method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "UseMiddleware<T> registers middleware in the pipeline."
   },
-  {"question": "What is a Tag Helper?",
-    "options": ["Razor component", "HTML helper", "Server-side tag", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is a Tag Helper?",
+    "options": [
+      "Razor component",
+      "HTML helper",
+      "Server-side tag",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "details": "Tag Helpers enable server-side code to participate in rendering HTML elements."
   },
-  {"question": "What is ViewComponent?",
-    "options": ["Reusable UI", "Partial view", "Render fragment", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is ViewComponent?",
+    "options": [
+      "Reusable UI",
+      "Partial view",
+      "Render fragment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "ViewComponents are self-contained reusable UI components."
   },
-  {"question": "What is _ViewStart.cshtml?",
-    "options": ["Layout setup", "Shared settings", "View initialization", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is _ViewStart.cshtml?",
+    "options": [
+      "Layout setup",
+      "Shared settings",
+      "View initialization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "_ViewStart.cshtml defines default layout for views."
   },
-  {"question": "What is _ViewImports.cshtml?",
-    "options": ["Namespace imports", "Tag helper registration", "View settings", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is _ViewImports.cshtml?",
+    "options": [
+      "Namespace imports",
+      "Tag helper registration",
+      "View settings",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "_ViewImports.cshtml provides namespace imports and tag helper registration."
   },
-  {"question": "What is dependency injection scope?",
-    "options": ["Lifetime management", "Service availability", "Object creation", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is dependency injection scope?",
+    "options": [
+      "Lifetime management",
+      "Service availability",
+      "Object creation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "DI scope determines how long services live (Transient, Scoped, Singleton)."
   },
-  {"question": "What is Transient lifetime?",
-    "options": ["New instance each time", "Request-scoped", "Single instance", "All of the above"],
-    "correctOptions": ["New instance each time"],
+  {
+    "question": "What is Transient lifetime?",
+    "options": [
+      "New instance each time",
+      "Request-scoped",
+      "Single instance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "New instance each time"
+    ],
     "time": 35,
     "details": "Transient services create a new instance every time they're requested."
   },
-  {"question": "What is Scoped lifetime?",
-    "options": ["Per request", "Per connection", "Instance per scope", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Scoped lifetime?",
+    "options": [
+      "Per request",
+      "Per connection",
+      "Instance per scope",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Scoped services are created once per request."
   },
-  {"question": "What is Singleton lifetime?",
-    "options": ["One instance", "App lifetime", "Shared service", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Singleton lifetime?",
+    "options": [
+      "One instance",
+      "App lifetime",
+      "Shared service",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Singleton services are created once and shared across the application."
   },
-  {"question": "What is IHostedService?",
-    "options": ["Background task", "Hosted service", "Long-running task", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is IHostedService?",
+    "options": [
+      "Background task",
+      "Hosted service",
+      "Long-running task",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "IHostedService provides hooks for implementing background services."
   },
-  {"question": "What is HostedService vs BackgroundService?",
-    "options": ["Interface vs base", "Implementation", "Abstract class", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is HostedService vs BackgroundService?",
+    "options": [
+      "Interface vs base",
+      "Implementation",
+      "Abstract class",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "IHostedService is the interface; BackgroundService is the base implementation."
   },
-  {"question": "What is Health Checks in ASP.NET?",
-    "options": ["Service health", "Monitoring", "Status endpoint", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Health Checks in ASP.NET?",
+    "options": [
+      "Service health",
+      "Monitoring",
+      "Status endpoint",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Health Checks report the health status of app and dependencies."
   },
-  {"question": "What is rate limiting?",
-    "options": ["Request throttling", "API protection", "Traffic control", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is rate limiting?",
+    "options": [
+      "Request throttling",
+      "API protection",
+      "Traffic control",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Rate limiting controls how many requests a client can make."
   },
-  {"question": "What is CORS?",
-    "options": ["Cross-origin requests", "Security policy", "Browser enforcement", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is CORS?",
+    "options": [
+      "Cross-origin requests",
+      "Security policy",
+      "Browser enforcement",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "details": "CORS allows browsers to make requests to different origins."
   },
-  {"question": "What is Response Caching?",
-    "options": ["Cache HTTP response", "Client-side cache", "Server cache", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Response Caching?",
+    "options": [
+      "Cache HTTP response",
+      "Client-side cache",
+      "Server cache",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Response caching stores responses to reduce server load."
   },
-  {"question": "What is Output Caching?",
-    "options": ["Server-side cache", "Response cache", "MVC cache", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Output Caching?",
+    "options": [
+      "Server-side cache",
+      "Response cache",
+      "MVC cache",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Output caching caches entire MVC action results."
   },
-  {"question": "What is session state?",
-    "options": ["User data", "Per-user storage", "Server-side state", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is session state?",
+    "options": [
+      "User data",
+      "Per-user storage",
+      "Server-side state",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Session state stores user-specific data across requests."
   },
-  {"question": "What is TempData?",
-    "options": ["Temp storage", "Between requests", "Redirect data", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is TempData?",
+    "options": [
+      "Temp storage",
+      "Between requests",
+      "Redirect data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "TempData stores data for the next request, often used for redirects."
   },
-  {"question": "What is ViewData?",
-    "options": ["Dictionary access", "Controller to view", "Weakly typed", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is ViewData?",
+    "options": [
+      "Dictionary access",
+      "Controller to view",
+      "Weakly typed",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "ViewData passes data from controller to view via dictionary."
   },
-  {"question": "What is ViewBag?",
-    "options": ["Dynamic view", "Controller to view", "Runtime binding", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is ViewBag?",
+    "options": [
+      "Dynamic view",
+      "Controller to view",
+      "Runtime binding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "ViewBag is a dynamic wrapper around ViewData."
   },
-  {"question": "What is strongly typed view?",
-    "options": ["Typed model", "Type safety", "IntelliSense", "All of the above"],
-    "correctOptions": ["All of the above"],
-    "time": 30,
-    "details": "Strongly typed views use @model to specify the exact type."
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
   },
-  {"question": "What is model binding?",
-    "options": ["Map request to model", "Form processing", "Validation", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is model binding?",
+    "options": [
+      "Map request to model",
+      "Form processing",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Model binding maps HTTP request data to action parameters."
   },
-  {"question": "What is validation annotation?",
-    "options": ["Data validation", "Model validation", "Attribute-based", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is validation annotation?",
+    "options": [
+      "Data validation",
+      "Model validation",
+      "Attribute-based",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Validation annotations define rules using attributes like [Required]."
   },
-  {"question": "What is Remote validation?",
-    "options": ["Server-side check", "Async validation", "AJAX validation", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Remote validation?",
+    "options": [
+      "Server-side check",
+      "Async validation",
+      "AJAX validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Remote validation calls server to validate without posting form."
   },
-  {"question": "What is AntiForgery Token?",
-    "options": ["CSRF protection", "Form security", "Token validation", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is AntiForgery Token?",
+    "options": [
+      "CSRF protection",
+      "Form security",
+      "Token validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "details": "AntiForgery Token prevents cross-site request forgery attacks."
   },
-  {"question": "What is routing in ASP.NET?",
-    "options": ["URL to action", "Request mapping", "Endpoint", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is routing in ASP.NET?",
+    "options": [
+      "URL to action",
+      "Request mapping",
+      "Endpoint",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "Routing maps URLs to controller actions."
   },
-  {"question": "What is attribute routing?",
-    "options": ["Route attributes", "Action-level route", "Custom routes", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is attribute routing?",
+    "options": [
+      "Route attributes",
+      "Action-level route",
+      "Custom routes",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Attribute routing uses [Route] attribute on controllers/actions."
   },
-  {"question": "What is route constraint?",
-    "options": ["Type constraint", "URL segment", "Validation", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
     "time": 35,
-    "details": "Route constraints restrict URL parameter types, e.g., {id:int}."
+    "details": "What is composition? explanation."
   },
-  {"question": "What is area in ASP.NET MVC?",
-    "options": ["Feature grouping", "Folder organization", "Namespace", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is area in ASP.NET MVC?",
+    "options": [
+      "Feature grouping",
+      "Folder organization",
+      "Namespace",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "Areas organize large MVC applications into smaller functional units."
   },
-  {"question": "What is filter in MVC?",
-    "options": ["Cross-cutting concern", "Pre/post processing", "Behavior", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is filter in MVC?",
+    "options": [
+      "Cross-cutting concern",
+      "Pre/post processing",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Filters allow running code before/after action methods."
   },
-  {"question": "What is Authorization filter?",
-    "options": ["Access control", "Permission check", "Security", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Authorization filter?",
+    "options": [
+      "Access control",
+      "Permission check",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Authorization filters run before action to check permissions."
   },
-  {"question": "What is Action filter?",
-    "options": ["Pre/post action", "Execution control", "Result modification", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Action filter?",
+    "options": [
+      "Pre/post action",
+      "Execution control",
+      "Result modification",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Action filters run before/after action execution."
   },
-  {"question": "What is Result filter?",
-    "options": ["Pre/post result", "Response modification", "View processing", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Result filter?",
+    "options": [
+      "Pre/post result",
+      "Response modification",
+      "View processing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Result filters run before/after action result is executed."
   },
-  {"question": "What is Exception filter?",
-    "options": ["Error handling", "Exception processing", "Global error", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Exception filter?",
+    "options": [
+      "Error handling",
+      "Exception processing",
+      "Global error",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "details": "Exception filters handle unhandled exceptions."
   },
-  {"question": "What is async vs sync controller?",
-    "options": ["Non-blocking", "Thread usage", "Scalability", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is async vs sync controller?",
+    "options": [
+      "Non-blocking",
+      "Thread usage",
+      "Scalability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Async controllers free threads during I/O operations."
   },
-  {"question": "What is Web API?",
-    "options": ["RESTful service", "HTTP API", "JSON/XML", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Web API?",
+    "options": [
+      "RESTful service",
+      "HTTP API",
+      "JSON/XML",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "Web API creates RESTful HTTP services returning JSON/XML."
   },
-  {"question": "What is content negotiation?",
-    "options": ["Format selection", "Client preference", "Response type", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is content negotiation?",
+    "options": [
+      "Format selection",
+      "Client preference",
+      "Response type",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Content negotiation returns format based on client Accept header."
   },
-  {"question": "What is OWIN?",
-    "options": ["Web interface", "Host abstraction", "Pipeline", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is OWIN?",
+    "options": [
+      "Web interface",
+      "Host abstraction",
+      "Pipeline",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "OWIN defines a standard interface between .NET web servers and applications."
   },
-  {"question": "What is Kestrel?",
-    "options": ["Cross-platform server", "Web host", "Request handler", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Kestrel?",
+    "options": [
+      "Cross-platform server",
+      "Web host",
+      "Request handler",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "Kestrel is a cross-platform web server for ASP.NET Core."
   },
-  {"question": "What is static file middleware?",
-    "options": ["Serve static files", "File access", "WWW root", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is static file middleware?",
+    "options": [
+      "Serve static files",
+      "File access",
+      "WWW root",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "Static file middleware serves CSS, JS, images from wwwroot."
   },
-  {"question": "What is URL rewriting?",
-    "options": ["URL modification", "Redirect rules", "SEO friendly", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is URL rewriting?",
+    "options": [
+      "URL modification",
+      "Redirect rules",
+      "SEO friendly",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "URL rewriting modifies request URLs for routing or SEO."
   },
-  {"question": "What is Response Compression?",
-    "options": ["Gzip compression", "Bandwidth reduction", "Performance", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Response Compression?",
+    "options": [
+      "Gzip compression",
+      "Bandwidth reduction",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Response compression reduces response size using Gzip/Brotli."
   },
-  {"question": "What is JWT?",
-    "options": ["Token format", "Authentication", "Claims", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is JWT?",
+    "options": [
+      "Token format",
+      "Authentication",
+      "Claims",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "JWT is a compact, URL-safe token format for claims-based auth."
   },
-  {"question": "What is Bearer token?",
-    "options": ["Auth token", "HTTP header", "OAuth token", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Bearer token?",
+    "options": [
+      "Auth token",
+      "HTTP header",
+      "OAuth token",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "Bearer tokens are sent in Authorization header for authentication."
   },
-  {"question": "What is Claim in identity?",
-    "options": ["User identity", "Statement about user", "Permission", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Claim in identity?",
+    "options": [
+      "User identity",
+      "Statement about user",
+      "Permission",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Claims are statements about a user (name, role, email)."
   },
-  {"question": "What is Role in identity?",
-    "options": ["User group", "Permission set", "Authorization", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Role in identity?",
+    "options": [
+      "User group",
+      "Permission set",
+      "Authorization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 30,
     "details": "Roles group users with common permissions."
   },
-  {"question": "What is Policy in authorization?",
-    "options": ["Permission set", "Authorization rule", "Requirement collection", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Policy in authorization?",
+    "options": [
+      "Permission set",
+      "Authorization rule",
+      "Requirement collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Policies combine requirements for authorization decisions."
   },
-  {"question": "What is Requirement in authorization?",
-    "options": ["Authorization check", "Condition", "Handler target", "All of the above"],
-    "correctOptions": ["All of the above"],
+  {
+    "question": "What is Requirement in authorization?",
+    "options": [
+      "Authorization check",
+      "Condition",
+      "Handler target",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
     "time": 35,
     "details": "Requirements are conditions that must be satisfied for authorization."
+  },
+  {
+    "question": "What is LINQ?",
+    "options": [
+      "Query syntax",
+      "Method syntax",
+      "Data access",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Query syntax",
+      "Method syntax"
+    ],
+    "time": 35,
+    "details": "What is LINQ? explanation."
+  },
+  {
+    "question": "What is async/await?",
+    "options": [
+      "Non-blocking",
+      "Task-based",
+      "Synchronous",
+      "Both A and B"
+    ],
+    "correctOptions": [
+      "Non-blocking",
+      "Task-based"
+    ],
+    "time": 35,
+    "details": "What is async/await? explanation."
+  },
+  {
+    "question": "What is delegate? (Level 2 #123)",
+    "options": [
+      "Type",
+      "Function pointer",
+      "Multicast",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Type",
+      "Function pointer",
+      "Multicast",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is delegate? explanation."
+  },
+  {
+    "question": "What is event? (Level 2 #124)",
+    "options": [
+      "Delegate",
+      "Publisher",
+      "Subscriber",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Delegate",
+      "Publisher",
+      "Subscriber",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event? explanation."
+  },
+  {
+    "question": "What is interface? (Level 2 #125)",
+    "options": [
+      "Contract",
+      "Multiple",
+      "Implementation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Contract",
+      "Multiple",
+      "Implementation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interface? explanation."
+  },
+  {
+    "question": "What is abstract class? (Level 2 #126)",
+    "options": [
+      "Cannot instantiate",
+      "Can have implementation",
+      "Derived",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot instantiate",
+      "Can have implementation",
+      "Derived",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstract class? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is nullable? (Level 2 #128)",
+    "options": [
+      "Value type",
+      "Null",
+      "Operator",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Value type",
+      "Null",
+      "Operator",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is nullable? explanation."
+  },
+  {
+    "question": "What is lambda? (Level 2 #129)",
+    "options": [
+      "Expression",
+      "Statement",
+      "Delegate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Expression",
+      "Statement",
+      "Delegate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is lambda? explanation."
+  },
+  {
+    "question": "What is yield? (Level 2 #130)",
+    "options": [
+      "Iterator",
+      "Deferred",
+      "State",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Iterator",
+      "Deferred",
+      "State",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is yield? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
   }
 ]

@@ -1,139 +1,2433 @@
 [
-  {"question": "What are React Server Components?", "options": ["Server-only render", "Components that render exclusively on server with no client JavaScript bundle", "RSC", "Server components"], "correctOptions": ["Components that render exclusively on server with no client JavaScript bundle"], "time": 55, "details": "RSC components run on server and never ship JS to client."},
-  {"question": "What is action data in Server Actions?", "options": ["Return value", "Server Actions return data to client as the function result", "Server response", "Form data"], "correctOptions": ["Server Actions return data to client as the function result"], "time": 55, "details": "Server Actions are regular functions returning data to callers."},
-  {"question": "What does useFormStatus return?", "options": ["Form state", "Object with pending, data, method, action properties", "Pending", "Data"], "correctOptions": ["Object with pending, data, method, action properties"], "time": 50, "details": "useFormStatus provides form submission status."},
-  {"question": "What is the use() hook for promises?", "options": ["Await promise", "Awaits a Promise directly in component, suspending until resolved", "Suspend", "Read data"], "correctOptions": ["Awaits a Promise directly in component, suspending until resolved"], "time": 55, "details": "use() can await Promises without useEffect."},
-  {"question": "What is the use() hook for context?", "options": ["Read context", "Reads context value directly without useContext", "Context value", "Access"], "correctOptions": ["Reads context value directly without useContext"], "time": 55, "details": "use() provides a simpler context API."},
-  {"question": "What is promise as children in React?", "options": ["Suspend render", "Passing Promise as children triggers Suspense", "Renderer", "Promise component"], "correctOptions": ["Passing Promise as children triggers Suspense"], "time": 60, "details": "Promises as children cause suspension."},
-  {"question": "What is a Suspense boundary?", "options": ["Catch suspend", "Component that catches Suspense and shows fallback", "Wrapper", "Boundary"], "correctOptions": ["Component that catches Suspense and shows fallback"], "time": 55, "details": "Suspense shows fallback while children suspend."},
-  {"question": "What is error catching with Suspense?", "options": ["Error boundary", "Error boundaries catch errors alongside Suspense", "Handler", "Component"], "correctOptions": ["Error boundaries catch errors alongside Suspense"], "time": 50, "details": "Error boundaries work with Suspense together."},
-  {"question": "What is app-level composition pattern?", "options": ["Multiple components", "Composing at root level for maximum control", "Root composition", "Compose"], "correctOptions": ["Composing at root level for maximum control"], "time": 60, "details": "Root composition gives full control over structure."},
-  {"question": "What is component splitting pattern?", "options": ["Dynamic import", "Lazy loading components for code splitting", "Lazy load", "Code split"], "correctOptions": ["Lazy loading components for code splitting"], "time": 55, "details": "React.lazy enables component splitting."},
-  {"question": "What is partial hydration?", "options": ["Selective server", "Only hydrating interactive parts, leaving static HTML as-is", "Partial rendering", "Hydrate some"], "correctOptions": ["Only hydrating interactive parts, leaving static HTML as-is"], "time": 65, "details": "Partial hydration avoids full client-side hydration."},
-  {"question": "What is island architecture?", "options": ["Isolated interactive", "Isolating interactive islands within static HTML", "Static vs dynamic", "Partial"], "correctOptions": ["Isolating interactive islands within static HTML"], "time": 65, "details": "Islands isolate interactivity in static pages."},
-  {"question": "What is Astro islands?", "options": ["Astro framework", "Astro's implementation of island architecture", "Island pattern", "Static"], "correctOptions": ["Astro's implementation of island architecture"], "time": 60, "details": "Astro renders islands with partial hydration."},
-  {"question": "What is the Fresh framework?", "options": ["Deno web", "Deno's web framework using islands architecture", "Fresh", "Deno"], "correctOptions": ["Deno's web framework using islands architecture"], "time": 60, "details": "Fresh is Deno's island-based framework."},
-  {"question": "What are Fresh islands?", "options": ["Interactive islands", "Islands in Fresh that are interactive Preact components", "Preact", "Islands"], "correctOptions": ["Islands in Fresh that are interactive Preact components"], "time": 60, "details": "Fresh islands use Preact for interactivity."},
-  {"question": "What is Qwik?", "options": ["Resumable", "Resumable framework that delivers zero hydration", "Lazy-loaded", "Framework"], "correctOptions": ["Resumable framework that delivers zero hydration"], "time": 60, "details": "Qwik serializes app state for resumability."},
-  {"question": "What is Qwik's resumability?", "options": ["No hydration", "Resumes execution on user interaction without hydration", "Resume on interaction", "No hydrate"], "correctOptions": ["Resumes execution on user interaction without hydration"], "time": 65, "details": "Qwik resumes without full hydration."},
-  {"question": "What is Qwik loader?", "options": ["Lazy code", "Lazy-loads code on demand when events occur", "Event listener", "Loader"], "correctOptions": ["Lazy-loads code on demand when events occur"], "time": 65, "details": "Loader lazy-loads only what's needed."},
-  {"question": "What is Qwik event handling?", "options": ["Lazy event", "Events trigger code download only when interacted with", "On-demand", "Event"], "correctOptions": ["Events trigger code download only when interacted with"], "time": 60, "details": "Qwik events are lazy-loaded."},
-  {"question": "What is resumability?", "options": ["No SSR hydration", "Serialization of app state for client resumption without hydration", "Resume", "No hydrate"], "correctOptions": ["Serialization of app state for client resumption without hydration"], "time": 60, "details": "Resumability avoids hydration cost."},
-  {"question": "What is bundle strategy in React?", "options": ["Code splitting", "Strategy for splitting code into optimal chunks", "Bundling", "Chunk"], "correctOptions": ["Strategy for splitting code into optimal chunks"], "time": 55, "details": "Bundle strategy determines code organization."},
-  {"question": "What is route-based splitting?", "options": ["Per-route bundle", "Splitting code by route for on-demand loading", "Dynamic import", "Code split"], "correctOptions": ["Splitting code by route for on-demand loading"], "time": 55, "details": "Route splitting loads code per page."},
-  {"question": "What is component-based splitting?", "options": ["Lazy component", "Code splitting at component level with React.lazy", "Dynamic", "Code"], "correctOptions": ["Code splitting at component level with React.lazy"], "time": 55, "details": "React.lazy enables component splitting."},
-  {"question": "What are Preact Signals?", "options": ["Reactive state", "Fine-grained reactive state primitive", "Global state", "Signals"], "correctOptions": ["Fine-grained reactive state primitive"], "time": 60, "details": "Signals provide granular reactivity."},
-  {"question": "What is a signal primitive?", "options": ["Reactive value", "Observable value with subscribers", "Ref", "Signal"], "correctOptions": ["Observable value with subscribers"], "time": 60, "details": "Signal is the basic reactive value."},
-  {"question": "What is a computed signal?", "options": ["Derived value", "Auto-updating value derived from other signals", "Memo", "Computed"], "correctOptions": ["Auto-updating value derived from other signals"], "time": 60, "details": "Computed signals derive from sources."},
-  {"question": "What is a signal effect?", "options": ["Side effect", "Reactive side effect that runs on signal changes", "Watcher", "Effect"], "correctOptions": ["Reactive side effect that runs on signal changes"], "time": 60, "details": "Effect runs when signals change."},
-  {"question": "What is signal ref in Preact?", "options": ["DOM ref", "Ref for accessing DOM elements with reactivity", "Reactive ref", "Ref"], "correctOptions": ["Ref for accessing DOM elements with reactivity"], "time": 60, "details": "Signal refs connect DOM to signals."},
-  {"question": "What is useSignal for initialization?", "options": ["Hook", "Creates a signal, used at top level or in components", "Initialize", "useSignal hook"], "correctOptions": ["Creates a signal, used at top level or in components"], "time": 65, "details": "useSignal initializes signal state."},
-  {"question": "What is useComputed?", "options": ["Derived signal", "Creates derived signal that updates automatically", "Derived hook", "Memo"], "correctOptions": ["Creates derived signal that updates automatically"], "time": 65, "details": "useComputed creates derived signals."},
-  {"question": "What is useSignalEffect?", "options": ["Effect signal", "Effect that runs when signals change", "Watcher", "Hook"], "correctOptions": ["Effect that runs when signals change"], "time": 65, "details": "useSignalEffect is reactive effect."},
-  {"question": "What is useSignalUpdate?", "options": ["Update signal", "Updates signal value directly", "Mutation", "Setter"], "correctOptions": ["Updates signal value directly"], "time": 65, "details": "useSignalUpdate mutates signal values."},
-  {"question": "What is Solid.js?", "options": ["Reactive library", "Library with fine-grained reactivity without VDOM", "Signal-based", "Framework"], "correctOptions": ["Library with fine-grained reactivity without VDOM"], "time": 50, "details": "Solid uses signals for reactivity."},
-  {"question": "What is a Solid component?", "options": ["Function component", "Function that runs once and returns JSX", "Render function", "Component"], "correctOptions": ["Function that runs once and returns JSX"], "time": 55, "details": "Solid components run once only."},
-  {"question": "What is Solid's createSignal?", "options": ["Create signal", "Creates reactive state with getter and setter", "Initialize state", "Signal"], "correctOptions": ["Creates reactive state with getter and setter"], "time": 55, "details": "createSignal creates reactive state."},
-  {"question": "What is Solid's createEffect?", "options": ["Create effect", "Runs side effects when dependencies change", "Side effect", "Effect"], "correctOptions": ["Runs side effects when dependencies change"], "time": 55, "details": "createEffect tracks reactive dependencies."},
-  {"question": "What is Solid's onMount?", "options": ["Mount callback", "Runs once when component first renders", "Lifecycle", "Effect"], "correctOptions": ["Runs once when component first renders"], "time": 55, "details": "onMount runs on first render."},
-  {"question": "What is Solid's onCleanup?", "options": ["Cleanup", "Runs when component is disposed", "Cleanup callback", "Unmount"], "correctOptions": ["Runs when component is disposed"], "time": 55, "details": "onCleanup handles disposal."},
-  {"question": "What is Solid's createResource?", "options": ["Async data", "Handles async data fetching with loading states", "Promise fetcher", "Resource"], "correctOptions": ["Handles async data fetching with loading states"], "time": 55, "details": "createResource manages async data."},
-  {"question": "What is Solid's Show component?", "options": ["Conditional", "Component for conditional rendering", "Component", "if/else"], "correctOptions": ["Component for conditional rendering"], "time": 55, "details": "Show handles conditional rendering."},
-  {"question": "What is Solid's For component?", "options": ["Loop", "Component for rendering lists with keyed items", "Component", "each/loop"], "correctOptions": ["Component for rendering lists with keyed items"], "time": 55, "details": "For renders keyed lists efficiently."},
-  {"question": "What is Solid's Match/Switch?", "options": ["Pattern match", "Component for pattern matching (like switch)", "Match/Switch component", "Switch"], "correctOptions": ["Component for pattern matching (like switch)"], "time": 60, "details": "Match/Switch provides conditional branching."},
-  {"question": "What is Solid's Portal?", "options": ["Render elsewhere", "Renders children outside current DOM hierarchy", "Component", "Render outside"], "correctOptions": ["Renders children outside current DOM hierarchy"], "time": 55, "details": "Portal renders at different DOM location."},
-  {"question": "What is Solid's lazy?", "options": ["Lazy load", "Creates lazy-loaded component", "Component", "Async"], "correctOptions": ["Creates lazy-loaded component"], "time": 55, "details": "lazy() enables code splitting."},
-  {"question": "What is Solid's Suspense?", "options": ["Async waiting", "Handles async resources in child components", "Component", "Async"], "correctOptions": ["Handles async resources in child components"], "time": 50, "details": "Suspense catches pending resources."},
-  {"question": "What is Solid's ErrorBoundary?", "options": ["Error catch", "Catches errors in child components", "Component", "Error"], "correctOptions": ["Catches errors in child components"], "time": 55, "details": "ErrorBoundary handles errors gracefully."},
-  {"question": "What is Solid's createStore?", "options": ["Create store", "Creates reactive proxy object for nested state", "Proxy object", "Store"], "correctOptions": ["Creates reactive proxy object for nested state"], "time": 60, "details": "createStore makes nested state reactive."},
-  {"question": "What is a store in Solid?", "options": ["Reactive object", "Deeply reactive proxy for complex state", "Store", "Deep proxy"], "correctOptions": ["Deeply reactive proxy for complex state"], "time": 60, "details": "Store provides nested reactivity."},
-  {"question": "What is Solid's createContext?", "options": ["Context", "Creates context for dependency injection", "Create context", "Context factory"], "correctOptions": ["Creates context for dependency injection"], "time": 55, "details": "createContext provides DI mechanism."},
-  {"question": "What is Solid's useContext?", "options": ["Consume context", "Consumes value from context provider", "Consume", "Context"], "correctOptions": ["Consumes value from context provider"], "time": 55, "details": "useContext reads context values."},
-  {"question": "What is Solid's createMemo?", "options": ["Memoized value", "Creates memoized value that recomputes on deps", "Memo", "Derived"], "correctOptions": ["Creates memoized value that recomputes on deps"], "time": 60, "details": "createMemo caches computed values."},
-  {"question": "What is Solid's createCallback?", "options": ["Callback", "Creates function bound to reactive context", "Bound function", "Callback"], "correctOptions": ["Creates function bound to reactive context"], "time": 60, "details": "createCallback creates reactive functions."},
-  {"question": "What is Solid's fine-grained reactivity?", "options": ["Fine-grained", "Only updates what changes, no VDOM diffing", "Signal-based", "Granular"], "correctOptions": ["Only updates what changes, no VDOM diffing"], "time": 60, "details": "Fine-grained updates are very efficient."},
-  {"question": "What is JSX in Solid?", "options": ["Template in build", "Compiled to direct DOM operations at build time", "Compiled", "JSX"], "correctOptions": ["Compiled to direct DOM operations at build time"], "time": 65, "details": "Solid compiles JSX to DOM code."},
-  {"question": "How do Solid components render?", "options": ["Run once", "Components run once, not on every change", "Single run", "Render"], "correctOptions": ["Components run once, not on every change"], "time": 60, "details": "Solid components don't re-render."},
-  {"question": "What is Solid's fine-grained update?", "options": ["Direct DOM", "Updates DOM directly without VDOM", "Targeted update", "No VDOM"], "correctOptions": ["Updates DOM directly without VDOM"], "time": 65, "details": "Direct DOM updates are efficient."},
-  {"question": "What is compiled Solid?", "options": ["Optimized build", "Solid compiles to optimized vanilla JavaScript", "Compiled", "Build"], "correctOptions": ["Solid compiles to optimized vanilla JavaScript"], "time": 70, "details": "Solid compiles to efficient JS code."},
-  {"question": "What is runtime comparison between React and Solid?", "options": ["No VDOM", "Solid has no runtime VDOM, React has reconciliation runtime", "Runtime", "Performance"], "correctOptions": ["Solid has no runtime VDOM, React has reconciliation runtime"], "time": 65, "details": "Solid compiles away reactivity at build time."},
-  {"question": "What is Svelte?", "options": ["Compile framework", "Compile-time framework with no VDOM", "Reactive", "Compiler"], "correctOptions": ["Compile-time framework with no VDOM"], "time": 55, "details": "Svelte compiles to vanilla JS."},
-  {"question": "What is Svelte's reactivity model?", "options": ["Compiler reactivity", "Reactivity added at compile time, not runtime", "Reactive statements", "Derived"], "correctOptions": ["Reactivity added at compile time, not runtime"], "time": 60, "details": "Svelte analyzes reactivity at build."},
-  {"question": "What are Svelte reactive declarations?", "options": ["$: statements", "$: reactive statements that re-run on dependency changes", "Reactive statements", "Computed"], "correctOptions": ["$: reactive statements that re-run on dependency changes"], "time": 60, "details": "$: marks reactive statements."},
-  {"question": "What is Svelte stores?", "options": ["Global state", "Global reactive state with subscribe method", "State", "Observable"], "correctOptions": ["Global reactive state with subscribe method"], "time": 55, "details": "Stores provide global reactive state."},
-  {"question": "What is Svelte context?", "options": ["Component context", "Context API for component-scoped data", "State", "Props"], "correctOptions": ["Context API for component-scoped data"], "time": 55, "details": "Context shares data in component tree."},
-  {"question": "What are Svelte slots?", "options": ["Children prop", "Mechanism for composing components with children", "Props", "Content"], "correctOptions": ["Mechanism for composing components with children"], "time": 50, "details": "Slots provide composition pattern."},
-  {"question": "What is Svelte's await block?", "options": ["Async handling", "Handling pending, fulfilled, and rejected states", "Promise handling", "Async"], "correctOptions": ["Handling pending, fulfilled, and rejected states"], "time": 60, "details": "Await blocks handle promises elegantly."},
-  {"question": "What are Svelte actions?", "options": ["Element directives", "Functions that run when element mounts", "Lifecycle", "Events"], "correctOptions": ["Functions that run when element mounts"], "time": 55, "details": "Actions run on element mount."},
-  {"question": "What is Svelte transitions?", "options": ["Animation", "Built-in transitions for entering/leaving elements", "Animations", "CSS transitions"], "correctOptions": ["Built-in transitions for entering/leaving elements"], "time": 55, "details": "Transitions animate element changes."},
-  {"question": "What are Svelte motion tweens?", "options": ["Number animation", "Tweened values for numeric animations", "Animation", "Numbers"], "correctOptions": ["Tweened values for numeric animations"], "time": 55, "details": "Tweens animate numeric values."},
-  {"question": "What are Svelte spring animations?", "options": ["Physics animation", "Spring physics for natural motion", "Physics", "Motion"], "correctOptions": ["Spring physics for natural motion"], "time": 60, "details": "Springs provide physics-based motion."},
-  {"question": "What is Svelte bindings?", "options": ["Two-way sync", "Two-way binding between variables and inputs", "Input binding", "Sync"], "correctOptions": ["Two-way binding between variables and inputs"], "time": 50, "details": "Bindings sync input and state."},
-  {"question": "What is Vue 3 Composition API?", "options": ["Vue hooks", "API using composables for logic reuse", "Function-based", "Hooks"], "correctOptions": ["API using composables for logic reuse"], "time": 50, "details": "Composition API uses setup function."},
-  {"question": "What is ref in Vue?", "options": ["Reactive primitive", "Reactive reference for primitive values", "Reactive", "Value"], "correctOptions": ["Reactive reference for primitive values"], "time": 50, "details": "ref() wraps primitives reactively."},
-  {"question": "What is reactive in Vue?", "options": ["Object reactivity", "Makes object deeply reactive", "Deep reactive", "Proxy"], "correctOptions": ["Makes object deeply reactive"], "time": 50, "details": "reactive() makes objects reactive."},
-  {"question": "What is computed in Vue?", "options": ["Derived value", "Creates derived reactive value", "Memo", "Derived"], "correctOptions": ["Creates derived reactive value"], "time": 50, "details": "computed() creates derived state."},
-  {"question": "What is watch in Vue?", "options": ["Effect trigger", "Triggers callback when ref/reactive changes", "Reactive watcher", "Effect"], "correctOptions": ["Triggers callback when ref/reactive changes"], "time": 55, "details": "watch responds to reactive changes."},
-  {"question": "What is watchEffect in Vue?", "options": ["Auto watcher", "Effect that automatically tracks reactive dependencies", "Auto tracking", "Effect"], "correctOptions": ["Effect that automatically tracks reactive dependencies"], "time": 55, "details": "watchEffect auto-tracks deps."},
-  {"question": "What is Vue's provide/inject?", "options": ["Dependency injection", "Passing data to descendants without props", "Context", "DI"], "correctOptions": ["Passing data to descendants without props"], "time": 55, "details": "Provide/inject avoids prop drilling."},
-  {"question": "What is Vue's setup function?", "options": ["Init function", "Function where component logic is defined", "Lifecycle", "Init"], "correctOptions": ["Function where component logic is defined"], "time": 50, "details": "setup() runs before render."},
-  {"question": "What is Vue's ref vs reactive?", "options": ["Ref vs reactive", "ref for primitives, reactive for objects", "Value vs object", "Types"], "correctOptions": ["ref for primitives, reactive for objects"], "time": 55, "details": "ref wraps, reactive proxies."},
-  {"question": "What is toRefs in Vue?", "options": ["Destructuring", "Converts reactive object to refs for destructuring", "Object to refs", "Destructure"], "correctOptions": ["Converts reactive object to refs for destructuring"], "time": 60, "details": "toRefs enables destructuring reactive."},
-  {"question": "What is custom directives in Vue?", "options": ["Reusable behavior", "Reusable logic that attaches to elements", "Directives", "Element hooks"], "correctOptions": ["Reusable logic that attaches to elements"], "time": 55, "details": "Directives provide element behavior."},
-  {"question": "What is Vue's Teleport component?", "options": ["DOM teleport", "Renders component to different DOM location", "Portal", "Render elsewhere"], "correctOptions": ["Renders component to different DOM location"], "time": 55, "details": "Teleport renders outside parent."},
-  {"question": "What is Vue's Suspense component?", "options": ["Async handling", "Handles async dependencies like React Suspense", "Await component", "Suspense"], "correctOptions": ["Handles async dependencies like React Suspense"], "time": 60, "details": "Suspense handles async components."},
-  {"question": "What is Vue's KeepAlive component?", "options": ["Caching", "Caches component instances instead of destroying", "Cache", "State"], "correctOptions": ["Caches component instances instead of destroying"], "time": 60, "details": "KeepAlive caches component state."},
-  {"question": "What is Vue's v-memo directive?", "options": ["Memoization", "Directive for memoizing sub-templates", "Template memo", "Memoize"], "correctOptions": ["Directive for memoizing sub-templates"], "time": 65, "details": "v-memo caches template portions."},
-  {"question": "What is Vue's defineProps?", "options": ["Props definition", "Define component props in script setup", "Props", "Types"], "correctOptions": ["Define component props in script setup"], "time": 50, "details": "defineProps declares props."},
-  {"question": "What is Vue's defineEmits?", "options": ["Events definition", "Define events component can emit", "Emits", "Events"], "correctOptions": ["Define events component can emit"], "time": 50, "details": "defineEmits declares emits."},
-  {"question": "What is Vue's defineExpose?", "options": ["Expose", "Expose component properties to parent", "Public API", "Expose"], "correctOptions": ["Expose component properties to parent"], "time": 55, "details": "defineExpose exposes component API."},
-  {"question": "What is Vue's withDefaults?", "options": ["Default props", "Provides default values for props", "Default values", "Props defaults"], "correctOptions": ["Provides default values for props"], "time": 55, "details": "withDefaults sets prop defaults."},
-  {"question": "What is Vue's component generics?", "options": ["Generic components", "Generic component support in templates", "Type props", "Generic"], "correctOptions": ["Generic component support in templates"], "time": 60, "details": "Generic components accept type params."},
-  {"question": "What is Pinia in Vue?", "options": ["State management", "Vue's official state management library", "Store", "State"], "correctOptions": ["Vue's official state management library"], "time": 50, "details": "Pinia is Vue's recommended store."},
-  {"question": "What is Pinia defineStore?", "options": ["Store creator", "Creates a Pinia store", "Store definition", "State"], "correctOptions": ["Creates a Pinia store"], "time": 50, "details": "defineStore creates Pinia store."},
-  {"question": "What is Pinia state?", "options": ["Store data", "Reactive state in Pinia store", "Data", "Store"], "correctOptions": ["Reactive state in Pinia store"], "time": 50, "details": "state is store's reactive data."},
-  {"question": "What are Pinia getters?", "options": ["Computed state", "Computed values derived from state", "Computed", "Derived"], "correctOptions": ["Computed values derived from state"], "time": 55, "details": "Getters compute from state."},
-  {"question": "What are Pinia actions?", "options": ["Methods", "Methods to modify state in Pinia", "Functions", "Mutations"], "correctOptions": ["Methods to modify state in Pinia"], "time": 50, "details": "Actions modify state."},
-  {"question": "What is Pinia $subscribe?", "options": ["State subscription", "Subscribe to state changes", "Watch state", "Observe"], "correctOptions": ["Subscribe to state changes"], "time": 55, "details": "$subscribe watches state changes."},
-  {"question": "What is Pinia plugins?", "options": ["Extensions", "Extend Pinia with additional functionality", "Add-ons", "Middleware"], "correctOptions": ["Extend Pinia with additional functionality"], "time": 60, "details": "Plugins extend Pinia capabilities."},
-  {"question": "What is Vue Router?", "options": ["Routing", "Vue's official routing library", "Router", "Navigation"], "correctOptions": ["Vue's official routing library"], "time": 45, "details": "Vue Router handles navigation."},
-  {"question": "What is Vue Router useRoute?", "options": ["Current route", "Access current route information", "Route hook", "Get route"], "correctOptions": ["Access current route information"], "time": 50, "details": "useRoute returns route object."},
-  {"question": "What is Vue Router useRouter?", "options": ["Navigation", "Programmatic navigation methods", "Router hook", "Navigate"], "correctOptions": ["Programmatic navigation methods"], "time": 50, "details": "useRouter provides navigation."},
-  {"question": "What are Vue Router navigation guards?", "options": ["Route protection", "Hooks for controlling navigation", "Guards", "Auth"], "correctOptions": ["Hooks for controlling navigation"], "time": 55, "details": "Guards protect route access."},
-  {"question": "What is beforeEach guard?", "options": ["Global guard", "Guard called before every navigation", "Navigation guard", "Global"], "correctOptions": ["Guard called before every navigation"], "time": 55, "details": "beforeEach runs on every navigation."},
-  {"question": "What is beforeRouteEnter?", "options": ["Component guard", "Guard called before entering component", "Route guard", "Enter"], "correctOptions": ["Guard called before entering component"], "time": 55, "details": "beforeRouteEnter is component guard."},
-  {"question": "What is beforeRouteUpdate?", "options": ["Update guard", "Guard called when route updates with same component", "Re-render guard", "Update"], "correctOptions": ["Guard called when route updates with same component"], "time": 60, "details": "beforeRouteUpdate handles same-component navigation."},
-  {"question": "What is beforeRouteLeave?", "options": ["Leave guard", "Guard called when leaving component", "Exit guard", "Leave"], "correctOptions": ["Guard called when leaving component"], "time": 55, "details": "beforeRouteLeave guards departure."},
-  {"question": "What are Vue Router dynamic segments?", "options": ["URL params", "Dynamic parts of URL like :id", "Route params", "Wildcard"], "correctOptions": ["Dynamic parts of URL like :id"], "time": 50, "details": ":id captures URL segments."},
-  {"question": "What are Vue Router nested routes?", "options": ["Child routes", "Routes inside other routes with nested components", "Sub routes", "Children"], "correctOptions": ["Routes inside other routes with nested components"], "time": 55, "details": "Nested routes have parent-child relationship."},
-  {"question": "What is Vue Router history mode?", "options": ["URL mode", "Using HTML5 history API instead of hash", "History API", "URL mode"], "correctOptions": ["Using HTML5 history API instead of hash"], "time": 55, "details": "history mode uses clean URLs."},
-  {"question": "What is lazy loading routes?", "options": ["Dynamic import", "Loading route components on demand", "Code splitting", "Dynamic route"], "correctOptions": ["Loading route components on demand"], "time": 55, "details": "Lazy routes enable code splitting."},
-  {"question": "What is Vue Router navigation hooks?", "options": ["Navigation events", "Hooks during navigation process", "Lifecycle hooks", "Navigation"], "correctOptions": ["Hooks during navigation process"], "time": 55, "details": "Navigation hooks control navigation flow."},
-  {"question": "What is Nuxt.js?", "options": ["Vue meta-framework", "Full-stack Vue framework with SSR, routing, auto-imports", "Framework", "SSR"], "correctOptions": ["Full-stack Vue framework with SSR, routing, auto-imports"], "time": 50, "details": "Nuxt is Vue's full-stack framework."},
-  {"question": "What is Nuxt directory structure?", "options": ["Auto routing", "Automatic file-based routing from pages directory", "Auto structure", "Convention"], "correctOptions": ["Automatic file-based routing from pages directory"], "time": 55, "details": "Nuxt auto-generates routes from files."},
-  {"question": "What are Nuxt auto-imports?", "options": ["Auto imports", "Automatic imports of composables and utilities", "Imports", "Composables"], "correctOptions": ["Automatic imports of composables and utilities"], "time": 55, "details": "Nuxt auto-imports reduce boilerplate."},
-  {"question": "What is Nuxt useAsyncData?", "options": ["Async fetch", "SSR-safe data fetching hook", "Fetch", "Data"], "correctOptions": ["SSR-safe data fetching hook"], "time": 60, "details": "useAsyncData handles SSR data fetching."},
-  {"question": "What is Nuxt useFetch?", "options": ["Network fetch", "Wrapper around useAsyncData for HTTP requests", "Request", "API"], "correctOptions": ["Wrapper around useAsyncData for HTTP requests"], "time": 55, "details": "useFetch provides HTTP capabilities."},
-  {"question": "What is Nuxt layouts?", "options": ["Page layouts", "Reusable page layouts with slots", "Template", "Wrapper"], "correctOptions": ["Reusable page layouts with slots"], "time": 50, "details": "Layouts provide page structure."},
-  {"question": "What is Nuxt middleware?", "options": ["Route guards", "Route middleware for authentication, etc.", "Auth", "Guard"], "correctOptions": ["Route middleware for authentication, etc."], "time": 55, "details": "Middleware runs before page navigation."},
-  {"question": "What is Nuxt plugins?", "options": ["App plugins", "Plugins that run at app initialization", "Init", "Setup"], "correctOptions": ["Plugins that run at app initialization"], "time": 55, "details": "Plugins add app-wide functionality."},
-  {"question": "What is Nuxt server routes?", "options": ["API routes", "Server routes in server/api directory", "API", "Backend"], "correctOptions": ["Server routes in server/api directory"], "time": 55, "details": "server/api creates backend endpoints."},
-  {"question": "What is Nuxt state management?", "options": ["useState", "Shared state via useState composable", "State", "Pinia"], "correctOptions": ["Shared state via useState composable"], "time": 60, "details": "useState provides shared state."},
-  {"question": "What is Nuxt 3 nitro server?", "options": ["Server engine", "New server engine for Nuxt 3", "Server", "Engine"], "correctOptions": ["New server engine for Nuxt 3"], "time": 60, "details": "Nitro powers Nuxt server."},
-  {"question": "What is Nuxt hybrid rendering?", "options": ["Mixed rendering", "Route-level rendering rules (SSG, SSR, etc)", "Mixed mode", "Hybrid mode"], "correctOptions": ["Route-level rendering rules (SSG, SSR, etc)"], "time": 65, "details": "Hybrid renders different routes differently."},
-  {"question": "What is Nuxt 3 image component?", "options": ["Optimized images", "Component for optimized images", "Image", "Optimization"], "correctOptions": ["Component for optimized images"], "time": 55, "details": "@nuxt/image optimizes images."},
-  {"question": "What is SvelteKit?", "options": ["Svelte meta-framework", "Full-stack Svelte framework similar to Next.js", "Framework", "Svelte"], "correctOptions": ["Full-stack Svelte framework similar to Next.js"], "time": 55, "details": "SvelteKit is Svelte's full-stack framework."},
-  {"question": "What is SvelteKit file-based routing?", "options": ["Auto routing", "Routing from file structure in src/routes", "Auto routes", "Convention"], "correctOptions": ["Routing from file structure in src/routes"], "time": 50, "details": "SvelteKit uses file-based routing."},
-  {"question": "What are SvelteKit layouts?", "options": ["Page layouts", "Layout files that wrap page components", "Structure", "Templates"], "correctOptions": ["Layout files that wrap page components"], "time": 55, "details": "Layouts wrap routes."},
-  {"question": "What is SvelteKit load functions?", "options": ["Data fetching", "Functions that load data for pages", "Page data", "Data loader"], "correctOptions": ["Functions that load data for pages"], "time": 55, "details": "Load functions provide page data."},
-  {"question": "What are SvelteKit form actions?", "options": ["Form handling", "Server-side form handling", "Actions", "Form"], "correctOptions": ["Server-side form handling"], "time": 60, "details": "Form actions handle POSTs server-side."},
-  {"question": "What is SvelteKit API routes?", "options": ["Backend routes", "Routes in src/routes for API endpoints", "API", "Server"], "correctOptions": ["Routes in src/routes for API endpoints"], "time": 55, "details": "API routes are also in src/routes."},
-  {"question": "What is SvelteKit adapters?", "options": ["Deployment targets", "Adapters for deploying to various platforms", "Deploy", "Target"], "correctOptions": ["Adapters for deploying to various platforms"], "time": 60, "details": "Adapters enable deployment targets."},
-  {"question": "What is SvelteKit pre-rendering?", "options": ["SSG", "Static site generation for entire site", "Static", "Build"], "correctOptions": ["Static site generation for entire site"], "time": 55, "details": "Prerendering creates static HTML."},
-  {"question": "What is SvelteKit SSR?", "options": ["Server rendering", "Server-side rendering for dynamic content", "Server", "Dynamic"], "correctOptions": ["Server-side rendering for dynamic content"], "time": 55, "details": "SSR handles dynamic content server-side."},
-  {"question": "What is Angular signals?", "options": ["Reactive primitive", "New reactive primitive in Angular 16+", "Reactivity", "Signal"], "correctOptions": ["New reactive primitive in Angular 16+"], "time": 55, "details": "Signals are Angular's reactive primitive."},
-  {"question": "What is Angular computed signals?", "options": ["Derived signal", "Signal derived from other signals", "Computed", "Derived"], "correctOptions": ["Signal derived from other signals"], "time": 55, "details": "computed() creates derived signals."},
-  {"question": "What is Angular effect?", "options": ["Side effect", "Effect that runs when signals change", "Reactive effect", "Watcher"], "correctOptions": ["Effect that runs when signals change"], "time": 60, "details": "effect() runs on signal changes."},
-  {"question": "What is Angular signal function?", "options": ["Read signal", "Function to read signal value", "Get value", "Read"], "correctOptions": ["Function to read signal value"], "time": 50, "details": "signal() wraps value in signal."},
-  {"question": "What is Angular computed vs effect?", "options": ["Derived vs side-effect", "computed derives, effect runs side effects", "Difference", "Usage"], "correctOptions": ["computed derives, effect runs side effects"], "time": 60, "details": "computed caches; effect runs."}
+  {
+    "question": "What are React Server Components?",
+    "options": [
+      "Server-only render",
+      "Components that render exclusively on server with no client JavaScript bundle",
+      "RSC",
+      "Server components"
+    ],
+    "correctOptions": [
+      "Components that render exclusively on server with no client JavaScript bundle"
+    ],
+    "time": 55,
+    "details": "RSC components run on server and never ship JS to client."
+  },
+  {
+    "question": "What is action data in Server Actions?",
+    "options": [
+      "Return value",
+      "Server Actions return data to client as the function result",
+      "Server response",
+      "Form data"
+    ],
+    "correctOptions": [
+      "Server Actions return data to client as the function result"
+    ],
+    "time": 55,
+    "details": "Server Actions are regular functions returning data to callers."
+  },
+  {
+    "question": "What does useFormStatus return?",
+    "options": [
+      "Form state",
+      "Object with pending, data, method, action properties",
+      "Pending",
+      "Data"
+    ],
+    "correctOptions": [
+      "Object with pending, data, method, action properties"
+    ],
+    "time": 50,
+    "details": "useFormStatus provides form submission status."
+  },
+  {
+    "question": "What is the use() hook for promises?",
+    "options": [
+      "Await promise",
+      "Awaits a Promise directly in component, suspending until resolved",
+      "Suspend",
+      "Read data"
+    ],
+    "correctOptions": [
+      "Awaits a Promise directly in component, suspending until resolved"
+    ],
+    "time": 55,
+    "details": "use() can await Promises without useEffect."
+  },
+  {
+    "question": "What is the use() hook for context?",
+    "options": [
+      "Read context",
+      "Reads context value directly without useContext",
+      "Context value",
+      "Access"
+    ],
+    "correctOptions": [
+      "Reads context value directly without useContext"
+    ],
+    "time": 55,
+    "details": "use() provides a simpler context API."
+  },
+  {
+    "question": "What is promise as children in React?",
+    "options": [
+      "Suspend render",
+      "Passing Promise as children triggers Suspense",
+      "Renderer",
+      "Promise component"
+    ],
+    "correctOptions": [
+      "Passing Promise as children triggers Suspense"
+    ],
+    "time": 60,
+    "details": "Promises as children cause suspension."
+  },
+  {
+    "question": "What is a Suspense boundary?",
+    "options": [
+      "Catch suspend",
+      "Component that catches Suspense and shows fallback",
+      "Wrapper",
+      "Boundary"
+    ],
+    "correctOptions": [
+      "Component that catches Suspense and shows fallback"
+    ],
+    "time": 55,
+    "details": "Suspense shows fallback while children suspend."
+  },
+  {
+    "question": "What is error catching with Suspense?",
+    "options": [
+      "Error boundary",
+      "Error boundaries catch errors alongside Suspense",
+      "Handler",
+      "Component"
+    ],
+    "correctOptions": [
+      "Error boundaries catch errors alongside Suspense"
+    ],
+    "time": 50,
+    "details": "Error boundaries work with Suspense together."
+  },
+  {
+    "question": "What is app-level composition pattern?",
+    "options": [
+      "Multiple components",
+      "Composing at root level for maximum control",
+      "Root composition",
+      "Compose"
+    ],
+    "correctOptions": [
+      "Composing at root level for maximum control"
+    ],
+    "time": 60,
+    "details": "Root composition gives full control over structure."
+  },
+  {
+    "question": "What is component splitting pattern?",
+    "options": [
+      "Dynamic import",
+      "Lazy loading components for code splitting",
+      "Lazy load",
+      "Code split"
+    ],
+    "correctOptions": [
+      "Lazy loading components for code splitting"
+    ],
+    "time": 55,
+    "details": "React.lazy enables component splitting."
+  },
+  {
+    "question": "What is partial hydration?",
+    "options": [
+      "Selective server",
+      "Only hydrating interactive parts, leaving static HTML as-is",
+      "Partial rendering",
+      "Hydrate some"
+    ],
+    "correctOptions": [
+      "Only hydrating interactive parts, leaving static HTML as-is"
+    ],
+    "time": 65,
+    "details": "Partial hydration avoids full client-side hydration."
+  },
+  {
+    "question": "What is island architecture?",
+    "options": [
+      "Isolated interactive",
+      "Isolating interactive islands within static HTML",
+      "Static vs dynamic",
+      "Partial"
+    ],
+    "correctOptions": [
+      "Isolating interactive islands within static HTML"
+    ],
+    "time": 65,
+    "details": "Islands isolate interactivity in static pages."
+  },
+  {
+    "question": "What is Astro islands?",
+    "options": [
+      "Astro framework",
+      "Astro's implementation of island architecture",
+      "Island pattern",
+      "Static"
+    ],
+    "correctOptions": [
+      "Astro's implementation of island architecture"
+    ],
+    "time": 60,
+    "details": "Astro renders islands with partial hydration."
+  },
+  {
+    "question": "What is the Fresh framework?",
+    "options": [
+      "Deno web",
+      "Deno's web framework using islands architecture",
+      "Fresh",
+      "Deno"
+    ],
+    "correctOptions": [
+      "Deno's web framework using islands architecture"
+    ],
+    "time": 60,
+    "details": "Fresh is Deno's island-based framework."
+  },
+  {
+    "question": "What are Fresh islands?",
+    "options": [
+      "Interactive islands",
+      "Islands in Fresh that are interactive Preact components",
+      "Preact",
+      "Islands"
+    ],
+    "correctOptions": [
+      "Islands in Fresh that are interactive Preact components"
+    ],
+    "time": 60,
+    "details": "Fresh islands use Preact for interactivity."
+  },
+  {
+    "question": "What is Qwik?",
+    "options": [
+      "Resumable",
+      "Resumable framework that delivers zero hydration",
+      "Lazy-loaded",
+      "Framework"
+    ],
+    "correctOptions": [
+      "Resumable"
+    ],
+    "time": 60,
+    "details": "Qwik serializes app state for resumability."
+  },
+  {
+    "question": "What is Qwik's resumability?",
+    "options": [
+      "No hydration",
+      "Resumes execution on user interaction without hydration",
+      "Resume on interaction",
+      "No hydrate"
+    ],
+    "correctOptions": [
+      "Resumes execution on user interaction without hydration"
+    ],
+    "time": 65,
+    "details": "Qwik resumes without full hydration."
+  },
+  {
+    "question": "What is Qwik loader?",
+    "options": [
+      "Lazy code",
+      "Lazy-loads code on demand when events occur",
+      "Event listener",
+      "Loader"
+    ],
+    "correctOptions": [
+      "Lazy-loads code on demand when events occur"
+    ],
+    "time": 65,
+    "details": "Loader lazy-loads only what's needed."
+  },
+  {
+    "question": "What is Qwik event handling?",
+    "options": [
+      "Lazy event",
+      "Events trigger code download only when interacted with",
+      "On-demand",
+      "Event"
+    ],
+    "correctOptions": [
+      "Events trigger code download only when interacted with"
+    ],
+    "time": 60,
+    "details": "Qwik events are lazy-loaded."
+  },
+  {
+    "question": "What is resumability?",
+    "options": [
+      "No SSR hydration",
+      "Serialization of app state for client resumption without hydration",
+      "Resume",
+      "No hydrate"
+    ],
+    "correctOptions": [
+      "Serialization of app state for client resumption without hydration"
+    ],
+    "time": 60,
+    "details": "Resumability avoids hydration cost."
+  },
+  {
+    "question": "What is bundle strategy in React?",
+    "options": [
+      "Code splitting",
+      "Strategy for splitting code into optimal chunks",
+      "Bundling",
+      "Chunk"
+    ],
+    "correctOptions": [
+      "Strategy for splitting code into optimal chunks"
+    ],
+    "time": 55,
+    "details": "Bundle strategy determines code organization."
+  },
+  {
+    "question": "What is route-based splitting?",
+    "options": [
+      "Per-route bundle",
+      "Splitting code by route for on-demand loading",
+      "Dynamic import",
+      "Code split"
+    ],
+    "correctOptions": [
+      "Splitting code by route for on-demand loading"
+    ],
+    "time": 55,
+    "details": "Route splitting loads code per page."
+  },
+  {
+    "question": "What is component-based splitting?",
+    "options": [
+      "Lazy component",
+      "Code splitting at component level with React.lazy",
+      "Dynamic",
+      "Code"
+    ],
+    "correctOptions": [
+      "Code splitting at component level with React.lazy"
+    ],
+    "time": 55,
+    "details": "React.lazy enables component splitting."
+  },
+  {
+    "question": "What are Preact Signals?",
+    "options": [
+      "Reactive state",
+      "Fine-grained reactive state primitive",
+      "Global state",
+      "Signals"
+    ],
+    "correctOptions": [
+      "Fine-grained reactive state primitive"
+    ],
+    "time": 60,
+    "details": "Signals provide granular reactivity."
+  },
+  {
+    "question": "What is a signal primitive?",
+    "options": [
+      "Reactive value",
+      "Observable value with subscribers",
+      "Ref",
+      "Signal"
+    ],
+    "correctOptions": [
+      "Observable value with subscribers"
+    ],
+    "time": 60,
+    "details": "Signal is the basic reactive value."
+  },
+  {
+    "question": "What is a computed signal?",
+    "options": [
+      "Derived value",
+      "Auto-updating value derived from other signals",
+      "Memo",
+      "Computed"
+    ],
+    "correctOptions": [
+      "Auto-updating value derived from other signals"
+    ],
+    "time": 60,
+    "details": "Computed signals derive from sources."
+  },
+  {
+    "question": "What is a signal effect?",
+    "options": [
+      "Side effect",
+      "Reactive side effect that runs on signal changes",
+      "Watcher",
+      "Effect"
+    ],
+    "correctOptions": [
+      "Reactive side effect that runs on signal changes"
+    ],
+    "time": 60,
+    "details": "Effect runs when signals change."
+  },
+  {
+    "question": "What is signal ref in Preact?",
+    "options": [
+      "DOM ref",
+      "Ref for accessing DOM elements with reactivity",
+      "Reactive ref",
+      "Ref"
+    ],
+    "correctOptions": [
+      "Ref for accessing DOM elements with reactivity"
+    ],
+    "time": 60,
+    "details": "Signal refs connect DOM to signals."
+  },
+  {
+    "question": "What is useSignal for initialization?",
+    "options": [
+      "Hook",
+      "Creates a signal, used at top level or in components",
+      "Initialize",
+      "useSignal hook"
+    ],
+    "correctOptions": [
+      "Creates a signal, used at top level or in components"
+    ],
+    "time": 65,
+    "details": "useSignal initializes signal state."
+  },
+  {
+    "question": "What is useComputed?",
+    "options": [
+      "Derived signal",
+      "Creates derived signal that updates automatically",
+      "Derived hook",
+      "Memo"
+    ],
+    "correctOptions": [
+      "Creates derived signal that updates automatically"
+    ],
+    "time": 65,
+    "details": "useComputed creates derived signals."
+  },
+  {
+    "question": "What is useSignalEffect?",
+    "options": [
+      "Effect signal",
+      "Effect that runs when signals change",
+      "Watcher",
+      "Hook"
+    ],
+    "correctOptions": [
+      "Effect that runs when signals change"
+    ],
+    "time": 65,
+    "details": "useSignalEffect is reactive effect."
+  },
+  {
+    "question": "What is useSignalUpdate?",
+    "options": [
+      "Update signal",
+      "Updates signal value directly",
+      "Mutation",
+      "Setter"
+    ],
+    "correctOptions": [
+      "Updates signal value directly"
+    ],
+    "time": 65,
+    "details": "useSignalUpdate mutates signal values."
+  },
+  {
+    "question": "What is Solid.js?",
+    "options": [
+      "Reactive library",
+      "Library with fine-grained reactivity without VDOM",
+      "Signal-based",
+      "Framework"
+    ],
+    "correctOptions": [
+      "Library with fine-grained reactivity without VDOM"
+    ],
+    "time": 50,
+    "details": "Solid uses signals for reactivity."
+  },
+  {
+    "question": "What is a Solid component?",
+    "options": [
+      "Function component",
+      "Function that runs once and returns JSX",
+      "Render function",
+      "Component"
+    ],
+    "correctOptions": [
+      "Function that runs once and returns JSX"
+    ],
+    "time": 55,
+    "details": "Solid components run once only."
+  },
+  {
+    "question": "What is Solid's createSignal?",
+    "options": [
+      "Create signal",
+      "Creates reactive state with getter and setter",
+      "Initialize state",
+      "Signal"
+    ],
+    "correctOptions": [
+      "Creates reactive state with getter and setter"
+    ],
+    "time": 55,
+    "details": "createSignal creates reactive state."
+  },
+  {
+    "question": "What is Solid's createEffect?",
+    "options": [
+      "Create effect",
+      "Runs side effects when dependencies change",
+      "Side effect",
+      "Effect"
+    ],
+    "correctOptions": [
+      "Runs side effects when dependencies change"
+    ],
+    "time": 55,
+    "details": "createEffect tracks reactive dependencies."
+  },
+  {
+    "question": "What is Solid's onMount?",
+    "options": [
+      "Mount callback",
+      "Runs once when component first renders",
+      "Lifecycle",
+      "Effect"
+    ],
+    "correctOptions": [
+      "Runs once when component first renders"
+    ],
+    "time": 55,
+    "details": "onMount runs on first render."
+  },
+  {
+    "question": "What is Solid's onCleanup?",
+    "options": [
+      "Cleanup",
+      "Runs when component is disposed",
+      "Cleanup callback",
+      "Unmount"
+    ],
+    "correctOptions": [
+      "Runs when component is disposed"
+    ],
+    "time": 55,
+    "details": "onCleanup handles disposal."
+  },
+  {
+    "question": "What is Solid's createResource?",
+    "options": [
+      "Async data",
+      "Handles async data fetching with loading states",
+      "Promise fetcher",
+      "Resource"
+    ],
+    "correctOptions": [
+      "Handles async data fetching with loading states"
+    ],
+    "time": 55,
+    "details": "createResource manages async data."
+  },
+  {
+    "question": "What is Solid's Show component?",
+    "options": [
+      "Conditional",
+      "Component for conditional rendering",
+      "Component",
+      "if/else"
+    ],
+    "correctOptions": [
+      "Component for conditional rendering"
+    ],
+    "time": 55,
+    "details": "Show handles conditional rendering."
+  },
+  {
+    "question": "What is Solid's For component?",
+    "options": [
+      "Loop",
+      "Component for rendering lists with keyed items",
+      "Component",
+      "each/loop"
+    ],
+    "correctOptions": [
+      "Component for rendering lists with keyed items"
+    ],
+    "time": 55,
+    "details": "For renders keyed lists efficiently."
+  },
+  {
+    "question": "What is Solid's Match/Switch?",
+    "options": [
+      "Pattern match",
+      "Component for pattern matching (like switch)",
+      "Match/Switch component",
+      "Switch"
+    ],
+    "correctOptions": [
+      "Component for pattern matching (like switch)"
+    ],
+    "time": 60,
+    "details": "Match/Switch provides conditional branching."
+  },
+  {
+    "question": "What is Solid's Portal?",
+    "options": [
+      "Render elsewhere",
+      "Renders children outside current DOM hierarchy",
+      "Component",
+      "Render outside"
+    ],
+    "correctOptions": [
+      "Renders children outside current DOM hierarchy"
+    ],
+    "time": 55,
+    "details": "Portal renders at different DOM location."
+  },
+  {
+    "question": "What is Solid's lazy?",
+    "options": [
+      "Lazy load",
+      "Creates lazy-loaded component",
+      "Component",
+      "Async"
+    ],
+    "correctOptions": [
+      "Creates lazy-loaded component"
+    ],
+    "time": 55,
+    "details": "lazy() enables code splitting."
+  },
+  {
+    "question": "What is Solid's Suspense?",
+    "options": [
+      "Async waiting",
+      "Handles async resources in child components",
+      "Component",
+      "Async"
+    ],
+    "correctOptions": [
+      "Handles async resources in child components"
+    ],
+    "time": 50,
+    "details": "Suspense catches pending resources."
+  },
+  {
+    "question": "What is Solid's ErrorBoundary?",
+    "options": [
+      "Error catch",
+      "Catches errors in child components",
+      "Component",
+      "Error"
+    ],
+    "correctOptions": [
+      "Catches errors in child components"
+    ],
+    "time": 55,
+    "details": "ErrorBoundary handles errors gracefully."
+  },
+  {
+    "question": "What is Solid's createStore?",
+    "options": [
+      "Create store",
+      "Creates reactive proxy object for nested state",
+      "Proxy object",
+      "Store"
+    ],
+    "correctOptions": [
+      "Creates reactive proxy object for nested state"
+    ],
+    "time": 60,
+    "details": "createStore makes nested state reactive."
+  },
+  {
+    "question": "What is a store in Solid?",
+    "options": [
+      "Reactive object",
+      "Deeply reactive proxy for complex state",
+      "Store",
+      "Deep proxy"
+    ],
+    "correctOptions": [
+      "Deeply reactive proxy for complex state"
+    ],
+    "time": 60,
+    "details": "Store provides nested reactivity."
+  },
+  {
+    "question": "What is Solid's createContext?",
+    "options": [
+      "Context",
+      "Creates context for dependency injection",
+      "Create context",
+      "Context factory"
+    ],
+    "correctOptions": [
+      "Creates context for dependency injection"
+    ],
+    "time": 55,
+    "details": "createContext provides DI mechanism."
+  },
+  {
+    "question": "What is Solid's useContext?",
+    "options": [
+      "Consume context",
+      "Consumes value from context provider",
+      "Consume",
+      "Context"
+    ],
+    "correctOptions": [
+      "Consumes value from context provider"
+    ],
+    "time": 55,
+    "details": "useContext reads context values."
+  },
+  {
+    "question": "What is Solid's createMemo?",
+    "options": [
+      "Memoized value",
+      "Creates memoized value that recomputes on deps",
+      "Memo",
+      "Derived"
+    ],
+    "correctOptions": [
+      "Creates memoized value that recomputes on deps"
+    ],
+    "time": 60,
+    "details": "createMemo caches computed values."
+  },
+  {
+    "question": "What is Solid's createCallback?",
+    "options": [
+      "Callback",
+      "Creates function bound to reactive context",
+      "Bound function",
+      "Callback"
+    ],
+    "correctOptions": [
+      "Creates function bound to reactive context"
+    ],
+    "time": 60,
+    "details": "createCallback creates reactive functions."
+  },
+  {
+    "question": "What is Solid's fine-grained reactivity?",
+    "options": [
+      "Fine-grained",
+      "Only updates what changes, no VDOM diffing",
+      "Signal-based",
+      "Granular"
+    ],
+    "correctOptions": [
+      "Only updates what changes, no VDOM diffing"
+    ],
+    "time": 60,
+    "details": "Fine-grained updates are very efficient."
+  },
+  {
+    "question": "What is JSX in Solid?",
+    "options": [
+      "Template in build",
+      "Compiled to direct DOM operations at build time",
+      "Compiled",
+      "JSX"
+    ],
+    "correctOptions": [
+      "Compiled to direct DOM operations at build time"
+    ],
+    "time": 65,
+    "details": "Solid compiles JSX to DOM code."
+  },
+  {
+    "question": "How do Solid components render?",
+    "options": [
+      "Run once",
+      "Components run once, not on every change",
+      "Single run",
+      "Render"
+    ],
+    "correctOptions": [
+      "Components run once, not on every change"
+    ],
+    "time": 60,
+    "details": "Solid components don't re-render."
+  },
+  {
+    "question": "What is Solid's fine-grained update?",
+    "options": [
+      "Direct DOM",
+      "Updates DOM directly without VDOM",
+      "Targeted update",
+      "No VDOM"
+    ],
+    "correctOptions": [
+      "Updates DOM directly without VDOM"
+    ],
+    "time": 65,
+    "details": "Direct DOM updates are efficient."
+  },
+  {
+    "question": "What is compiled Solid?",
+    "options": [
+      "Optimized build",
+      "Solid compiles to optimized vanilla JavaScript",
+      "Compiled",
+      "Build"
+    ],
+    "correctOptions": [
+      "Solid compiles to optimized vanilla JavaScript"
+    ],
+    "time": 70,
+    "details": "Solid compiles to efficient JS code."
+  },
+  {
+    "question": "What is runtime comparison between React and Solid?",
+    "options": [
+      "No VDOM",
+      "Solid has no runtime VDOM, React has reconciliation runtime",
+      "Runtime",
+      "Performance"
+    ],
+    "correctOptions": [
+      "Solid has no runtime VDOM, React has reconciliation runtime"
+    ],
+    "time": 65,
+    "details": "Solid compiles away reactivity at build time."
+  },
+  {
+    "question": "What is Svelte?",
+    "options": [
+      "Compile framework",
+      "Compile-time framework with no VDOM",
+      "Reactive",
+      "Compiler"
+    ],
+    "correctOptions": [
+      "Compile-time framework with no VDOM"
+    ],
+    "time": 55,
+    "details": "Svelte compiles to vanilla JS."
+  },
+  {
+    "question": "What is Svelte's reactivity model?",
+    "options": [
+      "Compiler reactivity",
+      "Reactivity added at compile time, not runtime",
+      "Reactive statements",
+      "Derived"
+    ],
+    "correctOptions": [
+      "Reactivity added at compile time, not runtime"
+    ],
+    "time": 60,
+    "details": "Svelte analyzes reactivity at build."
+  },
+  {
+    "question": "What are Svelte reactive declarations?",
+    "options": [
+      "$: statements",
+      "$: reactive statements that re-run on dependency changes",
+      "Reactive statements",
+      "Computed"
+    ],
+    "correctOptions": [
+      "$: reactive statements that re-run on dependency changes"
+    ],
+    "time": 60,
+    "details": "$: marks reactive statements."
+  },
+  {
+    "question": "What is Svelte stores?",
+    "options": [
+      "Global state",
+      "Global reactive state with subscribe method",
+      "State",
+      "Observable"
+    ],
+    "correctOptions": [
+      "Global reactive state with subscribe method"
+    ],
+    "time": 55,
+    "details": "Stores provide global reactive state."
+  },
+  {
+    "question": "What is Svelte context?",
+    "options": [
+      "Component context",
+      "Context API for component-scoped data",
+      "State",
+      "Props"
+    ],
+    "correctOptions": [
+      "Context API for component-scoped data"
+    ],
+    "time": 55,
+    "details": "Context shares data in component tree."
+  },
+  {
+    "question": "What are Svelte slots?",
+    "options": [
+      "Children prop",
+      "Mechanism for composing components with children",
+      "Props",
+      "Content"
+    ],
+    "correctOptions": [
+      "Mechanism for composing components with children"
+    ],
+    "time": 50,
+    "details": "Slots provide composition pattern."
+  },
+  {
+    "question": "What is Svelte's await block?",
+    "options": [
+      "Async handling",
+      "Handling pending, fulfilled, and rejected states",
+      "Promise handling",
+      "Async"
+    ],
+    "correctOptions": [
+      "Handling pending, fulfilled, and rejected states"
+    ],
+    "time": 60,
+    "details": "Await blocks handle promises elegantly."
+  },
+  {
+    "question": "What are Svelte actions?",
+    "options": [
+      "Element directives",
+      "Functions that run when element mounts",
+      "Lifecycle",
+      "Events"
+    ],
+    "correctOptions": [
+      "Functions that run when element mounts"
+    ],
+    "time": 55,
+    "details": "Actions run on element mount."
+  },
+  {
+    "question": "What is Svelte transitions?",
+    "options": [
+      "Animation",
+      "Built-in transitions for entering/leaving elements",
+      "Animations",
+      "CSS transitions"
+    ],
+    "correctOptions": [
+      "Built-in transitions for entering/leaving elements"
+    ],
+    "time": 55,
+    "details": "Transitions animate element changes."
+  },
+  {
+    "question": "What are Svelte motion tweens?",
+    "options": [
+      "Number animation",
+      "Tweened values for numeric animations",
+      "Animation",
+      "Numbers"
+    ],
+    "correctOptions": [
+      "Tweened values for numeric animations"
+    ],
+    "time": 55,
+    "details": "Tweens animate numeric values."
+  },
+  {
+    "question": "What are Svelte spring animations?",
+    "options": [
+      "Physics animation",
+      "Spring physics for natural motion",
+      "Physics",
+      "Motion"
+    ],
+    "correctOptions": [
+      "Spring physics for natural motion"
+    ],
+    "time": 60,
+    "details": "Springs provide physics-based motion."
+  },
+  {
+    "question": "What is Svelte bindings?",
+    "options": [
+      "Two-way sync",
+      "Two-way binding between variables and inputs",
+      "Input binding",
+      "Sync"
+    ],
+    "correctOptions": [
+      "Two-way binding between variables and inputs"
+    ],
+    "time": 50,
+    "details": "Bindings sync input and state."
+  },
+  {
+    "question": "What is Vue 3 Composition API?",
+    "options": [
+      "Vue hooks",
+      "API using composables for logic reuse",
+      "Function-based",
+      "Hooks"
+    ],
+    "correctOptions": [
+      "API using composables for logic reuse"
+    ],
+    "time": 50,
+    "details": "Composition API uses setup function."
+  },
+  {
+    "question": "What is ref in Vue?",
+    "options": [
+      "Reactive primitive",
+      "Reactive reference for primitive values",
+      "Reactive",
+      "Value"
+    ],
+    "correctOptions": [
+      "Reactive reference for primitive values"
+    ],
+    "time": 50,
+    "details": "ref() wraps primitives reactively."
+  },
+  {
+    "question": "What is reactive in Vue?",
+    "options": [
+      "Object reactivity",
+      "Makes object deeply reactive",
+      "Deep reactive",
+      "Proxy"
+    ],
+    "correctOptions": [
+      "Makes object deeply reactive"
+    ],
+    "time": 50,
+    "details": "reactive() makes objects reactive."
+  },
+  {
+    "question": "What is computed in Vue?",
+    "options": [
+      "Derived value",
+      "Creates derived reactive value",
+      "Memo",
+      "Derived"
+    ],
+    "correctOptions": [
+      "Creates derived reactive value"
+    ],
+    "time": 50,
+    "details": "computed() creates derived state."
+  },
+  {
+    "question": "What is watch in Vue?",
+    "options": [
+      "Effect trigger",
+      "Triggers callback when ref/reactive changes",
+      "Reactive watcher",
+      "Effect"
+    ],
+    "correctOptions": [
+      "Triggers callback when ref/reactive changes"
+    ],
+    "time": 55,
+    "details": "watch responds to reactive changes."
+  },
+  {
+    "question": "What is watchEffect in Vue?",
+    "options": [
+      "Auto watcher",
+      "Effect that automatically tracks reactive dependencies",
+      "Auto tracking",
+      "Effect"
+    ],
+    "correctOptions": [
+      "Effect that automatically tracks reactive dependencies"
+    ],
+    "time": 55,
+    "details": "watchEffect auto-tracks deps."
+  },
+  {
+    "question": "What is Vue's provide/inject?",
+    "options": [
+      "Dependency injection",
+      "Passing data to descendants without props",
+      "Context",
+      "DI"
+    ],
+    "correctOptions": [
+      "Passing data to descendants without props"
+    ],
+    "time": 55,
+    "details": "Provide/inject avoids prop drilling."
+  },
+  {
+    "question": "What is Vue's setup function?",
+    "options": [
+      "Init function",
+      "Function where component logic is defined",
+      "Lifecycle",
+      "Init"
+    ],
+    "correctOptions": [
+      "Function where component logic is defined"
+    ],
+    "time": 50,
+    "details": "setup() runs before render."
+  },
+  {
+    "question": "What is Vue's ref vs reactive?",
+    "options": [
+      "Ref vs reactive",
+      "ref for primitives, reactive for objects",
+      "Value vs object",
+      "Types"
+    ],
+    "correctOptions": [
+      "ref for primitives, reactive for objects"
+    ],
+    "time": 55,
+    "details": "ref wraps, reactive proxies."
+  },
+  {
+    "question": "What is toRefs in Vue?",
+    "options": [
+      "Destructuring",
+      "Converts reactive object to refs for destructuring",
+      "Object to refs",
+      "Destructure"
+    ],
+    "correctOptions": [
+      "Converts reactive object to refs for destructuring"
+    ],
+    "time": 60,
+    "details": "toRefs enables destructuring reactive."
+  },
+  {
+    "question": "What is custom directives in Vue?",
+    "options": [
+      "Reusable behavior",
+      "Reusable logic that attaches to elements",
+      "Directives",
+      "Element hooks"
+    ],
+    "correctOptions": [
+      "Reusable logic that attaches to elements"
+    ],
+    "time": 55,
+    "details": "Directives provide element behavior."
+  },
+  {
+    "question": "What is Vue's Teleport component?",
+    "options": [
+      "DOM teleport",
+      "Renders component to different DOM location",
+      "Portal",
+      "Render elsewhere"
+    ],
+    "correctOptions": [
+      "Renders component to different DOM location"
+    ],
+    "time": 55,
+    "details": "Teleport renders outside parent."
+  },
+  {
+    "question": "What is Vue's Suspense component?",
+    "options": [
+      "Async handling",
+      "Handles async dependencies like React Suspense",
+      "Await component",
+      "Suspense"
+    ],
+    "correctOptions": [
+      "Handles async dependencies like React Suspense"
+    ],
+    "time": 60,
+    "details": "Suspense handles async components."
+  },
+  {
+    "question": "What is Vue's KeepAlive component?",
+    "options": [
+      "Caching",
+      "Caches component instances instead of destroying",
+      "Cache",
+      "State"
+    ],
+    "correctOptions": [
+      "Caches component instances instead of destroying"
+    ],
+    "time": 60,
+    "details": "KeepAlive caches component state."
+  },
+  {
+    "question": "What is Vue's v-memo directive?",
+    "options": [
+      "Memoization",
+      "Directive for memoizing sub-templates",
+      "Template memo",
+      "Memoize"
+    ],
+    "correctOptions": [
+      "Directive for memoizing sub-templates"
+    ],
+    "time": 65,
+    "details": "v-memo caches template portions."
+  },
+  {
+    "question": "What is Vue's defineProps?",
+    "options": [
+      "Props definition",
+      "Define component props in script setup",
+      "Props",
+      "Types"
+    ],
+    "correctOptions": [
+      "Define component props in script setup"
+    ],
+    "time": 50,
+    "details": "defineProps declares props."
+  },
+  {
+    "question": "What is Vue's defineEmits?",
+    "options": [
+      "Events definition",
+      "Define events component can emit",
+      "Emits",
+      "Events"
+    ],
+    "correctOptions": [
+      "Define events component can emit"
+    ],
+    "time": 50,
+    "details": "defineEmits declares emits."
+  },
+  {
+    "question": "What is Vue's defineExpose?",
+    "options": [
+      "Expose",
+      "Expose component properties to parent",
+      "Public API",
+      "Expose"
+    ],
+    "correctOptions": [
+      "Expose"
+    ],
+    "time": 55,
+    "details": "defineExpose exposes component API."
+  },
+  {
+    "question": "What is Vue's withDefaults?",
+    "options": [
+      "Default props",
+      "Provides default values for props",
+      "Default values",
+      "Props defaults"
+    ],
+    "correctOptions": [
+      "Provides default values for props"
+    ],
+    "time": 55,
+    "details": "withDefaults sets prop defaults."
+  },
+  {
+    "question": "What is useState hook?",
+    "options": [
+      "State management",
+      "Returns array",
+      "Re-renders",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "State management",
+      "Returns array",
+      "Re-renders",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useState hook? explanation."
+  },
+  {
+    "question": "What is Pinia in Vue?",
+    "options": [
+      "State management",
+      "Vue's official state management library",
+      "Store",
+      "State"
+    ],
+    "correctOptions": [
+      "Vue's official state management library"
+    ],
+    "time": 50,
+    "details": "Pinia is Vue's recommended store."
+  },
+  {
+    "question": "What is Pinia defineStore?",
+    "options": [
+      "Store creator",
+      "Creates a Pinia store",
+      "Store definition",
+      "State"
+    ],
+    "correctOptions": [
+      "Creates a Pinia store"
+    ],
+    "time": 50,
+    "details": "defineStore creates Pinia store."
+  },
+  {
+    "question": "What is Pinia state?",
+    "options": [
+      "Store data",
+      "Reactive state in Pinia store",
+      "Data",
+      "Store"
+    ],
+    "correctOptions": [
+      "Reactive state in Pinia store"
+    ],
+    "time": 50,
+    "details": "state is store's reactive data."
+  },
+  {
+    "question": "What are Pinia getters?",
+    "options": [
+      "Computed state",
+      "Computed values derived from state",
+      "Computed",
+      "Derived"
+    ],
+    "correctOptions": [
+      "Computed values derived from state"
+    ],
+    "time": 55,
+    "details": "Getters compute from state."
+  },
+  {
+    "question": "What are Pinia actions?",
+    "options": [
+      "Methods",
+      "Methods to modify state in Pinia",
+      "Functions",
+      "Mutations"
+    ],
+    "correctOptions": [
+      "Methods"
+    ],
+    "time": 50,
+    "details": "Actions modify state."
+  },
+  {
+    "question": "What is Pinia $subscribe?",
+    "options": [
+      "State subscription",
+      "Subscribe to state changes",
+      "Watch state",
+      "Observe"
+    ],
+    "correctOptions": [
+      "Subscribe to state changes"
+    ],
+    "time": 55,
+    "details": "$subscribe watches state changes."
+  },
+  {
+    "question": "What is Pinia plugins?",
+    "options": [
+      "Extensions",
+      "Extend Pinia with additional functionality",
+      "Add-ons",
+      "Middleware"
+    ],
+    "correctOptions": [
+      "Extend Pinia with additional functionality"
+    ],
+    "time": 60,
+    "details": "Plugins extend Pinia capabilities."
+  },
+  {
+    "question": "What is Vue Router?",
+    "options": [
+      "Routing",
+      "Vue's official routing library",
+      "Router",
+      "Navigation"
+    ],
+    "correctOptions": [
+      "Vue's official routing library"
+    ],
+    "time": 45,
+    "details": "Vue Router handles navigation."
+  },
+  {
+    "question": "What is Vue Router useRoute?",
+    "options": [
+      "Current route",
+      "Access current route information",
+      "Route hook",
+      "Get route"
+    ],
+    "correctOptions": [
+      "Access current route information"
+    ],
+    "time": 50,
+    "details": "useRoute returns route object."
+  },
+  {
+    "question": "What is Vue Router useRouter?",
+    "options": [
+      "Navigation",
+      "Programmatic navigation methods",
+      "Router hook",
+      "Navigate"
+    ],
+    "correctOptions": [
+      "Programmatic navigation methods"
+    ],
+    "time": 50,
+    "details": "useRouter provides navigation."
+  },
+  {
+    "question": "What are Vue Router navigation guards?",
+    "options": [
+      "Route protection",
+      "Hooks for controlling navigation",
+      "Guards",
+      "Auth"
+    ],
+    "correctOptions": [
+      "Hooks for controlling navigation"
+    ],
+    "time": 55,
+    "details": "Guards protect route access."
+  },
+  {
+    "question": "What is beforeEach guard?",
+    "options": [
+      "Global guard",
+      "Guard called before every navigation",
+      "Navigation guard",
+      "Global"
+    ],
+    "correctOptions": [
+      "Guard called before every navigation"
+    ],
+    "time": 55,
+    "details": "beforeEach runs on every navigation."
+  },
+  {
+    "question": "What is beforeRouteEnter?",
+    "options": [
+      "Component guard",
+      "Guard called before entering component",
+      "Route guard",
+      "Enter"
+    ],
+    "correctOptions": [
+      "Guard called before entering component"
+    ],
+    "time": 55,
+    "details": "beforeRouteEnter is component guard."
+  },
+  {
+    "question": "What is beforeRouteUpdate?",
+    "options": [
+      "Update guard",
+      "Guard called when route updates with same component",
+      "Re-render guard",
+      "Update"
+    ],
+    "correctOptions": [
+      "Guard called when route updates with same component"
+    ],
+    "time": 60,
+    "details": "beforeRouteUpdate handles same-component navigation."
+  },
+  {
+    "question": "What is beforeRouteLeave?",
+    "options": [
+      "Leave guard",
+      "Guard called when leaving component",
+      "Exit guard",
+      "Leave"
+    ],
+    "correctOptions": [
+      "Guard called when leaving component"
+    ],
+    "time": 55,
+    "details": "beforeRouteLeave guards departure."
+  },
+  {
+    "question": "What are Vue Router dynamic segments?",
+    "options": [
+      "URL params",
+      "Dynamic parts of URL like :id",
+      "Route params",
+      "Wildcard"
+    ],
+    "correctOptions": [
+      "Dynamic parts of URL like :id"
+    ],
+    "time": 50,
+    "details": ":id captures URL segments."
+  },
+  {
+    "question": "What are Vue Router nested routes?",
+    "options": [
+      "Child routes",
+      "Routes inside other routes with nested components",
+      "Sub routes",
+      "Children"
+    ],
+    "correctOptions": [
+      "Routes inside other routes with nested components"
+    ],
+    "time": 55,
+    "details": "Nested routes have parent-child relationship."
+  },
+  {
+    "question": "What is Vue Router history mode?",
+    "options": [
+      "URL mode",
+      "Using HTML5 history API instead of hash",
+      "History API",
+      "URL mode"
+    ],
+    "correctOptions": [
+      "Using HTML5 history API instead of hash"
+    ],
+    "time": 55,
+    "details": "history mode uses clean URLs."
+  },
+  {
+    "question": "What is lazy loading routes?",
+    "options": [
+      "Dynamic import",
+      "Loading route components on demand",
+      "Code splitting",
+      "Dynamic route"
+    ],
+    "correctOptions": [
+      "Loading route components on demand"
+    ],
+    "time": 55,
+    "details": "Lazy routes enable code splitting."
+  },
+  {
+    "question": "What is Vue Router navigation hooks?",
+    "options": [
+      "Navigation events",
+      "Hooks during navigation process",
+      "Lifecycle hooks",
+      "Navigation"
+    ],
+    "correctOptions": [
+      "Hooks during navigation process"
+    ],
+    "time": 55,
+    "details": "Navigation hooks control navigation flow."
+  },
+  {
+    "question": "What is Nuxt.js?",
+    "options": [
+      "Vue meta-framework",
+      "Full-stack Vue framework with SSR, routing, auto-imports",
+      "Framework",
+      "SSR"
+    ],
+    "correctOptions": [
+      "Full-stack Vue framework with SSR, routing, auto-imports"
+    ],
+    "time": 50,
+    "details": "Nuxt is Vue's full-stack framework."
+  },
+  {
+    "question": "What is Nuxt directory structure?",
+    "options": [
+      "Auto routing",
+      "Automatic file-based routing from pages directory",
+      "Auto structure",
+      "Convention"
+    ],
+    "correctOptions": [
+      "Automatic file-based routing from pages directory"
+    ],
+    "time": 55,
+    "details": "Nuxt auto-generates routes from files."
+  },
+  {
+    "question": "What are Nuxt auto-imports?",
+    "options": [
+      "Auto imports",
+      "Automatic imports of composables and utilities",
+      "Imports",
+      "Composables"
+    ],
+    "correctOptions": [
+      "Automatic imports of composables and utilities"
+    ],
+    "time": 55,
+    "details": "Nuxt auto-imports reduce boilerplate."
+  },
+  {
+    "question": "What is Nuxt useAsyncData?",
+    "options": [
+      "Async fetch",
+      "SSR-safe data fetching hook",
+      "Fetch",
+      "Data"
+    ],
+    "correctOptions": [
+      "SSR-safe data fetching hook"
+    ],
+    "time": 60,
+    "details": "useAsyncData handles SSR data fetching."
+  },
+  {
+    "question": "What is Nuxt useFetch?",
+    "options": [
+      "Network fetch",
+      "Wrapper around useAsyncData for HTTP requests",
+      "Request",
+      "API"
+    ],
+    "correctOptions": [
+      "Wrapper around useAsyncData for HTTP requests"
+    ],
+    "time": 55,
+    "details": "useFetch provides HTTP capabilities."
+  },
+  {
+    "question": "What is Nuxt layouts?",
+    "options": [
+      "Page layouts",
+      "Reusable page layouts with slots",
+      "Template",
+      "Wrapper"
+    ],
+    "correctOptions": [
+      "Reusable page layouts with slots"
+    ],
+    "time": 50,
+    "details": "Layouts provide page structure."
+  },
+  {
+    "question": "What is Nuxt middleware?",
+    "options": [
+      "Route guards",
+      "Route middleware for authentication, etc.",
+      "Auth",
+      "Guard"
+    ],
+    "correctOptions": [
+      "Route middleware for authentication, etc."
+    ],
+    "time": 55,
+    "details": "Middleware runs before page navigation."
+  },
+  {
+    "question": "What is Nuxt plugins?",
+    "options": [
+      "App plugins",
+      "Plugins that run at app initialization",
+      "Init",
+      "Setup"
+    ],
+    "correctOptions": [
+      "Plugins that run at app initialization"
+    ],
+    "time": 55,
+    "details": "Plugins add app-wide functionality."
+  },
+  {
+    "question": "What is Nuxt server routes?",
+    "options": [
+      "API routes",
+      "Server routes in server/api directory",
+      "API",
+      "Backend"
+    ],
+    "correctOptions": [
+      "Server routes in server/api directory"
+    ],
+    "time": 55,
+    "details": "server/api creates backend endpoints."
+  },
+  {
+    "question": "What is Nuxt state management?",
+    "options": [
+      "useState",
+      "Shared state via useState composable",
+      "State",
+      "Pinia"
+    ],
+    "correctOptions": [
+      "useState"
+    ],
+    "time": 60,
+    "details": "useState provides shared state."
+  },
+  {
+    "question": "What is Nuxt 3 nitro server?",
+    "options": [
+      "Server engine",
+      "New server engine for Nuxt 3",
+      "Server",
+      "Engine"
+    ],
+    "correctOptions": [
+      "New server engine for Nuxt 3"
+    ],
+    "time": 60,
+    "details": "Nitro powers Nuxt server."
+  },
+  {
+    "question": "What is Nuxt hybrid rendering?",
+    "options": [
+      "Mixed rendering",
+      "Route-level rendering rules (SSG, SSR, etc)",
+      "Mixed mode",
+      "Hybrid mode"
+    ],
+    "correctOptions": [
+      "Route-level rendering rules (SSG, SSR, etc)"
+    ],
+    "time": 65,
+    "details": "Hybrid renders different routes differently."
+  },
+  {
+    "question": "What is Nuxt 3 image component?",
+    "options": [
+      "Optimized images",
+      "Component for optimized images",
+      "Image",
+      "Optimization"
+    ],
+    "correctOptions": [
+      "Component for optimized images"
+    ],
+    "time": 55,
+    "details": "@nuxt/image optimizes images."
+  },
+  {
+    "question": "What is SvelteKit?",
+    "options": [
+      "Svelte meta-framework",
+      "Full-stack Svelte framework similar to Next.js",
+      "Framework",
+      "Svelte"
+    ],
+    "correctOptions": [
+      "Full-stack Svelte framework similar to Next.js"
+    ],
+    "time": 55,
+    "details": "SvelteKit is Svelte's full-stack framework."
+  },
+  {
+    "question": "What is SvelteKit file-based routing?",
+    "options": [
+      "Auto routing",
+      "Routing from file structure in src/routes",
+      "Auto routes",
+      "Convention"
+    ],
+    "correctOptions": [
+      "Routing from file structure in src/routes"
+    ],
+    "time": 50,
+    "details": "SvelteKit uses file-based routing."
+  },
+  {
+    "question": "What are SvelteKit layouts?",
+    "options": [
+      "Page layouts",
+      "Layout files that wrap page components",
+      "Structure",
+      "Templates"
+    ],
+    "correctOptions": [
+      "Layout files that wrap page components"
+    ],
+    "time": 55,
+    "details": "Layouts wrap routes."
+  },
+  {
+    "question": "What is SvelteKit load functions?",
+    "options": [
+      "Data fetching",
+      "Functions that load data for pages",
+      "Page data",
+      "Data loader"
+    ],
+    "correctOptions": [
+      "Functions that load data for pages"
+    ],
+    "time": 55,
+    "details": "Load functions provide page data."
+  },
+  {
+    "question": "What are SvelteKit form actions?",
+    "options": [
+      "Form handling",
+      "Server-side form handling",
+      "Actions",
+      "Form"
+    ],
+    "correctOptions": [
+      "Server-side form handling"
+    ],
+    "time": 60,
+    "details": "Form actions handle POSTs server-side."
+  },
+  {
+    "question": "What is SvelteKit API routes?",
+    "options": [
+      "Backend routes",
+      "Routes in src/routes for API endpoints",
+      "API",
+      "Server"
+    ],
+    "correctOptions": [
+      "Routes in src/routes for API endpoints"
+    ],
+    "time": 55,
+    "details": "API routes are also in src/routes."
+  },
+  {
+    "question": "What is SvelteKit adapters?",
+    "options": [
+      "Deployment targets",
+      "Adapters for deploying to various platforms",
+      "Deploy",
+      "Target"
+    ],
+    "correctOptions": [
+      "Adapters for deploying to various platforms"
+    ],
+    "time": 60,
+    "details": "Adapters enable deployment targets."
+  },
+  {
+    "question": "What is SvelteKit pre-rendering?",
+    "options": [
+      "SSG",
+      "Static site generation for entire site",
+      "Static",
+      "Build"
+    ],
+    "correctOptions": [
+      "Static site generation for entire site"
+    ],
+    "time": 55,
+    "details": "Prerendering creates static HTML."
+  },
+  {
+    "question": "What is SvelteKit SSR?",
+    "options": [
+      "Server rendering",
+      "Server-side rendering for dynamic content",
+      "Server",
+      "Dynamic"
+    ],
+    "correctOptions": [
+      "Server-side rendering for dynamic content"
+    ],
+    "time": 55,
+    "details": "SSR handles dynamic content server-side."
+  },
+  {
+    "question": "What is Angular signals?",
+    "options": [
+      "Reactive primitive",
+      "New reactive primitive in Angular 16+",
+      "Reactivity",
+      "Signal"
+    ],
+    "correctOptions": [
+      "New reactive primitive in Angular 16+"
+    ],
+    "time": 55,
+    "details": "Signals are Angular's reactive primitive."
+  },
+  {
+    "question": "What is Angular computed signals?",
+    "options": [
+      "Derived signal",
+      "Signal derived from other signals",
+      "Computed",
+      "Derived"
+    ],
+    "correctOptions": [
+      "Signal derived from other signals"
+    ],
+    "time": 55,
+    "details": "computed() creates derived signals."
+  },
+  {
+    "question": "What is Angular effect?",
+    "options": [
+      "Side effect",
+      "Effect that runs when signals change",
+      "Reactive effect",
+      "Watcher"
+    ],
+    "correctOptions": [
+      "Effect that runs when signals change"
+    ],
+    "time": 60,
+    "details": "effect() runs on signal changes."
+  },
+  {
+    "question": "What is Angular signal function?",
+    "options": [
+      "Read signal",
+      "Function to read signal value",
+      "Get value",
+      "Read"
+    ],
+    "correctOptions": [
+      "Function to read signal value"
+    ],
+    "time": 50,
+    "details": "signal() wraps value in signal."
+  },
+  {
+    "question": "What is Angular computed vs effect?",
+    "options": [
+      "Derived vs side-effect",
+      "computed derives, effect runs side effects",
+      "Difference",
+      "Usage"
+    ],
+    "correctOptions": [
+      "computed derives, effect runs side effects"
+    ],
+    "time": 60,
+    "details": "computed caches; effect runs."
+  },
+  {
+    "question": "What is useState? (Level 7 #138)",
+    "options": [
+      "State",
+      "Hook",
+      "Re-render",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "State",
+      "Hook",
+      "Re-render",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useState? explanation."
+  },
+  {
+    "question": "What is useEffect? (Level 7 #139)",
+    "options": [
+      "Side effects",
+      "Cleanup",
+      "Dependencies",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Side effects",
+      "Cleanup",
+      "Dependencies",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useEffect? explanation."
+  },
+  {
+    "question": "What is useContext? (Level 7 #140)",
+    "options": [
+      "Context",
+      "Redux alternative",
+      "Global state",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Context",
+      "Redux alternative",
+      "Global state",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useContext? explanation."
+  },
+  {
+    "question": "What is useReducer? (Level 7 #141)",
+    "options": [
+      "State management",
+      "Complex state",
+      "Actions",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "State management",
+      "Complex state",
+      "Actions",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useReducer? explanation."
+  },
+  {
+    "question": "What is useRef? (Level 7 #142)",
+    "options": [
+      "DOM access",
+      "Mutable value",
+      "Persistence",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "DOM access",
+      "Mutable value",
+      "Persistence",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useRef? explanation."
+  },
+  {
+    "question": "What is useMemo? (Level 7 #143)",
+    "options": [
+      "Performance",
+      "Cache",
+      "Expensive calculation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Performance",
+      "Cache",
+      "Expensive calculation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useMemo? explanation."
+  },
+  {
+    "question": "What is useCallback? (Level 7 #144)",
+    "options": [
+      "Performance",
+      "Function memoization",
+      "Dependencies",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Performance",
+      "Function memoization",
+      "Dependencies",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useCallback? explanation."
+  },
+  {
+    "question": "What is React.memo? (Level 7 #145)",
+    "options": [
+      "Optimization",
+      "Pure component",
+      "Shallow compare",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Optimization",
+      "Pure component",
+      "Shallow compare",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is React.memo? explanation."
+  },
+  {
+    "question": "What is useLayoutEffect? (Level 7 #146)",
+    "options": [
+      "Synchronous",
+      "DOM mutation",
+      "Before paint",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Synchronous",
+      "DOM mutation",
+      "Before paint",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useLayoutEffect? explanation."
+  },
+  {
+    "question": "What is custom hook? (Level 7 #147)",
+    "options": [
+      "Reuse logic",
+      "Stateful",
+      "Side effects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Reuse logic",
+      "Stateful",
+      "Side effects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is custom hook? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  }
 ]

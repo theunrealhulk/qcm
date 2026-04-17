@@ -1,93 +1,1912 @@
 [
-  {"question": "What is @viewChild in Angular?", "options": ["Query element", "Element ref", "View reference", "DOM reference"], "correctOptions": ["Query child element or directive from template view"], "time": 40, "details": "@viewChild gets child from view."},
-  {"question": "What is @viewChildren in Angular?", "options": ["Multiple refs", "Child elements", "All children", "Query list"], "correctOptions": ["Gets list of child elements/directives"], "time": 45, "details": "@viewChildren gets multiple refs."},
-  {"question": "What is @contentChild in Angular?", "options": ["Query projected content", "Element in projected content", "Projected reference", "ng-content"], "correctOptions": ["Get child from projected (ng-content) content"], "time": 45, "details": "@contentChild queries projected content."},
-  {"question": "What is @contentChildren in Angular?", "options": ["Multiple projected", "List of projected", "Projected refs", "ng-content"], "correctOptions": ["List of projected content children"], "time": 50, "details": "@contentChildren gets projected children."},
-  {"question": "What is ElementRef in Angular?", "options": ["DOM wrapper", "Ref to native element", "Element reference", "Native ref"], "correctOptions": ["Wrapper around underlying DOM element"], "time": 45, "details": "ElementRef gives DOM access."},
-  {"question": "What is Renderer2 in Angular?", "options": ["Render abstraction", "Manipulate DOM", "2nd generation", "Abstraction"], "correctOptions": ["Abstract way to manipulate DOM (works across platforms like server/WebWorker)"], "time": 55, "details": "Renderer2 provides DOM abstraction."},
-  {"question": "What is @ViewChild static option?", "options": ["Pre-change detection", "Static binding", "Resolution timing", "Static query"], "correctOptions": ["Query resolved before change detection (vs default dynamic after)"], "time": 60, "details": "static: true = resolved during view init, false = after view init."},
-  {"question": "What is @ViewChild read option?", "options": ["Read different token", "Read another token", "Read specific", "Alternative"], "correctOptions": ["Allows reading different token from what query found"], "time": 65, "details": "Read alternative token from query."},
-  {"question": "What is Dynamic component in Angular?", "options": ["Runtime created", "Create component on fly", "Dynamic element", "Factory"], "correctOptions": ["Component created at runtime via ViewContainerRef.createComponent()"], "time": 55, "details": "Components created dynamically."},
-  {"question": "What is ViewContainerRef?", "options": ["Component anchor", "Where dynamic", "Container", "Container for dynamic"], "correctOptions": ["Reference to container anchor where dynamic components render"], "time": 55, "details": "Acts as anchor."},
-  {"question": "What is createComponent in Angular?", "options": ["Create dynamic component", "Instantiate component", "Factory", "New"], "correctOptions": ["Creates component from ComponentFactory and returns ComponentRef"], "time": 55, "details": "Factory creates instances."},
-  {"question": "What is ComponentRef in Angular?", "options": ["Component instance reference", "Instance", "Reference", "Wrapped component"], "correctOptions": ["Wrapper around dynamically created component instance"], "time": 50, "details": "ComponentRef wraps instance."},
-  {"question": "What is ngTemplateOutlet directive?", "options": ["Embed template", "Template anchor", "ng-template", "Insert"], "correctOptions": ["Structural directive for embedding other template"], "time": 55, "details": "Embeds other templates."},
-  {"question": "What is ngComponentOutlet directive?", "options": ["Load dynamic component", "Component anchor", "Dynamic embed", "Insert component"], "correctOptions": ["Structural directive for loading dynamic component"], "time": 60, "details": "Loads dynamic component."},
-  {"question": "What is Angular animations?", "options": ["Animation library", "State transitions", "Motion", "Library"], "correctOptions": ["Angular-specific animation library for state-based UI transitions"], "time": 50, "details": "Animation library in Angular."},
-  {"question": "What is trigger() function?", "options": ["Define animation", "Trigger definition", "Setup", "Animation setup"], "correctOptions": ["Creates animation trigger definition (name, animation definitions array)"], "time": 50, "details": "Groups animations under name."},
-  {"question": "What is state() function?", "options": ["Define state", "State definition", "Define style", "Style"], "correctOptions": ["Defines style state (named) that component can switch to via trigger"], "time": 50, "details": "Defines named state."},
-  {"question": "What is transition() function?", "options": ["Define animation", "State transition", "Between states", "Change style"], "correctOptions": ["Defines transition between states with animation steps"], "time": 55, "details": "Transitions between states."},
-  {"question": "What is animate() in animation?", "options": ["Run animation step", "Style animation", "Keyframe sequence", "Duration and timing"], "correctOptions": ["Creates animation step with timing and style changes"], "time": 60, "details": "Steps within transition."},
-  {"question": "What is style() in animation?", "options": ["Define styles", "CSS styles", "Styles object", "Set styles"], "correctOptions": ["Defines style collection with optional wildcard support"], "time": 55, "details": "Defines style collection."},
-  {"question": "What is query() in animation?", "options": ["Query child", "Find sub-element", "Child selector", "Child find"], "correctOptions": ["Finds internal elements in component via selector"], "time": 65, "details": "Queries internal elements."},
-  {"question": "What is stagger() in animation?", "options": ["Stagger child animations", "Delay children", "Animate with delay", "Delay animation"], "correctOptions": ["Delays each child animation in array by interval"], "time": 65, "details": "Staggers child animations."},
-  {"question": "What is animateChild() in animation?", "options": ["Child animation", "Run child", "Child", "Delegate"], "correctOptions": ["Animation action to invoke child animations defined in child trigger"], "time": 65, "details": "Runs child animations."},
-  {"question": "What is useAnimation() in animation?", "options": ["Reuse animation", "Predefined", "Reference", "Reuse"], "correctOptions": ["Reuse standalone animation sequence"], "time": 70, "details": "Reuses animation."},
-  {"question": "What is AnimationBuilder in Angular?", "options": ["Build animation", "Builder", "Runtime builder", "Create programmatic"], "correctOptions": ["Low-level API to programmatically build and play animation"], "time": 70, "details": "Programmatic animations."},
-  {"question": "What is AnimationPlayer?", "options": ["Playback control", "Player", "Interface", "Control API"], "correctOptions": ["Interface that gives control to play/pause/reset animation"], "time": 70, "details": "Controls animation playback."},
-  {"question": "What is Service Worker?", "options": ["Background sync", "Caching", "Offline", "Network"], "correctOptions": ["Background script that manages caching for offline capability"], "time": 55, "details": "Service worker handles offline."},
-  {"question": "What is ServiceWorkerModule?", "options": ["Module to register", "Enable service worker", "Register", "Imports"], "correctOptions": ["Module to register service worker for production builds"], "time": 60, "details": "Enables service worker."},
-  {"question": "What is ServiceWorkerRegistration?", "options": ["Registration object", "SW reference", "Instance", "Registration"], "correctOptions": ["Registration object for controlling active service worker"], "time": 55, "details": "Controls SW registration."},
-  {"question": "What is SwPush for notifications?", "options": ["Push subscription", "Notifications", "Token", "Subscribe"], "correctOptions": ["Push messaging subscription for receiving server notifications"], "time": 60, "details": "Handles push messages."},
-  {"question": "What is SwUpdate service?", "options": ["Update service", "Check updates", "Version", "Monitor for version"], "correctOptions": ["Monitors for available updates from server"], "time": 60, "details": "Checks for updates."},
-  {"question": "What is PWA Support?", "options": ["Progressive app", "Offline features", "PWA features", "Manifest"], "correctOptions": ["Progressive Web App support with service worker and manifest"], "time": 55, "details": "Add PWA features via CLI."},
-  {"question": "What is ngsw-config config?", "options": ["Service worker config", "Config options for service worker", "Build options", "Configure SW behavior"], "correctOptions": ["Configures service worker build output behavior"], "time": 70, "details": "Configures service worker."},
-  {"question": "What is @angular/service-worker?", "options": ["Angular SW", "Service worker", "Package", "Package for implementing Angular service worker"], "correctOptions": ["Standalone package for Angular service worker"], "time": 55, "details": "Service worker package."},
-  {"question": "What is Angular SSR?", "options": ["Render on server", "Pre-render", "Angular Universal", "Server rendering"], "correctOptions": ["Rendering Angular on server for SEO and performance"], "time": 60, "details": "Server-side rendering."},
-  {"question": "What is renderApplication in Angular?", "options": ["Bootstrap function", "Render using", "Function", "Bootstrap SSR app"], "correctOptions": ["Function that bootstraps application for server rendering"], "time": 65, "details": "Bootstraps server rendering."},
-  {"question": "What is platformServer in Angular?", "options": ["Server platform", "Platform", "SSR platform", "Server browser"], "correctOptions": ["Server platform providers for Angular SSR"], "time": 60, "details": "Sets up server platform."},
-  {"question": "What is TransferState in Angular?", "options": ["Cache data", "Transfer data", "State transfer", "Data"], "correctOptions": ["Mechanism to transfer state from server to client to avoid duplicate requests"], "time": 70, "details": "Avoids duplicate requests."},
-  {"question": "What is makeStateKey in Angular?", "options": ["State key", "Identifier state", "Key for TransferState", "Typed Key"], "correctOptions": ["Create typed state identifier for TransferState"], "time": 65, "details": "Creates state key."},
-  {"question": "What is BidiModule for RTL?", "options": ["Text direction", "Bidirectional", "RTL", "Support for RTL languages"], "correctOptions": ["Support for languages with RTL text direction (Arabic, Hebrew)"], "time": 60, "details": "RTL support."},
-  {"question": "What is @angular/localize?", "options": ["i18n package", "Internationalization", "Localization", "Translation package"], "correctOptions": ["Translation package to manage translations with $localize"], "time": 65, "details": "Localization."},
-  {"question": "What is i18n attribute for translation?", "options": ["Translation marker", "Mark text", "Message ID", "Translatable"], "correctOptions": ["Translatable content placed on elements for translation"], "time": 60, "details": "Marks element as translatable."},
-  {"question": "What is @angular/compiler-cli for i18n?", "options": ["Compile with translations", "Build", "Build translatable", "Extract messages"], "correctOptions": ["Extracts translation messages via ng xi18n"], "time": 70, "details": "Extracts i18n messages."},
-  {"question": "What is Lazy loading routes in Angular?", "options": ["On-demand loading", "Load when needed", "Code splitting", "Dynamic import"], "correctOptions": ["Loading route modules only when navigated to"], "time": 50, "details": "Lazy loading splits code bundles."},
-  {"question": "What is loadChildren in routing?", "options": ["Load child routes", "Dynamic import", "Lazy load", "Module import"], "correctOptions": ["Property for lazy loading route modules"], "time": 50, "details": "loadChildren enables lazy loading."},
-  {"question": "What is canActivate guard?", "options": ["Route activation", "Permission check", "Guard", "Auth guard"], "correctOptions": ["Guard to determine if a route can be activated"], "time": 50, "details": "Controls route activation."},
-  {"question": "What is canActivateChild guard?", "options": ["Child route guard", "Activates child routes", "Child activation", "Child permission"], "correctOptions": ["Guard to determine if child routes can be activated"], "time": 55, "details": "Controls child route activation."},
-  {"question": "What is canDeactivate guard?", "options": ["Route leaving", "Unsaved changes", "Guard", "Exit permission"], "correctOptions": ["Guard to determine if user can leave current route"], "time": 55, "details": "Controls route departure."},
-  {"question": "What is canLoad guard?", "options": ["Lazy load guard", "Prevents lazy loading", "Module load", "Authorization"], "correctOptions": ["Guard to prevent lazy loading of modules if user not authorized"], "time": 60, "details": "Controls lazy module loading."},
-  {"question": "What is Resolve guard?", "options": ["Pre-loading data", "Route data", "Before navigation", "Data fetch"], "correctOptions": ["Guard to resolve data before route activation"], "time": 55, "details": "Pre-resolves route data."},
-  {"question": "What is Router events in Angular?", "options": ["Navigation events", "Route changes", "Events during navigation", "Lifecycle events"], "correctOptions": ["Events emitted during navigation: NavigationStart, NavigationEnd, etc."], "time": 55, "details": "Router emits navigation events."},
-  {"question": "What is NavigationStart event?", "options": ["Navigation begins", "Start of navigation", "Route start", "Begin"], "correctOptions": ["Event emitted when navigation starts"], "time": 50, "details": "Signals navigation beginning."},
-  {"question": "What is NavigationEnd event?", "options": ["Navigation completes", "End of navigation", "Route complete", "Finish"], "correctOptions": ["Event emitted when navigation ends successfully"], "time": 50, "details": "Signals navigation completion."},
-  {"question": "What is NavigationError event?", "options": ["Navigation fails", "Error during navigation", "Failed navigation", "Error"], "correctOptions": ["Event emitted when navigation fails due to error"], "time": 55, "details": "Reports navigation errors."},
-  {"question": "What is GuardsCheckStart event?", "options": ["Guard check begins", "Start of guards", "Guard start", "Check begin"], "correctOptions": ["Event emitted when guard checks begin"], "time": 55, "details": "Signals guard evaluation start."},
-  {"question": "What is RouteConfigLoadStart event?", "options": ["Lazy load starts", "Module load start", "Dynamic load", "Lazy start"], "correctOptions": ["Event emitted when lazy load of route module starts"], "time": 60, "details": "Signals lazy loading start."},
-  {"question": "What is Router outlet activation?", "options": ["Component creation", "Outlet activates component", "Route renders", "Component mount"], "correctOptions": ["Process of activating a component in router-outlet"], "time": 55, "details": "Router outlet activates components."},
-  {"question": "What is RouterLinkActive?", "options": ["Active class", "Active state directive", "Route active", "Link styling"], "correctOptions": ["Directive to apply CSS classes when route is active"], "time": 50, "details": "Applies classes on active routes."},
-  {"question": "What is ActivatedRoute?", "options": ["Current route", "Route information", "Route state", "Route params"], "correctOptions": ["Service providing access to current route information"], "time": 50, "details": "Contains route data and params."},
-  {"question": "What is ActivatedRouteSnapshot?", "options": ["Route snapshot", "Static route data", "Route copy", "Frozen route"], "correctOptions": ["Immutable snapshot of route at specific time"], "time": 55, "details": "Provides route state at a point in time."},
-  {"question": "What is RouterState?", "options": ["Route tree", "Complete route state", "All routes", "Navigation state"], "correctOptions": ["Represents entire navigation tree at a moment"], "time": 55, "details": "Contains route hierarchy."},
-  {"question": "What is RouterStateSnapshot?", "options": ["Static state", "Immutable router state", "Frozen tree", "Route snapshot"], "correctOptions": ["Immutable snapshot of entire router state"], "time": 60, "details": "Frozen router state."},
-  {"question": "What is UrlTree in Angular?", "options": ["Parsed URL", "URL structure", "Route URL", "URL representation"], "correctOptions": ["Parsed representation of URL as a tree structure"], "time": 60, "details": "UrlTree parses URLs."},
-  {"question": "What is RouterPreloader?", "options": ["Pre-load routes", "Preload lazy routes", "Eager load", "Route preloader"], "correctOptions": "Service that preloads lazy-loaded routes in background"], "time": 65, "details": "Preloads routes ahead of time."},
-  {"question": "What is PreloadAllModules strategy?", "options": ["Load all lazy", "Preload all modules", "Background load", "Eager all"], "correctOptions": ["Strategy that preloads all lazy modules after initial load"], "time": 60, "details": "Preloads all lazy modules."},
-  {"question": "What is QuicklinkStrategy?", "options": ["Link-based preload", "Preload on link visibility", "Intelligent preload", "On-demand preload"], "correctOptions": ["Strategy that preloads routes when link becomes visible in viewport"], "time": 65, "details": "Preloads based on visibility."},
-  {"question": "What is Testing Router in Angular?", "options": ["Test routing", "Router for testing", "Mock router", "Test navigation"], "correctOptions": ["Router configured for testing scenarios"], "time": 55, "details": "Testing utilities for routing."},
-  {"question": "What is TestingModule for routing?", "options": ["Router testing", "Testing router module", "Test bed router", "Test setup"], "correctOptions": ["Testing utility for configuring Router in tests"], "time": 55, "details": "Configures router for testing."},
-  {"question": "What is HttpClient in Angular?", "options": ["HTTP requests", "HTTP client", "Web requests", "API calls"], "correctOptions": ["Angular service for making HTTP requests"], "time": 45, "details": "HttpClient makes API calls."},
-  {"question": "What is HttpRequest in Angular?", "options": ["Request object", "HTTP request", "API request", "Config request"], "correctOptions": ["Represents HTTP request with configuration"], "time": 50, "details": "HttpRequest encapsulates requests."},
-  {"question": "What is HttpResponse in Angular?", "options": ["Response object", "HTTP response", "API response", "Server response"], "correctOptions": ["Represents HTTP response from server"], "time": 50, "details": "HttpResponse contains response data."},
-  {"question": "What is HttpHeaders in Angular?", "options": ["Request headers", "HTTP headers", "Headers class", "Header management"], "correctOptions": ["Class for building and managing HTTP headers"], "time": 50, "details": "HttpHeaders manages headers."},
-  {"question": "What is HttpInterceptor?", "options": ["Request middleware", "Request/response handler", "HTTP middleware", "Chain handler"], "correctOptions": ["Interface for intercepting HTTP requests and responses"], "time": 55, "details": "Interceptors modify requests/responses."},
-  {"question": "What does HttpInterceptor return?", "options": ["Observable", "Observable of HttpEvent", "Promise", "Response"], "correctOptions": ["Observable of HttpEvent that chains with request pipeline"], "time": 60, "details": "Interceptors return observable chain."},
-  {"question": "What is HttpErrorResponse?", "options": ["Error response", "Failed HTTP response", "Error state", "Exception"], "correctOptions": ["Response representing failed HTTP request"], "time": 55, "details": "HttpErrorResponse for failures."},
-  {"question": "What is HttpClient testing?", "options": ["Mock HTTP", "Testing HTTP", "MockBackend", "HTTP testing"], "correctOptions": ["Testing HttpClient using HttpClientTestingModule and MockBackend"], "time": 60, "details": "Testing with mock HTTP."},
-  {"question": "What is retry in HTTP interceptor?", "options": ["Resend request", "Retry failed request", "Attempt again", "Re-attempt"], "correctOptions": ["Interceptor that re-attempts failed requests"], "time": 60, "details": "Retry interceptor for failures."},
-  {"question": "What is cache interceptor?", "options": ["Cache responses", "Store responses", "Cache requests", "Response cache"], "correctOptions": ["Interceptor that caches responses for identical requests"], "time": 65, "details": "Caches HTTP responses."},
-  {"question": "What is logging interceptor?", "options": ["Log requests/responses", "Log HTTP", "Audit trail", "Debug"], "correctOptions": ["Interceptor that logs all HTTP traffic for debugging"], "time": 60, "details": "Logs HTTP operations."},
-  {"question": "What is auth interceptor?", "options": ["Add auth token", "Authorization header", "Token injection", "Auth header"], "correctOptions": ["Interceptor that adds authorization tokens to requests"], "time": 55, "details": "Adds authentication tokens."},
-  {"question": "What is progress events?", "options": ["Upload/download progress", "Progress tracking", "Transfer progress", "Loading state"], "correctOptions": ["Events reporting upload/download progress"], "time": 60, "details": "Progress events for large transfers."},
-  {"question": "What is reportProgress option?", "options": ["Enable progress", "Track progress", "Progress events", "Progress flag"], "correctOptions": ["Option to enable progress events for request"], "time": 55, "details": "reportProgress enables tracking."},
-  {"question": "What is observe option?", "options": ["Response type", "Observe response type", "Event type", "Observe mode"], "correctOptions": ["Option to get full response, events, or just body"], "time": 55, "details": "observe controls response type."},
-  {"question": "What is responseType option?", "options": ["Expected format", "Response format", "Data type", "Parse type"], "correctOptions": ["Option to specify expected response format (json, text, blob, arraybuffer)"], "time": 55, "details": "responseType sets format."},
-  {"question": "What is withCredentials option?", "options": ["Send cookies", "CORS credentials", "Auth credentials", "Cross-origin"], "correctOptions": ["Option to include credentials in cross-origin requests"], "time": 60, "details": "withCredentials for CORS."},
-  {"question": "What is JSONP in Angular?", "options": ["JSON with padding", "Cross-domain requests", "Script injection", "JSON callback"], "correctOptions": ["Technique for cross-domain requests using script tags"], "time": 55, "details": "JSONP for cross-origin."},
-  {"question": "What is HttpJsonpModule?", "options": ["JSONP support", "JSONP module", "Import for JSONP", "JSONP client"], "correctOptions": ["Module providing JSONP support via HttpClient"], "time": 55, "details": "Enables JSONP requests."},
-  {"question": "What is Interceptors for error handling?", "options": ["Error catch", "Handle errors", "Error interceptor", "Exception handling"], "correctOptions": ["Interceptor pattern for catching and handling HTTP errors globally"], "time": 60, "details": "Global error handling."},
-  {"question": "What is tap operator with HTTP?", "options": ["Side effects", "Log responses", "Debug HTTP", "Inspect"], "correctOptions": ["Operator to perform side effects without altering response"], "time": 55, "details": "tap inspects HTTP responses."},
-  {"question": "What is catchError in HTTP?", "options": ["Handle error", "Error handling", "Catch exception", "Error recovery"], "correctOptions": ["Operator to handle and recover from HTTP errors"], "time": 55, "details": "catchError handles failures."},
-  {"question": "What is finalize in HTTP?", "options": ["Cleanup", "Complete callback", "Finally", "Teardown"], "correctOptions": ["Operator that runs on completion or error for cleanup"], "time": 55, "details": "finalize runs on completion."}
+  {
+    "question": "What is @viewChild in Angular?",
+    "options": [
+      "Query element",
+      "Element ref",
+      "View reference",
+      "DOM reference"
+    ],
+    "correctOptions": [
+      "Query element"
+    ],
+    "time": 40,
+    "details": "@viewChild gets child from view."
+  },
+  {
+    "question": "What is @viewChildren in Angular?",
+    "options": [
+      "Multiple refs",
+      "Child elements",
+      "All children",
+      "Query list"
+    ],
+    "correctOptions": [
+      "Multiple refs"
+    ],
+    "time": 45,
+    "details": "@viewChildren gets multiple refs."
+  },
+  {
+    "question": "What is @contentChild in Angular?",
+    "options": [
+      "Query projected content",
+      "Element in projected content",
+      "Projected reference",
+      "ng-content"
+    ],
+    "correctOptions": [
+      "ng-content"
+    ],
+    "time": 45,
+    "details": "@contentChild queries projected content."
+  },
+  {
+    "question": "What is @contentChildren in Angular?",
+    "options": [
+      "Multiple projected",
+      "List of projected",
+      "Projected refs",
+      "ng-content"
+    ],
+    "correctOptions": [
+      "List of projected"
+    ],
+    "time": 50,
+    "details": "@contentChildren gets projected children."
+  },
+  {
+    "question": "What is ElementRef in Angular?",
+    "options": [
+      "DOM wrapper",
+      "Ref to native element",
+      "Element reference",
+      "Native ref"
+    ],
+    "correctOptions": [
+      "DOM wrapper"
+    ],
+    "time": 45,
+    "details": "ElementRef gives DOM access."
+  },
+  {
+    "question": "What is Renderer2 in Angular?",
+    "options": [
+      "Render abstraction",
+      "Manipulate DOM",
+      "2nd generation",
+      "Abstraction"
+    ],
+    "correctOptions": [
+      "Render abstraction"
+    ],
+    "time": 55,
+    "details": "Renderer2 provides DOM abstraction."
+  },
+  {
+    "question": "What is @ViewChild static option?",
+    "options": [
+      "Pre-change detection",
+      "Static binding",
+      "Resolution timing",
+      "Static query"
+    ],
+    "correctOptions": [
+      "Pre-change detection"
+    ],
+    "time": 60,
+    "details": "static: true = resolved during view init, false = after view init."
+  },
+  {
+    "question": "What is @ViewChild read option?",
+    "options": [
+      "Read different token",
+      "Read another token",
+      "Read specific",
+      "Alternative"
+    ],
+    "correctOptions": [
+      "Read different token"
+    ],
+    "time": 65,
+    "details": "Read alternative token from query."
+  },
+  {
+    "question": "What is Dynamic component in Angular?",
+    "options": [
+      "Runtime created",
+      "Create component on fly",
+      "Dynamic element",
+      "Factory"
+    ],
+    "correctOptions": [
+      "Runtime created"
+    ],
+    "time": 55,
+    "details": "Components created dynamically."
+  },
+  {
+    "question": "What is ViewContainerRef?",
+    "options": [
+      "Component anchor",
+      "Where dynamic",
+      "Container",
+      "Container for dynamic"
+    ],
+    "correctOptions": [
+      "Component anchor"
+    ],
+    "time": 55,
+    "details": "Acts as anchor."
+  },
+  {
+    "question": "What is createComponent in Angular?",
+    "options": [
+      "Create dynamic component",
+      "Instantiate component",
+      "Factory",
+      "New"
+    ],
+    "correctOptions": [
+      "Factory"
+    ],
+    "time": 55,
+    "details": "Factory creates instances."
+  },
+  {
+    "question": "What is ComponentRef in Angular?",
+    "options": [
+      "Component instance reference",
+      "Instance",
+      "Reference",
+      "Wrapped component"
+    ],
+    "correctOptions": [
+      "Component instance reference"
+    ],
+    "time": 50,
+    "details": "ComponentRef wraps instance."
+  },
+  {
+    "question": "What is ngTemplateOutlet directive?",
+    "options": [
+      "Embed template",
+      "Template anchor",
+      "ng-template",
+      "Insert"
+    ],
+    "correctOptions": [
+      "Embed template"
+    ],
+    "time": 55,
+    "details": "Embeds other templates."
+  },
+  {
+    "question": "What is ngComponentOutlet directive?",
+    "options": [
+      "Load dynamic component",
+      "Component anchor",
+      "Dynamic embed",
+      "Insert component"
+    ],
+    "correctOptions": [
+      "Load dynamic component"
+    ],
+    "time": 60,
+    "details": "Loads dynamic component."
+  },
+  {
+    "question": "What is Angular animations?",
+    "options": [
+      "Animation library",
+      "State transitions",
+      "Motion",
+      "Library"
+    ],
+    "correctOptions": [
+      "Animation library"
+    ],
+    "time": 50,
+    "details": "Animation library in Angular."
+  },
+  {
+    "question": "What is trigger() function?",
+    "options": [
+      "Define animation",
+      "Trigger definition",
+      "Setup",
+      "Animation setup"
+    ],
+    "correctOptions": [
+      "Define animation"
+    ],
+    "time": 50,
+    "details": "Groups animations under name."
+  },
+  {
+    "question": "What is state() function?",
+    "options": [
+      "Define state",
+      "State definition",
+      "Define style",
+      "Style"
+    ],
+    "correctOptions": [
+      "Define state"
+    ],
+    "time": 50,
+    "details": "Defines named state."
+  },
+  {
+    "question": "What is transition() function?",
+    "options": [
+      "Define animation",
+      "State transition",
+      "Between states",
+      "Change style"
+    ],
+    "correctOptions": [
+      "Define animation"
+    ],
+    "time": 55,
+    "details": "Transitions between states."
+  },
+  {
+    "question": "What is animate() in animation?",
+    "options": [
+      "Run animation step",
+      "Style animation",
+      "Keyframe sequence",
+      "Duration and timing"
+    ],
+    "correctOptions": [
+      "Run animation step"
+    ],
+    "time": 60,
+    "details": "Steps within transition."
+  },
+  {
+    "question": "What is style() in animation?",
+    "options": [
+      "Define styles",
+      "CSS styles",
+      "Styles object",
+      "Set styles"
+    ],
+    "correctOptions": [
+      "Define styles"
+    ],
+    "time": 55,
+    "details": "Defines style collection."
+  },
+  {
+    "question": "What is query() in animation?",
+    "options": [
+      "Query child",
+      "Find sub-element",
+      "Child selector",
+      "Child find"
+    ],
+    "correctOptions": [
+      "Query child"
+    ],
+    "time": 65,
+    "details": "Queries internal elements."
+  },
+  {
+    "question": "What is stagger() in animation?",
+    "options": [
+      "Stagger child animations",
+      "Delay children",
+      "Animate with delay",
+      "Delay animation"
+    ],
+    "correctOptions": [
+      "Stagger child animations"
+    ],
+    "time": 65,
+    "details": "Staggers child animations."
+  },
+  {
+    "question": "What is animateChild() in animation?",
+    "options": [
+      "Child animation",
+      "Run child",
+      "Child",
+      "Delegate"
+    ],
+    "correctOptions": [
+      "Child animation"
+    ],
+    "time": 65,
+    "details": "Runs child animations."
+  },
+  {
+    "question": "What is useAnimation() in animation?",
+    "options": [
+      "Reuse animation",
+      "Predefined",
+      "Reference",
+      "Reuse"
+    ],
+    "correctOptions": [
+      "Reuse"
+    ],
+    "time": 70,
+    "details": "Reuses animation."
+  },
+  {
+    "question": "What is AnimationBuilder in Angular?",
+    "options": [
+      "Build animation",
+      "Builder",
+      "Runtime builder",
+      "Create programmatic"
+    ],
+    "correctOptions": [
+      "Build animation"
+    ],
+    "time": 70,
+    "details": "Programmatic animations."
+  },
+  {
+    "question": "What is AnimationPlayer?",
+    "options": [
+      "Playback control",
+      "Player",
+      "Interface",
+      "Control API"
+    ],
+    "correctOptions": [
+      "Interface"
+    ],
+    "time": 70,
+    "details": "Controls animation playback."
+  },
+  {
+    "question": "What is Service Worker?",
+    "options": [
+      "Background sync",
+      "Caching",
+      "Offline",
+      "Network"
+    ],
+    "correctOptions": [
+      "Background sync"
+    ],
+    "time": 55,
+    "details": "Service worker handles offline."
+  },
+  {
+    "question": "What is ServiceWorkerModule?",
+    "options": [
+      "Module to register",
+      "Enable service worker",
+      "Register",
+      "Imports"
+    ],
+    "correctOptions": [
+      "Module to register"
+    ],
+    "time": 60,
+    "details": "Enables service worker."
+  },
+  {
+    "question": "What is ServiceWorkerRegistration?",
+    "options": [
+      "Registration object",
+      "SW reference",
+      "Instance",
+      "Registration"
+    ],
+    "correctOptions": [
+      "Registration object"
+    ],
+    "time": 55,
+    "details": "Controls SW registration."
+  },
+  {
+    "question": "What is SwPush for notifications?",
+    "options": [
+      "Push subscription",
+      "Notifications",
+      "Token",
+      "Subscribe"
+    ],
+    "correctOptions": [
+      "Push subscription"
+    ],
+    "time": 60,
+    "details": "Handles push messages."
+  },
+  {
+    "question": "What is SwUpdate service?",
+    "options": [
+      "Update service",
+      "Check updates",
+      "Version",
+      "Monitor for version"
+    ],
+    "correctOptions": [
+      "Update service"
+    ],
+    "time": 60,
+    "details": "Checks for updates."
+  },
+  {
+    "question": "What is PWA Support?",
+    "options": [
+      "Progressive app",
+      "Offline features",
+      "PWA features",
+      "Manifest"
+    ],
+    "correctOptions": [
+      "Progressive app"
+    ],
+    "time": 55,
+    "details": "Add PWA features via CLI."
+  },
+  {
+    "question": "What is ngsw-config config?",
+    "options": [
+      "Service worker config",
+      "Config options for service worker",
+      "Build options",
+      "Configure SW behavior"
+    ],
+    "correctOptions": [
+      "Service worker config"
+    ],
+    "time": 70,
+    "details": "Configures service worker."
+  },
+  {
+    "question": "What is @angular/service-worker?",
+    "options": [
+      "Angular SW",
+      "Service worker",
+      "Package",
+      "Package for implementing Angular service worker"
+    ],
+    "correctOptions": [
+      "Angular SW"
+    ],
+    "time": 55,
+    "details": "Service worker package."
+  },
+  {
+    "question": "What is Angular SSR?",
+    "options": [
+      "Render on server",
+      "Pre-render",
+      "Angular Universal",
+      "Server rendering"
+    ],
+    "correctOptions": [
+      "Render on server"
+    ],
+    "time": 60,
+    "details": "Server-side rendering."
+  },
+  {
+    "question": "What is renderApplication in Angular?",
+    "options": [
+      "Bootstrap function",
+      "Render using",
+      "Function",
+      "Bootstrap SSR app"
+    ],
+    "correctOptions": [
+      "Function"
+    ],
+    "time": 65,
+    "details": "Bootstraps server rendering."
+  },
+  {
+    "question": "What is platformServer in Angular?",
+    "options": [
+      "Server platform",
+      "Platform",
+      "SSR platform",
+      "Server browser"
+    ],
+    "correctOptions": [
+      "Server platform"
+    ],
+    "time": 60,
+    "details": "Sets up server platform."
+  },
+  {
+    "question": "What is TransferState in Angular?",
+    "options": [
+      "Cache data",
+      "Transfer data",
+      "State transfer",
+      "Data"
+    ],
+    "correctOptions": [
+      "Cache data"
+    ],
+    "time": 70,
+    "details": "Avoids duplicate requests."
+  },
+  {
+    "question": "What is makeStateKey in Angular?",
+    "options": [
+      "State key",
+      "Identifier state",
+      "Key for TransferState",
+      "Typed Key"
+    ],
+    "correctOptions": [
+      "State key"
+    ],
+    "time": 65,
+    "details": "Creates state key."
+  },
+  {
+    "question": "What is BidiModule for RTL?",
+    "options": [
+      "Text direction",
+      "Bidirectional",
+      "RTL",
+      "Support for RTL languages"
+    ],
+    "correctOptions": [
+      "RTL"
+    ],
+    "time": 60,
+    "details": "RTL support."
+  },
+  {
+    "question": "What is @angular/localize?",
+    "options": [
+      "i18n package",
+      "Internationalization",
+      "Localization",
+      "Translation package"
+    ],
+    "correctOptions": [
+      "Translation package"
+    ],
+    "time": 65,
+    "details": "Localization."
+  },
+  {
+    "question": "What is i18n attribute for translation?",
+    "options": [
+      "Translation marker",
+      "Mark text",
+      "Message ID",
+      "Translatable"
+    ],
+    "correctOptions": [
+      "Translatable"
+    ],
+    "time": 60,
+    "details": "Marks element as translatable."
+  },
+  {
+    "question": "What is @angular/compiler-cli for i18n?",
+    "options": [
+      "Compile with translations",
+      "Build",
+      "Build translatable",
+      "Extract messages"
+    ],
+    "correctOptions": [
+      "Compile with translations"
+    ],
+    "time": 70,
+    "details": "Extracts i18n messages."
+  },
+  {
+    "question": "What is Lazy loading routes in Angular?",
+    "options": [
+      "On-demand loading",
+      "Load when needed",
+      "Code splitting",
+      "Dynamic import"
+    ],
+    "correctOptions": [
+      "On-demand loading"
+    ],
+    "time": 50,
+    "details": "Lazy loading splits code bundles."
+  },
+  {
+    "question": "What is loadChildren in routing?",
+    "options": [
+      "Load child routes",
+      "Dynamic import",
+      "Lazy load",
+      "Module import"
+    ],
+    "correctOptions": [
+      "Load child routes"
+    ],
+    "time": 50,
+    "details": "loadChildren enables lazy loading."
+  },
+  {
+    "question": "What is canActivate guard?",
+    "options": [
+      "Route activation",
+      "Permission check",
+      "Guard",
+      "Auth guard"
+    ],
+    "correctOptions": [
+      "Guard"
+    ],
+    "time": 50,
+    "details": "Controls route activation."
+  },
+  {
+    "question": "What is canActivateChild guard?",
+    "options": [
+      "Child route guard",
+      "Activates child routes",
+      "Child activation",
+      "Child permission"
+    ],
+    "correctOptions": [
+      "Child route guard"
+    ],
+    "time": 55,
+    "details": "Controls child route activation."
+  },
+  {
+    "question": "What is canDeactivate guard?",
+    "options": [
+      "Route leaving",
+      "Unsaved changes",
+      "Guard",
+      "Exit permission"
+    ],
+    "correctOptions": [
+      "Guard"
+    ],
+    "time": 55,
+    "details": "Controls route departure."
+  },
+  {
+    "question": "What is canLoad guard?",
+    "options": [
+      "Lazy load guard",
+      "Prevents lazy loading",
+      "Module load",
+      "Authorization"
+    ],
+    "correctOptions": [
+      "Lazy load guard"
+    ],
+    "time": 60,
+    "details": "Controls lazy module loading."
+  },
+  {
+    "question": "What is Resolve guard?",
+    "options": [
+      "Pre-loading data",
+      "Route data",
+      "Before navigation",
+      "Data fetch"
+    ],
+    "correctOptions": [
+      "Pre-loading data"
+    ],
+    "time": 55,
+    "details": "Pre-resolves route data."
+  },
+  {
+    "question": "What is Router events in Angular?",
+    "options": [
+      "Navigation events",
+      "Route changes",
+      "Events during navigation",
+      "Lifecycle events"
+    ],
+    "correctOptions": [
+      "Navigation events"
+    ],
+    "time": 55,
+    "details": "Router emits navigation events."
+  },
+  {
+    "question": "What is NavigationStart event?",
+    "options": [
+      "Navigation begins",
+      "Start of navigation",
+      "Route start",
+      "Begin"
+    ],
+    "correctOptions": [
+      "Navigation begins"
+    ],
+    "time": 50,
+    "details": "Signals navigation beginning."
+  },
+  {
+    "question": "What is NavigationEnd event?",
+    "options": [
+      "Navigation completes",
+      "End of navigation",
+      "Route complete",
+      "Finish"
+    ],
+    "correctOptions": [
+      "Navigation completes"
+    ],
+    "time": 50,
+    "details": "Signals navigation completion."
+  },
+  {
+    "question": "What is NavigationError event?",
+    "options": [
+      "Navigation fails",
+      "Error during navigation",
+      "Failed navigation",
+      "Error"
+    ],
+    "correctOptions": [
+      "Navigation fails"
+    ],
+    "time": 55,
+    "details": "Reports navigation errors."
+  },
+  {
+    "question": "What is GuardsCheckStart event?",
+    "options": [
+      "Guard check begins",
+      "Start of guards",
+      "Guard start",
+      "Check begin"
+    ],
+    "correctOptions": [
+      "Guard check begins"
+    ],
+    "time": 55,
+    "details": "Signals guard evaluation start."
+  },
+  {
+    "question": "What is RouteConfigLoadStart event?",
+    "options": [
+      "Lazy load starts",
+      "Module load start",
+      "Dynamic load",
+      "Lazy start"
+    ],
+    "correctOptions": [
+      "Lazy load starts"
+    ],
+    "time": 60,
+    "details": "Signals lazy loading start."
+  },
+  {
+    "question": "What is Router outlet activation?",
+    "options": [
+      "Component creation",
+      "Outlet activates component",
+      "Route renders",
+      "Component mount"
+    ],
+    "correctOptions": [
+      "Component creation"
+    ],
+    "time": 55,
+    "details": "Router outlet activates components."
+  },
+  {
+    "question": "What is RouterLinkActive?",
+    "options": [
+      "Active class",
+      "Active state directive",
+      "Route active",
+      "Link styling"
+    ],
+    "correctOptions": [
+      "Active class"
+    ],
+    "time": 50,
+    "details": "Applies classes on active routes."
+  },
+  {
+    "question": "What is ActivatedRoute?",
+    "options": [
+      "Current route",
+      "Route information",
+      "Route state",
+      "Route params"
+    ],
+    "correctOptions": [
+      "Current route"
+    ],
+    "time": 50,
+    "details": "Contains route data and params."
+  },
+  {
+    "question": "What is ActivatedRouteSnapshot?",
+    "options": [
+      "Route snapshot",
+      "Static route data",
+      "Route copy",
+      "Frozen route"
+    ],
+    "correctOptions": [
+      "Route snapshot"
+    ],
+    "time": 55,
+    "details": "Provides route state at a point in time."
+  },
+  {
+    "question": "What is RouterState?",
+    "options": [
+      "Route tree",
+      "Complete route state",
+      "All routes",
+      "Navigation state"
+    ],
+    "correctOptions": [
+      "Route tree"
+    ],
+    "time": 55,
+    "details": "Contains route hierarchy."
+  },
+  {
+    "question": "What is RouterStateSnapshot?",
+    "options": [
+      "Static state",
+      "Immutable router state",
+      "Frozen tree",
+      "Route snapshot"
+    ],
+    "correctOptions": [
+      "Static state"
+    ],
+    "time": 60,
+    "details": "Frozen router state."
+  },
+  {
+    "question": "What is UrlTree in Angular?",
+    "options": [
+      "Parsed URL",
+      "URL structure",
+      "Route URL",
+      "URL representation"
+    ],
+    "correctOptions": [
+      "Parsed URL"
+    ],
+    "time": 60,
+    "details": "UrlTree parses URLs."
+  },
+  {
+    "question": "What is RouterPreloader?",
+    "options": [
+      "Pre-load routes",
+      "Preload lazy routes",
+      "Eager load",
+      "Route preloader"
+    ],
+    "correctOptions": [
+      "Pre-load routes"
+    ],
+    "time": 65,
+    "details": "Preloads routes ahead of time."
+  },
+  {
+    "question": "What is PreloadAllModules strategy?",
+    "options": [
+      "Load all lazy",
+      "Preload all modules",
+      "Background load",
+      "Eager all"
+    ],
+    "correctOptions": [
+      "Load all lazy"
+    ],
+    "time": 60,
+    "details": "Preloads all lazy modules."
+  },
+  {
+    "question": "What is QuicklinkStrategy?",
+    "options": [
+      "Link-based preload",
+      "Preload on link visibility",
+      "Intelligent preload",
+      "On-demand preload"
+    ],
+    "correctOptions": [
+      "Link-based preload"
+    ],
+    "time": 65,
+    "details": "Preloads based on visibility."
+  },
+  {
+    "question": "What is Testing Router in Angular?",
+    "options": [
+      "Test routing",
+      "Router for testing",
+      "Mock router",
+      "Test navigation"
+    ],
+    "correctOptions": [
+      "Test routing"
+    ],
+    "time": 55,
+    "details": "Testing utilities for routing."
+  },
+  {
+    "question": "What is TestingModule for routing?",
+    "options": [
+      "Router testing",
+      "Testing router module",
+      "Test bed router",
+      "Test setup"
+    ],
+    "correctOptions": [
+      "Router testing"
+    ],
+    "time": 55,
+    "details": "Configures router for testing."
+  },
+  {
+    "question": "What is HttpClient in Angular?",
+    "options": [
+      "HTTP requests",
+      "HTTP client",
+      "Web requests",
+      "API calls"
+    ],
+    "correctOptions": [
+      "HTTP requests"
+    ],
+    "time": 45,
+    "details": "HttpClient makes API calls."
+  },
+  {
+    "question": "What is HttpRequest in Angular?",
+    "options": [
+      "Request object",
+      "HTTP request",
+      "API request",
+      "Config request"
+    ],
+    "correctOptions": [
+      "HTTP request"
+    ],
+    "time": 50,
+    "details": "HttpRequest encapsulates requests."
+  },
+  {
+    "question": "What is HttpResponse in Angular?",
+    "options": [
+      "Response object",
+      "HTTP response",
+      "API response",
+      "Server response"
+    ],
+    "correctOptions": [
+      "HTTP response"
+    ],
+    "time": 50,
+    "details": "HttpResponse contains response data."
+  },
+  {
+    "question": "What is HttpHeaders in Angular?",
+    "options": [
+      "Request headers",
+      "HTTP headers",
+      "Headers class",
+      "Header management"
+    ],
+    "correctOptions": [
+      "HTTP headers"
+    ],
+    "time": 50,
+    "details": "HttpHeaders manages headers."
+  },
+  {
+    "question": "What is HttpInterceptor?",
+    "options": [
+      "Request middleware",
+      "Request/response handler",
+      "HTTP middleware",
+      "Chain handler"
+    ],
+    "correctOptions": [
+      "Request middleware"
+    ],
+    "time": 55,
+    "details": "Interceptors modify requests/responses."
+  },
+  {
+    "question": "What does HttpInterceptor return?",
+    "options": [
+      "Observable",
+      "Observable of HttpEvent",
+      "Promise",
+      "Response"
+    ],
+    "correctOptions": [
+      "Observable"
+    ],
+    "time": 60,
+    "details": "Interceptors return observable chain."
+  },
+  {
+    "question": "What is HttpErrorResponse?",
+    "options": [
+      "Error response",
+      "Failed HTTP response",
+      "Error state",
+      "Exception"
+    ],
+    "correctOptions": [
+      "Error response"
+    ],
+    "time": 55,
+    "details": "HttpErrorResponse for failures."
+  },
+  {
+    "question": "What is HttpClient testing?",
+    "options": [
+      "Mock HTTP",
+      "Testing HTTP",
+      "MockBackend",
+      "HTTP testing"
+    ],
+    "correctOptions": [
+      "MockBackend"
+    ],
+    "time": 60,
+    "details": "Testing with mock HTTP."
+  },
+  {
+    "question": "What is retry in HTTP interceptor?",
+    "options": [
+      "Resend request",
+      "Retry failed request",
+      "Attempt again",
+      "Re-attempt"
+    ],
+    "correctOptions": [
+      "Resend request"
+    ],
+    "time": 60,
+    "details": "Retry interceptor for failures."
+  },
+  {
+    "question": "What is cache interceptor?",
+    "options": [
+      "Cache responses",
+      "Store responses",
+      "Cache requests",
+      "Response cache"
+    ],
+    "correctOptions": [
+      "Cache responses"
+    ],
+    "time": 65,
+    "details": "Caches HTTP responses."
+  },
+  {
+    "question": "What is logging interceptor?",
+    "options": [
+      "Log requests/responses",
+      "Log HTTP",
+      "Audit trail",
+      "Debug"
+    ],
+    "correctOptions": [
+      "Log requests/responses"
+    ],
+    "time": 60,
+    "details": "Logs HTTP operations."
+  },
+  {
+    "question": "What is auth interceptor?",
+    "options": [
+      "Add auth token",
+      "Authorization header",
+      "Token injection",
+      "Auth header"
+    ],
+    "correctOptions": [
+      "Add auth token"
+    ],
+    "time": 55,
+    "details": "Adds authentication tokens."
+  },
+  {
+    "question": "What is progress events?",
+    "options": [
+      "Upload/download progress",
+      "Progress tracking",
+      "Transfer progress",
+      "Loading state"
+    ],
+    "correctOptions": [
+      "Upload/download progress"
+    ],
+    "time": 60,
+    "details": "Progress events for large transfers."
+  },
+  {
+    "question": "What is reportProgress option?",
+    "options": [
+      "Enable progress",
+      "Track progress",
+      "Progress events",
+      "Progress flag"
+    ],
+    "correctOptions": [
+      "Enable progress"
+    ],
+    "time": 55,
+    "details": "reportProgress enables tracking."
+  },
+  {
+    "question": "What is observe option?",
+    "options": [
+      "Response type",
+      "Observe response type",
+      "Event type",
+      "Observe mode"
+    ],
+    "correctOptions": [
+      "Response type"
+    ],
+    "time": 55,
+    "details": "observe controls response type."
+  },
+  {
+    "question": "What is responseType option?",
+    "options": [
+      "Expected format",
+      "Response format",
+      "Data type",
+      "Parse type"
+    ],
+    "correctOptions": [
+      "Expected format"
+    ],
+    "time": 55,
+    "details": "responseType sets format."
+  },
+  {
+    "question": "What is withCredentials option?",
+    "options": [
+      "Send cookies",
+      "CORS credentials",
+      "Auth credentials",
+      "Cross-origin"
+    ],
+    "correctOptions": [
+      "Send cookies"
+    ],
+    "time": 60,
+    "details": "withCredentials for CORS."
+  },
+  {
+    "question": "What is JSONP in Angular?",
+    "options": [
+      "JSON with padding",
+      "Cross-domain requests",
+      "Script injection",
+      "JSON callback"
+    ],
+    "correctOptions": [
+      "JSON with padding"
+    ],
+    "time": 55,
+    "details": "JSONP for cross-origin."
+  },
+  {
+    "question": "What is HttpJsonpModule?",
+    "options": [
+      "JSONP support",
+      "JSONP module",
+      "Import for JSONP",
+      "JSONP client"
+    ],
+    "correctOptions": [
+      "JSONP support"
+    ],
+    "time": 55,
+    "details": "Enables JSONP requests."
+  },
+  {
+    "question": "What is Interceptors for error handling?",
+    "options": [
+      "Error catch",
+      "Handle errors",
+      "Error interceptor",
+      "Exception handling"
+    ],
+    "correctOptions": [
+      "Error catch"
+    ],
+    "time": 60,
+    "details": "Global error handling."
+  },
+  {
+    "question": "What is tap operator with HTTP?",
+    "options": [
+      "Side effects",
+      "Log responses",
+      "Debug HTTP",
+      "Inspect"
+    ],
+    "correctOptions": [
+      "Side effects"
+    ],
+    "time": 55,
+    "details": "tap inspects HTTP responses."
+  },
+  {
+    "question": "What is catchError in HTTP?",
+    "options": [
+      "Handle error",
+      "Error handling",
+      "Catch exception",
+      "Error recovery"
+    ],
+    "correctOptions": [
+      "Handle error"
+    ],
+    "time": 55,
+    "details": "catchError handles failures."
+  },
+  {
+    "question": "What is finalize in HTTP?",
+    "options": [
+      "Cleanup",
+      "Complete callback",
+      "Finally",
+      "Teardown"
+    ],
+    "correctOptions": [
+      "Cleanup"
+    ],
+    "time": 55,
+    "details": "finalize runs on completion."
+  },
+  {
+    "question": "What is Angular CLI? (92)",
+    "options": [
+      "Command line",
+      "Scaffolding",
+      "Build tool",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is Angular CLI? explanation."
+  },
+  {
+    "question": "What is a service? (93)",
+    "options": [
+      "Singleton",
+      "Business logic",
+      "DI",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is a service? explanation."
+  },
+  {
+    "question": "What is lazy loading? (94)",
+    "options": [
+      "On-demand",
+      "Module loading",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is lazy loading? explanation."
+  },
+  {
+    "question": "What is AOT compilation? (95)",
+    "options": [
+      "Ahead of time",
+      "Build time",
+      "Optimization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is AOT compilation? explanation."
+  },
+  {
+    "question": "What is JIT compilation? (96)",
+    "options": [
+      "Just in time",
+      "Runtime",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is JIT compilation? explanation."
+  },
+  {
+    "question": "What is ng generate? (97)",
+    "options": [
+      "Scaffold",
+      "CLI command",
+      "Code generation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is ng generate? explanation."
+  },
+  {
+    "question": "What is Reactive Forms? (98)",
+    "options": [
+      "Form model",
+      "Observable",
+      "Dynamic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is Reactive Forms? explanation."
+  },
+  {
+    "question": "What is standalone component? (99)",
+    "options": [
+      "No module",
+      "Self-contained",
+      "Modern",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is standalone component? explanation."
+  },
+  {
+    "question": "What is inject() function? (100)",
+    "options": [
+      "DI helper",
+      "Function injection",
+      "Standalone",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is inject() function? explanation."
+  },
+  {
+    "question": "What is directive? (Level 3 #101)",
+    "options": [
+      "DOM manipulation",
+      "Structural",
+      "Attribute",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "DOM manipulation",
+      "Structural",
+      "Attribute",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is directive? explanation."
+  },
+  {
+    "question": "What is service? (Level 3 #102)",
+    "options": [
+      "Dependency injection",
+      "Singleton",
+      "Business logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Dependency injection",
+      "Singleton",
+      "Business logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is service? explanation."
+  },
+  {
+    "question": "What is pipe? (Level 3 #103)",
+    "options": [
+      "Transform",
+      "Pure",
+      "Impure",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Transform",
+      "Pure",
+      "Impure",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is pipe? explanation."
+  },
+  {
+    "question": "What is module? (Level 3 #104)",
+    "options": [
+      "Bootstrap",
+      "Declarations",
+      "Imports",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Bootstrap",
+      "Declarations",
+      "Imports",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is module? explanation."
+  },
+  {
+    "question": "What is component? (Level 3 #105)",
+    "options": [
+      "Template",
+      "Class",
+      "Metadata",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Template",
+      "Class",
+      "Metadata",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is component? explanation."
+  },
+  {
+    "question": "What is routing? (Level 3 #106)",
+    "options": [
+      "Path",
+      "Component",
+      "Parameters",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Path",
+      "Component",
+      "Parameters",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is AOT? (Level 3 #108)",
+    "options": [
+      "Compilation",
+      "Performance",
+      "Production",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Compilation",
+      "Performance",
+      "Production",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is AOT? explanation."
+  },
+  {
+    "question": "What is change detection? (Level 3 #109)",
+    "options": [
+      "OnPush",
+      "Default",
+      "Manual",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "OnPush",
+      "Default",
+      "Manual",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is change detection? explanation."
+  },
+  {
+    "question": "What is dependency injection? (Level 3 #110)",
+    "options": [
+      "Service",
+      "Provider",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Service",
+      "Provider",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is @Input?",
+    "options": [
+      "Property binding",
+      "Parent to child",
+      "Data flow",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Property binding",
+      "Parent to child",
+      "Data flow",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is @Input? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  }
 ]

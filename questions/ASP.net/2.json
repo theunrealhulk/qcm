@@ -1,108 +1,2000 @@
 [
-  {"question": "What is ASP.NET Core?", "options": ["Cross-platform framework", "Open source", "Modern web framework", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "ASP.NET Core is a cross-platform, open-source framework for building modern web applications."},
-  {"question": "What is the difference between ASP.NET Core and ASP.NET Framework?", "options": ["Cross-platform vs Windows", "Open source vs closed", "Modular vs monolithic", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "ASP.NET Core is cross-platform and modular; ASP.NET Framework is Windows-only."},
-  {"question": "What is Kestrel in ASP.NET Core?", "options": ["Web server", "Cross-platform server", "Request handler", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Kestrel is the default cross-platform web server for ASP.NET Core."},
-  {"question": "What is middleware in ASP.NET Core?", "options": ["Request pipeline", "HTTP handler", "Filter", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Middleware are components that handle requests and responses in the pipeline."},
-  {"question": "What is the purpose of UseMiddleware?", "options": ["Register middleware", "Pipeline setup", "Extension method", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "UseMiddleware adds middleware to the request pipeline."},
-  {"question": "What is dependency injection in ASP.NET Core?", "options": ["Inversion of control", "Service registration", "Loose coupling", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "ASP.NET Core has built-in DI for managing service dependencies."},
-  {"question": "What is the purpose of AddSingleton?", "options": ["Single instance", "App lifetime", "Global service", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "AddSingleton registers a service that lives for the application lifetime."},
-  {"question": "What is the purpose of AddScoped?", "options": ["Per request", "HTTP context", "Session scope", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "AddScoped creates one instance per HTTP request."},
-  {"question": "What is the purpose of AddTransient?", "options": ["New instance", "Each request", "Short-lived", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "AddTransient creates a new instance each time the service is requested."},
-  {"question": "What is IConfiguration?", "options": ["Configuration access", "App settings", "Settings provider", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "IConfiguration provides access to application configuration settings."},
-  {"question": "What is appsettings.json?", "options": ["Configuration file", "App settings", "JSON config", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "appsettings.json contains application configuration in JSON format."},
-  {"question": "What is the purpose of ILogger?", "options": ["Logging", "Log interface", "Debug", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "ILogger provides logging capabilities in ASP.NET Core."},
-  {"question": "What is MVC pattern?", "options": ["Model-View-Controller", "Architecture", "Separation of concerns", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "MVC separates application into Model, View, and Controller components."},
-  {"question": "What is a Controller in ASP.NET MVC?", "options": ["Request handler", "Business logic", "Action methods", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Controllers handle HTTP requests and return responses."},
-  {"question": "What is a View in MVC?", "options": ["UI template", "HTML rendering", "Presentation", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Views render HTML UI using Razor templates."},
-  {"question": "What is a Model in MVC?", "options": ["Data representation", "Business logic", "Domain", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Models represent data and business logic."},
-  {"question": "What is Razor Pages?", "options": ["Page-based", "Handler methods", "Simplified MVC", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Razor Pages is a page-based programming model for ASP.NET Core."},
-  {"question": "What is a PageModel in Razor Pages?", "options": ["Page code-behind", "Handler", "Model", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "PageModel contains handlers and data for Razor Pages."},
-  {"question": "What is @page directive?", "options": ["Razor page", "Route", "Page declaration", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "@page makes a Razor file an MVC action."},
-  {"question": "What is @model directive?", "options": ["Model type", "Strongly-typed", "View model", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "@model specifies the model type for the view."},
-  {"question": "What is ViewData?", "options": ["Dictionary", "Controller to view", "Dynamic", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "ViewData passes data from controller to view as dictionary."},
-  {"question": "What is ViewBag?", "options": ["Dynamic wrapper", "ViewData wrapper", "Runtime binding", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "ViewBag is a dynamic wrapper around ViewData."},
-  {"question": "What is TempData?", "options": ["Temp storage", "Redirect data", "Between requests", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "TempData stores data for the next request, useful for redirects."},
-  {"question": "What is strongly-typed view?", "options": ["Typed model", "Type safety", "IntelliSense", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Strongly typed views use @model for type safety and IntelliSense."},
-  {"question": "What is model binding?", "options": ["Map request to model", "Form processing", "Data binding", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Model binding maps HTTP request data to action parameters."},
-  {"question": "What is validation in ASP.NET?", "options": ["Data validation", "Model validation", "Attribute-based", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Validation uses data annotations to validate model properties."},
-  {"question": "What is [Required] attribute?", "options": ["Required field", "Validation", "Mandatory", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Required validates that the field is not null or empty."},
-  {"question": "What is [StringLength] attribute?", "options": ["Length validation", "String check", "Max length", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "StringLength validates string length constraints."},
-  {"question": "What is [Range] attribute?", "options": ["Range validation", "Numeric check", "Boundaries", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Range validates numeric values are within a range."},
-  {"question": "What is [EmailAddress] attribute?", "options": ["Email validation", "Format check", "Pattern", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "EmailAddress validates email format."},
-  {"question": "What is [RegularExpression] attribute?", "options": ["Pattern matching", "Regex validation", "Format", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "RegularExpression validates using regex pattern."},
-  {"question": "What is Tag Helper?", "options": ["Server-side HTML", "Razor", "Component", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Tag Helpers enable server-side code to participate in rendering HTML."},
-  {"question": "What is asp-action Tag Helper?", "options": ["Link to action", "URL generation", "Anchor", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "asp-action generates URL for controller action."},
-  {"question": "What is asp-controller Tag Helper?", "options": ["Controller reference", "URL generation", "Routing", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "asp-controller specifies the controller for URL generation."},
-  {"question": "What is asp-for Tag Helper?", "options": ["Model binding", "Input generation", "Property", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "asp-for generates input for model property."},
-  {"question": "What is asp-area Tag Helper?", "options": ["Area routing", "URL generation", "Namespace", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "asp-area generates URL including area."},
-  {"question": "What is View Component?", "options": ["Reusable component", "Partial view", "Server-side", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "View Components are self-contained reusable UI components."},
-  {"question": "What is the difference between View Component and Partial View?", "options": ["Component vs include", "Class vs file", "Rendering", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "View Components are classes; Partial Views are Razor files."},
-  {"question": "What is routing in ASP.NET Core?", "options": ["URL mapping", "Endpoint", "Action", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Routing maps URLs to controller actions."},
-  {"question": "What is attribute routing?", "options": ["Route attributes", "Method-level", "Custom routes", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Attribute routing uses [Route] attribute on controllers/actions."},
-  {"question": "What is route constraint?", "options": ["Type constraint", "URL validation", "Parameter type", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Route constraints restrict URL parameter types like {id:int}."},
-  {"question": "What is area in ASP.NET MVC?", "options": ["Feature grouping", "Folder organization", "Namespace", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Areas organize large applications into functional units."},
-  {"question": "What is filter in MVC?", "options": ["Cross-cutting", "Pre/post processing", "Behavior", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Filters run code before/after action methods."},
-  {"question": "What is Authorization filter?", "options": ["Access control", "Security", "Permission", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Authorization filters verify user has permission to access resource."},
-  {"question": "What is Action filter?", "options": ["Pre/post action", "Execution control", "Result", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Action filters run before and after action execution."},
-  {"question": "What is Result filter?", "options": ["Pre/post result", "Response", "View", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Result filters run before/after action result is executed."},
-  {"question": "What is Exception filter?", "options": ["Error handling", "Exception", "Global", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Exception filters handle unhandled exceptions."},
-  {"question": "What is the purpose of [HttpGet]?", "options": ["GET request", "Read", "Retrieve", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "HttpGet specifies the action handles GET requests."},
-  {"question": "What is the purpose of [HttpPost]?", "options": ["POST request", "Create", "Submit", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "HttpPost specifies the action handles POST requests."},
-  {"question": "What is the purpose of [HttpPut]?", "options": ["PUT request", "Update", "Replace", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "HttpPut specifies the action handles PUT requests."},
-  {"question": "What is the purpose of [HttpDelete]?", "options": ["DELETE request", "Remove", "Delete", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "HttpDelete specifies the action handles DELETE requests."},
-  {"question": "What is the purpose of [HttpPatch]?", "options": ["PATCH request", "Partial update", "Modify", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "HttpPatch specifies the action handles PATCH requests."},
-  {"question": "What is Web API in ASP.NET?", "options": ["RESTful service", "HTTP API", "JSON/XML", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Web API creates RESTful HTTP services returning JSON/XML."},
-  {"question": "What is [ApiController] attribute?", "options": ["API behavior", "Convention", "API-specific", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "ApiController enables API-specific conventions."},
-  {"question": "What is content negotiation?", "options": ["Format selection", "Client preference", "JSON/XML", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Content negotiation returns format based on Accept header."},
-  {"question": "What is IActionResult?", "options": ["Action result", "Response", "Interface", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "IActionResult represents action method return type."},
-  {"question": "What is Ok() result?", "options": ["200 OK", "Success", "HTTP response", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Ok() returns 200 OK response."},
-  {"question": "What is NotFound() result?", "options": ["404 Not Found", "Missing", "HTTP response", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "NotFound() returns 404 Not Found response."},
-  {"question": "What is BadRequest() result?", "options": ["400 Bad Request", "Validation error", "HTTP response", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "BadRequest() returns 400 Bad Request response."},
-  {"question": "What is CreatedAtAction() result?", "options": ["201 Created", "Location header", "POST response", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "CreatedAtAction() returns 201 Created with location header."},
-  {"question": "What is Unauthorized() result?", "options": ["401 Unauthorized", "Authentication", "HTTP response", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Unauthorized() returns 401 Unauthorized response."},
-  {"question": "What is Forbid() result?", "options": ["403 Forbidden", "Authorization", "HTTP response", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Forbid() returns 403 Forbidden response."},
-  {"question": "What is NoContent() result?", "options": ["204 No Content", "Delete success", "Empty", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "NoContent() returns 204 No Content response."},
-  {"question": "What is Entity Framework Core?", "options": ["ORM", "Database access", "LINQ to SQL", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "EF Core is a lightweight, cross-platform ORM for .NET."},
-  {"question": "What is DbContext in EF Core?", "options": ["Database session", "Unit of work", "Query gateway", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "DbContext represents a session with the database."},
-  {"question": "What is DbSet<T>?", "options": ["Entity set", "Table", "Queryable", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "DbSet<T> represents a table or view in the database."},
-  {"question": "What is lazy loading in EF Core?", "options": ["On-demand loading", "Virtual properties", "Proxy", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Lazy loading loads related entities when navigation property is accessed."},
-  {"question": "What is eager loading in EF Core?", "options": ["Load upfront", "Include", "Single query", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Eager loading loads related data using Include()."},
-  {"question": "What is the purpose of Include()?", "options": ["Eager loading", "Related data", "Query", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Include() loads related entities in a single query."},
-  {"question": "What is ThenInclude()?", "options": ["Nested include", "Multi-level", "Chained", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "ThenInclude() loads nested related entities."},
-  {"question": "What is AsNoTracking()?", "options": ["Read-only", "Performance", "No tracking", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "AsNoTracking() improves performance by disabling change tracking."},
-  {"question": "What is identity in ASP.NET Core?", "options": ["Authentication", "User management", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "ASP.NET Core Identity provides user authentication and management."},
-  {"question": "What is ClaimsIdentity?", "options": ["User claims", "Identity", "Authentication", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "ClaimsIdentity represents user identity with claims."},
-  {"question": "What is Claim?", "options": ["User attribute", "Statement", "Authorization", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Claims are statements about a user (name, role, email)."},
-  {"question": "What is Role-based authorization?", "options": ["Role check", "Authorization", "Access control", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Role-based authorization checks user roles."},
-  {"question": "What is Policy-based authorization?", "options": ["Policy check", "Authorization", "Requirements", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Policy-based authorization uses policies with requirements."},
-  {"question": "What is [Authorize] attribute?", "options": ["Access control", "Authentication", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Authorize attribute restricts access to authenticated users."},
-  {"question": "What is [AllowAnonymous] attribute?", "options": ["Skip auth", "Public access", "Exempt", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "AllowAnonymous allows unauthenticated access to action."},
-  {"question": "What is session in ASP.NET Core?", "options": ["User state", "Per-user storage", "Server-side", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Session stores user-specific data across requests."},
-  {"question": "What is cookie-based session?", "options": ["Client storage", "Session data", "HTTP cookie", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Cookie-based session stores session data in cookies."},
-  {"question": "What is distributed cache?", "options": ["Distributed storage", "Shared cache", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Distributed cache provides shared caching across servers."},
-  {"question": "What is response caching?", "options": ["Cache response", "Client-side", "Server-side", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Response caching caches HTTP responses."},
-  {"question": "What is CORS?", "options": ["Cross-origin", "Browser security", "Request sharing", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "CORS enables cross-origin HTTP requests."},
-  {"question": "What is static file middleware?", "options": ["Serve files", "WWW root", "CSS/JS/Images", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Static file middleware serves static files from wwwroot."},
-  {"question": "What is URL rewriting?", "options": ["URL modification", "Redirects", "SEO", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "URL rewriting modifies incoming URLs for routing."},
-  {"question": "What is host in ASP.NET Core?", "options": ["Web server", "Container", "Startup", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Host manages application lifecycle and server."},
-  {"question": "What is Startup.cs?", "options": ["Configuration", "Pipeline setup", "Services", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Startup.cs configures services and request pipeline."},
-  {"question": "What is ConfigureServices method?", "options": ["DI setup", "Services", "Configuration", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "ConfigureServices registers application services."},
-  {"question": "What is Configure method?", "options": ["Middleware pipeline", "Request pipeline", "Configuration", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Configure configures the request pipeline using middleware."},
-  {"question": "What is IHostEnvironment?", "options": ["Environment", "Hosting", "Configuration", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "IHostEnvironment provides environment information."},
-  {"question": "What is IWebHostEnvironment?", "options": ["Web environment", "Hosting", "Content root", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "IWebHostEnvironment provides web-specific environment info."},
-  {"question": "What is launchSettings.json?", "options": ["Debug settings", "Profile", "Environment", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "launchSettings.json contains debug launch profiles."},
-  {"question": "What is appsettings.Development.json?", "options": ["Dev config", "Environment-specific", "Override", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "appsettings.Development.json contains development-specific settings."},
-  {"question": "What is environment variables in ASP.NET?", "options": ["Configuration", "Settings", "Environment-specific", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Environment variables configure app per environment."},
-  {"question": "What is Options pattern?", "options": ["Strongly-typed config", "DI integration", "Settings binding", "All of the above"], "correctOptions": ["All of the above"], "time": 35, "details": "Options pattern binds configuration to strongly typed objects."},
-  {"question": "What is IOptions<T>?", "options": ["Options access", "DI", "Configuration", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "IOptions<T> provides access to typed configuration."},
-  {"question": "What is _ViewStart.cshtml?", "options": ["Layout setup", "Shared settings", "View initialization", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "_ViewStart.cshtml defines default layout for views."},
-  {"question": "What is _ViewImports.cshtml?", "options": ["Namespace imports", "Tag helpers", "View settings", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "_ViewImports.cshtml provides namespace imports and tag helper registration."},
-  {"question": "What is layout in ASP.NET MVC?", "options": ["Template", "Master page", "Shared UI", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Layout provides a shared template for views."},
-  {"question": "What is section in Razor?", "options": ["Named region", "Content place", "RenderSection", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Sections define named content regions in layouts."},
-  {"question": "What is RenderBody()?", "options": ["Render view", "Content", "Body", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "RenderBody() renders the view content in layout."},
-  {"question": "What is RenderSection()?", "options": ["Render section", "Named content", "Optional", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "RenderSection() renders a named section in layout."},
-  {"question": "What is Partial View?", "options": ["Reusable view", "Component", "Include", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "Partial Views are reusable Razor markup snippets."},
-  {"question": "What is Html.Partial()?", "options": ["Render partial", "View", "Helper", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "Html.Partial() renders a partial view."},
-  {"question": "What is Html.RenderPartial()?", "options": ["Render partial", "Direct output", "Helper", "All of the above"], "correctOptions": ["All of the above"], "time": 25, "details": "RenderPartial() renders directly to response stream."},
-  {"question": "What is Component.InvokeAsync()?", "options": ["Invoke component", "View component", "Async", "All of the above"], "correctOptions": ["All of the above"], "time": 30, "details": "InvokeAsync() invokes a View Component."}
+  {
+    "question": "What is ASP.NET Core?",
+    "options": [
+      "Cross-platform framework",
+      "Open source",
+      "Modern web framework",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "ASP.NET Core is a cross-platform, open-source framework for building modern web applications."
+  },
+  {
+    "question": "What is the difference between ASP.NET Core and ASP.NET Framework?",
+    "options": [
+      "Cross-platform vs Windows",
+      "Open source vs closed",
+      "Modular vs monolithic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "ASP.NET Core is cross-platform and modular; ASP.NET Framework is Windows-only."
+  },
+  {
+    "question": "What is Kestrel in ASP.NET Core?",
+    "options": [
+      "Web server",
+      "Cross-platform server",
+      "Request handler",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Kestrel is the default cross-platform web server for ASP.NET Core."
+  },
+  {
+    "question": "What is middleware in ASP.NET Core?",
+    "options": [
+      "Request pipeline",
+      "HTTP handler",
+      "Filter",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Middleware are components that handle requests and responses in the pipeline."
+  },
+  {
+    "question": "What is the purpose of UseMiddleware?",
+    "options": [
+      "Register middleware",
+      "Pipeline setup",
+      "Extension method",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "UseMiddleware adds middleware to the request pipeline."
+  },
+  {
+    "question": "What is dependency injection in ASP.NET Core?",
+    "options": [
+      "Inversion of control",
+      "Service registration",
+      "Loose coupling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "ASP.NET Core has built-in DI for managing service dependencies."
+  },
+  {
+    "question": "What is the purpose of AddSingleton?",
+    "options": [
+      "Single instance",
+      "App lifetime",
+      "Global service",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "AddSingleton registers a service that lives for the application lifetime."
+  },
+  {
+    "question": "What is the purpose of AddScoped?",
+    "options": [
+      "Per request",
+      "HTTP context",
+      "Session scope",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "AddScoped creates one instance per HTTP request."
+  },
+  {
+    "question": "What is the purpose of AddTransient?",
+    "options": [
+      "New instance",
+      "Each request",
+      "Short-lived",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "AddTransient creates a new instance each time the service is requested."
+  },
+  {
+    "question": "What is IConfiguration?",
+    "options": [
+      "Configuration access",
+      "App settings",
+      "Settings provider",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "IConfiguration provides access to application configuration settings."
+  },
+  {
+    "question": "What is appsettings.json?",
+    "options": [
+      "Configuration file",
+      "App settings",
+      "JSON config",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "appsettings.json contains application configuration in JSON format."
+  },
+  {
+    "question": "What is the purpose of ILogger?",
+    "options": [
+      "Logging",
+      "Log interface",
+      "Debug",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "ILogger provides logging capabilities in ASP.NET Core."
+  },
+  {
+    "question": "What is MVC pattern?",
+    "options": [
+      "Model-View-Controller",
+      "Architecture",
+      "Separation of concerns",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "MVC separates application into Model, View, and Controller components."
+  },
+  {
+    "question": "What is a Controller in ASP.NET MVC?",
+    "options": [
+      "Request handler",
+      "Business logic",
+      "Action methods",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Controllers handle HTTP requests and return responses."
+  },
+  {
+    "question": "What is a View in MVC?",
+    "options": [
+      "UI template",
+      "HTML rendering",
+      "Presentation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Views render HTML UI using Razor templates."
+  },
+  {
+    "question": "What is a Model in MVC?",
+    "options": [
+      "Data representation",
+      "Business logic",
+      "Domain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Models represent data and business logic."
+  },
+  {
+    "question": "What is Razor Pages?",
+    "options": [
+      "Page-based",
+      "Handler methods",
+      "Simplified MVC",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Razor Pages is a page-based programming model for ASP.NET Core."
+  },
+  {
+    "question": "What is a PageModel in Razor Pages?",
+    "options": [
+      "Page code-behind",
+      "Handler",
+      "Model",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "PageModel contains handlers and data for Razor Pages."
+  },
+  {
+    "question": "What is @page directive?",
+    "options": [
+      "Razor page",
+      "Route",
+      "Page declaration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "@page makes a Razor file an MVC action."
+  },
+  {
+    "question": "What is @model directive?",
+    "options": [
+      "Model type",
+      "Strongly-typed",
+      "View model",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "@model specifies the model type for the view."
+  },
+  {
+    "question": "What is ViewData?",
+    "options": [
+      "Dictionary",
+      "Controller to view",
+      "Dynamic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "ViewData passes data from controller to view as dictionary."
+  },
+  {
+    "question": "What is ViewBag?",
+    "options": [
+      "Dynamic wrapper",
+      "ViewData wrapper",
+      "Runtime binding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "ViewBag is a dynamic wrapper around ViewData."
+  },
+  {
+    "question": "What is TempData?",
+    "options": [
+      "Temp storage",
+      "Redirect data",
+      "Between requests",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "TempData stores data for the next request, useful for redirects."
+  },
+  {
+    "question": "What is the event loop?",
+    "options": [
+      "Async handling",
+      "Call stack",
+      "Task queue",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Async handling",
+      "Call stack",
+      "Task queue",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is the event loop? explanation."
+  },
+  {
+    "question": "What is model binding?",
+    "options": [
+      "Map request to model",
+      "Form processing",
+      "Data binding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Model binding maps HTTP request data to action parameters."
+  },
+  {
+    "question": "What is validation in ASP.NET?",
+    "options": [
+      "Data validation",
+      "Model validation",
+      "Attribute-based",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Validation uses data annotations to validate model properties."
+  },
+  {
+    "question": "What is [Required] attribute?",
+    "options": [
+      "Required field",
+      "Validation",
+      "Mandatory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Required validates that the field is not null or empty."
+  },
+  {
+    "question": "What is [StringLength] attribute?",
+    "options": [
+      "Length validation",
+      "String check",
+      "Max length",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "StringLength validates string length constraints."
+  },
+  {
+    "question": "What is [Range] attribute?",
+    "options": [
+      "Range validation",
+      "Numeric check",
+      "Boundaries",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Range validates numeric values are within a range."
+  },
+  {
+    "question": "What is [EmailAddress] attribute?",
+    "options": [
+      "Email validation",
+      "Format check",
+      "Pattern",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "EmailAddress validates email format."
+  },
+  {
+    "question": "What is [RegularExpression] attribute?",
+    "options": [
+      "Pattern matching",
+      "Regex validation",
+      "Format",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "RegularExpression validates using regex pattern."
+  },
+  {
+    "question": "What is Tag Helper?",
+    "options": [
+      "Server-side HTML",
+      "Razor",
+      "Component",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Tag Helpers enable server-side code to participate in rendering HTML."
+  },
+  {
+    "question": "What is asp-action Tag Helper?",
+    "options": [
+      "Link to action",
+      "URL generation",
+      "Anchor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "asp-action generates URL for controller action."
+  },
+  {
+    "question": "What is asp-controller Tag Helper?",
+    "options": [
+      "Controller reference",
+      "URL generation",
+      "Routing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "asp-controller specifies the controller for URL generation."
+  },
+  {
+    "question": "What is asp-for Tag Helper?",
+    "options": [
+      "Model binding",
+      "Input generation",
+      "Property",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "asp-for generates input for model property."
+  },
+  {
+    "question": "What is asp-area Tag Helper?",
+    "options": [
+      "Area routing",
+      "URL generation",
+      "Namespace",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "asp-area generates URL including area."
+  },
+  {
+    "question": "What is View Component?",
+    "options": [
+      "Reusable component",
+      "Partial view",
+      "Server-side",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "View Components are self-contained reusable UI components."
+  },
+  {
+    "question": "What is the difference between View Component and Partial View?",
+    "options": [
+      "Component vs include",
+      "Class vs file",
+      "Rendering",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "View Components are classes; Partial Views are Razor files."
+  },
+  {
+    "question": "What is routing in ASP.NET Core?",
+    "options": [
+      "URL mapping",
+      "Endpoint",
+      "Action",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Routing maps URLs to controller actions."
+  },
+  {
+    "question": "What is attribute routing?",
+    "options": [
+      "Route attributes",
+      "Method-level",
+      "Custom routes",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Attribute routing uses [Route] attribute on controllers/actions."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is area in ASP.NET MVC?",
+    "options": [
+      "Feature grouping",
+      "Folder organization",
+      "Namespace",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Areas organize large applications into functional units."
+  },
+  {
+    "question": "What is filter in MVC?",
+    "options": [
+      "Cross-cutting",
+      "Pre/post processing",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Filters run code before/after action methods."
+  },
+  {
+    "question": "What is Authorization filter?",
+    "options": [
+      "Access control",
+      "Security",
+      "Permission",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Authorization filters verify user has permission to access resource."
+  },
+  {
+    "question": "What is Action filter?",
+    "options": [
+      "Pre/post action",
+      "Execution control",
+      "Result",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Action filters run before and after action execution."
+  },
+  {
+    "question": "What is Result filter?",
+    "options": [
+      "Pre/post result",
+      "Response",
+      "View",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Result filters run before/after action result is executed."
+  },
+  {
+    "question": "What is Exception filter?",
+    "options": [
+      "Error handling",
+      "Exception",
+      "Global",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Exception filters handle unhandled exceptions."
+  },
+  {
+    "question": "What is the purpose of [HttpGet]?",
+    "options": [
+      "GET request",
+      "Read",
+      "Retrieve",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "HttpGet specifies the action handles GET requests."
+  },
+  {
+    "question": "What is the purpose of [HttpPost]?",
+    "options": [
+      "POST request",
+      "Create",
+      "Submit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "HttpPost specifies the action handles POST requests."
+  },
+  {
+    "question": "What is the purpose of [HttpPut]?",
+    "options": [
+      "PUT request",
+      "Update",
+      "Replace",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "HttpPut specifies the action handles PUT requests."
+  },
+  {
+    "question": "What is the purpose of [HttpDelete]?",
+    "options": [
+      "DELETE request",
+      "Remove",
+      "Delete",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "HttpDelete specifies the action handles DELETE requests."
+  },
+  {
+    "question": "What is the purpose of [HttpPatch]?",
+    "options": [
+      "PATCH request",
+      "Partial update",
+      "Modify",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "HttpPatch specifies the action handles PATCH requests."
+  },
+  {
+    "question": "What is Web API in ASP.NET?",
+    "options": [
+      "RESTful service",
+      "HTTP API",
+      "JSON/XML",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Web API creates RESTful HTTP services returning JSON/XML."
+  },
+  {
+    "question": "What is [ApiController] attribute?",
+    "options": [
+      "API behavior",
+      "Convention",
+      "API-specific",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "ApiController enables API-specific conventions."
+  },
+  {
+    "question": "What is content negotiation?",
+    "options": [
+      "Format selection",
+      "Client preference",
+      "JSON/XML",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Content negotiation returns format based on Accept header."
+  },
+  {
+    "question": "What is IActionResult?",
+    "options": [
+      "Action result",
+      "Response",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "IActionResult represents action method return type."
+  },
+  {
+    "question": "What is Ok() result?",
+    "options": [
+      "200 OK",
+      "Success",
+      "HTTP response",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Ok() returns 200 OK response."
+  },
+  {
+    "question": "What is NotFound() result?",
+    "options": [
+      "404 Not Found",
+      "Missing",
+      "HTTP response",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "NotFound() returns 404 Not Found response."
+  },
+  {
+    "question": "What is BadRequest() result?",
+    "options": [
+      "400 Bad Request",
+      "Validation error",
+      "HTTP response",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "BadRequest() returns 400 Bad Request response."
+  },
+  {
+    "question": "What is CreatedAtAction() result?",
+    "options": [
+      "201 Created",
+      "Location header",
+      "POST response",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "CreatedAtAction() returns 201 Created with location header."
+  },
+  {
+    "question": "What is Unauthorized() result?",
+    "options": [
+      "401 Unauthorized",
+      "Authentication",
+      "HTTP response",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Unauthorized() returns 401 Unauthorized response."
+  },
+  {
+    "question": "What is Forbid() result?",
+    "options": [
+      "403 Forbidden",
+      "Authorization",
+      "HTTP response",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Forbid() returns 403 Forbidden response."
+  },
+  {
+    "question": "What is NoContent() result?",
+    "options": [
+      "204 No Content",
+      "Delete success",
+      "Empty",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "NoContent() returns 204 No Content response."
+  },
+  {
+    "question": "What is Entity Framework Core?",
+    "options": [
+      "ORM",
+      "Database access",
+      "LINQ to SQL",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "EF Core is a lightweight, cross-platform ORM for .NET."
+  },
+  {
+    "question": "What is DbContext in EF Core?",
+    "options": [
+      "Database session",
+      "Unit of work",
+      "Query gateway",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "DbContext represents a session with the database."
+  },
+  {
+    "question": "What is DbSet<T>?",
+    "options": [
+      "Entity set",
+      "Table",
+      "Queryable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "DbSet<T> represents a table or view in the database."
+  },
+  {
+    "question": "What is lazy loading in EF Core?",
+    "options": [
+      "On-demand loading",
+      "Virtual properties",
+      "Proxy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Lazy loading loads related entities when navigation property is accessed."
+  },
+  {
+    "question": "What is eager loading in EF Core?",
+    "options": [
+      "Load upfront",
+      "Include",
+      "Single query",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Eager loading loads related data using Include()."
+  },
+  {
+    "question": "What is the purpose of Include()?",
+    "options": [
+      "Eager loading",
+      "Related data",
+      "Query",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Include() loads related entities in a single query."
+  },
+  {
+    "question": "What is ThenInclude()?",
+    "options": [
+      "Nested include",
+      "Multi-level",
+      "Chained",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "ThenInclude() loads nested related entities."
+  },
+  {
+    "question": "What is AsNoTracking()?",
+    "options": [
+      "Read-only",
+      "Performance",
+      "No tracking",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "AsNoTracking() improves performance by disabling change tracking."
+  },
+  {
+    "question": "What is identity in ASP.NET Core?",
+    "options": [
+      "Authentication",
+      "User management",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "ASP.NET Core Identity provides user authentication and management."
+  },
+  {
+    "question": "What is ClaimsIdentity?",
+    "options": [
+      "User claims",
+      "Identity",
+      "Authentication",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "ClaimsIdentity represents user identity with claims."
+  },
+  {
+    "question": "What is Claim?",
+    "options": [
+      "User attribute",
+      "Statement",
+      "Authorization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Claims are statements about a user (name, role, email)."
+  },
+  {
+    "question": "What is Role-based authorization?",
+    "options": [
+      "Role check",
+      "Authorization",
+      "Access control",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Role-based authorization checks user roles."
+  },
+  {
+    "question": "What is Policy-based authorization?",
+    "options": [
+      "Policy check",
+      "Authorization",
+      "Requirements",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Policy-based authorization uses policies with requirements."
+  },
+  {
+    "question": "What is [Authorize] attribute?",
+    "options": [
+      "Access control",
+      "Authentication",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Authorize attribute restricts access to authenticated users."
+  },
+  {
+    "question": "What is [AllowAnonymous] attribute?",
+    "options": [
+      "Skip auth",
+      "Public access",
+      "Exempt",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "AllowAnonymous allows unauthenticated access to action."
+  },
+  {
+    "question": "What is session in ASP.NET Core?",
+    "options": [
+      "User state",
+      "Per-user storage",
+      "Server-side",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Session stores user-specific data across requests."
+  },
+  {
+    "question": "What is cookie-based session?",
+    "options": [
+      "Client storage",
+      "Session data",
+      "HTTP cookie",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Cookie-based session stores session data in cookies."
+  },
+  {
+    "question": "What is distributed cache?",
+    "options": [
+      "Distributed storage",
+      "Shared cache",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Distributed cache provides shared caching across servers."
+  },
+  {
+    "question": "What is response caching?",
+    "options": [
+      "Cache response",
+      "Client-side",
+      "Server-side",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Response caching caches HTTP responses."
+  },
+  {
+    "question": "What is CORS?",
+    "options": [
+      "Cross-origin",
+      "Browser security",
+      "Request sharing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "CORS enables cross-origin HTTP requests."
+  },
+  {
+    "question": "What is static file middleware?",
+    "options": [
+      "Serve files",
+      "WWW root",
+      "CSS/JS/Images",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Static file middleware serves static files from wwwroot."
+  },
+  {
+    "question": "What is URL rewriting?",
+    "options": [
+      "URL modification",
+      "Redirects",
+      "SEO",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "URL rewriting modifies incoming URLs for routing."
+  },
+  {
+    "question": "What is host in ASP.NET Core?",
+    "options": [
+      "Web server",
+      "Container",
+      "Startup",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Host manages application lifecycle and server."
+  },
+  {
+    "question": "What is Startup.cs?",
+    "options": [
+      "Configuration",
+      "Pipeline setup",
+      "Services",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Startup.cs configures services and request pipeline."
+  },
+  {
+    "question": "What is ConfigureServices method?",
+    "options": [
+      "DI setup",
+      "Services",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "ConfigureServices registers application services."
+  },
+  {
+    "question": "What is Configure method?",
+    "options": [
+      "Middleware pipeline",
+      "Request pipeline",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Configure configures the request pipeline using middleware."
+  },
+  {
+    "question": "What is IHostEnvironment?",
+    "options": [
+      "Environment",
+      "Hosting",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "IHostEnvironment provides environment information."
+  },
+  {
+    "question": "What is IWebHostEnvironment?",
+    "options": [
+      "Web environment",
+      "Hosting",
+      "Content root",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "IWebHostEnvironment provides web-specific environment info."
+  },
+  {
+    "question": "What is launchSettings.json?",
+    "options": [
+      "Debug settings",
+      "Profile",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "launchSettings.json contains debug launch profiles."
+  },
+  {
+    "question": "What is appsettings.Development.json?",
+    "options": [
+      "Dev config",
+      "Environment-specific",
+      "Override",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "appsettings.Development.json contains development-specific settings."
+  },
+  {
+    "question": "What is environment variables in ASP.NET?",
+    "options": [
+      "Configuration",
+      "Settings",
+      "Environment-specific",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Environment variables configure app per environment."
+  },
+  {
+    "question": "What is Options pattern?",
+    "options": [
+      "Strongly-typed config",
+      "DI integration",
+      "Settings binding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "Options pattern binds configuration to strongly typed objects."
+  },
+  {
+    "question": "What is IOptions<T>?",
+    "options": [
+      "Options access",
+      "DI",
+      "Configuration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "IOptions<T> provides access to typed configuration."
+  },
+  {
+    "question": "What is _ViewStart.cshtml?",
+    "options": [
+      "Layout setup",
+      "Shared settings",
+      "View initialization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "_ViewStart.cshtml defines default layout for views."
+  },
+  {
+    "question": "What is _ViewImports.cshtml?",
+    "options": [
+      "Namespace imports",
+      "Tag helpers",
+      "View settings",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "_ViewImports.cshtml provides namespace imports and tag helper registration."
+  },
+  {
+    "question": "What is layout in ASP.NET MVC?",
+    "options": [
+      "Template",
+      "Master page",
+      "Shared UI",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Layout provides a shared template for views."
+  },
+  {
+    "question": "What is section in Razor?",
+    "options": [
+      "Named region",
+      "Content place",
+      "RenderSection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Sections define named content regions in layouts."
+  },
+  {
+    "question": "What is RenderBody()?",
+    "options": [
+      "Render view",
+      "Content",
+      "Body",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "RenderBody() renders the view content in layout."
+  },
+  {
+    "question": "What is RenderSection()?",
+    "options": [
+      "Render section",
+      "Named content",
+      "Optional",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "RenderSection() renders a named section in layout."
+  },
+  {
+    "question": "What is Partial View?",
+    "options": [
+      "Reusable view",
+      "Component",
+      "Include",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "Partial Views are reusable Razor markup snippets."
+  },
+  {
+    "question": "What is Html.Partial()?",
+    "options": [
+      "Render partial",
+      "View",
+      "Helper",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "Html.Partial() renders a partial view."
+  },
+  {
+    "question": "What is Html.RenderPartial()?",
+    "options": [
+      "Render partial",
+      "Direct output",
+      "Helper",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 25,
+    "details": "RenderPartial() renders directly to response stream."
+  },
+  {
+    "question": "What is Component.InvokeAsync()?",
+    "options": [
+      "Invoke component",
+      "View component",
+      "Async",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "InvokeAsync() invokes a View Component."
+  },
+  {
+    "question": "What is ASP.NET MVC?",
+    "options": [
+      "Model-View-Controller",
+      "Web framework",
+      "Routing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Model-View-Controller",
+      "Web framework"
+    ],
+    "time": 35,
+    "details": "What is ASP.NET MVC? explanation."
+  },
+  {
+    "question": "What is Razor? (Level 2 #109)",
+    "options": [
+      "Syntax",
+      "View engine",
+      "Directive",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Syntax",
+      "View engine",
+      "Directive",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Razor? explanation."
+  },
+  {
+    "question": "What is MVC? (Level 2 #110)",
+    "options": [
+      "Model",
+      "View",
+      "Controller",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Model",
+      "View",
+      "Controller",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is MVC? explanation."
+  },
+  {
+    "question": "What is Web API? (Level 2 #111)",
+    "options": [
+      "REST",
+      "HTTP",
+      "JSON",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "REST",
+      "HTTP",
+      "JSON",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Web API? explanation."
+  },
+  {
+    "question": "What is middleware? (Level 2 #112)",
+    "options": [
+      "Pipeline",
+      "Request",
+      "Response",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pipeline",
+      "Request",
+      "Response",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is routing? (Level 2 #113)",
+    "options": [
+      "URL",
+      "Template",
+      "Constraint",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL",
+      "Template",
+      "Constraint",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is view component? (Level 2 #114)",
+    "options": [
+      "Partial",
+      "Async",
+      "Tag helper",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Partial",
+      "Async",
+      "Tag helper",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is view component? explanation."
+  },
+  {
+    "question": "What is tag helper? (Level 2 #115)",
+    "options": [
+      "HTML-like",
+      "Server-side",
+      "Razor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTML-like",
+      "Server-side",
+      "Razor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is tag helper? explanation."
+  },
+  {
+    "question": "What is dependency injection? (Level 2 #116)",
+    "options": [
+      "Service",
+      "Lifetime",
+      "Container",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Service",
+      "Lifetime",
+      "Container",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is Areas? (Level 2 #117)",
+    "options": [
+      "Organization",
+      "Routing",
+      "Separate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organization",
+      "Routing",
+      "Separate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Areas? explanation."
+  },
+  {
+    "question": "What is bundle? (Level 2 #118)",
+    "options": [
+      "Minification",
+      "Combination",
+      "Optimization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Minification",
+      "Combination",
+      "Optimization",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is bundle? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is routing?",
+    "options": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL mapping",
+      "Paths",
+      "Navigate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is composition?",
+    "options": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Has-a relationship",
+      "Combine",
+      "Reuse",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is composition? explanation."
+  },
+  {
+    "question": "What is YAML?",
+    "options": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Config format",
+      "Readable",
+      "Data",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is YAML? explanation."
+  },
+  {
+    "question": "What is testing?",
+    "options": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify code",
+      "Quality",
+      "Automated",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is testing? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  }
 ]

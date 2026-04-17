@@ -1,112 +1,2052 @@
 [
-  {"question": "What does the spread operator (...) do in JavaScript?", "options": ["Creates a new array", "Expands iterables into individual elements", "Deletes elements", "Converts to string"], "correctOptions": ["Expands iterables into individual elements"], "time": 25, "details": "The spread operator expands an array or object into individual elements."},
-  {"question": "What is the difference between == and === in JavaScript?", "options": ["No difference", "== compares value only, === compares value and type", "=== is faster", "== is deprecated"], "correctOptions": ["== compares value only, === compares value and type"], "time": 25, "details": "== performs type coercion, while === checks both value and type."},
-  {"question": "What is a closure in JavaScript?", "options": ["A way to close browser tabs", "A function that has access to its outer scope's variables", "A design pattern for error handling", "A method to end loops"], "correctOptions": ["A function that has access to its outer scope's variables"], "time": 30, "details": "A closure is a function that remembers variables from its outer scope."},
-  {"question": "What is the purpose of the 'this' keyword in JavaScript?", "options": ["Refers to the current function", "Refers to the current object context", "Creates a new object", "Defines a variable"], "correctOptions": ["Refers to the current object context"], "time": 25, "details": "'this' refers to the object where the code is currently executing."},
-  {"question": "What is event bubbling in JavaScript?", "options": ["Events sink down", "Events propagate upward from target to root", "Events stop immediately", "Events are deleted"], "correctOptions": ["Events propagate upward from target to root"], "time": 30, "details": "Event bubbling is when an event triggers on the target element first, then bubbles up to parent elements."},
-  {"question": "What does 'use strict' do?", "options": ["Makes code run faster", "Enables stricter parsing and error handling", "Disables console", "Creates strict mode for CSS"], "correctOptions": ["Enables stricter parsing and error handling"], "time": 25, "details": "'use strict' enables strict mode which catches common coding mistakes."},
-  {"question": "What is the difference between let and var?", "options": ["No difference", "let is block-scoped, var is function-scoped", "var is faster", "let is deprecated"], "correctOptions": ["let is block-scoped, var is function-scoped"], "time": 25, "details": "var is function-scoped while let is block-scoped, preventing hoisting issues."},
-  {"question": "What is hoisting in JavaScript?", "options": ["Moving code to a different file", "Moving declarations to the top of the scope", "Removing unused code", "Loading external scripts"], "correctOptions": ["Moving declarations to the top of the scope"], "time": 30, "details": "Hoisting moves variable and function declarations to the top of their scope before execution."},
-  {"question": "What does the 'new' keyword do?", "options": ["Creates a copy of an object", "Creates a new instance of an object", "Deletes an object", "Converts a function to a class"], "correctOptions": ["Creates a new instance of an object"], "time": 25, "details": "new creates a new object and calls the constructor function with 'this' pointing to the new object."},
-  {"question": "What is the purpose of JSON.stringify()?", "options": ["Parses JSON", "Converts JavaScript object to JSON string", "Validates JSON", "Creates JSON schema"], "correctOptions": ["Converts JavaScript object to JSON string"], "time": 25, "details": "JSON.stringify() converts a JavaScript object to a JSON string representation."},
-  {"question": "What is the purpose of JSON.parse()?", "options": ["Creates JSON objects", "Converts JSON string to JavaScript object", "Validates JSON syntax", "Formats JSON data"], "correctOptions": ["Converts JSON string to JavaScript object"], "time": 25, "details": "JSON.parse() parses a JSON string and returns a JavaScript object."},
-  {"question": "What is an arrow function?", "options": ["A function that moves elements", "A concise function syntax using =>", "A recursive function", "A deprecated function type"], "correctOptions": ["A concise function syntax using =>"], "time": 25, "details": "Arrow functions provide a shorter syntax and lexically bind 'this'."},
-  {"question": "What is the difference between null and undefined?", "options": ["They are the same", "null is intentional absence, undefined is uninitialized", "undefined is a keyword", "null is always an error"], "correctOptions": ["null is intentional absence, undefined is uninitialized"], "time": 30, "details": "null is assigned intentionally while undefined means a variable hasn't been assigned."},
-  {"question": "What does Array.prototype.map() do?", "options": ["Filters array elements", "Creates a new array by transforming each element", "Sorts the array", "Removes duplicates"], "correctOptions": ["Creates a new array by transforming each element"], "time": 25, "details": "map() creates a new array by applying a function to each element."},
-  {"question": "What does Array.prototype.filter() do?", "options": ["Transforms elements", "Creates a new array with elements that pass a test", "Sorts the array", "Finds one element"], "correctOptions": ["Creates a new array with elements that pass a test"], "time": 25, "details": "filter() creates a new array with elements that satisfy a condition."},
-  {"question": "What does Array.prototype.reduce() do?", "options": ["Shrinks the array", "Reduces array to a single value", "Removes elements", "Creates subarrays"], "correctOptions": ["Reduces array to a single value"], "time": 30, "details": "reduce() reduces an array to a single value by executing a function for each element."},
-  {"question": "What is the purpose of setTimeout?", "options": ["Sets a timer to execute code after a delay", "Sets an interval", "Clears a timer", "Pauses execution"], "correctOptions": ["Sets a timer to execute code after a delay"], "time": 25, "details": "setTimeout executes a function after a specified number of milliseconds."},
-  {"question": "What is the purpose of setInterval?", "options": ["Executes once after delay", "Executes repeatedly at specified intervals", "Clears timers", "Stops execution"], "correctOptions": ["Executes repeatedly at specified intervals"], "time": 25, "details": "setInterval executes a function repeatedly at specified time intervals."},
-  {"question": "What is a Promise in JavaScript?", "options": ["A variable type", "An object representing eventual completion of async operation", "A loop construct", "A design pattern"], "correctOptions": ["An object representing eventual completion of async operation"], "time": 30, "details": "Promise represents a value that may be available now, in the future, or never."},
-  {"question": "What does Promise.all() do?", "options": ["Returns first resolved", "Waits for all promises to resolve", "Catches errors", "Cancels promises"], "correctOptions": ["Waits for all promises to resolve"], "time": 30, "details": "Promise.all() returns a promise that resolves when all input promises resolve."},
-  {"question": "What does Promise.race() do?", "options": ["Waits for all", "Returns first settled promise", "Cancels promises", "Filters promises"], "correctOptions": ["Returns first settled promise"], "time": 30, "details": "Promise.race() returns the first promise that settles (resolves or rejects)."},
-  {"question": "What is async/await?", "options": ["A loop construct", "Syntax for working with Promises", "A variable type", "A debugging tool"], "correctOptions": ["Syntax for working with Promises"], "time": 25, "details": "async/await provides cleaner syntax for working with Promises."},
-  {"question": "What does the 'await' keyword do?", "options": ["Waits for a Promise to resolve", "Creates a Promise", "Deletes a Promise", "Catches Promise errors"], "correctOptions": ["Waits for a Promise to resolve"], "time": 25, "details": "await pauses execution until a Promise resolves."},
-  {"question": "What is a callback function?", "options": ["A function called at the end", "A function passed as an argument to another function", "A recursive function", "A built-in function"], "correctOptions": ["A function passed as an argument to another function"], "time": 25, "details": "A callback is a function passed as an argument to be executed later."},
-  {"question": "What is the event loop in JavaScript?", "options": ["A loop in code", "A mechanism that handles async operations", "A debugging tool", "A data structure"], "correctOptions": ["A mechanism that handles async operations"], "time": 35, "details": "The event loop continuously checks the call stack and task queue to execute async code."},
-  {"question": "What is the call stack?", "options": ["A data structure for managing function calls", "A debugging tool", "A type of array", "A browser feature"], "correctOptions": ["A data structure for managing function calls"], "time": 30, "details": "The call stack is a LIFO data structure that tracks function execution."},
-  {"question": "What is a module in JavaScript?", "options": ["A CSS file", "A reusable code unit that can be imported/exported", "A function type", "A design pattern"], "correctOptions": ["A reusable code unit that can be imported/exported"], "time": 25, "details": "Modules allow splitting code into reusable files with imports/exports."},
-  {"question": "What does 'export default' do?", "options": ["Exports multiple things", "Exports a single default value", "Exports nothing", "Imports a module"], "correctOptions": ["Exports a single default value"], "time": 25, "details": "export default allows one default export per module."},
-  {"question": "What does 'import' do?", "options": ["Exports code", "Brings in exported code from other modules", "Creates variables", "Deletes code"], "correctOptions": ["Brings in exported code from other modules"], "time": 25, "details": "import brings in exported functions, objects, or values from other modules."},
-  {"question": "What is destructuring in JavaScript?", "options": ["A loop type", "A syntax to extract values from arrays or objects", "A debugging tool", "A function type"], "correctOptions": ["A syntax to extract values from arrays or objects"], "time": 30, "details": "Destructuring allows extracting array elements or object properties into variables."},
-  {"question": "What is the spread operator with objects?", "options": ["Creates arrays", "Creates a shallow copy of an object with added/overridden properties", "Deletes properties", "Converts to string"], "correctOptions": ["Creates a shallow copy of an object with added/overridden properties"], "time": 30, "details": "Spread with objects creates a new object, copying properties and adding new ones."},
-  {"question": "What is a template literal?", "options": ["A string with backticks allowing embedded expressions", "A deprecated string type", "A JSON format", "A regex pattern"], "correctOptions": ["A string with backticks allowing embedded expressions"], "time": 25, "details": "Template literals use backticks and allow ${expression} interpolation."},
-  {"question": "What does Object.keys() return?", "options": ["Values of an object", "An array of object keys", "An array of object entries", "The object's prototype"], "correctOptions": ["An array of object keys"], "time": 25, "details": "Object.keys() returns an array of a object's own property keys."},
-  {"question": "What does Object.values() return?", "options": ["An array of keys", "An array of object values", "An array of entries", "The object's methods"], "correctOptions": ["An array of object values"], "time": 25, "details": "Object.values() returns an array of the object's own property values."},
-  {"question": "What is the purpose of Object.assign()?", "options": ["Compares objects", "Copies properties from source to target object", "Deletes properties", "Creates a class"], "correctOptions": ["Copies properties from source to target object"], "time": 25, "details": "Object.assign() copies properties from one or more source objects to a target object."},
-  {"question": "What is a factory function?", "options": ["A built-in function", "A function that returns a new object", "A constructor function", "A recursive function"], "correctOptions": ["A function that returns a new object"], "time": 30, "details": "A factory function is a regular function that returns new objects."},
-  {"question": "What is the purpose of the 'new' keyword with classes?", "options": ["Creates a new class", "Creates a new instance of a class", "Extends a class", "Deletes an instance"], "correctOptions": ["Creates a new instance of a class"], "time": 25, "details": "new creates an instance of a class using its constructor."},
-  {"question": "What is inheritance in JavaScript?", "options": ["Copying code", "A class extending another to inherit properties and methods", "Creating multiple instances", "Using multiple classes"], "correctOptions": ["A class extending another to inherit properties and methods"], "time": 30, "details": "Inheritance allows a class to use properties and methods from another class."},
-  {"question": "What does 'super' do in a class?", "options": ["Calls the parent constructor or methods", "Creates a new object", "Defines a static method", "Imports parent class"], "correctOptions": ["Calls the parent constructor or methods"], "time": 25, "details": "super() calls the parent constructor; super.method() calls parent methods."},
-  {"question": "What is a static method?", "options": ["A method on instances", "A method on the class itself, not instances", "A private method", "A deprecated method"], "correctOptions": ["A method on the class itself, not instances"], "time": 30, "details": "Static methods belong to the class, not instances, and are called on the class."},
-  {"question": "What is the purpose of 'instanceof'?", "options": ["Compares two objects", "Checks if an object is an instance of a class", "Creates a new instance", "Deletes an instance"], "correctOptions": ["Checks if an object is an instance of a class"], "time": 25, "details": "instanceof checks if an object belongs to a class or its subclasses."},
-  {"question": "What is a proxy in JavaScript?", "options": ["A network tool", "An object that defines custom behavior for fundamental operations", "A debugging tool", "A type of array"], "correctOptions": ["An object that defines custom behavior for fundamental operations"], "time": 35, "details": "Proxy allows intercepting and customizing operations like property access, assignment, and function calls."},
-  {"question": "What is a Reflect in JavaScript?", "options": ["A debugging tool", "A built-in object providing methods for interceptable operations", "A type of Promise", "A validation library"], "correctOptions": ["A built-in object providing methods for interceptable operations"], "time": 35, "details": "Reflect provides methods that correspond to Proxy handler methods."},
-  {"question": "What is a Symbol in JavaScript?", "options": ["A string type", "A unique and immutable primitive value", "A number type", "A boolean type"], "correctOptions": ["A unique and immutable primitive value"], "time": 30, "details": "Symbol is a primitive type used as object property keys to ensure uniqueness."},
-  {"question": "What does Object.freeze() do?", "options": ["Deletes an object", "Prevents modifications to an object", "Creates a new object", "Copies an object"], "correctOptions": ["Prevents modifications to an object"], "time": 30, "details": "Object.freeze() makes an object immutable - no additions, deletions, or changes."},
-  {"question": "What does Object.seal() do?", "options": ["Deletes properties", "Prevents adding/removing properties but allows modifications", "Freezes the object completely", "Creates a proxy"], "correctOptions": ["Prevents adding/removing properties but allows modifications"], "time": 30, "details": "Object.seal() prevents adding or removing properties but allows value modifications."},
-  {"question": "What is a WeakMap?", "options": ["A Map type", "A collection of key-value pairs with weak references to keys", "A regular object", "A type of array"], "correctOptions": ["A collection of key-value pairs with weak references to keys"], "time": 35, "details": "WeakMap holds keys weakly - keys can be garbage collected when no references remain."},
-  {"question": "What is a WeakSet?", "options": ["A Set type", "A collection of objects with weak references", "A regular array", "A type of Map"], "correctOptions": ["A collection of objects with weak references"], "time": 35, "details": "WeakSet stores objects weakly - they can be garbage collected."},
-  {"question": "What is the purpose of Array.isArray()?", "options": ["Checks if value is an array", "Converts to array", "Creates an array", "Sorts an array"], "correctOptions": ["Checks if value is an array"], "time": 25, "details": "Array.isArray() returns true if the argument is an array."},
-  {"question": "What does Array.prototype.slice() do?", "options": ["Removes elements", "Returns a shallow copy of a portion of an array", "Adds elements", "Sorts the array"], "correctOptions": ["Returns a shallow copy of a portion of an array"], "time": 25, "details": "slice() returns a copy of a portion of an array without modifying the original."},
-  {"question": "What does Array.prototype.splice() do?", "options": ["Creates a copy", "Adds or removes elements from an array", "Sorts an array", "Filters an array"], "correctOptions": ["Adds or removes elements from an array"], "time": 25, "details": "splice() changes array content by adding/removing elements."},
-  {"question": "What is the difference between slice and splice?", "options": ["They are the same", "slice returns copy, splice modifies original", "splice is faster", "slice is deprecated"], "correctOptions": ["slice returns copy, splice modifies original"], "time": 30, "details": "slice() returns a new array without modifying; splice() modifies the original array."},
-  {"question": "What does String.prototype.trim() do?", "options": ["Removes whitespace from both ends", "Splits a string", "Replaces characters", "Converts to uppercase"], "correctOptions": ["Removes whitespace from both ends"], "time": 25, "details": "trim() removes whitespace from the beginning and end of a string."},
-  {"question": "What does String.prototype.split() do?", "options": ["Joins strings", "Splits a string into an array", "Trims a string", "Replaces text"], "correctOptions": ["Splits a string into an array"], "time": 25, "details": "split() splits a string into an array based on a separator."},
-  {"question": "What does String.prototype.replace() do?", "options": ["Removes text", "Replaces text with new text", "Deletes text", "Duplicates text"], "correctOptions": ["Replaces text with new text"], "time": 25, "details": "replace() returns a new string with some or all matches of a pattern replaced."},
-  {"question": "What is a regular expression?", "options": ["A built-in object", "A pattern used to match character combinations in strings", "A type of array", "A validation tool"], "correctOptions": ["A pattern used to match character combinations in strings"], "time": 30, "details": "Regex is a pattern that describes text to match or search for."},
-  {"question": "What does the 'test' method of RegExp do?", "options": ["Creates a regex", "Tests if a pattern matches a string", "Replaces text", "Validates input"], "correctOptions": ["Tests if a pattern matches a string"], "time": 25, "details": "test() returns true if the pattern matches the string, false otherwise."},
-  {"question": "What does the 'exec' method of RegExp do?", "options": ["Executes code", "Returns match details or null", "Tests a pattern", "Replaces text"], "correctOptions": ["Returns match details or null"], "time": 30, "details": "exec() returns match details as an array or null if no match."},
-  {"question": "What is the purpose of the 'i' flag in regex?", "options": ["Makes regex faster", "Makes matching case-insensitive", "Matches multiple times", "Matches globally"], "correctOptions": ["Makes matching case-insensitive"], "time": 25, "details": "The 'i' flag makes the regex match regardless of case."},
-  {"question": "What is the purpose of the 'g' flag in regex?", "options": ["Case insensitive", "Global search - finds all matches", "Match at start", "Match at end"], "correctOptions": ["Global search - finds all matches"], "time": 25, "details": "The 'g' flag performs a global search, finding all matches."},
-  {"question": "What is a capturing group in regex?", "options": ["A group that can't be captured", "A part of the pattern in parentheses that can be captured", "A negative group", "A special group"], "correctOptions": ["A part of the pattern in parentheses that can be captured"], "time": 30, "details": "Capturing groups capture matched text for later use."},
-  {"question": "What does Math.floor() do?", "options": ["Rounds up", "Rounds down to nearest integer", "Returns absolute value", "Returns ceiling"], "correctOptions": ["Rounds down to nearest integer"], "time": 25, "details": "Math.floor() returns the largest integer less than or equal to a number."},
-  {"question": "What does Math.ceil() do?", "options": ["Rounds down", "Rounds up to nearest integer", "Returns absolute value", "Returns floor"], "correctOptions": ["Rounds up to nearest integer"], "time": 25, "details": "Math.ceil() returns the smallest integer greater than or equal to a number."},
-  {"question": "What does Math.random() do?", "options": ["Generates a seeded random number", "Returns a random number between 0 and 1", "Returns integer", "Returns array"], "correctOptions": ["Returns a random number between 0 and 1"], "time": 25, "details": "Math.random() returns a pseudo-random number between 0 (inclusive) and 1 (exclusive)."},
-  {"question": "What is the globalThis object?", "options": ["A browser object", "A standard way to access the global 'this' across environments", "A local variable", "A type of function"], "correctOptions": ["A standard way to access the global 'this' across environments"], "time": 35, "details": "globalThis provides a standard way to access the global object across contexts."},
-  {"question": "What is a generator function?", "options": ["A regular function", "A function that can pause and resume execution", "A built-in function", "A recursive function"], "correctOptions": ["A function that can pause and resume execution"], "time": 35, "details": "Generator functions use function* and yield to pause and resume execution."},
-  {"question": "What does the 'yield' keyword do?", "options": ["Ends a function", "Pauses generator and returns a value", "Starts a function", "Creates an array"], "correctOptions": ["Pauses generator and returns a value"], "time": 30, "details": "yield pauses generator execution and returns a value."},
-  {"question": "What is an iterator?", "options": ["A type of array", "An object that provides a way to access collection elements one by one", "A loop type", "A function"], "correctOptions": ["An object that provides a way to access collection elements one by one"], "time": 35, "details": "Iterator is an object with a next() method that returns {value, done}."},
-  {"question": "What is an iterable?", "options": ["A type of function", "An object that implements the iterator protocol", "A loop construct", "An array method"], "correctOptions": ["An object that implements the iterator protocol"], "time": 35, "details": "Iterable has a Symbol.iterator method that returns an iterator."},
-  {"question": "What does the for...of loop do?", "options": ["Loops over object properties", "Loops over iterable values", "Loops over array indices", "Loops over prototypes"], "correctOptions": ["Loops over iterable values"], "time": 30, "details": "for...of iterates over iterable values, not property keys."},
-  {"question": "What does the for...in loop do?", "options": ["Loops over values", "Loops over enumerable properties", "Loops over array elements", "Loops over methods"], "correctOptions": ["Loops over enumerable properties"], "time": 30, "details": "for...in iterates over enumerable property keys of an object."},
-  {"question": "What is the purpose of 'typeof' operator?", "options": ["Checks variable type", "Creates a new type", "Converts types", "Validates types"], "correctOptions": ["Checks variable type"], "time": 25, "details": "typeof returns a string indicating the type of a value."},
-  {"question": "What does void operator do?", "options": ["Deletes variables", "Evaluates expression and returns undefined", "Creates void object", "Exits function"], "correctOptions": ["Evaluates expression and returns undefined"], "time": 30, "details": "void evaluates an expression and returns undefined."},
-  {"question": "What is the comma operator?", "options": ["Separates array elements", "Evaluates multiple expressions and returns last value", "Creates objects", "Defines arrays"], "correctOptions": ["Evaluates multiple expressions and returns last value"], "time": 30, "details": "The comma operator evaluates expressions left to right and returns the last value."},
-  {"question": "What does !! (double negation) do?", "options": ["Creates a number", "Converts to boolean", "Creates a string", "Deletes a value"], "correctOptions": ["Converts to boolean"], "time": 25, "details": "!! converts a value to its boolean equivalent."},
-  {"question": "What is short-circuit evaluation?", "options": ["Using && and || to execute code based on truthiness", "A loop optimization", "A debugging technique", "A memory optimization"], "correctOptions": ["Using && and || to execute code based on truthiness"], "time": 30, "details": "Short-circuit evaluation stops evaluating once result is determined."},
-  {"question": "What is the nullish coalescing operator (??)?", "options": ["A type of loop", "Returns right operand when left is null/undefined, otherwise left", "Creates null values", "Deletes nulls"], "correctOptions": ["Returns right operand when left is null/undefined, otherwise left"], "time": 30, "details": "?? only coalesces null/undefined, not other falsy values like '' or 0."},
-  {"question": "What is optional chaining (?.)?", "options": ["Creates optional objects", "Safely accesses nested properties, returning undefined if any part is null/undefined", "Makes properties optional", "Deletes properties"], "correctOptions": ["Safely accesses nested properties, returning undefined if any part is null/undefined"], "time": 30, "details": "?. returns undefined instead of throwing errors for null/undefined."},
-  {"question": "What is the logical AND assignment (&&=)?", "options": ["Always assigns", "Assigns only if left operand is truthy", "Assigns only if falsy", "Deletes value"], "correctOptions": ["Assigns only if left operand is truthy"], "time": 30, "details": "x &&= y is equivalent to x = x && y."},
-  {"question": "What is the logical OR assignment (||=)?", "options": ["Always assigns", "Assigns only if left operand is falsy", "Assigns only if truthy", "Deletes value"], "correctOptions": ["Assigns only if left operand is falsy"], "time": 30, "details": "x ||= y is equivalent to x = x || y."},
-  {"question": "What is the nullish assignment (??=)?", "options": ["Always assigns", "Assigns only if left is null or undefined", "Assigns always", "Deletes value"], "correctOptions": ["Assigns only if left is null or undefined"], "time": 30, "details": "x ??= y assigns x = y only when x is null/undefined."},
-  {"question": "What does Date.now() return?", "options": ["Current date string", "Milliseconds since Unix epoch", "Current year", "Date object"], "correctOptions": ["Milliseconds since Unix epoch"], "time": 25, "details": "Date.now() returns the number of milliseconds since January 1, 1970."},
-  {"question": "What is BigInt?", "options": ["A large string", "A numeric type for arbitrarily large integers", "A special object", "A type of array"], "correctOptions": ["A numeric type for arbitrarily large integers"], "time": 30, "details": "BigInt allows representing integers beyond Number's safe integer limit."},
-  {"question": "How do you create a BigInt?", "options": ["Use Big()", "Append 'n' to number or call BigInt()", "Use Number type", "Use big integer syntax"], "correctOptions": ["Append 'n' to number or call BigInt()"], "time": 25, "details": "123n or BigInt(123) creates a BigInt value."},
-  {"question": "What is a private class field?", "options": ["A field that cannot be accessed", "A field using # prefix that's only accessible within the class", "A static field", "A public field"], "correctOptions": ["A field using # prefix that's only accessible within the class"], "time": 35, "details": "Private fields use # prefix and can't be accessed outside the class."},
-  {"question": "What is a static block in a class?", "options": ["A deprecated feature", "Code that runs once when class is defined", "A static property", "A constructor"], "correctOptions": ["Code that runs once when class is defined"], "time": 35, "details": "Static blocks run once during class definition for complex initialization."},
-  {"question": "What is top-level await?", "options": ["Await in any function", "Await at module top level without async function", "A debugging feature", "A performance tool"], "correctOptions": ["Await at module top level without async function"], "time": 35, "details": "Top-level await allows using await at module scope in ES modules."},
-  {"question": "What is dynamic import?", "options": ["import() syntax", "Import that loads modules dynamically at runtime", "Static import", "Default export"], "correctOptions": ["Import that loads modules dynamically at runtime"], "time": 30, "details": "import() returns a Promise and can be used for code splitting."},
-  {"question": "What is a record type in JavaScript?", "options": ["A legacy type", "An object type with fixed keys and values (Object.freeze based)", "A database record", "A JSON type"], "correctOptions": ["An object type with fixed keys and values (Object.freeze based)"], "time": 40, "details": "Record is part of proposed Record/Tuple, using # prefix."},
-  {"question": "What is a tuple type in JavaScript?", "options": ["An array type", "An immutable ordered collection (proposed)", "A set type", "A map type"], "correctOptions": ["An immutable ordered collection (proposed)"], "time": 40, "details": "Tuple is part of proposed Record/Tuple, using [...] syntax."},
-  {"question": "What is the purpose of at() method for arrays?", "options": ["Adds elements", "Gets element at index, supports negative indexing", "Removes elements", "Sorts array"], "correctOptions": ["Gets element at index, supports negative indexing"], "time": 30, "details": "arr.at(-1) gets the last element, unlike bracket notation."},
-  {"question": "What is the purpose of Object.entries()?", "options": ["Returns keys only", "Returns array of [key, value] pairs", "Returns values only", "Returns prototype"], "correctOptions": ["Returns array of [key, value] pairs"], "time": 25, "details": "Object.entries() returns an array of object's own enumerable [key, value] pairs."},
-  {"question": "What is the purpose of Object.fromEntries()?", "options": ["Creates object from arrays", "Converts [key, value] pairs to object", "Creates Map", "Validates object"], "correctOptions": ["Converts [key, value] pairs to object"], "time": 30, "details": "Object.fromEntries() transforms a list of [key, value] pairs to an object."},
-  {"question": "What does Array.prototype.flat() do?", "options": ["Flattens nested arrays to specified depth", "Creates array copy", "Sorts array", "Filters array"], "correctOptions": ["Flattens nested arrays to specified depth"], "time": 30, "details": "flat() creates a new array with sub-array elements concatenated."},
-  {"question": "What does Array.prototype.flatMap() do?", "options": ["Maps then flattens", "Maps each element and flattens result by one level", "Filters and maps", "Creates nested arrays"], "correctOptions": ["Maps each element and flattens result by one level"], "time": 30, "details": "flatMap() is equivalent to map().flat() with better performance."},
-  {"question": "What does Array.prototype.findIndex() do?", "options": ["Finds element", "Returns index of first element that passes test", "Returns element", "Finds last index"], "correctOptions": ["Returns index of first element that passes test"], "time": 25, "details": "findIndex() returns the index of first element satisfying the condition."},
-  {"question": "What does Array.prototype.includes() do?", "options": ["Checks if array includes value", "Returns boolean", "Finds index", "Adds elements"], "correctOptions": ["Checks if array includes value"], "time": 25, "details": "includes() checks if an array contains a value (supports NaN)."},
-  {"question": "What is the purpose of Array.prototype.toReversed()?", "options": ["Reverses in place", "Returns new reversed array without mutating original", "Creates copy", "Sorts descending"], "correctOptions": ["Returns new reversed array without mutating original"], "time": 35, "details": "toReversed() is a mutable method alternative that doesn't modify original."},
-  {"question": "What is the purpose of Array.prototype.toSorted()?", "options": ["Sorts in place", "Returns new sorted array without mutating original", "Creates copy", "Filters array"], "correctOptions": ["Returns new sorted array without mutating original"], "time": 35, "details": "toSorted() is a mutable method alternative that doesn't modify original."},
-  {"question": "What is the purpose of Array.prototype.toSpliced()?", "options": ["Removes elements", "Returns new array with elements removed/added without mutating original", "Copies array", "Finds elements"], "correctOptions": ["Returns new array with elements removed/added without mutating original"], "time": 40, "details": "toSpliced() is a mutable method alternative that doesn't modify original."},
-  {"question": "What is the purpose of Array.prototype.with()?", "options": ["Adds elements", "Returns new array with element at index replaced", "Removes elements", "Copies array"], "correctOptions": ["Returns new array with element at index replaced"], "time": 35, "details": "arr.with(index, value) returns new array with value at index."},
-  {"question": "What does String.prototype.replaceAll() do?", "options": ["Replaces first match", "Replaces all occurrences without using regex", "Removes text", "Finds text"], "correctOptions": ["Replaces all occurrences without using regex"], "time": 25, "details": "replaceAll() replaces all occurrences of a pattern."},
-  {"question": "What is the purpose of String.prototype.startsWith()?", "options": ["Checks end of string", "Checks if string starts with given characters", "Searches string", "Splits string"], "correctOptions": ["Checks if string starts with given characters"], "time": 25, "details": "startsWith() returns true if string starts with specified characters."},
-  {"question": "What is the purpose of String.prototype.endsWith()?", "options": ["Checks start of string", "Checks if string ends with given characters", "Searches string", "Splits string"], "correctOptions": ["Checks if string ends with given characters"], "time": 25, "details": "endsWith() returns true if string ends with specified characters."},
-  {"question": "What is the purpose of String.prototype.at()?", "options": ["Adds characters", "Gets character at index, supports negative indexing", "Removes characters", "Replaces characters"], "correctOptions": ["Gets character at index, supports negative indexing"], "time": 30, "details": "str.at(-1) gets the last character, unlike bracket notation."},
-  {"question": "What is the Error constructor used for?", "options": ["Creates successful result", "Creates error objects for exception handling", "Validates code", "Debugs code"], "correctOptions": ["Creates error objects for exception handling"], "time": 30, "details": "Error creates objects that can be thrown for exception handling."},
-  {"question": "What does try...catch do?", "options": ["Tests code", "Attempts code and handles errors if thrown", "Validates code", "Executes code"], "correctOptions": ["Attempts code and handles errors if thrown"], "time": 30, "details": "try...catch attempts code execution and catches any thrown errors."},
-  {"question": "What is finally block used for?", "options": ["Runs after try, regardless of outcome", "Catches specific errors", "Throws errors", "Skips errors"], "correctOptions": ["Runs after try, regardless of outcome"], "time": 30, "details": "finally runs after try/catch regardless of success or failure."},
-  {"question": "What is the purpose of throw statement?", "options": ["Catches errors", "Manually throws an error", "Ends function", "Returns value"], "correctOptions": ["Manually throws an error"], "time": 25, "details": "throw creates an exception that can be caught by try...catch."},
-  {"question": "What is a custom error class?", "options": ["Built-in error", "Class extending Error for specific error types", "A function", "A module"], "correctOptions": ["Class extending Error for specific error types"], "time": 30, "details": "Custom errors extend Error to create domain-specific error types."}
+  {
+    "question": "What does the spread operator (...) do in JavaScript?",
+    "options": [
+      "Creates a new array",
+      "Expands iterables into individual elements",
+      "Deletes elements",
+      "Converts to string"
+    ],
+    "correctOptions": [
+      "Expands iterables into individual elements"
+    ],
+    "time": 25,
+    "details": "The spread operator expands an array or object into individual elements."
+  },
+  {
+    "question": "What is the difference between == and === in JavaScript?",
+    "options": [
+      "No difference",
+      "== compares value only, === compares value and type",
+      "=== is faster",
+      "== is deprecated"
+    ],
+    "correctOptions": [
+      "== compares value only, === compares value and type"
+    ],
+    "time": 25,
+    "details": "== performs type coercion, while === checks both value and type."
+  },
+  {
+    "question": "What is a closure in JavaScript?",
+    "options": [
+      "A way to close browser tabs",
+      "A function that has access to its outer scope's variables",
+      "A design pattern for error handling",
+      "A method to end loops"
+    ],
+    "correctOptions": [
+      "A function that has access to its outer scope's variables"
+    ],
+    "time": 30,
+    "details": "A closure is a function that remembers variables from its outer scope."
+  },
+  {
+    "question": "What is the purpose of the 'this' keyword in JavaScript?",
+    "options": [
+      "Refers to the current function",
+      "Refers to the current object context",
+      "Creates a new object",
+      "Defines a variable"
+    ],
+    "correctOptions": [
+      "Refers to the current object context"
+    ],
+    "time": 25,
+    "details": "'this' refers to the object where the code is currently executing."
+  },
+  {
+    "question": "What is event bubbling in JavaScript?",
+    "options": [
+      "Events sink down",
+      "Events propagate upward from target to root",
+      "Events stop immediately",
+      "Events are deleted"
+    ],
+    "correctOptions": [
+      "Events propagate upward from target to root"
+    ],
+    "time": 30,
+    "details": "Event bubbling is when an event triggers on the target element first, then bubbles up to parent elements."
+  },
+  {
+    "question": "What does 'use strict' do?",
+    "options": [
+      "Makes code run faster",
+      "Enables stricter parsing and error handling",
+      "Disables console",
+      "Creates strict mode for CSS"
+    ],
+    "correctOptions": [
+      "Enables stricter parsing and error handling"
+    ],
+    "time": 25,
+    "details": "'use strict' enables strict mode which catches common coding mistakes."
+  },
+  {
+    "question": "What is the difference between let and var?",
+    "options": [
+      "No difference",
+      "let is block-scoped, var is function-scoped",
+      "var is faster",
+      "let is deprecated"
+    ],
+    "correctOptions": [
+      "let is block-scoped, var is function-scoped"
+    ],
+    "time": 25,
+    "details": "var is function-scoped while let is block-scoped, preventing hoisting issues."
+  },
+  {
+    "question": "What is hoisting in JavaScript?",
+    "options": [
+      "Moving code to a different file",
+      "Moving declarations to the top of the scope",
+      "Removing unused code",
+      "Loading external scripts"
+    ],
+    "correctOptions": [
+      "Moving declarations to the top of the scope"
+    ],
+    "time": 30,
+    "details": "Hoisting moves variable and function declarations to the top of their scope before execution."
+  },
+  {
+    "question": "What does the 'new' keyword do?",
+    "options": [
+      "Creates a copy of an object",
+      "Creates a new instance of an object",
+      "Deletes an object",
+      "Converts a function to a class"
+    ],
+    "correctOptions": [
+      "Creates a new instance of an object"
+    ],
+    "time": 25,
+    "details": "new creates a new object and calls the constructor function with 'this' pointing to the new object."
+  },
+  {
+    "question": "What is the purpose of JSON.stringify()?",
+    "options": [
+      "Parses JSON",
+      "Converts JavaScript object to JSON string",
+      "Validates JSON",
+      "Creates JSON schema"
+    ],
+    "correctOptions": [
+      "Converts JavaScript object to JSON string"
+    ],
+    "time": 25,
+    "details": "JSON.stringify() converts a JavaScript object to a JSON string representation."
+  },
+  {
+    "question": "What is the purpose of JSON.parse()?",
+    "options": [
+      "Creates JSON objects",
+      "Converts JSON string to JavaScript object",
+      "Validates JSON syntax",
+      "Formats JSON data"
+    ],
+    "correctOptions": [
+      "Converts JSON string to JavaScript object"
+    ],
+    "time": 25,
+    "details": "JSON.parse() parses a JSON string and returns a JavaScript object."
+  },
+  {
+    "question": "What is an arrow function?",
+    "options": [
+      "A function that moves elements",
+      "A concise function syntax using =>",
+      "A recursive function",
+      "A deprecated function type"
+    ],
+    "correctOptions": [
+      "A concise function syntax using =>"
+    ],
+    "time": 25,
+    "details": "Arrow functions provide a shorter syntax and lexically bind 'this'."
+  },
+  {
+    "question": "What is the difference between null and undefined?",
+    "options": [
+      "They are the same",
+      "null is intentional absence, undefined is uninitialized",
+      "undefined is a keyword",
+      "null is always an error"
+    ],
+    "correctOptions": [
+      "null is intentional absence, undefined is uninitialized"
+    ],
+    "time": 30,
+    "details": "null is assigned intentionally while undefined means a variable hasn't been assigned."
+  },
+  {
+    "question": "What does Array.prototype.map() do?",
+    "options": [
+      "Filters array elements",
+      "Creates a new array by transforming each element",
+      "Sorts the array",
+      "Removes duplicates"
+    ],
+    "correctOptions": [
+      "Creates a new array by transforming each element"
+    ],
+    "time": 25,
+    "details": "map() creates a new array by applying a function to each element."
+  },
+  {
+    "question": "What does Array.prototype.filter() do?",
+    "options": [
+      "Transforms elements",
+      "Creates a new array with elements that pass a test",
+      "Sorts the array",
+      "Finds one element"
+    ],
+    "correctOptions": [
+      "Creates a new array with elements that pass a test"
+    ],
+    "time": 25,
+    "details": "filter() creates a new array with elements that satisfy a condition."
+  },
+  {
+    "question": "What does Array.prototype.reduce() do?",
+    "options": [
+      "Shrinks the array",
+      "Reduces array to a single value",
+      "Removes elements",
+      "Creates subarrays"
+    ],
+    "correctOptions": [
+      "Reduces array to a single value"
+    ],
+    "time": 30,
+    "details": "reduce() reduces an array to a single value by executing a function for each element."
+  },
+  {
+    "question": "What is the purpose of setTimeout?",
+    "options": [
+      "Sets a timer to execute code after a delay",
+      "Sets an interval",
+      "Clears a timer",
+      "Pauses execution"
+    ],
+    "correctOptions": [
+      "Sets a timer to execute code after a delay"
+    ],
+    "time": 25,
+    "details": "setTimeout executes a function after a specified number of milliseconds."
+  },
+  {
+    "question": "What is the purpose of setInterval?",
+    "options": [
+      "Executes once after delay",
+      "Executes repeatedly at specified intervals",
+      "Clears timers",
+      "Stops execution"
+    ],
+    "correctOptions": [
+      "Executes repeatedly at specified intervals"
+    ],
+    "time": 25,
+    "details": "setInterval executes a function repeatedly at specified time intervals."
+  },
+  {
+    "question": "What is a Promise in JavaScript?",
+    "options": [
+      "A variable type",
+      "An object representing eventual completion of async operation",
+      "A loop construct",
+      "A design pattern"
+    ],
+    "correctOptions": [
+      "An object representing eventual completion of async operation"
+    ],
+    "time": 30,
+    "details": "Promise represents a value that may be available now, in the future, or never."
+  },
+  {
+    "question": "What does Promise.all() do?",
+    "options": [
+      "Returns first resolved",
+      "Waits for all promises to resolve",
+      "Catches errors",
+      "Cancels promises"
+    ],
+    "correctOptions": [
+      "Waits for all promises to resolve"
+    ],
+    "time": 30,
+    "details": "Promise.all() returns a promise that resolves when all input promises resolve."
+  },
+  {
+    "question": "What does Promise.race() do?",
+    "options": [
+      "Waits for all",
+      "Returns first settled promise",
+      "Cancels promises",
+      "Filters promises"
+    ],
+    "correctOptions": [
+      "Returns first settled promise"
+    ],
+    "time": 30,
+    "details": "Promise.race() returns the first promise that settles (resolves or rejects)."
+  },
+  {
+    "question": "What is async/await?",
+    "options": [
+      "A loop construct",
+      "Syntax for working with Promises",
+      "A variable type",
+      "A debugging tool"
+    ],
+    "correctOptions": [
+      "Syntax for working with Promises"
+    ],
+    "time": 25,
+    "details": "async/await provides cleaner syntax for working with Promises."
+  },
+  {
+    "question": "What does the 'await' keyword do?",
+    "options": [
+      "Waits for a Promise to resolve",
+      "Creates a Promise",
+      "Deletes a Promise",
+      "Catches Promise errors"
+    ],
+    "correctOptions": [
+      "Waits for a Promise to resolve"
+    ],
+    "time": 25,
+    "details": "await pauses execution until a Promise resolves."
+  },
+  {
+    "question": "What is a callback function?",
+    "options": [
+      "A function called at the end",
+      "A function passed as an argument to another function",
+      "A recursive function",
+      "A built-in function"
+    ],
+    "correctOptions": [
+      "A function passed as an argument to another function"
+    ],
+    "time": 25,
+    "details": "A callback is a function passed as an argument to be executed later."
+  },
+  {
+    "question": "What is the event loop in JavaScript?",
+    "options": [
+      "A loop in code",
+      "A mechanism that handles async operations",
+      "A debugging tool",
+      "A data structure"
+    ],
+    "correctOptions": [
+      "A mechanism that handles async operations"
+    ],
+    "time": 35,
+    "details": "The event loop continuously checks the call stack and task queue to execute async code."
+  },
+  {
+    "question": "What is the call stack?",
+    "options": [
+      "A data structure for managing function calls",
+      "A debugging tool",
+      "A type of array",
+      "A browser feature"
+    ],
+    "correctOptions": [
+      "A data structure for managing function calls"
+    ],
+    "time": 30,
+    "details": "The call stack is a LIFO data structure that tracks function execution."
+  },
+  {
+    "question": "What is a module in JavaScript?",
+    "options": [
+      "A CSS file",
+      "A reusable code unit that can be imported/exported",
+      "A function type",
+      "A design pattern"
+    ],
+    "correctOptions": [
+      "A reusable code unit that can be imported/exported"
+    ],
+    "time": 25,
+    "details": "Modules allow splitting code into reusable files with imports/exports."
+  },
+  {
+    "question": "What does 'export default' do?",
+    "options": [
+      "Exports multiple things",
+      "Exports a single default value",
+      "Exports nothing",
+      "Imports a module"
+    ],
+    "correctOptions": [
+      "Exports a single default value"
+    ],
+    "time": 25,
+    "details": "export default allows one default export per module."
+  },
+  {
+    "question": "What does 'import' do?",
+    "options": [
+      "Exports code",
+      "Brings in exported code from other modules",
+      "Creates variables",
+      "Deletes code"
+    ],
+    "correctOptions": [
+      "Brings in exported code from other modules"
+    ],
+    "time": 25,
+    "details": "import brings in exported functions, objects, or values from other modules."
+  },
+  {
+    "question": "What is destructuring in JavaScript?",
+    "options": [
+      "A loop type",
+      "A syntax to extract values from arrays or objects",
+      "A debugging tool",
+      "A function type"
+    ],
+    "correctOptions": [
+      "A syntax to extract values from arrays or objects"
+    ],
+    "time": 30,
+    "details": "Destructuring allows extracting array elements or object properties into variables."
+  },
+  {
+    "question": "What is the spread operator with objects?",
+    "options": [
+      "Creates arrays",
+      "Creates a shallow copy of an object with added/overridden properties",
+      "Deletes properties",
+      "Converts to string"
+    ],
+    "correctOptions": [
+      "Creates a shallow copy of an object with added/overridden properties"
+    ],
+    "time": 30,
+    "details": "Spread with objects creates a new object, copying properties and adding new ones."
+  },
+  {
+    "question": "What is a template literal?",
+    "options": [
+      "A string with backticks allowing embedded expressions",
+      "A deprecated string type",
+      "A JSON format",
+      "A regex pattern"
+    ],
+    "correctOptions": [
+      "A string with backticks allowing embedded expressions"
+    ],
+    "time": 25,
+    "details": "Template literals use backticks and allow ${expression} interpolation."
+  },
+  {
+    "question": "What does Object.keys() return?",
+    "options": [
+      "Values of an object",
+      "An array of object keys",
+      "An array of object entries",
+      "The object's prototype"
+    ],
+    "correctOptions": [
+      "An array of object keys"
+    ],
+    "time": 25,
+    "details": "Object.keys() returns an array of a object's own property keys."
+  },
+  {
+    "question": "What does Object.values() return?",
+    "options": [
+      "An array of keys",
+      "An array of object values",
+      "An array of entries",
+      "The object's methods"
+    ],
+    "correctOptions": [
+      "An array of object values"
+    ],
+    "time": 25,
+    "details": "Object.values() returns an array of the object's own property values."
+  },
+  {
+    "question": "What is the purpose of Object.assign()?",
+    "options": [
+      "Compares objects",
+      "Copies properties from source to target object",
+      "Deletes properties",
+      "Creates a class"
+    ],
+    "correctOptions": [
+      "Copies properties from source to target object"
+    ],
+    "time": 25,
+    "details": "Object.assign() copies properties from one or more source objects to a target object."
+  },
+  {
+    "question": "What is a factory function?",
+    "options": [
+      "A built-in function",
+      "A function that returns a new object",
+      "A constructor function",
+      "A recursive function"
+    ],
+    "correctOptions": [
+      "A function that returns a new object"
+    ],
+    "time": 30,
+    "details": "A factory function is a regular function that returns new objects."
+  },
+  {
+    "question": "What is the purpose of the 'new' keyword with classes?",
+    "options": [
+      "Creates a new class",
+      "Creates a new instance of a class",
+      "Extends a class",
+      "Deletes an instance"
+    ],
+    "correctOptions": [
+      "Creates a new instance of a class"
+    ],
+    "time": 25,
+    "details": "new creates an instance of a class using its constructor."
+  },
+  {
+    "question": "What is inheritance in JavaScript?",
+    "options": [
+      "Copying code",
+      "A class extending another to inherit properties and methods",
+      "Creating multiple instances",
+      "Using multiple classes"
+    ],
+    "correctOptions": [
+      "A class extending another to inherit properties and methods"
+    ],
+    "time": 30,
+    "details": "Inheritance allows a class to use properties and methods from another class."
+  },
+  {
+    "question": "What does 'super' do in a class?",
+    "options": [
+      "Calls the parent constructor or methods",
+      "Creates a new object",
+      "Defines a static method",
+      "Imports parent class"
+    ],
+    "correctOptions": [
+      "Calls the parent constructor or methods"
+    ],
+    "time": 25,
+    "details": "super() calls the parent constructor; super.method() calls parent methods."
+  },
+  {
+    "question": "What is a static method?",
+    "options": [
+      "A method on instances",
+      "A method on the class itself, not instances",
+      "A private method",
+      "A deprecated method"
+    ],
+    "correctOptions": [
+      "A method on the class itself, not instances"
+    ],
+    "time": 30,
+    "details": "Static methods belong to the class, not instances, and are called on the class."
+  },
+  {
+    "question": "What is the purpose of 'instanceof'?",
+    "options": [
+      "Compares two objects",
+      "Checks if an object is an instance of a class",
+      "Creates a new instance",
+      "Deletes an instance"
+    ],
+    "correctOptions": [
+      "Checks if an object is an instance of a class"
+    ],
+    "time": 25,
+    "details": "instanceof checks if an object belongs to a class or its subclasses."
+  },
+  {
+    "question": "What is a proxy in JavaScript?",
+    "options": [
+      "A network tool",
+      "An object that defines custom behavior for fundamental operations",
+      "A debugging tool",
+      "A type of array"
+    ],
+    "correctOptions": [
+      "An object that defines custom behavior for fundamental operations"
+    ],
+    "time": 35,
+    "details": "Proxy allows intercepting and customizing operations like property access, assignment, and function calls."
+  },
+  {
+    "question": "What is a Reflect in JavaScript?",
+    "options": [
+      "A debugging tool",
+      "A built-in object providing methods for interceptable operations",
+      "A type of Promise",
+      "A validation library"
+    ],
+    "correctOptions": [
+      "A built-in object providing methods for interceptable operations"
+    ],
+    "time": 35,
+    "details": "Reflect provides methods that correspond to Proxy handler methods."
+  },
+  {
+    "question": "What is a Symbol in JavaScript?",
+    "options": [
+      "A string type",
+      "A unique and immutable primitive value",
+      "A number type",
+      "A boolean type"
+    ],
+    "correctOptions": [
+      "A unique and immutable primitive value"
+    ],
+    "time": 30,
+    "details": "Symbol is a primitive type used as object property keys to ensure uniqueness."
+  },
+  {
+    "question": "What does Object.freeze() do?",
+    "options": [
+      "Deletes an object",
+      "Prevents modifications to an object",
+      "Creates a new object",
+      "Copies an object"
+    ],
+    "correctOptions": [
+      "Prevents modifications to an object"
+    ],
+    "time": 30,
+    "details": "Object.freeze() makes an object immutable - no additions, deletions, or changes."
+  },
+  {
+    "question": "What does Object.seal() do?",
+    "options": [
+      "Deletes properties",
+      "Prevents adding/removing properties but allows modifications",
+      "Freezes the object completely",
+      "Creates a proxy"
+    ],
+    "correctOptions": [
+      "Prevents adding/removing properties but allows modifications"
+    ],
+    "time": 30,
+    "details": "Object.seal() prevents adding or removing properties but allows value modifications."
+  },
+  {
+    "question": "What is a WeakMap?",
+    "options": [
+      "A Map type",
+      "A collection of key-value pairs with weak references to keys",
+      "A regular object",
+      "A type of array"
+    ],
+    "correctOptions": [
+      "A collection of key-value pairs with weak references to keys"
+    ],
+    "time": 35,
+    "details": "WeakMap holds keys weakly - keys can be garbage collected when no references remain."
+  },
+  {
+    "question": "What is a WeakSet?",
+    "options": [
+      "A Set type",
+      "A collection of objects with weak references",
+      "A regular array",
+      "A type of Map"
+    ],
+    "correctOptions": [
+      "A collection of objects with weak references"
+    ],
+    "time": 35,
+    "details": "WeakSet stores objects weakly - they can be garbage collected."
+  },
+  {
+    "question": "What is the purpose of Array.isArray()?",
+    "options": [
+      "Checks if value is an array",
+      "Converts to array",
+      "Creates an array",
+      "Sorts an array"
+    ],
+    "correctOptions": [
+      "Checks if value is an array"
+    ],
+    "time": 25,
+    "details": "Array.isArray() returns true if the argument is an array."
+  },
+  {
+    "question": "What does Array.prototype.slice() do?",
+    "options": [
+      "Removes elements",
+      "Returns a shallow copy of a portion of an array",
+      "Adds elements",
+      "Sorts the array"
+    ],
+    "correctOptions": [
+      "Returns a shallow copy of a portion of an array"
+    ],
+    "time": 25,
+    "details": "slice() returns a copy of a portion of an array without modifying the original."
+  },
+  {
+    "question": "What does Array.prototype.splice() do?",
+    "options": [
+      "Creates a copy",
+      "Adds or removes elements from an array",
+      "Sorts an array",
+      "Filters an array"
+    ],
+    "correctOptions": [
+      "Adds or removes elements from an array"
+    ],
+    "time": 25,
+    "details": "splice() changes array content by adding/removing elements."
+  },
+  {
+    "question": "What is the difference between slice and splice?",
+    "options": [
+      "They are the same",
+      "slice returns copy, splice modifies original",
+      "splice is faster",
+      "slice is deprecated"
+    ],
+    "correctOptions": [
+      "slice returns copy, splice modifies original"
+    ],
+    "time": 30,
+    "details": "slice() returns a new array without modifying; splice() modifies the original array."
+  },
+  {
+    "question": "What does String.prototype.trim() do?",
+    "options": [
+      "Removes whitespace from both ends",
+      "Splits a string",
+      "Replaces characters",
+      "Converts to uppercase"
+    ],
+    "correctOptions": [
+      "Removes whitespace from both ends"
+    ],
+    "time": 25,
+    "details": "trim() removes whitespace from the beginning and end of a string."
+  },
+  {
+    "question": "What does String.prototype.split() do?",
+    "options": [
+      "Joins strings",
+      "Splits a string into an array",
+      "Trims a string",
+      "Replaces text"
+    ],
+    "correctOptions": [
+      "Splits a string into an array"
+    ],
+    "time": 25,
+    "details": "split() splits a string into an array based on a separator."
+  },
+  {
+    "question": "What does String.prototype.replace() do?",
+    "options": [
+      "Removes text",
+      "Replaces text with new text",
+      "Deletes text",
+      "Duplicates text"
+    ],
+    "correctOptions": [
+      "Replaces text with new text"
+    ],
+    "time": 25,
+    "details": "replace() returns a new string with some or all matches of a pattern replaced."
+  },
+  {
+    "question": "What is a regular expression?",
+    "options": [
+      "A built-in object",
+      "A pattern used to match character combinations in strings",
+      "A type of array",
+      "A validation tool"
+    ],
+    "correctOptions": [
+      "A pattern used to match character combinations in strings"
+    ],
+    "time": 30,
+    "details": "Regex is a pattern that describes text to match or search for."
+  },
+  {
+    "question": "What does the 'test' method of RegExp do?",
+    "options": [
+      "Creates a regex",
+      "Tests if a pattern matches a string",
+      "Replaces text",
+      "Validates input"
+    ],
+    "correctOptions": [
+      "Tests if a pattern matches a string"
+    ],
+    "time": 25,
+    "details": "test() returns true if the pattern matches the string, false otherwise."
+  },
+  {
+    "question": "What does the 'exec' method of RegExp do?",
+    "options": [
+      "Executes code",
+      "Returns match details or null",
+      "Tests a pattern",
+      "Replaces text"
+    ],
+    "correctOptions": [
+      "Returns match details or null"
+    ],
+    "time": 30,
+    "details": "exec() returns match details as an array or null if no match."
+  },
+  {
+    "question": "What is the purpose of the 'i' flag in regex?",
+    "options": [
+      "Makes regex faster",
+      "Makes matching case-insensitive",
+      "Matches multiple times",
+      "Matches globally"
+    ],
+    "correctOptions": [
+      "Makes matching case-insensitive"
+    ],
+    "time": 25,
+    "details": "The 'i' flag makes the regex match regardless of case."
+  },
+  {
+    "question": "What is the purpose of the 'g' flag in regex?",
+    "options": [
+      "Case insensitive",
+      "Global search - finds all matches",
+      "Match at start",
+      "Match at end"
+    ],
+    "correctOptions": [
+      "Global search - finds all matches"
+    ],
+    "time": 25,
+    "details": "The 'g' flag performs a global search, finding all matches."
+  },
+  {
+    "question": "What is a capturing group in regex?",
+    "options": [
+      "A group that can't be captured",
+      "A part of the pattern in parentheses that can be captured",
+      "A negative group",
+      "A special group"
+    ],
+    "correctOptions": [
+      "A part of the pattern in parentheses that can be captured"
+    ],
+    "time": 30,
+    "details": "Capturing groups capture matched text for later use."
+  },
+  {
+    "question": "What does Math.floor() do?",
+    "options": [
+      "Rounds up",
+      "Rounds down to nearest integer",
+      "Returns absolute value",
+      "Returns ceiling"
+    ],
+    "correctOptions": [
+      "Rounds down to nearest integer"
+    ],
+    "time": 25,
+    "details": "Math.floor() returns the largest integer less than or equal to a number."
+  },
+  {
+    "question": "What does Math.ceil() do?",
+    "options": [
+      "Rounds down",
+      "Rounds up to nearest integer",
+      "Returns absolute value",
+      "Returns floor"
+    ],
+    "correctOptions": [
+      "Rounds up to nearest integer"
+    ],
+    "time": 25,
+    "details": "Math.ceil() returns the smallest integer greater than or equal to a number."
+  },
+  {
+    "question": "What does Math.random() do?",
+    "options": [
+      "Generates a seeded random number",
+      "Returns a random number between 0 and 1",
+      "Returns integer",
+      "Returns array"
+    ],
+    "correctOptions": [
+      "Returns a random number between 0 and 1"
+    ],
+    "time": 25,
+    "details": "Math.random() returns a pseudo-random number between 0 (inclusive) and 1 (exclusive)."
+  },
+  {
+    "question": "What is the globalThis object?",
+    "options": [
+      "A browser object",
+      "A standard way to access the global 'this' across environments",
+      "A local variable",
+      "A type of function"
+    ],
+    "correctOptions": [
+      "A standard way to access the global 'this' across environments"
+    ],
+    "time": 35,
+    "details": "globalThis provides a standard way to access the global object across contexts."
+  },
+  {
+    "question": "What is a generator function?",
+    "options": [
+      "A regular function",
+      "A function that can pause and resume execution",
+      "A built-in function",
+      "A recursive function"
+    ],
+    "correctOptions": [
+      "A function that can pause and resume execution"
+    ],
+    "time": 35,
+    "details": "Generator functions use function* and yield to pause and resume execution."
+  },
+  {
+    "question": "What does the 'yield' keyword do?",
+    "options": [
+      "Ends a function",
+      "Pauses generator and returns a value",
+      "Starts a function",
+      "Creates an array"
+    ],
+    "correctOptions": [
+      "Pauses generator and returns a value"
+    ],
+    "time": 30,
+    "details": "yield pauses generator execution and returns a value."
+  },
+  {
+    "question": "What is an iterator?",
+    "options": [
+      "A type of array",
+      "An object that provides a way to access collection elements one by one",
+      "A loop type",
+      "A function"
+    ],
+    "correctOptions": [
+      "An object that provides a way to access collection elements one by one"
+    ],
+    "time": 35,
+    "details": "Iterator is an object with a next() method that returns {value, done}."
+  },
+  {
+    "question": "What is an iterable?",
+    "options": [
+      "A type of function",
+      "An object that implements the iterator protocol",
+      "A loop construct",
+      "An array method"
+    ],
+    "correctOptions": [
+      "An object that implements the iterator protocol"
+    ],
+    "time": 35,
+    "details": "Iterable has a Symbol.iterator method that returns an iterator."
+  },
+  {
+    "question": "What does the for...of loop do?",
+    "options": [
+      "Loops over object properties",
+      "Loops over iterable values",
+      "Loops over array indices",
+      "Loops over prototypes"
+    ],
+    "correctOptions": [
+      "Loops over iterable values"
+    ],
+    "time": 30,
+    "details": "for...of iterates over iterable values, not property keys."
+  },
+  {
+    "question": "What does the for...in loop do?",
+    "options": [
+      "Loops over values",
+      "Loops over enumerable properties",
+      "Loops over array elements",
+      "Loops over methods"
+    ],
+    "correctOptions": [
+      "Loops over enumerable properties"
+    ],
+    "time": 30,
+    "details": "for...in iterates over enumerable property keys of an object."
+  },
+  {
+    "question": "What is the purpose of 'typeof' operator?",
+    "options": [
+      "Checks variable type",
+      "Creates a new type",
+      "Converts types",
+      "Validates types"
+    ],
+    "correctOptions": [
+      "Checks variable type"
+    ],
+    "time": 25,
+    "details": "typeof returns a string indicating the type of a value."
+  },
+  {
+    "question": "What does void operator do?",
+    "options": [
+      "Deletes variables",
+      "Evaluates expression and returns undefined",
+      "Creates void object",
+      "Exits function"
+    ],
+    "correctOptions": [
+      "Evaluates expression and returns undefined"
+    ],
+    "time": 30,
+    "details": "void evaluates an expression and returns undefined."
+  },
+  {
+    "question": "What is the comma operator?",
+    "options": [
+      "Separates array elements",
+      "Evaluates multiple expressions and returns last value",
+      "Creates objects",
+      "Defines arrays"
+    ],
+    "correctOptions": [
+      "Evaluates multiple expressions and returns last value"
+    ],
+    "time": 30,
+    "details": "The comma operator evaluates expressions left to right and returns the last value."
+  },
+  {
+    "question": "What does !! (double negation) do?",
+    "options": [
+      "Creates a number",
+      "Converts to boolean",
+      "Creates a string",
+      "Deletes a value"
+    ],
+    "correctOptions": [
+      "Converts to boolean"
+    ],
+    "time": 25,
+    "details": "!! converts a value to its boolean equivalent."
+  },
+  {
+    "question": "What is short-circuit evaluation?",
+    "options": [
+      "Using && and || to execute code based on truthiness",
+      "A loop optimization",
+      "A debugging technique",
+      "A memory optimization"
+    ],
+    "correctOptions": [
+      "Using && and || to execute code based on truthiness"
+    ],
+    "time": 30,
+    "details": "Short-circuit evaluation stops evaluating once result is determined."
+  },
+  {
+    "question": "What is the nullish coalescing operator (??)?",
+    "options": [
+      "A type of loop",
+      "Returns right operand when left is null/undefined, otherwise left",
+      "Creates null values",
+      "Deletes nulls"
+    ],
+    "correctOptions": [
+      "Returns right operand when left is null/undefined, otherwise left"
+    ],
+    "time": 30,
+    "details": "?? only coalesces null/undefined, not other falsy values like '' or 0."
+  },
+  {
+    "question": "What is optional chaining (?.)?",
+    "options": [
+      "Creates optional objects",
+      "Safely accesses nested properties, returning undefined if any part is null/undefined",
+      "Makes properties optional",
+      "Deletes properties"
+    ],
+    "correctOptions": [
+      "Safely accesses nested properties, returning undefined if any part is null/undefined"
+    ],
+    "time": 30,
+    "details": "?. returns undefined instead of throwing errors for null/undefined."
+  },
+  {
+    "question": "What is the logical AND assignment (&&=)?",
+    "options": [
+      "Always assigns",
+      "Assigns only if left operand is truthy",
+      "Assigns only if falsy",
+      "Deletes value"
+    ],
+    "correctOptions": [
+      "Assigns only if left operand is truthy"
+    ],
+    "time": 30,
+    "details": "x &&= y is equivalent to x = x && y."
+  },
+  {
+    "question": "What is the logical OR assignment (||=)?",
+    "options": [
+      "Always assigns",
+      "Assigns only if left operand is falsy",
+      "Assigns only if truthy",
+      "Deletes value"
+    ],
+    "correctOptions": [
+      "Assigns only if left operand is falsy"
+    ],
+    "time": 30,
+    "details": "x ||= y is equivalent to x = x || y."
+  },
+  {
+    "question": "What is the nullish assignment (??=)?",
+    "options": [
+      "Always assigns",
+      "Assigns only if left is null or undefined",
+      "Assigns always",
+      "Deletes value"
+    ],
+    "correctOptions": [
+      "Assigns only if left is null or undefined"
+    ],
+    "time": 30,
+    "details": "x ??= y assigns x = y only when x is null/undefined."
+  },
+  {
+    "question": "What does Date.now() return?",
+    "options": [
+      "Current date string",
+      "Milliseconds since Unix epoch",
+      "Current year",
+      "Date object"
+    ],
+    "correctOptions": [
+      "Milliseconds since Unix epoch"
+    ],
+    "time": 25,
+    "details": "Date.now() returns the number of milliseconds since January 1, 1970."
+  },
+  {
+    "question": "What is BigInt?",
+    "options": [
+      "A large string",
+      "A numeric type for arbitrarily large integers",
+      "A special object",
+      "A type of array"
+    ],
+    "correctOptions": [
+      "A numeric type for arbitrarily large integers"
+    ],
+    "time": 30,
+    "details": "BigInt allows representing integers beyond Number's safe integer limit."
+  },
+  {
+    "question": "How do you create a BigInt?",
+    "options": [
+      "Use Big()",
+      "Append 'n' to number or call BigInt()",
+      "Use Number type",
+      "Use big integer syntax"
+    ],
+    "correctOptions": [
+      "Append 'n' to number or call BigInt()"
+    ],
+    "time": 25,
+    "details": "123n or BigInt(123) creates a BigInt value."
+  },
+  {
+    "question": "What is a private class field?",
+    "options": [
+      "A field that cannot be accessed",
+      "A field using # prefix that's only accessible within the class",
+      "A static field",
+      "A public field"
+    ],
+    "correctOptions": [
+      "A field using # prefix that's only accessible within the class"
+    ],
+    "time": 35,
+    "details": "Private fields use # prefix and can't be accessed outside the class."
+  },
+  {
+    "question": "What is a static block in a class?",
+    "options": [
+      "A deprecated feature",
+      "Code that runs once when class is defined",
+      "A static property",
+      "A constructor"
+    ],
+    "correctOptions": [
+      "Code that runs once when class is defined"
+    ],
+    "time": 35,
+    "details": "Static blocks run once during class definition for complex initialization."
+  },
+  {
+    "question": "What is top-level await?",
+    "options": [
+      "Await in any function",
+      "Await at module top level without async function",
+      "A debugging feature",
+      "A performance tool"
+    ],
+    "correctOptions": [
+      "Await at module top level without async function"
+    ],
+    "time": 35,
+    "details": "Top-level await allows using await at module scope in ES modules."
+  },
+  {
+    "question": "What is dynamic import?",
+    "options": [
+      "import() syntax",
+      "Import that loads modules dynamically at runtime",
+      "Static import",
+      "Default export"
+    ],
+    "correctOptions": [
+      "Import that loads modules dynamically at runtime"
+    ],
+    "time": 30,
+    "details": "import() returns a Promise and can be used for code splitting."
+  },
+  {
+    "question": "What is a record type in JavaScript?",
+    "options": [
+      "A legacy type",
+      "An object type with fixed keys and values (Object.freeze based)",
+      "A database record",
+      "A JSON type"
+    ],
+    "correctOptions": [
+      "An object type with fixed keys and values (Object.freeze based)"
+    ],
+    "time": 40,
+    "details": "Record is part of proposed Record/Tuple, using # prefix."
+  },
+  {
+    "question": "What is a tuple type in JavaScript?",
+    "options": [
+      "An array type",
+      "An immutable ordered collection (proposed)",
+      "A set type",
+      "A map type"
+    ],
+    "correctOptions": [
+      "An immutable ordered collection (proposed)"
+    ],
+    "time": 40,
+    "details": "Tuple is part of proposed Record/Tuple, using [...] syntax."
+  },
+  {
+    "question": "What is the purpose of at() method for arrays?",
+    "options": [
+      "Adds elements",
+      "Gets element at index, supports negative indexing",
+      "Removes elements",
+      "Sorts array"
+    ],
+    "correctOptions": [
+      "Gets element at index, supports negative indexing"
+    ],
+    "time": 30,
+    "details": "arr.at(-1) gets the last element, unlike bracket notation."
+  },
+  {
+    "question": "What is the purpose of Object.entries()?",
+    "options": [
+      "Returns keys only",
+      "Returns array of [key, value] pairs",
+      "Returns values only",
+      "Returns prototype"
+    ],
+    "correctOptions": [
+      "Returns array of [key, value] pairs"
+    ],
+    "time": 25,
+    "details": "Object.entries() returns an array of object's own enumerable [key, value] pairs."
+  },
+  {
+    "question": "What is the purpose of Object.fromEntries()?",
+    "options": [
+      "Creates object from arrays",
+      "Converts [key, value] pairs to object",
+      "Creates Map",
+      "Validates object"
+    ],
+    "correctOptions": [
+      "Converts [key, value] pairs to object"
+    ],
+    "time": 30,
+    "details": "Object.fromEntries() transforms a list of [key, value] pairs to an object."
+  },
+  {
+    "question": "What does Array.prototype.flat() do?",
+    "options": [
+      "Flattens nested arrays to specified depth",
+      "Creates array copy",
+      "Sorts array",
+      "Filters array"
+    ],
+    "correctOptions": [
+      "Flattens nested arrays to specified depth"
+    ],
+    "time": 30,
+    "details": "flat() creates a new array with sub-array elements concatenated."
+  },
+  {
+    "question": "What does Array.prototype.flatMap() do?",
+    "options": [
+      "Maps then flattens",
+      "Maps each element and flattens result by one level",
+      "Filters and maps",
+      "Creates nested arrays"
+    ],
+    "correctOptions": [
+      "Maps each element and flattens result by one level"
+    ],
+    "time": 30,
+    "details": "flatMap() is equivalent to map().flat() with better performance."
+  },
+  {
+    "question": "What does Array.prototype.findIndex() do?",
+    "options": [
+      "Finds element",
+      "Returns index of first element that passes test",
+      "Returns element",
+      "Finds last index"
+    ],
+    "correctOptions": [
+      "Returns index of first element that passes test"
+    ],
+    "time": 25,
+    "details": "findIndex() returns the index of first element satisfying the condition."
+  },
+  {
+    "question": "What does Array.prototype.includes() do?",
+    "options": [
+      "Checks if array includes value",
+      "Returns boolean",
+      "Finds index",
+      "Adds elements"
+    ],
+    "correctOptions": [
+      "Checks if array includes value"
+    ],
+    "time": 25,
+    "details": "includes() checks if an array contains a value (supports NaN)."
+  },
+  {
+    "question": "What is the purpose of Array.prototype.toReversed()?",
+    "options": [
+      "Reverses in place",
+      "Returns new reversed array without mutating original",
+      "Creates copy",
+      "Sorts descending"
+    ],
+    "correctOptions": [
+      "Returns new reversed array without mutating original"
+    ],
+    "time": 35,
+    "details": "toReversed() is a mutable method alternative that doesn't modify original."
+  },
+  {
+    "question": "What is the purpose of Array.prototype.toSorted()?",
+    "options": [
+      "Sorts in place",
+      "Returns new sorted array without mutating original",
+      "Creates copy",
+      "Filters array"
+    ],
+    "correctOptions": [
+      "Returns new sorted array without mutating original"
+    ],
+    "time": 35,
+    "details": "toSorted() is a mutable method alternative that doesn't modify original."
+  },
+  {
+    "question": "What is the purpose of Array.prototype.toSpliced()?",
+    "options": [
+      "Removes elements",
+      "Returns new array with elements removed/added without mutating original",
+      "Copies array",
+      "Finds elements"
+    ],
+    "correctOptions": [
+      "Returns new array with elements removed/added without mutating original"
+    ],
+    "time": 40,
+    "details": "toSpliced() is a mutable method alternative that doesn't modify original."
+  },
+  {
+    "question": "What is the purpose of Array.prototype.with()?",
+    "options": [
+      "Adds elements",
+      "Returns new array with element at index replaced",
+      "Removes elements",
+      "Copies array"
+    ],
+    "correctOptions": [
+      "Returns new array with element at index replaced"
+    ],
+    "time": 35,
+    "details": "arr.with(index, value) returns new array with value at index."
+  },
+  {
+    "question": "What does String.prototype.replaceAll() do?",
+    "options": [
+      "Replaces first match",
+      "Replaces all occurrences without using regex",
+      "Removes text",
+      "Finds text"
+    ],
+    "correctOptions": [
+      "Replaces all occurrences without using regex"
+    ],
+    "time": 25,
+    "details": "replaceAll() replaces all occurrences of a pattern."
+  },
+  {
+    "question": "What is the purpose of String.prototype.startsWith()?",
+    "options": [
+      "Checks end of string",
+      "Checks if string starts with given characters",
+      "Searches string",
+      "Splits string"
+    ],
+    "correctOptions": [
+      "Checks if string starts with given characters"
+    ],
+    "time": 25,
+    "details": "startsWith() returns true if string starts with specified characters."
+  },
+  {
+    "question": "What is the purpose of String.prototype.endsWith()?",
+    "options": [
+      "Checks start of string",
+      "Checks if string ends with given characters",
+      "Searches string",
+      "Splits string"
+    ],
+    "correctOptions": [
+      "Checks if string ends with given characters"
+    ],
+    "time": 25,
+    "details": "endsWith() returns true if string ends with specified characters."
+  },
+  {
+    "question": "What is the purpose of String.prototype.at()?",
+    "options": [
+      "Adds characters",
+      "Gets character at index, supports negative indexing",
+      "Removes characters",
+      "Replaces characters"
+    ],
+    "correctOptions": [
+      "Gets character at index, supports negative indexing"
+    ],
+    "time": 30,
+    "details": "str.at(-1) gets the last character, unlike bracket notation."
+  },
+  {
+    "question": "What is the Error constructor used for?",
+    "options": [
+      "Creates successful result",
+      "Creates error objects for exception handling",
+      "Validates code",
+      "Debugs code"
+    ],
+    "correctOptions": [
+      "Creates error objects for exception handling"
+    ],
+    "time": 30,
+    "details": "Error creates objects that can be thrown for exception handling."
+  },
+  {
+    "question": "What does try...catch do?",
+    "options": [
+      "Tests code",
+      "Attempts code and handles errors if thrown",
+      "Validates code",
+      "Executes code"
+    ],
+    "correctOptions": [
+      "Attempts code and handles errors if thrown"
+    ],
+    "time": 30,
+    "details": "try...catch attempts code execution and catches any thrown errors."
+  },
+  {
+    "question": "What is finally block used for?",
+    "options": [
+      "Runs after try, regardless of outcome",
+      "Catches specific errors",
+      "Throws errors",
+      "Skips errors"
+    ],
+    "correctOptions": [
+      "Runs after try, regardless of outcome"
+    ],
+    "time": 30,
+    "details": "finally runs after try/catch regardless of success or failure."
+  },
+  {
+    "question": "What is the purpose of throw statement?",
+    "options": [
+      "Catches errors",
+      "Manually throws an error",
+      "Ends function",
+      "Returns value"
+    ],
+    "correctOptions": [
+      "Manually throws an error"
+    ],
+    "time": 25,
+    "details": "throw creates an exception that can be caught by try...catch."
+  },
+  {
+    "question": "What is a custom error class?",
+    "options": [
+      "Built-in error",
+      "Class extending Error for specific error types",
+      "A function",
+      "A module"
+    ],
+    "correctOptions": [
+      "Class extending Error for specific error types"
+    ],
+    "time": 30,
+    "details": "Custom errors extend Error to create domain-specific error types."
+  },
+  {
+    "question": "What is closures in JavaScript? (Level 3 #111)",
+    "options": [
+      "Function scope",
+      "Lexical environment",
+      "Private variables",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Function scope",
+      "Lexical environment",
+      "Private variables",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is closures in JavaScript? explanation."
+  },
+  {
+    "question": "What is event loop? (Level 3 #112)",
+    "options": [
+      "Call stack",
+      "Task queue",
+      "Microtask queue",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Call stack",
+      "Task queue",
+      "Microtask queue",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event loop? explanation."
+  },
+  {
+    "question": "What is Promise? (Level 3 #113)",
+    "options": [
+      "Async result",
+      "Future value",
+      "State management",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Async result",
+      "Future value",
+      "State management",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Promise? explanation."
+  },
+  {
+    "question": "What is destructuring? (Level 3 #114)",
+    "options": [
+      "Array",
+      "Object",
+      "Function parameters",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Array",
+      "Object",
+      "Function parameters",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is destructuring? explanation."
+  },
+  {
+    "question": "What is spread operator? (Level 3 #115)",
+    "options": [
+      "Array",
+      "Object",
+      "Function call",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Array",
+      "Object",
+      "Function call",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is spread operator? explanation."
+  },
+  {
+    "question": "What is hoisting? (Level 3 #116)",
+    "options": [
+      "Variable",
+      "Function",
+      "Class",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Variable",
+      "Function",
+      "Class",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is hoisting? explanation."
+  },
+  {
+    "question": "What is prototype? (Level 3 #117)",
+    "options": [
+      "Inheritance",
+      "Methods",
+      "Properties",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Inheritance",
+      "Methods",
+      "Properties",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is prototype? explanation."
+  },
+  {
+    "question": "What is this binding? (Level 3 #118)",
+    "options": [
+      "Global",
+      "Object",
+      "Arrow function",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Global",
+      "Object",
+      "Arrow function",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is this binding? explanation."
+  },
+  {
+    "question": "What is callback? (Level 3 #120)",
+    "options": [
+      "Function",
+      "Asynchronous",
+      "Higher-order",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Function",
+      "Asynchronous",
+      "Higher-order",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is callback? explanation."
+  },
+  {
+    "question": "What is the this keyword?",
+    "options": [
+      "Current context",
+      "Binding",
+      "Object reference",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Current context",
+      "Binding",
+      "Object reference",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is the this keyword? explanation."
+  },
+  {
+    "question": "What is XML?",
+    "options": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Markup",
+      "Data format",
+      "Self-describing",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is XML? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is abstraction?",
+    "options": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Hide complexity",
+      "Simplify",
+      "Interface",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is abstraction? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  }
 ]

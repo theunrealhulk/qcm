@@ -1,109 +1,2013 @@
 [
-  {"question": "What are concurrent features in React 18?", "options": ["Concurrent rendering", "Async features", "Performance features", "All of the above"], "correctOptions": ["Concurrent rendering"], "time": 50, "details": "React 18 introduces concurrent rendering that allows preparing multiple versions of UI simultaneously."},
-  {"question": "What is automatic batching in React 18?", "options": ["Auto-batching", "Groups multiple state updates into one re-render", "Performance optimization", "State management"], "correctOptions": ["Groups multiple state updates into one re-render"], "time": 50, "details": "Automatic batching groups all state updates in promises and timeouts into a single re-render."},
-  {"question": "What is SSR with Suspense?", "options": ["Streaming SSR", "Server-side rendering with Suspense for data fetching", "Client-side Suspense", "Static generation"], "correctOptions": ["Server-side rendering with Suspense for data fetching"], "time": 55, "details": "SSR with Suspense allows streaming HTML while components are still loading."},
-  {"question": "What is hydrateRoot()?", "options": ["Rehydration", "Attaches React to SSR-generated HTML for hydration", "Hydrate function", "Client setup"], "correctOptions": ["Attaches React to SSR-generated HTML for hydration"], "time": 50, "details": "hydrateRoot attaches a React tree to SSR HTML for client-side hydration."},
-  {"question": "What is renderToPipeableStream?", "options": ["Streaming pipe", "Streaming renderer for Node.js with pipe interface", "Legacy renderer", "Client renderer"], "correctOptions": ["Streaming renderer for Node.js with pipe interface"], "time": 55, "details": "renderToPipeableStream is the streaming renderer for Node.js environments."},
-  {"question": "What is renderToReadableStream?", "options": ["Readable stream", "Streaming renderer for edge runtimes using Web Streams", "Legacy renderer", "Node renderer"], "correctOptions": ["Streaming renderer for edge runtimes using Web Streams"], "time": 55, "details": "renderToReadableStream uses Web Streams for edge/serverless environments."},
-  {"question": "What is act() in React testing?", "options": ["Batch updates", "Helper that batches and flushes React state updates for testing", "Test wrapper", "Assertion helper"], "correctOptions": ["Helper that batches and flushes React state updates for testing"], "time": 50, "details": "act() ensures all state updates are flushed before making assertions."},
-  {"question": "What is a test renderer?", "options": ["Component renderer", "Library for rendering React components to JSON trees", "Test runner", "Assertion library"], "correctOptions": ["Library for rendering React components to JSON trees"], "time": 50, "details": "Test Renderer renders components to JSON without DOM."},
-  {"question": "What is React Test Renderer?", "options": ["Render to tree", "Package for snapshot testing React components", "DOM testing", "Integration testing"], "correctOptions": ["Package for snapshot testing React components"], "time": 50, "details": "React Test Renderer provides snapshot testing capabilities."},
-  {"question": "What is snapshot testing?", "options": ["Capture output", "Saves rendered output and compares on subsequent runs", "Unit testing", "Integration testing"], "correctOptions": ["Saves rendered output and compares on subsequent runs"], "time": 45, "details": "Snapshot testing captures component output and compares against stored snapshots."},
-  {"question": "What is shallow rendering?", "options": ["One level", "Renders only one level deep without rendering child components", "Deep rendering", "Full rendering"], "correctOptions": ["Renders only one level deep without rendering child components"], "time": 45, "details": "Shallow rendering renders only the component itself, not its children."},
-  {"question": "What is enzyme shallow?", "options": ["Shallow", "Enzyme's shallow render that only renders the component", "Full render", "Mount"], "correctOptions": ["Enzyme's shallow render that only renders the component"], "time": 45, "details": "Enzyme shallow mimics React shallow rendering API."},
-  {"question": "What is React Testing Library philosophy?", "options": ["User-centric testing", "Tests how users interact with the app, not implementation details", "Implementation testing", "Unit testing"], "correctOptions": ["Tests how users interact with the app, not implementation details"], "time": 50, "details": "RTL focuses on testing from user perspective, not testing internals."},
-  {"question": "What are DOM testing utilities?", "options": ["DOM queries", "Tools like getByText, getByRole for querying DOM elements", "CSS selectors", "XPath queries"], "correctOptions": ["Tools like getByText, getByRole for querying DOM elements"], "time": 45, "details": "RTL provides query methods for finding elements in the DOM."},
-  {"question": "What is a server component?", "options": ["RSC component", "Component that only renders on the server", "Client component", "Shared component"], "correctOptions": ["Component that only renders on the server"], "time": 55, "details": "Server Components render exclusively on the server, never sent to client."},
-  {"question": "What is the 'use client' directive?", "options": ["Client marker", "Directive that marks a component as client-side rendered", "Server marker", "Static marker"], "correctOptions": ["Directive that marks a component as client-side rendered"], "time": 50, "details": "'use client' marks the boundary between server and client components."},
-  {"question": "What is a server action?", "options": ["Invoke server", "Function that runs on the server, callable from client", "API endpoint", "HTTP request"], "correctOptions": ["Function that runs on the server, callable from client"], "time": 55, "details": "Server Actions allow calling server functions directly from components."},
-  {"question": "What is useFormState hook?", "options": ["Form state hook", "Hook for managing form submission state", "Form validation", "Form rendering"], "correctOptions": ["Hook for managing form submission state"], "time": 55, "details": "useFormState manages form submission state and returns data/action."},
-  {"question": "What is useFormAction hook?", "options": ["Form handler", "Hook that returns the form action URL", "Form validation", "Form styling"], "correctOptions": ["Hook that returns the form action URL"], "time": 60, "details": "useFormAction returns the URL for form submission."},
-  {"question": "What is useOptimistic hook?", "options": ["Optimistic UI", "Hook for showing optimistic UI updates while async action completes", "Error handling", "Loading state"], "correctOptions": ["Hook for showing optimistic UI updates while async action completes"], "time": 55, "details": "useOptimistic shows immediate UI feedback before server responds."},
-  {"question": "What is the use() hook?", "options": ["Await promise/Context", "Hook that awaits Promises or reads Context", "State management", "Effect hook"], "correctOptions": ["Hook that awaits Promises or reads Context"], "time": 60, "details": "use() can await Promises and read Context directly."},
-  {"question": "What is promise as children?", "options": ["Async component", "Using Promise as child component with Suspense", "Error boundary", "Error handling"], "correctOptions": ["Using Promise as child component with Suspense"], "time": 60, "details": "Promises can be passed as children with Suspense for data fetching."},
-  {"question": "What are new Suspense features?", "options": ["More features", "Server Suspense for streaming HTML", "Client Suspense", "Static Suspense"], "correctOptions": ["Server Suspense for streaming HTML"], "time": 55, "details": "Suspense now works on the server for streaming SSR."},
-  {"question": "What is SuspenseList?", "options": ["Coordinate Suspense", "Component that coordinates reveal order of multiple Suspense boundaries", "Suspense wrapper", "Loading component"], "correctOptions": ["Component that coordinates reveal order of multiple Suspense boundaries"], "time": 60, "details": "SuspenseList controls the order Suspense boundaries reveal."},
-  {"question": "What is useDeferredValue hook?", "options": ["Defer render", "Hook that defers re-rendering non-urgent updates", "State hook", "Effect hook"], "correctOptions": ["Hook that defers re-rendering non-urgent updates"], "time": 55, "details": "useDeferredValue defers low-priority updates for better interactivity."},
-  {"question": "What is startTransition()?", "options": ["Mark lower priority", "Function that marks state updates as non-urgent", "Start animation", "Start loading"], "correctOptions": ["Function that marks state updates as non-urgent"], "time": 55, "details": "startTransition marks updates as low priority to keep UI responsive."},
-  {"question": "What is useTransition hook?", "options": ["Track pending", "Hook that provides isPending state for transition updates", "State hook", "Effect hook"], "correctOptions": ["Hook that provides isPending state for transition updates"], "time": 55, "details": "useTransition tracks pending state during transitions."},
-  {"question": "What is useSyncExternalStore?", "options": ["External state", "Hook for subscribing to external data sources", "State hook", "Effect hook"], "correctOptions": ["Hook for subscribing to external data sources"], "time": 60, "details": "useSyncExternalStore is for subscribing to external stores."},
-  {"question": "What is useInsertionEffect?", "options": ["Styles before render", "Hook that runs before paint for CSS-in-JS libraries", "Effect hook", "State hook"], "correctOptions": ["Hook that runs before paint for CSS-in-JS libraries"], "time": 60, "details": "useInsertionEffect injects styles before browser paints."},
-  {"question": "What is flushSync?", "options": ["Force sync", "Function that forces synchronous state updates", "Async function", "Effect function"], "correctOptions": ["Function that forces synchronous state updates"], "time": 60, "details": "flushSync forces updates to complete synchronously."},
-  {"question": "What is the pre-warm pattern?", "options": ["Pre-load", "Pattern for pre-loading data before needed", "Cache pattern", "Performance pattern"], "correctOptions": ["Pattern for pre-loading data before needed"], "time": 55, "details": "Pre-warming preloads data to avoid loading delays."},
-  {"question": "What is useId hook?", "options": ["Unique ID generation", "Hook that generates unique IDs for accessibility", "Random ID", "Session ID"], "correctOptions": ["Hook that generates unique IDs for accessibility"], "time": 50, "details": "useId generates stable, unique IDs for ARIA attributes."},
-  {"question": "What is the new JSX transform?", "options": ["Automatic JSX", "Transform that doesn't require React import in scope", "Legacy transform", "Babel plugin"], "correctOptions": ["Transform that doesn't require React import in scope"], "time": 55, "details": "New JSX transform uses jsx-runtime automatically."},
-  {"question": "What is jsxDEV vs jsx?", "options": ["DEV only", "jsxDEV is development-only bundle with extra dev info", "Production JSX", "Runtime JSX"], "correctOptions": ["jsxDEV is development-only bundle with extra dev info"], "time": 55, "details": "jsxDEV includes development warnings and file info."},
-  {"question": "What is fragment key?", "options": ["Fragment as key", "Using key prop on React.Fragment in arrays", "Fragment ID", "Element key"], "correctOptions": ["Using key prop on React.Fragment in arrays"], "time": 50, "details": "Fragments can have keys when used in lists."},
-  {"question": "What is children key?", "options": ["Children as key", "Anti-pattern of using children as key for elements", "Valid key", "Unique key"], "correctOptions": ["Anti-pattern of using children as key for elements"], "time": 55, "details": "Children should not be used as keys - use stable identifiers."},
-  {"question": "What are React Server Components?", "options": ["Server-only render", "Components that render exclusively on server with no client JavaScript", "Client components", "Shared components"], "correctOptions": ["Components that render exclusively on server with no client JavaScript"], "time": 55, "details": "RSC components reduce bundle size by staying on server."},
-  {"question": "What is React Compiler (React Forget)?", "options": ["Auto-memoization", "Compiler that automatically memoizes components to prevent unnecessary renders", "Runtime optimizer", "Build tool"], "correctOptions": ["Compiler that automatically memoizes components to prevent unnecessary renders"], "time": 65, "details": "React Compiler automatically determines what to memoize."},
-  {"question": "What is action status in useFormState?", "options": ["Form status", "useFormState returns [state, action] where action is the form action function", "Form error", "Form data"], "correctOptions": ["useFormState returns [state, action] where action is the form action function"], "time": 60, "details": "useFormState returns state and bound action together."},
-  {"question": "What is the optimistic data pattern?", "options": ["Immediate UI", "Pattern of updating UI immediately while server processes request", "Delayed update", "Error pattern"], "correctOptions": ["Pattern of updating UI immediately while server processes request"], "time": 55, "details": "Optimistic updates show instant feedback before server confirmation."},
-  {"question": "What is the pending UI pattern?", "options": ["Loading state", "Pattern showing pending state during transitions", "Error state", "Empty state"], "correctOptions": ["Pattern showing pending state during transitions"], "time": 50, "details": "Pending UI indicates work in progress to users."},
-  {"question": "What is the error boundary pattern?", "options": ["Catch errors", "Pattern for catching and displaying errors gracefully", "Error reporting", "Error logging"], "correctOptions": ["Pattern for catching and displaying errors gracefully"], "time": 50, "details": "Error boundaries catch JavaScript errors in component trees."},
-  {"question": "What is the retry pattern?", "options": ["Retry failed", "Pattern for automatically retrying failed operations", "Error pattern", "Loading pattern"], "correctOptions": ["Pattern for automatically retrying failed operations"], "time": 55, "details": "Retry pattern handles transient failures gracefully."},
-  {"question": "What is stale-while-revalidate?", "options": ["Cache strategy", "Cache strategy that serves stale data while fetching fresh in background", "Cache invalidation", "Cache eviction"], "correctOptions": ["Cache strategy that serves stale data while fetching fresh in background"], "time": 60, "details": "SWR shows cached data immediately while updating in background."},
-  {"question": "What is SWR hook?", "options": ["Remote fetch", "Hook for data fetching with stale-while-revalidate caching", "State hook", "Effect hook"], "correctOptions": ["Hook for data fetching with stale-while-revalidate caching"], "time": 55, "details": "SWR (Stale While Revalidate) provides caching with background refresh."},
-  {"question": "What is React Query?", "options": ["Data fetching", "TanStack Query - library for managing server state and caching", "State management", "Form handling"], "correctOptions": ["TanStack Query - library for managing server state and caching"], "time": 50, "details": "React Query handles server state with caching and sync."},
-  {"question": "What is useQuery hook?", "options": ["Fetch data", "Hook for fetching and caching data", "State hook", "Mutation hook"], "correctOptions": ["Hook for fetching and caching data"], "time": 50, "details": "useQuery fetches data with caching and refetching."},
-  {"question": "What is useMutation hook?", "options": ["Write data", "Hook for mutations (POST, PUT, DELETE) with caching updates", "Query hook", "State hook"], "correctOptions": ["Hook for mutations (POST, PUT, DELETE) with caching updates"], "time": 50, "details": "useMutation handles data modifications with cache updates."},
-  {"question": "What is cache management in React Query?", "options": ["Cache control", "Invalidating, updating, and optimizing cache after mutations", "Cache storage", "Cache eviction"], "correctOptions": ["Invalidating, updating, and optimizing cache after mutations"], "time": 55, "details": "Cache management updates stale data after mutations."},
-  {"question": "What is optimistic updates in mutations?", "options": ["Instant feedback", "Pattern of updating UI optimistically before server confirms", "Delayed update", "Error handling"], "correctOptions": ["Pattern of updating UI optimistically before server confirms"], "time": 55, "details": "Optimistic mutations update cache immediately, revert on error."},
-  {"question": "What is query key in React Query?", "options": ["Query identifier", "Unique key for cache storage and invalidation", "Query string", "Cache key"], "correctOptions": ["Unique key for cache storage and invalidation"], "time": 50, "details": "Query keys identify and organize cached data."},
-  {"question": "What is query client in React Query?", "options": ["Client instance", "Main object for configuring and managing queries", "HTTP client", "API client"], "correctOptions": ["Main object for configuring and managing queries"], "time": 55, "details": "QueryClient provides query and cache management."},
-  {"question": "What is prefetching in React Query?", "options": ["Pre-load", "Pre-loading data into cache before it's needed", "Lazy loading", "On-demand loading"], "correctOptions": ["Pre-loading data into cache before it's needed"], "time": 55, "details": "Prefetching preloads data for faster subsequent access."},
-  {"question": "What is infinite queries in React Query?", "options": ["Pagination", "Query that loads pages of data incrementally", "Single query", "Cached query"], "correctOptions": ["Query that loads pages of data incrementally"], "time": 60, "details": "Infinite queries handle pagination with infinite scroll."},
-  {"question": "What is useInfiniteQuery hook?", "options": ["Infinite scroll", "Hook for infinite/paginated data fetching", "Query hook", "Mutation hook"], "correctOptions": ["Hook for infinite/paginated data fetching"], "time": 60, "details": "useInfiniteQuery manages pagination and cursors."},
-  {"question": "What is stale time in React Query?", "options": ["Fresh duration", "Duration data remains fresh before refetching", "Loading time", "Error time"], "correctOptions": ["Duration data remains fresh before refetching"], "time": 55, "details": "staleTime controls when data needs refetching."},
-  {"question": "What is cache time in React Query?", "options": ["Cache duration", "Duration unused data remains in cache before garbage collection", "Query time", "Fetch time"], "correctOptions": ["Duration unused data remains in cache before garbage collection"], "time": 55, "details": "cacheTime determines when inactive cache is cleaned up."},
-  {"question": "What is refetch on window focus?", "options": ["Auto refetch", "Automatically refetching when window regains focus", "Manual refetch", "Initial fetch"], "correctOptions": ["Automatically refetching when window regains focus"], "time": 50, "details": "refetchOnWindowFocus keeps data fresh when users return."},
-  {"question": "What is placeholder data in React Query?", "options": ["Default data", "Initial data shown while loading, typically from cache", "Error data", "Loading data"], "correctOptions": ["Initial data shown while loading, typically from cache"], "time": 55, "details": "Placeholder data shows temporary values during fetch."},
-  {"question": "What is initial data in React Query?", "options": ["Starting data", "Data to use as initial cache for a query", "Placeholder", "Fallback data"], "correctOptions": ["Data to use as initial cache for a query"], "time": 55, "details": "initialData pre-populates cache for immediate use."},
-  {"question": "What is keepPreviousData in React Query?", "options": ["Keep previous", "Shows previous data while fetching new data", "Clear data", "Error data"], "correctOptions": ["Shows previous data while fetching new data"], "time": 55, "details": "keepPreviousData prevents flash during pagination."},
-  {"question": "What is select in React Query?", "options": ["Transform data", "Function to transform data after fetching", "Query selector", "Data picker"], "correctOptions": ["Function to transform data after fetching"], "time": 50, "details": "select transforms fetched data before returning."},
-  {"question": "What is enabled in React Query?", "options": ["Active query", "Option to control when query runs", "Query state", "Fetch flag"], "correctOptions": ["Option to control when query runs"], "time": 50, "details": "enabled controls whether query executes or waits."},
-  {"question": "What is refetchInterval in React Query?", "options": ["Polling", "Automatic refetch interval for periodic updates", "Manual refetch", "Initial refetch"], "correctOptions": ["Automatic refetch interval for periodic updates"], "time": 55, "details": "refetchInterval enables polling for real-time data."},
-  {"question": "What is retry in React Query?", "options": ["Retry failed", "Number of retry attempts on failure", "Error handling", "Cache retry"], "correctOptions": ["Number of retry attempts on failure"], "time": 50, "details": "retry configures automatic retry attempts."},
-  {"question": "What is structural sharing in React Query?", "options": ["Object sharing", "Reuses unchanged data structure for proper equality checking", "Data sharing", "Cache sharing"], "correctOptions": ["Reuses unchanged data structure for proper equality checking"], "time": 60, "details": "Structural sharing maintains referential equality for unchanged data."},
-  {"question": "What is fetch policy in Apollo?", "options": ["Cache strategy", "Controls when data is fetched from network vs cache", "Network policy", "Query policy"], "correctOptions": ["Controls when data is fetched from network vs cache"], "time": 55, "details": "Fetch policy determines data source for queries."},
-  {"question": "What is cache-first policy?", "options": ["Cache then network", "Use cache if available, only fetch if missing", "Network first", "Cache only"], "correctOptions": ["Use cache if available, only fetch if missing"], "time": 55, "details": "cache-first checks cache before network request."},
-  {"question": "What is network-only policy?", "options": ["Network first", "Always fetch from network, ignore cache", "Cache first", "Cache only"], "correctOptions": ["Always fetch from network, ignore cache"], "time": 50, "details": "network-only bypasses cache for fresh data."},
-  {"question": "What is cache-and-network policy?", "options": ["Hybrid", "Return cached data immediately, then fetch from network for updates", "Network only", "Cache only"], "correctOptions": ["Return cached data immediately, then fetch from network for updates"], "time": 60, "details": "cache-and-network shows cache instantly, updates from server."},
-  {"question": "What is useQueryhook in Apollo?", "options": ["Apollo query", "Hook for Apollo GraphQL queries with caching", "HTTP query", "REST query"], "correctOptions": ["Hook for Apollo GraphQL queries with caching"], "time": 55, "details": "useQuery integrates Apollo with React for GraphQL."},
-  {"question": "What is useMutation hook in Apollo?", "options": ["Apollo mutation", "Hook for GraphQL mutations with cache updates", "HTTP mutation", "REST mutation"], "correctOptions": ["Hook for GraphQL mutations with cache updates"], "time": 55, "details": "useMutation handles GraphQL mutations with cache integration."},
-  {"question": "What is Apollo Client cache?", "options": ["Data store", "Normalized in-memory cache for GraphQL data", "HTTP cache", "Browser cache"], "correctOptions": ["Normalized in-memory cache for GraphQL data"], "time": 55, "details": "Apollo cache normalizes and stores query results."},
-  {"question": "What is fragment in Apollo?", "options": ["Data fragment", "Reusable GraphQL query fragment", "Data type", "Query type"], "correctOptions": ["Reusable GraphQL query fragment"], "time": 50, "details": "Fragments define reusable field selections in GraphQL."},
-  {"question": "What is optimistic response in Apollo?", "options": ["Instant feedback", "Mock response for mutations before server responds", "Error response", "Pending response"], "correctOptions": ["Mock response for mutations before server responds"], "time": 60, "details": "Optimistic response provides immediate UI update."},
-  {"question": "What is type policies in Apollo?", "options": ["Cache config", "Configuration for how Apollo caches specific types", "Type definitions", "Schema config"], "correctOptions": ["Configuration for how Apollo caches specific types"], "time": 60, "details": "Type policies control field-level caching behavior."},
-  {"question": "What is pagination in Apollo?", "options": ["Cursor pagination", "Supporting offset/limit or cursor-based pagination", "Page numbers", "Load more"], "correctOptions": ["Supporting offset/limit or cursor-based pagination"], "time": 55, "details": "Apollo handles pagination with fetchMore for infinite scroll."},
-  {"question": "What is refetchQueries in Apollo?", "options": ["Refetch after", "Array of queries to refetch after a mutation", "Query list", "Query cache"], "correctOptions": ["Array of queries to refetch after a mutation"], "time": 55, "details": "refetchQueries updates related queries after mutation."},
-  {"question": "What is update function in Apollo mutations?", "options": ["Cache update", "Function to directly update cache after mutation", "Error update", "Loading update"], "correctOptions": ["Function to directly update cache after mutation"], "time": 60, "details": "update modifies cache directly instead of refetching."},
-  {"question": "What is @connection directive in Apollo?", "options": ["Cache key", "Directs Apollo to store results under specific cache key", "Query directive", "Cache directive"], "correctOptions": ["Directs Apollo to store results under specific cache key"], "time": 60, "details": "@connection enables custom cache key storage."},
-  {"question": "What is useLazyQuery in Apollo?", "options": ["Delayed query", "Hook for executing queries on demand, not automatically", "Auto query", "Background query"], "correctOptions": ["Hook for executing queries on demand, not automatically"], "time": 55, "details": "useLazyQuery triggers queries manually when needed."},
-  {"question": "What is subscription in GraphQL?", "options": ["Real-time", "Real-time updates pushed from server to client", "Query type", "Mutation type"], "correctOptions": ["Real-time updates pushed from server to client"], "time": 50, "details": "Subscriptions maintain persistent connections for live data."},
-  {"question": "What is useSubscription hook?", "options": ["Subscribe to data", "Hook for subscribing to GraphQL subscriptions", "Query hook", "Mutation hook"], "correctOptions": ["Hook for subscribing to GraphQL subscriptions"], "time": 55, "details": "useSubscription receives real-time updates."},
-  {"question": "What is optimistic UI in general?", "options": ["Instant updates", "Pattern of immediately showing expected result while server processes", "Delayed updates", "Error handling"], "correctOptions": ["Pattern of immediately showing expected result while server processes"], "time": 50, "details": "Optimistic UI provides responsive experience despite network latency."},
-  {"question": "What is progressive enhancement?", "options": ["Enhanced functionality", "Building features that work without JavaScript, enhanced with JS", "Performance boost", "Fallback features"], "correctOptions": ["Building features that work without JavaScript, enhanced with JS"], "time": 60, "details": "Progressive enhancement builds core functionality first, enhances with JS."},
-  {"question": "What is code splitting in React?", "options": ["Bundle splitting", "Splitting JavaScript into chunks loaded on demand", "Minification", "Compression"], "correctOptions": ["Splitting JavaScript into chunks loaded on demand"], "time": 50, "details": "Code splitting reduces initial bundle size with lazy loading."},
-  {"question": "What is React.lazy for code splitting?", "options": ["Lazy load", "Loading components dynamically with dynamic import", "Static import", "Eager loading"], "correctOptions": ["Loading components dynamically with dynamic import"], "time": 50, "details": "React.lazy enables component-level code splitting."},
-  {"question": "What is Suspense fallback?", "options": ["Loading UI", "Component shown while child components are loading", "Error UI", "Empty state"], "correctOptions": ["Component shown while child components are loading"], "time": 45, "details": "fallback shows loading indicator during suspense."},
-  {"question": "What is bundle analyzer?", "options": ["Size analysis", "Tool for visualizing bundle contents and sizes", "Code coverage", "Performance tool"], "correctOptions": ["Tool for visualizing bundle contents and sizes"], "time": 50, "details": "Bundle analyzer helps identify large dependencies."},
-  {"question": "What is route-based splitting?", "options": ["Per-route bundle", "Creating separate bundles for each route", "Component splitting", "Vendor splitting"], "correctOptions": ["Creating separate bundles for each route"], "time": 55, "details": "Route-based splitting loads page code only when needed."},
-  {"question": "What is component-based splitting?", "options": ["Lazy component", "Splitting large components into separate chunks", "Route splitting", "CSS splitting"], "correctOptions": ["Splitting large components into separate chunks"], "time": 55, "details": "Component splitting loads feature components on demand."},
-  {"question": "What is dynamic import?", "options": ["On-demand loading", "Loading modules dynamically at runtime with import()", "Static import", "Required import"], "correctOptions": ["Loading modules dynamically at runtime with import()"], "time": 50, "details": "Dynamic imports load code only when executed."},
-  {"question": "What is tree shaking?", "options": ["Dead code removal", "Removing unused exports from bundles", "Minification", "Compression"], "correctOptions": ["Removing unused exports from bundles"], "time": 50, "details": "Tree shaking eliminates unreachable code."},
-  {"question": "What are production optimizations in React?", "options": ["Performance", "Minification, compression, and removing dev-only code", "Debugging", "Testing"], "correctOptions": ["Minification, compression, and removing dev-only code"], "time": 55, "details": "Production builds optimize for size and performance."},
-  {"question": "What is useTransition hook timing?", "options": ["Transition tracking", "Returns isPending for transition state", "Start time", "End time"], "correctOptions": ["Returns isPending for transition state"], "time": 55, "details": "useTransition returns boolean isPending during transitions."},
-  {"question": "What is useDeferredValue for?", "options": ["Defer rendering", "Deferring low-priority renders for better interactivity", "Skip rendering", "Cancel rendering"], "correctOptions": ["Deferring low-priority renders for better interactivity"], "time": 55, "details": "useDeferredValue prioritizes urgent renders over non-urgent."},
-  {"question": "What is selective hydration?", "options": ["Prioritized hydrate", "React prioritizes hydrating user-interactive parts first", "Full hydration", "No hydration"], "correctOptions": ["React prioritizes hydrating user-interactive parts first"], "time": 60, "details": "Selective hydration improves Time to Interactive."},
-  {"question": "What is streaming SSR with Suspense?", "options": ["Chunked HTML", "Streaming HTML in chunks as components resolve", "Static HTML", "Client HTML"], "correctOptions": ["Streaming HTML in chunks as components resolve"], "time": 60, "details": "Streaming SSR sends HTML progressively, not all at once."},
-  {"question": "What is the purpose of useSyncExternalStore?", "options": ["External state sync", "Ensures React and external store stay synchronized", "Local state", "Internal state"], "correctOptions": ["Ensures React and external store stay synchronized"], "time": 60, "details": "useSyncExternalStore provides consistent reads across renders."},
-  {"question": "What is the purpose of useInsertionEffect?", "options": ["Style injection", "Injects CSS before paint for CSS-in-JS libraries", "State effect", "Render effect"], "correctOptions": ["Injects CSS before paint for CSS-in-JS libraries"], "time": 60, "details": "useInsertionEffect runs before browser paints."},
-  {"question": "What is flushSync for urgent updates?", "options": ["Urgent rendering", "Forces state updates to flush immediately for critical updates", "Async updates", "Deferred updates"], "correctOptions": ["Forces state updates to flush immediately for critical updates"], "time": 60, "details": "flushSync handles time-critical updates synchronously."},
-  {"question": "What is the purpose of useId stable IDs?", "options": ["Unique ID", "Generates unique IDs stable across server and client", "Random ID", "Session ID"], "correctOptions": ["Generates unique IDs stable across server and client"], "time": 55, "details": "useId ensures IDs match between server and client renders."},
-  {"question": "What is SSR hydration mismatch?", "options": ["Hydration error", "When server and client rendered content differ", "Network error", "Cache error"], "correctOptions": ["When server and client rendered content differ"], "time": 55, "details": "Hydration mismatch causes React to log warnings."},
-  {"question": "What is suppressHydrationWarning?", "options": ["Warning suppression", "Prop to suppress hydration warnings for expected differences", "Error suppression", "Cache suppression"], "correctOptions": ["Prop to suppress hydration warnings for expected differences"], "time": 60, "details": "suppressHydrationWarning silences expected client/server differences."},
-  {"question": "What is dangerouslySetInnerHTML?", "options": ["HTML injection", "Prop for rendering raw HTML in React", "Style injection", "Script injection"], "correctOptions": ["Prop for rendering raw HTML in React"], "time": 50, "details": "dangerouslySetInnerHTML renders raw HTML - sanitize first!"},
-  {"question": "What is the purpose of dangerouslySetInnerHTML?", "options": ["Dynamic HTML", "Rendering HTML from trusted sources like CMS", "Static HTML", "Default HTML"], "correctOptions": ["Rendering HTML from trusted sources like CMS"], "time": 55, "details": "Use for CMS content; always sanitize to prevent XSS."},
-  {"question": "What is the recommended pattern for SSR data fetching?", "options": ["Data fetching", "Using Suspense for data fetching during SSR", "Client fetch", "Effect fetch"], "correctOptions": ["Using Suspense for data fetching during SSR"], "time": 60, "details": "Suspense with server components enables SSR data fetching."}
+  {
+    "question": "What are concurrent features in React 18?",
+    "options": [
+      "Concurrent rendering",
+      "Async features",
+      "Performance features",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Concurrent rendering"
+    ],
+    "time": 50,
+    "details": "React 18 introduces concurrent rendering that allows preparing multiple versions of UI simultaneously."
+  },
+  {
+    "question": "What is automatic batching in React 18?",
+    "options": [
+      "Auto-batching",
+      "Groups multiple state updates into one re-render",
+      "Performance optimization",
+      "State management"
+    ],
+    "correctOptions": [
+      "Groups multiple state updates into one re-render"
+    ],
+    "time": 50,
+    "details": "Automatic batching groups all state updates in promises and timeouts into a single re-render."
+  },
+  {
+    "question": "What is SSR with Suspense?",
+    "options": [
+      "Streaming SSR",
+      "Server-side rendering with Suspense for data fetching",
+      "Client-side Suspense",
+      "Static generation"
+    ],
+    "correctOptions": [
+      "Server-side rendering with Suspense for data fetching"
+    ],
+    "time": 55,
+    "details": "SSR with Suspense allows streaming HTML while components are still loading."
+  },
+  {
+    "question": "What is hydrateRoot()?",
+    "options": [
+      "Rehydration",
+      "Attaches React to SSR-generated HTML for hydration",
+      "Hydrate function",
+      "Client setup"
+    ],
+    "correctOptions": [
+      "Attaches React to SSR-generated HTML for hydration"
+    ],
+    "time": 50,
+    "details": "hydrateRoot attaches a React tree to SSR HTML for client-side hydration."
+  },
+  {
+    "question": "What is renderToPipeableStream?",
+    "options": [
+      "Streaming pipe",
+      "Streaming renderer for Node.js with pipe interface",
+      "Legacy renderer",
+      "Client renderer"
+    ],
+    "correctOptions": [
+      "Streaming renderer for Node.js with pipe interface"
+    ],
+    "time": 55,
+    "details": "renderToPipeableStream is the streaming renderer for Node.js environments."
+  },
+  {
+    "question": "What is renderToReadableStream?",
+    "options": [
+      "Readable stream",
+      "Streaming renderer for edge runtimes using Web Streams",
+      "Legacy renderer",
+      "Node renderer"
+    ],
+    "correctOptions": [
+      "Streaming renderer for edge runtimes using Web Streams"
+    ],
+    "time": 55,
+    "details": "renderToReadableStream uses Web Streams for edge/serverless environments."
+  },
+  {
+    "question": "What is act() in React testing?",
+    "options": [
+      "Batch updates",
+      "Helper that batches and flushes React state updates for testing",
+      "Test wrapper",
+      "Assertion helper"
+    ],
+    "correctOptions": [
+      "Helper that batches and flushes React state updates for testing"
+    ],
+    "time": 50,
+    "details": "act() ensures all state updates are flushed before making assertions."
+  },
+  {
+    "question": "What is a test renderer?",
+    "options": [
+      "Component renderer",
+      "Library for rendering React components to JSON trees",
+      "Test runner",
+      "Assertion library"
+    ],
+    "correctOptions": [
+      "Library for rendering React components to JSON trees"
+    ],
+    "time": 50,
+    "details": "Test Renderer renders components to JSON without DOM."
+  },
+  {
+    "question": "What is React Test Renderer?",
+    "options": [
+      "Render to tree",
+      "Package for snapshot testing React components",
+      "DOM testing",
+      "Integration testing"
+    ],
+    "correctOptions": [
+      "Package for snapshot testing React components"
+    ],
+    "time": 50,
+    "details": "React Test Renderer provides snapshot testing capabilities."
+  },
+  {
+    "question": "What is snapshot testing?",
+    "options": [
+      "Capture output",
+      "Saves rendered output and compares on subsequent runs",
+      "Unit testing",
+      "Integration testing"
+    ],
+    "correctOptions": [
+      "Saves rendered output and compares on subsequent runs"
+    ],
+    "time": 45,
+    "details": "Snapshot testing captures component output and compares against stored snapshots."
+  },
+  {
+    "question": "What is shallow rendering?",
+    "options": [
+      "One level",
+      "Renders only one level deep without rendering child components",
+      "Deep rendering",
+      "Full rendering"
+    ],
+    "correctOptions": [
+      "Renders only one level deep without rendering child components"
+    ],
+    "time": 45,
+    "details": "Shallow rendering renders only the component itself, not its children."
+  },
+  {
+    "question": "What is enzyme shallow?",
+    "options": [
+      "Shallow",
+      "Enzyme's shallow render that only renders the component",
+      "Full render",
+      "Mount"
+    ],
+    "correctOptions": [
+      "Enzyme's shallow render that only renders the component"
+    ],
+    "time": 45,
+    "details": "Enzyme shallow mimics React shallow rendering API."
+  },
+  {
+    "question": "What is React Testing Library philosophy?",
+    "options": [
+      "User-centric testing",
+      "Tests how users interact with the app, not implementation details",
+      "Implementation testing",
+      "Unit testing"
+    ],
+    "correctOptions": [
+      "Tests how users interact with the app, not implementation details"
+    ],
+    "time": 50,
+    "details": "RTL focuses on testing from user perspective, not testing internals."
+  },
+  {
+    "question": "What are DOM testing utilities?",
+    "options": [
+      "DOM queries",
+      "Tools like getByText, getByRole for querying DOM elements",
+      "CSS selectors",
+      "XPath queries"
+    ],
+    "correctOptions": [
+      "Tools like getByText, getByRole for querying DOM elements"
+    ],
+    "time": 45,
+    "details": "RTL provides query methods for finding elements in the DOM."
+  },
+  {
+    "question": "What is a server component?",
+    "options": [
+      "RSC component",
+      "Component that only renders on the server",
+      "Client component",
+      "Shared component"
+    ],
+    "correctOptions": [
+      "Component that only renders on the server"
+    ],
+    "time": 55,
+    "details": "Server Components render exclusively on the server, never sent to client."
+  },
+  {
+    "question": "What is the 'use client' directive?",
+    "options": [
+      "Client marker",
+      "Directive that marks a component as client-side rendered",
+      "Server marker",
+      "Static marker"
+    ],
+    "correctOptions": [
+      "Directive that marks a component as client-side rendered"
+    ],
+    "time": 50,
+    "details": "'use client' marks the boundary between server and client components."
+  },
+  {
+    "question": "What is a server action?",
+    "options": [
+      "Invoke server",
+      "Function that runs on the server, callable from client",
+      "API endpoint",
+      "HTTP request"
+    ],
+    "correctOptions": [
+      "Function that runs on the server, callable from client"
+    ],
+    "time": 55,
+    "details": "Server Actions allow calling server functions directly from components."
+  },
+  {
+    "question": "What is useFormState hook?",
+    "options": [
+      "Form state hook",
+      "Hook for managing form submission state",
+      "Form validation",
+      "Form rendering"
+    ],
+    "correctOptions": [
+      "Hook for managing form submission state"
+    ],
+    "time": 55,
+    "details": "useFormState manages form submission state and returns data/action."
+  },
+  {
+    "question": "What is useFormAction hook?",
+    "options": [
+      "Form handler",
+      "Hook that returns the form action URL",
+      "Form validation",
+      "Form styling"
+    ],
+    "correctOptions": [
+      "Hook that returns the form action URL"
+    ],
+    "time": 60,
+    "details": "useFormAction returns the URL for form submission."
+  },
+  {
+    "question": "What is useOptimistic hook?",
+    "options": [
+      "Optimistic UI",
+      "Hook for showing optimistic UI updates while async action completes",
+      "Error handling",
+      "Loading state"
+    ],
+    "correctOptions": [
+      "Hook for showing optimistic UI updates while async action completes"
+    ],
+    "time": 55,
+    "details": "useOptimistic shows immediate UI feedback before server responds."
+  },
+  {
+    "question": "What is the use() hook?",
+    "options": [
+      "Await promise/Context",
+      "Hook that awaits Promises or reads Context",
+      "State management",
+      "Effect hook"
+    ],
+    "correctOptions": [
+      "Hook that awaits Promises or reads Context"
+    ],
+    "time": 60,
+    "details": "use() can await Promises and read Context directly."
+  },
+  {
+    "question": "What is promise as children?",
+    "options": [
+      "Async component",
+      "Using Promise as child component with Suspense",
+      "Error boundary",
+      "Error handling"
+    ],
+    "correctOptions": [
+      "Using Promise as child component with Suspense"
+    ],
+    "time": 60,
+    "details": "Promises can be passed as children with Suspense for data fetching."
+  },
+  {
+    "question": "What are new Suspense features?",
+    "options": [
+      "More features",
+      "Server Suspense for streaming HTML",
+      "Client Suspense",
+      "Static Suspense"
+    ],
+    "correctOptions": [
+      "Server Suspense for streaming HTML"
+    ],
+    "time": 55,
+    "details": "Suspense now works on the server for streaming SSR."
+  },
+  {
+    "question": "What is SuspenseList?",
+    "options": [
+      "Coordinate Suspense",
+      "Component that coordinates reveal order of multiple Suspense boundaries",
+      "Suspense wrapper",
+      "Loading component"
+    ],
+    "correctOptions": [
+      "Component that coordinates reveal order of multiple Suspense boundaries"
+    ],
+    "time": 60,
+    "details": "SuspenseList controls the order Suspense boundaries reveal."
+  },
+  {
+    "question": "What is useDeferredValue hook?",
+    "options": [
+      "Defer render",
+      "Hook that defers re-rendering non-urgent updates",
+      "State hook",
+      "Effect hook"
+    ],
+    "correctOptions": [
+      "Hook that defers re-rendering non-urgent updates"
+    ],
+    "time": 55,
+    "details": "useDeferredValue defers low-priority updates for better interactivity."
+  },
+  {
+    "question": "What is startTransition()?",
+    "options": [
+      "Mark lower priority",
+      "Function that marks state updates as non-urgent",
+      "Start animation",
+      "Start loading"
+    ],
+    "correctOptions": [
+      "Function that marks state updates as non-urgent"
+    ],
+    "time": 55,
+    "details": "startTransition marks updates as low priority to keep UI responsive."
+  },
+  {
+    "question": "What is useTransition hook?",
+    "options": [
+      "Track pending",
+      "Hook that provides isPending state for transition updates",
+      "State hook",
+      "Effect hook"
+    ],
+    "correctOptions": [
+      "Hook that provides isPending state for transition updates"
+    ],
+    "time": 55,
+    "details": "useTransition tracks pending state during transitions."
+  },
+  {
+    "question": "What is useSyncExternalStore?",
+    "options": [
+      "External state",
+      "Hook for subscribing to external data sources",
+      "State hook",
+      "Effect hook"
+    ],
+    "correctOptions": [
+      "Hook for subscribing to external data sources"
+    ],
+    "time": 60,
+    "details": "useSyncExternalStore is for subscribing to external stores."
+  },
+  {
+    "question": "What is useInsertionEffect?",
+    "options": [
+      "Styles before render",
+      "Hook that runs before paint for CSS-in-JS libraries",
+      "Effect hook",
+      "State hook"
+    ],
+    "correctOptions": [
+      "Hook that runs before paint for CSS-in-JS libraries"
+    ],
+    "time": 60,
+    "details": "useInsertionEffect injects styles before browser paints."
+  },
+  {
+    "question": "What is flushSync?",
+    "options": [
+      "Force sync",
+      "Function that forces synchronous state updates",
+      "Async function",
+      "Effect function"
+    ],
+    "correctOptions": [
+      "Function that forces synchronous state updates"
+    ],
+    "time": 60,
+    "details": "flushSync forces updates to complete synchronously."
+  },
+  {
+    "question": "What is the pre-warm pattern?",
+    "options": [
+      "Pre-load",
+      "Pattern for pre-loading data before needed",
+      "Cache pattern",
+      "Performance pattern"
+    ],
+    "correctOptions": [
+      "Pattern for pre-loading data before needed"
+    ],
+    "time": 55,
+    "details": "Pre-warming preloads data to avoid loading delays."
+  },
+  {
+    "question": "What is useId hook?",
+    "options": [
+      "Unique ID generation",
+      "Hook that generates unique IDs for accessibility",
+      "Random ID",
+      "Session ID"
+    ],
+    "correctOptions": [
+      "Hook that generates unique IDs for accessibility"
+    ],
+    "time": 50,
+    "details": "useId generates stable, unique IDs for ARIA attributes."
+  },
+  {
+    "question": "What is the new JSX transform?",
+    "options": [
+      "Automatic JSX",
+      "Transform that doesn't require React import in scope",
+      "Legacy transform",
+      "Babel plugin"
+    ],
+    "correctOptions": [
+      "Transform that doesn't require React import in scope"
+    ],
+    "time": 55,
+    "details": "New JSX transform uses jsx-runtime automatically."
+  },
+  {
+    "question": "What is jsxDEV vs jsx?",
+    "options": [
+      "DEV only",
+      "jsxDEV is development-only bundle with extra dev info",
+      "Production JSX",
+      "Runtime JSX"
+    ],
+    "correctOptions": [
+      "jsxDEV is development-only bundle with extra dev info"
+    ],
+    "time": 55,
+    "details": "jsxDEV includes development warnings and file info."
+  },
+  {
+    "question": "What is fragment key?",
+    "options": [
+      "Fragment as key",
+      "Using key prop on React.Fragment in arrays",
+      "Fragment ID",
+      "Element key"
+    ],
+    "correctOptions": [
+      "Using key prop on React.Fragment in arrays"
+    ],
+    "time": 50,
+    "details": "Fragments can have keys when used in lists."
+  },
+  {
+    "question": "What is children key?",
+    "options": [
+      "Children as key",
+      "Anti-pattern of using children as key for elements",
+      "Valid key",
+      "Unique key"
+    ],
+    "correctOptions": [
+      "Anti-pattern of using children as key for elements"
+    ],
+    "time": 55,
+    "details": "Children should not be used as keys - use stable identifiers."
+  },
+  {
+    "question": "What are React Server Components?",
+    "options": [
+      "Server-only render",
+      "Components that render exclusively on server with no client JavaScript",
+      "Client components",
+      "Shared components"
+    ],
+    "correctOptions": [
+      "Components that render exclusively on server with no client JavaScript"
+    ],
+    "time": 55,
+    "details": "RSC components reduce bundle size by staying on server."
+  },
+  {
+    "question": "What is React Compiler (React Forget)?",
+    "options": [
+      "Auto-memoization",
+      "Compiler that automatically memoizes components to prevent unnecessary renders",
+      "Runtime optimizer",
+      "Build tool"
+    ],
+    "correctOptions": [
+      "Compiler that automatically memoizes components to prevent unnecessary renders"
+    ],
+    "time": 65,
+    "details": "React Compiler automatically determines what to memoize."
+  },
+  {
+    "question": "What is action status in useFormState?",
+    "options": [
+      "Form status",
+      "useFormState returns [state, action] where action is the form action function",
+      "Form error",
+      "Form data"
+    ],
+    "correctOptions": [
+      "useFormState returns [state, action] where action is the form action function"
+    ],
+    "time": 60,
+    "details": "useFormState returns state and bound action together."
+  },
+  {
+    "question": "What is the optimistic data pattern?",
+    "options": [
+      "Immediate UI",
+      "Pattern of updating UI immediately while server processes request",
+      "Delayed update",
+      "Error pattern"
+    ],
+    "correctOptions": [
+      "Pattern of updating UI immediately while server processes request"
+    ],
+    "time": 55,
+    "details": "Optimistic updates show instant feedback before server confirmation."
+  },
+  {
+    "question": "What is the pending UI pattern?",
+    "options": [
+      "Loading state",
+      "Pattern showing pending state during transitions",
+      "Error state",
+      "Empty state"
+    ],
+    "correctOptions": [
+      "Pattern showing pending state during transitions"
+    ],
+    "time": 50,
+    "details": "Pending UI indicates work in progress to users."
+  },
+  {
+    "question": "What is the error boundary pattern?",
+    "options": [
+      "Catch errors",
+      "Pattern for catching and displaying errors gracefully",
+      "Error reporting",
+      "Error logging"
+    ],
+    "correctOptions": [
+      "Pattern for catching and displaying errors gracefully"
+    ],
+    "time": 50,
+    "details": "Error boundaries catch JavaScript errors in component trees."
+  },
+  {
+    "question": "What is the retry pattern?",
+    "options": [
+      "Retry failed",
+      "Pattern for automatically retrying failed operations",
+      "Error pattern",
+      "Loading pattern"
+    ],
+    "correctOptions": [
+      "Pattern for automatically retrying failed operations"
+    ],
+    "time": 55,
+    "details": "Retry pattern handles transient failures gracefully."
+  },
+  {
+    "question": "What is stale-while-revalidate?",
+    "options": [
+      "Cache strategy",
+      "Cache strategy that serves stale data while fetching fresh in background",
+      "Cache invalidation",
+      "Cache eviction"
+    ],
+    "correctOptions": [
+      "Cache strategy"
+    ],
+    "time": 60,
+    "details": "SWR shows cached data immediately while updating in background."
+  },
+  {
+    "question": "What is SWR hook?",
+    "options": [
+      "Remote fetch",
+      "Hook for data fetching with stale-while-revalidate caching",
+      "State hook",
+      "Effect hook"
+    ],
+    "correctOptions": [
+      "Hook for data fetching with stale-while-revalidate caching"
+    ],
+    "time": 55,
+    "details": "SWR (Stale While Revalidate) provides caching with background refresh."
+  },
+  {
+    "question": "What is React Query?",
+    "options": [
+      "Data fetching",
+      "TanStack Query - library for managing server state and caching",
+      "State management",
+      "Form handling"
+    ],
+    "correctOptions": [
+      "TanStack Query - library for managing server state and caching"
+    ],
+    "time": 50,
+    "details": "React Query handles server state with caching and sync."
+  },
+  {
+    "question": "What is useQuery hook?",
+    "options": [
+      "Fetch data",
+      "Hook for fetching and caching data",
+      "State hook",
+      "Mutation hook"
+    ],
+    "correctOptions": [
+      "Hook for fetching and caching data"
+    ],
+    "time": 50,
+    "details": "useQuery fetches data with caching and refetching."
+  },
+  {
+    "question": "What is useMutation hook?",
+    "options": [
+      "Write data",
+      "Hook for mutations (POST, PUT, DELETE) with caching updates",
+      "Query hook",
+      "State hook"
+    ],
+    "correctOptions": [
+      "Hook for mutations (POST, PUT, DELETE) with caching updates"
+    ],
+    "time": 50,
+    "details": "useMutation handles data modifications with cache updates."
+  },
+  {
+    "question": "What is cache management in React Query?",
+    "options": [
+      "Cache control",
+      "Invalidating, updating, and optimizing cache after mutations",
+      "Cache storage",
+      "Cache eviction"
+    ],
+    "correctOptions": [
+      "Invalidating, updating, and optimizing cache after mutations"
+    ],
+    "time": 55,
+    "details": "Cache management updates stale data after mutations."
+  },
+  {
+    "question": "What is optimistic updates in mutations?",
+    "options": [
+      "Instant feedback",
+      "Pattern of updating UI optimistically before server confirms",
+      "Delayed update",
+      "Error handling"
+    ],
+    "correctOptions": [
+      "Pattern of updating UI optimistically before server confirms"
+    ],
+    "time": 55,
+    "details": "Optimistic mutations update cache immediately, revert on error."
+  },
+  {
+    "question": "What is query key in React Query?",
+    "options": [
+      "Query identifier",
+      "Unique key for cache storage and invalidation",
+      "Query string",
+      "Cache key"
+    ],
+    "correctOptions": [
+      "Unique key for cache storage and invalidation"
+    ],
+    "time": 50,
+    "details": "Query keys identify and organize cached data."
+  },
+  {
+    "question": "What is query client in React Query?",
+    "options": [
+      "Client instance",
+      "Main object for configuring and managing queries",
+      "HTTP client",
+      "API client"
+    ],
+    "correctOptions": [
+      "Main object for configuring and managing queries"
+    ],
+    "time": 55,
+    "details": "QueryClient provides query and cache management."
+  },
+  {
+    "question": "What is prefetching in React Query?",
+    "options": [
+      "Pre-load",
+      "Pre-loading data into cache before it's needed",
+      "Lazy loading",
+      "On-demand loading"
+    ],
+    "correctOptions": [
+      "Pre-load"
+    ],
+    "time": 55,
+    "details": "Prefetching preloads data for faster subsequent access."
+  },
+  {
+    "question": "What is infinite queries in React Query?",
+    "options": [
+      "Pagination",
+      "Query that loads pages of data incrementally",
+      "Single query",
+      "Cached query"
+    ],
+    "correctOptions": [
+      "Query that loads pages of data incrementally"
+    ],
+    "time": 60,
+    "details": "Infinite queries handle pagination with infinite scroll."
+  },
+  {
+    "question": "What is useInfiniteQuery hook?",
+    "options": [
+      "Infinite scroll",
+      "Hook for infinite/paginated data fetching",
+      "Query hook",
+      "Mutation hook"
+    ],
+    "correctOptions": [
+      "Hook for infinite/paginated data fetching"
+    ],
+    "time": 60,
+    "details": "useInfiniteQuery manages pagination and cursors."
+  },
+  {
+    "question": "What is stale time in React Query?",
+    "options": [
+      "Fresh duration",
+      "Duration data remains fresh before refetching",
+      "Loading time",
+      "Error time"
+    ],
+    "correctOptions": [
+      "Duration data remains fresh before refetching"
+    ],
+    "time": 55,
+    "details": "staleTime controls when data needs refetching."
+  },
+  {
+    "question": "What is cache time in React Query?",
+    "options": [
+      "Cache duration",
+      "Duration unused data remains in cache before garbage collection",
+      "Query time",
+      "Fetch time"
+    ],
+    "correctOptions": [
+      "Duration unused data remains in cache before garbage collection"
+    ],
+    "time": 55,
+    "details": "cacheTime determines when inactive cache is cleaned up."
+  },
+  {
+    "question": "What is refetch on window focus?",
+    "options": [
+      "Auto refetch",
+      "Automatically refetching when window regains focus",
+      "Manual refetch",
+      "Initial fetch"
+    ],
+    "correctOptions": [
+      "Automatically refetching when window regains focus"
+    ],
+    "time": 50,
+    "details": "refetchOnWindowFocus keeps data fresh when users return."
+  },
+  {
+    "question": "What is placeholder data in React Query?",
+    "options": [
+      "Default data",
+      "Initial data shown while loading, typically from cache",
+      "Error data",
+      "Loading data"
+    ],
+    "correctOptions": [
+      "Initial data shown while loading, typically from cache"
+    ],
+    "time": 55,
+    "details": "Placeholder data shows temporary values during fetch."
+  },
+  {
+    "question": "What is initial data in React Query?",
+    "options": [
+      "Starting data",
+      "Data to use as initial cache for a query",
+      "Placeholder",
+      "Fallback data"
+    ],
+    "correctOptions": [
+      "Data to use as initial cache for a query"
+    ],
+    "time": 55,
+    "details": "initialData pre-populates cache for immediate use."
+  },
+  {
+    "question": "What is keepPreviousData in React Query?",
+    "options": [
+      "Keep previous",
+      "Shows previous data while fetching new data",
+      "Clear data",
+      "Error data"
+    ],
+    "correctOptions": [
+      "Shows previous data while fetching new data"
+    ],
+    "time": 55,
+    "details": "keepPreviousData prevents flash during pagination."
+  },
+  {
+    "question": "What is select in React Query?",
+    "options": [
+      "Transform data",
+      "Function to transform data after fetching",
+      "Query selector",
+      "Data picker"
+    ],
+    "correctOptions": [
+      "Function to transform data after fetching"
+    ],
+    "time": 50,
+    "details": "select transforms fetched data before returning."
+  },
+  {
+    "question": "What is enabled in React Query?",
+    "options": [
+      "Active query",
+      "Option to control when query runs",
+      "Query state",
+      "Fetch flag"
+    ],
+    "correctOptions": [
+      "Option to control when query runs"
+    ],
+    "time": 50,
+    "details": "enabled controls whether query executes or waits."
+  },
+  {
+    "question": "What is refetchInterval in React Query?",
+    "options": [
+      "Polling",
+      "Automatic refetch interval for periodic updates",
+      "Manual refetch",
+      "Initial refetch"
+    ],
+    "correctOptions": [
+      "Automatic refetch interval for periodic updates"
+    ],
+    "time": 55,
+    "details": "refetchInterval enables polling for real-time data."
+  },
+  {
+    "question": "What is retry in React Query?",
+    "options": [
+      "Retry failed",
+      "Number of retry attempts on failure",
+      "Error handling",
+      "Cache retry"
+    ],
+    "correctOptions": [
+      "Number of retry attempts on failure"
+    ],
+    "time": 50,
+    "details": "retry configures automatic retry attempts."
+  },
+  {
+    "question": "What is structural sharing in React Query?",
+    "options": [
+      "Object sharing",
+      "Reuses unchanged data structure for proper equality checking",
+      "Data sharing",
+      "Cache sharing"
+    ],
+    "correctOptions": [
+      "Reuses unchanged data structure for proper equality checking"
+    ],
+    "time": 60,
+    "details": "Structural sharing maintains referential equality for unchanged data."
+  },
+  {
+    "question": "What is fetch policy in Apollo?",
+    "options": [
+      "Cache strategy",
+      "Controls when data is fetched from network vs cache",
+      "Network policy",
+      "Query policy"
+    ],
+    "correctOptions": [
+      "Controls when data is fetched from network vs cache"
+    ],
+    "time": 55,
+    "details": "Fetch policy determines data source for queries."
+  },
+  {
+    "question": "What is cache-first policy?",
+    "options": [
+      "Cache then network",
+      "Use cache if available, only fetch if missing",
+      "Network first",
+      "Cache only"
+    ],
+    "correctOptions": [
+      "Use cache if available, only fetch if missing"
+    ],
+    "time": 55,
+    "details": "cache-first checks cache before network request."
+  },
+  {
+    "question": "What is network-only policy?",
+    "options": [
+      "Network first",
+      "Always fetch from network, ignore cache",
+      "Cache first",
+      "Cache only"
+    ],
+    "correctOptions": [
+      "Always fetch from network, ignore cache"
+    ],
+    "time": 50,
+    "details": "network-only bypasses cache for fresh data."
+  },
+  {
+    "question": "What is cache-and-network policy?",
+    "options": [
+      "Hybrid",
+      "Return cached data immediately, then fetch from network for updates",
+      "Network only",
+      "Cache only"
+    ],
+    "correctOptions": [
+      "Return cached data immediately, then fetch from network for updates"
+    ],
+    "time": 60,
+    "details": "cache-and-network shows cache instantly, updates from server."
+  },
+  {
+    "question": "What is useQueryhook in Apollo?",
+    "options": [
+      "Apollo query",
+      "Hook for Apollo GraphQL queries with caching",
+      "HTTP query",
+      "REST query"
+    ],
+    "correctOptions": [
+      "Hook for Apollo GraphQL queries with caching"
+    ],
+    "time": 55,
+    "details": "useQuery integrates Apollo with React for GraphQL."
+  },
+  {
+    "question": "What is useMutation hook in Apollo?",
+    "options": [
+      "Apollo mutation",
+      "Hook for GraphQL mutations with cache updates",
+      "HTTP mutation",
+      "REST mutation"
+    ],
+    "correctOptions": [
+      "Hook for GraphQL mutations with cache updates"
+    ],
+    "time": 55,
+    "details": "useMutation handles GraphQL mutations with cache integration."
+  },
+  {
+    "question": "What is Apollo Client cache?",
+    "options": [
+      "Data store",
+      "Normalized in-memory cache for GraphQL data",
+      "HTTP cache",
+      "Browser cache"
+    ],
+    "correctOptions": [
+      "Normalized in-memory cache for GraphQL data"
+    ],
+    "time": 55,
+    "details": "Apollo cache normalizes and stores query results."
+  },
+  {
+    "question": "What is fragment in Apollo?",
+    "options": [
+      "Data fragment",
+      "Reusable GraphQL query fragment",
+      "Data type",
+      "Query type"
+    ],
+    "correctOptions": [
+      "Reusable GraphQL query fragment"
+    ],
+    "time": 50,
+    "details": "Fragments define reusable field selections in GraphQL."
+  },
+  {
+    "question": "What is optimistic response in Apollo?",
+    "options": [
+      "Instant feedback",
+      "Mock response for mutations before server responds",
+      "Error response",
+      "Pending response"
+    ],
+    "correctOptions": [
+      "Mock response for mutations before server responds"
+    ],
+    "time": 60,
+    "details": "Optimistic response provides immediate UI update."
+  },
+  {
+    "question": "What is a React component?",
+    "options": [
+      "Reusable UI piece",
+      "Function or class",
+      "Returns JSX",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Reusable UI piece",
+      "Function or class",
+      "Returns JSX",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is a React component? explanation."
+  },
+  {
+    "question": "What is pagination in Apollo?",
+    "options": [
+      "Cursor pagination",
+      "Supporting offset/limit or cursor-based pagination",
+      "Page numbers",
+      "Load more"
+    ],
+    "correctOptions": [
+      "Supporting offset/limit or cursor-based pagination"
+    ],
+    "time": 55,
+    "details": "Apollo handles pagination with fetchMore for infinite scroll."
+  },
+  {
+    "question": "What is refetchQueries in Apollo?",
+    "options": [
+      "Refetch after",
+      "Array of queries to refetch after a mutation",
+      "Query list",
+      "Query cache"
+    ],
+    "correctOptions": [
+      "Array of queries to refetch after a mutation"
+    ],
+    "time": 55,
+    "details": "refetchQueries updates related queries after mutation."
+  },
+  {
+    "question": "What is update function in Apollo mutations?",
+    "options": [
+      "Cache update",
+      "Function to directly update cache after mutation",
+      "Error update",
+      "Loading update"
+    ],
+    "correctOptions": [
+      "Function to directly update cache after mutation"
+    ],
+    "time": 60,
+    "details": "update modifies cache directly instead of refetching."
+  },
+  {
+    "question": "What is @connection directive in Apollo?",
+    "options": [
+      "Cache key",
+      "Directs Apollo to store results under specific cache key",
+      "Query directive",
+      "Cache directive"
+    ],
+    "correctOptions": [
+      "Directs Apollo to store results under specific cache key"
+    ],
+    "time": 60,
+    "details": "@connection enables custom cache key storage."
+  },
+  {
+    "question": "What is useLazyQuery in Apollo?",
+    "options": [
+      "Delayed query",
+      "Hook for executing queries on demand, not automatically",
+      "Auto query",
+      "Background query"
+    ],
+    "correctOptions": [
+      "Hook for executing queries on demand, not automatically"
+    ],
+    "time": 55,
+    "details": "useLazyQuery triggers queries manually when needed."
+  },
+  {
+    "question": "What is subscription in GraphQL?",
+    "options": [
+      "Real-time",
+      "Real-time updates pushed from server to client",
+      "Query type",
+      "Mutation type"
+    ],
+    "correctOptions": [
+      "Real-time"
+    ],
+    "time": 50,
+    "details": "Subscriptions maintain persistent connections for live data."
+  },
+  {
+    "question": "What is useSubscription hook?",
+    "options": [
+      "Subscribe to data",
+      "Hook for subscribing to GraphQL subscriptions",
+      "Query hook",
+      "Mutation hook"
+    ],
+    "correctOptions": [
+      "Hook for subscribing to GraphQL subscriptions"
+    ],
+    "time": 55,
+    "details": "useSubscription receives real-time updates."
+  },
+  {
+    "question": "What is optimistic UI in general?",
+    "options": [
+      "Instant updates",
+      "Pattern of immediately showing expected result while server processes",
+      "Delayed updates",
+      "Error handling"
+    ],
+    "correctOptions": [
+      "Pattern of immediately showing expected result while server processes"
+    ],
+    "time": 50,
+    "details": "Optimistic UI provides responsive experience despite network latency."
+  },
+  {
+    "question": "What is progressive enhancement?",
+    "options": [
+      "Enhanced functionality",
+      "Building features that work without JavaScript, enhanced with JS",
+      "Performance boost",
+      "Fallback features"
+    ],
+    "correctOptions": [
+      "Building features that work without JavaScript, enhanced with JS"
+    ],
+    "time": 60,
+    "details": "Progressive enhancement builds core functionality first, enhances with JS."
+  },
+  {
+    "question": "What is code splitting in React?",
+    "options": [
+      "Bundle splitting",
+      "Splitting JavaScript into chunks loaded on demand",
+      "Minification",
+      "Compression"
+    ],
+    "correctOptions": [
+      "Splitting JavaScript into chunks loaded on demand"
+    ],
+    "time": 50,
+    "details": "Code splitting reduces initial bundle size with lazy loading."
+  },
+  {
+    "question": "What is React.lazy for code splitting?",
+    "options": [
+      "Lazy load",
+      "Loading components dynamically with dynamic import",
+      "Static import",
+      "Eager loading"
+    ],
+    "correctOptions": [
+      "Loading components dynamically with dynamic import"
+    ],
+    "time": 50,
+    "details": "React.lazy enables component-level code splitting."
+  },
+  {
+    "question": "What is Suspense fallback?",
+    "options": [
+      "Loading UI",
+      "Component shown while child components are loading",
+      "Error UI",
+      "Empty state"
+    ],
+    "correctOptions": [
+      "Component shown while child components are loading"
+    ],
+    "time": 45,
+    "details": "fallback shows loading indicator during suspense."
+  },
+  {
+    "question": "What is bundle analyzer?",
+    "options": [
+      "Size analysis",
+      "Tool for visualizing bundle contents and sizes",
+      "Code coverage",
+      "Performance tool"
+    ],
+    "correctOptions": [
+      "Tool for visualizing bundle contents and sizes"
+    ],
+    "time": 50,
+    "details": "Bundle analyzer helps identify large dependencies."
+  },
+  {
+    "question": "What is route-based splitting?",
+    "options": [
+      "Per-route bundle",
+      "Creating separate bundles for each route",
+      "Component splitting",
+      "Vendor splitting"
+    ],
+    "correctOptions": [
+      "Creating separate bundles for each route"
+    ],
+    "time": 55,
+    "details": "Route-based splitting loads page code only when needed."
+  },
+  {
+    "question": "What is component-based splitting?",
+    "options": [
+      "Lazy component",
+      "Splitting large components into separate chunks",
+      "Route splitting",
+      "CSS splitting"
+    ],
+    "correctOptions": [
+      "Splitting large components into separate chunks"
+    ],
+    "time": 55,
+    "details": "Component splitting loads feature components on demand."
+  },
+  {
+    "question": "What is dynamic import?",
+    "options": [
+      "On-demand loading",
+      "Loading modules dynamically at runtime with import()",
+      "Static import",
+      "Required import"
+    ],
+    "correctOptions": [
+      "Loading modules dynamically at runtime with import()"
+    ],
+    "time": 50,
+    "details": "Dynamic imports load code only when executed."
+  },
+  {
+    "question": "What is tree shaking?",
+    "options": [
+      "Dead code removal",
+      "Removing unused exports from bundles",
+      "Minification",
+      "Compression"
+    ],
+    "correctOptions": [
+      "Removing unused exports from bundles"
+    ],
+    "time": 50,
+    "details": "Tree shaking eliminates unreachable code."
+  },
+  {
+    "question": "What are production optimizations in React?",
+    "options": [
+      "Performance",
+      "Minification, compression, and removing dev-only code",
+      "Debugging",
+      "Testing"
+    ],
+    "correctOptions": [
+      "Minification, compression, and removing dev-only code"
+    ],
+    "time": 55,
+    "details": "Production builds optimize for size and performance."
+  },
+  {
+    "question": "What is useTransition hook timing?",
+    "options": [
+      "Transition tracking",
+      "Returns isPending for transition state",
+      "Start time",
+      "End time"
+    ],
+    "correctOptions": [
+      "Returns isPending for transition state"
+    ],
+    "time": 55,
+    "details": "useTransition returns boolean isPending during transitions."
+  },
+  {
+    "question": "What is useDeferredValue for?",
+    "options": [
+      "Defer rendering",
+      "Deferring low-priority renders for better interactivity",
+      "Skip rendering",
+      "Cancel rendering"
+    ],
+    "correctOptions": [
+      "Deferring low-priority renders for better interactivity"
+    ],
+    "time": 55,
+    "details": "useDeferredValue prioritizes urgent renders over non-urgent."
+  },
+  {
+    "question": "What is selective hydration?",
+    "options": [
+      "Prioritized hydrate",
+      "React prioritizes hydrating user-interactive parts first",
+      "Full hydration",
+      "No hydration"
+    ],
+    "correctOptions": [
+      "React prioritizes hydrating user-interactive parts first"
+    ],
+    "time": 60,
+    "details": "Selective hydration improves Time to Interactive."
+  },
+  {
+    "question": "What is streaming SSR with Suspense?",
+    "options": [
+      "Chunked HTML",
+      "Streaming HTML in chunks as components resolve",
+      "Static HTML",
+      "Client HTML"
+    ],
+    "correctOptions": [
+      "Streaming HTML in chunks as components resolve"
+    ],
+    "time": 60,
+    "details": "Streaming SSR sends HTML progressively, not all at once."
+  },
+  {
+    "question": "What is the purpose of useSyncExternalStore?",
+    "options": [
+      "External state sync",
+      "Ensures React and external store stay synchronized",
+      "Local state",
+      "Internal state"
+    ],
+    "correctOptions": [
+      "Ensures React and external store stay synchronized"
+    ],
+    "time": 60,
+    "details": "useSyncExternalStore provides consistent reads across renders."
+  },
+  {
+    "question": "What is the purpose of useInsertionEffect?",
+    "options": [
+      "Style injection",
+      "Injects CSS before paint for CSS-in-JS libraries",
+      "State effect",
+      "Render effect"
+    ],
+    "correctOptions": [
+      "Injects CSS before paint for CSS-in-JS libraries"
+    ],
+    "time": 60,
+    "details": "useInsertionEffect runs before browser paints."
+  },
+  {
+    "question": "What is flushSync for urgent updates?",
+    "options": [
+      "Urgent rendering",
+      "Forces state updates to flush immediately for critical updates",
+      "Async updates",
+      "Deferred updates"
+    ],
+    "correctOptions": [
+      "Forces state updates to flush immediately for critical updates"
+    ],
+    "time": 60,
+    "details": "flushSync handles time-critical updates synchronously."
+  },
+  {
+    "question": "What is the purpose of useId stable IDs?",
+    "options": [
+      "Unique ID",
+      "Generates unique IDs stable across server and client",
+      "Random ID",
+      "Session ID"
+    ],
+    "correctOptions": [
+      "Generates unique IDs stable across server and client"
+    ],
+    "time": 55,
+    "details": "useId ensures IDs match between server and client renders."
+  },
+  {
+    "question": "What is SSR hydration mismatch?",
+    "options": [
+      "Hydration error",
+      "When server and client rendered content differ",
+      "Network error",
+      "Cache error"
+    ],
+    "correctOptions": [
+      "When server and client rendered content differ"
+    ],
+    "time": 55,
+    "details": "Hydration mismatch causes React to log warnings."
+  },
+  {
+    "question": "What is suppressHydrationWarning?",
+    "options": [
+      "Warning suppression",
+      "Prop to suppress hydration warnings for expected differences",
+      "Error suppression",
+      "Cache suppression"
+    ],
+    "correctOptions": [
+      "Prop to suppress hydration warnings for expected differences"
+    ],
+    "time": 60,
+    "details": "suppressHydrationWarning silences expected client/server differences."
+  },
+  {
+    "question": "What is dangerouslySetInnerHTML?",
+    "options": [
+      "HTML injection",
+      "Prop for rendering raw HTML in React",
+      "Style injection",
+      "Script injection"
+    ],
+    "correctOptions": [
+      "Prop for rendering raw HTML in React"
+    ],
+    "time": 50,
+    "details": "dangerouslySetInnerHTML renders raw HTML - sanitize first!"
+  },
+  {
+    "question": "What is the purpose of dangerouslySetInnerHTML?",
+    "options": [
+      "Dynamic HTML",
+      "Rendering HTML from trusted sources like CMS",
+      "Static HTML",
+      "Default HTML"
+    ],
+    "correctOptions": [
+      "Rendering HTML from trusted sources like CMS"
+    ],
+    "time": 55,
+    "details": "Use for CMS content; always sanitize to prevent XSS."
+  },
+  {
+    "question": "What is the recommended pattern for SSR data fetching?",
+    "options": [
+      "Data fetching",
+      "Using Suspense for data fetching during SSR",
+      "Client fetch",
+      "Effect fetch"
+    ],
+    "correctOptions": [
+      "Using Suspense for data fetching during SSR"
+    ],
+    "time": 60,
+    "details": "Suspense with server components enables SSR data fetching."
+  },
+  {
+    "question": "What is useState? (Level 5 #108)",
+    "options": [
+      "State",
+      "Hook",
+      "Re-render",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "State",
+      "Hook",
+      "Re-render",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useState? explanation."
+  },
+  {
+    "question": "What is useEffect? (Level 5 #109)",
+    "options": [
+      "Side effects",
+      "Cleanup",
+      "Dependencies",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Side effects",
+      "Cleanup",
+      "Dependencies",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useEffect? explanation."
+  },
+  {
+    "question": "What is useContext? (Level 5 #110)",
+    "options": [
+      "Context",
+      "Redux alternative",
+      "Global state",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Context",
+      "Redux alternative",
+      "Global state",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useContext? explanation."
+  },
+  {
+    "question": "What is useReducer? (Level 5 #111)",
+    "options": [
+      "State management",
+      "Complex state",
+      "Actions",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "State management",
+      "Complex state",
+      "Actions",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useReducer? explanation."
+  },
+  {
+    "question": "What is useRef? (Level 5 #112)",
+    "options": [
+      "DOM access",
+      "Mutable value",
+      "Persistence",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "DOM access",
+      "Mutable value",
+      "Persistence",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useRef? explanation."
+  },
+  {
+    "question": "What is useMemo? (Level 5 #113)",
+    "options": [
+      "Performance",
+      "Cache",
+      "Expensive calculation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Performance",
+      "Cache",
+      "Expensive calculation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useMemo? explanation."
+  },
+  {
+    "question": "What is useCallback? (Level 5 #114)",
+    "options": [
+      "Performance",
+      "Function memoization",
+      "Dependencies",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Performance",
+      "Function memoization",
+      "Dependencies",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useCallback? explanation."
+  },
+  {
+    "question": "What is React.memo? (Level 5 #115)",
+    "options": [
+      "Optimization",
+      "Pure component",
+      "Shallow compare",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Optimization",
+      "Pure component",
+      "Shallow compare",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is React.memo? explanation."
+  },
+  {
+    "question": "What is useLayoutEffect? (Level 5 #116)",
+    "options": [
+      "Synchronous",
+      "DOM mutation",
+      "Before paint",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Synchronous",
+      "DOM mutation",
+      "Before paint",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is useLayoutEffect? explanation."
+  },
+  {
+    "question": "What is custom hook? (Level 5 #117)",
+    "options": [
+      "Reuse logic",
+      "Stateful",
+      "Side effects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Reuse logic",
+      "Stateful",
+      "Side effects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is custom hook? explanation."
+  },
+  {
+    "question": "What is syntax?",
+    "options": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Rules",
+      "Code structure",
+      "Grammar",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is syntax? explanation."
+  },
+  {
+    "question": "What is authorization?",
+    "options": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Permissions",
+      "Access control",
+      "Roles",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authorization? explanation."
+  },
+  {
+    "question": "What is encapsulation?",
+    "options": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data hiding",
+      "Access control",
+      "Bundle",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is encapsulation? explanation."
+  },
+  {
+    "question": "What is JSON?",
+    "options": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Data format",
+      "Lightweight",
+      "Text",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is JSON? explanation."
+  },
+  {
+    "question": "What is iteration?",
+    "options": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Loop",
+      "Repeat",
+      "Collection",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is iteration? explanation."
+  },
+  {
+    "question": "What is runtime?",
+    "options": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execution time",
+      "Program running",
+      "Environment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is runtime? explanation."
+  },
+  {
+    "question": "What is authentication?",
+    "options": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify identity",
+      "Login",
+      "Users",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is authentication? explanation."
+  },
+  {
+    "question": "What is polymorphism?",
+    "options": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Many forms",
+      "Method overriding",
+      "Inheritance",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is polymorphism? explanation."
+  },
+  {
+    "question": "What is API?",
+    "options": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Application Interface",
+      "Communication",
+      "Protocol",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is API? explanation."
+  },
+  {
+    "question": "What is recursion?",
+    "options": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Self-call",
+      "Base case",
+      "Stack",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is recursion? explanation."
+  },
+  {
+    "question": "What is type inference?",
+    "options": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Auto-detect",
+      "Compiler",
+      "Implicit",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type inference? explanation."
+  },
+  {
+    "question": "What is CRUD?",
+    "options": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Create/Read/Update/Delete",
+      "Database",
+      "Operations",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CRUD? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is debugging?",
+    "options": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Find errors",
+      "Fix",
+      "Development",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is debugging? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  }
 ]

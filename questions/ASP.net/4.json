@@ -1,96 +1,1915 @@
 [
-  {"question": "What is the difference between UseWhen and Map in middleware branching?", "options": ["Predicate vs path", "Evaluation time", "Scope", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "UseWhen evaluates predicate each request; Map branches on path prefix."},
-  {"question": "What is the purpose of Middleware Factory in ASP.NET Core?", "options": ["Middleware creation", "DI integration", "Instance management", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IMiddlewareFactory creates middleware instances with DI support."},
-  {"question": "What is the purpose of IStartupFilter?", "options": ["Startup config", "Pipeline setup", "Hooks", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IStartupFilter configures middleware before app starts."},
-  {"question": "What is the purpose of Endpoint middleware in routing?", "options": ["Execute endpoint", "Route matching", "Handler", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Endpoint middleware executes the matched endpoint."},
-  {"question": "What is the purpose of RouteOptions in ASP.NET Core?", "options": ["Routing config", "Route settings", "Options", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "RouteOptions configures routing behavior."},
-  {"question": "What is the purpose of ModelBinding in complex scenarios?", "options": ["Complex types", "Collections", "Nested objects", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Model binding handles nested objects and collections."},
-  {"question": "What is the purpose of [BindRequired] attribute?", "options": ["Required binding", "Model binding", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "BindRequired ensures property must be bound from input."},
-  {"question": "What is the purpose of [BindNever] attribute?", "options": ["Skip binding", "Exclude from binding", "Model binding", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "BindNever prevents property from being bound."},
-  {"question": "What is the purpose of [FromQuery] attribute?", "options": ["Query string binding", "URL params", "Binding source", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "FromQuery binds parameters from query string."},
-  {"question": "What is the purpose of [FromRoute] attribute?", "options": ["Route binding", "URL path", "Binding source", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "FromRoute binds parameters from route values."},
-  {"question": "What is the purpose of [FromForm] attribute?", "options": ["Form binding", "POST data", "Binding source", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "FromForm binds parameters from form data."},
-  {"question": "What is the purpose of [FromBody] attribute?", "options": ["Request body binding", "JSON", "Binding source", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "FromBody binds parameter from request body."},
-  {"question": "What is the purpose of [FromHeader] attribute?", "options": ["Header binding", "HTTP headers", "Binding source", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "FromHeader binds parameter from HTTP headers."},
-  {"question": "What is the purpose of Custom Model Binder?", "options": ["Custom binding", "Type conversion", "Complex scenarios", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Custom model binder implements IModelBinder for custom binding logic."},
-  {"question": "What is the purpose of ModelBinderProvider?", "options": ["Binder provider", "Factory", "Custom binding", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IModelBinderProvider creates model binders for types."},
-  {"question": "What is the purpose of ValueProvider in model binding?", "options": ["Value source", "Binding", "Providers", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "ValueProvider supplies values from various sources."},
-  {"question": "What is the purpose of IValueProviderFactory?", "options": ["Provider factory", "Value provider", "Custom source", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IValueProviderFactory creates custom value providers."},
-  {"question": "What is the purpose of Custom Validation in ASP.NET Core?", "options": ["Custom validation", "IClientModelValidator", "Server-side", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Custom validation implements IValidationAttribute or IClientModelValidator."},
-  {"question": "What is the purpose of IValidatableObject?", "options": ["Model-level validation", "Complex validation", "Validation interface", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IValidatableObject provides model-level validation."},
-  {"question": "What is the purpose of Remote Validation?", "options": ["Server validation", "AJAX", "Real-time", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Remote validation calls server to validate without form submission."},
-  {"question": "What is the purpose of Custom Tag Helper?", "options": ["Custom HTML", "Server-side", "Razor", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Custom Tag Helper inherits from TagHelper for custom server-side rendering."},
-  {"question": "What is the purpose of TagHelperContext?", "options": ["Tag Helper context", "Output", "Input", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "TagHelperContext provides context for Tag Helper processing."},
-  {"question": "What is the purpose of TagHelperOutput?", "options": ["Render output", "HTML generation", "Tag Helper", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "TagHelperOutput generates the HTML output."},
-  {"question": "What is the purpose of ProcessAsync in Tag Helper?", "options": ["Async processing", "Tag Helper", "Rendering", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "ProcessAsync performs asynchronous Tag Helper processing."},
-  {"question": "What is the purpose of View Component InvokeAsync?", "options": ["Async invoke", "Component", "Rendering", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "InvokeAsync calls View Component to get results."},
-  {"question": "What is the purpose of ViewComponentContext?", "options": ["Component context", "View bag", "Arguments", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "ViewComponentContext provides context for View Component execution."},
-  {"question": "What is the purpose of ViewComponentResult?", "options": ["Return type", "Component result", "View", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "ViewComponentResult returns View Component result from action."},
-  {"question": "What is the purpose of Component Tag Helper?", "options": ["Invoke component", "Tag", "Razor", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "component Tag Helper invokes View Components in Razor."},
-  {"question": "What is the difference between View Component and Page Component?", "options": ["MVC vs Pages", "Usage", "Model", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "View Component for MVC; Page Component for Razor Pages."},
-  {"question": "What is the purpose of Result Filter?", "options": ["Post-processing", "Response", "MVC filter", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Result filters run after action result execution."},
-  {"question": "What is the purpose of Exception Filter?", "options": ["Error handling", "Global", "MVC filter", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Exception filters handle unhandled exceptions globally."},
-  {"question": "What is the purpose of IAsyncActionFilter?", "options": ["Async filter", "MVC", "Action", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IAsyncActionFilter provides async action filtering."},
-  {"question": "What is the purpose of IAsyncResultFilter?", "options": ["Async result", "MVC", "Filter", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IAsyncResultFilter provides async result filtering."},
-  {"question": "What is the purpose of IAsyncExceptionFilter?", "options": ["Async exception", "Error handling", "MVC", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IAsyncExceptionFilter provides async exception handling."},
-  {"question": "What is the purpose of ServiceFilter attribute?", "options": ["DI filter", "Filter from DI", "Attribute", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "ServiceFilter applies filter from DI container."},
-  {"question": "What is the purpose of TypeFilter attribute?", "options": ["DI type", "Filter type", "Attribute", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "TypeFilter creates filter instance from type with DI support."},
-  {"question": "What is the purpose of ExceptionHandler middleware?", "options": ["Error handling", "Exception page", "Pipeline", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "ExceptionHandler handles exceptions and displays error page."},
-  {"question": "What is the purpose of StatusCodePages middleware?", "options": ["Status code pages", "Error responses", "404/500", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "StatusCodePages generates plain text responses for status codes."},
-  {"question": "What is the purpose of DeveloperExceptionPage?", "options": ["Dev error details", "Debug", "Exception", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "DeveloperExceptionPage shows detailed error info in development."},
-  {"question": "What is the purpose of CORS middleware?", "options": ["Cross-origin", "Headers", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "CORS middleware handles cross-origin requests."},
-  {"question": "What is the purpose of [EnableCors] attribute?", "options": ["CORS enable", "Policy", "Controller", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "EnableCors enables CORS for controller/action."},
-  {"question": "What is the purpose of [DisableCors] attribute?", "options": ["CORS disable", "Policy", "Controller", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "DisableCors disables CORS for controller/action."},
-  {"question": "What is the purpose of CORS policy?", "options": ["Named policy", "Configuration", "CORS", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "CORS policy configures allowed origins, methods, headers."},
-  {"question": "What is the purpose of Response Caching middleware?", "options": ["Cache responses", "HTTP caching", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Response Caching caches HTTP responses."},
-  {"question": "What is the purpose of [ResponseCache] attribute?", "options": ["Cache control", "HTTP headers", "Response", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "ResponseCache sets response caching headers."},
-  {"question": "What is the purpose of Output Caching in ASP.NET Core?", "options": ["Cache output", "MVC response", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Output Caching caches MVC action results."},
-  {"question": "What is the purpose of Response Compression middleware?", "options": ["Gzip compression", "Performance", "Bandwidth", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Response Compression reduces response size using Gzip/Brotli."},
-  {"question": "What is the purpose of Static File middleware with caching?", "options": ["Cache static", "ETag", "Headers", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Static files can be cached with ETags and headers."},
-  {"question": "What is the purpose of URL Rewriting middleware?", "options": ["URL rewrite", "Redirect", "SEO", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "URL Rewriting modifies request URLs for routing or SEO."},
-  {"question": "What is the purpose of WebSocket middleware?", "options": ["WebSocket", "Real-time", "Bidirectional", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "WebSocket middleware enables bidirectional communication."},
-  {"question": "What is SignalR?", "options": ["Real-time", "WebSocket abstraction", "Push", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "SignalR provides real-time bidirectional communication."},
-  {"question": "What is the purpose of Hub in SignalR?", "options": ["Communication hub", "RPC", "Real-time", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Hub enables client-server communication via RPC."},
-  {"question": "What is the purpose of HubConnection?", "options": ["Client connection", "SignalR", "Connection", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "HubConnection manages SignalR client connection."},
-  {"question": "What is the purpose of JWT Bearer authentication?", "options": ["Token auth", "JWT", "Security", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "JWT Bearer authentication validates JWT tokens."},
-  {"question": "What is the purpose of AddJwtBearer in DI?", "options": ["JWT auth", "Authentication", "DI", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "AddJwtBearer registers JWT authentication scheme."},
-  {"question": "What is the purpose of Token Validation Parameters?", "options": ["Validate token", "Parameters", "JWT", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "TokenValidationParameters configure JWT validation rules."},
-  {"question": "What is the purpose of Claims in JWT?", "options": ["Token claims", "Payload", "Data", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Claims are statements encoded in JWT payload."},
-  {"question": "What is the purpose of Audience in JWT?", "options": ["Token audience", "Recipient", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Audience (aud) specifies the intended recipient."},
-  {"question": "What is the purpose of Issuer in JWT?", "options": ["Token issuer", "Source", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Issuer (iss) specifies who created the token."},
-  {"question": "What is the purpose of Expiration in JWT?", "options": ["Token expiry", "Lifetime", "Validation", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Expiration (exp) specifies token expiry time."},
-  {"question": "What is the purpose of OAuth 2.0 in ASP.NET?", "options": ["Authorization", "Protocol", "Social login", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "OAuth 2.0 provides authorization framework for external logins."},
-  {"question": "What is the purpose of Google authentication?", "options": ["Google login", "OAuth", "External", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Google authentication allows login with Google account."},
-  {"question": "What is the purpose of Policy Requirements?", "options": ["Authorization", "Requirements", "Custom", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Policy Requirements define custom authorization conditions."},
-  {"question": "What is the purpose of IAuthorizationHandler?", "options": ["Auth handler", "Requirements", "Custom", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IAuthorizationHandler handles authorization requirements."},
-  {"question": "What is the purpose of ClaimsAuthorizationHandler?", "options": ["Claims auth", "Handler", "Authorization", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "ClaimsAuthorizationHandler evaluates claims-based requirements."},
-  {"question": "What is the purpose of Resource-based authorization?", "options": ["Resource auth", "Owner check", "Custom", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Resource-based authorization checks resource ownership."},
-  {"question": "What is the purpose of IAuthorizationFilter?", "options": ["Auth filter", "MVC", "Authorization", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IAuthorizationFilter runs before action to check authorization."},
-  {"question": "What is the purpose of IdentityServer?", "options": ["OAuth server", "Token service", "Identity", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IdentityServer provides OAuth 2.0 / OpenID Connect server."},
-  {"question": "What is the purpose of AddAuthentication in DI?", "options": ["Auth config", "Services", "Authentication", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "AddAuthentication registers authentication services."},
-  {"question": "What is the purpose of [Authorize] with roles?", "options": ["Role check", "Authorization", "Access", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "[Authorize(Roles=\"Admin\")] restricts to specific roles."},
-  {"question": "What is the purpose of [Authorize] with policy?", "options": ["Policy check", "Authorization", "Custom", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "[Authorize(Policy=\"RequireAdmin\")] checks policy requirements."},
-  {"question": "What is the purpose of [Authorize] with schemes?", "options": ["Auth schemes", "Multiple schemes", "Custom", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "Authorize(AuthenticationSchemes=\"Bearer\") specifies auth scheme."},
-  {"question": "What is the purpose of IAuthenticationService?", "options": ["Auth service", "Authenticate", "Challenge", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IAuthenticationService provides authentication operations."},
-  {"question": "What is the purpose of HttpContext.AuthenticateAsync?", "options": ["Authenticate", "Get principal", "Async", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "AuthenticateAsync gets authenticated user principal."},
-  {"question": "What is the purpose of HttpContext.SignInAsync?", "options": ["Sign in", "Create principal", "Session", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "SignInAsync creates authentication cookie/token."},
-  {"question": "What is the purpose of HttpContext.SignOutAsync?", "options": ["Sign out", "Clear session", "Logout", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "SignOutAsync clears authentication session."},
-  {"question": "What is the purpose of AuthenticationProperties?", "options": ["Auth properties", "Options", "Cookies", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "AuthenticationProperties configures authentication behavior."},
-  {"question": "What is the purpose of ClaimsPrincipal?", "options": ["User principal", "Claims", "Identity", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "ClaimsPrincipal represents authenticated user with claims."},
-  {"question": "What is the purpose of Thread.CurrentPrincipal?", "options": ["Current user", "Thread", "Principal", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Thread.CurrentPrincipal gets current user principal."},
-  {"question": "What is the purpose of User.Identity.IsAuthenticated?", "options": ["Check auth", "User state", "Boolean", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "IsAuthenticated indicates if user is authenticated."},
-  {"question": "What is the purpose of User.Claims?", "options": ["User claims", "Properties", "Data", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "User.Claims returns all claims for current user."},
-  {"question": "What is the purpose of FindFirst in Claims?", "options": ["Find claim", "First match", "Claims", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "FindFirst finds claim by type."},
-  {"question": "What is the purpose of FindAll in Claims?", "options": ["Find all", "Multiple", "Claims", "All of the above"], "correctOptions": ["All of the above"], "time": 40, "details": "FindAll returns all claims matching type."},
-  {"question": "What is session middleware?", "options": ["Session", "State", "HTTP", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Session middleware provides distributed session support."},
-  {"question": "What is distributed session?", "options": ["Redis session", "Shared state", "Distributed", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Distributed session stores data in Redis/SQL Server."},
-  {"question": "What is the purpose of IDistributedCache?", "options": ["Distributed cache", "Cache interface", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IDistributedCache provides distributed caching interface."},
-  {"question": "What is Redis cache?", "options": ["In-memory DB", "Cache", "Distributed", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Redis provides distributed in-memory caching."},
-  {"question": "What is MemoryCache vs DistributedCache?", "options": ["In-process vs distributed", "Scope", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "MemoryCache is per-process; DistributedCache is shared."},
-  {"question": "What is the purpose of IMemoryCache?", "options": ["In-memory cache", "Cache interface", "Performance", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "IMemoryCache provides in-process caching."},
-  {"question": "What is the purpose of CacheEntry?", "options": ["Cache entry", "Options", "Value", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "CacheEntry configures caching options."},
-  {"question": "What is the purpose of CacheExpiration in MemoryCache?", "options": ["Time-based", "Expiry", "Sliding", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "CacheExpiration sets absolute or sliding expiration."},
-  {"question": "What is the purpose of CachePriority?", "options": ["Priority", "Eviction", "Cache", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "CachePriority controls eviction priority."},
-  {"question": "What is the purpose of CacheExtensions.GetOrCreate?", "options": ["Get or create", "Lazy", "Cache", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "GetOrCreate gets cached value or creates if missing."},
-  {"question": "What is the purpose of Tagging in EF Core cache?", "options": ["Cache tags", "Invalidation", "Tags", "All of the above"], "correctOptions": ["All of the above"], "time": 45, "details": "Cache tagging enables invalidation by tags."}
+  {
+    "question": "What is the difference between UseWhen and Map in middleware branching?",
+    "options": [
+      "Predicate vs path",
+      "Evaluation time",
+      "Scope",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "UseWhen evaluates predicate each request; Map branches on path prefix."
+  },
+  {
+    "question": "What is the purpose of Middleware Factory in ASP.NET Core?",
+    "options": [
+      "Middleware creation",
+      "DI integration",
+      "Instance management",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IMiddlewareFactory creates middleware instances with DI support."
+  },
+  {
+    "question": "What is the purpose of IStartupFilter?",
+    "options": [
+      "Startup config",
+      "Pipeline setup",
+      "Hooks",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IStartupFilter configures middleware before app starts."
+  },
+  {
+    "question": "What is the purpose of Endpoint middleware in routing?",
+    "options": [
+      "Execute endpoint",
+      "Route matching",
+      "Handler",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Endpoint middleware executes the matched endpoint."
+  },
+  {
+    "question": "What is the purpose of RouteOptions in ASP.NET Core?",
+    "options": [
+      "Routing config",
+      "Route settings",
+      "Options",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "RouteOptions configures routing behavior."
+  },
+  {
+    "question": "What is the purpose of ModelBinding in complex scenarios?",
+    "options": [
+      "Complex types",
+      "Collections",
+      "Nested objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Model binding handles nested objects and collections."
+  },
+  {
+    "question": "What is the purpose of [BindRequired] attribute?",
+    "options": [
+      "Required binding",
+      "Model binding",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "BindRequired ensures property must be bound from input."
+  },
+  {
+    "question": "What is the purpose of [BindNever] attribute?",
+    "options": [
+      "Skip binding",
+      "Exclude from binding",
+      "Model binding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "BindNever prevents property from being bound."
+  },
+  {
+    "question": "What is the purpose of [FromQuery] attribute?",
+    "options": [
+      "Query string binding",
+      "URL params",
+      "Binding source",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "FromQuery binds parameters from query string."
+  },
+  {
+    "question": "What is the purpose of [FromRoute] attribute?",
+    "options": [
+      "Route binding",
+      "URL path",
+      "Binding source",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "FromRoute binds parameters from route values."
+  },
+  {
+    "question": "What is the purpose of [FromForm] attribute?",
+    "options": [
+      "Form binding",
+      "POST data",
+      "Binding source",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "FromForm binds parameters from form data."
+  },
+  {
+    "question": "What is the purpose of [FromBody] attribute?",
+    "options": [
+      "Request body binding",
+      "JSON",
+      "Binding source",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "FromBody binds parameter from request body."
+  },
+  {
+    "question": "What is the purpose of [FromHeader] attribute?",
+    "options": [
+      "Header binding",
+      "HTTP headers",
+      "Binding source",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "FromHeader binds parameter from HTTP headers."
+  },
+  {
+    "question": "What is destructuring assignment?",
+    "options": [
+      "Extract values",
+      "Array/object",
+      "Short syntax",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Extract values",
+      "Array/object",
+      "Short syntax",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is destructuring assignment? explanation."
+  },
+  {
+    "question": "What is the purpose of ModelBinderProvider?",
+    "options": [
+      "Binder provider",
+      "Factory",
+      "Custom binding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IModelBinderProvider creates model binders for types."
+  },
+  {
+    "question": "What is the purpose of ValueProvider in model binding?",
+    "options": [
+      "Value source",
+      "Binding",
+      "Providers",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "ValueProvider supplies values from various sources."
+  },
+  {
+    "question": "What is the purpose of IValueProviderFactory?",
+    "options": [
+      "Provider factory",
+      "Value provider",
+      "Custom source",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IValueProviderFactory creates custom value providers."
+  },
+  {
+    "question": "What is the purpose of Custom Validation in ASP.NET Core?",
+    "options": [
+      "Custom validation",
+      "IClientModelValidator",
+      "Server-side",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Custom validation implements IValidationAttribute or IClientModelValidator."
+  },
+  {
+    "question": "What is the purpose of IValidatableObject?",
+    "options": [
+      "Model-level validation",
+      "Complex validation",
+      "Validation interface",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IValidatableObject provides model-level validation."
+  },
+  {
+    "question": "What is the purpose of Remote Validation?",
+    "options": [
+      "Server validation",
+      "AJAX",
+      "Real-time",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Remote validation calls server to validate without form submission."
+  },
+  {
+    "question": "What is the purpose of Custom Tag Helper?",
+    "options": [
+      "Custom HTML",
+      "Server-side",
+      "Razor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Custom Tag Helper inherits from TagHelper for custom server-side rendering."
+  },
+  {
+    "question": "What is the purpose of TagHelperContext?",
+    "options": [
+      "Tag Helper context",
+      "Output",
+      "Input",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "TagHelperContext provides context for Tag Helper processing."
+  },
+  {
+    "question": "What is the purpose of TagHelperOutput?",
+    "options": [
+      "Render output",
+      "HTML generation",
+      "Tag Helper",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "TagHelperOutput generates the HTML output."
+  },
+  {
+    "question": "What is the purpose of ProcessAsync in Tag Helper?",
+    "options": [
+      "Async processing",
+      "Tag Helper",
+      "Rendering",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "ProcessAsync performs asynchronous Tag Helper processing."
+  },
+  {
+    "question": "What is the purpose of View Component InvokeAsync?",
+    "options": [
+      "Async invoke",
+      "Component",
+      "Rendering",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "InvokeAsync calls View Component to get results."
+  },
+  {
+    "question": "What is the purpose of ViewComponentContext?",
+    "options": [
+      "Component context",
+      "View bag",
+      "Arguments",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "ViewComponentContext provides context for View Component execution."
+  },
+  {
+    "question": "What is the purpose of ViewComponentResult?",
+    "options": [
+      "Return type",
+      "Component result",
+      "View",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "ViewComponentResult returns View Component result from action."
+  },
+  {
+    "question": "What is the purpose of Component Tag Helper?",
+    "options": [
+      "Invoke component",
+      "Tag",
+      "Razor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "component Tag Helper invokes View Components in Razor."
+  },
+  {
+    "question": "What is the difference between View Component and Page Component?",
+    "options": [
+      "MVC vs Pages",
+      "Usage",
+      "Model",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "View Component for MVC; Page Component for Razor Pages."
+  },
+  {
+    "question": "What is the purpose of Result Filter?",
+    "options": [
+      "Post-processing",
+      "Response",
+      "MVC filter",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Result filters run after action result execution."
+  },
+  {
+    "question": "What is the purpose of Exception Filter?",
+    "options": [
+      "Error handling",
+      "Global",
+      "MVC filter",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Exception filters handle unhandled exceptions globally."
+  },
+  {
+    "question": "What is the purpose of IAsyncActionFilter?",
+    "options": [
+      "Async filter",
+      "MVC",
+      "Action",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IAsyncActionFilter provides async action filtering."
+  },
+  {
+    "question": "What is the purpose of IAsyncResultFilter?",
+    "options": [
+      "Async result",
+      "MVC",
+      "Filter",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IAsyncResultFilter provides async result filtering."
+  },
+  {
+    "question": "What is the purpose of IAsyncExceptionFilter?",
+    "options": [
+      "Async exception",
+      "Error handling",
+      "MVC",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IAsyncExceptionFilter provides async exception handling."
+  },
+  {
+    "question": "What is the purpose of ServiceFilter attribute?",
+    "options": [
+      "DI filter",
+      "Filter from DI",
+      "Attribute",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "ServiceFilter applies filter from DI container."
+  },
+  {
+    "question": "What is the purpose of TypeFilter attribute?",
+    "options": [
+      "DI type",
+      "Filter type",
+      "Attribute",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "TypeFilter creates filter instance from type with DI support."
+  },
+  {
+    "question": "What is the purpose of ExceptionHandler middleware?",
+    "options": [
+      "Error handling",
+      "Exception page",
+      "Pipeline",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "ExceptionHandler handles exceptions and displays error page."
+  },
+  {
+    "question": "What is the purpose of StatusCodePages middleware?",
+    "options": [
+      "Status code pages",
+      "Error responses",
+      "404/500",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "StatusCodePages generates plain text responses for status codes."
+  },
+  {
+    "question": "What is the purpose of DeveloperExceptionPage?",
+    "options": [
+      "Dev error details",
+      "Debug",
+      "Exception",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "DeveloperExceptionPage shows detailed error info in development."
+  },
+  {
+    "question": "What is the purpose of CORS middleware?",
+    "options": [
+      "Cross-origin",
+      "Headers",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "CORS middleware handles cross-origin requests."
+  },
+  {
+    "question": "What is the purpose of [EnableCors] attribute?",
+    "options": [
+      "CORS enable",
+      "Policy",
+      "Controller",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "EnableCors enables CORS for controller/action."
+  },
+  {
+    "question": "What is the purpose of [DisableCors] attribute?",
+    "options": [
+      "CORS disable",
+      "Policy",
+      "Controller",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "DisableCors disables CORS for controller/action."
+  },
+  {
+    "question": "What is the purpose of CORS policy?",
+    "options": [
+      "Named policy",
+      "Configuration",
+      "CORS",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "CORS policy configures allowed origins, methods, headers."
+  },
+  {
+    "question": "What is the purpose of Response Caching middleware?",
+    "options": [
+      "Cache responses",
+      "HTTP caching",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Response Caching caches HTTP responses."
+  },
+  {
+    "question": "What is the purpose of [ResponseCache] attribute?",
+    "options": [
+      "Cache control",
+      "HTTP headers",
+      "Response",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "ResponseCache sets response caching headers."
+  },
+  {
+    "question": "What is the purpose of Output Caching in ASP.NET Core?",
+    "options": [
+      "Cache output",
+      "MVC response",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Output Caching caches MVC action results."
+  },
+  {
+    "question": "What is the purpose of Response Compression middleware?",
+    "options": [
+      "Gzip compression",
+      "Performance",
+      "Bandwidth",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Response Compression reduces response size using Gzip/Brotli."
+  },
+  {
+    "question": "What is the purpose of Static File middleware with caching?",
+    "options": [
+      "Cache static",
+      "ETag",
+      "Headers",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Static files can be cached with ETags and headers."
+  },
+  {
+    "question": "What is the purpose of URL Rewriting middleware?",
+    "options": [
+      "URL rewrite",
+      "Redirect",
+      "SEO",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "URL Rewriting modifies request URLs for routing or SEO."
+  },
+  {
+    "question": "What is the purpose of WebSocket middleware?",
+    "options": [
+      "WebSocket",
+      "Real-time",
+      "Bidirectional",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "WebSocket middleware enables bidirectional communication."
+  },
+  {
+    "question": "What is SignalR?",
+    "options": [
+      "Real-time",
+      "WebSocket abstraction",
+      "Push",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "SignalR provides real-time bidirectional communication."
+  },
+  {
+    "question": "What is the purpose of Hub in SignalR?",
+    "options": [
+      "Communication hub",
+      "RPC",
+      "Real-time",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Hub enables client-server communication via RPC."
+  },
+  {
+    "question": "What is the purpose of HubConnection?",
+    "options": [
+      "Client connection",
+      "SignalR",
+      "Connection",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "HubConnection manages SignalR client connection."
+  },
+  {
+    "question": "What is the purpose of JWT Bearer authentication?",
+    "options": [
+      "Token auth",
+      "JWT",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "JWT Bearer authentication validates JWT tokens."
+  },
+  {
+    "question": "What is the purpose of AddJwtBearer in DI?",
+    "options": [
+      "JWT auth",
+      "Authentication",
+      "DI",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "AddJwtBearer registers JWT authentication scheme."
+  },
+  {
+    "question": "What is the purpose of Token Validation Parameters?",
+    "options": [
+      "Validate token",
+      "Parameters",
+      "JWT",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "TokenValidationParameters configure JWT validation rules."
+  },
+  {
+    "question": "What is the purpose of Claims in JWT?",
+    "options": [
+      "Token claims",
+      "Payload",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Claims are statements encoded in JWT payload."
+  },
+  {
+    "question": "What is the purpose of Audience in JWT?",
+    "options": [
+      "Token audience",
+      "Recipient",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Audience (aud) specifies the intended recipient."
+  },
+  {
+    "question": "What is the purpose of Issuer in JWT?",
+    "options": [
+      "Token issuer",
+      "Source",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Issuer (iss) specifies who created the token."
+  },
+  {
+    "question": "What is the purpose of Expiration in JWT?",
+    "options": [
+      "Token expiry",
+      "Lifetime",
+      "Validation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Expiration (exp) specifies token expiry time."
+  },
+  {
+    "question": "What is the purpose of OAuth 2.0 in ASP.NET?",
+    "options": [
+      "Authorization",
+      "Protocol",
+      "Social login",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "OAuth 2.0 provides authorization framework for external logins."
+  },
+  {
+    "question": "What is the purpose of Google authentication?",
+    "options": [
+      "Google login",
+      "OAuth",
+      "External",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Google authentication allows login with Google account."
+  },
+  {
+    "question": "What is the purpose of Policy Requirements?",
+    "options": [
+      "Authorization",
+      "Requirements",
+      "Custom",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Policy Requirements define custom authorization conditions."
+  },
+  {
+    "question": "What is the purpose of IAuthorizationHandler?",
+    "options": [
+      "Auth handler",
+      "Requirements",
+      "Custom",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IAuthorizationHandler handles authorization requirements."
+  },
+  {
+    "question": "What is the purpose of ClaimsAuthorizationHandler?",
+    "options": [
+      "Claims auth",
+      "Handler",
+      "Authorization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "ClaimsAuthorizationHandler evaluates claims-based requirements."
+  },
+  {
+    "question": "What is the purpose of Resource-based authorization?",
+    "options": [
+      "Resource auth",
+      "Owner check",
+      "Custom",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Resource-based authorization checks resource ownership."
+  },
+  {
+    "question": "What is the purpose of IAuthorizationFilter?",
+    "options": [
+      "Auth filter",
+      "MVC",
+      "Authorization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IAuthorizationFilter runs before action to check authorization."
+  },
+  {
+    "question": "What is the purpose of IdentityServer?",
+    "options": [
+      "OAuth server",
+      "Token service",
+      "Identity",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IdentityServer provides OAuth 2.0 / OpenID Connect server."
+  },
+  {
+    "question": "What is the purpose of AddAuthentication in DI?",
+    "options": [
+      "Auth config",
+      "Services",
+      "Authentication",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "AddAuthentication registers authentication services."
+  },
+  {
+    "question": "What is the purpose of [Authorize] with roles?",
+    "options": [
+      "Role check",
+      "Authorization",
+      "Access",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "[Authorize(Roles=\"Admin\")] restricts to specific roles."
+  },
+  {
+    "question": "What is the purpose of [Authorize] with policy?",
+    "options": [
+      "Policy check",
+      "Authorization",
+      "Custom",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "[Authorize(Policy=\"RequireAdmin\")] checks policy requirements."
+  },
+  {
+    "question": "What is the purpose of [Authorize] with schemes?",
+    "options": [
+      "Auth schemes",
+      "Multiple schemes",
+      "Custom",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "Authorize(AuthenticationSchemes=\"Bearer\") specifies auth scheme."
+  },
+  {
+    "question": "What is the purpose of IAuthenticationService?",
+    "options": [
+      "Auth service",
+      "Authenticate",
+      "Challenge",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IAuthenticationService provides authentication operations."
+  },
+  {
+    "question": "What is the purpose of HttpContext.AuthenticateAsync?",
+    "options": [
+      "Authenticate",
+      "Get principal",
+      "Async",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "AuthenticateAsync gets authenticated user principal."
+  },
+  {
+    "question": "What is the purpose of HttpContext.SignInAsync?",
+    "options": [
+      "Sign in",
+      "Create principal",
+      "Session",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "SignInAsync creates authentication cookie/token."
+  },
+  {
+    "question": "What is the purpose of HttpContext.SignOutAsync?",
+    "options": [
+      "Sign out",
+      "Clear session",
+      "Logout",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "SignOutAsync clears authentication session."
+  },
+  {
+    "question": "What is the purpose of AuthenticationProperties?",
+    "options": [
+      "Auth properties",
+      "Options",
+      "Cookies",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "AuthenticationProperties configures authentication behavior."
+  },
+  {
+    "question": "What is the purpose of ClaimsPrincipal?",
+    "options": [
+      "User principal",
+      "Claims",
+      "Identity",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "ClaimsPrincipal represents authenticated user with claims."
+  },
+  {
+    "question": "What is the purpose of Thread.CurrentPrincipal?",
+    "options": [
+      "Current user",
+      "Thread",
+      "Principal",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Thread.CurrentPrincipal gets current user principal."
+  },
+  {
+    "question": "What is the purpose of User.Identity.IsAuthenticated?",
+    "options": [
+      "Check auth",
+      "User state",
+      "Boolean",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "IsAuthenticated indicates if user is authenticated."
+  },
+  {
+    "question": "What is the purpose of User.Claims?",
+    "options": [
+      "User claims",
+      "Properties",
+      "Data",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "User.Claims returns all claims for current user."
+  },
+  {
+    "question": "What is the purpose of FindFirst in Claims?",
+    "options": [
+      "Find claim",
+      "First match",
+      "Claims",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "FindFirst finds claim by type."
+  },
+  {
+    "question": "What is the purpose of FindAll in Claims?",
+    "options": [
+      "Find all",
+      "Multiple",
+      "Claims",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 40,
+    "details": "FindAll returns all claims matching type."
+  },
+  {
+    "question": "What is session middleware?",
+    "options": [
+      "Session",
+      "State",
+      "HTTP",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Session middleware provides distributed session support."
+  },
+  {
+    "question": "What is distributed session?",
+    "options": [
+      "Redis session",
+      "Shared state",
+      "Distributed",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Distributed session stores data in Redis/SQL Server."
+  },
+  {
+    "question": "What is the purpose of IDistributedCache?",
+    "options": [
+      "Distributed cache",
+      "Cache interface",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IDistributedCache provides distributed caching interface."
+  },
+  {
+    "question": "What is Redis cache?",
+    "options": [
+      "In-memory DB",
+      "Cache",
+      "Distributed",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Redis provides distributed in-memory caching."
+  },
+  {
+    "question": "What is MemoryCache vs DistributedCache?",
+    "options": [
+      "In-process vs distributed",
+      "Scope",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "MemoryCache is per-process; DistributedCache is shared."
+  },
+  {
+    "question": "What is the purpose of IMemoryCache?",
+    "options": [
+      "In-memory cache",
+      "Cache interface",
+      "Performance",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "IMemoryCache provides in-process caching."
+  },
+  {
+    "question": "What is the purpose of CacheEntry?",
+    "options": [
+      "Cache entry",
+      "Options",
+      "Value",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "CacheEntry configures caching options."
+  },
+  {
+    "question": "What is the purpose of CacheExpiration in MemoryCache?",
+    "options": [
+      "Time-based",
+      "Expiry",
+      "Sliding",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "CacheExpiration sets absolute or sliding expiration."
+  },
+  {
+    "question": "What is the purpose of CachePriority?",
+    "options": [
+      "Priority",
+      "Eviction",
+      "Cache",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "CachePriority controls eviction priority."
+  },
+  {
+    "question": "What is the purpose of CacheExtensions.GetOrCreate?",
+    "options": [
+      "Get or create",
+      "Lazy",
+      "Cache",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "GetOrCreate gets cached value or creates if missing."
+  },
+  {
+    "question": "What is the purpose of Tagging in EF Core cache?",
+    "options": [
+      "Cache tags",
+      "Invalidation",
+      "Tags",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 45,
+    "details": "Cache tagging enables invalidation by tags."
+  },
+  {
+    "question": "What is View State in ASP.NET? (95)",
+    "options": [
+      "State management",
+      "Page data",
+      "Hidden field",
+      "Server"
+    ],
+    "correctOptions": [
+      "State management"
+    ],
+    "time": 30,
+    "details": "What is View State in ASP.NET? explanation."
+  },
+  {
+    "question": "What is Session State? (96)",
+    "options": [
+      "User data",
+      "Server storage",
+      "Session ID",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is Session State? explanation."
+  },
+  {
+    "question": "What is Request Validation? (97)",
+    "options": [
+      "Input checking",
+      "XSS prevention",
+      "Security",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is Request Validation? explanation."
+  },
+  {
+    "question": "What is Web API? (98)",
+    "options": [
+      "REST service",
+      "HTTP service",
+      "API framework",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is Web API? explanation."
+  },
+  {
+    "question": "What is Cross-Origin Resource Sharing? (99)",
+    "options": [
+      "CORS",
+      "Origin policy",
+      "Access control",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is Cross-Origin Resource Sharing? explanation."
+  },
+  {
+    "question": "What is Dependency Injection container? (100)",
+    "options": [
+      "IoC",
+      "Service resolution",
+      "Lifetime management",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "All of the above"
+    ],
+    "time": 30,
+    "details": "What is Dependency Injection container? explanation."
+  },
+  {
+    "question": "What is Razor? (Level 4 #101)",
+    "options": [
+      "Syntax",
+      "View engine",
+      "Directive",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Syntax",
+      "View engine",
+      "Directive",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Razor? explanation."
+  },
+  {
+    "question": "What is MVC? (Level 4 #102)",
+    "options": [
+      "Model",
+      "View",
+      "Controller",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Model",
+      "View",
+      "Controller",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is MVC? explanation."
+  },
+  {
+    "question": "What is middleware? (Level 4 #104)",
+    "options": [
+      "Pipeline",
+      "Request",
+      "Response",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pipeline",
+      "Request",
+      "Response",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is routing? (Level 4 #105)",
+    "options": [
+      "URL",
+      "Template",
+      "Constraint",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "URL",
+      "Template",
+      "Constraint",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is routing? explanation."
+  },
+  {
+    "question": "What is view component? (Level 4 #106)",
+    "options": [
+      "Partial",
+      "Async",
+      "Tag helper",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Partial",
+      "Async",
+      "Tag helper",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is view component? explanation."
+  },
+  {
+    "question": "What is tag helper? (Level 4 #107)",
+    "options": [
+      "HTML-like",
+      "Server-side",
+      "Razor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTML-like",
+      "Server-side",
+      "Razor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is tag helper? explanation."
+  },
+  {
+    "question": "What is dependency injection? (Level 4 #108)",
+    "options": [
+      "Service",
+      "Lifetime",
+      "Container",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Service",
+      "Lifetime",
+      "Container",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is Areas? (Level 4 #109)",
+    "options": [
+      "Organization",
+      "Routing",
+      "Separate",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organization",
+      "Routing",
+      "Separate",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Areas? explanation."
+  },
+  {
+    "question": "What is bundle? (Level 4 #110)",
+    "options": [
+      "Minification",
+      "Combination",
+      "Optimization",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Minification",
+      "Combination",
+      "Optimization",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is bundle? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is cloud computing?",
+    "options": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Remote servers",
+      "On-demand",
+      "Scalable",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is cloud computing? explanation."
+  },
+  {
+    "question": "What is functional programming?",
+    "options": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pure functions",
+      "No side effects",
+      "Immutability",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is functional programming? explanation."
+  },
+  {
+    "question": "What is type checking?",
+    "options": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Verify types",
+      "Compile-time",
+      "Errors",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is type checking? explanation."
+  },
+  {
+    "question": "What is REST API?",
+    "options": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "HTTP methods",
+      "Stateless",
+      "Resources",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is REST API? explanation."
+  },
+  {
+    "question": "What is garbage collection?",
+    "options": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Memory cleanup",
+      "Automatic",
+      "Reclaim memory",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is garbage collection? explanation."
+  },
+  {
+    "question": "What is Docker?",
+    "options": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Containerization",
+      "Isolation",
+      "Deployment",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is Docker? explanation."
+  },
+  {
+    "question": "What is OOP?",
+    "options": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Object-oriented",
+      "Classes",
+      "Objects",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is OOP? explanation."
+  },
+  {
+    "question": "What is interpretation?",
+    "options": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Execute line by line",
+      "Runtime",
+      "No compilation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is interpretation? explanation."
+  },
+  {
+    "question": "What is dependency injection?",
+    "options": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Pass dependencies",
+      "Loose coupling",
+      "Constructor",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is dependency injection? explanation."
+  },
+  {
+    "question": "What is immutable data?",
+    "options": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Cannot change",
+      "Read-only",
+      "New copy",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is immutable data? explanation."
+  },
+  {
+    "question": "What is CI/CD?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Automation",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is CI/CD? explanation."
+  },
+  {
+    "question": "What is data structure?",
+    "options": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Organize data",
+      "Storage",
+      "Efficient",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is data structure? explanation."
+  },
+  {
+    "question": "What is compilation?",
+    "options": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Convert code",
+      "Machine code",
+      "Build",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is compilation? explanation."
+  },
+  {
+    "question": "What is aggregation?",
+    "options": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Part-whole",
+      "Loose coupling",
+      "Contains",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is aggregation? explanation."
+  },
+  {
+    "question": "What is variable scope?",
+    "options": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Where accessible",
+      "Function/block",
+      "Lifetime",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is variable scope? explanation."
+  },
+  {
+    "question": "What is version control?",
+    "options": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Track changes",
+      "History",
+      "Collaboration",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is version control? explanation."
+  },
+  {
+    "question": "What is algorithm?",
+    "options": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Step-by-step",
+      "Solution",
+      "Logic",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is algorithm? explanation."
+  },
+  {
+    "question": "What is middleware?",
+    "options": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Request handler",
+      "Pipeline",
+      "Chain",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is middleware? explanation."
+  },
+  {
+    "question": "What is event-driven programming?",
+    "options": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Callbacks",
+      "Async",
+      "Event handling",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is event-driven programming? explanation."
+  },
+  {
+    "question": "What is semantics?",
+    "options": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "correctOptions": [
+      "Meaning",
+      "Logic",
+      "Behavior",
+      "All of the above"
+    ],
+    "time": 35,
+    "details": "What is semantics? explanation."
+  }
 ]
